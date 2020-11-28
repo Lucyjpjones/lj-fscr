@@ -1,45 +1,192 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+<div align="center">
+  <img src="static/assets/images/readme/responsive-fscr.png">
+  <img src="static/assets/images/readme/title.png">
+<hr>
 
-Welcome Lucyjpjones,
+**FSCR (Football Strength Conditioning Rehab) focuses on providing structured and detailed fitness programmes for football related injuries.**
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+This app was built using [GitHub](https://pages.github.com/) and deployed to [Heroku](https://www.heroku.com/).
 
-## Gitpod Reminders
+[View Site](https://lj-fscr.herokuapp.com/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+</div>
 
-`python3 -m http.server`
+---
 
-A blue button should appear to click: *Make Public*,
+## <u>Table of contents</u>
 
-Another blue button should appear to click: *Open Browser*.
+**<details><summary> User Experience (UX)</summary>**
+  - [Purpose](#purpose)
+  - [Design](#design)
+  - [User stories](#user-stories)
+  - [Wireframes](#wireframes)
+</details>
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+**<details><summary> Features</summary>**
+  - [Features used](#features-used)
+  - [To do list](#to-do-list)
+  - [Status](#status)
+</details>
 
-A blue button should appear to click: *Make Public*,
+**<details><summary> Technologies</summary>**
+  - [Languages](#languages)
+  - [Frameworks, Libraries & Programs](#frameworks-libraries-programs)
+</details>
 
-Another blue button should appear to click: *Open Browser*.
+**<details><summary> Deployment</summary>**
+  - [Deploy to Heroku](#deploy-to-heroku)
+  - [Accessing code](#accessing-code)
+</details>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+**<details><summary> Testing</summary>**
+  - [Testing Documentation](https://github.com/Lucyjpjones/wean-cuisine/blob/master/testing.md)
+</details>
 
-## Updates Since The Instructional Video
+**<details><summary> Credits</summary>**
+  - [Content](#content)
+  - [Media](#media)
+  - [Acknowledgements](#acknowledgements)
+</details>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+**<details><summary> Contact</summary>**
+  - [Contact details](#contact-details) 
+</details>
+---
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+# &rarr; **User Experience (UX)**
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### **<u>Purpose</u>**
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+**FSCR** (Football Strength Conditioning Rehab) focuses on providing structured and detailed fitness programmes for football-related injuries. This is a full-stack site that has been created around business logic and used to control a centrally-owned dataset.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+This application was built for a client who is currently looking to utilise their expertise in football rehabilitation by creating easy-to-follow fitness programmes. Rehabilitation after an injury can often be overlooked and my client is extremely passionate about ensuring athletes get the full recovery they need to get back to their sport and prevent further injury.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+By completing this project I will have shown greater experience in HTML, CSS, and Javascript, and demonstrated my understanding of Python+Django. I will have also shown my competency in using a relational database, setting up an authentication mechanism, and providing payment transactions using stripe payments. 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### **<u>Design</u>**
 
---------
+**Structure**
 
-Happy coding!
+**Colour scheme**
+
+<img src="static/assets/readme/images/palette.png">
+
+**Typography**
+
+**Research**
+
+- I spent some time researching other fitness and retail sites to gain inspiration and created a mood board with a collection of elements that caught my eye.
+
+
+  <img src="static/assets/readme/images/moodboard.png">
+
+**Logo Design**
+
+When it comes to creating a business, the logo is the central visual element in helping customers find, recognise and remember a brand. Taking this into consideration, I decided to spend some time creating a logo for FSCR which would represent the brand well.
+
+I set up a meeting with my client and presented them with a moodboard of different designs and gathered their feedback.
+
+  <img src="static/assets/readme/images/logo-designs.png">
+
+My final design with client approval below;
+
+<img src="static/assets/readme/images/final-logo.png">
+
+
+### **<u>User Stories</u>**
+
+<img src="static/assets/images/readme/flowchart.png">
+
+<u>**User profiles**</u>
+
+**User profile: Site Visitor**
+
+**User profile: Site Member**
+
+**User profile: Site Owner**
+
+<u>**User stories**</u>
+
+**User stories: Site Visitor**
+
+**User stories: Site Member**
+
+**User stories: Site Owner**
+
+### **<u>Wireframes</u>**
+
+As part of the design process, I created wireframes using [Balsamiq](https://balsamiq.com/?gclid=Cj0KCQjw28T8BRDbARIsAEOMBczzBYzsoMjbTtqNXQaE1EgOWA2u_Qux7sLl2IUHe-p0lDC-294BfVgaAr-oEALw_wcB). Creating these mock-ups helped me plan the basic structure and arrangement of the features for my site.
+
+- [Homepage](static/assets/readme/wireframes/wf-homepage.pdf)
+- [Meet the Coaches](static/assets/readme/wireframes/wf-meet-the-coaches.pdf)
+- [Profile](static/assets/readme/wireframes/wf-profile.pdf)
+- [Products](static/assets/readme/wireframes/wf-products.pdf)
+- [Product View](static/assets/readme/wireframes/wf-product-view.pdf)
+- [Programmes](static/assets/readme/wireframes/wf-programmes.pdf)
+- [Programme View](static/assets/readme/wireframes/wf-programme-view.pdf)
+- [Shopping bag](static/assets/readme/wireframes/wf-bag.pdf)
+- [Checkout](static/assets/readme/wireframes/wf-checkout.pdf)
+- [Blog](static/assets/readme/wireframes/wf-blog.pdf)
+- [Blog](static/assets/readme/wireframes/wf-blog-view.pdf)
+- [Forum](static/assets/readme/wireframes/wf-forum.pdf)
+- [Forum View](static/assets/readme/wireframes/wf-forum-view.pdf)
+---
+
+## &rarr; **Features**
+
+### **Features used**
+
+### **To do list**
+
+#### Status
+
+**Future Development plans**
+
+---
+
+## &rarr; **Technologies**
+
+#### Languages
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [JavaScript](https://www.javascript.com/)
+- [Python](https://www.python.org/)
+
+#### Frameworks, Libraries & Programs
+    
+---
+
+## &rarr; **Deployment**
+
+#### Deploy to Heroku
+
+#### Accessing code
+
+---
+
+## &rarr; **Credits**
+
+#### Content
+
+#### Media
+
+#### Acknowledgments
+
+## &rarr; **Contact**
+
+#### Contact details
+
+Created by @lucyjpjones
+
+If you have any problems, questions or, suggestions for my project please contact me on the email below:
+
+```
+lucyjpjones@gmail.com
+```
+
+Thanks for visiting.
+
+&copy;
+LucyJPJones

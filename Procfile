@@ -1,1 +1,1 @@
-web: gunicorn lj-fscr.wsgi:application
+web: gunicorn lj_fscr.wsgi:application

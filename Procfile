@@ -1,0 +1,1 @@
+web: gunicorn lj-fscr.wsgi:application

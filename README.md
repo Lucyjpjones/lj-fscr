@@ -70,7 +70,7 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 
 **Colour scheme**
 
-<img src="static/assets/readme/images/palette.png">
+<img src="media/readme/palette.png">
 
 **Typography**
 
@@ -79,7 +79,7 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 - I spent some time researching other fitness and retail sites to gain inspiration and created a mood board with a collection of elements that caught my eye.
 
 
-  <img src="static/assets/readme/images/moodboard.png">
+  <img src="media/readme/moodboard.png">
 
 **Logo Design**
 
@@ -87,16 +87,16 @@ When it comes to creating a business, the logo is the central visual element in 
 
 I set up a meeting with my client and presented them with a moodboard of different designs and gathered their feedback.
 
-  <img src="static/assets/readme/images/logo-designs.png">
+  <img src="media/readme/logo-designs.png">
 
 My final design with client approval below;
 
-<img src="static/assets/readme/images/final-logo.png">
+<img src="media/readme/final-logo.png">
 
 
 ### **<u>User Stories</u>**
 
-<img src="static/assets/images/readme/flowchart.png">
+<img src="media/readme/flowchart.png">
 
 <u>**User profiles**</u>
 
@@ -118,19 +118,19 @@ My final design with client approval below;
 
 As part of the design process, I created wireframes using [Balsamiq](https://balsamiq.com/?gclid=Cj0KCQjw28T8BRDbARIsAEOMBczzBYzsoMjbTtqNXQaE1EgOWA2u_Qux7sLl2IUHe-p0lDC-294BfVgaAr-oEALw_wcB). Creating these mock-ups helped me plan the basic structure and arrangement of the features for my site.
 
-- [Homepage](static/assets/readme/wireframes/wf-homepage.pdf)
-- [Meet the Coaches](static/assets/readme/wireframes/wf-meet-the-coaches.pdf)
-- [Profile](static/assets/readme/wireframes/wf-profile.pdf)
-- [Products](static/assets/readme/wireframes/wf-products.pdf)
-- [Product View](static/assets/readme/wireframes/wf-product-view.pdf)
-- [Programmes](static/assets/readme/wireframes/wf-programmes.pdf)
-- [Programme View](static/assets/readme/wireframes/wf-programme-view.pdf)
-- [Shopping bag](static/assets/readme/wireframes/wf-bag.pdf)
-- [Checkout](static/assets/readme/wireframes/wf-checkout.pdf)
-- [Blog](static/assets/readme/wireframes/wf-blog.pdf)
-- [Blog](static/assets/readme/wireframes/wf-blog-view.pdf)
-- [Forum](static/assets/readme/wireframes/wf-forum.pdf)
-- [Forum View](static/assets/readme/wireframes/wf-forum-view.pdf)
+- [Homepage](wireframes/wf-homepage.pdf)
+- [Meet the Coaches](wireframes/wf-meet-the-coaches.pdf)
+- [Profile](wireframes/wf-profile.pdf)
+- [Products](wireframes/wf-products.pdf)
+- [Product View](wireframes/wf-product-view.pdf)
+- [Programmes](wireframes/wf-programmes.pdf)
+- [Programme View](wireframes/wf-programme-view.pdf)
+- [Shopping bag](wireframes/wf-bag.pdf)
+- [Checkout](wireframes/wf-checkout.pdf)
+- [Blog](wireframes/wf-blog.pdf)
+- [Blog](wireframes/wf-blog-view.pdf)
+- [Forum](wireframes/wf-forum.pdf)
+- [Forum View](wireframes/wf-forum-view.pdf)
 ---
 
 ## &rarr; **Features**

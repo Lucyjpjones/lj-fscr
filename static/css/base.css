@@ -1,0 +1,35 @@
+html {
+  height: 100%;
+}
+
+header {
+  background-color: #38405f;
+}
+
+.top-header {
+  background-color: #ff0035;
+  font-size: 18px;
+  color: #bdc1c7;
+  padding: 10px;
+}
+
+.main-logo-link img {
+  width: 250px;
+}
+
+.grey-icon {
+  color: #bdc1c7;
+}
+
+.red-icon {
+  color: #ff0035;
+}
+
+.nav-icon {
+  font-size: 30px;
+  vertical-align: super;
+}
+
+p {
+  margin: 0px;
+}

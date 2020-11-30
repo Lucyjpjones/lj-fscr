@@ -70,7 +70,7 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 
 **Colour scheme**
 
-<img src="media/readme/palette.png">
+<img src="media/palette.png">
 
 **Typography**
 
@@ -79,7 +79,7 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 - I spent some time researching other fitness and retail sites to gain inspiration and created a mood board with a collection of elements that caught my eye.
 
 
-  <img src="media/readme/moodboard.png">
+  <img src="media/moodboard.png">
 
 **Logo Design**
 
@@ -87,16 +87,16 @@ When it comes to creating a business, the logo is the central visual element in 
 
 I set up a meeting with my client and presented them with a moodboard of different designs and gathered their feedback.
 
-  <img src="media/readme/logo-designs.png">
+  <img src="media/logo-designs.png">
 
 My final design with client approval below;
 
-<img src="media/readme/final-logo.png">
+<img src="media/final-logo.png">
 
 
 ### **<u>User Stories</u>**
 
-<img src="lj_fscr/media/readme/flowchart.png">
+<img src="lj_fscr/media/flowchart.png">
 
 <u>**User profiles**</u>
 

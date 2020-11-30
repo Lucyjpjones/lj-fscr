@@ -9,6 +9,8 @@ header {
 .top-header {
   background-color: #ff0035;
   font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
   color: #bdc1c7;
   padding: 10px;
 }
@@ -26,7 +28,7 @@ header {
 }
 
 .nav-icon {
-  font-size: 30px;
+  font-size: 26px;
   vertical-align: super;
 }
 

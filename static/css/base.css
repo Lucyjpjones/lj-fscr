@@ -2,21 +2,27 @@ html {
   height: 100%;
 }
 
-header {
-  background-color: #38405f;
+body {
+    height: calc(100vh - 170px);
+    color: #0E131F;
 }
 
-.top-header {
+header {
+  background-color: #38405f;
+  height: 170px;
+}
+
+.red-header {
   background-color: #ff0035;
   font-size: 18px;
   font-weight: 600;
-  text-transform: uppercase;
   color: #bdc1c7;
   padding: 10px;
 }
 
 .main-logo-link img {
-  width: 250px;
+  width: 220px;
+  padding-top: 5px; 
 }
 
 .grey-icon {
@@ -34,4 +40,28 @@ header {
 
 p {
   margin: 0px;
+}
+
+.header-container {
+        padding-top: 170px;
+    }
+
+.callout-img {
+    background: url('/media/callout-img.jpg') no-repeat center;
+    background-size: cover;
+    filter: grayscale(.7);
+    height: 84%;
+}
+
+.callout-banner {
+    height: 16%;
+}
+
+.btn-grey {
+    background-color: #bdc1c7;
+    color: #38405f;
+    font-weight: bold;
+    margin: 4px;
+    padding: 2px 8px;
+    border: solid 2px #38405f;
 }

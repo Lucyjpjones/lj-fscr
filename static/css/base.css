@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 html {
   height: 100%;
 }
 
 body {
-    height: calc(100vh - 157.8px);
-    color: #0E131F;
-    font-family: 'Lato', sans-serif;
-    background-color: #bdc1c750;
+  height: calc(100vh - 157.8px);
+  color: #0e131f;
+  font-family: "Lato", sans-serif;
+  background-color: #bdc1c750;
 }
 
 header {
@@ -25,7 +25,7 @@ header {
 
 .main-logo-link img {
   width: 220px;
-  padding-top: 5px; 
+  padding-top: 5px;
 }
 
 .grey-icon {
@@ -44,64 +44,84 @@ header {
   font-size: 26px;
 }
 
-p, .row, .col-12 {
+p,
+.row,
+.col-12 {
   margin: 0px;
 }
 
 .header-container {
-        padding-top: 157.8px;
-    }
+  padding-top: 157.8px;
+}
 
 .callout-img {
-    background: url('/media/callout-img.jpg') no-repeat center fixed;
-    background-size: cover;
-    filter: grayscale(.7);
-    height: 84%;
-    background-position: bottom 80px center;
+  filter: grayscale(0.7);
+  width: 100vw;
+  height: 63vh;
+  object-fit: cover;
+  object-position: 10% 95%;
 }
 
 .callout-banner {
-    height: 16%;
+  height: 14vh;
 }
 
 .callout-btn {
-    background-color: #38405f;
-    color: #bdc1c7;
-    font-weight: bold;
-    margin: 4px;
-    padding: 2px 8px;
-    border: solid 1px #bdc1c7;
+  background-color: #38405f;
+  color: #bdc1c7;
+  font-weight: bold;
+  margin: 4px;
+  padding: 2px 8px;
+  border: solid 1px #bdc1c7;
 }
 
 .testimonials {
-    background-color: #bdc1c770;
-    height: 200px;
+  background-color: #bdc1c770;
+  height: 200px;
 }
 
 .search-input {
-    width: 60vw !important;
-    border: none;
-    background-color: #fafafa;
+  width: 60vw !important;
+  border: none;
+  background-color: #fafafa;
 }
 
 .search-card {
-    background-color:#ff0035;
+  background-color: #ff0035;
 }
 
 .search-form {
-    border: solid 1px #38405f;
-    background-color: #fafafa;
+  border: solid 1px #38405f;
+  background-color: #fafafa;
 }
 
 .nav-link {
-    padding: .5rem .5rem;
+  padding: 0.5rem 0.5rem;
 }
 
 .carousel-testimonials {
-    height: 400px;
+  height: 400px;
 }
 
 .card-container {
-    background-color: #38405f;
-    padding: 20px 10px;
+  background-color: #38405f;
+  padding: 20px 10px;
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  background-color: #ff0035;
+  text-align: center;
+  width: 100%;
+}
+
+footer h6 {
+  font-size: 12px;
+  padding: 10px;
+  margin: 0px;
 }

@@ -32,11 +32,15 @@ header {
   color: #ff0035;
 }
 
+.navy-icon {
+  color: #38405f;
+}
+
 .nav-icon {
   font-size: 26px;
 }
 
-p, .row {
+p, .row, .col-12 {
   margin: 0px;
 }
 
@@ -49,6 +53,7 @@ p, .row {
     background-size: cover;
     filter: grayscale(.7);
     height: 84%;
+    background-position: bottom 80px center;
 }
 
 .callout-banner {
@@ -67,4 +72,19 @@ p, .row {
 .testimonials {
     background-color: #bdc1c770;
     height: 200px;
+}
+
+.search-input {
+    width: 60vw !important;
+    border: none;
+    background-color: #fafafa;
+}
+
+.search-card {
+    background-color:#ff0035;
+}
+
+.search-form {
+    border: solid 1px #38405f;
+    background-color: #fafafa;
 }

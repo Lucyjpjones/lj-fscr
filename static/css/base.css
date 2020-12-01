@@ -3,13 +3,12 @@ html {
 }
 
 body {
-    height: calc(100vh - 170px);
+    height: calc(100vh - 157.8px);
     color: #0E131F;
 }
 
 header {
   background-color: #38405f;
-  height: 170px;
 }
 
 .red-header {
@@ -35,19 +34,18 @@ header {
 
 .nav-icon {
   font-size: 26px;
-  vertical-align: super;
 }
 
-p {
+p, .row {
   margin: 0px;
 }
 
 .header-container {
-        padding-top: 170px;
+        padding-top: 157.8px;
     }
 
 .callout-img {
-    background: url('/media/callout-img.jpg') no-repeat center;
+    background: url('/media/callout-img.jpg') no-repeat center fixed;
     background-size: cover;
     filter: grayscale(.7);
     height: 84%;
@@ -64,4 +62,9 @@ p {
     margin: 4px;
     padding: 2px 8px;
     border: solid 2px #38405f;
+}
+
+.testimonials {
+    background-color: #bdc1c770;
+    height: 200px;
 }

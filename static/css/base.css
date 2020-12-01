@@ -88,3 +88,7 @@ p, .row, .col-12 {
     border: solid 1px #38405f;
     background-color: #fafafa;
 }
+
+.nav-link {
+    padding: .5rem .5rem;
+}

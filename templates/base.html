@@ -102,8 +102,34 @@
 
             <!-- My profile-->
             <li class="list-inline-item dropdown">
-              <div class="text-center">
-                <div class="red-icon nav-icon"><i class="fas fa-user"></i></div>
+              <a
+                class="text-black nav-link"
+                href="#"
+                id="user-options"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <div class="text-center">
+                  <div class="red-icon nav-icon">
+                    <i class="fas fa-user"></i>
+                  </div>
+                </div>
+              </a>
+              <div
+                class="dropdown-menu border-0"
+                aria-labelledby="user-options"
+              >
+                {% if request.user.is_authenticated %} 
+                    {% if request.user.is_superuser %}
+                        <a href="" class="dropdown-item">Product Management</a>
+                    {% endif %}
+                        <a href="" class="dropdown-item">My Profile</a>
+                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    {% else %}
+                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
               </div>
             </li>
             <!-- Shopping bag-->
@@ -123,7 +149,7 @@
             <!-- Dropdown menu-->
             <li class="list-inline-item dropdown show">
               <a
-                class="grey-icon nav-icon"
+                class="grey-icon nav-icon nav-link"
                 href="#"
                 role="button"
                 id="dropdownMenuLink"
@@ -151,7 +177,11 @@
       <!-- Search bar (Devices smaller than L)-->
       <div class="collapse" id="collapseExample">
         <div class="card card-body search-card d-lg-none">
-          <form class="row form-inline m-auto search-form rounded" method="GET" action="">
+          <form
+            class="row form-inline m-auto search-form rounded"
+            method="GET"
+            action=""
+          >
             <div class="col-1">
               <a role="button" class="btn icon navy-icon" type="submit">
                 <i class="fas fa-search"></i>

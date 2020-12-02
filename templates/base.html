@@ -38,6 +38,7 @@
       integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
       crossorigin="anonymous"
     ></script>
+    <script src="{% static 'js/script.js' %}"></script>
     {% endblock %} {% block extra_js %} {% endblock %}
 
     <title>FSCR {% block extra_title %}{% endblock %}</title>
@@ -45,20 +46,35 @@
 
   <body>
     <header class="fixed-top">
-      <div class="row red-header">
+      <div class="row red-header py-1">
         <div class="col-12">
           <p class="text-center text-uppercase">
             Football Strength Conditioning Rehab
           </p>
         </div>
       </div>
-      <div class="row px-4">
-        <div class="col-6 my-auto px-0">
-          <a href="{% url 'home' %}" class="nav-link main-logo-link">
+      <div class="row px-4 py-2">
+        <!-- Dropdown menu-->
+        <div class="col-1 my-auto">
+          <a
+            class="grey-icon nav-icon nav-link"
+            role="button"
+            id="sidebarCollapse"
+          >
+            <div id="navbar-bars">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div id="navbar-close" class="d-none">
+              <i class="fas fa-times"></i>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 my-auto px-0">
+          <a href="{% url 'home' %}" class="main-logo-link">
             <img src="{{ MEDIA_URL }}final-logo.png" alt="FSCR logo" />
           </a>
         </div>
-        <div class="col-6 my-auto">
+        <div class="col-5 col-md-8 my-auto">
           <ul class="list-inline list-unstyled text-center my-0 float-right">
             <!-- Search bar (L and XL devices)-->
             <li class="list-inline-item px-3">
@@ -121,14 +137,20 @@
                 aria-labelledby="user-options"
               >
                 {% if request.user.is_authenticated %} 
-                    {% if request.user.is_superuser %}
-                        <a href="" class="dropdown-item">Product Management</a>
-                    {% endif %}
-                        <a href="" class="dropdown-item">My Profile</a>
-                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                    {% else %}
-                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% if request.user.is_superuser %}
+                <a href="" class="dropdown-item">Product Management</a>
+                {% endif %}
+                <a href="" class="dropdown-item">My Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item"
+                  >Logout</a
+                >
+                {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item"
+                  >Register</a
+                >
+                <a href="{% url 'account_login' %}" class="dropdown-item"
+                  >Login</a
+                >
                 {% endif %}
               </div>
             </li>
@@ -144,31 +166,6 @@
                   </div>
                 </div>
               </a>
-            </li>
-
-            <!-- Dropdown menu-->
-            <li class="list-inline-item dropdown show">
-              <a
-                class="grey-icon nav-icon nav-link"
-                href="#"
-                role="button"
-                id="dropdownMenuLink"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <i class="fas fa-bars"></i>
-              </a>
-
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Meet the Coaches</a>
-                <a class="dropdown-item" href="#">Programmes</a>
-                <a class="dropdown-item" href="#">Products</a>
-                <a class="dropdown-item" href="#">Blog</a>
-                <a class="dropdown-item" href="#">Forum</a>
-                <a class="dropdown-item" href="#">Contact</a>
-                <a href="" class="callout-btn btn rounded">Join Now</a>
-              </div>
             </li>
           </ul>
         </div>
@@ -198,23 +195,48 @@
           </form>
         </div>
       </div>
+
+      <!-- Sidebar -->
+      <div class="wrapper">
+        <nav id="sidebar" class="active">
+          <ul class="list-unstyled components text-center text-uppercase mt-4">
+            <li class="py-1">
+              <a href="#">Meet the Coaches</a>
+            </li>
+            <li class="py-1">
+              <a href="#">Programmes</a>
+            </li>
+            <li class="py-1">
+              <a href="#">Products</a>
+            </li>
+            <li class="py-1">
+              <a href="#">Blog</a>
+            </li>
+            <li class="py-1">
+              <a href="#">Forum</a>
+            </li>
+            <li class="py-1">
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <div>
+                <a href="" class="btn rounded">Join Now</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     {% if messages %}
     <div class="message-container"></div>
-    {% endif %} 
-    
-    {% block page_header %} 
-    {% endblock %} 
-    
-    {% block content %}
-    {%endblock %} 
+    {% endif %} {% block page_header %} {% endblock %} {% block content %}
+    {%endblock %}
 
     <footer>
-         <h6 class="copyright">Copyright © 2020 Lucy J P Jones</h6>
+      <h6 class="copyright">Copyright © 2020 Lucy J P Jones</h6>
     </footer>
-    
-    {% block postloadjs %} 
-    {% endblock %}
+
+    {% block postloadjs %} {% endblock %}
   </body>
 </html>

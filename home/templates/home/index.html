@@ -9,11 +9,15 @@
 <div class="container-fluid">
   <!-- Main homepage image -->
   <div class="row">
-    <img class="callout-img" src="{{ MEDIA_URL }}callout-img.jpg" alt="Callout image" />
-</div>
+    <img
+      class="callout-img"
+      src="{{ MEDIA_URL }}callout-img.jpg"
+      alt="Callout image"
+    />
+  </div>
 
   <!-- Callout banner carousel -->
-  <div class="row callout-banner red-header">
+  <div class="row callout-banner red-header py-2">
     <div
       id="carouselBannerControls"
       class="col-12 text-center text-uppercase carousel slide"
@@ -57,51 +61,49 @@
   </div>
 
   <!-- Testimonials carousel -->
-  <div class="row">
-    <div
-      id="carouselExampleIndicators"
-      class="carousel slide carousel-testimonials"
-      data-ride="carousel"
-    >
-      <ol class="carousel-indicators">
-        <li
-          data-target="#carouselExampleIndicators"
-          data-slide-to="0"
-          class="active"
-        ></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item">
-          {% for review in reviews %}
-          <a class="card">
-            <img class="carousel-img" src="" alt="profile img" />
-            <p>Review content</p>
-            <p>Reviewers name</p>
-          </a>
-          {% endfor %}
-        </div>
+  <div
+    id="carouselExampleIndicators"
+    class="row carousel slide carousel-testimonials"
+    data-ride="carousel"
+  >
+    <ol class="carousel-indicators">
+      <li
+        data-target="#carouselExampleIndicators"
+        data-slide-to="0"
+        class="active"
+      ></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        {% for review in reviews %}
+        <a class="card">
+          <img class="carousel-img" src="" alt="profile img" />
+          <p>Review content</p>
+          <p>Reviewers name</p>
+        </a>
+        {% endfor %}
       </div>
-      <a
-        class="carousel-control-prev"
-        href="#carouselExampleIndicators"
-        role="button"
-        data-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a
-        class="carousel-control-next"
-        href="#carouselExampleIndicators"
-        role="button"
-        data-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 
   <!-- Programme card links -->
@@ -126,7 +128,41 @@
 </div>
 
 <!-- Product carousel -->
-<div class="row">
+<div class="row product-carousel">
+  <div
+    id="carouselProductControls"
+    class="col-12 text-center text-uppercase carousel slide"
+    data-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <a class="card">
+          <img class="carousel-img" src="" alt="profile img" />
+          <p>Review content</p>
+          <p>Reviewers name</p>
+        </a>
+      </div>
+    </div>
 
+    <!-- Callout banner carousel controls-->
+    <a
+      class="carousel-control-prev"
+      href="#carouselProductControls"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselProductControls"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
 {% endblock %}

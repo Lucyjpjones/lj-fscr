@@ -80,13 +80,28 @@ header {
 .nav-icon {
   font-size: 26px;
 }
-.grey-icon {
+
+.nav-icon:active,
+.nav-icon:hover,
+.nav-icon:focus {
+  filter: brightness(110);
+}
+.grey-icon,
+.grey-icon:active,
+.grey-icon:focus,
+.grey-icon:hover {
   color: #bdc1c7;
 }
-.red-icon {
+.red-icon,
+.red-icon:active,
+.red-icon:focus,
+.red-icon:hover {
   color: #ff0035;
 }
-.navy-icon {
+.navy-icon,
+.navy-icon:active,
+.navy-icon:focus,
+.navy-icon:hover {
   color: #38405f;
 }
 
@@ -149,7 +164,7 @@ header {
   min-width: 30%;
   max-width: 250px;
   background: #38405f;
-  border: solid .5px #bdc1c7;
+  border: solid 0.5px #bdc1c7;
   color: #bdc1c7;
   transition: all 0.3s;
 }

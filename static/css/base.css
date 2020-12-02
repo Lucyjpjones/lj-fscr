@@ -5,10 +5,13 @@ html {
 }
 
 body {
-  height: calc(100vh - 139.63px);
   color: #0e131f;
   font-family: "Lato", sans-serif;
   background-color: #bdc1c750;
+}
+
+.home-view {
+  height: calc(100vh - 100.97px);
 }
 
 footer {
@@ -50,7 +53,7 @@ header {
 }
 
 .header-container {
-  padding-top: 139.63px;
+  padding-top: 100.97px;
 }
 
 .main-logo-link img {
@@ -110,14 +113,20 @@ header {
 .callout-img {
   filter: grayscale(0.7);
   width: 100vw;
-  height: 67vh;
   object-fit: cover;
   object-position: 10% 95%;
+}
+.callout-img-outer {
+  height: 88%;
+}
+
+.row callout-banner-outer {
+    height: 12%;
 }
 
 /* Red callout banner */
 .callout-banner {
-  height: 12vh;
+  height: 12%;
 }
 .callout-btn {
   background-color: #38405f;
@@ -178,12 +187,6 @@ header {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
 @media only screen and (max-width: 600px) {
-  body {
-    height: calc(100vh - 92.81px);
-  }
-  .header-container {
-    padding-top: 92.81px;
-  }
   #sidebar.active {
     margin-left: -60%;
   }
@@ -197,16 +200,11 @@ header {
   }
 
   .nav-icon {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .callout-img {
-    height: 75vh;
     object-position: 40% 95%;
-  }
-
-  .callout-banner {
-    height: 12vh;
   }
 
   .search-input {
@@ -214,7 +212,7 @@ header {
   }
 
   .main-logo-link img {
-    max-width: 100px;
+    max-width: 120px;
   }
 
   .col-1 {

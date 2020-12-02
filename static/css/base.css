@@ -118,16 +118,14 @@ header {
 }
 .callout-img-outer {
   height: 88%;
+  overflow: hidden;
 }
 
-.row callout-banner-outer {
+.callout-banner-outer {
     height: 12%;
 }
 
 /* Red callout banner */
-.callout-banner {
-  height: 12%;
-}
 .callout-btn {
   background-color: #38405f;
   color: #bdc1c7;

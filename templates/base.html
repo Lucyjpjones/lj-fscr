@@ -46,6 +46,8 @@
 
   <body>
     <header class="fixed-top">
+
+      <!-- Top red banner -->
       <div class="row red-header py-1">
         <div class="col-12">
           <p class="text-center text-uppercase">
@@ -53,8 +55,9 @@
           </p>
         </div>
       </div>
-      <div class="row px-4 py-2">
-        <!-- Dropdown menu-->
+
+      <!-- Dropdown menu icon -->
+      <div class="row px-2 px-md-4 py-2">
         <div class="col-1 my-auto">
           <a
             class="grey-icon nav-icon nav-link"
@@ -69,14 +72,19 @@
             </div>
           </a>
         </div>
-        <div class="col-6 col-md-3 my-auto px-0">
+
+        <!-- Logo homepage link -->
+        <div class="col-4 col-md-3 my-auto px-2 px-md-0">
           <a href="{% url 'home' %}" class="main-logo-link">
             <img src="{{ MEDIA_URL }}final-logo.png" alt="FSCR logo" />
           </a>
         </div>
-        <div class="col-5 col-md-8 my-auto">
+
+        <!-- Search, Profile and Shopping bag icon -->
+        <div class="col-7 col-md-8 my-auto">
           <ul class="list-inline list-unstyled text-center my-0 float-right">
-            <!-- Search bar (L and XL devices)-->
+
+            <!-- Search bar visible (L and XL devices)-->
             <li class="list-inline-item px-3">
               <form class="d-none d-lg-inline-block" method="GET" action="">
                 <div class="input-group">
@@ -100,11 +108,11 @@
               </form>
             </li>
 
-            <!-- Search bar (Devices smaller than L)-->
+            <!-- Search bar icon (Devices smaller than L)-->
             <li class="list-inline-item dropdown d-inline-block d-lg-none">
               <p>
                 <a
-                  class="grey-icon nav-icon px-3"
+                  class="grey-icon nav-icon px-1 px-md-2"
                   data-toggle="collapse"
                   href="#collapseExample"
                   role="button"
@@ -116,10 +124,10 @@
               </p>
             </li>
 
-            <!-- My profile-->
+            <!-- Profile icon-->
             <li class="list-inline-item dropdown">
               <a
-                class="text-black nav-link"
+                class="text-black nav-link px-1 px-md-2"
                 href="#"
                 id="user-options"
                 data-toggle="dropdown"
@@ -154,10 +162,11 @@
                 {% endif %}
               </div>
             </li>
+
             <!-- Shopping bag-->
             <li class="list-inline-item">
               <a
-                class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link px-1 px-md-2"
                 href=""
               >
                 <div class="text-center">
@@ -171,7 +180,7 @@
         </div>
       </div>
 
-      <!-- Search bar (Devices smaller than L)-->
+      <!-- Search bar collapse bar (Devices smaller than L)-->
       <div class="collapse" id="collapseExample">
         <div class="card card-body search-card d-lg-none">
           <form
@@ -179,12 +188,12 @@
             method="GET"
             action=""
           >
-            <div class="col-1">
+            <div class="col-2 col-md-1">
               <a role="button" class="btn icon navy-icon" type="submit">
                 <i class="fas fa-search"></i>
               </a>
             </div>
-            <div class="col-11">
+            <div class="col-10 col-md-11">
               <input
                 class="search-input"
                 type="text"

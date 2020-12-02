@@ -157,7 +157,7 @@ header {
 }
 
 #sidebar.active {
-  margin-left: -40%;
+  margin-left: -30%;
 }
 
 #sidebar {
@@ -171,4 +171,53 @@ header {
 
 #sidebar a {
   color: #bdc1c7;
+}
+
+/* --------------------Media queries*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (max-width: 600px) {
+  body {
+    height: calc(100vh - 92.81px);
+  }
+  .header-container {
+    padding-top: 92.81px;
+  }
+  #sidebar.active {
+    margin-left: -60%;
+  }
+  #sidebar {
+    min-width: 60%;
+  }
+
+  .red-header,
+  .callout-btn {
+    font-size: 12px;
+  }
+
+  .nav-icon {
+    font-size: 18px;
+  }
+
+  .callout-img {
+    height: 75vh;
+    object-position: 40% 95%;
+  }
+
+  .callout-banner {
+    height: 12vh;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+
+  .main-logo-link img {
+    max-width: 100px;
+  }
+
+  .col-1 {
+    padding: 0px !important;
+  }
 }

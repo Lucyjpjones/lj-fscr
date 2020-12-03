@@ -5,7 +5,6 @@ html {
 }
 
 body {
-  height: calc(var(--vh, 1vh) * 100);
   color: #0e131f;
   font-family: "Lato", sans-serif;
   background-color: #bdc1c750;

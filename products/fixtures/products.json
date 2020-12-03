@@ -11,7 +11,7 @@
         "category": 1,
         "rating": 4.6,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "DP0709201205510679M.jpg"
+        "image": "FCSR-tee-white.png"
         }
     },
     {
@@ -26,7 +26,7 @@
         "category": 1,
         "rating": 4.6,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "DP0709201205510679M.jpg"
+        "image": "FCSR-tee-grey.png"
         }
     },
     {
@@ -41,7 +41,7 @@
         "category": 1,
         "rating": 4.6,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "DP0709201205510679M.jpg"
+        "image": "FCSR-tee-blue.png"
         }
     },
     {
@@ -51,10 +51,10 @@
         "sku": "fscr5001340154",
         "name": "FSCR beanie hat",
         "colour": "white",
-        "description": "The FSCR Sportswear T-Shirt sets you up with soft cotton jersey and our branded logo on the chest.",
-        "price": 17.99,
-        "category": 6,
-        "rating": 4.6,
+        "description": "The FSCR beanie",
+        "price": 12.99,
+        "category": 2,
+        "rating": 4.4,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0709201205510679M.jpg"
         }
@@ -66,10 +66,10 @@
         "sku": "fscr5001340155",
         "name": "FSCR beanie hat",
         "colour": "grey",
-        "description": "The FSCR Sportswear T-Shirt sets you up with soft cotton jersey and our branded logo on the chest.",
-        "price": 17.99,
-        "category": 6,
-        "rating": 4.6,
+        "description": "The FSCR beanie",
+        "price": 12.99,
+        "category": 2,
+        "rating": 4.4,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0709201205510679M.jpg"
         }
@@ -81,10 +81,10 @@
         "sku": "fscr5001340156",
         "name": "FSCR beanie hat",
         "colour": "blue",
-        "description": "The FSCR Sportswear T-Shirt sets you up with soft cotton jersey and our branded logo on the chest.",
-        "price": 17.99,
-        "category": 6,
-        "rating": 4.6,
+        "description": "The FSCR beanie",
+        "price": 12.99,
+        "category": 2,
+        "rating": 4.4,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0709201205510679M.jpg"
         }
@@ -96,10 +96,10 @@
         "sku": "fscr5001340157",
         "name": "FSCR sports bottle",
         "colour": "multi",
-        "description": "The FSCR Sportswear T-Shirt sets you up with soft cotton jersey and our branded logo on the chest.",
-        "price": 17.99,
-        "category": 6,
-        "rating": 4.6,
+        "description": "The FSCR Sports bottle",
+        "price": 15.99,
+        "category": 2,
+        "rating": 4.7,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0709201205510679M.jpg"
         }
@@ -109,12 +109,12 @@
         "model": "products.product",
         "fields": {
         "sku": "fscr5001340158",
-        "name": "FSCR padlock",
+        "name": "FSCR Gym Padlock",
         "colour": "multi",
-        "description": "The FSCR Sportswear T-Shirt sets you up with soft cotton jersey and our branded logo on the chest.",
-        "price": 17.99,
-        "category": 6,
-        "rating": 4.6,
+        "description": "The FSCR Gym Padlock",
+        "price": 4.99,
+        "category": 2,
+        "rating": 4.8,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0709201205510679M.jpg"
         }
@@ -126,10 +126,10 @@
         "sku": "fscr5001340159",
         "name": "FSCR Sports Towel",
         "colour": "white",
-        "description": "The FSCR Sportswear T-Shirt sets you up with soft cotton jersey and our branded logo on the chest.",
-        "price": 17.99,
-        "category": 6,
-        "rating": 4.6,
+        "description": "The FSCR Sports Towel",
+        "price": 11.99,
+        "category": 2,
+        "rating": 4.3,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0709201205510679M.jpg"
         }
@@ -141,10 +141,10 @@
         "sku": "fscr5001340160",
         "name": "FSCR Sports Towel",
         "colour": "blue",
-        "description": "The FSCR Sportswear T-Shirt sets you up with soft cotton jersey and our branded logo on the chest.",
-        "price": 17.99,
-        "category": 6,
-        "rating": 4.6,
+        "description": "The FSCR Sports Towel",
+        "price": 11.99,
+        "category": 2,
+        "rating": 4.3,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0709201205510679M.jpg"
         }

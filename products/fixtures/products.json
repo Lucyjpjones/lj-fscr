@@ -3,7 +3,7 @@
         "pk": 1,
         "model": "products.product",
         "fields": {
-        "sku": "fscr5001340150",
+        "sku": "fscr001",
         "name": "FSCR T-shirt",
         "colour": "white",
         "description": "The FSCR Sportswear T-Shirt sets you up with soft cotton jersey and our branded logo on the chest.",
@@ -18,7 +18,7 @@
         "pk": 2,
         "model": "products.product",
         "fields": {
-        "sku": "fscr5001340151",
+        "sku": "fscr002",
         "name": "FSCR T-shirt",
         "colour": "grey",
         "description": "The FSCR Sportswear T-Shirt sets you up with soft cotton jersey and our branded logo on the chest.",
@@ -33,7 +33,7 @@
         "pk": 3,
         "model": "products.product",
         "fields": {
-        "sku": "fscr5001340152",
+        "sku": "fscr003",
         "name": "FSCR T-shirt",
         "colour": "blue",
         "description": "The FSCR Sportswear T-Shirt sets you up with soft cotton jersey and our branded logo on the chest.",
@@ -48,7 +48,7 @@
         "pk": 4,
         "model": "products.product",
         "fields": {
-        "sku": "fscr5001340154",
+        "sku": "fscr004",
         "name": "FSCR beanie hat",
         "colour": "white",
         "description": "The FSCR beanie",
@@ -63,7 +63,7 @@
         "pk": 5,
         "model": "products.product",
         "fields": {
-        "sku": "fscr5001340155",
+        "sku": "fscr005",
         "name": "FSCR beanie hat",
         "colour": "grey",
         "description": "The FSCR beanie",
@@ -78,7 +78,7 @@
         "pk": 6,
         "model": "products.product",
         "fields": {
-        "sku": "fscr5001340156",
+        "sku": "fscr006",
         "name": "FSCR beanie hat",
         "colour": "blue",
         "description": "The FSCR beanie",
@@ -93,7 +93,7 @@
         "pk": 7,
         "model": "products.product",
         "fields": {
-        "sku": "fscr5001340157",
+        "sku": "fscr007",
         "name": "FSCR sports bottle",
         "colour": "multi",
         "description": "The FSCR Sports bottle",
@@ -108,7 +108,7 @@
         "pk": 8,
         "model": "products.product",
         "fields": {
-        "sku": "fscr5001340158",
+        "sku": "fscr008",
         "name": "FSCR Gym Padlock",
         "colour": "multi",
         "description": "The FSCR Gym Padlock",
@@ -123,7 +123,7 @@
         "pk": 9,
         "model": "products.product",
         "fields": {
-        "sku": "fscr5001340159",
+        "sku": "fscr009",
         "name": "FSCR Sports Towel",
         "colour": "white",
         "description": "The FSCR Sports Towel",
@@ -138,7 +138,7 @@
         "pk": 10,
         "model": "products.product",
         "fields": {
-        "sku": "fscr5001340160",
+        "sku": "fscr010",
         "name": "FSCR Sports Towel",
         "colour": "blue",
         "description": "The FSCR Sports Towel",

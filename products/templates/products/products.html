@@ -7,8 +7,8 @@
 {% endblock %} {% block content %}
 <div class="container-fluid">
   <div class="row">
-    <div class="col text-center mt-3">
-      <h2 class="title-font">Products</h2>
+    <div class="col text-center title-container">
+      <h2 class="title-font py-4">Products</h2>
     </div>
   </div>
   <div class="row">
@@ -17,9 +17,9 @@
       <div class="row">
         {% for product in products %}
         <div class="col-6 col-md-4 col-lg-3">
-          <div class="card h-100 border-0">
+          <div class="card product-card h-100 border-0">
             {% if product.image %}
-            <a href="">
+            <a href="{% url 'product_detail' product.id %}">
               <img
                 class="card-img-top img-fluid"
                 src="{{ product.image.url }}"
@@ -27,7 +27,7 @@
               />
             </a>
             {% else %}
-            <a href="">
+            <a href="{% url 'product_detail' product.id %}">
               <img
                 class="card-img-top img-fluid"
                 src="{{ MEDIA_URL }}noimage.png"

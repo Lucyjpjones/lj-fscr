@@ -11,7 +11,7 @@ body {
 }
 
 .home-view {
-  height: calc(100vh - 87.53px);
+  height: calc(100vh - 102.11px);
 }
 
 footer {
@@ -55,11 +55,11 @@ header {
 }
 
 .header-container {
-  padding-top: 87.53px;
+  padding-top: 102.11px;
 }
 
 .main-logo-link img {
-  width: 200px;
+  width: 140px;
   padding: 5px 0px;
 }
 
@@ -184,10 +184,10 @@ header {
 
 /* --------------------Products*/
 .title-font {
-    font-size: 20px;
+  font-size: 20px;
 }
-.card {
-    background-color: transparent !important;
+.product-card {
+  background-color: transparent !important;
 }
 
 /* --------------------Media queries*/
@@ -195,6 +195,13 @@ header {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
 @media only screen and (max-width: 600px) {
+  .home-view {
+    height: calc(100vh - 87.53px);
+  }
+
+  .header-container {
+    padding-top: 87.53px;
+  }
   #sidebar.active {
     margin-left: -60%;
   }

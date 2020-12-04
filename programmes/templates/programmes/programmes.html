@@ -55,7 +55,7 @@
         <div class="col-12">
           <div class="card product-card h-100 border-0 mb-4">
             {% if programme.image %}
-            <a href="">
+            <a href="{% url 'programme_detail' programme.id %}">
               <img
                 class="card-img-top img-fluid programme-card"
                 src="{{ programme.image.url }}"
@@ -63,7 +63,7 @@
               />
             </a>
             {% else %}
-            <a href="">
+            <a href="{% url 'programme_detail' programme.id %}">
               <img
                 class="card-img-top img-fluid"
                 src="{{ MEDIA_URL }}noimage.png"

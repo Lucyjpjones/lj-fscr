@@ -102,14 +102,14 @@
               <form class="d-none d-lg-inline-block" method="GET" action="{% url 'products' %}">
                 <div class="input-group">
                   <input
-                    class="form-control border border-black rounded"
+                    class="form-control border border-black rounded-0"
                     type="text"
                     name="q"
                     placeholder="Search our site"
                   />
                   <div class="input-group-append">
                     <button
-                      class="form-control btn btn-black border border-black rounded"
+                      class="form-control btn btn-black border border-black rounded-0"
                       type="submit"
                     >
                       <span class="icon grey-icon">
@@ -197,7 +197,7 @@
       <div class="collapse" id="collapseExample">
         <div class="card card-body search-card d-lg-none">
           <form
-            class="row form-inline m-auto search-form rounded"
+            class="row form-inline m-auto search-form rounded-0"
             method="GET"
             action=""
           >
@@ -231,7 +231,7 @@
               <a href="#">Meet the Coaches</a>
             </li>
             <li class="py-1">
-              <a href="#">Programmes</a>
+              <a href="{% url 'programmes' %}">Programmes</a>
             </li>
             <li class="py-1">
               <a href="{% url 'products' %}">Products</a>
@@ -247,7 +247,7 @@
             </li>
             <li>
               <div>
-                <a href="" class="btn rounded">Join Now</a>
+                <a href="" class="btn rounded-0">Join Now</a>
               </div>
             </li>
           </ul>

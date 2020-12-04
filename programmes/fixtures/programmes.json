@@ -13,8 +13,8 @@
         "image": "FSCR-programme.png"
         }
     },
-        {
-        "pk": 1,
+    {
+        "pk": 2,
         "model": "programmes.programme",
         "fields": {
         "sku": "fscrprog002",
@@ -27,8 +27,8 @@
         "image": "FSCR-programme.png"
         }
     },
-        {
-        "pk": 1,
+    {
+        "pk": 3,
         "model": "programmes.programme",
         "fields": {
         "sku": "fscrprog003",
@@ -41,8 +41,8 @@
         "image": "FSCR-programme.png"
         }
     },
-        {
-        "pk": 1,
+    {
+        "pk": 4,
         "model": "programmes.programme",
         "fields": {
         "sku": "fscrprog004",
@@ -55,8 +55,8 @@
         "image": "FSCR-programme.png"
         }
     },
-        {
-        "pk": 1,
+    {
+        "pk": 5,
         "model": "programmes.programme",
         "fields": {
         "sku": "fscrprog005",

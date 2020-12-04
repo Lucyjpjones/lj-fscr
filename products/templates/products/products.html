@@ -10,8 +10,7 @@
 {% endblock %} {% block content %}
 
 <!--Page title-->
-<div class="overlay"></div>
-<div class="container-fluid">
+<div class="content-container">
   <div class="row">
     <div class="col text-center title-container">
       <h2 class="title-font py-4">Products</h2>
@@ -49,7 +48,7 @@
   <!--Product cards-->
   <div class="row">
     <div class="product-container col-12 offset-1">
-      <div class="row mt-1 mb-2"></div>
+      <div class="row mt-1 mb-4"></div>
       <div class="row">
         {% for product in products %}
         <div class="col-6 col-md-4 col-lg-3">
@@ -71,7 +70,7 @@
               />
             </a>
             {% endif %}
-            <div class="card-body pb-0">
+            <div class="card-body pb-0 pt-2 pl-1">
               <p class="mb-0">{{ product.name }}</p>
               <p class="mb-0">{{ product.colour }}</p>
               <p class="mb-0">£{{ product.price }}</p>

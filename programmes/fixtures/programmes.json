@@ -1,0 +1,72 @@
+ [
+    {
+        "pk": 1,
+        "model": "programmes.programme",
+        "fields": {
+        "sku": "fscrprog001",
+        "name": "FSCR Rehab programme 1",
+        "description": "The FSCR programme....",
+        "price": 30.00,
+        "category": 1,
+        "rating": 4.8,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "FSCR-programme.png"
+        }
+    },
+        {
+        "pk": 1,
+        "model": "programmes.programme",
+        "fields": {
+        "sku": "fscrprog002",
+        "name": "FSCR Rehab programme 1",
+        "description": "The FSCR programme....",
+        "price": 30.00,
+        "category": 1,
+        "rating": 4.8,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "FSCR-programme.png"
+        }
+    },
+        {
+        "pk": 1,
+        "model": "programmes.programme",
+        "fields": {
+        "sku": "fscrprog003",
+        "name": "FSCR Rehab programme 1",
+        "description": "The FSCR programme....",
+        "price": 30.00,
+        "category": 1,
+        "rating": 4.8,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "FSCR-programme.png"
+        }
+    },
+        {
+        "pk": 1,
+        "model": "programmes.programme",
+        "fields": {
+        "sku": "fscrprog004",
+        "name": "FSCR Rehab programme 1",
+        "description": "The FSCR programme....",
+        "price": 30.00,
+        "category": 1,
+        "rating": 4.8,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "FSCR-programme.png"
+        }
+    },
+        {
+        "pk": 1,
+        "model": "programmes.programme",
+        "fields": {
+        "sku": "fscrprog005",
+        "name": "FSCR Rehab programme 1",
+        "description": "The FSCR programme....",
+        "price": 30.00,
+        "category": 1,
+        "rating": 4.8,
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "FSCR-programme.png"
+        }
+    }
+ ]

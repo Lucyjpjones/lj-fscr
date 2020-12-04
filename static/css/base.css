@@ -171,9 +171,7 @@ header {
 
 /* Sidenav */
 .wrapper {
-  position: absolute;
-  display: flex;
-  width: 100%;
+  display: block;
 }
 
 #sidebar.active {
@@ -187,6 +185,12 @@ header {
   color: #38405f;
   transition: all 0.3s;
   height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* top layer */
+  z-index: 9999;
+  margin-top: 87.53px;
 }
 
 #sidebar a {

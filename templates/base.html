@@ -217,8 +217,13 @@
           </form>
         </div>
       </div>
+    </header>
 
-      <!-- Sidebar -->
+    {% if messages %}
+    <div class="message-container"></div>
+    {% endif %} {% block page_header %} {% endblock %} 
+    
+    <!-- Sidebar -->
       <div class="wrapper">
         <nav id="sidebar" class="active">
           <ul class="list-unstyled components text-center text-uppercase mt-4">
@@ -247,13 +252,9 @@
             </li>
           </ul>
         </nav>
-      </div>
-    </header>
-
-    {% if messages %}
-    <div class="message-container"></div>
-    {% endif %} {% block page_header %} {% endblock %} {% block content %}
+        {% block content %}
     {%endblock %}
+      </div>
 
     <footer>
       <h6 class="copyright">Copyright © 2020 Lucy J P Jones</h6>

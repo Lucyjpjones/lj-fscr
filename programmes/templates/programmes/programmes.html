@@ -1,0 +1,51 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} {% block content %}
+
+<!--Page title-->
+<div class="content-container">
+  <div class="row">
+    <div class="col text-center title-container">
+      <h2 class="title-font py-4">Programmes</h2>
+    </div>
+  </div>
+
+  <!--Sort and Filter-->
+  <div class="row pr-3 pl-3">
+    <div class="col-6 dropdown show text-center">
+        <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sort
+        </a>
+
+        <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuSort">
+            <a class="dropdown-item" href="{% url 'programmes' %}?sort=sku&direction=desc">Newest arrivals</a>
+            <a class="dropdown-item" href="{% url 'programmes' %}?sort=rating&direction=desc">Highest Rated</a>
+            <a class="dropdown-item" href="{% url 'programmes' %}?sort=price&direction=asc">Price: Low to High</a>
+            <a class="dropdown-item" href="{% url 'programmes' %}?sort=price&direction=desc">Price: High to Low</a>
+        </div>
+    </div>
+    
+    <div class="col-6 dropdown show text-center">
+        <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Filter
+        </a>
+
+        <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuFilter">
+            <a class="dropdown-item" href="#">Category</a>
+            <a class="dropdown-item" href="#">Injury</a>
+            <a class="dropdown-item" href="#">Price Range</a>
+        </div>
+    </div>
+</div>
+
+
+  <!--Programme cards-->
+  
+{% endblock %}

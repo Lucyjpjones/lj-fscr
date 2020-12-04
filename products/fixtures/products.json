@@ -49,14 +49,14 @@
         "model": "products.product",
         "fields": {
         "sku": "fscr004",
-        "name": "FSCR beanie hat",
-        "colour": "white",
-        "description": "The FSCR beanie",
+        "name": "FSCR Baseball cap",
+        "colour": "black",
+        "description": "The FSCR cap",
         "price": 12.99,
         "category": 2,
         "rating": 4.4,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "DP0709201205510679M.jpg"
+        "image": "FSCR-cap-black.png"
         }
     },
     {
@@ -64,14 +64,14 @@
         "model": "products.product",
         "fields": {
         "sku": "fscr005",
-        "name": "FSCR beanie hat",
+        "name": "FSCR baseball cap",
         "colour": "grey",
-        "description": "The FSCR beanie",
+        "description": "The FSCR cap",
         "price": 12.99,
         "category": 2,
         "rating": 4.4,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "DP0709201205510679M.jpg"
+        "image": "FSCR-cap-white.png"
         }
     },
     {
@@ -79,14 +79,14 @@
         "model": "products.product",
         "fields": {
         "sku": "fscr006",
-        "name": "FSCR beanie hat",
-        "colour": "blue",
+        "name": "FSCR Hoodie",
+        "colour": "black",
         "description": "The FSCR beanie",
-        "price": 12.99,
+        "price": 22.99,
         "category": 2,
         "rating": 4.4,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "DP0709201205510679M.jpg"
+        "image": "FSCR-hoodie-black.png"
         }
     },
     {
@@ -131,7 +131,7 @@
         "category": 2,
         "rating": 4.3,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "DP0709201205510679M.jpg"
+        "image": "FSCR-towel-black.png"
         }
     },
     {
@@ -139,14 +139,14 @@
         "model": "products.product",
         "fields": {
         "sku": "fscr010",
-        "name": "FSCR Sports Towel",
-        "colour": "blue",
-        "description": "The FSCR Sports Towel",
-        "price": 11.99,
+        "name": "FSCR Hoodie",
+        "colour": "grey",
+        "description": "The FSCR hoodie",
+        "price": 22.99,
         "category": 2,
         "rating": 4.3,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "DP0709201205510679M.jpg"
+        "image": "FSCR-hoodie-grey.png"
         }
     }
  ]

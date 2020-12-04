@@ -225,6 +225,24 @@ header {
     width: 100%;
 }
 
+/* --------------------Meet the Coaches*/
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: solid 2px #ff0035;
+}
+
+.nav-pills {
+    margin: auto;
+}
+
+.tab-pane {
+    border: solid 1px #bdc1c7;
+    background-color: #f8f8f8;
+}
+
 
 /* --------------------Media queries*/
 

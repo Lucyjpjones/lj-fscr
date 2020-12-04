@@ -1,0 +1,63 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} {% block content %}
+
+<!--Page title-->
+<div class="content-container">
+  <div class="row">
+    <div class="col text-center title-container">
+      <h2 class="title-font py-4">Meet the Coaches</h2>
+    </div>
+  </div>
+
+  <!--Product cards-->
+  <div class="row">
+    <div class="product-container col-12 offset-1">
+      <div class="row">
+          
+        <ul class="nav nav-pills">
+            <li class="active pr-2">
+                <a data-toggle="pill" href="#mike">
+                    <img class="profile-img" src="{{ MEDIA_URL }}final-logo2.png" alt="Mike profile image">
+                </a>
+            </li>
+            <li class="pl-2">
+                <a data-toggle="pill" href="#frazer">
+                    <img class="profile-img" src="{{ MEDIA_URL }}final-logo2.png " alt="Fraser profile image">
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content py-4 px-2">
+            <div id="mike" class="tab-pane fade in active p-3">
+                <h3>Mike Eglon</h3>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra molestie ante, in volutpat felis egestas accumsan. Etiam molestie est eros, at faucibus tortor mattis sit amet. Donec ipsum velit, lobortis et volutpat vel, elementum et dolor. Quisque eu faucibus magna. Nunc rhoncus vestibulum consequat. Cras ac mollis odio, in sollicitudin odio. Aenean tempus aliquet viverra. In at odio sagittis, consectetur dolor vel, pellentesque tellus. Donec diam libero, convallis id dolor nec, eleifend commodo urna. Nullam sodales sagittis enim, eu hendrerit lorem faucibus vulputate. Proin nisl quam, consectetur a faucibus fringilla, vestibulum vel ligula. Maecenas ultricies eget quam sed hendrerit. Sed sed commodo turpis, eget congue dolor. Pellentesque lacinia pellentesque mauris, vel euismod sapien maximus non. Sed est dui, luctus sit amet auctor non, pretium eu nulla. Ut in tellus nisl.
+                </p>
+                <p>
+                Proin a feugiat leo. Nulla at velit a magna laoreet faucibus sit amet dapibus ipsum. Duis pharetra eget augue ut pretium. Praesent imperdiet nec augue et tincidunt. Sed et egestas urna, vel mollis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec facilisis, neque vitae lobortis fermentum, justo urna commodo lorem, et sagittis felis erat nec lectus.
+                </p>
+            </div>
+            <div id="frazer" class="tab-pane fade p-3">
+                <h3>Frazer</h3>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra molestie ante, in volutpat felis egestas accumsan. Etiam molestie est eros, at faucibus tortor mattis sit amet. Donec ipsum velit, lobortis et volutpat vel, elementum et dolor. Quisque eu faucibus magna. Nunc rhoncus vestibulum consequat. Cras ac mollis odio, in sollicitudin odio. Aenean tempus aliquet viverra. In at odio sagittis, consectetur dolor vel, pellentesque tellus. Donec diam libero, convallis id dolor nec, eleifend commodo urna. Nullam sodales sagittis enim, eu hendrerit lorem faucibus vulputate. Proin nisl quam, consectetur a faucibus fringilla, vestibulum vel ligula. Maecenas ultricies eget quam sed hendrerit. Sed sed commodo turpis, eget congue dolor. Pellentesque lacinia pellentesque mauris, vel euismod sapien maximus non. Sed est dui, luctus sit amet auctor non, pretium eu nulla. Ut in tellus nisl.
+                </p>
+                <p>
+                Proin a feugiat leo. Nulla at velit a magna laoreet faucibus sit amet dapibus ipsum. Duis pharetra eget augue ut pretium. Praesent imperdiet nec augue et tincidunt. Sed et egestas urna, vel mollis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec facilisis, neque vitae lobortis fermentum, justo urna commodo lorem, et sagittis felis erat nec lectus.
+                </p>
+            </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

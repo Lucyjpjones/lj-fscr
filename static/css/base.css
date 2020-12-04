@@ -32,7 +32,6 @@ footer h6 {
 .content-container {
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: -40px;
 }
 
 .sm-content-container {
@@ -212,6 +211,10 @@ header {
 
 .card-body {
     font-size: 12px;
+}
+
+.programme-card {
+  height: 100px !important;
 }
 
 /* --------------------Sort and Filter*/

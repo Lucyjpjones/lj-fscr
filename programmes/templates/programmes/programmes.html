@@ -46,6 +46,42 @@
 </div>
 
 
-  <!--Programme cards-->
+<!--Programme cards-->
+  <div class="row">
+    <div class="product-container col-12 offset-1">
+      <div class="row mt-1 mb-4"></div>
+      <div class="row">
+        {% for programme in programmes %}
+        <div class="col-12">
+          <div class="card product-card h-100 border-0 mb-4">
+            {% if programme.image %}
+            <a href="">
+              <img
+                class="card-img-top img-fluid programme-card"
+                src="{{ programme.image.url }}"
+                alt="{{ programme.name }}"
+              />
+            </a>
+            {% else %}
+            <a href="">
+              <img
+                class="card-img-top img-fluid"
+                src="{{ MEDIA_URL }}noimage.png"
+                alt="{{ programme.name }}"
+              />
+            </a>
+            {% endif %}
+            <div class="card-body pb-0 pt-2 pl-1">
+              <p class="mb-0">{{ programme.name }}</p>
+              <p class="mb-0">{{ programme.colour }}</p>
+              <p class="mb-0">£{{ programme.price }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
   
 {% endblock %}

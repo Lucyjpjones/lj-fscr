@@ -5,6 +5,7 @@ html {
 }
 
 body {
+    height: 100%;
   color: #0e131f;
   font-family: "Lato", sans-serif;
   background-color: #bdc1c750;
@@ -190,6 +191,24 @@ header {
   background-color: transparent !important;
 }
 
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    font-size: 12px;
+}
+
+/* --------------------Sort and Filter*/
+
+.filter-btn {
+    border: solid 2px #38405f;
+    font-size: 14px;
+    width: 100%;
+}
+
+
 /* --------------------Media queries*/
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -234,4 +253,6 @@ header {
   .col-1 {
     padding: 0px !important;
   }
+
+
 }

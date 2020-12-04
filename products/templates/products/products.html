@@ -1,4 +1,7 @@
-{% extends "base.html" %} {% load static %} {% block page_header %}
+{% extends "base.html" %} 
+{% load static %}
+
+{% block page_header %}
 <div class="container header-container">
   <div class="row">
     <div class="col"></div>
@@ -7,6 +10,7 @@
 {% endblock %} {% block content %}
 
 <!--Page title-->
+<div class="overlay"></div>
 <div class="container-fluid">
   <div class="row">
     <div class="col text-center title-container">
@@ -15,90 +19,36 @@
   </div>
 
   <!--Sort and Filter-->
-  <div class="row bg-white">
-    <nav class="navbar navbar-expand-lg navbar-light w-100">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#main-nav"
-        aria-controls="main-nav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-        <div class="collapse navbar-collapse" id="main-nav">
-          <ul class="navbar-nav w-auto mx-auto">
-            <li class="nav-item dropdown">
-              <a
-                class="logo-font font-weight-bold nav-link text-black mr-5"
-                href="#"
-                id="all-products-link"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Sort
-              </a>
-              <div
-                class="dropdown-menu border-0"
-                aria-labelledby="all-products-link"
-              >
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Rating</a>
-                <a href="" class="dropdown-item">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item"
-                  >All Products</a
-                >
-              </div>
-            </li>
+  <div class="row pr-3 pl-3">
+    <div class="col-6 dropdown show text-center">
+        <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sort
+        </a>
 
-            <li class="nav-item dropdown">
-              <a
-                class="logo-font font-weight-bold nav-link text-black mr-5"
-                href="#"
-                id="clothing-link"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Filter
-              </a>
-              <div
-                class="dropdown-menu border-0"
-                aria-labelledby="clothing-link"
-              >
-                <a
-                  href="{% url 'products' %}?category=clothing"
-                  class="dropdown-item"
-                  >Clothing</a
-                >
-                <a
-                  href="{% url 'products' %}?category=accessories"
-                  class="dropdown-item"
-                  >Accessories</a
-                >
-                <a
-                  href="{% url 'products' %}?category=hats"
-                  class="dropdown-item"
-                  >Hats</a
-                >
-                <a
-                  href="{% url 'products' %}?category=activewear,essentials,jeans,shirts"
-                  class="dropdown-item"
-                  >All Products</a
-                >
-              </div>
-            </li>
-          </ul>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuSort">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </button>
-    </nav>
-  </div>
+    </div>
+    
+    <div class="col-6 dropdown show text-center">
+        <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Filter
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuFilter">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+</div>
+
 
   <!--Product cards-->
   <div class="row">
-    <div class="product-container col-10 offset-1">
+    <div class="product-container col-12 offset-1">
       <div class="row mt-1 mb-2"></div>
       <div class="row">
         {% for product in products %}

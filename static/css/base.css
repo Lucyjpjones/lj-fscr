@@ -249,6 +249,26 @@ header {
     cursor: pointer;
 }
 
+.product-details-container {
+    font-size: 16px;
+}
+
+.font-desc {
+    font-size: 12px;
+}
+
+.ks-btn {
+    background-color: #38405F;
+    border: solid 2px #0E131F;
+    color: #f8f8f8;
+}
+
+.add-btn {
+    background-color: #FF0035;
+    border: solid 2px #0E131F;
+    color: #f8f8f8;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {

@@ -243,6 +243,12 @@ header {
     background-color: #f8f8f8;
 }
 
+/* --------------------Bag*/
+
+.update-link, .remove-item {
+    cursor: pointer;
+}
+
 
 /* --------------------Media queries*/
 

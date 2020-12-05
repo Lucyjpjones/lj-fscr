@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'home',
     'products',
     'programmes',
+    'bag',
 
     # Other
     'storages',  # AWS
@@ -78,6 +79,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'bag.contexts.bag_contents',
             ],
         },
     },
@@ -187,3 +189,6 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+    FREE_DELIVERY_THRESHOLD = 40
+    STANDARD_DELIVERY_PERCENTAGE = 10

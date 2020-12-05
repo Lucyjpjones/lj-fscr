@@ -34,10 +34,6 @@ footer h6 {
     margin-left: auto;
 }
 
-.sm-content-container {
-    height: calc(100vh - 87.53px);
-}
-
 /* ---------- General */
 p,
 .row,
@@ -170,7 +166,8 @@ header {
 
 /* Sidenav */
 .wrapper {
-  display: block;
+  display: flex;
+  min-height: calc(100vh - 127.53px);
 }
 
 #sidebar.active {
@@ -261,12 +258,14 @@ header {
     background-color: #38405F;
     border: solid 2px #0E131F;
     color: #f8f8f8;
+    font-size: 14px;
 }
 
 .add-btn {
     background-color: #FF0035;
     border: solid 2px #0E131F;
     color: #f8f8f8;
+    font-size: 14px;
 }
 
 /* ------------------------------- bootstrap toasts */
@@ -343,7 +342,7 @@ header {
 
 @media only screen and (max-width: 600px) {
   .home-view {
-    height: calc(100vh - 87.53px);
+    height: calc(100vh - 127.53px);
     height: calc(var(--vh, 1vh) * (100vh - 87.53px))
   }
 

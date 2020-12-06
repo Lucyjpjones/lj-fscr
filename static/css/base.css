@@ -11,10 +11,6 @@ body {
   background-color: #bdc1c750;
 }
 
-.home-view {
-  height: calc(100vh - 102.11px);
-}
-
 footer {
   position: relative;
   background-color: #ff0035;
@@ -34,10 +30,6 @@ footer h6 {
     margin-left: auto;
 }
 
-.sm-content-container {
-    height: calc(100vh - 87.53px);
-}
-
 /* ---------- General */
 p,
 .row,
@@ -47,6 +39,18 @@ p,
 
 .container-fluid {
   padding: 0px;
+}
+
+.flaticon-shopping-bag-outline:before, .flaticon-menu-1:before, .flaticon-search-interface-symbol:before, .flaticon-user:before {
+    margin-left: 0px !important;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.font-14 {
+    font-size: 14px;
 }
 
 /* ---------- Header */
@@ -245,10 +249,6 @@ header {
 
 .product-details-container {
     font-size: 16px;
-}
-
-.font-desc {
-    font-size: 12px;
 }
 
 .ks-btn {

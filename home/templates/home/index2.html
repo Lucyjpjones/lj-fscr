@@ -1,5 +1,5 @@
 {% extends "base.html" %} 
-{% load static %}
+{% load static %} 
 
 {% block page_header %}
 <div class="container header-container">
@@ -7,22 +7,23 @@
     <div class="col"></div>
   </div>
 </div>
-{% endblock %} {% block content %}
+{% endblock %} 
 
-
+{% block content %}
+<!--Page Image-->
 <div class="content-container">
-<div>
-<!--Callout image-->
-  <div class="row">
-    <img
-            class="col callout-img p-0"
+    <div class="row">
+        <div class="col text-center callout-img-outer">
+        <img
+            class="callout-img"
             src="{{ MEDIA_URL }}callout-img3.JPG"
             alt="Callout image"
         />
-  </div>
+        </div>
+    </div>
 
-  <!-- Callout banner carousel -->
-  <div class="row callout-banner-outer">
+    <!-- Callout banner carousel -->
+    <div class="row callout-banner-outer">
       <div
         id="carouselBannerControls"
         class="col-12 text-center text-uppercase carousel slide callout-banner red-header py-2"
@@ -64,9 +65,8 @@
         </a>
       </div>
     </div>
-    </div>
 
-     <!-- Testimonials carousel -->
+    <!-- Testimonials carousel -->
     <div
         id="carouselExampleIndicators"
         class="row carousel slide carousel-testimonials"
@@ -169,6 +169,5 @@
         </a>
     </div>
     </div>
-
-    </div>
+</div>
 {% endblock %}

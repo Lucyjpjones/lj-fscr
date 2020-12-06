@@ -34,6 +34,10 @@ footer h6 {
     margin-left: auto;
 }
 
+.sm-content-container {
+    height: calc(100vh - 87.53px);
+}
+
 /* ---------- General */
 p,
 .row,
@@ -49,7 +53,7 @@ p,
 
 .red-header {
   background-color: #ff0035;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
   color: #bdc1c7;
 }
@@ -61,11 +65,11 @@ header {
 }
 
 .header-container {
-  padding-top: 102.11px;
+  padding-top: 87.53px;
 }
 
 .main-logo-link img {
-  width: 140px;
+  width: 120px;
   padding: 5px 0px;
 }
 
@@ -78,6 +82,7 @@ header {
   width: 60vw !important;
   border: none;
   background-color: #fafafa;
+  font-size: 14px;
 }
 .search-card {
   background-color: #ff0035;
@@ -89,7 +94,7 @@ header {
 
 /* ---------- Icons */
 .nav-icon {
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .nav-icon:active,
@@ -119,18 +124,10 @@ header {
 /* ---------- Index.html */
 
 .callout-img {
+    height: calc(100vh - 155.53px);
   filter: grayscale(0.4);
   width: 100vw;
   object-fit: cover;
-  object-position: 10% 95%;
-}
-.callout-img-outer {
-  height: 86%;
-  overflow: hidden;
-}
-
-.callout-banner-outer {
-  height: 14%;
 }
 
 /* Red callout banner */
@@ -138,7 +135,7 @@ header {
   background-color: #38405f;
   color: #bdc1c7;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
   margin: 5px;
   padding: 2px 8px;
   border: solid 1px #bdc1c7;
@@ -171,11 +168,11 @@ header {
 }
 
 #sidebar.active {
-  margin-left: -30%;
+  margin-left: -60%;
 }
 
 #sidebar {
-  min-width: 30%;
+  min-width: 60%;
   max-width: 250px;
   background: #bdc1c7;
   color: #38405f;
@@ -338,48 +335,3 @@ header {
 
 /* --------------------Media queries*/
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-
-@media only screen and (max-width: 600px) {
-  .home-view {
-    height: calc(100vh - 127.53px);
-    height: calc(var(--vh, 1vh) * (100vh - 87.53px))
-  }
-
-  .header-container {
-    padding-top: 87.53px;
-  }
-  #sidebar.active {
-    margin-left: -60%;
-  }
-  #sidebar {
-    min-width: 60%;
-  }
-
-  .red-header,
-  .callout-btn {
-    font-size: 12px;
-  }
-
-  .nav-icon {
-    font-size: 20px;
-  }
-
-  .callout-img {
-    object-position: 40% 95%;
-  }
-
-  .search-input {
-    font-size: 14px;
-  }
-
-  .main-logo-link img {
-    max-width: 120px;
-  }
-
-  .col-1 {
-    padding: 0px !important;
-  }
-
-
-}

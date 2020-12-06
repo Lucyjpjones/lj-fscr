@@ -243,6 +243,10 @@ header {
 
 /* --------------------Bag*/
 
+.grey-banner {
+    background-color: #f8f8f8;
+}
+
 .update-link, .remove-item {
     cursor: pointer;
 }

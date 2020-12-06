@@ -198,6 +198,11 @@ header {
 .title-font {
   font-size: 20px;
 }
+
+.bg-light {
+    background-color: #f8f8f8;
+}
+
 .product-card {
   background-color: transparent !important;
 }
@@ -267,6 +272,21 @@ header {
     border: solid 2px #0E131F;
     color: #f8f8f8;
     font-size: 14px;
+}
+
+.input-group-prepend, .input-group-append {
+    border: solid 1px #BDC1C7;
+}
+
+.form-control-sm {
+    height: auto;
+    flex: none !important;
+    width: 40px !important;
+}
+
+.navy {
+    color: #38405F;
+    font-size: 20px;
 }
 
 /* ------------------------------- bootstrap toasts */

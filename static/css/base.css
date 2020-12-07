@@ -278,7 +278,7 @@ header {
     border: solid 1px #BDC1C7;
 }
 
-.form-control-sm, .qty-input {
+.form-control-sm {
     height: auto;
     flex: none !important;
     width: 40px !important;

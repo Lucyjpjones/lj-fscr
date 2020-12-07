@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'products',
     'programmes',
     'bag',
+    'checkout',
 
     # Other
     'storages',  # AWS

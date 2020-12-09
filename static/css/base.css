@@ -73,7 +73,7 @@ header {
 }
 
 .header-container {
-  padding-top: 87.53px;
+  padding-top: 98.53px;
 }
 
 .main-logo-link img {
@@ -132,7 +132,7 @@ header {
 /* ---------- Index.html */
 
 .callout-img {
-    height: calc(100vh - 155.53px);
+    height: calc(100vh - 166.54px);
   filter: grayscale(0.4);
   width: 100vw;
   object-fit: cover;
@@ -191,7 +191,7 @@ header {
   left: 0;
   /* top layer */
   z-index: 9999;
-  margin-top: 87.53px;
+  margin-top: 98.53px;
 }
 
 #sidebar a {

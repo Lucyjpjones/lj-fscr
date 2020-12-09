@@ -41,8 +41,12 @@ p,
   padding: 0px;
 }
 
-.flaticon-shopping-bag-outline:before, .flaticon-menu-1:before, .flaticon-search-interface-symbol:before, .flaticon-user:before {
+.flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before {
     margin-left: 0px !important;
+}
+
+.font-10 {
+    font-size: 10px !important;
 }
 
 .font-12 {
@@ -57,7 +61,7 @@ p,
 
 .red-header {
   background-color: #ff0035;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: #bdc1c7;
 }
@@ -269,6 +273,19 @@ subtitle-font {
     border: solid 2px #0E131F;
     color: #f8f8f8;
     font-size: 14px;
+}
+
+.navy-border-btn {
+    background-color: transparent;
+    border: solid 2px #38405F;
+    color: #38405F;
+    font-size: 14px;
+}
+
+.red-border-btn {
+    background-color: transparent;
+    border: solid 2px #FF0035;
+    color: #FF0035;
 }
 
 .add-btn {

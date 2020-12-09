@@ -30,47 +30,34 @@
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                    <button class="btn add-btn font-12 rounded-0 text-uppercase float-right">Update Information</button>
+                    <button class="btn red-border-btn font-12 rounded-0 text-uppercase float-right">Update Information</button>
                 </form>
             </div>
             <div class="col-12 col-lg-6 grey-banner py-3 px-4 mb-4">
             <p class="text-muted">Order History</p>
-            <div class="order-history table-responsive">
-                    <table class="table table-sm table-borderless">
+            <div class="order-history table-responsive font-14">
+                    {% for order in orders %}
+                    <table class="table table-sm table-borderless mt-3 mb-1">
                         <thead>
                             <tr>
-                                <th>Order Number</th>
-                                <th>Date</th>
-                                <th>Items</th>
+                                <th>Order No.</th>
+                                <th>Order Date</th>
                                 <th>Order Total</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {% for order in orders %}
-                                <tr>
+                                <tr class="text-muted">
                                     <td>
-                                        <a href="{% url 'order_history' order.order_number %}"
-                                        title="{{ order.order_number }}">
-                                            {{ order.order_number|truncatechars:6 }}
-                                        </a>
+                                        {{ order.order_number|truncatechars:6 }}
                                     </td>
                                     <td>{{ order.date }}</td>
-                                    <td>
-                                        <ul class="list-unstyled">
-                                            {% for item in order.lineitems.all %}
-                                                <li class="small">
-                                                    {% if item.product.has_sizes %}
-                                                        Size {{ item.product.size|upper }}
-                                                    {% endif %}{{ item.product.name }} x{{ item.quantity }}
-                                                </li>
-                                            {% endfor %}
-                                        </ul>
-                                    </td>
                                     <td>£{{ order.grand_total }}</td>
                                 </tr>
-                            {% endfor %}
                         </tbody>
                     </table>
+                    <button href="{% url 'order_history' order.order_number %}" class="btn navy-border-btn font-10 rounded-0 text-uppercase py-1 px-2">View Order Details</button>
+                    {% endfor %}
+                    <br>
                 </div>
             </div>
         </div>

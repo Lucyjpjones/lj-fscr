@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+Debug = os.environ.get("DEVELOPMENT", False)
 
 ALLOWED_HOSTS = ['lj-fscr.herokuapp.com', 'localhost']
 
@@ -210,9 +210,10 @@ if 'USE_AWS' in os.environ:
     STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
     STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
 
+    # Emails
     if 'DEVELOPMENT' in os.environ:
         EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-        DEFAULT_FROM_EMAIL = 'fscr@fscr.com'
+        DEFAULT_FROM_EMAIL = 'fscr@example.com'
     else:
         EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
         EMAIL_USE_TLS = True

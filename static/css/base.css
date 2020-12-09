@@ -199,6 +199,10 @@ header {
   font-size: 20px;
 }
 
+subtitle-font {
+    font-size: 18px;
+}
+
 .bg-light {
     background-color: #f8f8f8;
 }

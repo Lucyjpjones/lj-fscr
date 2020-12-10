@@ -13,14 +13,14 @@
     <div class="content-container">
         <div class="row">
             <div class="col text-center title-container">
-                <h2 class="title-font pt-5 pb-3">Product Management</h2>
-                <h5 class="text-muted">Edit a Product</h5>
+                <h2 class="title-font pt-5">Product Management</h2>
+                <h5 class="subtitle-font pb-3">Edit a Product</h5>
             </div>
         </div>
 
         <div class="row">
             <div class="col">
-                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-3" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
@@ -30,8 +30,8 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Save changes</button>
+                        <a class="ks-btn btn rounded-0 mt-1 mr-1" href="{% url 'products' %}">Cancel</a>
+                        <button class="add-btn btn rounded-0 text-uppercase mt-1" type="submit">Save changes</button>
                     </div>
                 </form>
             </div>            

@@ -203,8 +203,9 @@ header {
   font-size: 20px;
 }
 
-subtitle-font {
+.subtitle-font {
     font-size: 18px;
+    color: #6c757d!important;
 }
 
 .bg-light {

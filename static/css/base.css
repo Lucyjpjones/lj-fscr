@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    height: 100%;Ï
+    height: 100%;
   color: #0e131f;
   font-family: "Lato", sans-serif;
   background-color: #bdc1c750;
@@ -55,6 +55,10 @@ p,
 
 .font-14 {
     font-size: 14px !important;
+}
+
+.black-font {
+    color: #0e131f;
 }
 
 /* ---------- Header */
@@ -172,7 +176,7 @@ header {
 /* Sidenav */
 .wrapper {
   display: flex;
-  min-height: calc(100vh - 127.53px);
+  min-height: calc(100vh - 40px);
 }
 
 #sidebar.active {
@@ -270,23 +274,23 @@ header {
 }
 
 .ks-btn {
-    background-color: #38405F;
-    border: solid 2px #0E131F;
-    color: #f8f8f8;
+    background-color: #38405F !important;
+    border: solid 2px #0E131F !important;
+    color: #f8f8f8 !important;
     font-size: 14px;
 }
 
 .navy-border-btn {
-    background-color: transparent;
-    border: solid 2px #38405F;
-    color: #38405F;
+    background-color: transparent !important;
+    border: solid 2px #38405F !important;
+    color: #38405F !important;
     font-size: 14px;
 }
 
 .red-border-btn {
-    background-color: transparent;
-    border: solid 2px #FF0035;
-    color: #FF0035;
+    background-color: transparent !important;
+    border: solid 2px #FF0035 !important;
+    color: #38405F !important;
 }
 
 .add-btn {
@@ -457,7 +461,7 @@ header {
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #FF0035; /* text-info */
 }
 
 input[name='q']::placeholder {

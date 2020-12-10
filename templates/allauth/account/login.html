@@ -5,47 +5,64 @@
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
+{% block inner_title %}
+    <h2 class="title-font pt-5 mb-3">{% trans "Sign In" %}</h2>
+{% endblock %}
+
 {% block inner_content %}
 
-<hr>
-<h2 class="logo-font mb-4">{% trans "Sign In" %}</h2>
-<hr>
+<!-- Signing in with email or username-->
+<div class="row">
+    <div class="col grey-banner">
+    {% blocktrans with site.name as site_name %}
+    <p class="subtitle-font my-2">Sign in with email or username</p>
+    <p class="font-14 mt-1 mb-2">Not registered? <a class="pl-1" href="{{ signup_url }}"> sign up</a></p>
+    {% endblocktrans %}
+    </div>
+</div>
+
+<div class="row my-2">
+    <div class="col grey-banner">
+        <form class="login my-3" method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+        {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <button class="primaryAction btn ks-btn w-75" type="submit">{% trans "Sign In" %}</button>
+            <p class="mt-2">
+                <a class="button secondaryAction font-14" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+<div class="row my-2">
+    <div class="col grey-banner">
+        <p class="m-1"><strong>-- OR --</strong></p>
+    </div>
+</div>
+
+<!-- Signing in with social accounts-->
 
 {% get_providers as socialaccount_providers %}
 
-{% if socialaccount_providers %}
-<p>{% blocktrans with site.name as site_name %}Please sign in with one
-of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
-
-<div class="socialaccount_ballot">
-
-  <ul class="socialaccount_providers">
-    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-  </ul>
-
-  <div class="login-or">{% trans 'or' %}</div>
-
+<div class="row grey-banner py-3 mb-3">
+    <div class="col-12">
+        <button class="btn navy-border-btn mb-3 w-75">
+            <a href="{% provider_login_url 'github' %}">Login with GitHub</a>
+        </button>
+    </div>
+    <div class="col-12">
+        <button class="btn navy-border-btn mb-3 w-75">
+            <a href="{% provider_login_url 'google' %}">Login with Google</a>
+        </button>
+    </div>
+    <div class="col-12">
+        <button class="btn navy-border-btn w-75">
+            <a href="">Login with Twitter</a>
+        </button>
+    </div>
 </div>
-
-{% include "socialaccount/snippets/login_extra.html" %}
-
-{% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-{% endif %}
-
-<form class="login" method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form|crispy }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <a class="btn btn-outline-black rounded-0" href="{% url 'home' %}">Home</a>
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-  <p class="mt-2">
-    <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  </p>
-</form>
 
 {% endblock %}

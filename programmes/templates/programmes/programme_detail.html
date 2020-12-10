@@ -39,7 +39,13 @@
         <div class="col-12">
             <div class="product-details-container mb-5 mt-md-5">
                 <p class="mb-0">{{ programme.name }}</p>
-                <p class="lead mb-0 text-left font-weight-bold">£{{ programme.price }}</p>
+                <p class="lead mb-1 text-left font-weight-bold">£{{ programme.price }}</p>
+                {% if request.user.is_superuser %}
+                    <small>
+                        <a class="ks-btn px-2 py-1 font-12" href="{% url 'edit_programme' programme.id %}">Edit</a>
+                        <a class="add-btn px-2 py-1 font-12" href="{% url 'delete_programme' programme.id %}">Delete</a>
+                    </small>
+                {% endif %}
                 <p class="mt-3">{{ programme.description }}</p>
                 <a href="" class="btn" >Sample fitness plan</a>
             </div>

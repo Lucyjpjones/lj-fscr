@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% load static %} {% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} 
+{% block content %}
+
+<div class="content-container">
+
+    <!--Back button-->
+    <div class="row">
+        <div class="col-12">
+            <a href="{% url 'blog' %}" class="ks-btn btn rounded-0 mt-3 mr-1">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Blog</span>
+            </a>
+        </div>
+    </div>
+
+
+    <!--Post image-->
+    <div class="row">
+        <div class="col-12">
+        <div class="image-container mt-2 mb-3">
+            {% if programme.image %}
+            <a href="{{ programme.image.url }}" target="_blank">
+            <img
+                class="card-img-top img-fluid"
+                src="{{ programme.image.url }}"
+                alt="{{ programme.name }}"
+            />
+            </a>
+            {% else %}
+            <a href="{{ programme.image.url }}">
+            <img
+                class="card-img-top img-fluid"
+                src="{{ MEDIA_URL }}noimage.png"
+                alt="{{ programme.name }}"
+            />
+            </a>
+            {% endif %}
+        </div>
+        </div>
+    </div>
+
+    <!--Post details-->
+    <div class="row grey-banner">
+        <div class="col-12 py-2">
+            <div class="mb-2">
+                <p class="mb-0"><strong>{{ post.title }}</strong></p>
+                <p class=" text-muted font-14">{{ post.author }} | {{ post.created_on }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-12">
+                <p class="mt-3 font-14">{{ post.content }}</p>
+        </div>
+    </div>
+  </div>
+{% endblock %}

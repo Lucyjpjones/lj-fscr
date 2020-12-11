@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} {% block content %}
+
+<!--Page title-->
+<div class="content-container">
+    <div class="row">
+        <div class="col text-center title-container">
+        <h2 class="title-font py-4">Add in Forum</h2>
+        </div>
+    </div>
+
+    <form action="{% url 'addInForum' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-success" value="submit">
+    </form>
+</div>
+{% endblock %}

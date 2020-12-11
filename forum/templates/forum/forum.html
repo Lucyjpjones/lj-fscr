@@ -1,0 +1,62 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} {% block content %}
+
+<!--Page title-->
+<div class="content-container">
+  <div class="row">
+    <div class="col text-center title-container">
+      <h2 class="title-font py-4">Forum</h2>
+    </div>
+  </div>
+
+  <h2 class="jumbotron">
+        Currently active forums: {{ count }}
+        <form method="POST" action="{% url 'addInForum' %}">
+        {% csrf_token %}
+            <button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px;">Add more</button>
+        </form>
+    </h2>
+    <div class="card-columns" style="padding: 10px; margin: 20px;"></div>
+            
+    {% for forum in forums %}
+            
+    <div class="card box container">
+    <br>
+        <div class="card-title">
+            <a href="{{ forum.link }}"><h3>{{ forum.topic }}</h3></a> 
+            <div class="card-body container">
+                <p>{{ forum.description }}</p>
+        </div>
+        <hr>
+        <p> By: {{ forum.name }}</p>
+            email- {{ forum.email }}
+        <hr>     
+        <h4>Views from other users</h4>
+        {% for discuss in discussions %}
+        {% for objs in discuss %}  
+        {% if objs.forum == forum %}
+        {{ objs.discuss }}
+        <br>
+        {% endif %}
+        {%endfor%}
+        {%endfor%}
+        <form method="POST" action="{% url 'addInDiscussion' %}">
+            {% csrf_token %}
+            <button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px;">Add more</button>
+        </form>
+
+    </div>
+    </div>
+    <br>
+    {%endfor%}
+</div>
+
+{% endblock %}

@@ -9,19 +9,37 @@
 </div>
 {% endblock %} {% block content %}
 
-<!--Page title-->
-<div class="content-container">
+<div class="container">
+
+    <!--Back button-->
     <div class="row">
-        <div class="col text-center title-container">
-        <h2 class="title-font py-4">Add in Discussion</h2>
+        <div class="col-12">
+            <a href="{% url 'forum' %}" class="ks-btn btn rounded-0 mt-3 mr-1 font-12">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Message Board</span>
+            </a>
         </div>
     </div>
 
-    <form action="{% url 'addInDiscussion' %}" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" class="btn btn-success" value="submit">
-    </form>
+    <!--Discussion-->
+    <div class="row">
+        <div class="col-12">
+            
+        </div>
+    </div>
+
+    <!--Add to Discussion-->
+    <div class="row">
+        <div class="col-12">
+            <form action="{% url 'addInDiscussion' %}" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="add-btn btn rounded-0 text-uppercase mt-1" value="submit">
+            </form>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

@@ -261,6 +261,10 @@ header {
 
 /* --------------------Bag*/
 
+.d-grey-banner {
+    border: #BDC1C770;
+}
+
 .grey-banner {
     background-color: #f8f8f8;
 }
@@ -322,6 +326,10 @@ header {
 }
 
 /* --------------------Forum*/
+
+.table {
+    border: solid 1px #BDC1C7;
+}
 
 .table-header {
     background-color: #BDC1C750;

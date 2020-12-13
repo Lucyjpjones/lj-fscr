@@ -1,0 +1,91 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} {% block content %}
+
+<div class="container">
+
+    <!--Back button-->
+    <div class="row">
+        <div class="col-12 p-0">
+            <a href="{% url 'forum' %}" class="ks-btn btn rounded-0 mt-3 mr-1 mb-3 font-12">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Message Board</span>
+            </a>
+        </div>
+    </div>
+
+    <!--Post details-->
+    <div class="row grey-banner">
+        <div class="col-12 py-2">
+            <div class="mb-2">
+                <p class="mb-0"><strong>{{ post.title }}</strong></p>
+                <p class=" text-muted font-14">{{ post.author }} | {{ post.created_on }}</p>
+            </div>
+        </div>
+    </div>
+    <!-- Post body -->
+    <div class="row grey-banner">
+        <div class="col-12 pb-3">
+                <p class="font-14">{{ post.content }}</p>
+        </div>
+    </div>
+    <!-- Number of replies and reply button -->
+    <div class="row d-grey-banner">
+        <div class="col-6 py-2">
+                <p class="font-12 text-muted">{{ comments.count }} replies</p>
+        </div>
+        <div class="col-6 py-2">
+                <a class="btn add-btn font-12 rounded-0 float-right modal-trigger py-1 px-2" href="#reply-modal">Reply</a>
+        </div>
+    </div>
+
+    <!--Post comments-->
+
+    <div class="mb-4 mt-3 ">
+
+        <!-- comments -->
+
+            {% for comment in comments %}
+            <div class=" grey banner comments p-3 mb-2">
+            <p class="font-weight-bold">
+                {{ comment.name }}
+                <span class="text-muted font-weight-normal pl-1">
+                {{ comment.created_on }}
+                </span>
+            </p>
+            {{ comment.body | linebreaks }}
+            </div>
+            {% endfor %}
+
+
+        <!-- comment form -->
+        <div class="col-md-8 grey-banner mb-4 mt-3">
+            <div>
+            {% if new_comment %}
+            <div class="alert alert-success" role="alert">
+                 Your comment is awaiting approval
+            </div>
+            {% else %}
+            {% load crispy_forms_tags %}
+            <form method="post" style="margin-top: 1.3em;">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="btn add-btn font-12 rounded-0 float-right modal-trigger py-1 px-2">Reply</button>
+            </form>
+            {% endif %}
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+{% endblock %}

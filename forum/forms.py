@@ -1,14 +1,8 @@
-from django.forms import ModelForm
-from .models import forum, Discussion
+from .models import Comment
+from django import forms
 
 
-class CreateInForum(ModelForm):
+class CommentForm(forms.ModelForm):
     class Meta:
-        model= forum
-        fields = "__all__"
-
-
-class CreateInDiscussion(ModelForm):
-    class Meta:
-        model= Discussion
-        fields = "__all__"
+        model = Comment
+        fields = ('name', 'body')

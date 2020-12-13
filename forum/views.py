@@ -1,40 +1,58 @@
-from django.shortcuts import render, redirect
-from .models import forum, Discussion
-from .forms import CreateInForum, CreateInDiscussion
+from django.shortcuts import render, get_object_or_404
+from .models import Post, Comment
+from .forms import CommentForm
+from django.db.models.functions import Lower
 
 
-def forumPage(request):
+def all_posts(request):
+    posts = Post.objects.filter(status=1).order_by('-created_on')
+    sort = None
+    direction = None
 
-    forums= forum.objects.all()
-    count=forums.count()
-    discussions=[]
-    for i in forums:
-        discussions.append(i.discussion_set.all())
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'title':
+                sortkey = 'lower_title'
+                posts = posts.annotate(lower_title=Lower('title'))
 
-    context= {'forums': forums,
-              'count': count,
-              'discussions': discussions}
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            posts = posts.order_by(sortkey)
 
-    return render(request, 'forum/forum.html', context)
+    current_sorting = f'{sort}_{direction}'
+
+    context = {
+        'posts': posts,
+        'current_sorting': current_sorting,
+    }
+
+    return render (request, 'forum/forum.html', context)
 
 
-def addInForum(request):
-    form = CreateInForum()
+def post_detail(request, slug):
+    template_name = 'forum/post_detail.html'
+    post = get_object_or_404(Post, slug=slug)
+    comments = post.comments.filter(active=True)
+    new_comment = None
+
+    # Comment posted
     if request.method == 'POST':
-        form = CreateInForum(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('/')
-    context = {'form': form}
-    return render(request, 'forum/addInForum.html', context)
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            # Create Comment object but don't save to database yet
+            new_comment = comment_form.save(commit=False)
+            # Assign the current post to the comment
+            new_comment.post = post
+            # Save the comment to the database
+            new_comment.save()
+    else:
+        comment_form = CommentForm()
 
-
-def addInDiscussion(request):
-    form = CreateInDiscussion()
-    if request.method == 'POST':
-        form = CreateInDiscussion(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('/')
-    context = {'form': form}
-    return render(request, 'forum/addInDiscussion.html', context)
+    return render(request, template_name, {'post': post,
+                                           'comments': comments,
+                                           'new_comment': new_comment,
+                                           'comment_form': comment_form})

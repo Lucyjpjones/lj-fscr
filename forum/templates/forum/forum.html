@@ -29,16 +29,16 @@
             <div class="grey-banner mx-3">
                 <div class="rounded-0">
                     <table class="table table-sm table-borderless">
-                        <thead class="table-header font-14">
+                        <thead class="table-header">
                             <tr class="d-flex p-1 pl-2">
-                                <th class="col-8 col-md-6">Topic<p class="p-0 text-muted font-12">({{ count }} active posts)</p></th>
+                                <th class="col-8 col-md-6">Topic<p class="p-0 text-muted font-12">({{ posts.count }} active posts)</p></th>
                                 <th class="col-md-2 d-none d-md-block text-center">Replies</th>
                                 <th class="col-4 text-center">Posted</th>
                             </tr>
                         </thead>
 
                         {% for post in posts %}
-                            <tr class="d-flex p-1 pl-2">
+                            <tr class="d-flex p-1 pl-2 border">
                                 <td class="col-8 col-md-6">
                                     <a href= 
                                         "{% url 'post_detail' post.slug %}">

@@ -69,7 +69,7 @@ def add_post(request):
         if form.is_valid():
             post = form.save()
             messages.success(request, 'Successfully added post!')
-            return redirect(reverse('post_detail', args=[post.slug]))
+            return redirect('forum')
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
 

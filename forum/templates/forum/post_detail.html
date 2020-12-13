@@ -31,31 +31,38 @@
                 <p class=" text-muted font-14">{{ post.author }} | {{ post.created_on }}</p>
             </div>
         </div>
-    </div>
-    <!-- Post body -->
-    <div class="row grey-banner">
-        <div class="col-12 pb-3">
-                <p class="font-14">{{ post.content }}</p>
+        <!-- Post body -->
+        <div class="row grey-banner">
+            <div class="col-12 pb-3">
+                    <p class="font-14">{{ post.content }}</p>
+            </div>
         </div>
     </div>
-    <!-- Number of replies and reply button -->
-    <div class="row d-grey-banner">
-        <div class="col-6 py-2">
-                <p class="font-12 text-muted">{{ comments.count }} replies</p>
+
+    <!-- Comment field and reply button -->
+    {% load crispy_forms_tags %}
+    <form class="row d-grey-banner" method="post">
+        <div class="col-10 py-2">
+        {{ comment_form | crispy }}
+        {% csrf_token %}
         </div>
-        <div class="col-6 py-2">
-                <a class="btn add-btn font-12 rounded-0 float-right modal-trigger py-1 px-2" href="#reply-modal">Reply</a>
+        <div class="col-2 py-2">
+            <button type="submit" class="btn add-btn font-12 rounded-0 float-right py-1 px-2">Reply</button>
         </div>
-    </div>
+    </form>
 
     <!--Post comments-->
-
-    <div class="mb-4 mt-3 ">
-
+    <div class="row">
+        <!--Comment count-->
+        <div class="col py-2">
+            <p class="font-12 text-muted">{{ comments.count }} replies</p>
+        </div>
+    </div>
         <!-- comments -->
-
+    <div class="row">
+        <div class="col p-0 mb-4 mt-3 ">
             {% for comment in comments %}
-            <div class=" grey banner comments p-3 mb-2">
+            <div class="comments p-3 mb-2">
             <p class="font-weight-bold">
                 {{ comment.name }}
                 <span class="text-muted font-weight-normal pl-1">
@@ -65,27 +72,9 @@
             {{ comment.body | linebreaks }}
             </div>
             {% endfor %}
-
-
-        <!-- comment form -->
-        <div class="col-md-8 grey-banner mb-4 mt-3">
-            <div>
-            {% if new_comment %}
-            <div class="alert alert-success" role="alert">
-                 Your comment is awaiting approval
-            </div>
-            {% else %}
-            {% load crispy_forms_tags %}
-            <form method="post" style="margin-top: 1.3em;">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <button type="submit" class="btn add-btn font-12 rounded-0 float-right modal-trigger py-1 px-2">Reply</button>
-            </form>
-            {% endif %}
-            </div>
         </div>
-
-      </div>
     </div>
+
+</div>
 
 {% endblock %}

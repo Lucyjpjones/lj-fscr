@@ -8,6 +8,7 @@ def all_posts(request):
     posts = Post.objects.filter(status=1).order_by('-created_on')
     sort = None
     direction = None
+    count = posts.count()
 
     if request.GET:
         if 'sort' in request.GET:

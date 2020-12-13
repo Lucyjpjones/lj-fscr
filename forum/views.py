@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 from django.db.models.functions import Lower
 
 
@@ -56,3 +57,25 @@ def post_detail(request, slug):
                                            'comments': comments,
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
+
+
+def add_post(request):
+    """ Add a post to the forum """
+
+    form = PostForm()
+
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save()
+            messages.success(request, 'Successfully added post!')
+            return redirect(reverse('post_detail', args=[post.slug]))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+
+    template = 'forum/add_post.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

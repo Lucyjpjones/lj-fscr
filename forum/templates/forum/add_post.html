@@ -13,14 +13,24 @@
 <div class="content-container">
     <div class="row">
         <div class="col text-center title-container">
-        <h2 class="title-font py-4">Add in Forum</h2>
+            <h2 class="title-font pt-5">Message Board</h2>
+            <h5 class="subtitle-font pb-3">Add Post</h5>
         </div>
     </div>
 
-    <form action="{% url 'addInForum' %}" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" class="add-btn btn rounded-0 text-uppercase mt-1" value="submit">
-    </form>
+    <div class="row">
+            <div class="col">
+                <form method="POST" action="{% url 'add_post' %}" class="form mb-3" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
+                            {{ field | as_crispy_field }}
+                    {% endfor %}
+                    <div class="text-right">
+                        <a class="ks-btn btn rounded-0 mt-1 mr-1" href="{% url 'forum' %}">Cancel</a>
+                        <button class="add-btn btn rounded-0 text-uppercase mt-1" type="submit">Post</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
 </div>
 {% endblock %}

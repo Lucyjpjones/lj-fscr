@@ -128,7 +128,7 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 - [Shopping bag](wireframes/wf-bag.pdf)
 - [Checkout](wireframes/wf-checkout.pdf)
 - [Blog](wireframes/wf-blog.pdf)
-- [Blog](wireframes/wf-blog-view.pdf)
+- [Blog View](wireframes/wf-blog-view.pdf)
 - [Forum](wireframes/wf-forum.pdf)
 - [Forum View](wireframes/wf-forum-view.pdf)
 ---
@@ -136,6 +136,53 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 ## &rarr; **Features**
 
 ### **Features used**
+
+- **Responsive on all device sizes**
+  - Mobile-first design, responsive on all devices through using the Bootstrap grid system and CSS media queries.
+
+- **A user-friendly interface with easy navigation throughout the site**
+  - Attractive, minimalistic design with visuals and information presented clearly and concisely.
+
+  - Easily readable fonts and simple navigation throughout the site.
+    - Fixed navigation bar visible on every page including a menu dropdown, recognisable icons and brand logo to link back to the homepage.
+
+  - An aesthetically pleasing 404 page if the user is directed to a non-existent page.
+
+- **Buttons**
+    - Clear interactive buttons used for a effortless user journey.
+
+- **Forms**
+  - Forms used for contact form, login and register, adding/editing products and programmes, adding forum threads,user comments, and checkout details.
+
+  - Crispy forms used for elegant formatting.
+
+- **Tabs**
+  - Interactive tab used on 'meet the coaches' page used to switch between individuals details.
+
+- **Card Listings**
+  - Used to display products, programmes, and blogs.
+
+  - Image included contributing to the visual look.
+
+- **Carousel**
+  - Used for testimonials and products displayed on the homepage.
+
+- **Search bar**
+  - Allows the user to search the site by keywords.
+
+- **Sort**
+  - Allows the user to sort.
+
+- **Filter**
+  - Allows the user to filter.
+
+- **Toasts**
+  - Used for success and error responses to add to the user journey.
+
+- **Payments**
+
+
+
 
 ### **To do list**
 
@@ -155,12 +202,68 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 - [Python](https://www.python.org/)
 
 #### Frameworks, Libraries & Programs
-    
+
+- [**Django**](#)
+
+- [**AWS**](#)
+
+- [**Stripe**](#)
+
+- [**Temp Mail**](https://temp-mail.org/en/)
+
+- [**Google fonts**](https://fonts.google.com/)
+
+  - Google fonts were used to import the fonts into the CSS file which is used on all pages throughout the project.
+
+- [**Font Awesome 4.7.0**](https://fontawesome.com/)
+
+  - Font Awesome was used to add icons for aesthetic and UX purposes.
+
+- [**jQuery:**](https://jquery.com/)
+
+  - jQuery came with Materialize to make the components used responsive.
+  - Included at end of body tag within HTML file to ensure a smooth running of HMTL and CSS.
+
+- [**Git**](https://git-scm.com/)
+
+  - Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
+
+- [**GitHub**](https://github.com/)
+
+  - GitHub is used to store the project code after being pushed from Git.
+
+- [**Heroku**](https://github.com/)
+
+  - Heroku is the app platform I deployed my project to.
+
+- [**Flaticon**](https://www.flaticon.com/)
+
+  - Provided icons throughout site.
+
+- [**Balsamiq**](https://balsamiq.com/)
+
+  - Balsamiq was used to create the wireframes during the design process.
+
+- [**Grammarly**](https://www.grammarly.com/)
+
+  - Grammarly was used to ensure any grammar errors are eliminated.
+
+- [**HTML Formatter**](https://www.freeformatter.com/html-formatter.html) and [**CSS Formatter**](https://www.freeformatter.com/css-beautifier.html)
+
+  - Used to format my HTML and CSS file with the desired indentation level for optimal readability.
+
+- [**Tables Generator**](https://www.tablesgenerator.com/markdown_tables)
+
+  - Used to create tables in my readme file.
+
+- [**Favicon**](https://favicon.io/)
+    - Used to create a favicon, displaying my logo on a web browser next to the web address bar, the browser tab, and the bookmarks bar.
 ---
 
 ## &rarr; **Deployment**
 
 #### Deploy to Heroku
+
 
 #### Accessing code
 
@@ -170,9 +273,33 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 
 #### Content
 
+- Code used to help create blog and forum app [here](https://djangocentral.com/building-a-blog-application-with-django/)
+
+- Code used to help create sidenav [here](https://bootstrapious.com/p/bootstrap-sidebar)
+
+- Site used to remove background from logo [here](https://www.remove.bg/upload)
+
+- Site used to change colour of image for logo design [here](https://pinetools.com/colorize-image)
+
+
+- [Stack overflow](https://stackoverflow.com/):
+  - [Help with setting the size of the column width in bootstrap](https://stackoverflow.com/questions/25385289/how-to-set-the-size-of-a-column-in-a-bootstrap-responsive-table/25385798).
+  - [Help with removing labels from crispy forms](https://stackoverflow.com/questions/11472495/remove-labels-in-a-django-crispy-forms).
+  - [Help with reducing the inbox size in crispy forms](https://stackoverflow.com/questions/38684753/django-reducing-the-size-of-input-box-in-crispy-forms).
+  - [Using slugify for detailed urls](https://stackoverflow.com/questions/45847278/django-use-slugify-for-detail-url).
+
+
 #### Media
 
 #### Acknowledgments
+
+- My Mentor, Aaron for his continuous help and support throughout the project.
+
+- The help and support received from the tutors at [Code Institute](https://codeinstitute.net/).
+
+- The [Code Institute](https://codeinstitute.net/) Slack Community.
+
+- Friends & Family for continuous feedback and support.
 
 ## &rarr; **Contact**
 

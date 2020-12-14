@@ -24,24 +24,24 @@
     </div>
 
     <!--Post details-->
-    <div class="row grey-banner">
+    <div class="row grey-banner border">
         <div class="col-12 py-2">
             <div class="mb-2">
-                <p class="mb-0"><strong>{{ post.title }}</strong></p>
-                <p class=" text-muted font-14">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="mb-0"><strong>{{ thread.topic }}</strong></p>
+                <p class=" text-muted font-14">{{ thread.author }} | {{ thread.created_on }}</p>
             </div>
         </div>
         <!-- Post body -->
         <div class="row grey-banner">
             <div class="col-12 pb-3">
-                    <p class="font-14">{{ post.content }}</p>
+                    <p class="font-14">{{ thread.description }}</p>
             </div>
         </div>
     </div>
 
     <!-- Comment field and reply button -->
     {% load crispy_forms_tags %}
-    <form class="row d-grey-banner" method="post">
+    <form class="row d-grey-banner border" method="post">
         <div class="col-10 py-2">
         {{ comment_form | crispy }}
         {% csrf_token %}
@@ -62,7 +62,7 @@
     <div class="row">
         <div class="col p-0 mb-4 mt-3 ">
             {% for comment in comments %}
-            <div class="comments p-3 mb-2">
+            <div class="comments border p-3 mb-2">
             <p class="font-weight-bold">
                 {{ comment.name }}
                 <span class="text-muted font-weight-normal pl-1">

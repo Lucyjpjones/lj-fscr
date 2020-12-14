@@ -1,11 +1,11 @@
-from .models import Comment, Post
+from .models import Comment, Thread
 from django import forms
 
 
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ['body']     
+        fields = ['body']
 
     # https://stackoverflow.com/questions/11472495/remove-labels-in-a-django-crispy-forms
     def __init__(self, *args, **kwargs):
@@ -14,13 +14,15 @@ class CommentForm(forms.ModelForm):
         super(CommentForm, self).__init__(*args, **kwargs)
 
         self.fields['body'].label = ''
-        self.fields['body'].widget.attrs.update(style='height: 4em')
+
+        # https://stackoverflow.com/questions/38684753/django-reducing-the-size-of-input-box-in-crispy-forms
+        self.fields['body'].widget.attrs.update(style='height: 4.5em')
 
 
-class PostForm(forms.ModelForm):
+class ThreadForm(forms.ModelForm):
     class Meta:
-        model = Post
-        fields = ['title', 'content']
+        model = Thread
+        fields = ['topic', 'description']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

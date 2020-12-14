@@ -1,9 +1,11 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post, Comment
+from django.contrib.auth.decorators import login_required
+from .models import Post
 from .forms import CommentForm
 from django.db.models.functions import Lower
 
 
+@login_required
 def all_posts(request):
     posts = Post.objects.filter(status=1).order_by('-created_on')
     sort = None
@@ -34,6 +36,7 @@ def all_posts(request):
     return render (request, 'blog/blog.html', context)
 
 
+@login_required
 def post_detail(request, slug):
     template_name = 'blog/post_detail.html'
     post = get_object_or_404(Post, slug=slug)

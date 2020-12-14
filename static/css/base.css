@@ -262,7 +262,7 @@ header {
 /* --------------------Bag*/
 
 .d-grey-banner {
-    border: #BDC1C770;
+    background-color: #BDC1C720;
 }
 
 .grey-banner {
@@ -487,12 +487,12 @@ header {
     border-color: #222;
 }
 
-.allauth-form-inner-content a {
-	color: #FF0035; /* text-info */
-}
-
 input[name='q']::placeholder {
     color: #aab7c4;
+}
+
+#social-links a {
+    color: #38405F;
 }
 
 /* --------------------Media queries*/

@@ -61,7 +61,7 @@ p,
     color: #0e131f;
 }
 
-.fas.fa-quote-left, .fas.fa-paper-plane {
+.fas.fa-quote-left, .fas.fa-paper-plane, fas fa-check-square {
     color: #ff0035 !important;
 }
 
@@ -205,11 +205,11 @@ header {
 }
 
 #sidebar.active {
-  margin-left: -60%;
+  margin-left: -70%;
 }
 
 #sidebar {
-  min-width: 60%;
+  min-width: 70%;
   max-width: 250px;
   background: #bdc1c7;
   color: #38405f;

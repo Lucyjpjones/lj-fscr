@@ -3,32 +3,24 @@
     "pk": 1,
     "model": "programmes.category",
     "fields": {
-      "name": "cat1",
-      "friendly_name": "Cat1"
+      "name": "rehab",
+      "friendly_name": "rehab"
     }
   },
   {
     "pk": 2,
     "model": "programmes.category",
     "fields": {
-      "name": "cat2",
-      "friendly_name": "Cat2"
+      "name": "performance",
+      "friendly_name": "performance"
     }
   },
   {
     "pk": 3,
     "model": "programmes.category",
     "fields": {
-      "name": "cat3",
-      "friendly_name": "Cat3"
-    }
-  },
-  {
-    "pk": 4,
-    "model": "programmes.category",
-    "fields": {
-      "name": "cat4",
-      "friendly_name": "Cat4"
+      "name": "custom",
+      "friendly_name": "custom"
     }
   }
 ]

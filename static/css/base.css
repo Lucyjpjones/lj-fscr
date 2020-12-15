@@ -61,6 +61,10 @@ p,
     color: #0e131f;
 }
 
+.fas.fa-quote-left {
+    color: #ff0035 !important;
+}
+
 /* ---------- Header */
 
 .red-header {
@@ -168,6 +172,10 @@ header {
   padding: 20px 10px;
 }
 
+.programme-item {
+    height: 120px;
+}
+
 /* Product carousel */
 .product-carousel {
   height: 300px;
@@ -223,6 +231,13 @@ header {
 .card-img-top {
     height: 200px;
     object-fit: cover;
+}
+
+
+.product-detail-img {
+    height: 350px;
+    object-fit: cover;
+
 }
 
 .card-body {

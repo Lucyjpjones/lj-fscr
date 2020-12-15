@@ -11,164 +11,147 @@
 
 
 <div class="content-container">
-<div>
-<!--Callout image-->
-  <div class="row">
-    <img
+
+    <!--Callout image-->
+    <div class="row">
+        <img
             class="col callout-img p-0"
             src="{{ MEDIA_URL }}callout-img3.JPG"
             alt="Callout image"
         />
+    </div>
+
+    <!-- Callout banner carousel -->
+    <div class="row callout-banner-outer">
+        <div
+            id="carouselBannerControls"
+            class="col-12 text-center text-uppercase carousel slide callout-banner red-header py-2"
+            data-ride="carousel"
+        >
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="mx-5">Make your first step today</p>
+                    <a href="" class="callout-btn btn rounded">Join Now</a>
+                </div>
+                <div class="carousel-item">
+                    <p class="mx-5">Sign up and get 10% off your first order</p>
+                    <a href="" class="callout-btn btn rounded">Join Now</a>
+                </div>
+                <div class="carousel-item">
+                    <p class="mx-5">Free shipping on all orders over £{{ free_delivery_threshold }}</p>
+                    <a href="" class="callout-btn btn rounded">Shop Now</a>
+                </div>
+            </div>
+
+            <!-- Callout banner carousel controls-->
+            <a
+            class="carousel-control-prev"
+            href="#carouselBannerControls"
+            role="button"
+            data-slide="prev"
+            >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a
+            class="carousel-control-next"
+            href="#carouselBannerControls"
+            role="button"
+            data-slide="next"
+            >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Testimonials carousel -->
+    <div class="row">
+        <div class="col-12">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner w-50 m-auto">
+                    <div class="carousel-item programme-item active">
+                        <div class="col py-1 px-2">
+                            <i class="fas fa-quote-left fa-xs mb-2"></i>
+                            <p>'Easy to follow and informative'</p>
+                            <p class="text-muted pt-1 font-12">Mike Eglon</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item programme-item">
+                        <div class="col py-1 px-2">
+                            <i class="fas fa-quote-left fa-xs mb-2"></i>
+                            <p>Very good value for money!</p>
+                            <p class="text-muted pt-1 font-12">Jake Bramley</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item programme-item">
+                        <div class="col py-1 px-2">
+                            <i class="fas fa-quote-left fa-xs mb-2"></i>
+                            <p>'Great Programme!'</p>
+                            <p class="text-muted pt-1 font-12">Lucy Jones</p>
+                        </div>
+                    </div>
+                </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
   </div>
 
-  <!-- Callout banner carousel -->
-  <div class="row callout-banner-outer">
-      <div
-        id="carouselBannerControls"
-        class="col-12 text-center text-uppercase carousel slide callout-banner red-header py-2"
-        data-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <p>Make your first step today</p>
-            <a href="" class="callout-btn btn rounded">Join Now</a>
-          </div>
-          <div class="carousel-item">
-            <p>Sign up and get 10% off your first order</p>
-            <a href="" class="callout-btn btn rounded">Join Now</a>
-          </div>
-          <div class="carousel-item">
-            <p>Free shipping on all orders over £{{ free_delivery_threshold }}</p>
-            <a href="" class="callout-btn btn rounded">Shop Now</a>
-          </div>
         </div>
-
-        <!-- Callout banner carousel controls-->
-        <a
-          class="carousel-control-prev"
-          href="#carouselBannerControls"
-          role="button"
-          data-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#carouselBannerControls"
-          role="button"
-          data-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-    </div>
-
-     <!-- Testimonials carousel -->
-    <div
-        id="carouselExampleIndicators"
-        class="row carousel slide carousel-testimonials"
-        data-ride="carousel"
-    >
-        <ol class="carousel-indicators">
-        <li
-            data-target="#carouselExampleIndicators"
-            data-slide-to="0"
-            class="active"
-        ></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-        <div class="carousel-item">
-            {% for review in reviews %}
-            <a class="card">
-            <img class="carousel-img" src="" alt="profile img" />
-            <p>Review content</p>
-            <p>Reviewers name</p>
-            </a>
-            {% endfor %}
-        </div>
-        </div>
-        <a
-        class="carousel-control-prev"
-        href="#carouselExampleIndicators"
-        role="button"
-        data-slide="prev"
-        >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-        </a>
-        <a
-        class="carousel-control-next"
-        href="#carouselExampleIndicators"
-        role="button"
-        data-slide="next"
-        >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-        </a>
     </div>
 
     <!-- Programme card links -->
     <div class="row card-container">
-        <div class="col-12 col-md-6">
-        <div class="card" style="height: 300px">
-            <div class="card-body">
-            <h5 class="card-title">Coaches</h5>
-            <a href="{% url 'programmes' %}" class="btn btn-primary">View Programmes</a>
+        <div class="col-12 col-md-6 mb-4">
+            <div class="card" style="height: 300px">
+                <div class="card-body">
+                    <h5 class="card-title">Coaches</h5>
+                    <a href="{% url 'programmes' %}" class="btn btn-primary">View Programmes</a>
+                </div>
             </div>
         </div>
-        </div>
         <div class="col-12 col-md-6">
-        <div class="card" style="height: 300px">
-            <div class="card-body">
-            <h5 class="card-title">Athletes</h5>
-            <a href="{% url 'programmes' %}" class="btn btn-primary">View Programmes</a>
+            <div class="card" style="height: 300px">
+                <div class="card-body">
+                <h5 class="card-title">Athletes</h5>
+                <a href="{% url 'programmes' %}" class="btn btn-primary">View Programmes</a>
+                </div>
             </div>
-        </div>
         </div>
     </div>
 
     <!-- Product carousel -->
-    <div class="row product-carousel">
-    <div
-        id="carouselProductControls"
-        class="col-12 text-center text-uppercase carousel slide"
-        data-ride="carousel"
-    >
-        <div class="carousel-inner">
-        <div class="carousel-item">
-            <a class="card">
-            <img class="carousel-img" src="" alt="profile img" />
-            <p></p>
-            </a>
+    <div class="row">
+        <div class="col-12">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner w-50 m-auto">
+                    <div class="carousel-item programme-item active">
+                        <div class="col py-1 px-2">
+                            <a class="card">
+                                <img class="carousel-img" src="" alt="profile img" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
-        </div>
-
-        <!-- Callout banner carousel controls-->
-        <a
-        class="carousel-control-prev"
-        href="#carouselProductControls"
-        role="button"
-        data-slide="prev"
-        >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-        </a>
-        <a
-        class="carousel-control-next"
-        href="#carouselProductControls"
-        role="button"
-        data-slide="next"
-        >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-        </a>
-    </div>
     </div>
 
-    </div>
+    <!--Contact form-->
+
+</div>
+
 {% endblock %}

@@ -2,6 +2,7 @@ $(document).ready(function () {
     /* Sidebar Toggle*/
     $("#sidebarCollapse").on("click", function () {
         $("#sidebar").toggleClass("active");
+        $(".overlay").toggleClass("enabled");
     });
 
     /* Menu icon change (toggle) - Code taken from 'https://stackoverflow.com/questions/28247310/bootstrap-mobile-menu-icon-change-to-x-close' */

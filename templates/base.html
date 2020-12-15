@@ -241,6 +241,7 @@
     {% endblock %} 
     
     <!-- Sidebar -->
+    <div class="overlay"></div>
       <div class="wrapper">
         <nav id="sidebar" class="active">
           <ul class="list-unstyled components text-center text-uppercase mt-4">
@@ -264,14 +265,13 @@
             </li>
             <li>
               <div>
-                <a href="" class="btn rounded-0">Join Now</a>
+                <a href="{% url 'account_signup' %}" class="btn ks-btn rounded-0 mt-2">Join Now</a>
               </div>
             </li>
           </ul>
         </nav>
-        
         {% block content %}
-    {%endblock %}
+        {%endblock %}
       </div>
 
     <footer>

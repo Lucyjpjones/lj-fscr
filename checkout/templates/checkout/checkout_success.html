@@ -53,9 +53,9 @@
                                 {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
                             </p>
                             <p class="small mb-0">{{ item.quantity }} @ ${{ item.product.price }} each</p>
+                            {% endfor %}
                         </div>
                     </div>
-                    {% endfor %}
 
                     <div class="row grey-banner mb-2 py-2">
                         <div class="col">

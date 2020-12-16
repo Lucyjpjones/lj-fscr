@@ -7,19 +7,26 @@
 
 
 {% block inner_content %}
-<hr>
-<h2 class="logo-font mb-4">{% trans "Confirm E-mail Address" %}</h2>
-<hr>
+<h2 class="title-font pt-5 mb-3">{% trans "Verify your email" %}</h2>
 
 {% if confirmation %}
 
 {% user_display confirmation.email_address.user as user_display %}
 
-<p>{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for user {{ user_display }}.{% endblocktrans %}</p>
+<div class="grey-banner py-3 mb-3">
+    {% blocktrans with confirmation.email_address.email as email %}
+    <p class="subtitle-font m-0">
+        Hello, {{ user_display }}
+    </p>
+    <p class="subtitle-font font-14 px-4 mt-1">
+        Please confirm that your email address is <strong>{{ email }}</strong> by clicking the button below.
+    </p>
+    {% endblocktrans %}
+</div>
 
 <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
 {% csrf_token %}
-    <button type="submit">{% trans 'Confirm' %}</button>
+    <button class="btn ks-btn rounded-0 mt-1 mb-3" type="submit">{% trans 'Confirm Email' %}</button>
 </form>
 
 {% else %}

@@ -42,9 +42,6 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.github',
-    'allauth.socialaccount.providers.facebook',
     'home',
     'products',
     'programmes',
@@ -112,6 +109,7 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -221,7 +219,7 @@ if 'USE_AWS' in os.environ:
     # Emails
     if 'DEVELOPMENT' in os.environ:
         EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-        DEFAULT_FROM_EMAIL = 'fscr@example.com'
+        DEFAULT_FROM_EMAIL = 'info@fscr.com'
     else:
         EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
         EMAIL_USE_TLS = True
@@ -230,41 +228,3 @@ if 'USE_AWS' in os.environ:
         EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
         EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
         DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-
-    # Provider specific settings
-    SOCIALACCOUNT_PROVIDERS = {
-        'facebook': {
-            'METHOD': 'oauth2',
-            'SCOPE': ['email', 'public_profile', 'user_friends'],
-            'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
-            'INIT_PARAMS': {'cookie': True},
-            'FIELDS': [
-                'id',
-                'email',
-                'name',
-                'first_name',
-                'last_name',
-                'verified',
-                'locale',
-                'timezone',
-                'link',
-                'gender',
-                'updated_time',
-            ],
-            'EXCHANGE_TOKEN': True,
-            'LOCALE_FUNC': 'path.to.callable',
-            'VERIFIED_EMAIL': False,
-            'VERSION': 'v2.12',
-        },
-        'google': {
-            'SCOPE': [
-                'profile',
-                'email',
-            ],
-            'AUTH_PARAMS': {
-                'access_type': 'online',
-            }
-        }
-    }
-
-    ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5  #login attempt limit

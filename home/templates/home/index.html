@@ -30,15 +30,15 @@
         >
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <p class="mx-5">Make your first step today</p>
+                    <p>Make your first step today</p>
                     <a href="" class="callout-btn btn rounded">Join Now</a>
                 </div>
                 <div class="carousel-item">
-                    <p class="mx-5">Sign up and get 10% off your first order</p>
+                    <p>Sign up and get 10% off your first order</p>
                     <a href="" class="callout-btn btn rounded">Join Now</a>
                 </div>
                 <div class="carousel-item">
-                    <p class="mx-5">Free shipping on all orders over £{{ free_delivery_threshold }}</p>
+                    <p>Free shipping on all orders over £{{ free_delivery_threshold }}</p>
                     <a href="" class="callout-btn btn rounded">Shop Now</a>
                 </div>
             </div>
@@ -65,92 +65,115 @@
         </div>
     </div>
 
-    <!-- Testimonials carousel -->
-    <div class="row">
-        <div class="col-12">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner w-50 m-auto">
-                    <div class="carousel-item programme-item active">
-                        <div class="col py-1 px-2">
-                            <i class="fas fa-quote-left fa-xs mb-2"></i>
-                            <p>'Easy to follow and informative'</p>
-                            <p class="text-muted pt-1 font-12">Mike Eglon</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item programme-item">
-                        <div class="col py-1 px-2">
-                            <i class="fas fa-quote-left fa-xs mb-2"></i>
-                            <p>Very good value for money!</p>
-                            <p class="text-muted pt-1 font-12">Jake Bramley</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item programme-item">
-                        <div class="col py-1 px-2">
-                            <i class="fas fa-quote-left fa-xs mb-2"></i>
-                            <p>'Great Programme!'</p>
-                            <p class="text-muted pt-1 font-12">Lucy Jones</p>
-                        </div>
-                    </div>
-                </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  </div>
-
-        </div>
-    </div>
-
     <!-- Programme card links -->
-    <div class="row card-container">
+    <div class="row mt-4">
         <div class="col-12 col-md-6 mb-4">
             <div class="card" style="height: 300px">
                 <div class="card-body">
-                    <h5 class="card-title">Coaches</h5>
+                    <h5 class="card-title">Rehab</h5>
                     <a href="{% url 'programmes' %}" class="btn btn-primary">View Programmes</a>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 mb-4">
             <div class="card" style="height: 300px">
                 <div class="card-body">
-                <h5 class="card-title">Athletes</h5>
+                <h5 class="card-title">Performance</h5>
                 <a href="{% url 'programmes' %}" class="btn btn-primary">View Programmes</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Product carousel -->
-    <div class="row">
+    <!-- Testimonials carousel -->
+    <div class="row mb-5">
         <div class="col-12">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner w-50 m-auto">
-                    <div class="carousel-item programme-item active">
+                <div class="carousel-inner w-75 m-auto">
+                    <div class="carousel-item active">
                         <div class="col py-1 px-2">
-                            <a class="card">
-                                <img class="carousel-img" src="" alt="profile img" />
-                            </a>
+                            <i class="fas fa-quote-left fa-xs mb-2"></i>
+                            <p>Lorem ipsum dolor sit sit amet, consectetur adipiscing elit!</p>
+                            <p class="text-muted pt-1 font-12">Mike Eglon</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col py-1">
+                            <i class="fas fa-quote-left fa-xs mb-2"></i>
+                            <p>Lorem ipsum dolor sit sit amet, consectetur adipiscing elit!</p>
+                            <p class="text-muted pt-1 font-12">Jake Bramley</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col py-1 px-2">
+                            <i class="fas fa-quote-left fa-xs mb-2"></i>
+                            <p>Lorem ipsum dolor sit sit amet, consectetur adipiscing elit!</p>
+                            <p class="text-muted pt-1 font-12">Lucy Jones</p>
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest Blogs -->
+    <h2 class="title-font px-3 pb-2">View our latest Blogs</h2>
+    <div class="row mb-4">
+        <div class="col-6">
+            <div class="card" style="height: 150px">
+                <div class="card-body">
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card" style="height: 150px">
+                <div class="card-body">
+                </div>
             </div>
         </div>
     </div>
 
     <!--Contact form-->
+    <div class="row card-container">
+        <div class="col border title-font form-inner p-3 mx-4">
+            <h2>Get in touch</h2>
+            <p class="subtitle-font font-14 mb-3">If you have a question, comment or enquiry for FSCR, please fill out the form below</p>
+            <form>
+                <div class="row">
+                    <div class="col p-0 pr-1">
+                        <label class="small mb-0 pl-1" for="email">First Name</label>
+                        <input type="text" class="form-control rounded-0" >
+                    </div>
+                    <div class="col p-0 pl-1 mb-3">
+                        <label class="small mb-0 pl-1" for="email">Last Name</label>
+                        <input type="text" class="form-control rounded-0" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="small mb-0 pl-1" for="email">Email Address</label>
+                    <input type="email" class="form-control rounded-0" id="email">
+                </div>
+                <div class="form-group">
+                    <label class="small mb-0 pl-1" for="exampleFormControlSelect1">I want to</label>
+                    <select class="form-control rounded-0" id="exampleFormControlSelect1">
+                    <option class="active disabled">Select option</option>
+                    <option>Ask a strength and conditioning question</option>
+                    <option>Ask a physiotherapy or rehab question</option>
+                    <option>Request more information about our programmes</option>
+                    <option>Something else</option>
+                    </select>
+                </div>
+                    <div class="form-group">
+                    <label class="small mb-0 pl-1" for="exampleFormControlTextarea1">What is your message?</label>
+                    <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="text-center rounded-0">
+                    <input class="btn navy-border-btn rounded-0 w-100 bold" type="submit" value="Submit"
+                >
+                </div>
+            </form>
+        </div>
+    </div>
 
 </div>
 

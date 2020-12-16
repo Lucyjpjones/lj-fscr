@@ -181,6 +181,11 @@ header {
   height: 300px;
 }
 
+/* Contact form*/
+.form-inner {
+    background-color: #f8f8f8;
+}
+
 /* Sidenav */
 .wrapper {
   display: flex;
@@ -320,7 +325,6 @@ header {
     background-color: transparent !important;
     border: solid 2px #38405F !important;
     color: #38405F !important;
-    font-size: 14px;
 }
 
 .red-border-btn {

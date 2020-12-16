@@ -83,7 +83,7 @@
         "colour": "black",
         "description": "The FSCR beanie",
         "price": 22.99,
-        "category": 2,
+        "category": 1,
         "rating": 4.4,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "FSCR-hoodie-black.png"
@@ -143,7 +143,7 @@
         "colour": "grey",
         "description": "The FSCR hoodie",
         "price": 22.99,
-        "category": 2,
+        "category": 1,
         "rating": 4.3,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "FSCR-hoodie-grey.png"

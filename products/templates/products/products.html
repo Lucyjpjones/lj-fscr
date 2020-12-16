@@ -10,7 +10,7 @@
 {% endblock %} {% block content %}
 
 <!--Page title-->
-<div class="content-container">
+<div class="container-fluid">
   <div class="row">
     <div class="col text-center title-container">
       <h2 class="title-font py-4">Products</h2>
@@ -38,10 +38,13 @@
         </a>
 
         <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuFilter">
-            <a class="dropdown-item" href="#">Category</a>
-            <a class="dropdown-item" href="#">Product Type</a>
-            <a class="dropdown-item" href="#">Colour</a>
-            <a class="dropdown-item" href="#">Price Range</a>
+            <a class="dropdown-item float-right small text-muted" href="{% url 'products' %}">
+                <span><i class="fas fa-times"></i> Clear all</span>
+            </a>
+            <a class="dropdown-item" href="{% url 'products' %}?category=new_arrivals">New Arrivals</a>
+            <a class="dropdown-item" href="{% url 'products' %}?category=accessories">Accessories</a>
+            <a class="dropdown-item" href="{% url 'products' %}?category=clothing">Clothing</a>
+            <a class="dropdown-item" href="{% url 'products' %}?category=sale">Sale</a>
         </div>
     </div>
 </div>

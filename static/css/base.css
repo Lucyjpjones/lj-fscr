@@ -181,6 +181,26 @@ header {
   height: 300px;
 }
 
+.prog-img {
+    height: 300px;
+    object-fit: cover;
+    filter: grayscale(0.4);
+}
+
+.textbox {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+
+.textbox a {
+    background-color: #38405F;
+    color: #f8f8f8;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 /* Contact form*/
 .form-inner {
     background-color: #f8f8f8;

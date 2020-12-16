@@ -31,15 +31,15 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <p>Make your first step today</p>
-                    <a href="" class="callout-btn btn rounded">Join Now</a>
+                    <a href="" class="callout-btn btn rounded-0">Join Now</a>
                 </div>
                 <div class="carousel-item">
                     <p>Sign up and get 10% off your first order</p>
-                    <a href="" class="callout-btn btn rounded">Join Now</a>
+                    <a href="" class="callout-btn btn rounded-0">Join Now</a>
                 </div>
                 <div class="carousel-item">
                     <p>Free shipping on all orders over £{{ free_delivery_threshold }}</p>
-                    <a href="" class="callout-btn btn rounded">Shop Now</a>
+                    <a href="" class="callout-btn btn rounded-0">Shop Now</a>
                 </div>
             </div>
 
@@ -68,19 +68,29 @@
     <!-- Programme card links -->
     <div class="row mt-4">
         <div class="col-12 col-md-6 mb-4">
-            <div class="card" style="height: 300px">
-                <div class="card-body">
-                    <h5 class="card-title">Rehab</h5>
-                    <a href="{% url 'programmes' %}" class="btn btn-primary">View Programmes</a>
+            <div class="card">
+                <img
+                    class="prog-img col p-0"
+                    src="{{ MEDIA_URL }}callout.JPG"
+                    alt="Callout image"
+                />
+                <div class="textbox">
+                    <a href="{% url 'programmes' %}" class="btn rounded-0">View Programmes</a>
                 </div>
             </div>
         </div>
         <div class="col-12 col-md-6 mb-4">
-            <div class="card" style="height: 300px">
-                <div class="card-body">
-                <h5 class="card-title">Performance</h5>
-                <a href="{% url 'programmes' %}" class="btn btn-primary">View Programmes</a>
-                </div>
+            <div class="card">
+                <div class="card">
+                    <img
+                        class="prog-img col p-0"
+                        src="{{ MEDIA_URL }}callout.JPG"
+                        alt="Callout image"
+                    />
+                    <div class="textbox">
+                        <a href="{% url 'programmes' %}" class="btn rounded-0">View Products</a>
+                    </div>
+            </div>
             </div>
         </div>
     </div>

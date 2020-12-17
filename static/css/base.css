@@ -101,15 +101,14 @@ header {
 .search-input {
   width: 60vw !important;
   border: none;
-  background-color: #fafafa;
+  background-color: #f8f8f8;
   font-size: 14px;
 }
 .search-card {
   background-color: #ff0035;
 }
 .search-form {
-  border: solid 1px #38405f;
-  background-color: #fafafa;
+  background-color: #f8f8f8;
 }
 
 /* ---------- Icons */

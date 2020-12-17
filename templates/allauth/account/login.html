@@ -23,7 +23,7 @@
 
 <div class="row my-2">
     <div class="col grey-banner">
-        <form class="login my-3" method="POST" action="{% url 'account_login' %}">
+        <form class="login my-3 mx-4" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form|crispy }}
         {% if redirect_field_value %}

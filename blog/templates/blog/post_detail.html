@@ -52,7 +52,7 @@
         <div class="col-12 py-2">
             <div class="mb-2">
                 <p class="mb-0"><strong>{{ post.title }}</strong></p>
-                <p class=" text-muted font-14">{{ post.author }} | {{ post.created_on }}</p>
+                <p class=" text-muted font-14">{{ request.user.username }} | {{ post.created_on }}</p>
             </div>
         </div>
     </div>
@@ -64,47 +64,49 @@
 
     <!--Post comments-->
 
-    <div class="grey-banner mb-4 mt-3 ">
-      <div class="card-body">
-
-        <h2 class="font-14 pl-3 mb-4"><strong>{{ comments.count }} Comments</strong></h2>
+    <div class="row grey-banner mb-4 mt-3 py-3">
+        <h2 class="font-14 pl-3 mb-2"><strong>{{ comments.count }} Comments</strong></h2>
 
         <!-- comment form -->
-        <div class="col-md-8 grey-banner mb-4  mt-3 ">
-            <div>
+        <div class="row">
+            <div class="col">
             {% if new_comment %}
-            <div class="alert alert-success" role="alert">
-                 Your comment is awaiting approval
-            </div>
+                <div class="alert alert-success" role="alert">
+                    Your comment is awaiting approval
+                </div>
             {% else %}
             {% load crispy_forms_tags %}
-            <form method="post" style="margin-top: 1.3em;">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <button type="submit" class="ks-btn px-2 py-1 font-14">Post</button>
-            </form>
+            <div>
+                <form method="post">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <p class="float-left text-muted small ml-1">Signed in as <strong class="text-dark">{{ request.user.username }}</strong></p>
+                    <button type="submit" class="ks-btn px-2 py-1 font-14 float-right">Post</button>
+                </form>
+            </div>
             {% endif %}
+        </div>
+        </div>
+        
+
+        <!-- comments -->
+        <div class="row w-100">
+            <div class="col">
+                {% for comment in comments %}
+                <div class="comments p-3 mt-3 font-14">
+                    <p class="font-weight-bold">
+                        {{ comment.name }}
+                        <span class="text-muted font-weight-normal">
+                        {{ comment.created_on }}
+                        </span>
+                    </p>
+                    {{ comment.body | linebreaks }}
+                </div>
+                {% endfor %}
             </div>
         </div>
-
-    <!-- comments -->
-        <div class="col-md-8 grey-banner mt-3 pl-3">
-            {% for comment in comments %}
-            <div class="comments p-3 mb-2">
-            <p class="font-weight-bold">
-                {{ comment.name }}
-                <span class="text-muted font-weight-normal pl-1">
-                {{ comment.created_on }}
-                </span>
-            </p>
-            {{ comment.body | linebreaks }}
-            </div>
-            {% endfor %}
-            </div>
-        </div>  
-
-      </div>
+    
     </div>
-  </div>
+</div>
 
 {% endblock %}

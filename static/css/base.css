@@ -30,6 +30,10 @@ footer h6 {
     margin-left: auto;
 }
 
+input {
+    border-radius: 0 !important;
+}
+
 /* ---------- General */
 p,
 .row,
@@ -351,7 +355,6 @@ header {
 
 .add-btn {
     background-color: #FF0035;
-    border: solid 1px #0E131F;
     color: #f8f8f8;
     font-size: 14px;
 }

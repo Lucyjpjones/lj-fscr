@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    <!-- Programme card links -->
+    <!-- Programme and Products card links -->
     <div class="row mt-4">
         <div class="col-12 col-md-6 mb-4">
             <div class="card border-0">
@@ -63,11 +63,11 @@
             <div class="card border-0">
                 <img
                         class="prog-img col p-0"
-                        src="{{ MEDIA_URL }}callout.JPG"
+                        src="{{ MEDIA_URL }}FSCR-hoodie-grey.png"
                         alt="Callout image"
                 />
                 <div class="textbox w-100 text-center">
-                    <a href="{% url 'programmes' %}" class="btn rounded-0">View Products</a>
+                    <a href="{% url 'products' %}" class="btn rounded-0">View Products</a>
                 </div>
             </div>
         </div>
@@ -125,7 +125,7 @@
 
     <!--Contact form-->
     <div id="contact" class="row card-container">
-        <div class="col border title-font form-inner p-3 mx-4">
+        <div class="col border title-font form-inner p-3 mx-3">
             <h2>Get in touch</h2>
             <p class="subtitle-font font-14 mb-3">If you have a question, comment or enquiry for FSCR, please fill out the form below</p>
             <form onsubmit="return sendMail(this);" method="POST">

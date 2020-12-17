@@ -34,11 +34,6 @@ input {
     border-radius: 0 !important;
 }
 
-.btn {
-    background-color: none !important;
-    border: none !important;
-}
-
 /* ---------- General */
 p,
 .row,

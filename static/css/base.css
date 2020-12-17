@@ -71,7 +71,7 @@ p,
   background-color: #ff0035;
   font-size: 14px;
   font-weight: 600;
-  color: #bdc1c7;
+  color: #f8f8f8;
 }
 
 header {
@@ -149,12 +149,10 @@ header {
 /* Red callout banner */
 .callout-btn {
   background-color: #38405f;
-  color: #bdc1c7;
+  color: #f8f8f8;
   font-weight: bold;
-  font-size: 12px;
   margin: 5px;
   padding: 2px 8px;
-  border: solid 1px #bdc1c7;
 }
 
 /* Testimonial carousel */
@@ -190,11 +188,10 @@ header {
 .textbox {
     position: absolute;
     top: 50%;
-    left: 20%;
 }
 
 .textbox a {
-    background-color: #38405F;
+    background-color: #59546C;
     color: #f8f8f8;
     font-size: 20px;
     font-weight: 600;
@@ -338,7 +335,6 @@ header {
     background-color: #38405F !important;
     border: solid 1px #0E131F !important;
     color: #f8f8f8 !important;
-    font-size: 14px;
 }
 
 .navy-border-btn {

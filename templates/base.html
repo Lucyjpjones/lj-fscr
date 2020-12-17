@@ -110,7 +110,7 @@
             <!-- Search bar visible (L and XL devices)-->
             <li class="list-inline-item px-3">
               <form class="d-none d-lg-inline-block" method="GET" action="{% url 'products' %}">
-                <div class="input-group">
+                <div class="input-group rounded-0">
                   <input
                     class="form-control border border-black rounded-0"
                     type="text"
@@ -137,12 +137,12 @@
                 <a
                   class="grey-icon nav-icon px-1 px-md-2"
                   data-toggle="collapse"
-                  href="#collapseExample"
+                  href="#collapseSearch"
                   role="button"
                   aria-expanded="false"
-                  aria-controls="collapseExample"
+                  aria-controls="collapseSearch"
                 >
-                  <i class="flaticon-search"></i>
+                  <i class="flaticon-search fa-sm"></i>
                 </a>
               </p>
             </li>
@@ -205,10 +205,10 @@
       </div>
 
       <!-- Search bar collapse bar (Devices smaller than L)-->
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body search-card d-lg-none">
+      <div class="collapse" id="collapseSearch">
+        <div class="card card-body search-card d-lg-none rounded-0">
           <form
-            class="row form-inline m-auto search-form rounded-0"
+            class="row form-inline m-auto search-form"
             method="GET"
             action=""
           >

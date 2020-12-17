@@ -277,6 +277,8 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 
 - Code used to help create sidenav [here](https://bootstrapious.com/p/bootstrap-sidebar)
 
+- Code used to help with [linking to id on a page using Django](https://stackoverflow.com/questions/31643670/link-a-div-in-another-page-in-url-with-an-anchor-tag-django)
+
 - Site used to remove background from logo [here](https://www.remove.bg/upload)
 
 - Site used to change colour of image for logo design [here](https://pinetools.com/colorize-image)

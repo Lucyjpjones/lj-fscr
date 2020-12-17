@@ -261,12 +261,18 @@
               <a href="{% url 'forum' %}">Forum</a>
             </li>
             <li class="py-1">
-              <a href="#">Contact</a>
+              <a href="{% url 'home' %}#contact">Contact</a>
             </li>
             <li>
-              <div>
-                <a href="{% url 'account_signup' %}" class="btn ks-btn rounded-0 mt-2">Join Now</a>
-              </div>
+                {% if request.user.is_authenticated %}
+                <div>
+                    <a href="{% url 'account_signup' %}" class="btn ks-btn rounded-0 mt-2 d-none">Join Now</a>
+                </div>
+                {% else %}
+                <div>
+                    <a href="{% url 'account_signup' %}" class="btn ks-btn rounded-0 mt-2">Join Now</a>
+                </div>
+                {% endif %}
             </li>
           </ul>
         </nav>

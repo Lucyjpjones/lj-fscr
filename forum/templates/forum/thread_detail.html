@@ -28,7 +28,7 @@
         <div class="col-12 py-2">
             <div class="mb-2">
                 <p class="mb-0"><strong>{{ thread.topic }}</strong></p>
-                <p class=" text-muted font-14">{{ thread.author }} | {{ thread.created_on }}</p>
+                <p class=" text-muted font-14">{{ request.user.username }} | {{ thread.created_on }}</p>
             </div>
         </div>
         <!-- Post body -->
@@ -64,7 +64,7 @@
             {% for comment in comments %}
             <div class="comments border p-3 mb-2">
             <p class="font-weight-bold">
-                {{ comment.name }}
+                {{ request.user.username }}
                 <span class="text-muted font-weight-normal pl-1">
                 {{ comment.created_on }}
                 </span>

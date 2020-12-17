@@ -1,0 +1,56 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} {% block content %}
+
+<!--Page title-->
+<div class="content-container">
+  <div class="row">
+    <div class="col text-center title-container">
+      <h2 class="title-font py-4">About</h2>
+    </div>
+  </div>
+
+  <!--About content-->
+  <div class="row">
+    <div class="product-container col-12 offset-1">
+      <div class="row mb-3">
+          <div class="col">
+            <h3 class="subtitle-font">Our Mission</h3>
+            <p class="font-14">The mission of <strong>FSCR</strong> is dedication to provide elite-level strength and conditioning support to footballers of <strong>ALL</strong> levels. Our aim is to unlock your physical potential, to make you fitter, stronger, faster, and more robust than your opponents.</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col">
+            <h3 class="subtitle-font">What do we offer?</h3>
+            <ul class="pl-3">
+                <li class="font-14 pb-2">We offer bespoke S&C and rehabilitation programmes that are specifically tailored towards your individual needs and the physical demands of the football.</li>
+                <li class="font-14 pb-2">We offer generic strength, conditioning, and rehabilitation programmes that are tailored towards the demands of the sport.</li>
+                <li class="font-14 pb-2">We have a membership which provides strength and conditioning coaches working in football with an online platform for to share ideas and tap into this unique network.</li>
+                <li class="font-14 pb-2">We provide fortnightly blog posts to keep strength and conditioning coaches up to date with topical information related to S&C and how this can be applied within the football setting.</li>
+            </ul>
+          </div>
+      </div>
+      <div class="row mb-3">
+            <div class="col">
+                <img class="w-100" src="{{ MEDIA_URL }}callout.JPG" alt="Training picture">
+            </div>
+      </div>
+
+      <div class="row mb-3">
+          <div class="col">
+            <h3 class="subtitle-font">Who would pay for our service?</h3>
+            <p class="font-14">Jayden is a 23-year old striker playing semi-professional football. It is the last minute of the match, the score is 1-1 and Jayden is sprinting through on goal. Suddenly, he feels a sharp pain in the back of his thigh, he pulls up, and the defender recovers the ball safely. The chance is gone, and Jayden hobbles off the pitch. Hamstring injury. His manager pulls him to one side after the match and says “that will be you done for a couple of weeks then, I’ll have to give the new lad a try”. Jayden is despondent and wants to return as soon as possible to make sure he doesn’t lose his place in the team. One week later his hamstring feels better and he thinks “maybe it was just cramp, I’ll give training a go tonight”. He turns up to training, and assures the manager that he is good to go. 15-minutes later, Jayden attempts to sprint, BANG, he is sent sprawling to the floor grasping his hamstring again. Except this time, he needs two of his teammates to help him off the pitch.</p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

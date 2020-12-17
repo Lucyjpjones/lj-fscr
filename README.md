@@ -264,9 +264,149 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 
 #### Deploy to Heroku
 
+The project was connected to Heroku using automatic deployment from my GitPod repository, using the following steps...
+
+> **Note:** Before following the below steps ensure you have already created your new repo in Github and set up an env.py file to store your sensitive data. (Further details on adding an env.py file below)
+
+1. In the terminal create requirements.txt and Procfile files using the commands below:
+   - $ pip3 freeze --local > requirements.txt
+
+   - $ echo web: python app.py > Procfile
+
+   > **Note:** 
+The **P**rocfile must be assigned a capital P.
+
+2. Log in (or Register) to [Heroku](https://www.heroku.com/) and from your dashboard click 'new' > 'create new app'.
+
+   ![New app btn](static/assets/images/readme/new-app.png)
+
+3. Enter your 'App name' and choose the appropriate region, then click 'Create app'.
+   > **Note:** 
+ The app name must be unique, all lowercase, and '-' to be used instead of spaces.
+The region chosen should be the one closest to you.
+
+   ![Create new app](static/assets/images/readme/create-new-app.png)
+
+4. From the Heroku deploy tab, select the Deployment method 'GitHub'.
+
+   ![Deployment method](static/assets/images/readme/deployment-method.jpeg)
+
+5. On the 'Connect to GitHub' section make sure your GitHub profile is displayed then add your repository name and click 'Search'.
+
+   > **Note:** 
+This is the name of your repo in GitHub. It is good practice to use an identical name for your Heroku app.
+
+    ![Deploy GitHub](static/assets/images/readme/deployment-git.jpeg)
+
+6. Your repo should now be displayed below, click 'Connect' to connect to this app.
+
+7. Go to the Settings tab on Heroku, scroll to the 'Config Vars' section, and click 'Reveal Config Vars'. 
+
+   ![Config Vars](static/assets/images/readme/config-vars.png)
+
+   Enter variables (key and value) contained in the env.py file. The keys are listed below and values are inputted by the user.
+    - IP
+    - PORT
+    - SECRET_KEY
+    - MONGO_URI
+    - MONGO_DBNAME
+
+8. Push requirements.txt and Procfile to repository:
+  <u>requirements.txt</u>
+    - $ git add requirements.txt
+    - $ git commit -m "Added requirements.txt"
+ 
+    <u>Procfile</u>
+   - $ git add Procfile
+   - $ git commit -m "Added Procfile"
+
+9. Go to the Deploy tab on Heroku and under the Automatic deployment section, click 'Enable Automatic Deploys'. Then under Manual deploy click 'Deploy Branch'.
+
+   ![Enable Automatic Deploys](static/assets/images/readme/enable-deploys.jpeg)
+
+   - Heroku will now receive the code from GitHub and start building the app using the required packages.
+   - Once built you will receive the message 'Your app was successfully deployed' and you can click 'View' to launch your new app.
+
+        > **Note:** 
+        In Manual deploy dropdown 'master' is selected'
 
 #### Accessing code
 
+Follow the steps below if you are wanting to propose changes to the project or to use the project as a starting point for your own idea.
+
+- **Forking the GitHub Repository**
+
+  Forking allows you to create a copy of the original repository and propose changes to the repository owner via a pull request.
+
+  1. Log in to GitHub and locate the GitHub Repository.
+
+  2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
+
+     ![forking](static/assets/images/readme/forking.png)
+
+  3. You should now have a copy of the original repository in your GitHub account.
+
+- **Making a Local Clone**
+
+When you clone a repository, the repository is copied on to your local machine.
+
+1. Log in to GitHub and locate the GitHub Repository.
+   - Wean Cuisine repository can be found [here](https://github.com/Lucyjpjones/wean-cuisine/)
+
+2. Under the repository name, click the "download code" option.
+
+   ![Clone](static/assets/images/readme/clone.png)
+
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+
+   ![Clone-link](static/assets/images/readme/clone-link.png)
+
+4. Open Git Bash
+
+5. Change the current working directory to the location where you want the cloned directory to be made.
+
+6. Type git clone, and then paste the URL you copied in Step 3.
+
+    ```
+    $ git clone https://github.com/YOUR-USERNAME/wean-cuisine.git
+    ```
+
+7. Press Enter. Your local clone will be created.
+
+    ```
+    $ git clone https://github.com/YOUR-USERNAME/wean-cuisine.git
+
+    > Cloning into `wean-cuisine`...
+    > remote: Enumerating objects: 299, done.
+    > remote: Counting objects: 100%, (299/299),  done.
+    > remote: Compressing objects: 100% (156/156), done.
+    > Receiving objects: remove: Total 299 (delta 145), reused 267 (delta 126), pack-reused 0
+    > Receiving objects: 100% (299/299), 4.61MiB | 2.98 MiB/s, done.
+    > Resolving deltas: 100% (145/145), done. Unpacking objects: 100% (10/10), done.
+    ```
+
+    Now, you have a local copy of your fork of the Wean Cuisine repository.
+
+    > **Note:** The repository name and output numbers that you see on your computer, representing the total file size, etc, may differ from the example I have provided above.
+
+8. Add an env.py file to your workspace to include your environment variables (more details below).
+
+   > **Note:** Contact the site owner if you want more information on the environment variables that have been included.
+
+**Creating env.py file** 
+
+1. Add a env.py file to store environment variables:
+   - Import os 
+   - os.environ.setdefault("IP", "To be added by user") 
+   - os.environ.setdefault("PORT", "To be added by user") 
+   - os.environ.setdefault("SECRET_KEY", "To be added by user") 
+   - os.environ.setdefault("MONGO_URI", "To be added by user") 
+   - os.environ.setdefault("MONGO_DBNAME", "To be added by user")
+
+    > **Note:** I used [RandomKeygen.com](https://randomkeygen.com/) to get my secure SECRET_KEY password. A SECRET_KEY is required when using the flash and session functions of Flask.
+
+ 2. Create a file named .gitignore and include env.py to ensure this file is never pushed to GitHub.
+    > **Note:** The env.py mustn't be tracked as any GitHub user can access your confidential data.
 ---
 
 ## &rarr; **Credits**

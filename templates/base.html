@@ -48,9 +48,20 @@
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
     <script src="{% static 'js/script.js' %}"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init("user_qZ2fQYOyvPucFHRyubh33");
+        })();
+    </script>
     {% endblock %} 
+
     
     {% block extra_js %} 
+        
     {% endblock %}
 
     <title>FSCR {% block extra_title %}{% endblock %}</title>

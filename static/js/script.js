@@ -11,9 +11,9 @@ $(document).ready(function () {
 
 /* Close Sidenav when click outside area */
 $(document).on("click", function(event) {
-    if (!$(event.target).closest("#sidebarCollapse").length) {
-        $("#sidebar").toggleClass("active");
-        $(".overlay").toggleClass("enabled");
+    if (!$(event.target).closest("#sidebar").length) {
+        $("#sidebar").remove("active");
+        $(".overlay").remove("enabled");
         $("#navbar-bars").toggleClass("d-none");
         $("#navbar-close").toggleClass("d-none");
     }

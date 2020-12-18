@@ -59,7 +59,7 @@
                                 </tr>
                         </tbody>
                     </table>
-                    <button href="{% url 'order_history' order.order_number %}" class="btn navy-border-btn font-10 rounded-0 text-uppercase py-1 px-2">View Order Details</button>
+                    <a href="{% url 'order_history' order.order_number %}" class="btn navy-border-btn font-10 rounded-0 text-uppercase py-1 px-2">View Order Details</a>
                     {% endfor %}
                     <br>
                 </div>

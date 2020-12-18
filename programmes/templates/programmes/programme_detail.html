@@ -110,7 +110,7 @@
     </div>
 
     <!--Button actions-->
-    <form class="form" action="{% url 'add_to_bag' programme.id %}" method="POST">
+    <form class="form" action="{% url 'add_prog_to_bag' programme.id %}" method="POST">
         {% csrf_token %}
         <div class="form-row">
             <div class="col-12 ml-3">

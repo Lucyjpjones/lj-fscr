@@ -278,18 +278,18 @@ The **P**rocfile must be assigned a capital P.
 
 2. Log in (or Register) to [Heroku](https://www.heroku.com/) and from your dashboard click 'new' > 'create new app'.
 
-   ![New app btn](static/assets/images/readme/new-app.png)
+   ![New app btn](media/new-app.png)
 
 3. Enter your 'App name' and choose the appropriate region, then click 'Create app'.
    > **Note:** 
  The app name must be unique, all lowercase, and '-' to be used instead of spaces.
 The region chosen should be the one closest to you.
 
-   ![Create new app](static/assets/images/readme/create-new-app.png)
+   ![Create new app](media/create-new-app.png)
 
 4. From the Heroku deploy tab, select the Deployment method 'GitHub'.
 
-   ![Deployment method](static/assets/images/readme/deployment-method.jpeg)
+   ![Deployment method](media/deployment-method.jpg)
 
 5. On the 'Connect to GitHub' section make sure your GitHub profile is displayed then add your repository name and click 'Search'.
 
@@ -302,7 +302,7 @@ This is the name of your repo in GitHub. It is good practice to use an identical
 
 7. Go to the Settings tab on Heroku, scroll to the 'Config Vars' section, and click 'Reveal Config Vars'. 
 
-   ![Config Vars](static/assets/images/readme/config-vars.png)
+   ![Config Vars](media/config-vars.png)
 
    Enter variables (key and value) contained in the env.py file. The keys are listed below and values are inputted by the user.
     - IP
@@ -322,7 +322,7 @@ This is the name of your repo in GitHub. It is good practice to use an identical
 
 9. Go to the Deploy tab on Heroku and under the Automatic deployment section, click 'Enable Automatic Deploys'. Then under Manual deploy click 'Deploy Branch'.
 
-   ![Enable Automatic Deploys](static/assets/images/readme/enable-deploys.jpeg)
+   ![Enable Automatic Deploys](media/enable-deploys.jpg)
 
    - Heroku will now receive the code from GitHub and start building the app using the required packages.
    - Once built you will receive the message 'Your app was successfully deployed' and you can click 'View' to launch your new app.

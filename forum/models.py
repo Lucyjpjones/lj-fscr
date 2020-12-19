@@ -33,7 +33,7 @@ class Thread(models.Model):
 
 class Comment(models.Model):
     thread = models.ForeignKey(Thread, on_delete=models.CASCADE, related_name ='comments', null=True)
-    name = models.CharField(max_length=80, null=True)
+    user = models.CharField(max_length=80, null=True)
     body = models.CharField(max_length=300, null=True)
     created_on = models.DateTimeField(auto_now_add=True, null=True)
     active = models.BooleanField(default=True)
@@ -42,4 +42,4 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return 'Comment {} by {}'.format(self.body, self.name)
+        return 'Comment {} by {}'.format(self.body, self.name.username)

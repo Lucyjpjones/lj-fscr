@@ -51,6 +51,8 @@ def thread_detail(request, slug):
             new_comment = comment_form.save(commit=False)
             # Assign the current post to the comment
             new_comment.thread = thread
+            # Get username
+            new_comment.user = request.user
             # Save the comment to the database
             new_comment.save()
     else:

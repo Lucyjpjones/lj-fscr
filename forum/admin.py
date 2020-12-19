@@ -13,6 +13,6 @@ admin.site.register(Thread, ThreadAdmin)
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'body', 'thread', 'created_on', 'active')
+    list_display = ('user', 'body', 'thread', 'created_on', 'active')
     list_filter = ('active', 'created_on')
-    search_fields = ('name', 'body')
+    search_fields = ('user', 'body')

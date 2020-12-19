@@ -17,6 +17,7 @@ def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
 
     product = get_object_or_404(Product, pk=item_id)
+    type = 'product'
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     size = None
@@ -37,10 +38,10 @@ def add_to_bag(request, item_id):
             messages.success(request, f'Added size {size.upper()} {product.name} to your bag')
     else:
         if item_id in list(bag.keys()):
-            bag[item_id] += quantity
+            bag[item_id][type] += quantity
             messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
         else:
-            bag[item_id] = quantity
+            bag[item_id][type] = quantity
             messages.success(request, f'Added {product.name} to your bag')
 
     request.session['bag'] = bag
@@ -109,15 +110,16 @@ def add_prog_to_bag(request, item_id):
     """ Add a quantity of the specified programme to the shopping bag """
 
     programme = get_object_or_404(Programme, pk=item_id)
+    type = 'programme'
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
     if item_id in list(bag.keys()):
-        bag[item_id] += quantity
+        bag[item_id][type] += quantity
         messages.success(request, f'Updated {programme.name} quantity to {bag[item_id]}')
     else:
-        bag[item_id] = quantity
+        bag[item_id][type] = quantity
         messages.success(request, f'Added {programme.name} to your bag')
 
     request.session['bag'] = bag

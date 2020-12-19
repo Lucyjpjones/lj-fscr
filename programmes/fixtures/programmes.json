@@ -10,7 +10,7 @@
         "category": 1,
         "rating": 4.8,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "FSCR-programme.png"
+        "image": "prog-hamstring.png"
         }
     },
     {
@@ -24,7 +24,7 @@
         "category": 1,
         "rating": 4.8,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "FSCR-programme.png"
+        "image": "prog-quadriceps.jpg"
         }
     },
     {
@@ -38,7 +38,7 @@
         "category": 1,
         "rating": 4.8,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "FSCR-programme.png"
+        "image": "prog-calf.jpg"
         }
     },
     {
@@ -46,13 +46,13 @@
         "model": "programmes.programme",
         "fields": {
         "sku": "fscrprog004",
-        "name": "FSCR Hamstring Groin Template",
+        "name": "FSCR Groin Template",
         "description": "The FSCR programme....",
         "price": 40.00,
         "category": 1,
         "rating": 4.8,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "FSCR-programme.png"
+        "image": "prog-groin.jpg"
         }
     },
     {
@@ -66,7 +66,7 @@
         "category": 2,
         "rating": 4.8,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "FSCR-programme.png"
+        "image": "prog-core.jpg"
         }
     },
     {
@@ -80,7 +80,7 @@
         "category": 2,
         "rating": 4.8,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "FSCR-programme.png"
+        "image": "prog-off-feet.jpg"
         }
     },
     {
@@ -94,7 +94,7 @@
         "category": 2,
         "rating": 4.8,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "FSCR-programme.png"
+        "image": "prog-tend.png"
         }
     },
     {
@@ -108,7 +108,7 @@
         "category": 3,
         "rating": 4.8,
         "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "FSCR-programme.png"
+        "image": "prog-custom.jpg"
         }
     }
  ]

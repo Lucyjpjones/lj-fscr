@@ -42,7 +42,7 @@
                 <p class="lead mb-1 text-left font-weight-bold">£{{ programme.price }}</p>
                 {% if request.user.is_superuser %}
                     <small>
-                        <a class="ks-btn px-2 py-1 font-12" href="{% url 'edit_programme' programme.id %}">Edit</a>
+                        <a class="red-border-btn px-2 py-1 font-12" href="{% url 'edit_programme' programme.id %}">Edit</a>
                         <a class="add-btn px-2 py-1 font-12" href="{% url 'delete_programme' programme.id %}">Delete</a>
                     </small>
                 {% endif %}
@@ -140,13 +140,13 @@
                 </div>
 
                 <div class="col ml-3 mb-3">
-                    <a href="{% url 'programmes' %}" class="ks-btn btn rounded-0 mt-1 mr-1">
+                    <a href="{% url 'programmes' %}" class="navy-border-btn btn rounded-0 mt-1 mr-1 font-14">
                         <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
-                    <input type="submit" class="add-btn btn rounded-0 text-uppercase mt-1" value="Add to Bag">
+                    <input type="submit" class="ks-btn btn rounded-0 text-uppercase mt-1 font-14" value="Add to Bag">
                 </div>
                 <input type="hidden" name="redirect_url" 
                 value="{{ request.path }}">

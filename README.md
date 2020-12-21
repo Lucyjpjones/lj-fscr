@@ -152,7 +152,7 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
     - Clear interactive buttons used for a effortless user journey.
 
 - **Forms**
-  - Forms used for contact form, login and register, adding/editing products and programmes, adding forum threads,user comments, and checkout details.
+  - Forms used for contact form, login and register, adding/editing products,programmes, adding forum threads, user comments, and checkout details.
 
   - Crispy forms used for elegant formatting.
 
@@ -266,7 +266,7 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 
 The project was connected to Heroku using automatic deployment from my GitPod repository, using the following steps...
 
-> **Note:** Before following the below steps ensure you have already created your new repo in Github and set up an env.py file to store your sensitive data. (Further details on adding an env.py file below)
+> **Note:** Before following the below steps ensure you have already created your new repo in Github. Sensive data can either be added to your environment settings or stored in an env.py file. (Further details on adding an env.py file below)
 
 1. In the terminal create requirements.txt and Procfile files using the commands below:
    - $ pip3 freeze --local > requirements.txt

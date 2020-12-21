@@ -10,7 +10,6 @@
 <div class="content-container">
 
   <!--Programme image-->
-  <div class="row">
     <div class="col-12">
       <div class="image-container my-3">
         {% if programme.image %}
@@ -31,7 +30,6 @@
         </a>
         {% endif %}
       </div>
-    </div>
     </div>
 
     <!--Programme details-->
@@ -110,7 +108,7 @@
     </div>
 
     <!--Button actions-->
-    <form class="form" action="{% url 'add_programme_to_bag' programme.id %}" method="POST">
+    <form class="form" action="{% url 'add_to_bag' programme.id %}" method="POST">
         {% csrf_token %}
         <div class="form-row">
             <div class="col-12 ml-3">

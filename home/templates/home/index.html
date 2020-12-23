@@ -20,13 +20,7 @@
             alt="Callout image"
         />
     </div>
-    {% if request.user.is_authenticated %}
-    <div class="row callout-banner-outer">
-        <div class="col-12 text-center text-uppercase callout-banner red-header py-2" style="height:68px;">
-            <h5 class="p-2">Your first step to recovery!</h5>
-        </div>
-    </div>
-    {% else %}
+
     <!-- Callout banner carousel -->
     <div class="row callout-banner-outer">
         <div
@@ -34,23 +28,35 @@
             class="col-12 text-center text-uppercase carousel slide callout-banner red-header py-2"
             data-ride="carousel"
         >
+            {% if request.user.is_authenticated %}
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <p>Make your first step today</p>
-                    <a href="" class="callout-btn font-14 btn rounded-0">Join Now</a>
-                </div>
-                <div class="carousel-item">
-                    <p>Sign up and get 10% off your first order</p>
-                    <a href="" class="callout-btn font-14 btn rounded-0">Join Now</a>
+                    <p>Your first step to recovery</p>
+                    <a href="{% url 'programmes' %}" class="callout-btn font-14 btn rounded-0">Shop programmes</a>
                 </div>
                 <div class="carousel-item">
                     <p>Free shipping on all orders over £{{ free_delivery_threshold }}</p>
-                    <a href="" class="callout-btn font-14 btn rounded-0">Shop Now</a>
+                    <a href="{% url 'products' %}" class="callout-btn font-14 btn rounded-0">Shop Now</a>
                 </div>
             </div>
+            {% else %}
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p>Make your first step to recovery</p>
+                    <a href="{% url 'account_signup' %}" class="callout-btn font-14 btn rounded-0">Join Now</a>
+                </div>
+                <div class="carousel-item">
+                    <p>Sign up and get 10% off your first order</p>
+                    <a href="{% url 'account_signup' %}" class="callout-btn font-14 btn rounded-0">Join Now</a>
+                </div>
+                <div class="carousel-item">
+                    <p>Free shipping on all orders over £{{ free_delivery_threshold }}</p>
+                    <a href="{% url 'products' %}" class="callout-btn font-14 btn rounded-0">Shop Now</a>
+                </div>
+            </div>
+            {% endif %}
         </div>
     </div>
-    {% endif %}
 
     <!-- Programme and Products card links -->
     <div class="row mt-4">

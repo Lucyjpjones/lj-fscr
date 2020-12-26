@@ -68,11 +68,33 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 
 **Structure**
 
+- A simple design structure with a fixed navbar side navigation menu accessible from every page of the site. A brand logo is displayed in the top left of the screen to allow easy navigation back to the homepage.
+
+- As well as including a page title on my base.html, I have also added the meta description tag to help optimize my click-through rate from search engine result pages.
+
 **Colour scheme**
 
-<img src="media/palette.png">
+- After undergoing research into other fitness related sites and reviewing the [psychology behind colours](https://www.mypersonaltrainerwebsite.com/blog/how-to-use-color-psychology-to-create-the-perfect-fitness-website), I created my final palette using [Coolors](https://coolors.co).
+
+> **Red:** Passion for the sport and a never-say-die attitude.
+
+> **Purple:** Overcoming physical challenges and limitations and setting farther, more difficult goals.
+
+> **Grey:** paragraph Calmness and neutrality, focus, and precision.
+
+> **Blue:** Dependability, trust, and honesty
+
+<br>
+  <img src="media/palette.png">
+
+- The #f8f8f8 shade of very light grey has been used for as a background colour throughout the site with #fafafa shade of white used for forms.
+
 
 **Typography**
+
+- The font used throughout the site is 'Lato' which belongs to the sans-serif typeface family. The font is neutral and easily readable, making it a good choice for web design.
+
+- Sans Serif as the fallback font if for any reason the font isn't being imported into the site correctly.
 
 **Research**
 
@@ -96,23 +118,66 @@ My final design with client approval below;
 
 ### **<u>User Stories</u>**
 
-<img src="lj_fscr/media/flowchart.png">
+<img src="media/flowchart.png">
+
+* Boxes higlighted are only accessible when a user is logged in.
 
 <u>**User profiles**</u>
 
 **User profile: Site Visitor**
+As a site Visitor, I want to be able to easily navigate around the site and gain a clear insight into its purpose. I would like to be able to browse the services and products on offer with the option to purchase. I would also like the ability of contacting the site owner if I require any further information and the option to register as a member for more resources.
 
 **User profile: Site Member**
+As a site member, I want to be part of a community where I can interact with other members around key topics to share each others knowledge, experience and progress. I would like to have my own user profile to store my personal details and order history, and the ability to easily log in and out of the site.
 
 **User profile: Site Owner**
+As the site owner, I want to be able to continually monitor and update the site to manage my user's expectations. I would like the ability to easily add, edit and delete products and programmes to ensure my site is always up to date and relevant, and add blogs for our site members. I want to provide a customer review option, to gain feedback for improvements and to develop a sense of transparency to gain consumer loyalty and trust.
 
 <u>**User stories**</u>
 
-**User stories: Site Visitor**
-
-**User stories: Site Member**
-
-**User stories: Site Owner**
+|                   | As a / an    | I want to be able to….                                              | So that I can…                                                                                       |
+|--------------------------------|--------------|---------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| Viewing and Navigation         |              |                                                                     |                                                                                                      |
+| 1                              | Site Visitor | Discover FSCR’s purpose and goals                                   | Learn more about the brand and the coaches behind it                                                 |
+| 2                              | Site Visitor | View a list of products                                             | Select a product to view more details                                                                |
+| 3                              | Site Visitor | View a list of programmes                                           | Select a programme to view more details                                                              |
+| 4                              | Site Visitor | View a specific category of products                                | Quickly find products I’m interested in without having to search through all the products            |
+| 5                              | Site Visitor | View individual product details                                     | Identify the description, price, available sizes, product image and rating                           |
+| 6                              | Site Visitor | View individual programme details                                   | Identify the description, price, duration, rating and reviews                                        |
+| 7                              | Site Visitor | Easily access contact details                                       | Send a message regarding any queries I have                                                          |
+| 8                              | Site Visitor | See reviews and ratings on products and programmes                  | Be reassured that the product/programme is good                                                      |
+| 9                              | Site Member  | Browse associated blogs, articles and recent new stories            | Learn more about football rehabilitation and keep up to date with news                               |
+| 10                             | Site Member  | Forum                                                               | Be part of a community and speak to other coaches/athletes                                           |
+| Registration and user accounts |              |                                                                     |                                                                                                      |
+| 11                             | Site Visitor | Easily register for an account                                      | Have a personal account and be able to view my profile                                               |
+| 12                             | Site Visitor | Receive an email confirmation after registering                     | Verify that my account registration was successful                                                   |
+| 13                             | Site Member  | Easily login or logout                                              | Access my personal account information                                                               |
+| 14                             | Site Member  | Easily update my personal details                                   | Change my details if needed                                                                          |
+| 15                             | Site Member  | Easily recover my password in case I forget it                      | Recover access to my account                                                                         |
+| 16                             | Site Member  | Have a personalised user profile                                    | View my personal order confirmations, order history and save my payment details for future purchases |
+| 17                             | Site Member  | Enable my details to be prefilled                                   | Save time entering my details when making  future purchases                                          |
+| Sorting and Searching          |              |                                                                     |                                                                                                      |
+| 18                             | Site Visitor | Sort and filter the list of available products                      | Easily find the product I’m looking for                                                              |
+| 19                             | Site Visitor | Sort and filter the list of available programmes                    | Easily find the programme I’m looking for                                                            |
+| 20                             | Site Visitor | Search the site by keywords                                         | Easily find what I am looking for                                                                    |
+| 21                             | Site Visitor | Easily see what I’ve searched for and the number of results         | Quickly decide whether the product or programme I want is available                                  |
+| 22                             |              |                                                                     |                                                                                                      |
+| Purchasing and checkout        |              |                                                                     |                                                                                                      |
+| 23                             | Site Visitor | Easily select the size and quantity of a product when purchasing it | Ensure I don’t accidentally select the wrong product quantity or size                                |
+| 24                             | Site Visitor | View items in my bag to be purchased                                | Identify the total cost of my purchase and all items I will receive                                  |
+| 25                             | Site Visitor | Adjust the quantity of individual items in my bag                   | Easily make changes to my purchase before checkout                                                   |
+| 26                             | Site Visitor | Easily enter my payment information                                 | Check out quickly with no hassles                                                                    |
+| 27                             | Site Visitor | Feel my personal and payment information is safer and secure        | Confidently provide the needed information to make a purchase                                        |
+| 28                             | Site Visitor | View an order confirmation after checkout                           | Verify that I haven’t made any mistakes                                                              |
+| 29                             | Site Visitor | Receive an email confirmation after checking out                    | Keep the confirmation of what I’ve purchased for my records                                          |
+| Admin and Store Management     |              |                                                                     |                                                                                                      |
+| 30                             | Site Owner   | Add a product                                                       | Add new product lines to my products purchasing page                                                 |
+| 31                             | Site Owner   | Add a programme                                                     | Add new programmes to my programme purchasing page                                                   |
+| 32                             | Site Owner   | Edit/Update a product                                               | Change product prices, descriptions, images and other product criteria                               |
+| 33                             | Site Owner   | Edit/Update a programme                                             | Change programme prices, descriptions and other programme criteria                                   |
+| 34                             | Site Owner   | Delete a product                                                    | Remove items that are no longer available for sale                                                   |
+| 35                             | Site Owner   | Delete a programme                                                  | Remove programmes that are discontinued                                                              |
+| 36                             | Site Owner   | Add a blog                                                          | Add new blogs to share with site members                                                             |
 
 ### **<u>Wireframes</u>**
 
@@ -180,8 +245,6 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
   - Used for success and error responses to add to the user journey.
 
 - **Payments**
-
-
 
 
 ### **To do list**
@@ -286,6 +349,37 @@ The **P**rocfile must be assigned a capital P.
 The region chosen should be the one closest to you.
 
    ![Create new app](media/create-new-app.png)
+
+3. Then on the 'Resources' tab, search and add on the Heroku Postgres database.
+
+3. To use Postgres, install dj_database_url, and psycopg2 in the project terminal using the following commands;
+
+pip3 install dj_database_url
+pip3 install psycopg2
+
+3. Freeze the requirements to ensure Heroku installs all the apps requirements when deployed using the following command;
+
+pip3 freeze > requirements.txt
+
+3. Go to settings and import dj database url
+Then down in the databases setting. I'll comment out the default configuration.
+And replace the default database with a call to dj_database_url.parse
+And give it the database URL from Heroku.
+Which you can either get from your config variables in your app settings tab.
+Or from the command line by typing Heroku config.
+
+3. If I run Python 3 manage.py migrate.
+It will apply all those migrations and get our database all set up.
+
+3. Now to import all our product data, we can use our fixtures again by first
+loading in the categories and then the products.
+To load the categories I'll use python3 manage.py load data categories.
+And then do the same for products.
+And remember it's important to do them in that order because the products
+depend on the categories already existing.
+
+3. Finally I'll just give myself a super user to log in with.
+Using python3 manage.py create superuser
 
 4. From the Heroku deploy tab, select the Deployment method 'GitHub'.
 

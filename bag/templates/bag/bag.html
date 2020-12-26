@@ -39,20 +39,37 @@
                         </div>
                         </div>
                         {% for item in bag_items %}
-                            <div class="row bg-light py-3 mb-4">
-                                <div class="col-12 col-sm-6 mb-2">
-                                    {% include "bag/product-image.html" %}
+                            {% if item.type == 'product' %}
+                                <div class="row bg-light py-3 mb-4">
+                                    <div class="col-12 col-sm-6 mb-2">
+                                        {% include "bag/product-image.html" %}
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-2">
+                                        {% include "bag/product-info.html" %}
+                                    </div>
+                                    <div class="col-12 col-sm-6 order-sm-last mb-2">
+                                        <p class="my-0">£{{ item.product.price }}</p>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        {% include "bag/quantity-form.html" %}
+                                    </div>
                                 </div>
-                                <div class="col-12 col-sm-6 mb-2">
-                                    {% include "bag/product-info.html" %}
+                            {% elif item.type == 'programme' %}
+                                <div class="row bg-light py-3 mb-4">
+                                    <div class="col-12 col-sm-6 mb-2">
+                                        {% include "bag/product-image.html" %}
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-2">
+                                        {% include "bag/product-info.html" %}
+                                    </div>
+                                    <div class="col-12 col-sm-6 order-sm-last mb-2">
+                                        <p class="my-0">£{{ item.programme.price }}</p>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        {% include "bag/quantity-form.html" %}
+                                    </div>
                                 </div>
-                                <div class="col-12 col-sm-6 order-sm-last mb-2">
-                                    <p class="my-0">£{{ item.product.price }}</p>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    {% include "bag/quantity-form.html" %}
-                                </div>
-                            </div>
+                            {% endif %}
                         {% endfor %}
                         <div class="btt-button">
                             <a class="btt-link d-flex h-100 mb-3">

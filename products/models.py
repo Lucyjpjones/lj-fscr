@@ -19,6 +19,7 @@ class Category(models.Model):
 class Product(models.Model):
     category = models.ManyToManyField(
         'Category')
+    item_type = models.CharField(default='product', max_length=20, null=True, blank=True)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     colour = models.CharField(max_length=20)

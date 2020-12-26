@@ -1,4 +1,11 @@
+{% if item.product %}
 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
 <p class="my-0">{{ item.product.colour }}</p>
 <p class="my-0">{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}One size{% endif %}</p>
 <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+{% elif item.programme %}
+<p class="my-0"><strong>{{ item.programme.name }}</strong></p>
+<p class="my-0">{{ item.programme.colour }}</p>
+<p class="my-0">{% if item.programme.has_sizes %}{{ item.size|upper }}{% else %}One size{% endif %}</p>
+<p class="my-0 small text-muted">SKU: {{ item.programme.sku|upper }}</p>
+{% endif %}

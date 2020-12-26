@@ -4,8 +4,6 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Programme, Category
-
-from .models import Programme, Category
 from .forms import ProgrammeForm
 
 # Create your views here.
@@ -89,7 +87,7 @@ def add_programme(request):
             messages.error(request, 'Failed to add programme. Please ensure the form is valid.')
     else:
         form = ProgrammeForm()
-        
+
     template = 'programmes/add_programme.html'
     context = {
         'form': form,

@@ -17,6 +17,7 @@
             <p class="logo-font bg-white text-black py-1">Your Bag ({{ product_count }})</p>
             <div class="bag-notification-wrapper">
                 {% for item in bag_items %}
+                    {% if item.type == 'product' %}
                     <div class="row">
                         <div class="col-3 my-1">
                             {% if item.product.image %}
@@ -31,6 +32,22 @@
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                     </div>
+                    {% elif item.type == 'programme' %}
+                    <div class="row">
+                        <div class="col-3 my-1">
+                            {% if item.programme.image %}
+                            <img class="w-100" src="{{ item.programme.image.url }}" alt="{{ item.programme.name }}">
+                            {% else %}
+                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.programme.name }}">
+                            {% endif %}
+                        </div>
+                        <div class="col-9">
+                            <p class="my-0"><strong>{{ item.programme.name }}</strong></p>
+                            <p class="my-0 small">Size: {% if item.programme.has_sizes %}{{ item.size|upper }}{% else %}One size{% endif %}</p>
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
                 {% endfor %}
             </div>
             <div class="row">

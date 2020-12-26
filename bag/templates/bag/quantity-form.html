@@ -30,6 +30,9 @@
     </div>
 </form>
 
+<a class="update-link text-info pr-2"><small>Update</small></a>
+<a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+
 {% elif item.type == 'programme' %}
 <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id 'programme' %}">
     {% csrf_token %}
@@ -58,7 +61,7 @@
         </div>
     </div>
 </form>
-{% endif %}
 
 <a class="update-link text-info pr-2"><small>Update</small></a>
 <a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+{% endif %}

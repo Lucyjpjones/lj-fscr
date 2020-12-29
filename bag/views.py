@@ -76,6 +76,7 @@ def adjust_bag(request, item_id, category):
         size = request.POST['product_size']
     bag = request.session.get('bag', {'product': {},
                                       'programme': {}})
+
     if category == 'product':
         if size:
             if quantity > 0:
@@ -84,14 +85,14 @@ def adjust_bag(request, item_id, category):
             else:
                 del bag[category][item_id]['items_by_size'][size]
                 if not bag[category][item_id]['items_by_size']:
-                    bag.pop(item_id)
+                    del bag[category][item_id]
                 messages.success(request, f'Removed size {size.upper()} {product.name} from your bag')
         else:
             if quantity > 0:
                 bag[category][item_id] = quantity
                 messages.success(request, f'Updated {product.name} quantity to {bag[category][item_id]}')
             else:
-                bag.pop(item_id)
+                del bag[category][item_id]
                 messages.success(request, f'Removed {product.name} from your bag')
 
     elif category == 'programme':
@@ -99,7 +100,7 @@ def adjust_bag(request, item_id, category):
             bag[category][item_id] = quantity
             messages.success(request, f'Updated {programme.name} quantity to {bag[category][item_id]}')
         else:
-            bag.pop(item_id)
+            del bag[category][item_id]
             messages.success(request, f'Removed {programme.name} from your bag')
 
     request.session['bag'] = bag
@@ -107,28 +108,36 @@ def adjust_bag(request, item_id, category):
     return redirect(reverse('view_bag'))
 
 
-def remove_from_bag(request, item_id):
-    """Remove the item from the shopping bag"""
+def remove_from_bag(request, item_id, category):
+    """Remove the specified product from bag"""
+
+    product = get_object_or_404(Product, pk=item_id)
+    programme = get_object_or_404(Programme, pk=item_id)
+    size = None
+    if 'product_size' in request.POST:
+        size = request.POST['product_size']
+    bag = request.session.get('bag', {'product': {},
+                                      'programme': {}})
 
     try:
-        product = get_object_or_404(Product, pk=item_id)
-        size = None
-        if 'product_size' in request.POST:
-            size = request.POST['product_size']
-        bag = request.session.get('bag', {})
+        if category == 'product':
+            if size:
+                del bag[category][item_id]['items_by_size'][size]
+                if not bag[category][item_id]['items_by_size']:
+                    del bag[category][item_id]
+                messages.success(request, f'Removed size {size.upper()} {product.name} from your bag')
+            else:
+                del bag[category][item_id]
+                messages.success(request, f'Removed {product.name} from your bag')
 
-        if size:
-            del bag[item_id]['items_by_size'][size]
-            if not bag[item_id]['items_by_size']:
-                bag.pop(item_id)
-            messages.success(request, f'Removed size {size.upper()} {product.name} from your bag')
-        else:
-            bag.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your bag')
+        elif category == 'programme':
+            del bag[category][item_id]
+            messages.success(request, f'Removed {programme.name} from your bag')
 
         request.session['bag'] = bag
+        print (request.session['bag'])
         return HttpResponse(status=200)
 
     except Exception as e:
-        messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
+

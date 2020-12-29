@@ -120,12 +120,12 @@ My final design with client approval below;
 <img src="media/schema.png">
 
 The **Product model** within the products app, is used to store information about individual products.
-The **Category model** within the products app, is used to group products into specific categories. This has been add a filter functionality and assist with user searching.
+The **Category model** within the products app, is used to group products into specific categories. A category filter functionality has been included for easier user searching.
 
 The **Programme model** within the programmes app, is used to store information about individual programmes.
 The **Category model** within the programmes app, is used to group programmes into specific categories. This has been add a filter functionality and assist with user searching.
 
-The **UserProfile** model within the profiles app, is used to store orders, checkout details
+The **UserProfile** model within the profiles app, is used to order history, checkout details and profile information.
 
 **blog app**
 The **Post model** within the blog app, is used to store posts added by the admin user.
@@ -470,13 +470,14 @@ This is the name of your repo in GitHub. It is good practice to use an identical
 
 Follow the steps below if you are wanting to propose changes to the project or to use the project as a starting point for your own idea.
 
-> **Note:** Static files and media content has been stored in AWS bucket so is not available through github repository. Please contact site owner if you wish to use any of the images included.
+> **Note:** All static and media files were stored in a AWS bucket so are not available through the github repository. Please contact site owner if you wish to use any of the images included.
 
 - **Forking the GitHub Repository**
 
   Forking allows you to create a copy of the original repository and propose changes to the repository owner via a pull request.
 
   1. Log in to GitHub and locate the GitHub Repository.
+    - FSCR repository can be found [here](https://github.com/Lucyjpjones/lj-fscr/)
 
   2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
 

@@ -3,6 +3,7 @@
 **<details open><summary> Testing Documentation</summary>**
   - [Testing user stories](#testing-user-stories)
   - [Manual function testing](#manual-function-testing)
+  - [Automated testing](#automated-testing)
   - [Validator checks](#validator-checks)
   - [Audits](#audits)
   - [Responsive Design](#responsive-design)
@@ -18,7 +19,70 @@
 
 To ensure my site was working correctly I carried out some manual function testing;
 
+**Navigation**
+  - I checked the site dropdown menu was working correctly by starting on the home-page and navigating around the site from and to every screen the user would be faced with.
+  - I checked the logo homepage navigation was working by clicking on the brand image from every page.
 
+**Authorisation**
+
+  - To check the login functionality was working I first clicked on the profile icon and clicked 'login' to ensure I was directed to the correct page. When presented with the modal I conducted various checks;
+    - I filled out the login form with an already registered username and password then clicked 'Login'.
+    - I filled out the login form with a new username and password then clicked 'Login'.
+
+- To check the Register functionality was working I first clicked on the profile icon and clicked 'register' to ensure I was directed to the correct page.
+  - I filled out the registration form with a new username and password then clicked 'Register'.
+  - I filled out the login form with an already registered username and password then clicked 'Register'.
+
+<u>Site user/member</u>
+  - Once I was logged in, the options available under the profile icon changed to 'my profile' and 'log out'. I was also able to access the blog and forum page.
+
+<u>Site Owner</u>
+- Once I was logged in, the options available under the profile icon changed to 'my profile', log out', 'product management' and 'programme management'. I was also able to access the blog and forum page.
+
+**Form validation**
+
+**Home**
+
+**products**
+
+<u>View product functionality</u>
+
+<u>Add product functionality</u>
+
+<u>Edit product functionality</u>
+
+<u>Delete product functionality</u>
+
+
+**programmes**
+
+<u>View prgramme functionality</u>
+
+<u>Add programme functionality</u>
+
+<u>Edit programme functionality</u>
+
+<u>Delete programme functionality</u>
+
+**bag**
+
+<u>Add to bag functionality</u>
+
+<u>View bag functionality</u>
+
+**checkout**
+
+**blog**
+
+<u>Commenting on blog</u>
+
+**forum**
+
+<u>Adding Thread</u>
+
+<u>Commenting on forum</u>
+
+#### Automated testing
 
 #### Validator checks
 

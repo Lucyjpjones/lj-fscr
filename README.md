@@ -1,6 +1,5 @@
 <div align="center">
-  <img src="static/assets/images/readme/responsive-fscr.png">
-  <img src="static/assets/images/readme/title.png">
+  <img src="media/responsive-fscr.png">
 <hr>
 
 **FSCR (Football Strength Conditioning Rehab) focuses on providing structured and detailed fitness programmes for football related injuries.**
@@ -19,6 +18,7 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
   - [Purpose](#purpose)
   - [Design](#design)
   - [User stories](#user-stories)
+  - [Data Schema](#data-schema)
   - [Wireframes](#wireframes)
 </details>
 
@@ -115,6 +115,27 @@ My final design with client approval below;
 
 <img src="media/final-logo.png">
 
+### **<u>Data Schema</u>**
+
+<img src="media/schema.png">
+
+The **Product model** within the products app, is used to store information about individual products.
+The **Category model** within the products app, is used to group products into specific categories. This has been add a filter functionality and assist with user searching.
+
+The **Programme model** within the programmes app, is used to store information about individual programmes.
+The **Category model** within the programmes app, is used to group programmes into specific categories. This has been add a filter functionality and assist with user searching.
+
+The **UserProfile** model within the profiles app, is used to store orders, checkout details
+
+**blog app**
+The **Post model** within the blog app, is used to store posts added by the admin user.
+The **Comments model** within the blog app, is used to store comments added by the user who is logged in.
+
+The **Thread model** within the forum app, is used to store threads added by the user.
+The **Comment model** within the forum app, is used to store comments made by the user logged in.
+
+The **Order model** within the checkout app, is used to store orders.
+The **OrderLineItem model** within the checkout app, is used to store information about individual orders.
 
 ### **<u>User Stories</u>**
 
@@ -245,13 +266,21 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
   - Used for success and error responses to add to the user journey.
 
 - **Payments**
+  - Stripe payments used to manage site card transactions.
 
 
 ### **To do list**
 
 #### Status
 
+> Project is: <u>ongoing</u>
+
+I will continue to update my website to meet my clients expectations. I have further development plans which I have listed below.
+
 **Future Development plans**
+- Add more social logging in options for users.
+- Add more payment options for my users, including apple pay to improve user experience with quicker checkout.
+- Add a review option for members to give their opinion on products and programmes . As this is a startup there is currently no orders this was a lower priority to complete.
 
 ---
 
@@ -266,13 +295,26 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 
 #### Frameworks, Libraries & Programs
 
-- [**Django**](#)
+- [**Django**](https://www.djangoproject.com/)
 
-- [**AWS**](#)
+  - Python Web framework used to the build site.
 
-- [**Stripe**](#)
+boto3
+gunicorn
+pillow
+psycopg2
+
+- [**AWS**](https://aws.amazon.com/)
+
+  - A cloud-based storage service used to store static and ,media files.
+
+- [**Stripe**](https://stripe.com/gb)
+
+  - Stripe was used to deal with payments.
 
 - [**Temp Mail**](https://temp-mail.org/en/)
+
+  - Temp Mail was used to provide temporary, secure, anonymous, free, disposable email addresses for testing purposes.
 
 - [**Google fonts**](https://fonts.google.com/)
 
@@ -428,6 +470,8 @@ This is the name of your repo in GitHub. It is good practice to use an identical
 
 Follow the steps below if you are wanting to propose changes to the project or to use the project as a starting point for your own idea.
 
+> **Note:** Static files and media content has been stored in AWS bucket so is not available through github repository. Please contact site owner if you wish to use any of the images included.
+
 - **Forking the GitHub Repository**
 
   Forking allows you to create a copy of the original repository and propose changes to the repository owner via a pull request.
@@ -445,7 +489,7 @@ Follow the steps below if you are wanting to propose changes to the project or t
 When you clone a repository, the repository is copied on to your local machine.
 
 1. Log in to GitHub and locate the GitHub Repository.
-   - Wean Cuisine repository can be found [here](https://github.com/Lucyjpjones/wean-cuisine/)
+   - FSCR repository can be found [here](https://github.com/Lucyjpjones/lj-fscr/)
 
 2. Under the repository name, click the "download code" option.
 
@@ -462,15 +506,15 @@ When you clone a repository, the repository is copied on to your local machine.
 6. Type git clone, and then paste the URL you copied in Step 3.
 
     ```
-    $ git clone https://github.com/YOUR-USERNAME/wean-cuisine.git
+    $ git clone https://github.com/YOUR-USERNAME/lj-fscr.git
     ```
 
 7. Press Enter. Your local clone will be created.
 
     ```
-    $ git clone https://github.com/YOUR-USERNAME/wean-cuisine.git
+    $ git clone https://github.com/YOUR-USERNAME/lj-fscr.git
 
-    > Cloning into `wean-cuisine`...
+    > Cloning into `lj-fscr`...
     > remote: Enumerating objects: 299, done.
     > remote: Counting objects: 100%, (299/299),  done.
     > remote: Compressing objects: 100% (156/156), done.
@@ -479,11 +523,11 @@ When you clone a repository, the repository is copied on to your local machine.
     > Resolving deltas: 100% (145/145), done. Unpacking objects: 100% (10/10), done.
     ```
 
-    Now, you have a local copy of your fork of the Wean Cuisine repository.
+    Now, you have a local copy of your fork of the FSCR repository.
 
     > **Note:** The repository name and output numbers that you see on your computer, representing the total file size, etc, may differ from the example I have provided above.
 
-8. Add an env.py file to your workspace to include your environment variables (more details below).
+8. Either store your sensive data in your environment settings or add an env.py file to your workspace (more details below).
 
    > **Note:** Contact the site owner if you want more information on the environment variables that have been included.
 

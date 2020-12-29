@@ -106,6 +106,7 @@ AUTHENTICATION_BACKENDS = (
 
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
+
 )
 
 SITE_ID = 1
@@ -242,3 +243,8 @@ if 'USE_AWS' in os.environ:
         EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
         EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
         DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+
+    # Social accounts
+    SOCIALACCOUNT_QUERY_EMAIL = ACCOUNT_EMAIL_REQUIRED
+    SOCIALACCOUNT_EMAIL_REQUIRED = ACCOUNT_EMAIL_REQUIRED
+    SOCIALACCOUNT_STORE_TOKENS = False

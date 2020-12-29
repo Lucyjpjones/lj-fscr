@@ -11,21 +11,11 @@ $(document).ready(function () {
                 $("#navbar-bars").toggleClass("d-none");
                 $("#navbar-close").toggleClass("d-none");
             }
-            else {
-                $("#sidebarCollapse").on("click", function () {
-                    $("#sidebar").toggleClass("active");
-                    $(".overlay").toggleClass("enabled");
-                    /* Menu icon change (toggle) - Code taken from 'https://stackoverflow.com/questions/28247310/bootstrap-mobile-menu-icon-change-to-x-close'
-                    $("#navbar-bars").toggleClass("d-none");
-                    $("#navbar-close").toggleClass("d-none");
-                })
-            }
         });
     }
-
     */
 
-    /* Sidebar Toggle*/
+    /* Sidebar Toggle */
     $("#sidebarCollapse").on("click", function () {
         $("#sidebar").toggleClass("active");
         $(".overlay").toggleClass("enabled");

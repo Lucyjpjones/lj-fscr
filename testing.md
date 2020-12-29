@@ -124,3 +124,4 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 |     | Bug                                                                           | Action                                                            |
 |-----|-------------------------------------------------------------------------------|-------------------------------------------------------------------|
 | [] | Search icon showing border on ios                     |  need to solve |
+| [] | Homepage postioning not filling screen as including search bar in vh                     |  need to solve |

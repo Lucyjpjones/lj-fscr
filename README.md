@@ -392,63 +392,68 @@ The region chosen should be the one closest to you.
 
    ![Create new app](media/create-new-app.png)
 
-3. Then on the 'Resources' tab, search and add on the Heroku Postgres database.
+4. Then on the 'Resources' tab, search and add on the Heroku Postgres database.
 
-3. To use Postgres, install dj_database_url, and psycopg2 in the project terminal using the following commands;
+5. To use Postgres, install dj_database_url, and psycopg2 in the project terminal using the following commands;
 
-pip3 install dj_database_url
-pip3 install psycopg2
+   - pip3 install dj_database_url
+   - pip3 install psycopg2
 
-3. Freeze the requirements to ensure Heroku installs all the apps requirements when deployed using the following command;
+6. Freeze the requirements to ensure Heroku installs all the apps requirements when deployed using the following command;
 
-pip3 freeze > requirements.txt
+   - pip3 freeze > requirements.txt
 
-3. Go to settings and import dj database url
-Then down in the databases setting. I'll comment out the default configuration.
-And replace the default database with a call to dj_database_url.parse
-And give it the database URL from Heroku.
-Which you can either get from your config variables in your app settings tab.
-Or from the command line by typing Heroku config.
+7. Go to settings.py and import dj database url;
 
-3. If I run Python 3 manage.py migrate.
-It will apply all those migrations and get our database all set up.
+   - import dj_database_url
 
-3. Now to import all our product data, we can use our fixtures again by first
-loading in the categories and then the products.
-To load the categories I'll use python3 manage.py load data categories.
-And then do the same for products.
-And remember it's important to do them in that order because the products
-depend on the categories already existing.
+   Then down in the databases setting comment out the default configuration and replace the default database with a call to dj_database_url.parse and give it the database URL from Heroku.
+    > Note: You can either get the database url from your config variables in your app settings tab or from the command line by typing Heroku config.
 
-3. Finally I'll just give myself a super user to log in with.
-Using python3 manage.py create superuser
+8. Apply all migrations using the following command;
 
-4. From the Heroku deploy tab, select the Deployment method 'GitHub'.
+   - $ python3 manage.py migrate
 
-   ![Deployment method](media/deployment-method.jpg)
+    Your database should now be all set up.
 
-5. On the 'Connect to GitHub' section make sure your GitHub profile is displayed then add your repository name and click 'Search'.
+9. Create a super user to log in with using the following command;
 
-   > **Note:** 
-This is the name of your repo in GitHub. It is good practice to use an identical name for your Heroku app.
+   - $ python3 manage.py createsuperuser
 
-    ![Deploy GitHub](static/assets/images/readme/deployment-git.jpeg)
+10. From the Heroku deploy tab, select the Deployment method 'GitHub'.
 
-6. Your repo should now be displayed below, click 'Connect' to connect to this app.
+    ![Deployment method](media/deployment-method.jpg)
 
-7. Go to the Settings tab on Heroku, scroll to the 'Config Vars' section, and click 'Reveal Config Vars'. 
+11. On the 'Connect to GitHub' section make sure your GitHub profile is displayed then add your repository name and click 'Search'.
+
+    > **Note:** This is the name of your repo in GitHub. It is good practice to use an identical name for your Heroku app.
+
+    ![Deploy GitHub](media/deployment-git.jpg)
+
+12. Your repo should now be displayed below, click 'Connect' to connect to this app.
+
+13. Go to the Settings tab on Heroku, scroll to the 'Config Vars' section, and click 'Reveal Config Vars'. 
 
    ![Config Vars](media/config-vars.png)
 
    Enter variables (key and value) contained in the env.py file. The keys are listed below and values are inputted by the user.
-    - IP
-    - PORT
-    - SECRET_KEY
-    - MONGO_URI
-    - MONGO_DBNAME
+   
+        - AWS_ACCESS_KEY_ID
+        - AWS_SECRET_KEY_ID
+        - DATABASE_URL
+        - DISABLE_COLLECTSTATIC 
+        - EMAIL_HOST_PASS
+        - EMAIL_HOST_USER
+        - SECRET_KEY
+        - STRIPE_PUBLIC_KEY
+        - STRIPE_SECRET_KEY
+        - STRIPE_WH_SECRET
+        - USE_AWS
 
-8. Push requirements.txt and Procfile to repository:
-  <u>requirements.txt</u>
+
+14. Push requirements.txt and Procfile to repository:
+
+    <u>requirements.txt</u>
     - $ git add requirements.txt
     - $ git commit -m "Added requirements.txt"
  
@@ -481,7 +486,7 @@ Follow the steps below if you are wanting to propose changes to the project or t
 
   2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
 
-     ![forking](static/assets/images/readme/forking.png)
+     ![forking](media/fork.png)
 
   3. You should now have a copy of the original repository in your GitHub account.
 
@@ -494,11 +499,11 @@ When you clone a repository, the repository is copied on to your local machine.
 
 2. Under the repository name, click the "download code" option.
 
-   ![Clone](static/assets/images/readme/clone.png)
+   ![Clone](media/clone.png)
 
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 
-   ![Clone-link](static/assets/images/readme/clone-link.png)
+   ![Clone-link](media/clone-link.png)
 
 4. Open Git Bash
 
@@ -536,11 +541,17 @@ When you clone a repository, the repository is copied on to your local machine.
 
 1. Add a env.py file to store environment variables:
    - Import os 
-   - os.environ.setdefault("IP", "To be added by user") 
-   - os.environ.setdefault("PORT", "To be added by user") 
-   - os.environ.setdefault("SECRET_KEY", "To be added by user") 
-   - os.environ.setdefault("MONGO_URI", "To be added by user") 
-   - os.environ.setdefault("MONGO_DBNAME", "To be added by user")
+   - os.environ.setdefault("AWS_ACCESS_KEY_ID", "To be added by user") 
+   - os.environ.setdefault("AWS_SECRET_KEY_ID", "To be added by user") 
+   - os.environ.setdefault("DATABASE_URL", "To be added by user") 
+   - os.environ.setdefault("DISABLE_COLLECTSTATIC", "To be added by user") 
+   - os.environ.setdefault("EMAIL_HOST_PASS", "To be added by user")
+   - os.environ.setdefault("EMAIL_HOST_USER", "To be added by user")
+   - os.environ.setdefault("SECRET_KEY", "To be added by user")
+   - os.environ.setdefault("STRIPE_PUBLIC_KEY", "To be added by user")
+   - os.environ.setdefault("STRIPE_SECRET_KEY", "To be added by user")
+   - os.environ.setdefault("STRIPE_WH_SECRET", "To be added by user")
+   - os.environ.setdefault("USE_AWS", "To be added by user")
 
     > **Note:** I used [RandomKeygen.com](https://randomkeygen.com/) to get my secure SECRET_KEY password. A SECRET_KEY is required when using the flash and session functions of Flask.
 

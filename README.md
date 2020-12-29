@@ -299,10 +299,14 @@ I will continue to update my website to meet my clients expectations. I have fur
 
   - Python Web framework used to the build site.
 
-boto3
-gunicorn
-pillow
-psycopg2
+- [**Boto3**](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+
+- [**gunicorn**](https://gunicorn.org/)
+   - WSGI server used to take care of everything happening between the web server and web application.
+
+- [**pillow**](https://www.djangoproject.com/)
+
+- [**psycopg2**](https://www.djangoproject.com/)
 
 - [**AWS**](https://aws.amazon.com/)
 
@@ -376,10 +380,6 @@ The project was connected to Heroku using automatic deployment from my GitPod re
 1. In the terminal create requirements.txt and Procfile files using the commands below:
    - $ pip3 freeze --local > requirements.txt
 
-   - $ echo web: python app.py > Procfile
-
-   > **Note:** 
-The **P**rocfile must be assigned a capital P.
 
 2. Log in (or Register) to [Heroku](https://www.heroku.com/) and from your dashboard click 'new' > 'create new app'.
 
@@ -437,7 +437,7 @@ The region chosen should be the one closest to you.
    ![Config Vars](media/config-vars.png)
 
    Enter variables (key and value) contained in the env.py file. The keys are listed below and values are inputted by the user.
-   
+
         - AWS_ACCESS_KEY_ID
         - AWS_SECRET_KEY_ID
         - DATABASE_URL
@@ -450,18 +450,42 @@ The region chosen should be the one closest to you.
         - STRIPE_WH_SECRET
         - USE_AWS
 
+14. Install gunicorn using the following command;
 
-14. Push requirements.txt and Procfile to repository:
+    - $ pip3 install gunicorn
 
-    <u>requirements.txt</u>
-    - $ git add requirements.txt
-    - $ git commit -m "Added requirements.txt"
- 
-    <u>Procfile</u>
-   - $ git add Procfile
-   - $ git commit -m "Added Procfile"
+    Then freeze into your requirements file.
 
-9. Go to the Deploy tab on Heroku and under the Automatic deployment section, click 'Enable Automatic Deploys'. Then under Manual deploy click 'Deploy Branch'.
+15. Create a Procfile and add the following line;
+
+    - web: gunicorn lj_fscr.wsgi:application
+
+    This tells Heroku to create a web dyno which will run gunicorn and serve the django app.
+
+    > **Note:** The **P**rocfile must be assigned a capital P.
+
+16. Last, you need to temporarily disable collectstatic to ensure that Heroku won't try to collect static files when we deploy. This is done by adding the below variable;
+
+    - DISABLE_COLLECTSTATIC = 1
+
+17. Add the hostname of your Heroku app to allowed hosts in settings.py
+
+18. Now you can commit all the changes and push to github;
+
+    - $ git add .
+    - $ git commit -m <'your commit message'>
+    - $ git push
+
+    If you created your app on the website you will need to initialize your heroku git remote using the following command;
+    - $ heroku git:remote -a lj-fscr
+
+    Then use the follwing command to push to heroku;
+
+    - $ git push heroku master 
+
+**To set up Automatic deployment to Heroku**
+
+Go to the Deploy tab on Heroku and under the Automatic deployment section, click 'Enable Automatic Deploys'. Then under Manual deploy click 'Deploy Branch'.
 
    ![Enable Automatic Deploys](media/enable-deploys.jpg)
 
@@ -470,6 +494,9 @@ The region chosen should be the one closest to you.
 
         > **Note:** 
         In Manual deploy dropdown 'master' is selected'
+
+
+Add Secret key info!!!!!!!
 
 #### Accessing code
 
@@ -545,6 +572,7 @@ When you clone a repository, the repository is copied on to your local machine.
    - os.environ.setdefault("AWS_SECRET_KEY_ID", "To be added by user") 
    - os.environ.setdefault("DATABASE_URL", "To be added by user") 
    - os.environ.setdefault("DISABLE_COLLECTSTATIC", "To be added by user") 
+     - So heroku wil not start collecting static files.
    - os.environ.setdefault("EMAIL_HOST_PASS", "To be added by user")
    - os.environ.setdefault("EMAIL_HOST_USER", "To be added by user")
    - os.environ.setdefault("SECRET_KEY", "To be added by user")
@@ -555,7 +583,7 @@ When you clone a repository, the repository is copied on to your local machine.
 
     > **Note:** I used [RandomKeygen.com](https://randomkeygen.com/) to get my secure SECRET_KEY password. A SECRET_KEY is required when using the flash and session functions of Flask.
 
- 2. Create a file named .gitignore and include env.py to ensure this file is never pushed to GitHub.
+ 2. Add env.py to your .gitignore file to ensure this file is never pushed to GitHub.
     > **Note:** The env.py mustn't be tracked as any GitHub user can access your confidential data.
 ---
 

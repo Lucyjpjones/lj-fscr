@@ -27,14 +27,28 @@
                     <div class="row mb-4 grey-banner">
                     <div class="col px-0">
                         <div class="row mt-1">
-                            <div class="col mb-2">
+                            <div class="col">
                                 {% include "bag/bag-total.html" %}
                             </div>
                         </div>
-                        <div class="row pb-3">
+                        <div class="row pb-2">
                             <div class="col{% if s %}-12 mt-2{% endif %}">
                                 {% include "bag/checkout-buttons.html" %}
                             </div>
+                        </div>
+                        <div class="mb-3 ml-3">
+                            <a href="{% url 'products' %}" class="btn rounded-0 ks-btn mr-1 font-12">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Shop Products</span>
+                            </a>
+                            <a href="{% url 'programmes' %}" class="btn rounded-0 ks-btn mr-1 font-12">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Shop Programmes</span>
+                            </a>
                         </div>
                         </div>
                         </div>

@@ -35,6 +35,7 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 
 **<details><summary> Deployment</summary>**
   - [Deploy to Heroku](#deploy-to-heroku)
+  - [Deploy to AWS](#deploy-to-aws)
   - [Accessing code](#accessing-code)
 </details>
 
@@ -113,21 +114,23 @@ I set up a meeting with my client and presented them with a moodboard of differe
 
 My final design with client approval below;
 
-<img src="media/final-logo.png">
+<img src="media/final-logo-design.png">
 
 ### **<u>Data Schema</u>**
 
 <img src="media/schema.png">
 
 The **Product model** within the products app, is used to store information about individual products.
-The **Category model** within the products app, is used to group products into specific categories. A category filter functionality has been included for easier user searching.
+The **Category model** within the products app, is used to group products into specific categories.
 
 The **Programme model** within the programmes app, is used to store information about individual programmes.
-The **Category model** within the programmes app, is used to group programmes into specific categories. This has been add a filter functionality and assist with user searching.
+The **Category model** within the programmes app, is used to group programmes into specific categories.
 
-The **UserProfile** model within the profiles app, is used to order history, checkout details and profile information.
+The **UserProfile** model within the profiles app is used to store users profile information and is connected to various apps for other benefits;
+- Checkout app - to store users checkout information, as well as order history.
+- Blog app - allows users to leave a comment with their username automatically displayed.
+- Forum appp - allows users to leave a comment with their username automatically displayed.
 
-**blog app**
 The **Post model** within the blog app, is used to store posts added by the admin user.
 The **Comments model** within the blog app, is used to store comments added by the user who is logged in.
 
@@ -141,7 +144,7 @@ The **OrderLineItem model** within the checkout app, is used to store informatio
 
 <img src="media/flowchart.png">
 
-* Boxes higlighted are only accessible when a user is logged in.
+* Boxes higlighted are only accessible when a user is registered and logged in.
 
 <u>**User profiles**</u>
 
@@ -377,24 +380,20 @@ The project was connected to Heroku using automatic deployment from my GitPod re
 
 > **Note:** Before following the below steps ensure you have already created your new repo in Github. Sensive data can either be added to your environment settings or stored in an env.py file. (Further details on adding an env.py file below)
 
-1. In the terminal create requirements.txt and Procfile files using the commands below:
-   - $ pip3 freeze --local > requirements.txt
-
-
-2. Log in (or Register) to [Heroku](https://www.heroku.com/) and from your dashboard click 'new' > 'create new app'.
+1. Log in (or Register) to [Heroku](https://www.heroku.com/) and from your dashboard click 'new' > 'create new app'.
 
    ![New app btn](media/new-app.png)
 
-3. Enter your 'App name' and choose the appropriate region, then click 'Create app'.
+2. Enter your 'App name' and choose the appropriate region, then click 'Create app'.
    > **Note:** 
  The app name must be unique, all lowercase, and '-' to be used instead of spaces.
 The region chosen should be the one closest to you.
 
    ![Create new app](media/create-new-app.png)
 
-4. Then on the 'Resources' tab, search and add on the Heroku Postgres database.
+3. Then on the 'Resources' tab, search and add on the Heroku Postgres database.
 
-5. To use Postgres, install dj_database_url, and psycopg2 in the project terminal using the following commands;
+4. To use Postgres, install dj_database_url, and psycopg2 in the project terminal using the following commands;
 
    - pip3 install dj_database_url
    - pip3 install psycopg2
@@ -420,19 +419,8 @@ The region chosen should be the one closest to you.
 
    - $ python3 manage.py createsuperuser
 
-10. From the Heroku deploy tab, select the Deployment method 'GitHub'.
 
-    ![Deployment method](media/deployment-method.jpg)
-
-11. On the 'Connect to GitHub' section make sure your GitHub profile is displayed then add your repository name and click 'Search'.
-
-    > **Note:** This is the name of your repo in GitHub. It is good practice to use an identical name for your Heroku app.
-
-    ![Deploy GitHub](media/deployment-git.jpg)
-
-12. Your repo should now be displayed below, click 'Connect' to connect to this app.
-
-13. Go to the Settings tab on Heroku, scroll to the 'Config Vars' section, and click 'Reveal Config Vars'. 
+10. Go to the Settings tab on Heroku, scroll to the 'Config Vars' section, and click 'Reveal Config Vars'. 
 
    ![Config Vars](media/config-vars.png)
 
@@ -450,13 +438,13 @@ The region chosen should be the one closest to you.
         - STRIPE_WH_SECRET
         - USE_AWS
 
-14. Install gunicorn using the following command;
+11. Install gunicorn using the following command;
 
     - $ pip3 install gunicorn
 
     Then freeze into your requirements file.
 
-15. Create a Procfile and add the following line;
+12. Create a Procfile and add the following line;
 
     - web: gunicorn lj_fscr.wsgi:application
 
@@ -464,13 +452,13 @@ The region chosen should be the one closest to you.
 
     > **Note:** The **P**rocfile must be assigned a capital P.
 
-16. Last, you need to temporarily disable collectstatic to ensure that Heroku won't try to collect static files when we deploy. This is done by adding the below variable;
+13. Last, you need to temporarily disable collectstatic to ensure that Heroku won't try to collect static files when we deploy. This is done by adding the below variable;
 
     - DISABLE_COLLECTSTATIC = 1
 
-17. Add the hostname of your Heroku app to allowed hosts in settings.py
+14. Add the hostname of your Heroku app to allowed hosts in settings.py
 
-18. Now you can commit all the changes and push to github;
+15. Now you can commit all the changes and push to github;
 
     - $ git add .
     - $ git commit -m <'your commit message'>
@@ -485,7 +473,19 @@ The region chosen should be the one closest to you.
 
 **To set up Automatic deployment to Heroku**
 
-Go to the Deploy tab on Heroku and under the Automatic deployment section, click 'Enable Automatic Deploys'. Then under Manual deploy click 'Deploy Branch'.
+1. From the Heroku deploy tab, select the Deployment method 'GitHub'.
+
+    ![Deployment method](media/deployment-method.jpg)
+
+2. On the 'Connect to GitHub' section make sure your GitHub profile is displayed then add your repository name and click 'Search'.
+
+    > **Note:** This is the name of your repo in GitHub. It is good practice to use an identical name for your Heroku app.
+
+    ![Deploy GitHub](media/deployment-git.jpg)
+
+3. Your repo should now be displayed below, click 'Connect' to connect to this app.
+
+4. Go to the Deploy tab on Heroku and under the Automatic deployment section, click 'Enable Automatic Deploys'. Then under Manual deploy click 'Deploy Branch'.
 
    ![Enable Automatic Deploys](media/enable-deploys.jpg)
 
@@ -497,6 +497,145 @@ Go to the Deploy tab on Heroku and under the Automatic deployment section, click
 
 
 Add Secret key info!!!!!!!
+
+#### Deploy to AWS
+
+The project used Amazon Web Services s3, which is a cloud-based storage service,to store static and media files.
+
+1. Create account by navigating to [aws.amazon.com](https://aws.amazon.com/) and clicking create an AWS account. Fill in your email and password, and a username for your account, and select continue.
+
+2. Now on the account type page, select personal and fill out the required information, click create account and continue.
+
+3. Next you will be asked to enter a credit card number which will be used for billing if we go above the free usage limits. Beyond this, you'll be asked a couple more verification questions then once all required information is confirmed your account will be created.
+
+   > **Note**: For this project I didn't go anywhere near the usage limits but keep in mind that AWS is not free if you go above the free usage limits.
+
+4. Now you can navigate back to [aws.amazon.com](https://aws.amazon.com/) and sign-in to your account.
+
+5. Navigate to AWS management console under my account and using the 'find services' search bar, find s3.
+
+6. Now open s3 and create a new bucket to store all your files.
+
+- Enter a name for your bucket
+    > **Note**: I'd recommend naming your bucket to match your Heroku app name.
+
+- Select a region
+    > **Note**: Select the region closest to you like you did when creating your heroku app.
+
+- Uncheck block all public access and acknowledge that the bucket will be public.
+    > **Note**: Allows public access to our static files.
+
+- Click create bucket and your bucket should be created.
+
+7. Now click into your new bucket and set some settings;
+
+- On the properties tab and turn on static website hosting.
+
+    > **Note**: For the index and error document, just fill in some default values.
+
+- On the permissions tab 
+
+  - Paste in a **CORS Configuration** to set up the required access between your Heroku app and this s3 bucket. Copy the code below supplied by CodeInstitute;
+
+        [
+        {
+            "AllowedHeaders": [
+                "Authorization"
+            ],
+            "AllowedMethods": [
+                "GET"
+            ],
+            "AllowedOrigins": [
+                "*"
+            ],
+            "ExposeHeaders": []
+        }
+        ]
+
+  - In the **Bucket Policy** tab, select policy generator
+    - Policy type is 's3 bucket policy'
+    - Allow all principles using a *
+    - Actions is 'GetObject'
+    - Add in your ARN (found on previous page)
+    - Click 'Add statement' then 'Generate policy'
+    - Copy the policy code and paste it into the bucket policy editor
+
+       > **Note:** To allow access to all resources in this bucket add a slash star onto the end of the resource key.
+    
+    - Click save
+
+  - In the **Access Control List** tab, under the Public Access section, set the list objects permission to everyone.
+
+8. Create a user to access the bucket created.
+
+- Search for a new service 'Iam'
+- Now open Iam, naviagte to 'groups' and click 'Create new group'
+
+  > **Note:** You can call your group whatever you want but try to give it a name that makes sense to you for what it is.
+
+- Create a policy by navigating to 'policies' and click 'Create policy'
+- Go to json tap and click 'import managed policy'
+  - Search for s3 and then import the s3 full access policy.
+    - Replace resource value '*' with your bucket ARN from the bucket policy page;
+
+    "Resource": [
+        "arn:aws:s3:::lj-fscr",
+        "arn:aws:s3:::lj-fscr/*"
+    ]
+
+  - Click 'Review policy', give it a name and a description and click 'Create policy'
+
+9. Attach policy to the group you created.
+- Navigate to 'groups', select the group you created and on permissions tab select 'Attach policy'.
+- Search for the policy you created, select it and click 'Attach policy'.
+
+- Now to create the user, naviagte to 'users' and click 'Add user'
+  - Add username, select programmatic access and click 'Next'
+  - Add user to group by selecting the group you created and click 'Next' then click through to the end and click 'Create user'
+  - Now download the CSV file which will contain this users access key and secret access key
+
+    > **Note:** It's very important you download and save this CSV because once you've gone through this process we can't download them again.
+
+10. To connect to Django, head to your project and install two new packages then freeze them into your requirements.txt;
+  - $ pip3 install boto3
+  - $ pip3 install django-storages
+  - $ pip3 freeze > requirements.txt
+
+11. In settings, add 'storages' to installed apps.
+
+12. To connect Jdango to s3 add the below settings in settings.py which will tell it which bucket it should be communicating with;
+
+        if 'USE_AWS' in os.environ:
+            AWS_STORAGE_BUCKET_NAME = 'lj-fscr'
+            AWS_S3_REGION_NAME = 'eu-west-2'
+            AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+            AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+            AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+
+13. Create file called custom_storages.py and add the content below;
+
+        from django.conf import settings
+        from storages.backends.s3boto3 import S3Boto3Storage
+
+
+        class StaticStorage(S3Boto3Storage):
+            location = settings.STATICFILES_LOCATION
+
+
+        class MediaStorage(S3Boto3Storage):
+            location = settings.MEDIAFILES_LOCATION
+
+    Then in settings.py add the below:
+
+        STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+        STATICFILES_LOCATION = 'static'
+        DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+        MEDIAFILES_LOCATION = 'media'
+
+        STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+        MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
 
 #### Accessing code
 

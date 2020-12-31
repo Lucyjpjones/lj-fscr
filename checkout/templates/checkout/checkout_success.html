@@ -48,19 +48,22 @@
                     <div class="row grey-banner mb-2 py-2">
                         <div class="col">
                             <small class="text-muted">Order Details:</small>
-                            {% for item in order.lineitems.all %}
-                            {% if item.type == 'product' %}
-                            <p class="small mb-0 text-black font-weight-bold">
-                                {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
-                            </p>
-                            <p class="small mb-0">{{ item.quantity }} @ ${{ item.product.price }} each</p>
-                            {% elif item.type == 'programme' %}
-                            <p class="small mb-0 text-black font-weight-bold">
-                                {{ item.programme.name }}
-                            </p>
-                            <p class="small mb-0">{{ item.quantity }} @ ${{ item.programme.price }} each</p>
-                            {% endif %}
-                            {% endfor %}
+                                {% for item in order.lineitems.all %}
+                                <div class="row">
+                                    <p class="small mb-0 text-black font-weight-bold">
+                                        {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
+                                    </p>
+                                    <p class="small mb-0">{{ item.quantity }} @ ${{ item.product.price }} each</p>
+                                </div>
+                                {% endfor %}
+                                {% for item in order.proglineitems.all %}
+                                <div class="row">
+                                    <p class="small mb-0 text-black font-weight-bold">
+                                        {{ item.programme.name }}{% if item.programme_size %} - Size {{ item.programme.size|upper }}{% endif %}
+                                    </p>
+                                    <p class="small mb-0">{{ item.quantity }} @ ${{ item.programme.price }} each</p>
+                                </div>
+                                {% endfor %}
                         </div>
                     </div>
 

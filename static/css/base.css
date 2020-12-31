@@ -341,13 +341,13 @@ header {
 
 .navy-border-btn {
     background-color: transparent !important;
-    border: solid 2px #38405F !important;
+    border: solid 1px #38405F !important;
     color: #38405F !important;
 }
 
 .red-border-btn {
     background-color: transparent !important;
-    border: solid 2px #FF0035 !important;
+    border: solid 1px #FF0035 !important;
     color: #38405F !important;
 }
 

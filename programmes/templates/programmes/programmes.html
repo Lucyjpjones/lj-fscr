@@ -80,7 +80,7 @@
               <p class="mb-2">£{{ programme.price }}</p>
               {% if request.user.is_superuser %}
                 <small>
-                    <a class="ks-btn px-2 py-1 font-12" href="{% url 'edit_programme' programme.id %}">Edit</a>
+                    <a class="red-border-btn px-2 py-1 font-12" href="{% url 'edit_programme' programme.id %}">Edit</a>
                     <a class="add-btn px-2 py-1 font-12" href="{% url 'delete_programme' programme.id %}">Delete</a>
                 </small>
             {% endif %}

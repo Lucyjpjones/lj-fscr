@@ -177,6 +177,9 @@ When logged in as a member/admin I clicked onto a variety of forums and entered 
 
 #### Automated testing
 
+I also decided to use Django's testing framework to create some automated tests for my prpject.
+
+
 #### Validator checks
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project. The code was entered through direct input. JS hint was used to check for any errors with my Javascript files. 

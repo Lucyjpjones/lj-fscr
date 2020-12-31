@@ -5,6 +5,7 @@ from django.conf import settings
 
 from .models import Order, OrderLineItem
 from products.models import Product
+from programmes.models import Programme
 from profiles.models import UserProfile
 
 import json
@@ -121,10 +122,12 @@ class StripeWH_Handler:
                 )
                 for item_id, item_data in json.loads(bag).items():
                     product = Product.objects.get(id=item_id)
+                    programme = Programme.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
                             product=product,
+                            programme=programme,
                             quantity=item_data,
                         )
                         order_line_item.save()
@@ -133,6 +136,7 @@ class StripeWH_Handler:
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
+                                programme=programme,
                                 quantity=quantity,
                                 product_size=size,
                             )

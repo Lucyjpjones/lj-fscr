@@ -27,7 +27,7 @@ def add_to_bag(request, item_id, category):
     bag = request.session.get('bag', {'product': {},
                                       'programme': {}})
 
-    if id in bag[category]:
+    if item_id in bag[category]:
         bag[category][item_id] = int(bag[category][item_id]) + quantity
     else:
         bag[category][item_id] = quantity

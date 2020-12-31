@@ -407,7 +407,7 @@ The region chosen should be the one closest to you.
    - import dj_database_url
 
    Then down in the databases setting comment out the default configuration and replace the default database with a call to dj_database_url.parse and give it the database URL from Heroku.
-    > Note: You can either get the database url from your config variables in your app settings tab or from the command line by typing Heroku config.
+    > **Note:** You can either get the database url from your config variables in your app settings tab or from the command line by typing Heroku config.
 
 8. Apply all migrations using the following command;
 

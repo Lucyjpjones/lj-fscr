@@ -5,8 +5,9 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, ProgOrderLineItem
 from products.models import Product
+from programmes.models import Programme
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from bag.contexts import bag_contents
@@ -21,7 +22,8 @@ def cache_checkout_data(request):
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
-            'bag': json.dumps(request.session.get('bag', {})),
+            'bag': json.dumps(request.session.get('bag', {'product': {},
+                                    'programme': {}})),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
@@ -37,7 +39,8 @@ def checkout(request):
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
-        bag = request.session.get('bag', {})
+        bag = request.session.get('bag', {'product': {},
+                                    'programme': {}})
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -57,32 +60,54 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.save()
-            for item_id, item_data in bag.items():
-                try:
-                    product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
-                        )
-                        order_line_item.save()
-                    else:
-                        for size, quantity in item_data['items_by_size'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
-                                product_size=size,
+
+            for category, category_items in bag.items():
+                for item_id, item_data in category_items.items():
+
+                    if category == "product":
+                        try:
+                            product = get_object_or_404(Product, pk=item_id)
+                            if isinstance(item_data, int):
+                                order_line_item = OrderLineItem(
+                                    order=order,
+                                    product=product,
+                                    quantity=item_data,
+                                )
+                                order_line_item.save()
+                            else:
+                                for size, quantity in item_data['items_by_size'].items():
+                                    order_line_item = OrderLineItem(
+                                        order=order,
+                                        product=product,
+                                        quantity=quantity,
+                                        product_size=size,
+                                    )
+                                    order_line_item.save()
+                        except Product.DoesNotExist:
+                            messages.error(request, (
+                                "One of the products in your bag wasn't found in our database. "
+                                "Please call us for assistance!")
                             )
-                            order_line_item.save()
-                except Product.DoesNotExist:
-                    messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
-                        "Please call us for assistance!")
-                    )
-                    order.delete()
-                    return redirect(reverse('view_bag'))
+                            order.delete()
+                            return redirect(reverse('view_bag'))
+                    
+                    elif category == "programme":
+                        try:
+                            programme = get_object_or_404(Programme, pk=item_id)
+                            if isinstance(item_data, int):
+                                order_line_item = ProgOrderLineItem(
+                                    order=order,
+                                    programme=programme,
+                                    quantity=item_data,
+                                )
+                                order_line_item.save()
+                        except Product.DoesNotExist:
+                            messages.error(request, (
+                                "One of the products in your bag wasn't found in our database. "
+                                "Please call us for assistance!")
+                            )
+                            order.delete()
+                            return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
@@ -90,7 +115,8 @@ def checkout(request):
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
-        bag = request.session.get('bag', {})
+        bag = request.session.get('bag', {'product': {},
+                                      'programme': {}})
         if not bag:
             messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))

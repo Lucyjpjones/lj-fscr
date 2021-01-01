@@ -83,7 +83,7 @@ header {
 }
 
 .header-container {
-  padding-top: 98.53px;
+  padding-top: 98.52px;
 }
 
 .main-logo-link img {
@@ -148,7 +148,7 @@ header {
   left: 0;
   /* top layer */
   z-index: 999;
-  margin-top: 98.53px;
+  margin-top: 98.52px;
 }
 
 #sidebar a {
@@ -187,10 +187,11 @@ header {
 /* -------------------- Index.html */
 
 .callout-img {
-    height: calc(100vh - 166.54px);
+  height: calc(100vh - 175.52px);
   filter: grayscale(0.4);
   width: 100vw;
   object-fit: cover;
+  object-position: bottom;
 }
 
 /* Red callout banner */
@@ -289,7 +290,7 @@ header {
 }
 
 .programme-card {
-  height: 100px !important;
+  height: 100px;
 }
 
 /* --------------------Sort and Filter*/
@@ -572,9 +573,26 @@ input[name='q']::placeholder {
 @media only screen and (min-width: 600px) {
 
     /* Index */
+    .callout-img {
+        height: calc(100vh - 184.11px);
+    }
     .blog-img-top {
         height: 230px;
         object-fit: cover;
+    }
+
+    /* Navbar and menu */
+    .header-container {
+        padding-top: 107.11px;
+    }
+    #sidebar {
+        margin-top: 107.11px;
+    }
+    .main-logo-link img {
+        width: 140px;
+    }
+    .flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before, .fas.fa-times:before {
+        font-size: 24px;
     }
 
     /* Meet the coaches */
@@ -596,7 +614,7 @@ input[name='q']::placeholder {
     .subtitle-font {
         font-size: 24px;
     }
-    .p-font {
+    .p-font, .red-header {
         font-size: 15px;
     } 
 
@@ -605,6 +623,15 @@ input[name='q']::placeholder {
         width: 220px;
         height: 220px;
     }
+    /* Programmes */
+    .programme-container {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .programme-card {
+        height: 200px;
+    }
 
 }
 
@@ -612,15 +639,32 @@ input[name='q']::placeholder {
    @media only screen and (min-width: 992px) {
 
     /* Index */
+    .callout-img {
+        height: calc(100vh - 198.7px);
+    }
     .title-font {
         font-size: 36px;
     }
     .subtitle-font {
         font-size: 28px;
     }
-    .p-font {
+    .p-font, .red-header {
         font-size: 16px;
     } 
+
+    /* Navbar and menu */
+    .header-container {
+        padding-top: 118.7px;
+    }
+    #sidebar {
+        margin-top: 118.7px;
+    }
+    .main-logo-link img {
+        width: 160px;
+    }
+    .flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before, .fas.fa-times:before {
+        font-size: 26px;
+    }
 
     /* Meet the coaches */
     .profile-img {

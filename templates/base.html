@@ -83,35 +83,38 @@
 
       <!-- Dropdown menu icon -->
       <div class="row px-2 px-md-4">
-        <div class="col-1 my-auto p-0">
-          <a
-            class="grey-icon nav-icon nav-link"
-            role="button"
-            id="sidebarCollapse"
-          >
-            <div id="navbar-bars">
-              <i class="flaticon-menu"></i>
-            </div>
-            <div id="navbar-close" class="d-none">
-              <i class="fas fa-times"></i>
-            </div>
-          </a>
-        </div>
-
-        <!-- Logo homepage link -->
-        <div class="col-4 col-md-3 my-auto px-1 px-md-0">
-          <a href="{% url 'home' %}" class="main-logo-link">
-            <img src="{{ MEDIA_URL }}final-logo2.png" alt="FSCR logo" />
-          </a>
+        <div class="col-6 col-sm-5 col-md-4 my-auto p-0">
+            <ul class="list-inline list-unstyled text-center my-0 float-left">
+                <li class="list-inline-item p-0 m-0">  
+                    <a
+                        class="grey-icon nav-icon nav-link"
+                        role="button"
+                        id="sidebarCollapse"
+                    >
+                        <div id="navbar-bars">
+                        <i class="flaticon-menu"></i>
+                        </div>
+                        <div id="navbar-close" class="d-none">
+                        <i class="fas fa-times"></i>
+                        </div>
+                    </a>
+                </li>
+                <!-- Logo homepage link -->
+                <li class="list-inline-item">
+                    <a href="{% url 'home' %}" class="main-logo-link">
+                        <img src="{{ MEDIA_URL }}final-logo2.png" alt="FSCR logo" />
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <!-- Search, Profile and Shopping bag icon -->
-        <div class="col-7 col-md-8 my-auto">
+        <div class="col-6 col-sm-7 col-md-8 my-auto pr-0">
           <ul class="list-inline list-unstyled text-center my-0 float-right">
 
             <!-- Search bar visible (L and XL devices)-->
             <li class="list-inline-item px-3">
-              <form class="d-none d-lg-inline-block" method="GET" action="">
+              <form class="d-none d-lg-inline-block" method="GET" action="" style="width: 400px;">
                 <div class="input-group rounded-0">
                   <input
                     class="form-control border border-black rounded-0"
@@ -121,7 +124,7 @@
                   />
                   <div class="">
                     <button
-                      class="form-control btn btn-black border border-black rounded-0"
+                      class="form-control btn btn-black border border-black rounded-0 py-0"
                       type="submit"
                     >
                       <span class="icon grey-icon">

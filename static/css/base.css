@@ -283,7 +283,7 @@ header {
 .product-detail-img {
     height: 350px;
     object-fit: cover;
-
+    width: 100%;
 }
 
 .card-body {
@@ -611,6 +611,11 @@ input[name='q']::placeholder {
         width: 80%;
     }
 
+    /* Programmes*/
+    .prog-img-top {
+        max-height: 200px;
+        object-fit: cover;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -638,12 +643,18 @@ input[name='q']::placeholder {
         width: 220px;
         height: 220px;
     }
+
+    /* Products */
+    .product-detail-img {
+        width: 90%;
+        height: 450px;
+    }
+
     /* Programmes */
     .programme-container {
         max-width: 800px;
         margin: auto;
     }
-
     .programme-card {
         height: 200px;
     }
@@ -693,6 +704,10 @@ input[name='q']::placeholder {
     /* Admin */
     .admin-container {
         width: 60%;
+    }
+    /* Profile */
+    .profile-container {
+        width: 90%;
     }
 
 

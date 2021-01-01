@@ -15,7 +15,7 @@
         {% if programme.image %}
         <a href="{{ programme.image.url }}" target="_blank">
           <img
-            class="card-img-top img-fluid"
+            class="card-img-top prog-img-top img-fluid"
             src="{{ programme.image.url }}"
             alt="{{ programme.name }}"
           />
@@ -23,7 +23,7 @@
         {% else %}
         <a href="{{ programme.image.url }}">
           <img
-            class="card-img-top img-fluid"
+            class="card-img-top prog-img-top img-fluid"
             src="{{ MEDIA_URL }}noimage.png"
             alt="{{ programme.name }}"
           />

@@ -315,6 +315,10 @@ header {
     margin: auto;
 }
 
+.tab-content {
+    max-width: 800px;
+}
+
 .tab-pane {
     border: solid 1px #bdc1c7;
     background-color: #f8f8f8;
@@ -573,37 +577,56 @@ input[name='q']::placeholder {
         object-fit: cover;
     }
 
+    /* Meet the coaches */
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
 
+    /* Index */
     .title-font {
         font-size: 32px;
     }
     .subtitle-font {
         font-size: 24px;
     }
-
     .p-font {
         font-size: 15px;
     } 
+
+    /* Meet the coaches */
+    .profile-img {
+        width: 220px;
+        height: 220px;
+    }
 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
    @media only screen and (min-width: 992px) {
 
+    /* Index */
     .title-font {
         font-size: 36px;
     }
     .subtitle-font {
         font-size: 28px;
     }
-
     .p-font {
         font-size: 16px;
     } 
 
-   }
+    /* Meet the coaches */
+    .profile-img {
+        width: 240px;
+        height: 240px;
+    }
+
+
+}

@@ -18,7 +18,7 @@
   </div>
 
   <!--Sort and Filter-->
-  <div class="row pr-3 pl-3">
+  <div class="row px-3 px-sm-0 programme-container">
     <div class="col-6 dropdown show text-center">
         <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sort
@@ -56,7 +56,7 @@
       <div class="row">
         {% for programme in programmes %}
         <div class="col-12">
-          <div class="card product-card h-100 border-0 mb-4">
+          <div class="card product-card programme-container h-100 border-0 mb-4 px-3">
             {% if programme.image %}
             <a href="{% url 'programme_detail' programme.id %}">
               <img

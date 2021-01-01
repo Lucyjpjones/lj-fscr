@@ -153,6 +153,7 @@ header {
 
 #sidebar a {
   color: #38405f;
+  font-size: 16px;
 }
 
 /* ---------- Icons */
@@ -618,6 +619,11 @@ input[name='q']::placeholder {
         font-size: 15px;
     } 
 
+    /* Navbar and menu */
+    #sidebar a {
+        font-size: 18px;
+    }
+
     /* Meet the coaches */
     .profile-img {
         width: 220px;
@@ -658,6 +664,9 @@ input[name='q']::placeholder {
     }
     #sidebar {
         margin-top: 118.7px;
+    }
+    #sidebar a {
+        font-size: 20px;
     }
     .main-logo-link img {
         width: 160px;

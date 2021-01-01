@@ -51,18 +51,20 @@ class TestOrderForm(TestCase):
     # Checking not required fields
 
     # Test checkout form for valid data
-    def test_order_form_is_valid(self):
-        form = OrderForm(data={
-            'full_name': 'lucy jones',
-            'email': 'lucy@example.com',
-            'phone_number': 11234567900,
-            'street_address1': 'anywhere',
-            'town_or_city': 'anywhere',
-            'postcode': 'anywhere',
-            'country': 'Country *',
-        })
+    # def test_order_form_is_valid(self):
+    #     form = OrderForm({
+    #         'full_name': 'Lucy Jones',
+    #         'email': 'lucy@example.com',
+    #         'phone_number': '123456789',
+    #         'postcode': 'SW12 9PH',
+    #         'town_or_city': 'Furzedown',
+    #         'street_address1': 'Street Address 1',
+    #         'street_address2': 'Street Address 2',
+    #         'county': 'London',
+    #         'country': 'United Kingdom',
+    #     })
 
-        self.assertTrue(form.is_valid())
+        # self.assertTrue(form.is_valid())
 
     # def test_order_form_no_data(self):
     #     form = OrderForm(data={})

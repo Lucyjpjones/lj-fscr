@@ -395,12 +395,12 @@ The region chosen should be the one closest to you.
 
 4. To use Postgres, install dj_database_url, and psycopg2 in the project terminal using the following commands;
 
-   - pip3 install dj_database_url
-   - pip3 install psycopg2
+   - $ pip3 install dj_database_url
+   - $ pip3 install psycopg2
 
 6. Freeze the requirements to ensure Heroku installs all the apps requirements when deployed using the following command;
 
-   - pip3 freeze > requirements.txt
+   - $ pip3 freeze > requirements.txt
 
 7. Go to settings.py and import dj database url;
 
@@ -424,12 +424,11 @@ The region chosen should be the one closest to you.
 
    ![Config Vars](media/config-vars.png)
 
-   Enter variables (key and value) contained in the env.py file. The keys are listed below and values are inputted by the user.
+   Enter the variables (key and value) contained in your environment settings or stored in an env.py. The keys are listed below and values are inputted by the user.
 
         - AWS_ACCESS_KEY_ID
         - AWS_SECRET_KEY_ID
         - DATABASE_URL
-        - DISABLE_COLLECTSTATIC 
         - EMAIL_HOST_PASS
         - EMAIL_HOST_USER
         - SECRET_KEY

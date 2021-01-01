@@ -23,7 +23,7 @@
   <div class="row">
             <div class="col p-0">
                 {% if bag_items %}
-                    <div class="d-block d-md-none">
+                    <div class="d-block">
                     <div class="row mb-4 grey-banner">
                     <div class="col px-0">
                         <div class="row mt-1">
@@ -55,31 +55,21 @@
                         {% for item in bag_items %}
                             {% if item.type == 'product' %}
                                 <div class="row bg-light py-3 mb-4">
-                                    <div class="col-12 col-sm-6 mb-2">
+                                    <div class="col-12 col-sm-4 mb-2">
                                         {% include "bag/product-image.html" %}
                                     </div>
-                                    <div class="col-12 col-sm-6 mb-2">
+                                    <div class="col-12 col-sm-8 mb-2">
                                         {% include "bag/product-info.html" %}
-                                    </div>
-                                    <div class="col-12 col-sm-6 order-sm-last mb-2">
-                                        <p class="my-0">£{{ item.product.price }}</p>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
                                         {% include "bag/quantity-form.html" %}
                                     </div>
                                 </div>
                             {% elif item.type == 'programme' %}
                                 <div class="row bg-light py-3 mb-4">
-                                    <div class="col-12 col-sm-6 mb-2">
+                                    <div class="col-12 col-sm-4 mb-2">
                                         {% include "bag/product-image.html" %}
                                     </div>
-                                    <div class="col-12 col-sm-6 mb-2">
+                                    <div class="col-12 col-sm-8 mb-2">
                                         {% include "bag/product-info.html" %}
-                                    </div>
-                                    <div class="col-12 col-sm-6 order-sm-last mb-2">
-                                        <p class="my-0">£{{ item.programme.price }}</p>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
                                         {% include "bag/quantity-form.html" %}
                                     </div>
                                 </div>
@@ -91,64 +81,25 @@
                             </a>	
                         </div>
                     </div>
-                    <div class="table-responsive rounded d-none d-md-block">
-                        <table class="table table-sm table-borderless">
-                            <thead class="text-black">
-                                <tr>
-                                    <th scope="col">Product Info</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
-                                </tr>
-                            </thead>
-
-                            {% for item in bag_items %}
-                                <tr>
-                                    <td class="p-3 w-25">
-                                        {% include "bag/product-image.html" %}
-                                    </td>
-                                    <td class="py-3">
-                                        {% include "bag/product-info.html" %}
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">£{{ item.product.price }}</p>
-                                    </td>
-                                    <td class="py-3 w-25">
-                                        {% include "bag/quantity-form.html" %}
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                            <tr>
-                                <td colspan="5" class="pt-5 text-right">
-                                    {% include "bag/bag-total.html" %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="5" class="text-right">
-                                    {% include "bag/checkout-buttons.html" %}
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
                 {% else %}
                     <div class="text-center">
                         <p class="lead mb-5">Your bag is empty.</p>
-                        <a href="{% url 'programmes' %}" class="btn ks-btn rounded-0 font-14 mx-3 mb-2">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="text-uppercase">Explore Programmes</span>
-                        </a>
-                        <a href="{% url 'products' %}" class="btn ks-btn rounded-0 font-14 mx-3">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="text-uppercase">Shop Products</span>
-                        </a>
+                        <div class="col-12">
+                            <a href="{% url 'programmes' %}" class="btn ks-btn rounded-0 p-font mx-3 mb-2">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Explore Programmes</span>
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <a href="{% url 'products' %}" class="btn ks-btn rounded-0 p-font mx-3">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Shop Products</span>
+                            </a>
+                        </div>
                     </div>
                 {% endif %}
             </div>

@@ -1,7 +1,7 @@
 {% if item.type == 'product' %}
 <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id 'product' %}">
     {% csrf_token %}
-    <div class="form-group">
+    <div class="form-group mb-0">
         <div class="input-group">
             <div class="input-group-prepend">
                 <button class="decrement-qty btn btn-sm btn-black rounded-0" 
@@ -33,7 +33,7 @@
 {% elif item.type == 'programme' %}
 <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id 'programme' %}">
     {% csrf_token %}
-    <div class="form-group">
+    <div class="form-group mb-0">
         <div class="input-group">
             <div class="input-group-prepend">
                 <button class="decrement-qty btn btn-sm btn-black rounded-0" 

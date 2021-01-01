@@ -606,6 +606,11 @@ input[name='q']::placeholder {
         height: 180px;
     }
 
+    /* Admin */
+    .admin-container {
+        width: 80%;
+    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -683,6 +688,11 @@ input[name='q']::placeholder {
     .profile-img {
         width: 240px;
         height: 240px;
+    }
+
+    /* Admin */
+    .admin-container {
+        width: 60%;
     }
 
 

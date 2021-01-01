@@ -18,78 +18,80 @@
     <div class="content-container">
         <div class="row">
             <div class="col text-center title-container">
-                <h2 class="title-font pt-5 pb-3">Checkout</h2>
+                <h2 class="title-font pt-5 pb-3 pb-lg-4">Checkout</h2>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-12 col-lg-6 order-lg-last grey-banner py-3 px-4 mb-4">
-                <p class="text-muted mb-4">Order Summary ({{ product_count }})</p>
-                <div class="row mb-2">
-                    <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small text-muted">Item</p>
-                    </div>
-                    <div class="col-3 text-right">
-                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
-                    </div>
-                </div>
-                {% for item in bag_items %}
-                    {% if item.type == 'product' %}
+        <div class="row mx-lg-5 justify-content-between">
+            <div class="col-12 col-lg-6 order-lg-last">
+                <div class="grey-banner py-3 px-4">
+                    <p class="text-muted mb-4">Order Summary ({{ product_count }})</p>
                     <div class="row mb-2">
-                        <div class="col-2 mb-1">
-                            <a href="{% url 'product_detail' item.product.id %}">
-                                {% if item.product.image %}
-                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
-                                {% else %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                {% endif %}
-                            </a>
-                        </div>
-                        <div class="col-7">
-                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0 small">{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}No size{% endif %} | {{ item.product.colour }}</p>
-                            <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
+                        <div class="col-7 offset-2">
+                            <p class="mb-1 mt-0 small text-muted">Item</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                         </div>
                     </div>
-                    {% elif item.type == 'programme' %}
-                    <div class="row mb-2">
-                        <div class="col-2 mb-1">
-                            <a href="{% url 'programme_detail' item.programme.id %}">
-                                {% if item.programme.image %}
-                                    <img class="w-100" src="{{ item.programme.image.url }}" alt="{{ programme.name }}">
-                                {% else %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ programme.name }}">
-                                {% endif %}
-                            </a>
+                    {% for item in bag_items %}
+                        {% if item.type == 'product' %}
+                        <div class="row mb-2">
+                            <div class="col-2 mb-1">
+                                <a href="{% url 'product_detail' item.product.id %}">
+                                    {% if item.product.image %}
+                                        <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                                    {% else %}
+                                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div class="col-7">
+                                <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                <p class="my-0 small">{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}No size{% endif %} | {{ item.product.colour }}</p>
+                                <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
+                            </div>
+                            <div class="col-3 text-right">
+                                <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            </div>
                         </div>
-                        <div class="col-7">
-                            <p class="my-0"><strong>{{ item.programme.name }}</strong></p>
-                            <p class="my-0 small">{% if item.programme.has_sizes %}{{ item.size|upper }}{% else %}No size{% endif %} | {{ item.programme.colour }}</p>
-                            <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
+                        {% elif item.type == 'programme' %}
+                        <div class="row mb-2">
+                            <div class="col-2 mb-1">
+                                <a href="{% url 'programme_detail' item.programme.id %}">
+                                    {% if item.programme.image %}
+                                        <img class="w-100" src="{{ item.programme.image.url }}" alt="{{ programme.name }}">
+                                    {% else %}
+                                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ programme.name }}">
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div class="col-7">
+                                <p class="my-0"><strong>{{ item.programme.name }}</strong></p>
+                                <p class="my-0 small">{% if item.programme.has_sizes %}{{ item.size|upper }}{% else %}No size{% endif %} | {{ item.programme.colour }}</p>
+                                <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
+                            </div>
+                            <div class="col-3 text-right">
+                                <p class="my-0 small text-muted">£{{ item.programme.price | calc_subtotal:item.quantity }}</p>
+                            </div>
                         </div>
-                        <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">£{{ item.programme.price | calc_subtotal:item.quantity }}</p>
+                        {% endif %}
+                    {% endfor %}
+                    <hr class="my-0 mb-3">
+                    <div class="row text-black text-right">
+                        <div class="col-7 offset-2">
+                            <p class="my-0">Order Total:</p>
+                            <p class="my-0">Delivery:</p>
+                            <p class="my-0">Grand Total:</p>
                         </div>
-                    </div>
-                    {% endif %}
-                {% endfor %}
-                <hr class="my-0 mb-3">
-                <div class="row text-black text-right">
-                    <div class="col-7 offset-2">
-                        <p class="my-0">Order Total:</p>
-                        <p class="my-0">Delivery:</p>
-                        <p class="my-0">Grand Total:</p>
-                    </div>
-                    <div class="col-3">
-                        <p class="my-0">£{{ total | floatformat:2 }}</p>
-                        <p class="my-0">£{{ delivery | floatformat:2 }}</p>
-                        <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
+                        <div class="col-3">
+                            <p class="my-0">£{{ total | floatformat:2 }}</p>
+                            <p class="my-0">£{{ delivery | floatformat:2 }}</p>
+                            <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
+                        </div>
                     </div>
                 </div>
-            </div>
+              </div>
             <div class="col-12 col-lg-6 p-0">
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}

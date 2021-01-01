@@ -57,8 +57,8 @@ p,
     font-size: 12px !important;
 }
 
-.font-14 {
-    font-size: 14px !important;
+.p-font {
+    font-size: 14px;
 }
 
 .black-font {
@@ -574,3 +574,36 @@ input[name='q']::placeholder {
     }
 
 }
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+
+    .title-font {
+        font-size: 32px;
+    }
+    .subtitle-font {
+        font-size: 24px;
+    }
+
+    .p-font {
+        font-size: 15px;
+    } 
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+   @media only screen and (min-width: 992px) {
+
+    .title-font {
+        font-size: 36px;
+    }
+    .subtitle-font {
+        font-size: 28px;
+    }
+
+    .p-font {
+        font-size: 16px;
+    } 
+
+   }

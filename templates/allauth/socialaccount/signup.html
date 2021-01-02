@@ -8,12 +8,13 @@
     <h2 class="title-font pt-5 mb-3">{% trans "Sign Up" %}</h2>
 {% endblock %}
 
-{% block content %}
+{% block inner_content %}
 
 <div class="row">
     <div class="col grey-banner">
     {% blocktrans with provider_name=account.get_provider.name site_name=site.name %}
-        <p class="subtitle-font my-2">You are about to use your {{provider_name}} account to login to {{site_name}}. As a final step, please complete the following form:{% endblocktrans %}</p>
+        <p class="subtitle-font my-2">You are about to use your {{provider_name}} account to login to {{site_name}}. As a final step, please complete the following form:</p>
+    {% endblocktrans %}
     </div>
 </div>
 

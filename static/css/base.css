@@ -639,7 +639,7 @@ input[name='q']::placeholder {
     .blog-img-top {
         height: 250px;
     }
-    .form-inner {
+    .form-inner, .blog-inner {
         max-width: 80%;
     }
 
@@ -667,6 +667,11 @@ input[name='q']::placeholder {
     }
     .programme-card {
         height: 200px;
+    }
+
+    .blog-img-top {
+        max-height: 300px;
+        object-fit: cover;
     }
 
 }

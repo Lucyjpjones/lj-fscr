@@ -648,6 +648,16 @@ input[name='q']::placeholder {
         font-size: 18px;
     }
 
+    /* Allauth */
+
+    .signup, .login {
+        max-width: 50%;
+    }
+
+    .w-md-50 {
+        width: 50% !important;
+    }
+
     /* Meet the coaches */
     .profile-img {
         width: 220px;
@@ -717,6 +727,16 @@ input[name='q']::placeholder {
     }
     .flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before, .fas.fa-times:before {
         font-size: 26px;
+    }
+
+    /* Allauth */
+
+    .signup, .login {
+        max-width: 40%;
+    }
+
+    .w-lg-40 {
+        width: 40% !important;
     }
 
     /* Meet the coaches */

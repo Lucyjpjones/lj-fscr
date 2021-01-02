@@ -22,8 +22,8 @@
 </div>
 
 <div class="row my-2">
-    <div class="col grey-banner">
-        <form class="login my-3 mx-4" method="POST" action="{% url 'account_login' %}">
+    <div class="col grey-banner my-md-3">
+        <form class="login my-3 mx-4 mx-md-auto py-md-4" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form|crispy }}
         {% if redirect_field_value %}
@@ -37,9 +37,9 @@
     </div>
 </div>
 
-<div class="row my-2">
+<div class="row my-2 mb-md-4">
     <div class="col grey-banner">
-        <p class="m-1"><strong>-- OR --</strong></p>
+        <p class="m-1 py-md-2"><strong>-- OR --</strong></p>
     </div>
 </div>
 
@@ -47,19 +47,19 @@
 
 {% get_providers as socialaccount_providers %}
 
-<div id="social-links" class="row grey-banner py-3 mb-3">
-    <div class="col-12">
-        <button class="btn navy-border-btn mb-3 w-75">
+<div id="social-links" class="row grey-banner py-3 mb-3 mb-md-4">
+    <div class="col-12 pt-md-4">
+        <button class="btn navy-border-btn mb-3 w-75 w-md-50 w-lg-40">
             <a href="">Login with Facebook</a>
         </button>
     </div>
     <div class="col-12">
-        <button class="btn navy-border-btn mb-3 w-75">
+        <button class="btn navy-border-btn mb-3 w-75 w-md-50 w-lg-40">
             <a href="{% provider_login_url 'google' %}">Login with Google</a>
         </button>
     </div>
-    <div class="col-12">
-        <button class="btn navy-border-btn w-75">
+    <div class="col-12 pb-md-4">
+        <button class="btn navy-border-btn w-75 w-md-50 w-lg-40">
             <a href="">Login with Twitter</a>
         </button>
     </div>

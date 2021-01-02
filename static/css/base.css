@@ -586,6 +586,10 @@ input[name='q']::placeholder {
         object-fit: cover;
     }
 
+    .form-inner {
+        margin: 30px 60px;
+    }
+
     /* Navbar and menu */
     .header-container {
         padding-top: 107.11px;
@@ -632,6 +636,12 @@ input[name='q']::placeholder {
     .p-font, .red-header {
         font-size: 15px;
     } 
+    .blog-img-top {
+        height: 250px;
+    }
+    .form-inner {
+        max-width: 80%;
+    }
 
     /* Navbar and menu */
     #sidebar a {
@@ -677,6 +687,15 @@ input[name='q']::placeholder {
     .p-font, .red-header {
         font-size: 16px;
     } 
+    .prog-img {
+        height: 350px;
+    }
+    .blog-img-top {
+        height: 270px;
+    }
+    .form-inner {
+        max-width: 60%;
+    }
 
     /* Navbar and menu */
     .header-container {

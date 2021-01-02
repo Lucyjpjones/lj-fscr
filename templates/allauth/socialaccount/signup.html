@@ -13,20 +13,21 @@
 <div class="row">
     <div class="col grey-banner">
     {% blocktrans with provider_name=account.get_provider.name site_name=site.name %}
-        <p class="subtitle-font my-2">You are about to use your {{provider_name}} account to login to {{site_name}}. As a final step, please complete the following form:</p>
+        <p class="subtitle-font my-2">You are about to use your {{provider_name}} account to login to {{site_name}}</p>
+        <p class="font-14 mt-1 mb-2">As a final step, please complete the following form:</p>
     {% endblocktrans %}
     </div>
 </div>
 
 <div class="row my-2">
     <div class="col grey-banner my-md-3">
-        <form class="signup" id="signup_form" method="post" action="{% url 'socialaccount_signup' %}">
+        <form class="signup my-3 mx-4 mx-md-auto py-md-4" id="signup_form" method="post" action="{% url 'socialaccount_signup' %}">
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
             {% endif %}
-            <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+            <button class="btn ks-btn w-75" type="submit">{% trans "Sign Up" %} &raquo;</button>
         </form>
     </div>
 </div>

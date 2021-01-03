@@ -147,9 +147,7 @@ def checkout(request):
             except UserProfile.DoesNotExist:
                 order_form = OrderForm()
         else:
-            order_form = OrderForm(initial={
-                'email': profile.user.email,
-            })
+            order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \

@@ -156,6 +156,10 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
+# Facebook
+SOCIAL_AUTH_FACEBOOK_KEY = os.environ.get('SOCIAL_AUTH_FACEBOOK_KEY')
+SOCIAL_AUTH_FACEBOOK_SECRET = os.environ.get('SOCIAL_AUTH_FACEBOOK_SECRET')
+
 
 WSGI_APPLICATION = 'lj_fscr.wsgi.application'
 

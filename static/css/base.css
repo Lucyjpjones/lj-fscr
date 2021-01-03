@@ -756,8 +756,16 @@ input[name='q']::placeholder {
         max-width: 40%;
     }
 
+    .w-lg-75 {
+        width: 75% !important;
+    }
+
     .w-lg-40 {
         width: 40% !important;
+    }
+
+    .w-lg-30 {
+        width: 30% !important;
     }
 
     /* Meet the coaches */

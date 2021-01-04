@@ -42,3 +42,9 @@ a {
    padding: 8px 20px;
    text-decoration: none;
 }
+
+a:hover {
+    color: #fafafa;
+    text-decoration: none;
+    filter: brightness(120%);
+}

@@ -25,7 +25,7 @@
     <div class="row callout-banner-outer">
         <div
             id="carouselBannerControls"
-            class="col-12 text-center text-uppercase carousel slide callout-banner red-header py-2"
+            class="col-12 text-center text-uppercase carousel slide callout-banner red-header py-2 px-0"
             data-ride="carousel"
         >
             {% if request.user.is_authenticated %}
@@ -46,7 +46,7 @@
                     <a href="{% url 'account_signup' %}" class="callout-btn font-14 btn rounded-0">Join Now</a>
                 </div>
                 <div class="carousel-item">
-                    <p>Join and get 10% off your first order</p>
+                    <p>Sign up and get 10% off your first order</p>
                     <a href="{% url 'account_signup' %}" class="callout-btn font-14 btn rounded-0">Join Now</a>
                 </div>
                 <div class="carousel-item">

@@ -40,7 +40,7 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 </details>
 
 **<details><summary> Testing</summary>**
-  - [Testing Documentation](https://github.com/Lucyjpjones/wean-cuisine/blob/master/testing.md)
+  - [Testing Documentation](https://github.com/Lucyjpjones/lj-fscr/blob/master/testing.md)
 </details>
 
 **<details><summary> Credits</summary>**
@@ -220,6 +220,12 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 - [Blog View](wireframes/wf-blog-view.pdf)
 - [Forum](wireframes/wf-forum.pdf)
 - [Forum View](wireframes/wf-forum-view.pdf)
+
+#### Wireframes vs. Site
+
+- social logins
+- menu positioning
+
 ---
 
 ## &rarr; **Features**

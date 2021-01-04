@@ -176,6 +176,9 @@ To ensure my site was working correctly I carried out some manual function testi
 **Navigation**
   - I checked the site dropdown menu was working correctly by starting on the home-page and navigating around the site from and to every screen the user would be faced with.
   - I checked the logo homepage navigation was working by clicking on the brand image from every page.
+  - **404 Error page**: I decided to create a custom 404.html page for my user so if they are directed to a non-existent domain, they are presented with an appealing page and an easy navigation button back to the homepage.
+
+    <img src="media/404-page.png">
 
 **Authorisation**
 

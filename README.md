@@ -116,6 +116,12 @@ My final design with client approval below;
 
 <img src="media/final-logo-design.png">
 
+**Favicon**
+
+I created a personalised favicon for the site to add branding and thus making it easier for visitors locate your page easier when they have multiple tabs open. I decided to keep the design simple and conventional by using just the first initial of the logo.
+
+<img src="media/fscr-favicon.png">
+
 ### **<u>Data Schema</u>**
 
 <img src="media/schema.png">
@@ -241,7 +247,7 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
   - Easily readable fonts and simple navigation throughout the site.
     - Fixed navigation bar visible on every page including a menu dropdown, recognisable icons and brand logo to link back to the homepage.
 
-  - An aesthetically pleasing 404 page if the user is directed to a non-existent page.
+  - An aesthetically pleasing 404 page if the user is directed to a non-existent page. 
 
 - **Buttons**
     - Clear interactive buttons used for a effortless user journey.

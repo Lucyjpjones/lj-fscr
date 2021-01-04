@@ -1,1 +1,10 @@
-<h1>hello wrong page</h1>
+{% extends "base.html" %}
+<div class="container">
+    <div>
+        <p class="err">4<i class="fa fa-exclamation-circle"></i>4</p>
+        <p>oops nothing to see here!</p>
+        <div class="home">
+            <a href="{% url 'home' %}">Home</a>
+        </div>
+    </div>
+</div>

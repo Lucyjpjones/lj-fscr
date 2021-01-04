@@ -29,17 +29,15 @@ body {
 }
 
 .msg {
-   font-size: 26px;
+   font-size: 18px;
 }
 
 a {
    text-transform: uppercase;
-   font-size: 24px;
-   letter-spacing: 1px;
-   color: #ff0035;
-   border: 3px solid #ff0035;
-   border-radius: 5px;
-   margin: 5px;
-   padding: 5px 10px;
+   font-size: 18px;
+   color: #fafafa;
+   border: solid 1px #fafafa;
+   background: #59546C;
+   padding: 8px 20px;
    text-decoration: none;
 }

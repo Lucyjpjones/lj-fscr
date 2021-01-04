@@ -11,11 +11,11 @@
 
   <!--Programme image-->
     <div class="col-12">
-      <div class="image-container my-3">
+      <div class="my-3">
         {% if programme.image %}
         <a href="{{ programme.image.url }}" target="_blank">
           <img
-            class="card-img-top prog-img-top img-fluid"
+            class="card-img-top prog-detail-img img-fluid"
             src="{{ programme.image.url }}"
             alt="{{ programme.name }}"
           />
@@ -23,7 +23,7 @@
         {% else %}
         <a href="{{ programme.image.url }}">
           <img
-            class="card-img-top prog-img-top img-fluid"
+            class="card-img-top prog-detail-img img-fluid"
             src="{{ MEDIA_URL }}noimage.png"
             alt="{{ programme.name }}"
           />
@@ -76,21 +76,21 @@
                     <div class="carousel-item programme-item active">
                         <div class="col py-1 px-2">
                             <i class="fas fa-quote-left fa-xs mb-2"></i>
-                            <p>'Easy to follow and informative'</p>
+                            <p class="p-font">'Easy to follow and informative'</p>
                             <p class="text-muted pt-1 font-12">Mike Eglon</p>
                         </div>
                     </div>
                     <div class="carousel-item programme-item">
                         <div class="col py-1 px-2">
                             <i class="fas fa-quote-left fa-xs mb-2"></i>
-                            <p>Very good value for money!</p>
+                            <p class="p-font">Very good value for money!</p>
                             <p class="text-muted pt-1 font-12">Jake Bramley</p>
                         </div>
                     </div>
                     <div class="carousel-item programme-item">
                         <div class="col py-1 px-2">
                             <i class="fas fa-quote-left fa-xs mb-2"></i>
-                            <p>'Great Programme!'</p>
+                            <p class="p-font">'Great Programme!'</p>
                             <p class="text-muted pt-1 font-12">Lucy Jones</p>
                         </div>
                     </div>

@@ -294,6 +294,11 @@ header {
   height: 100px;
 }
 
+.prog-detail-img {
+        height: 120px;
+        object-fit: cover;
+    }
+
 /* --------------------Sort and Filter*/
 
 .filter-btn {
@@ -653,7 +658,7 @@ input[name='q']::placeholder {
     }
 
     .prog-detail-img {
-        height: 120px;
+        height: 200px;
         object-fit: cover;
     }
 
@@ -709,9 +714,6 @@ input[name='q']::placeholder {
 
     /* Programmes */
 
-    .prog-detail-img {
-        height: 200px;
-    }
     .programme-container {
         max-width: 800px;
         margin: auto;

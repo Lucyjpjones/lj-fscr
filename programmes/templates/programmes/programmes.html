@@ -60,7 +60,7 @@
             {% if programme.image %}
             <a href="{% url 'programme_detail' programme.id %}">
               <img
-                class="card-img-top prod-img-top img-fluid programme-card"
+                class="card-img-top prod-img-top img-fluid programme-card rounded-0"
                 src="{{ programme.image.url }}"
                 alt="{{ programme.name }}"
               />

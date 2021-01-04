@@ -405,11 +405,6 @@ header {
     object-fit: cover;
 }
 
-blog-card a {
-    position: absolute;
-    bottom: 1rem;
-}
-
 .comments {
     background-color: #bdc1c750;
 }
@@ -656,6 +651,12 @@ input[name='q']::placeholder {
         max-height: 200px;
         object-fit: cover;
     }
+
+    .prog-detail-img {
+        height: 120px;
+        object-fit: cover;
+    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -707,6 +708,10 @@ input[name='q']::placeholder {
     }
 
     /* Programmes */
+
+    .prog-detail-img {
+        height: 200px;
+    }
     .programme-container {
         max-width: 800px;
         margin: auto;

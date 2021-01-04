@@ -395,6 +395,11 @@ header {
 
 /* --------------------Blog*/
 
+.img-h-200 {
+    height: 200px;
+    object-fit: cover;
+}
+
 .comments {
     background-color: #bdc1c750;
 }
@@ -700,10 +705,16 @@ input[name='q']::placeholder {
         height: 200px;
     }
 
+    /* Blog */
     .blog-img-top {
         max-height: 300px;
         object-fit: cover;
     }
+
+    .img-h-250 {
+    height: 250px;
+    object-fit: cover;
+}
 
 }
 

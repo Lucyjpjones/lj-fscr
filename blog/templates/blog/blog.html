@@ -56,13 +56,13 @@
           <div class="card product-card h-100 border-0">
             {% if post.image %}
               <img
-                class="card-img-top img-fluid"
+                class="card-img-top img-h-200 img-h-250 img-fluid rounded-0"
                 src="{{ post.image.url }}"
                 alt="{{ post.title }}"
               />
             {% else %}
               <img
-                class="card-img-top img-fluid"
+                class="card-img-top img-fluid rounded-0"
                 src="{{ MEDIA_URL }}noimage.png"
                 alt="{{ post.title }}"
               />

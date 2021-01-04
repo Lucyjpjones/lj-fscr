@@ -38,6 +38,7 @@
             <div class="product-details-container mb-3">
                 <p class="mb-0">{{ programme.name }}</p>
                 <p class="lead mb-1 text-left font-weight-bold">£{{ programme.price }}</p>
+                <p class="mb-1 text-muted"><small><i class="far fa-star mr-1"></i>{{ programme.rating }}</small></p>
                 {% if request.user.is_superuser %}
                     <small>
                         <a class="red-border-btn px-2 py-1 font-12" href="{% url 'edit_programme' programme.id %}">Edit</a>

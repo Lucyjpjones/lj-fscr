@@ -38,7 +38,8 @@
       <div class="product-details-container mb-4 mt-md-5">
         <p class="mb-0">{{ product.name }}</p>
         <p class="mb-0 font-14">{{ product.colour }}</p>
-        <p class="mb-1 text-left font-weight-bold">£{{ product.price }}</p>
+        <p class="mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+        <p class="mb-1 text-muted"><small><i class="far fa-star mr-1"></i>{{ product.rating }}</small></p>
         {% if request.user.is_superuser %}
             <small>
                 <a class="red-border-btn px-2 py-1 font-12" href="{% url 'edit_product' product.id %}">Edit</a>

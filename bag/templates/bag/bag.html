@@ -15,7 +15,7 @@
 <div class="content-container">
   <div class="row">
     <div class="col text-center title-container">
-      <h2 class="title-font pt-5 pb-3"><i class="flaticon-shopping-bag"></i></h2>
+      <div class="title-font pt-5 pb-3"><i class="flaticon-shopping-bag"></i></div>
     </div>
   </div>
 
@@ -109,14 +109,14 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
     $('.btt-link').click(function(e) {
         window.scrollTo(0,0)
     })
 </script>
 {% include 'products/includes/quantity_input_script.html' %}
 
-<script type="text/javascript">
+<script>
     // Update quantity on click
     $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');

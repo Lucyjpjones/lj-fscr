@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Thread, Comment
 
+
 class ThreadAdmin(admin.ModelAdmin):
     list_display = ('topic', 'slug', 'status', 'created_on')
     list_filter = ("status",)

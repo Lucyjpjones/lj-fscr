@@ -1,10 +1,9 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (render, redirect, reverse,
+                              HttpResponse, get_object_or_404)
 from django.contrib import messages
 
 from products.models import Product
 from programmes.models import Programme
-
-# Create your views here.
 
 
 def view_bag(request):
@@ -37,10 +36,10 @@ def add_to_bag(request, item_id, category):
             if item_id in list(bag.keys()):
                 if size in bag[category][item_id]['items_by_size'].keys():
                     bag[category][item_id]['items_by_size'][size] += quantity
-                    messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
+                    messages.success(request, (f'Updated size {size.upper()}{product.name} quantity to {bag[item_id]["items_by_size"][size]}'))
                 else:
                     bag[category][item_id]['items_by_size'][size] = quantity
-                    messages.success(request, f'Added size {size.upper()} {product.name} to your bag')
+                    messages.success(request, f'Added size {size.upper()}{product.name} to your bag')
             else:
                 bag[category][item_id] = {'items_by_size': {size: quantity}}
                 messages.success(request, f'Added size {size.upper()} {product.name} to your bag')
@@ -104,7 +103,7 @@ def adjust_bag(request, item_id, category):
             messages.success(request, f'Removed {programme.name} from your bag')
 
     request.session['bag'] = bag
-    print (request.session['bag'])
+    print(request.session['bag'])
     return redirect(reverse('view_bag'))
 
 
@@ -132,12 +131,11 @@ def remove_from_bag(request, item_id, category):
 
         elif category == 'programme':
             del bag[category][item_id]
-            messages.success(request, f'Removed {programme.name} from your bag')
+            messages.success(request, (f'Removed {programme.name} from your bag'))
 
         request.session['bag'] = bag
-        print (request.session['bag'])
+        print(request.session['bag'])
         return HttpResponse(status=200)
 
     except Exception as e:
         return HttpResponse(status=500)
-

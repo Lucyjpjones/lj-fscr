@@ -52,10 +52,9 @@
     <script src="https://js.stripe.com/v3/"></script>
     <script src="{% static 'js/script.js' %}"></script>
     <!-- EmailJS -->
-    <script type="text/javascript"
-                src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
         </script>
-        <script type="text/javascript">
+        <script>
         (function(){
             emailjs.init("user_qZ2fQYOyvPucFHRyubh33");
         })();
@@ -115,7 +114,7 @@
 
             <!-- Search bar visible (L and XL devices)-->
             <li class="list-inline-item px-0">
-              <form class="d-none d-lg-inline-block" method="GET" action="" style="width: 400px;">
+              <form class="d-none d-lg-inline-block" method="GET" action="#" style="width: 400px;">
                 <div class="input-group rounded-0">
                   <input
                     class="form-control border border-black rounded-0 p-font"
@@ -216,12 +215,12 @@
           <form
             class="row form-inline m-auto search-form"
             method="GET"
-            action=""
+            action="#"
           >
             <div class="col-2 col-md-1">
-              <a role="button" class="btn icon navy-icon" type="submit">
+              <button class="btn icon navy-icon" type="submit">
                 <i class="flaticon-search"></i>
-              </a>
+              </button>
             </div>
             <div class="col-10 col-md-11">
               <input
@@ -305,7 +304,7 @@
     </footer>
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
     {% endblock %}

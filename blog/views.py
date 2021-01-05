@@ -33,7 +33,7 @@ def all_posts(request):
         'current_sorting': current_sorting,
     }
 
-    return render (request, 'blog/blog.html', context)
+    return render(request, 'blog/blog.html', context)
 
 
 @login_required

@@ -18,7 +18,8 @@ class Category(models.Model):
 
 class Programme(models.Model):
     category = models.ManyToManyField('Category')
-    item_type = models.CharField(default='programme', max_length=20, null=True, blank=True)
+    item_type = models.CharField(default='programme', max_length=20, null=True,
+                                 blank=True)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()

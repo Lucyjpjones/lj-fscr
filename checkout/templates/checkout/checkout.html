@@ -37,7 +37,7 @@
                     {% for item in bag_items %}
                         {% if item.type == 'product' %}
                         <div class="row mb-2">
-                            <div class="col-2 mb-1">
+                            <div class="col-2 mb-1 p-0">
                                 <a href="{% url 'product_detail' item.product.id %}">
                                     {% if item.product.image %}
                                         <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
@@ -57,7 +57,7 @@
                         </div>
                         {% elif item.type == 'programme' %}
                         <div class="row mb-2">
-                            <div class="col-2 mb-1">
+                            <div class="col-2 mb-1 p-0">
                                 <a href="{% url 'programme_detail' item.programme.id %}">
                                     {% if item.programme.image %}
                                         <img class="w-100" src="{{ item.programme.image.url }}" alt="{{ programme.name }}">

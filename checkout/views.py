@@ -90,7 +90,7 @@ def checkout(request):
                             )
                             order.delete()
                             return redirect(reverse('view_bag'))
-                    
+
                     elif category == "programme":
                         try:
                             programme = get_object_or_404(Programme, pk=item_id)

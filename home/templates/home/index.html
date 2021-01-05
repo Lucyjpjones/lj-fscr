@@ -160,7 +160,7 @@
                     {% endif %}
                     <div class="card-body py-3">
                         <h5 class="mb-2 font-12">{{ post.title }}</h5>
-                        <a class="purp-btn px-2 py-1 font-12" href="#">Read more</a>
+                        <a class="purp-btn px-2 py-1 font-12" href="{% url 'post_detail' post.slug %}">Read more</a>
                     </div>
                 </div>
             </div>

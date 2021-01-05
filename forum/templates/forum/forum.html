@@ -46,10 +46,10 @@
                                             {{ thread.topic }}
                                         </p>
                                     </a>
-                                    <p class="my-0 d-block d-md-none text-muted font-12"><i class="fas fa-comment-dots"></i>{{ count }} replies</p>
+                                    <p class="my-0 d-block d-md-none text-muted font-12"><i class="far fa-comment-dots"></i> {{ comments.count }} replies</p>
                                 </td>
                                 <td class="col-md-2 d-none d-md-block text-center">
-                                    <p class="my-0">replies</p>
+                                    <p class="my-0">{{ comments.count }} replies</p>
                                 </td>
                                 <td class="col-4 text-center">
                                     <p class="my-0 font-14">{{ request.user.username }}</p>

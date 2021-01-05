@@ -41,14 +41,15 @@
 
     <!-- Comment field and reply button -->
     {% load crispy_forms_tags %}
-    <form class="row d-grey-banner border programme-container" method="post">
-        <div class="col-10 py-2">
+    <form class="row d-grey-banner border programme-container pb-2" method="post">
+        <div class="col-10 pt-2">
         {{ comment_form | crispy }}
         {% csrf_token %}
         </div>
         <div class="col-2 py-2">
             <button type="submit" class="btn add-btn font-12 rounded-0 float-right py-1 px-2">Reply</button>
         </div>
+        <p class="col-12 float-left text-muted small ml-1">Signed in as <strong class="text-dark">{{ user.username }}</strong></p>
     </form>
 
     <!--Post comments-->
@@ -62,14 +63,14 @@
     <div class="row programme-container">
         <div class="col p-0 mb-4 mt-3 ">
             {% for comment in comments %}
-            <div class="comments border p-3 mb-2 font-14">
+            <div class="comments border p-3 mb-2 p-font">
             <p class="font-weight-bold">
                 {{ comment.user }}
                 <span class="text-muted font-weight-normal pl-1">
                 {{ comment.created_on }}
                 </span>
             </p>
-            {{ comment.body | linebreaks }}
+            {{ comment.body | linebreaksbr }}
             </div>
             {% endfor %}
         </div>

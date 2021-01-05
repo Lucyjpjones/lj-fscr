@@ -3,12 +3,13 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import CommentForm, ThreadForm
 from django.db.models.functions import Lower
-from .models import Thread
+from .models import Thread, Comment
 
 
 @login_required
 def all_threads(request):
     threads = Thread.objects.filter(status=1).order_by('-created_on')
+    comments = Comment.objects.all
     sort = None
     direction = None
 
@@ -31,9 +32,10 @@ def all_threads(request):
     context = {
         'threads': threads,
         'current_sorting': current_sorting,
+        'comments': comments
     }
 
-    return render (request, 'forum/forum.html', context)
+    return render(request, 'forum/forum.html', context)
 
 
 @login_required

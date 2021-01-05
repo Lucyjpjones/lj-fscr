@@ -46,6 +46,7 @@ function sendMail(contactForm) {
     .then(
       function (response) {
         alert("MESSAGE SENT", response); // If message is sent successfully, alert "message sent"
+        contactForm.reset()
       },
       function (error) {
         alert("SENDING FAILED", error); // If message fails to send, alert "sending failed"

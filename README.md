@@ -79,11 +79,11 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 
 > **Red:** Passion for the sport and a never-say-die attitude.
 
-> **Purple:** Overcoming physical challenges and limitations and setting farther, more difficult goals.
+> **Blue:** Dependability, trust, and honesty
 
 > **Grey:** paragraph Calmness and neutrality, focus, and precision.
 
-> **Blue:** Dependability, trust, and honesty
+> **Purple:** Overcoming physical challenges and limitations and setting farther, more difficult goals.
 
 <br>
   <img src="media/palette.png">
@@ -110,7 +110,7 @@ When it comes to creating a business, the logo is the central visual element in 
 
 I set up a meeting with my client and presented them with a moodboard of different designs and gathered their feedback.
 
-  <img src="media/logo-designs.png">
+<img src="media/logo-designs.png">
 
 My final design with client approval below;
 
@@ -118,7 +118,7 @@ My final design with client approval below;
 
 **Favicon**
 
-I created a personalised favicon for the site to add branding and thus making it easier for visitors locate your page easier when they have multiple tabs open. I decided to keep the design simple and conventional by using just the first initial of the logo.
+I created a personalised favicon for the site to add branding, and to make it easier for visitors to locate the page when they have multiple tabs open. I decided to keep the design simple and conventional by using just the first initial of the logo.
 
 <img src="media/fscr-favicon.png">
 
@@ -229,8 +229,16 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 
 #### Wireframes vs. Site
 
-- social logins
-- menu positioning
+The live site has a few changes vs. what was displayed in the wireframes, which I have highlighted below;
+
+- social logins added
+- menu icon positioning
+- homepage amendments
+    - caousel moved down- wasnt visually pleasing to have two carousels on top of one another
+    - Decided to include blogs on homepage
+    - contact form added to homepage
+- Decided not to use red buttons- could cause user confusion
+    
 
 ---
 
@@ -280,8 +288,14 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 - **Toasts**
   - Used for success and error responses to add to the user journey.
 
-- **Payments**
+- **Shopping Bag**
+  - A fully functioning shopping bag allowing users to add both products and programmes they wish to buy.
+
+- **Payment Transactions**
   - Stripe payments used to manage site card transactions.
+
+- **Forum**
+  - An interactive message board allowing users to add their own threads and comment on others.
 
 
 ### **To do list**
@@ -293,9 +307,8 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 I will continue to update my website to meet my clients expectations. I have further development plans which I have listed below.
 
 **Future Development plans**
-- Add more social logging in options for users.
 - Add more payment options for my users, including apple pay to improve user experience with quicker checkout.
-- Add a review option for members to give their opinion on products and programmes . As this is a startup there is currently no orders this was a lower priority to complete.
+- 'Add a review' option for members to give their opinion on products and programmes they have purchased. As this is a startup there is currently no physical customer orders this was a lower priority task.
 
 ---
 

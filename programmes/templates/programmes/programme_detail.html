@@ -104,6 +104,7 @@
         </div>
     </div>
     <form class="form" action="{% url 'add_to_bag' programme.id 'programme' %}" method="POST">
+        {% csrf_token %}
         <div class="row">
             <div class="col-12">
                 <p class="mt-3 mb-2"><strong class="font-14">Quantity:</strong></p>
@@ -146,4 +147,9 @@
 
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}

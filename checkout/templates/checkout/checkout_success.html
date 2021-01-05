@@ -59,9 +59,9 @@
                                 {% for item in order.proglineitems.all %}
                                 <div class="row">
                                     <p class="small mb-0 text-black font-weight-bold">
-                                        {{ item.programme.name }}
+                                        {{ item.programme.name }} |
+                                        {{ item.quantity }} x £{{ item.programme.price }}
                                     </p>
-                                    <p class="small mb-0">{{ item.quantity }} @ £{{ item.programme.price }} each</p>
                                 </div>
                                 {% endfor %}
                         </div>

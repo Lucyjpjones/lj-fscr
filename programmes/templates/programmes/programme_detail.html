@@ -7,29 +7,30 @@
 {% endblock %} 
 {% block content %}
 
-<div class="content-container">
-
-  <!--Programme image-->
-    <div class="col-12">
-      <div class="my-3">
-        {% if programme.image %}
-        <a href="{{ programme.image.url }}" target="_blank">
-          <img
-            class="card-img-top prog-detail-img img-fluid"
-            src="{{ programme.image.url }}"
-            alt="{{ programme.name }}"
-          />
-        </a>
-        {% else %}
-        <a href="{{ programme.image.url }}">
-          <img
-            class="card-img-top prog-detail-img img-fluid"
-            src="{{ MEDIA_URL }}noimage.png"
-            alt="{{ programme.name }}"
-          />
-        </a>
-        {% endif %}
-      </div>
+<div class="content-container w-md-75">
+    <!--Product image-->
+    <div class="row">
+        <div class="col-12">
+        <div class="image-container mt-3 mb-3">
+            {% if programme.image %}
+            <a href="{{ programme.image.url }}" target="_blank">
+            <img
+                class="card-img-top prog-detail-img img-fluid"
+                src="{{ programme.image.url }}"
+                alt="{{ programme.name }}"
+            />
+            </a>
+            {% else %}
+            <a href="">
+            <img
+                class="card-img-top prog-detail-img img-fluid"
+                src="{{ MEDIA_URL }}noimage.png"
+                alt="{{ programme.name }}"
+            />
+            </a>
+            {% endif %}
+        </div>
+        </div>
     </div>
 
     <!--Programme details-->
@@ -91,40 +92,36 @@
                         </div>
                     </div>
                 </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  </div>
-
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
     </div>
-
-    <!--Button actions-->
     <form class="form" action="{% url 'add_to_bag' programme.id 'programme' %}" method="POST">
-        {% csrf_token %}
-        <div class="form-row">
-            <div class="col-12 ml-3">
+        <div class="row">
+            <div class="col-12">
                 <p class="mt-3 mb-2"><strong class="font-14">Quantity:</strong></p>
                     <div class="form-group w-50 mb-3">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <button class="decrement-qty btn btn-sm rounded-0" 
-                                data-item_id="{{ programme.id }}" id="decrement-qty_{{ programme.id }}">
-                                <span class="icon">
-                                     <i class="fas fa-minus"></i>
-                                </span>
+                                    data-item_id="{{ programme.id }}" id="decrement-qty_{{ programme.id }}">
+                                    <span class="icon">
+                                        <i class="fas fa-minus"></i>
+                                    </span>
                                 </button>
                             </div>
                             <input class="form-control qty_input form-control-sm text-center" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ programme.id }}" 
-                            id="id_qty_{{ programme.id }}">
+                                id="id_qty_{{ programme.id }}">
                             <div class="input-group-append">
                                 <button class="increment-qty btn btn-sm rounded-0"
-                                data-item_id="{{ programme.id }}" id="increment-qty_{{ programme.id }}">
+                                    data-item_id="{{ programme.id }}" id="increment-qty_{{ programme.id }}">
                                     <span class="icon">
                                         <i class="fas fa-plus"></i>
                                     </span>
@@ -132,21 +129,21 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col ml-3 mb-3">
+            </div>
+            <div class="col pl-0 ml-3 mb-3">
                     <a href="{% url 'programmes' %}" class="navy-border-btn btn rounded-0 mt-1 mr-1 font-14">
                         <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
+                            <i class="fas fa-chevron-left"></i>
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
                     <input type="submit" class="ks-btn btn rounded-0 text-uppercase mt-1 font-14" value="Add to Bag">
-                </div>
-                <input type="hidden" name="redirect_url" 
-                value="{{ request.path }}">
             </div>
-        </form>
+            <input type="hidden" name="redirect_url" 
+                    value="{{ request.path }}">
+        </div>
+    </form>
 
-  </div>
+</div>
+
 {% endblock %}

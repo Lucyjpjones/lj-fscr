@@ -731,7 +731,11 @@ input[name='q']::placeholder {
     .img-h-250 {
     height: 250px;
     object-fit: cover;
-}
+    }   
+
+    .w-md-75 {
+        width: 75%;
+    }
 
 }
 

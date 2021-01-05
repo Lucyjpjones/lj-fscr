@@ -51,17 +51,17 @@
                                 {% for item in order.lineitems.all %}
                                 <div class="row">
                                     <p class="small mb-0 text-black font-weight-bold">
-                                        {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
+                                        {{ item.product.name }}
+                                        {% if item.product_size %} | {{ item.product_size|upper }}{% endif %} | {{ item.quantity }} x £{{ item.product.price }}
                                     </p>
-                                    <p class="small mb-0">{{ item.quantity }} @ ${{ item.product.price }} each</p>
                                 </div>
                                 {% endfor %}
                                 {% for item in order.proglineitems.all %}
                                 <div class="row">
                                     <p class="small mb-0 text-black font-weight-bold">
-                                        {{ item.programme.name }}{% if item.programme_size %} - Size {{ item.programme.size|upper }}{% endif %}
+                                        {{ item.programme.name }}
                                     </p>
-                                    <p class="small mb-0">{{ item.quantity }} @ ${{ item.programme.price }} each</p>
+                                    <p class="small mb-0">{{ item.quantity }} @ £{{ item.programme.price }} each</p>
                                 </div>
                                 {% endfor %}
                         </div>
@@ -81,7 +81,7 @@
                             <p class="mb-0 small text-black font-weight-bold">{{ order.full_name }} </p>
                             <p class="mb-0 small text-black font-weight-bold">{{ order.street_address1 }}</p>
                             {% if order.street_address2 %}
-                            <p class="mb-0 small text-black font-weight-bold">{{ order.street_address1 }}</p>
+                            <p class="mb-0 small text-black font-weight-bold">{{ order.street_address2 }}</p>
                             {% endif %}
                             {% if order.county %}
                             <p class="mb-0 small text-black font-weight-bold">{{ order.county }}</p>
@@ -97,9 +97,9 @@
                     <div class="row grey-banner py-2">
                         <div class="col">
                             <small class="text-muted">Billing Info:</small>
-                            <p class="mb-0 small text-black font-weight-bold">Order Total: {{ order.order_total }}</p>
-                            <p class="mb-0 small text-black font-weight-bold">Delivery: {{ order.delivery_cost }}</p>
-                            <p class="mb-0 small text-black font-weight-bold">Grand Total: {{ order.grand_total }}</p>
+                            <p class="mb-0 small text-black font-weight-bold">Order Total: £{{ order.order_total }}</p>
+                            <p class="mb-0 small text-black font-weight-bold">Delivery: £{{ order.delivery_cost }}</p>
+                            <p class="mb-0 small text-black font-weight-bold">Grand Total: £{{ order.grand_total }}</p>
                         </div>
                     </div>
                 </div>

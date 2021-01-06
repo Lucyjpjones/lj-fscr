@@ -322,10 +322,6 @@ header {
     margin: auto;
 }
 
-.tab-content {
-    max-width: 800px;
-}
-
 .tab-pane {
     border: solid 1px #bdc1c7;
     background-color: #f8f8f8;

@@ -2,15 +2,17 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
+<!--Padding to ensure content is displayed below header-->
+<div class="header-container">
   <div class="row">
     <div class="col"></div>
   </div>
 </div>
-{% endblock %} {% block content %}
+{% endblock %} 
 
+{% block content %}
 <!--Page title-->
-<div class="content-container w-md-75 mt-md-2 mt-lg-3 mx-md-auto">
+<div class="w-md-75 mt-md-2 mt-lg-3 mx-md-auto">
   <div class="row">
     <div class="col text-center title-container my-sm-2 my-lg-2">
       <h2 class="title-font py-4">About</h2>

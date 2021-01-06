@@ -2,15 +2,15 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
+<div class="header-container">
   <div class="row">
     <div class="col"></div>
   </div>
 </div>
-{% endblock %} {% block content %}
+{% endblock %} 
 
-
-<div class="content-container">
+{% block content %}
+<div class="mx-auto">
 
     <!--Callout image-->
     <div class="row text-center">
@@ -22,21 +22,21 @@
     </div>
 
     <!-- Callout banner carousel -->
-    <div class="row callout-banner-outer">
+    <div class="row">
         <div
             id="carouselBannerControls"
-            class="col-12 text-center text-uppercase carousel slide callout-banner red-header py-2 px-0"
+            class="col-12 carousel slide red-banner py-2 px-0"
             data-ride="carousel"
         >
             {% if request.user.is_authenticated %}
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <p>Your first step to recovery</p>
-                    <a href="{% url 'programmes' %}" class="callout-btn font-14 btn rounded-0">Shop programmes</a>
+                    <a href="{% url 'programmes' %}" class="callout-btn btn rounded-0">Shop programmes</a>
                 </div>
                 <div class="carousel-item">
                     <p>Free shipping on all orders over £{{ free_delivery_threshold }}</p>
-                    <a href="{% url 'products' %}" class="callout-btn font-14 btn rounded-0">Shop Now</a>
+                    <a href="{% url 'products' %}" class="callout-btn btn rounded-0">Shop Now</a>
                 </div>
             </div>
             {% else %}
@@ -60,15 +60,15 @@
 
     <div class="px-md-2 px-lg-3">
         <!-- Programme and Products card links -->
-        <div class="row mt-4 mt-md-5">
+        <div class="row mt-4 mt-lg-5">
             <div class="col-12 col-md-6 mb-4 mb-lg-3">
                 <div class="card border-0">
                     <img
-                        class="prog-img col p-0"
+                        class="index-prog-img col p-0"
                         src="{{ MEDIA_URL }}home-proglink.JPG"
                         alt="Callout image"
                     />
-                    <div class="textbox w-100 text-center">
+                    <div class="index-prog-btn w-100">
                         <a href="{% url 'programmes' %}" class="btn rounded-0 p-sm-2">View Programmes</a>
                     </div>
                 </div>
@@ -76,11 +76,11 @@
             <div class="col-12 col-md-6 mb-lg-3">
                 <div class="card border-0">
                     <img
-                            class="prog-img col p-0"
+                            class=".index-prod-img col p-0"
                             src="{{ MEDIA_URL }}FSCR-hoodie-grey.png"
                             alt="Callout image"
                     />
-                    <div class="textbox w-100 text-center">
+                    <div class="index-prod-btn w-100">
                         <a href="{% url 'products' %}" class="btn rounded-0">View Products</a>
                     </div>
                 </div>
@@ -159,8 +159,8 @@
                     />
                     {% endif %}
                     <div class="card-body py-3">
-                        <h5 class="mb-2 font-12">{{ post.title }}</h5>
-                        <a class="purp-btn px-2 py-1 font-12" href="{% url 'post_detail' post.slug %}">Read more</a>
+                        <h5 class="mb-2 p-font">{{ post.title }}</h5>
+                        <a class="purp-btn px-2 py-1 p-font" href="{% url 'post_detail' post.slug %}">Read more</a>
                     </div>
                 </div>
             </div>
@@ -169,10 +169,10 @@
     </div>        
 
         <!--Contact form-->
-        <div id="contact" class="row card-container p-0">
+        <div id="contact" class="row contact-container p-0">
             <div class="col border form-inner p-3 m-3 mx-md-auto my-md-5">
                 <h2 class="title-font">Get in touch</h2>
-                <p class="subtitle-font font-14 mb-3">If you have a question, comment or enquiry for FSCR, please fill out the form below</p>
+                <p class="subtitle-font p-font mb-3">If you have a question, comment or enquiry for FSCR, please fill out the form below</p>
                 <form onsubmit="return sendMail(this);" method="POST">
                     <div class="row">
                         <div class="col p-0 pr-1">

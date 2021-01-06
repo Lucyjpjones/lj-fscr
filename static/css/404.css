@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-
 html {
   height: 100%;
 }
@@ -12,39 +11,39 @@ body {
   text-align: center;
 }
 
-.textbox {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.err {
-   font-size: 110px;
+.error {
+  font-size: 110px;
 }
 
-.err i {
-   font-size: 110px;
-   padding: 10px;
+.error i {
+  font-size: 110px;
+  padding: 10px;
 }
 
 .msg {
-   font-size: 18px;
+  font-size: 18px;
 }
 
 a {
-   text-transform: uppercase;
-   font-size: 18px;
-   color: #fafafa;
-   border: solid 1px #fafafa;
-   background: #59546C;
-   padding: 8px 20px;
-   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #fafafa;
+  border: solid 1px #fafafa;
+  background: #59546C;
+  padding: 8px 20px;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #fafafa;
-    text-decoration: none;
-    filter: brightness(120%);
+  color: #fafafa;
+  text-decoration: none;
+  filter: brightness(120%);
 }

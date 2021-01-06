@@ -238,8 +238,8 @@ The live site has a few changes vs. what was displayed in the wireframes, which 
     - Decided to include blogs on homepage
     - contact form added to homepage
 - Decided not to use red buttons- could cause user confusion
+- Add videos to blog
     
-
 ---
 
 ## &rarr; **Features**

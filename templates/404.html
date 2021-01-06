@@ -39,12 +39,13 @@
     <title>FSCR {% block extra_title %}404{% endblock %}</title>
   </head>
 
+  <!--404 error content-->
   <body>
     <div>
-        <div class="textbox">
-            <p class="err m-0">4<i class="fa fa-exclamation-circle"></i>4</p>
+        <div class="content">
+            <p class="error m-0">4<i class="fa fa-exclamation-circle"></i>4</p>
             <p class="msg mb-4">oops page not found!</p>
-            <div class="home">
+            <div>
                 <a href="{% url 'home' %}">Go to homepage</a>
             </div>
         </div>

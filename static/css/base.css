@@ -249,8 +249,29 @@ header {
 
 /* -------------------- Products app  */
 
+/* ---------- Products */
+.product-card {
+  background-color: transparent !important;
+}
 
+.prod-img-card { /*prod-img-top*/
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 
+/* ---------- Product Detail */
+.prod-detail-img {
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* -------------------- Programmes app  */
+
+/* ---------- Programmes */
+
+/* ---------- Programmes Detail */
 
 
 
@@ -285,28 +306,10 @@ input {
     object-fit: cover;
 }
 
-
-/* -------------------- Products*/
-
 .bg-light {
     background-color: #f8f8f8;
 }
 
-.product-card {
-  background-color: transparent !important;
-}
-
-.prod-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-
-
-.product-detail-img {
-    height: 350px;
-    object-fit: cover;
-    width: 100%;
-}
 
 .card-body {
     font-size: 12px;
@@ -365,10 +368,6 @@ input {
 
 .table {
     border: none;
-}
-
-.product-details-container {
-    font-size: 16px;
 }
 
 .ks-btn {
@@ -660,12 +659,12 @@ input[name='q']::placeholder {
     }
 
     /* Admin */
-    .admin-container {
+    .admin-container { /*keep*/
         width: 80%;
     }
 
     /* Products*/
-    .prod-img-top {
+    .prod-img-card {
         height: 300px;
     }
 
@@ -728,17 +727,17 @@ input[name='q']::placeholder {
     }
 
     /* Products */
-    .product-detail-img {
-        width: 90%;
+    .prod-detail-img {
         height: 450px;
     }
 
     /* Programmes */
 
-    .programme-container {
-        max-width: 800px;
-        margin: auto;
+    .sort-container {
+        width: 70%;
+        max-width: 550px;
     }
+
     .programme-card {
         height: 200px;
     }

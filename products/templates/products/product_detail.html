@@ -7,16 +7,16 @@
 {% endblock %} 
 {% block content %}
 
-<div class="content-container">
+<div class="mx-auto">
 
     <!--Product image-->
     <div class="row">
     <div class="col-12 col-md-6 offset-lg-2">
-      <div class="image-container mt-3 mb-3">
+      <div class="mt-3 mt-md-5 mb-4 mb-md-0">
         {% if product.image %}
         <a href="{{ product.image.url }}" target="_blank">
           <img
-            class="product-detail-img img-fluid"
+            class="prod-detail-img"
             src="{{ product.image.url }}"
             alt="{{ product.name }}"
           />
@@ -24,7 +24,7 @@
         {% else %}
         <a href="">
           <img
-            class="product-detail-img img-fluid"
+            class="prod-detail-img"
             src="{{ MEDIA_URL }}noimage.png"
             alt="{{ product.name }}"
           />
@@ -35,9 +35,9 @@
 
     <!--Product details-->
     <div class="col-12 col-md-6 col-lg-4">
-      <div class="product-details-container mb-4 mt-md-5">
+      <div class="mb-4 mt-md-5">
         <p class="mb-0">{{ product.name }}</p>
-        <p class="mb-0 font-14">{{ product.colour }}</p>
+        <p class="mb-0">{{ product.colour }}</p>
         <p class="mb-0 text-left font-weight-bold">£{{ product.price }}</p>
         <p class="mb-1 text-muted"><small><i class="far fa-star mr-1"></i>{{ product.rating }}</small></p>
         {% if request.user.is_superuser %}
@@ -46,14 +46,14 @@
                 <a class="add-btn px-2 py-1 font-12" href="{% url 'delete_product' product.id %}">Delete</a>
             </small>
         {% endif %}
-        <p class="mt-3 font-12">{{ product.description }}</p>
+        <p class="mt-3 p-font">{{ product.description }}</p>
         <form class="form mt-3" action="{% url 'add_to_bag' product.id 'product' %}" method="POST">
             {% csrf_token %}
             <div class="form-row">
                 {% with product.has_sizes as s %}
                 {% if s %}
                 <div class="col-12">
-                    <p class="mb-2"><strong class="font-14">Size:</strong></p>
+                    <p class="mb-2"><strong>Size:</strong></p>
                     <select class="form-control rounded-0 w-100" name="product_size" id="id_product_size">
                         <option value="xs">XS</option>
                         <option value="s">S</option>
@@ -64,7 +64,7 @@
                 </div>
                 {% endif %}
                 <div class="col-12">
-                    <p class="mt-3 mb-2"><strong class="font-14">Quantity:</strong></p>
+                    <p class="mt-3 mb-2"><strong>Quantity:</strong></p>
                     <div class="form-group w-50">
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -90,13 +90,13 @@
                 </div>
 
                 <div class="col{% if s %}-12 mt-2{% endif %}">
-                    <a href="{% url 'products' %}" class="navy-border-btn btn rounded-0 mt-1 mr-1 font-14">
+                    <a href="{% url 'products' %}" class="navy-border-btn btn rounded-0 mt-1 mr-1">
                         <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="text-uppercase">Keep Shopping</span>
+                        <span class="text-uppercase p-font">Keep Shopping</span>
                      </a>
-                    <input type="submit" class="ks-btn btn rounded-0 text-uppercase mt-1 font-14" value="Add to Bag">
+                    <input type="submit" class="ks-btn btn rounded-0 text-uppercase mt-1 p-font" value="Add to Bag">
                 </div>
                 <input type="hidden" name="redirect_url" 
                 value="{{ request.path }}">
@@ -106,6 +106,7 @@
       </div>
     </div>
   </div>
+  
 </div>
 {% endblock %}
 

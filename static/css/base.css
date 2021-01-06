@@ -627,7 +627,7 @@ input[name='q']::placeholder {
     .main-logo-link img {
         width: 140px;
     }
-    .flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before, .fas.fa-times:before {
+    .flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before {
         font-size: 24px;
     }
 
@@ -774,7 +774,7 @@ input[name='q']::placeholder {
     .main-logo-link img {
         width: 160px;
     }
-    .flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before, .fas.fa-times:before {
+    .flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before {
         font-size: 26px;
     }
 

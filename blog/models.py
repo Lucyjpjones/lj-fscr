@@ -10,6 +10,7 @@ STATUS = (
 
 
 class Post(models.Model):
+    post_type = models.CharField(default='article', max_length=50)
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE,

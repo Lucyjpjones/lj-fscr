@@ -40,8 +40,8 @@
             <a class="dropdown-item float-right small text-muted" href="{% url 'blog' %}">
                 <span><i class="fas fa-times"></i> Clear all</span>
             </a>
-            <a class="dropdown-item" href="#">Article</a>
-            <a class="dropdown-item" href="#">Video</a>
+            <a class="dropdown-item" href="{% url 'blog' %}?post_type=article">Article</a>
+            <a class="dropdown-item" href="{% url 'blog' %}?post_type=video">Video</a>
         </div>
     </div>
 </div>

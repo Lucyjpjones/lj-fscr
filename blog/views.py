@@ -11,6 +11,7 @@ def all_posts(request):
     sort = None
     direction = None
     count = posts.count()
+    post_type = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -25,6 +26,10 @@ def all_posts(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             posts = posts.order_by(sortkey)
+
+    if 'post_type' in request.GET:
+        categories = request.GET['post_type'].split(',')
+        posts = posts.filter(post_type__in=categories)
 
     current_sorting = f'{sort}_{direction}'
 

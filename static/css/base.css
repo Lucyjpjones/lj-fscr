@@ -186,7 +186,9 @@ header {
   font-size: 16px;
 }
 
-/* -------------------- Index.html */
+/* -------------------- Home app  */
+
+/* -----------Index */
 
 .callout-img {
   height: calc(100vh - 175.52px);
@@ -207,7 +209,7 @@ header {
   padding: 2px 8px;
 }
 
-/* Product carousel */
+/* Programme and Products card links */
 .index-prog-img, .index-prod-img { /*prog-img*/
     height: 300px;
     object-fit: cover;
@@ -245,7 +247,7 @@ header {
     background-color: #f8f8f8;
 }
 
-
+/* -------------------- Products app  */
 
 
 
@@ -626,7 +628,7 @@ input[name='q']::placeholder {
 
     /* Index */
     .callout-img {
-        height: calc(100vh - 184.11px);
+        height: calc(100vh - 187.11px);
     }
     .blog-img-top {
         height: 230px;
@@ -639,10 +641,10 @@ input[name='q']::placeholder {
 
     /* Navbar and menu */
     .header-container {
-        padding-top: 107.11px;
+        padding-top: 110.11px;
     }
     #sidebar {
-        margin-top: 107.11px;
+        margin-top: 110.11px;
     }
     .main-logo-link img {
         width: 140px;

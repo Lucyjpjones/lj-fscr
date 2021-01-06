@@ -14,8 +14,8 @@ STATUS = (
 class Thread(models.Model):
     topic = models.CharField(max_length=200, unique=True, null=True)
     slug = models.SlugField(max_length=200, unique=True, null=True)
-    author = models.ForeignKey(User, on_delete = models.CASCADE,
-        related_name='forum_threads', null=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE,
+                               related_name='forum_threads', null=True)
     description = models.TextField(null=True)
     created_on = models.DateField(auto_now_add=True, null=True)
     status = models.IntegerField(choices=STATUS, default=1)

@@ -101,6 +101,38 @@ p,
     color: #ff0035 !important;
 }
 
+/* ---------- Buttons */
+
+.ks-btn {
+    background-color: #38405F !important;
+    border: solid 2px #38405F !important;
+    color: #f8f8f8 !important;
+}
+
+.navy-border-btn {
+    background-color: transparent !important;
+    border: solid 2px #38405F !important;
+    color: #38405F !important;
+}
+
+.red-border-btn {
+    background-color: transparent !important;
+    border: solid 2px #FF0035 !important;
+    color: #38405F !important;
+}
+
+.add-btn {
+    background-color: #FF0035;
+    border: solid 2px #FF0035 !important;
+    color: #f8f8f8;
+    font-size: 14px;
+}
+
+.purp-btn {
+    background-color: #59546C;
+    color: #f8f8f8;
+}
+
 /* ---------- Header */
 
 .red-banner {
@@ -284,6 +316,21 @@ header {
     object-fit: cover;
 }
 
+/* -------------------- Bag app  */
+
+.grey-banner {
+    background-color: #f8f8f8;
+}
+
+/* -------------------- Checkout app  */
+
+/* -------------------- Blog app  */
+
+/* -------------------- Forum app  */
+
+/* -------------------- Profiles app  */
+
+
 
 
 .content-container { /* replace with mx-auto*/
@@ -357,13 +404,7 @@ input {
 
 /* --------------------Bag*/
 
-.d-grey-banner {
-    background-color: #BDC1C720;
-}
 
-.grey-banner {
-    background-color: #f8f8f8;
-}
 
 .update-link, .remove-item {
     cursor: pointer;
@@ -371,36 +412,6 @@ input {
 
 .table {
     border: none;
-}
-
-.ks-btn {
-    background-color: #38405F !important;
-    border: solid 2px #38405F !important;
-    color: #f8f8f8 !important;
-}
-
-.navy-border-btn {
-    background-color: transparent !important;
-    border: solid 2px #38405F !important;
-    color: #38405F !important;
-}
-
-.red-border-btn {
-    background-color: transparent !important;
-    border: solid 2px #FF0035 !important;
-    color: #38405F !important;
-}
-
-.add-btn {
-    background-color: #FF0035;
-    border: solid 2px #FF0035 !important;
-    color: #f8f8f8;
-    font-size: 14px;
-}
-
-.purp-btn {
-    background-color: #59546C;
-    color: #f8f8f8;
 }
 
 .input-group-prepend, .input-group-append {
@@ -651,7 +662,7 @@ input[name='q']::placeholder {
     .main-logo-link img {
         width: 140px;
     }
-    .flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before {
+    .flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before, .fa-arrow-alt-circle-up:before {
         font-size: 24px;
     }
 
@@ -760,7 +771,7 @@ input[name='q']::placeholder {
     }   
 
     .w-md-75 {
-        width: 75%;
+        width: 75% !important;
     }
 
 }
@@ -797,10 +808,10 @@ input[name='q']::placeholder {
 
     /* Navbar and menu */
     .header-container {
-        padding-top: 115.7px;
+        padding-top: 118.7px;
     }
     #sidebar {
-        margin-top: 115.7px;
+        margin-top: 118.7px;
     }
     #sidebar a {
         font-size: 20px;
@@ -808,7 +819,7 @@ input[name='q']::placeholder {
     .main-logo-link img {
         width: 160px;
     }
-    .flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before {
+    .flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before, fa-arrow-alt-circle-up:before {
         font-size: 26px;
     }
 

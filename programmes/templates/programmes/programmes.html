@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
+<div class="header-container">
   <div class="row">
     <div class="col"></div>
   </div>
@@ -18,7 +18,7 @@
   </div>
 
   <!--Sort and Filter-->
-  <div class="row px-3 px-sm-0 programme-container">
+  <div class="row px-3 px-sm-0 mx-auto sort-container">
     <div class="col-6 dropdown show text-center">
         <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sort
@@ -51,16 +51,16 @@
 
 <!--Programme cards-->
   <div class="row mt-sm-3">
-    <div class="product-container col-12 offset-1">
+    <div class="col-12 offset-1">
       <div class="row mt-1 mb-4"></div>
       <div class="row">
         {% for programme in programmes %}
         <div class="col-12">
-          <div class="card product-card programme-container h-100 border-0 mb-4 px-3">
+          <div class="card product-card h-100 border-0 mb-4 px-3">
             {% if programme.image %}
             <a href="{% url 'programme_detail' programme.id %}">
               <img
-                class="card-img-top prod-img-top img-fluid programme-card rounded-0"
+                class="prog-img-card rounded-0"
                 src="{{ programme.image.url }}"
                 alt="{{ programme.name }}"
               />
@@ -68,13 +68,13 @@
             {% else %}
             <a href="{% url 'programme_detail' programme.id %}">
               <img
-                class="card-img-top prod-img-top img-fluid"
+                class="prog-img-card img-fluid"
                 src="{{ MEDIA_URL }}noimage.png"
                 alt="{{ programme.name }}"
               />
             </a>
             {% endif %}
-            <div class="card-body pb-0 pt-2 pl-1">
+            <div class="card-body pb-0 pt-2 pl-1 p-font">
               <p class="mb-0">{{ programme.name }}</p>
               <p class="mb-0">{{ programme.colour }}</p>
               <p class="mb-2">£{{ programme.price }}</p>

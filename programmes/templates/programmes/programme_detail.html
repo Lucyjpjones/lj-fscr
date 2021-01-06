@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% load static %} {% block page_header %}
-<div class="container header-container">
+<div class="header-container">
   <div class="row">
     <div class="col"></div>
   </div>
@@ -7,15 +7,15 @@
 {% endblock %} 
 {% block content %}
 
-<div class="content-container w-md-75">
+<div class="mx-auto w-md-75">
     <!--Product image-->
     <div class="row">
         <div class="col-12">
-        <div class="image-container mt-3 mb-3">
+        <div class="mt-3 mb-3">
             {% if programme.image %}
             <a href="{{ programme.image.url }}" target="_blank">
             <img
-                class="card-img-top prog-detail-img"
+                class="prog-detail-img"
                 src="{{ programme.image.url }}"
                 alt="{{ programme.name }}"
             />
@@ -23,7 +23,7 @@
             {% else %}
             <a href="">
             <img
-                class="card-img-top prog-detail-img"
+                class="prog-detail-img"
                 src="{{ MEDIA_URL }}noimage.png"
                 alt="{{ programme.name }}"
             />
@@ -36,7 +36,7 @@
     <!--Programme details-->
     <div class="row">
         <div class="col-12">
-            <div class="product-details-container mb-3">
+            <div class="mb-3">
                 <p class="mb-0">{{ programme.name }}</p>
                 <p class="lead mb-1 text-left font-weight-bold">£{{ programme.price }}</p>
                 <p class="mb-1 text-muted"><small><i class="far fa-star mr-1"></i>{{ programme.rating }}</small></p>
@@ -47,7 +47,7 @@
                     </small>
                 {% endif %}
                 <p class="mt-3 p-font">{{ programme.description|linebreaksbr }}</p>
-                <a href="" class="btn rounded-0 navy-border-btn mt-3 py-1" >Sample fitness plan</a>
+                <a href="" class="btn rounded-0 navy-border-btn mt-3 py-1 font-12" >Sample fitness plan</a>
             </div>
         </div>
     </div>
@@ -103,6 +103,8 @@
             </div>
         </div>
     </div>
+
+    <!--Quantity Selector-->
     <form class="form" action="{% url 'add_to_bag' programme.id 'programme' %}" method="POST">
         {% csrf_token %}
         <div class="row">
@@ -131,14 +133,15 @@
                         </div>
                     </div>
             </div>
+            <!--Buttons-->
             <div class="col pl-0 ml-3 mb-3">
-                    <a href="{% url 'programmes' %}" class="navy-border-btn btn rounded-0 mt-1 mr-1 font-14">
+                    <a href="{% url 'programmes' %}" class="navy-border-btn btn rounded-0 mt-1 mr-1 p-font">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
-                    <input type="submit" class="ks-btn btn rounded-0 text-uppercase mt-1 font-14" value="Add to Bag">
+                    <input type="submit" class="ks-btn btn rounded-0 text-uppercase mt-1 p-font" value="Add to Bag">
             </div>
             <input type="hidden" name="redirect_url" 
                     value="{{ request.path }}">

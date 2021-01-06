@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <div class="header-container">
         <div class="row">
             <div class="col"></div>
         </div>
@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="content-container admin-container">
+    <div class="mx-auto admin-container">
         <div class="row">
             <div class="col text-center title-container">
                 <h2 class="title-font pt-5">Product Management</h2>
@@ -30,8 +30,8 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-right">
-                        <a class="navy-border-btn btn rounded-0 mt-1 mr-1" href="{% url 'programmes' %}">Cancel</a>
-                        <button class="ks-btn btn rounded-0 text-uppercase mt-1" type="submit">Save changes</button>
+                        <a class="navy-border-btn btn rounded-0 mt-1 mr-1 p-font" href="{% url 'programmes' %}">Cancel</a>
+                        <button class="ks-btn btn rounded-0 text-uppercase mt-1 p-font" type="submit">Save changes</button>
                     </div>
                 </form>
             </div>            

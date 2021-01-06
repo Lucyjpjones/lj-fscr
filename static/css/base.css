@@ -271,8 +271,18 @@ header {
 
 /* ---------- Programmes */
 
-/* ---------- Programmes Detail */
+.prog-img-card {
+    width: 100%;
+    object-fit: cover;
+    height: 100px;
+}
 
+/* ---------- Programmes Detail */
+.prog-detail-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
 
 
 
@@ -283,10 +293,6 @@ header {
 
 input {
     border-radius: 0 !important;
-}
-
-.container-fluid {
-  padding: 0px;
 }
 
 
@@ -315,14 +321,11 @@ input {
     font-size: 12px;
 }
 
-.programme-card {
-  height: 100px;
-}
-
 .prog-detail-img {
-        height: 120px;
-        object-fit: cover;
-    }
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
 
 /* --------------------Sort and Filter*/
 
@@ -669,9 +672,8 @@ input[name='q']::placeholder {
     }
 
     /* Programmes*/
-    .prog-img-top {
-        max-height: 200px;
-        object-fit: cover;
+    .prog-img-card {
+        height: 200px;
     }
 
     .prog-detail-img {
@@ -732,6 +734,10 @@ input[name='q']::placeholder {
     }
 
     /* Programmes */
+
+    .container-fluid {
+        width: 90%;
+    }
 
     .sort-container {
         width: 70%;
@@ -837,6 +843,10 @@ input[name='q']::placeholder {
     /* Profile */
     .profile-container {
         width: 90%;
+    }
+    /* Programmes */
+    .container-fluid {
+        width: 80%;
     }
 
 

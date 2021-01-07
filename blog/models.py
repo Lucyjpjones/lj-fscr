@@ -17,6 +17,7 @@ class Post(models.Model):
                                related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
+    references = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     image_url = models.URLField(max_length=1024, null=True, blank=True)

@@ -18,12 +18,12 @@
             <div class="bag-notification-wrapper">
                 {% for item in bag_items %}
                     {% if item.type == 'product' %}
-                    <div class="row">
+                    <div class="row pb-2">
                         <div class="col-3 my-1">
                             {% if item.product.image %}
-                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            <img class="prod-img-checkout w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                             {% else %}
-                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                            <img class="prod-img-checkout w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                             {% endif %}
                         </div>
                         <div class="col-9">
@@ -33,12 +33,12 @@
                         </div>
                     </div>
                     {% elif item.type == 'programme' %}
-                    <div class="row">
+                    <div class="row pb-2">
                         <div class="col-3 my-1">
                             {% if item.programme.image %}
-                            <img class="w-100" src="{{ item.programme.image.url }}" alt="{{ item.programme.name }}">
+                            <img class="prog-img-checkout w-100" src="{{ item.programme.image.url }}" alt="{{ item.programme.name }}">
                             {% else %}
-                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.programme.name }}">
+                            <img class="prog-img-checkout w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.programme.name }}">
                             {% endif %}
                         </div>
                         <div class="col-9">

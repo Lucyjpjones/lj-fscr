@@ -1,7 +1,7 @@
 {% if item.product.image %}
-<img class="prod-img-card img-fluid rounded-0" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+<img class="prod-img-bag img-fluid rounded-0" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
 {% elif item.programme.image %}
-<img class="prog-img-card img-fluid rounded-0" src="{{ item.programme.image.url }}" alt="{{ item.programme.name }}">
+<img class="prog-img-bag img-fluid rounded-0" src="{{ item.programme.image.url }}" alt="{{ item.programme.name }}">
 {% else %}
-<img class="prog-img-card img-fluid rounded-0" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+<img class="prog-img-bag img-fluid rounded-0" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
 {% endif %}

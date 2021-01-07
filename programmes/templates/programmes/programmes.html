@@ -55,7 +55,7 @@
       <div class="row mt-1 mb-4"></div>
       <div class="row">
         {% for programme in programmes %}
-        <div class="col-12">
+        <div class="col-12 p-0">
           <div class="card product-card h-100 border-0 mb-4 px-3">
             {% if programme.image %}
             <a href="{% url 'programme_detail' programme.id %}">

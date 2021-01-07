@@ -61,11 +61,18 @@
                             Spend <strong>£{{ free_delivery_delta }}</strong> more to get free next day delivery!
                         </p>
                     {% endif %}
-                    <a href="{% url 'view_bag' %}" class="btn ks-btn btn-block rounded-0 mt-3">
-                        <span class="text-uppercase">Go To Secure Checkout</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col pr-1 pl-0">
+                    <a href="{% url 'view_bag' %}" class="btn navy-border-btn btn-block rounded-0 mt-3">
+                        <span class="text-uppercase">View bag</span>
+                    </a>
+                </div>
+                <div class="col pr-0 pl-1">
+                    <a href="{% url 'checkout' %}" class="btn ks-btn btn-block rounded-0 mt-3">
+                        <span class="text-uppercase">Checkout</span>
                     </a>
                 </div>
             </div>

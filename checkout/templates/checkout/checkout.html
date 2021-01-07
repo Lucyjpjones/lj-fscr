@@ -26,7 +26,7 @@
         </div>
 
         <!--Order summary-->
-        <div class="row mx-lg-5 justify-content-between">
+        <div class="row mx-md-4 justify-content-between">
             <div class="col-12 col-lg-6 pb-4 pb-lg-0 order-lg-last">
                 <div class="grey-banner py-3 px-4">
                     <p class="text-muted mb-4">Order Summary ({{ product_count }})</p>
@@ -61,7 +61,7 @@
                         </div>
                         {% elif item.type == 'programme' %}
                         <div class="row mb-2">
-                            <div class="col-2 mt-2 p-0">
+                            <div class="col-2 mt-2">
                                 <a href="{% url 'programme_detail' item.programme.id %}">
                                     {% if item.programme.image %}
                                         <img class="prog-img-checkout w-100" src="{{ item.programme.image.url }}" alt="{{ programme.name }}">
@@ -95,7 +95,7 @@
                     </div>
                 </div>
               </div>
-            <div class="col-12 col-lg-6 p-0">
+            <div class="col-12 col-lg-6">
                 <!--Checkout form-->
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}

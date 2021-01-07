@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <div class="header-container">
         <div class="row">
             <div class="col"></div>
         </div>
@@ -14,9 +14,9 @@
 {% endblock %}
 
 {% block content %}
-    <div class="content-container profile-container">
+    <div class="mx-auto w-md-75">
         <div class="row">
-            <div class="col text-center title-container">
+            <div class="col text-center">
                 <div class="red-icon nav-icon pt-5 pb-1">
                     <i class="flaticon-user"></i>
                 </div>
@@ -28,7 +28,7 @@
             </div>
         </div>
         {{ profile }}
-        <div class="row mx-lg-5 justify-content-between pb-lg-3">
+        <div class="row mx-sm-4 justify-content-between pb-lg-3">
             <div class="col-12 col-lg-6">
                 <div class="grey-banner pt-3 pb-5 px-4">
                     <p class="text-muted">Personal Information</p>
@@ -42,7 +42,7 @@
             <div class="col-12 col-lg-6 mb-4">
                 <div class="grey-banner pt-3 pb-5 px-4">
                 <p class="text-muted">Order History</p>
-                <div class="order-history table-responsive font-14">
+                <div class="order-history table-responsive p-font">
                         {% for order in orders %}
                         <table class="table table-sm table-borderless mt-3 mb-1">
                             <thead>

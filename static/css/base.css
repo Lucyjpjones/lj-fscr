@@ -588,37 +588,32 @@ input {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
-    background-color: #222;
-    border-color: #222;
-}
-
 input[name='q']::placeholder {
     color: #aab7c4;
-}
-
-#social-links a {
-    color: #FFF;
 }
 
 /* Facebook */
 .fb-bg {
   background: #3B5998;
-  color: white;
 }
 
 /* Google */
 .go-bg {
   background: #FF0035;
-  color: white;
 }
 
 /* Twitter */
 .tw-bg {
   background: #55ACEE;
-  color: white;
+}
+
+.fb-bg a, .go-bg a, .tw-bg a {
+    color: #f8f8f8;
+}
+
+.fb-bg a:hover, .go-bg a:hover, .tw-bg a:hover {
+    text-decoration: none;
+    color: #0E131F;
 }
 
 /* -------------------- Media queries */

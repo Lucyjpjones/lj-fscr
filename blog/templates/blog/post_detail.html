@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% load static %} {% block page_header %}
-<div class="container header-container">
+<div class="header-container">
   <div class="row">
     <div class="col"></div>
   </div>
@@ -7,16 +7,16 @@
 {% endblock %} 
 {% block content %}
 
-<div class="blog-inner mx-auto">
+<div class="mx-auto w-md-75">
 
     <!--Back button-->
     <div class="row">
         <div class="col-12">
-            <a href="{% url 'blog' %}" class="ks-btn btn rounded-0 mt-3 mr-1 font-12">
+            <a href="{% url 'blog' %}" class="ks-btn btn rounded-0 mt-3 mr-1 p-font">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
-                <span class="text-uppercase font-12"> Blog</span>
+                <span class="text-uppercase"> Blog</span>
             </a>
         </div>
     </div>
@@ -25,11 +25,11 @@
     <!--Post image-->
     <div class="row">
         <div class="col-12">
-        <div class="image-container my-3">
+        <div class="my-3">
             {% if post.image %}
             <a href="{{ post.image.url }}" target="_blank">
             <img
-                class="card-img-top blog-img-top img-fluid rounded-0"
+                class="blog-detail-img rounded-0"
                 src="{{ post.image.url }}"
                 alt="{{ post.title }}"
             />
@@ -52,13 +52,13 @@
         <div class="col-12 py-2">
             <div class="mb-2">
                 <p class="mb-0"><strong>{{ post.title }}</strong></p>
-                <p class=" text-muted font-14">{{ post.author }} | {{ post.created_on }}</p>
+                <p class=" text-muted p-font">{{ post.author }} | {{ post.created_on }}</p>
             </div>
         </div>
     </div>
     <div class="row mb-3">
         <div class="col-12">
-                <p class="mt-3 font-14">{{ post.content|linebreaksbr }}</p>
+                <p class="mt-3 p-font">{{ post.content|linebreaksbr }}</p>
         </div>
     </div>
 

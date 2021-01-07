@@ -22,21 +22,15 @@ def add_to_bag(request, item_id, category):
     size = None
     if 'product_size' in request.POST:
         size = request.POST['product_size']
-
     bag = request.session.get('bag', {'product': {},
                                       'programme': {}})
-
-    if item_id in bag[category]:
-        bag[category][item_id] = int(bag[category][item_id]) + quantity
-    else:
-        bag[category][item_id] = quantity
 
     if category == 'product':
         if size:
             if item_id in list(bag.keys()):
                 if size in bag[category][item_id]['items_by_size'].keys():
                     bag[category][item_id]['items_by_size'][size] += quantity
-                    messages.success(request, (f'Updated size {size.upper()}{product.name} quantity to {bag[item_id]["items_by_size"][size]}'))
+                    messages.success(request, (f'Updated size {size.upper()}{product.name} quantity to {bag[category][item_id]["items_by_size"][size]}'))
                 else:
                     bag[category][item_id]['items_by_size'][size] = quantity
                     messages.success(request, f'Added size {size.upper()}{product.name} to your bag')
@@ -45,16 +39,16 @@ def add_to_bag(request, item_id, category):
                 messages.success(request, f'Added size {size.upper()} {product.name} to your bag')
         else:
             if item_id in list(bag.keys()):
-                bag[category][item_id] = int(bag[category][item_id]) + quantity
-                messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+                bag[category][item_id] += quantity
+                messages.success(request, f'Updated {product.name} quantity to {bag[category][item_id]}')
             else:
                 bag[category][item_id] = quantity
                 messages.success(request, f'Added {product.name} to your bag')
 
     elif category == 'programme':
         if item_id in list(bag.keys()):
-            bag[category][item_id] = int(bag[category][item_id]) + quantity
-            messages.success(request, f'Updated {programme.name} quantity to {bag[item_id]}')
+            bag[category][item_id] += quantity
+            messages.success(request, f'Updated {programme.name} quantity to {bag[category][item_id]}')
         else:
             bag[category][item_id] = quantity
             messages.success(request, f'Added {programme.name} to your bag')

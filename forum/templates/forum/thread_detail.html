@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
+<div class="header-container">
   <div class="row">
     <div class="col"></div>
   </div>
@@ -12,9 +12,9 @@
 <div class="mx-3 mx-md-auto w-md-75">
 
     <!--Back button-->
-    <div class="row programme-container">
+    <div class="row">
         <div class="col-12 p-0">
-            <a href="{% url 'forum' %}" class="ks-btn btn rounded-0 mt-3 mr-1 mb-3 font-12">
+            <a href="{% url 'forum' %}" class="ks-btn btn rounded-0 mt-3 mr-1 mb-3 p-font">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
@@ -24,16 +24,16 @@
     </div>
 
     <!--Post details-->
-    <div class="row grey-banner border programme-container">
+    <div class="row grey-banner border">
         <div class="col-12 py-2">
             <div class="mb-2">
                 <p class="mb-0"><strong>{{ thread.topic }}</strong></p>
-                <p class=" text-muted font-14">{{ thread.author }} | {{ thread.created_on }}</p>
+                <p class=" text-muted p-font">{{ thread.author }} | {{ thread.created_on }}</p>
             </div>
         </div>
         <!-- Post body -->
         <div class="row grey-banner">
-            <div class="col-12 pb-3">
+            <div class="col-12 pb-3 p-font">
                     <p class="font-14">{{ thread.description }}</p>
             </div>
         </div>

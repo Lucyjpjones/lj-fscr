@@ -386,12 +386,19 @@ input {
     height: 50px;
     object-fit: cover;
 }
+.prod-img-toast {
+    height: 50px;
+    object-fit: cover;
+}
 
 .prog-img-checkout {
     height: 30px;
     object-fit: cover;
 }
-
+.prog-img-toast {
+    height: 30px;
+    object-fit: cover;
+}
 /* -------------------- Blog app  */
 
 .blog-img-card {
@@ -751,7 +758,6 @@ input[name='q']::placeholder {
 
     .prod-img-checkout {
         height: 80px;
-        object-fit: cover;
     }
 
     .prog-img-checkout {

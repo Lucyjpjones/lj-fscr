@@ -21,9 +21,9 @@
                     <div class="row pb-2">
                         <div class="col-3 my-1">
                             {% if item.product.image %}
-                            <img class="prod-img-checkout w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            <img class="prod-img-toast w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                             {% else %}
-                            <img class="prod-img-checkout w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                            <img class="prod-img-toast w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                             {% endif %}
                         </div>
                         <div class="col-9">
@@ -36,14 +36,13 @@
                     <div class="row pb-2">
                         <div class="col-3 my-1">
                             {% if item.programme.image %}
-                            <img class="prog-img-checkout w-100" src="{{ item.programme.image.url }}" alt="{{ item.programme.name }}">
+                            <img class="prog-img-toast w-100" src="{{ item.programme.image.url }}" alt="{{ item.programme.name }}">
                             {% else %}
-                            <img class="prog-img-checkout w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.programme.name }}">
+                            <img class="prog-img-toast w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.programme.name }}">
                             {% endif %}
                         </div>
                         <div class="col-9">
                             <p class="my-0"><strong>{{ item.programme.name }}</strong></p>
-                            <p class="my-0 small">Size: {% if item.programme.has_sizes %}{{ item.size|upper }}{% else %}One size{% endif %}</p>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                     </div>

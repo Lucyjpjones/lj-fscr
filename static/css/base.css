@@ -100,6 +100,10 @@ p,
     font-size: 12px !important;
 }
 
+.white-text {
+    color: #f8f8f8;
+}
+
 /* Buttons */
 
 .navy-btn {
@@ -282,6 +286,13 @@ header {
 }
 .carousel-testimonials {
   height: 400px;
+}
+
+/* Latest blogs */
+
+.index-blog-img { 
+    height: 40%;
+    object-fit: cover;
 }
 
 /* Contact Form */
@@ -628,6 +639,10 @@ input[name='q']::placeholder {
         margin: 30px 60px;
     }
 
+    .index-blog-img { 
+        height: 60%;
+    }
+
     /* Navbar and menu */
     .header-container {
         padding-top: 107.11px;
@@ -677,6 +692,10 @@ input[name='q']::placeholder {
 
 @media only screen and (min-width: 768px) {
 
+    .w-md-85 {
+        width: 85%;
+    }
+
     /* Index */
     .red-banner {
         font-size: 16px;
@@ -695,6 +714,9 @@ input[name='q']::placeholder {
     }
     .form-inner, .blog-inner {
         max-width: 80%;
+    }
+    .index-blog-img { 
+        height: 70%;
     }
 
     /* Navbar and menu */

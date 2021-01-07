@@ -285,11 +285,11 @@
             <li>
                 {% if request.user.is_authenticated %}
                 <div>
-                    <a href="{% url 'account_signup' %}" class="btn ks-btn rounded-0 mt-2 d-none">Join Now</a>
+                    <a href="{% url 'account_signup' %}" class="btn navy-btn rounded-0 mt-2 d-none">Join Now</a>
                 </div>
                 {% else %}
                 <div>
-                    <a href="{% url 'account_signup' %}" class="btn ks-btn rounded-0 mt-2 font-14">Join Now</a>
+                    <a href="{% url 'account_signup' %}" class="btn navy-btn rounded-0 mt-2 white-text">Join Now</a>
                 </div>
                 {% endif %}
             </li>

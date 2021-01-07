@@ -43,22 +43,22 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <p>Make your first step to recovery</p>
-                    <a href="{% url 'account_signup' %}" class="callout-btn font-14 btn rounded-0">Join Now</a>
+                    <a href="{% url 'account_signup' %}" class="callout-btn btn rounded-0">Join Now</a>
                 </div>
                 <div class="carousel-item">
                     <p>Sign up and get 10% off your first order</p>
-                    <a href="{% url 'account_signup' %}" class="callout-btn font-14 btn rounded-0">Join Now</a>
+                    <a href="{% url 'account_signup' %}" class="callout-btn btn rounded-0">Join Now</a>
                 </div>
                 <div class="carousel-item">
                     <p>Free shipping on all orders over £{{ free_delivery_threshold }}</p>
-                    <a href="{% url 'products' %}" class="callout-btn font-14 btn rounded-0">Shop Now</a>
+                    <a href="{% url 'products' %}" class="callout-btn btn rounded-0">Shop Now</a>
                 </div>
             </div>
             {% endif %}
         </div>
     </div>
 
-    <div class="px-md-2 px-lg-3">
+    <div class="mx-auto w-md-85">
 
         <!-- Programme and Products card links -->
         <div class="row mt-4 mt-lg-5">
@@ -148,7 +148,7 @@
                 <div class="card rounded-0">
                     {% if post.image %}
                     <img
-                        class="card-img-top img-fluid rounded-0"
+                        class="index-blog-img img-fluid rounded-0"
                         src="{{ post.image.url }}"
                         alt="{{ post.title }}"
                     />

@@ -65,22 +65,20 @@
     </div>
 
     <!--References Accordion-->
-    <div class="row mb-3">
-        {% if post.references %}
+    {% if post.references %}
+    <div class="row mb-3 vw-100">
         <div class="col-12">
-            <p>
-                <a class="btn navy-border-btn mb-2 p-font rounded-0" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    References
-                </a>
-            </p>
-                <div class="collapse" id="collapseExample">
+            <a class="btn navy-border-btn mb-2 p-font rounded-0" data-toggle="collapse" href="#references" role="button" aria-expanded="false" aria-controls="references">
+                        References
+            </a>
+            <div class="collapse" id="references">
                 <div class="card card-body rounded-0">
-                    <p class="mt-3 p-font">{{ post.references|linenumbers|linebreaks }}</p>
+                    <p class="p-font">{{ post.references|linenumbers|linebreaks }}</p>
                 </div>
             </div>
         </div>
-        {% endif %}
     </div>
+    {% endif %}
 
     <!--Post comments-->
 
@@ -102,8 +100,7 @@
                 </form>
             </div>
         </div>
-        </div>
-        
+    </div>
 
         <!-- comments -->
         <div class="row w-100">
@@ -121,7 +118,6 @@
                 {% endfor %}
             </div>
         </div>
-    
     </div>
 </div>
 

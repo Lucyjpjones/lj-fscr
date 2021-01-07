@@ -218,6 +218,14 @@ header {
   font-size: 16px;
 }
 
+/* --------------------Sort and Filter*/
+
+.filter-btn {
+    border: solid 2px #38405f;
+    font-size: 14px;
+    width: 100%;
+}
+
 /* -------------------- Home app  */
 
 /* -----------Index */
@@ -279,6 +287,26 @@ header {
     background-color: #f8f8f8;
 }
 
+/* -----------Meet the Coaches*/
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: solid 2px #59546C;
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+.nav-pills {
+    margin: auto;
+}
+
+.tab-pane {
+    border: solid 1px #bdc1c7;
+    background-color: #f8f8f8;
+}
+
 /* -------------------- Products app  */
 
 /* ---------- Products */
@@ -322,6 +350,10 @@ header {
     background-color: #f8f8f8;
 }
 
+.bg-light {
+    background-color: #f8f8f8;
+}
+
 .prog-img-bag {
     width: 100%;
     height: 100px;
@@ -332,6 +364,20 @@ header {
     width: 100%;
     height: 200px;
     object-fit: cover;
+}
+
+input {
+    border-radius: 0 !important;
+}
+
+.input-group-prepend, .input-group-append {
+    border: solid 1px #BDC1C7;
+}
+
+.form-control-sm {
+    height: auto;
+    flex: none !important;
+    width: 40px !important;
 }
 
 /* -------------------- Checkout app  */
@@ -366,116 +412,6 @@ header {
 
 /* -------------------- Forum app  */
 
-/* -------------------- Profiles app  */
-
-
-
-
-.content-container { /* replace with mx-auto*/
-    margin-right: auto;
-    margin-left: auto;
-}
-
-input {
-    border-radius: 0 !important;
-}
-
-
-/* Programme card links */
-.card-container {
-  background-color: #38405f;
-  padding: 20px 10px;
-}
-.programme-item {
-    height: 120px;
-}
-
-/* Blogs */
-
-.bg-light {
-    background-color: #f8f8f8;
-}
-
-
-.card-body {
-    font-size: 12px;
-}
-
-.prog-detail-img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-}
-
-/* --------------------Sort and Filter*/
-
-.filter-btn {
-    border: solid 2px #38405f;
-    font-size: 14px;
-    width: 100%;
-}
-
-/* --------------------Meet the Coaches*/
-
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: solid 2px #59546C;
-    object-fit: cover;
-    object-position: 50% 20%;
-}
-
-.nav-pills {
-    margin: auto;
-}
-
-.tab-pane {
-    border: solid 1px #bdc1c7;
-    background-color: #f8f8f8;
-}
-
-/* --------------------Bag*/
-
-
-
-.update-link, .remove-item {
-    cursor: pointer;
-}
-
-.table {
-    border: none;
-}
-
-.input-group-prepend, .input-group-append {
-    border: solid 1px #BDC1C7;
-}
-
-.form-control-sm {
-    height: auto;
-    flex: none !important;
-    width: 40px !important;
-}
-
-.navy {
-    color: #38405F;
-    font-size: 20px;
-}
-
-/* --------------------Blog*/
-
-.img-h-100 {
-    height: 100px;
-    object-fit: cover;
-}
-
-.img-h-200 {
-    height: 200px;
-    object-fit: cover;
-}
-
-/* --------------------Forum*/
-
 .table {
     border: solid 1px #BDC1C7;
 }
@@ -491,7 +427,15 @@ input {
     font-weight: 700;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* -------------------- Profiles app  */
+
+
+/* -------------------- Admin  */
+.update-link, .remove-item {
+    cursor: pointer;
+}
+
+/* -------------------- bootstrap toasts */
 
 .message-container {
     position: fixed;
@@ -558,6 +502,7 @@ input {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
 /* Product Form */
 .btn-file {
     position: relative;
@@ -584,7 +529,6 @@ input {
     border-color: #dc3545;
     border-radius: 0;
 }
-
 
 /* Allauth form formatting */
 
@@ -660,9 +604,7 @@ input[name='q']::placeholder {
   color: white;
 }
 
-
 /* -------------------- Media queries */
-
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 

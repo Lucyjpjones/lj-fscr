@@ -27,7 +27,7 @@ def add_to_bag(request, item_id, category):
 
     if category == 'product':
         if size:
-            if item_id in list(bag.keys()):
+            if item_id in list(bag[category].keys()):
                 if size in bag[category][item_id]['items_by_size'].keys():
                     bag[category][item_id]['items_by_size'][size] += quantity
                     messages.success(request, (f'Updated size {size.upper()}{product.name} quantity to {bag[category][item_id]["items_by_size"][size]}'))
@@ -46,7 +46,7 @@ def add_to_bag(request, item_id, category):
                 messages.success(request, f'Added {product.name} to your bag')
 
     elif category == 'programme':
-        if item_id in list(bag.keys()):
+        if item_id in list(bag[category].keys()):
             bag[category][item_id] += quantity
             messages.success(request, f'Updated {programme.name} quantity to {bag[category][item_id]}')
         else:

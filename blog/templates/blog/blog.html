@@ -54,7 +54,7 @@
       <div class="row">
         {% for post in posts %}
         <div class="col-12 col-md-6">
-          <div class="card product-card h-100 border-0">
+          <div class="card bg-trans h-100 border-0">
             {% if post.image %}
               <img
                 class="blog-img-card rounded-0"
@@ -72,7 +72,7 @@
               <p class="mb-0 p-font">{{ post.title }}</p>
               <p class="mb-0 text-muted">{{ post.author }}</p>
               <p class="mb-2 text-muted">{{ post.created_on }}</p>
-              <a class="purp-btn px-2 py-1 p-font" href="{% url 'post_detail' post.slug %}">Read more</a>
+              <a class="btn purple-btn px-2 py-1 p-font rounded-0" href="{% url 'post_detail' post.slug %}">Read more</a>
             </div>
           </div>
         </div>

@@ -56,7 +56,7 @@
       <div class="row">
         {% for product in products %}
         <div class="col-6 col-md-4 col-lg-3">
-          <div class="card product-card h-100 border-0">
+          <div class="card bg-trans h-100 border-0">
             {% if product.image %}
             <a href="{% url 'product_detail' product.id %}">
               <img
@@ -81,8 +81,8 @@
             </div>
             {% if request.user.is_superuser %}
             <small class="pl-1 mt-2">
-                <a class="red-border-btn px-2 py-1 p-font" href="{% url 'edit_product' product.id %}">Edit</a>
-                <a class="add-btn px-2 py-1 p-font" href="{% url 'delete_product' product.id %}">Delete</a>
+                <a class="btn red-border-btn px-2 py-1 p-font rounded-0" href="{% url 'edit_product' product.id %}">Edit</a>
+                <a class="btn red-btn px-2 py-1 p-font rounded-0" href="{% url 'delete_product' product.id %}">Delete</a>
             </small>
             {% endif %}
           </div>

@@ -14,7 +14,7 @@
     <!--Back button-->
     <div class="row">
         <div class="col-12 p-0">
-            <a href="{% url 'forum' %}" class="ks-btn btn rounded-0 mt-3 mr-1 mb-3 p-font">
+            <a href="{% url 'forum' %}" class="navy-btn btn rounded-0 mt-3 mr-1 mb-3 p-font">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
@@ -47,7 +47,7 @@
         {% csrf_token %}
         </div>
         <div class="col-2 py-2">
-            <button type="submit" class="btn add-btn font-12 rounded-0 float-right py-1 px-2">Reply</button>
+            <button type="submit" class="btn purple-btn font-12 rounded-0 float-right py-1 px-2">Reply</button>
         </div>
         <p class="col-12 float-left text-muted small ml-1">Signed in as <strong class="text-dark">{{ user.username }}</strong></p>
     </form>

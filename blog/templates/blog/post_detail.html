@@ -12,7 +12,7 @@
     <!--Back button-->
     <div class="row">
         <div class="col-12">
-            <a href="{% url 'blog' %}" class="ks-btn btn rounded-0 mt-3 mr-1 p-font">
+            <a href="{% url 'blog' %}" class= "navy-btn btn rounded-0 mt-3 mr-1 p-font">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
@@ -78,7 +78,7 @@
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <p class="float-left text-muted small ml-1">Signed in as <strong class="text-dark">{{ user.username }}</strong></p>
-                    <button type="submit" class="ks-btn px-2 py-1 font-14 float-right">Post</button>
+                    <button type="submit" class="btn purple-btn px-2 py-1 font-14 float-right rounded-0">Post</button>
                 </form>
             </div>
         </div>

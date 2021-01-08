@@ -34,7 +34,7 @@
         <!-- Post body -->
         <div class="row grey-banner">
             <div class="col-12 pb-3 p-font">
-                    <p class="font-14">{{ thread.description }}</p>
+                    <p class="p-font">{{ thread.description }}</p>
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@
         {% csrf_token %}
         </div>
         <div class="col-2 py-2">
-            <button type="submit" class="btn purple-btn font-12 rounded-0 float-right py-1 px-2">Reply</button>
+            <button type="submit" class="btn purple-btn p-font rounded-0 float-right py-1 px-2">Reply</button>
         </div>
         <p class="col-12 float-left text-muted small ml-1">Signed in as <strong class="text-dark">{{ user.username }}</strong></p>
     </form>
@@ -56,7 +56,7 @@
     <div class="row programme-container">
         <!--Comment count-->
         <div class="col py-2">
-            <p class="font-12 text-muted">{{ comments.count }} replies</p>
+            <p class="small text-muted">{{ comments.count }} replies</p>
         </div>
     </div>
         <!-- comments -->

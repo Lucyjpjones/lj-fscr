@@ -16,7 +16,7 @@
     <div class="col grey-banner">
     {% blocktrans with site.name as site_name %}
     <p class="subtitle-font my-2">Sign in with email or username</p>
-    <p class="font-14 mt-1 mb-2">Not registered? <a class="pl-1" href="{{ signup_url }}"> Sign up</a></p>
+    <p class="p-font mt-1 mb-2">Not registered? <a class="pl-1" href="{{ signup_url }}"> Sign up</a></p>
     {% endblocktrans %}
     </div>
 </div>
@@ -31,7 +31,7 @@
             {% endif %}
             <button class="primaryAction btn navy-btn w-100 w-lg-75" type="submit">{% trans "Sign In" %}</button>
             <p class="mt-2">
-                <a class="button secondaryAction font-14" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                <a class="button secondaryAction p-font" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
             </p>
         </form>
     </div>

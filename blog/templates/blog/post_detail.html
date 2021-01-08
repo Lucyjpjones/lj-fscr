@@ -66,14 +66,14 @@
 
     <!--References Accordion-->
     {% if post.references %}
-    <div class="row mb-3 vw-100">
+    <div class="row mb-3 vw-100 vw-md-75">
         <div class="col-12">
             <a class="btn navy-border-btn mb-2 p-font rounded-0" data-toggle="collapse" href="#references" role="button" aria-expanded="false" aria-controls="references">
                         References
             </a>
             <div class="collapse" id="references">
                 <div class="card card-body rounded-0">
-                    <p class="p-font">{{ post.references|linenumbers|linebreaksbr }}</p>
+                    <p class="small">{{ post.references|linenumbers|linebreaksbr }}</p>
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <p class="float-left text-muted small ml-1">Signed in as <strong class="text-dark">{{ user.username }}</strong></p>
-                    <button type="submit" class="btn purple-btn px-2 py-1 font-14 float-right rounded-0">Post</button>
+                    <button type="submit" class="btn purple-btn px-2 py-1 p- float-right rounded-0">Post</button>
                 </form>
             </div>
         </div>
@@ -106,7 +106,7 @@
         <div class="row w-100">
             <div class="col">
                 {% for comment in comments %}
-                <div class="comments p-3 mt-3 font-14">
+                <div class="comments p-3 mt-3 p-font">
                     <p class="font-weight-bold">
                         {{ comment.user }}
                         <span class="text-muted font-weight-normal">

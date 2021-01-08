@@ -31,7 +31,7 @@
                     <table class="table table-sm table-borderless">
                         <thead class="table-header">
                             <tr class="d-flex p-1 pl-2">
-                                <th class="col-8 col-md-6">Topic<p class="p-0 text-muted font-12">({{ threads.count }} active threads)</p></th>
+                                <th class="col-8 col-md-6">Topic<p class="p-0 text-muted small">({{ threads.count }} active threads)</p></th>
                                 <th class="col-md-2 d-none d-md-block text-center">Replies</th>
                                 <th class="col-4 text-center">Posted</th>
                             </tr>
@@ -46,14 +46,14 @@
                                             {{ thread.topic }}
                                         </p>
                                     </a>
-                                    <p class="my-0 d-block d-md-none text-muted font-12"><i class="far fa-comment-dots"></i> {{ thread.comments.count }} replies</p>
+                                    <p class="my-0 d-block d-md-none text-muted small"><i class="far fa-comment-dots"></i> {{ thread.comments.count }} replies</p>
                                 </td>
                                 <td class="col-md-2 d-none d-md-block text-center">
                                     <p class="my-0">{{ thread.comments.count }}</p>
                                 </td>
                                 <td class="col-4 text-center">
                                     <p class="my-0 p-font">{{ thread.author }}</p>
-                                    <p class="my-0 text-muted font-12">{{ thread.created_on }}</p>
+                                    <p class="my-0 text-muted small">{{ thread.created_on }}</p>
                                 </td>
                             </tr>
                             {%endfor%}

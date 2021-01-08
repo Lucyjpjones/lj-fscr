@@ -309,6 +309,13 @@ header {
     object-fit: cover;
     object-position: 50% 20%;
 }
+.nav-pills li {
+    opacity: 0.7;
+}
+
+.nav-pills li.active, .nav-pills li:hover {
+    opacity: 1;
+}
 
 .nav-pills {
     margin: auto;

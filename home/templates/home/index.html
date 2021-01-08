@@ -58,11 +58,11 @@
         </div>
     </div>
 
-    <div class="mx-auto w-md-85">
+    <div class="mx-auto w-md-85 w-lg-75">
 
         <!-- Programme and Products card links -->
         <div class="row mt-4 mt-lg-5">
-            <div class="col-12 col-md-6 mb-4 mb-lg-3">
+            <div class="col-12 col-md-6 mb-4 mb-lg-0">
                 <div class="card border-0">
                     <img
                         class="index-prog-img col p-0"
@@ -97,7 +97,7 @@
                             <div class="row">
                                 <div class="col-12 col-md-6 py-1 px-2">
                                     <i class="fas fa-quote-left fa-xs mb-2"></i>
-                                    <p>Excellent program with detailed and effective workouts, highly recommend!</p>
+                                    <p>Excellent program with detailed and effective workouts!</p>
                                     <p class="text-muted pt-1 small">Mike Eglon</p>
                                 </div>
                                 <div class="col-12 col-md-6 py-1 px-2">
@@ -144,8 +144,8 @@
         <h2 class="title-font px-3 pb-2 mt-lg-5">View our latest Blogs</h2>
         <div class="row mb-4 mb-md-5">
             {% for post in posts %}
-            <div class="col-6 d-flex">
-                <div class="card rounded-0">
+            <div class="col-6">
+                <div class="card index-blog-card rounded-0">
                     {% if post.image %}
                     <img
                         class="index-blog-img img-fluid rounded-0"

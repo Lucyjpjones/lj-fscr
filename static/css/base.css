@@ -34,7 +34,7 @@ p,
 }
 
 .header-container {
-  padding-top: 98.52px;
+  padding-top: 98.53px;
 }
 
 .bg-trans {
@@ -143,7 +143,7 @@ p,
     color: #0E131F;
 }
 
-/* ---------- Header */
+/* ---------- Main Header */
 
 .red-banner {
   background-color: #ff0035;
@@ -187,8 +187,6 @@ header {
   min-height: calc(100vh - 40px);
 }
 
-/* https://stackoverflow.com/questions/43816377/add-body-overlay-when-a-sidebar-menu-opens/43816724 */
-
 .overlay {
     display: none;
     position: fixed;
@@ -220,7 +218,7 @@ header {
   left: 0;
   /* top layer */
   z-index: 999;
-  margin-top: 98.52px;
+  margin-top: 98.53px;
 }
 
 #sidebar a {
@@ -234,7 +232,7 @@ header {
 
 /* Callout image */
 .callout-img {
-  height: calc(100vh - 175.52px);
+  height: calc(100vh - 175.53px);
   filter: grayscale(0.4);
   width: 100vw;
   object-fit: cover;
@@ -281,6 +279,10 @@ header {
 }
 
 /* Latest blogs */
+
+.index-blog-card {
+    height: 280px;
+}
 
 .index-blog-img { 
     height: 40%;
@@ -440,9 +442,6 @@ input {
     font-size: 18px;
     font-weight: 700;
 }
-
-/* -------------------- Admin  */
-
 
 /* -------------------- bootstrap toasts */
 
@@ -614,23 +613,7 @@ input[name='q']::placeholder {
 
 @media only screen and (min-width: 600px) {
 
-    /* Index */
-    .callout-img {
-        height: calc(100vh - 187.11px);
-    }
-    .blog-detail-img {
-        height: 230px;
-    }
-
-    .form-inner {
-        margin: 30px 60px;
-    }
-
-    .index-blog-img { 
-        height: 60%;
-    }
-
-    /* Navbar and menu */
+    /* -------------------- Header  */
     .header-container {
         padding-top: 107.11px;
     }
@@ -644,34 +627,47 @@ input[name='q']::placeholder {
         font-size: 24px;
     }
 
-    /* Meet the coaches */
+    /* -------------------- Home app  */
+    .callout-img {
+        height: calc(100vh - 187.11px);
+    }
+    .index-blog-img { 
+        height: 60%;
+    }
+    .index-blog-card {
+        height: 300px;
+    }
+    .form-inner {
+        margin: 30px 60px;
+    }
     .profile-img {
         width: 180px;
         height: 180px;
     }
 
-    /* Admin */
-    .admin-container { /*keep*/
-        width: 80%;
-    }
-
-    /* Products*/
+    /* -------------------- Products app  */
     .prod-img-card {
         height: 300px;
     }
 
-    /* Programmes*/
+    /* -------------------- Programmes app  */
     .prog-img-card {
         height: 200px;
     }
-
     .prog-detail-img {
         height: 200px;
         object-fit: cover;
     }
 
-    /* Bag*/
+    /* -------------------- Blog app  */
+    .blog-detail-img {
+        height: 230px;
+    }
 
+    /* -------------------- Admin  */
+    .admin-container { /*keep*/
+        width: 80%;
+    }
 
 }
 
@@ -679,13 +675,22 @@ input[name='q']::placeholder {
 
 @media only screen and (min-width: 768px) {
 
+     /* -------------------- General  */
+
+     .w-md-50 {
+        width: 50% !important;
+    }
+    .w-md-75 {
+        width: 75% !important;
+    }
+    .vw-md-75 {
+        width: 75vw !important;
+    }
     .w-md-85 {
         width: 85%;
     }
-
-    /* Index */
-    .red-banner {
-        font-size: 16px;
+    .container-fluid {
+        width: 90%;
     }
     .title-font {
         font-size: 32px;
@@ -696,18 +701,9 @@ input[name='q']::placeholder {
     .p-font, .red-header {
         font-size: 15px;
     }
-    
-    .blog-img-card {
-         height: 250px;
-    }
-    .form-inner, .blog-inner {
-        max-width: 80%;
-    }
-    .index-blog-img { 
-        height: 70%;
-    }
 
-    /* Navbar and menu */
+    /* -------------------- Header  */
+
     .header-container {
         padding-top: 110.11px;
     }
@@ -719,63 +715,33 @@ input[name='q']::placeholder {
         font-size: 18px;
     }
 
-    /* Allauth */
-
-    .signup, .login {
-        max-width: 50%;
+    /* -------------------- Home app  */
+    .callout-img {
+        height: calc(100vh - 184.11px);
     }
-
-    .w-md-50 {
-        width: 50% !important;
+    .red-banner {
+        font-size: 16px;
     }
-
-    /* Meet the coaches */
     .profile-img {
         width: 220px;
         height: 220px;
     }
+    /* -------------------- Products app */
 
-    /* Products */
     .prod-detail-img {
         height: 450px;
     }
-
-    /* Programmes */
-
-    .container-fluid {
-        width: 90%;
-    }
-
     .sort-container {
         width: 70%;
         max-width: 550px;
     }
 
+    /* -------------------- Programmes app */
     .programme-card {
         height: 200px;
     }
 
-    /* Blog */
-    
-    .blog-detail-img {
-        height: 230px;
-    }
-
-    .img-h-250 {
-    height: 250px;
-    object-fit: cover;
-    }   
-
-    .w-md-75 {
-        width: 75% !important;
-    }
-
-    .vw-md-75 {
-        width: 75vw !important;
-    }
-
-    /* -------------------- Checkout app  */
-
+    /* -------------------- Checkout app */
     .prod-img-checkout {
         height: 80px;
     }
@@ -785,14 +751,43 @@ input[name='q']::placeholder {
         object-fit: cover;
     }
 
+    /* -------------------- Blog app  */
+    .blog-img-card {
+         height: 250px;
+    }
+    .form-inner, .blog-inner {
+        max-width: 80%;
+    }
+    .index-blog-img { 
+        height: 70%;
+    }
+    .index-blog-card {
+        height: 360px;
+    }
+    .blog-detail-img {
+        height: 230px;
+    }
+
+    /* -------------------- Allauth */
+
+    .signup, .login {
+        max-width: 50%;
+    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
    @media only screen and (min-width: 992px) {
 
-    /* Index */
-    .callout-img {
-        height: calc(100vh - 192.7px);
+    /* -------------------- General */
+    .w-lg-30 {
+        width: 30% !important;
+    }
+    .w-lg-40 {
+        width: 40% !important;
+    }
+    .w-lg-75 {
+        width: 75% !important;
     }
     .title-font {
         font-size: 36px;
@@ -802,20 +797,12 @@ input[name='q']::placeholder {
     }
     .p-font, .red-header {
         font-size: 16px;
-    } 
-   
-    .index-prog-img, .index-prod-img {
-        height: 350px;
     }
-    .blog-img-top {
-        height: 270px;
-    }
-    .form-inner {
-        max-width: 60%;
+    .admin-container {
+        width: 60%;
     }
 
-    /* Navbar and menu */
-
+    /* -------------------- Header */
     .header-container {
         padding-top: 118.7px;
     }
@@ -832,42 +819,42 @@ input[name='q']::placeholder {
         font-size: 26px;
     }
 
-    /* Allauth */
-
-    .signup, .login {
-        max-width: 40%;
+    /* -------------------- Home app */
+    .callout-img {
+        height: calc(100vh - 192.7px);
     }
-
-    .w-lg-75 {
-        width: 75% !important;
+    .index-prog-img, .index-prod-img {
+        height: 350px;
     }
-
-    .w-lg-40 {
-        width: 40% !important;
-    }
-
-    .w-lg-30 {
-        width: 30% !important;
-    }
-
-    /* Meet the coaches */
     .profile-img {
         width: 240px;
         height: 240px;
     }
 
-    /* Admin */
-    .admin-container {
-        width: 60%;
+    /* -------------------- Blog app */
+    .blog-img-top {
+        height: 270px;
     }
-    /* Profile */
-    .profile-container {
-        width: 90%;
+    .form-inner {
+        max-width: 60%;
     }
-    /* Programmes */
+    .index-blog-card {
+        height: 390px;
+    }
+
+    /* -------------------- Programmes app */
     .container-fluid {
         width: 90%;
     }
 
+    /* -------------------- Profile app */
+    .profile-container {
+        width: 90%;
+    }
+
+    /* -------------------- Allauth */
+    .signup, .login {
+        max-width: 40%;
+    }
 
 }

@@ -57,6 +57,8 @@ def thread_detail(request, slug):
             new_comment.user = request.user
             # Save the comment to the database
             new_comment.save()
+            # Clear comment field after save
+            comment_form = CommentForm()
     else:
         comment_form = CommentForm()
 

@@ -109,7 +109,7 @@ If a user forgets their password they have the option to click the 'forgot passw
 
 The profile page is specific to each user with a personalised username greeting,the option to save their own entered details and a log of their order history.
 
-(See user story 13 for imagery)
+<img src="media/us-15.png">
 
 **16. Enable my details to be prefilled**
 
@@ -162,7 +162,7 @@ The checkout page features a payment form allowing the user to easily enter thei
 
 <img src="media/us-23.png">
 
-**24. Feel my personal and payment information is safer and secure**
+**24. Feel my personal and payment information is safe and secure**
 
 <img src="media/us-24.png">
 

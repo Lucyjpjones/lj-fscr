@@ -235,6 +235,7 @@ To ensure my site was working correctly I carried out some manual function testi
 
 <u>Contact form JS functionality</u>
 
+- I checked the contact form was working correctly by filling out the form and clicking submit. I received a browser 'SUCCESS' response, the form cleared and I recieved an email, so I know the functionality was working.
 
 **Products**
 

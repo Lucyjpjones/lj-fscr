@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 from .models import Post, Comment
 from .forms import CommentForm
 from django.db.models.functions import Lower
@@ -9,6 +10,7 @@ from django.db.models.functions import Lower
 @login_required
 def all_posts(request):
     posts = Post.objects.filter(status=1).order_by('-created_on')
+    query = None
     sort = None
     direction = None
     count = posts.count()
@@ -28,14 +30,25 @@ def all_posts(request):
                     sortkey = f'-{sortkey}'
             posts = posts.order_by(sortkey)
 
-    if 'post_type' in request.GET:
-        categories = request.GET['post_type'].split(',')
-        posts = posts.filter(post_type__in=categories)
+        if 'post_type' in request.GET:
+            categories = request.GET['post_type'].split(',')
+            posts = posts.filter(post_type__in=categories)
+
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request,
+                               "You didn't enter any search criteria!")
+                return redirect(reverse('blog'))
+
+            queries = Q(title__icontains=query)
+            posts = posts.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
 
     context = {
         'posts': posts,
+        'search_term': query,
         'current_sorting': current_sorting,
     }
 

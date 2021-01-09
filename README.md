@@ -309,6 +309,9 @@ I will continue to update my website to meet my clients expectations. I have fur
 **Future Development plans**
 - Add more payment options for my users, including apple pay to improve user experience with quicker checkout.
 - 'Add a review' option for members to give their opinion on products and programmes they have purchased. As this is a startup there is currently no physical customer orders this was a lower priority task.
+- Add a count onto the bag icon so userso it is easily visible to the user how many items are in their bag.
+- Search functionality to work across site
+- Add video blogs to blog (already included in filter)
 
 ---
 
@@ -774,6 +777,13 @@ When you clone a repository, the repository is copied on to your local machine.
 
 
 #### Media
+
+- General site content provided by client
+- Images used for callout image, about page and profile images provided by client.
+- Blog content written by client with all references included
+- Product images were taken from [ASOS](https://www.asos.com/) and [Nike](https://www.nike.com/gb/) and edited to fit site.
+- Programme images were taken from 
+
 
 #### Acknowledgments
 

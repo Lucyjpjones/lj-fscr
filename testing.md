@@ -61,13 +61,13 @@ I have included a contact form on the home page which is also easily navigated t
 
 **8. Browse associated blogs, articles and recent new stories**
 
-I created a blog app that can only be viewed by site members. When a user is not logged in and they click on the blog they will be directed to the login/register page. If a user is a member and logged in they will be directed to the blog page where they can view blogs posted by the admin user. Members also have the ability to comment on blog posts creating further user interaction.
+I created a blog app that can only be viewed by site members. When a user is not logged in and they click on the blog they will be directed to the login/register page. If a user is a member and logged in they will be directed to the blog page where they can view blogs posted by the admin user. Members also have the ability to comment and delete their own comments on blog posts creating further user interaction.
 
 <img src="media/us-8.png">
 
 **9. Access a member forum**
 
-I created a forum app that can only be accessed by site members. When a user is not logged in and they click on the forum they will be directed to the login/register page. If a user is a member and logged in they will be directed to the forum page where they will have the option to view threads by other users and add their own. They also have the capability of adding a message to any thread which displays both their logged in username and date/time posted.
+I created a forum app that can only be accessed by site members. When a user is not logged in and they click on the forum they will be directed to the login/register page. If a user is a member and logged in they will be directed to the forum page where they will have the option to view threads by other users and add their own. They also have the capability of replying to any thread which displays both their logged in username and date/time posted.
 
 <img src="media/us-9.png">
 
@@ -235,7 +235,7 @@ To ensure my site was working correctly I carried out some manual function testi
 
 <u>Contact form JS functionality</u>
 
-- I checked the contact form was working correctly by filling out the form and clicking submit. I received a browser 'SUCCESS' response, the form cleared and I recieved an email, so I know the functionality was working.
+- I checked the contact form was working correctly by filling out the form and clicking submit. I received a browser 'SUCCESS' response, the form cleared and I recieved an email, so I knew the functionality was working.
 
 **Products**
 
@@ -277,7 +277,7 @@ I checked the delete function buttons were all visible when logged in as admin a
 
 <u>Add to bag functionality</u>
 
-I checked that my add to bag function was working by selecting a range of products and programmes and adding them to the bag to check there was no errors. Whilst creating this function I did experience difficulty adding from using id's to target products from different apps. I rectified this by adding in category to the url so i could differentiate products from programmes.
+I checked that my add to bag function was working by selecting a range of products and programmes and adding them to the bag to check there was no errors. Whilst creating this function I did experience difficulty adding from using id's to target products from different apps. I rectified this by adding in category to the url so I could differentiate products from programmes.
 
 <u>View bag functionality</u>
 
@@ -291,21 +291,33 @@ I checked that my add to bag function was working by selecting a range of produc
 
 <u>View blog functionality</u>
 
+To check that the post detail view was working correctly I navigated to the blog page and clicked on each blog 'read me' link to check I was naviagted to the correct post detail page, and I was.
+
 <u>Commenting on blog</u>
 
 When logged in as a member/admin I clicked onto a variety of forums and entered a comment into the text field and clicked 'post'. I could see that the comment had been added below with the correct logged in username and date/time so I knew the functionality was working correctly.
+
+<u>Deleting own comment from blog</u>
+
+To check I was only able to delete my own comments, I logged in and checked the trash icon was only visible on the specific comments I had posted, which it was. I then checked the delete functionality was working correctly. After clicking on the icon, the comment was deleted and I received a success toast, as was expected.
 
 **Forum**
 
 <u>View thread functionality</u>
 
+To check that the thread detail view was working correctly I navigated to the forum page and clicked on each thread title link to check I was naviagted to the correct thread detail page, and I was.
+
 <u>Adding Thread</u>
 
 I checked that the functionality for adding a thread to the forum was working by logging in as a member/admin and clicking 'add thread' on the forums page. I was directed to a form to fill and when clicking 'post' I could see that my thread had been added to the forum page so I knew it was working correctly.
 
-<u>Commenting on forum</u>
+<u>Replying to thread</u>
 
-When logged in as a member/admin I clicked onto a variety of forums and entered a comment into the text field and clicked 'post'. I could see that the comment had been added below with the correct logged in username and date/time so I knew the functionality was working correctly.
+When logged in as a member/admin I clicked onto a variety of forums and entered a reply into the text field and clicked 'post'. I could see that the reply had been added below with the correct logged in username and date/time so I knew the functionality was working correctly.
+
+<u>Deleting own reply from thread</u>
+
+To check I was only able to delete my own replies, I logged in and checked the trash icon was only visible on the specific replies I had posted, which it was. I then checked the delete functionality was working correctly. After clicking on the icon, the reply was deleted and I received a success toast, as was expected.
 
 ### **Automated testing**
 

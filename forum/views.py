@@ -3,13 +3,13 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import CommentForm, ThreadForm
 from django.db.models.functions import Lower
-from .models import Thread, Comment
+from .models import Thread, Reply
 
 
 @login_required
 def all_threads(request):
     threads = Thread.objects.filter(status=1).order_by('-created_on')
-    comments = Comment.objects.all
+    replies = Reply.objects.all
     sort = None
     direction = None
 
@@ -32,7 +32,7 @@ def all_threads(request):
     context = {
         'threads': threads,
         'current_sorting': current_sorting,
-        'comments': comments
+        'replies': replies
     }
 
     return render(request, 'forum/forum.html', context)
@@ -42,30 +42,30 @@ def all_threads(request):
 def thread_detail(request, slug):
     template_name = 'forum/thread_detail.html'
     thread = get_object_or_404(Thread, slug=slug)
-    comments = thread.comments.filter(active=True)
-    new_comment = None
+    replies = thread.replies.filter(active=True)
+    new_reply = None
 
     # Comment posted
     if request.method == 'POST':
-        comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
+        reply_form = CommentForm(data=request.POST)
+        if reply_form.is_valid():
             # Create Comment object but don't save to database yet
-            new_comment = comment_form.save(commit=False)
+            new_reply = reply_form.save(commit=False)
             # Assign the current post to the comment
-            new_comment.thread = thread
+            new_reply.thread = thread
             # Get username
-            new_comment.user = request.user
+            new_reply.user = request.user
             # Save the comment to the database
-            new_comment.save()
+            new_reply.save()
             # Clear comment field after save
-            comment_form = CommentForm()
+            reply_form = CommentForm()
     else:
-        comment_form = CommentForm()
+        reply_form = CommentForm()
 
     return render(request, template_name, {'thread': thread,
-                                           'comments': comments,
-                                           'new_comment': new_comment,
-                                           'comment_form': comment_form})
+                                           'replies': replies,
+                                           'new_reply': new_reply,
+                                           'reply_form': reply_form})
 
 
 @login_required
@@ -89,3 +89,11 @@ def add_thread(request):
     }
 
     return render(request, template, context)
+
+@login_required
+def delete_own_reply(request, reply_id):
+    """ Delete own comment from the blog """
+    reply = get_object_or_404(Reply, pk=reply_id)
+    reply.delete()
+    messages.success(request, 'Reply deleted!')
+    return redirect('forum')

@@ -1,10 +1,10 @@
-from .models import Comment, Thread
+from .models import Reply, Thread
 from django import forms
 
 
 class CommentForm(forms.ModelForm):
     class Meta:
-        model = Comment
+        model = Reply
         fields = ['body']
 
     # https://stackoverflow.com/questions/11472495/remove-labels-in-a-django-crispy-forms

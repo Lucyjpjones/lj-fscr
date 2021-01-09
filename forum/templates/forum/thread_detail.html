@@ -43,7 +43,7 @@
     {% load crispy_forms_tags %}
     <form class="row d-grey-banner border programme-container pb-2" method="post">
         <div class="col-10 pt-2">
-        {{ comment_form | crispy }}
+        {{ reply_form | crispy }}
         {% csrf_token %}
         </div>
         <div class="col-2 py-2">
@@ -56,21 +56,28 @@
     <div class="row programme-container">
         <!--Comment count-->
         <div class="col py-2">
-            <p class="small text-muted">{{ comments.count }} replies</p>
+            <p class="small text-muted">{{ replies.count }} replies</p>
         </div>
     </div>
         <!-- comments -->
     <div class="row programme-container">
         <div class="col p-0 mb-4 mt-3 ">
-            {% for comment in comments %}
+            {% for reply in replies %}
             <div class="comments border p-3 mb-2 p-font">
             <p class="font-weight-bold">
-                {{ comment.user }}
+                {{ reply.user }}
                 <span class="text-muted font-weight-normal pl-1">
-                {{ comment.created_on }}
+                {{ reply.created_on }}
                 </span>
+                {% if user.is_authenticated and user == reply.user %}
+                <a href="{% url 'delete_own_reply' reply.id %}">
+                    <span class="float-right">
+                        <i class="far fa-trash-alt"></i>
+                    </span>
+                </a>
+                {% endif %}
             </p>
-            {{ comment.body | linebreaksbr }}
+            {{ reply.body | linebreaksbr }}
             </div>
             {% endfor %}
         </div>

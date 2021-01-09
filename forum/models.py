@@ -32,10 +32,10 @@ class Thread(models.Model):
         return super(Thread, self).save(*args, **kwargs)
 
 
-class Comment(models.Model):
+class Reply(models.Model):
     thread = models.ForeignKey(Thread, on_delete=models.CASCADE, related_name
-        ='comments', null=True)
-    user = models.CharField(max_length=80, null=True)
+                               ='replies', null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
     body = models.CharField(max_length=300, null=True)
     created_on = models.DateTimeField(auto_now_add=True, null=True)
     active = models.BooleanField(default=True)
@@ -44,4 +44,4 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return 'Comment {} by {}'.format(self.body, self.user)
+        return 'Reply {} by {}'.format(self.body, self.user)

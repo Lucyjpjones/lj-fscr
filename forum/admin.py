@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Thread, Comment
+from .models import Thread, Reply
 
 
 class ThreadAdmin(admin.ModelAdmin):
@@ -12,7 +12,7 @@ class ThreadAdmin(admin.ModelAdmin):
 admin.site.register(Thread, ThreadAdmin)
 
 
-@admin.register(Comment)
+@admin.register(Reply)
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('user', 'body', 'thread', 'created_on', 'active')
     list_filter = ('active', 'created_on')

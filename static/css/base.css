@@ -73,8 +73,12 @@ p,
     margin-left: 0px !important;
 }
 
-.fas.fa-quote-left, .fas.fa-paper-plane, .fas.fa-check-square, .red-profile-icon {
+.fas.fa-quote-left, .fas.fa-paper-plane, .fas.fa-check-square, .red-profile-icon, .far.fa-trash-alt {
     color: #ff0035 !important;
+}
+
+.far.fa-trash-alt {
+    color: #ff0035;
 }
 
 /* Fonts */

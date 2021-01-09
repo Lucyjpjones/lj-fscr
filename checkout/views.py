@@ -40,7 +40,7 @@ def checkout(request):
 
     if request.method == 'POST':
         bag = request.session.get('bag', {'product': {},
-                                    'programme': {}})
+                                          'programme': {}})
 
         form_data = {
             'full_name': request.POST['full_name'],

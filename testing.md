@@ -13,7 +13,7 @@
 
 ---
 
-#### Testing user stories
+### **Testing user stories**
 
 <u>Viewing and Navigation</u>
 
@@ -109,6 +109,8 @@ If a user forgets their password they have the option to click the 'forgot passw
 
 The profile page is specific to each user with a personalised username greeting,the option to save their own entered details and a log of their order history.
 
+(See user story 13 for imagery)
+
 **16. Enable my details to be prefilled**
 
 If the user has filled in their profile information, these details will be prefilled at checkout. The user also has the option to tick the save details options on checkout which will automatically save details to their profile page.
@@ -200,7 +202,7 @@ When logged in as admin user, the user has a delete button displayed next to the
 
 When logged into the admin, the admin user can add a new blog to the site. I didn't think it was nessessary to add a manual function for adding a blog as these will be posted less frequently and have little chance of needing modifications after being posted.
 
-#### Manual function testing
+### **Manual function testing**
 
 To ensure my site was working correctly I carried out some manual function testing;
 
@@ -230,6 +232,9 @@ To ensure my site was working correctly I carried out some manual function testi
 **Form validation**
 
 **Home**
+
+<u>Contact form JS functionality</u>
+
 
 **Products**
 
@@ -283,11 +288,15 @@ I checked that my add to bag function was working by selecting a range of produc
 
 **Blog**
 
+<u>View blog functionality</u>
+
 <u>Commenting on blog</u>
 
 When logged in as a member/admin I clicked onto a variety of forums and entered a comment into the text field and clicked 'post'. I could see that the comment had been added below with the correct logged in username and date/time so I knew the functionality was working correctly.
 
 **Forum**
+
+<u>View thread functionality</u>
 
 <u>Adding Thread</u>
 
@@ -297,12 +306,12 @@ I checked that the functionality for adding a thread to the forum was working by
 
 When logged in as a member/admin I clicked onto a variety of forums and entered a comment into the text field and clicked 'post'. I could see that the comment had been added below with the correct logged in username and date/time so I knew the functionality was working correctly.
 
-#### Automated testing
+### **Automated testing**
 
 I also decided to use Django's testing framework to create some automated tests for my prpject.
 
 
-#### Validator checks
+### **Validator checks**
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project. The code was entered through direct input. JS hint was used to check for any errors with my Javascript files. 
 JS was also tested by opening the developer console window on Chrome and checking for any errors as I clicked through the site.
@@ -323,11 +332,11 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 - [**PEP8 online check**](http://pep8online.com/checkresult)
 
 
-#### Audits
+### **Audits**
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to run a series of audits to improve the quality of web pages. Overall performance and errors are highlighted below.
 
-#### Responsive Design
+### **Responsive Design**
 
 - Site created as a mobile-first design.
 
@@ -335,9 +344,9 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 - Media queries used in the CSS file to target larger devices.
 
-#### Additional Testing
+### **Additional Testing**
 
-#### Bugs
+### **Bugs**
 
 |     | Bug                                                                           | Action                                                            |
 |-----|-------------------------------------------------------------------------------|-------------------------------------------------------------------|

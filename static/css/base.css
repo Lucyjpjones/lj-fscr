@@ -217,7 +217,7 @@ header {
   top: 0;
   left: 0;
   /* top layer */
-  z-index: 999;
+  z-index: 1000;
   margin-top: 98.53px;
 }
 

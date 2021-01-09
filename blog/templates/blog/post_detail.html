@@ -109,9 +109,16 @@
                 <div class="comments p-3 mt-3 p-font">
                     <p class="font-weight-bold">
                         {{ comment.user }}
-                        <span class="text-muted font-weight-normal">
+                        <span class="text-muted small font-weight-normal">
                         {{ comment.created_on }}
                         </span>
+                        {% if user.is_authenticated and user == comment.user %}
+                        <a href="{% url 'delete_own_comment' comment.id %}">
+                            <span class="float-right">
+                                <i class="far fa-trash-alt"></i>
+                            </span>
+                        </a>
+                        {% endif %}
                     </p>
                     {{ comment.body | linebreaks }}
                 </div>

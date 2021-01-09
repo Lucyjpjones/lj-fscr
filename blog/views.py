@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm
 from django.db.models.functions import Lower
 
@@ -69,3 +70,12 @@ def post_detail(request, slug):
                                            'comments': comments,
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
+
+
+@login_required
+def delete_own_comment(request, comment_id):
+    """ Delete own comment from the blog """
+    comment = get_object_or_404(Comment, pk=comment_id)
+    comment.delete()
+    messages.success(request, 'Comment deleted!')
+    return redirect('blog')

@@ -37,9 +37,7 @@ I created a 'programmes' page including a list of all programmes, displaying pro
 
 **4. View a specific category of products or programmes**
 
-I added a sort and filter option to both the products and programmes page. Users have the ability to sort alphabetically, by price or by highest rated. They also have the option to filter by a specific category to allow them to quickly find what they are searching for.
-
-<img src="media/us-4.png">
+I added a filter option to both the products and programmes page giving users the ability to quickly find what they are searching for. (More specific details on this in user story 17).
 
 **5. View individual product details**
 
@@ -122,6 +120,8 @@ If the user has filled in their profile information, these details will be prefi
 **17. Sort and filter the list of available products and programmes**
 
 I have added a sort and filter option to the products and programmes page to allow a user to easily find what they are looking for. I also decided to add this function to the blog page as I think it will be useful to the user as more blogs get posted over time.
+
+The pages also feature a count functionality showing the user how many items are being displayed on the page. For example if the user filtered the products page by accessories they would see all the accessories and the number of products found. If no products are found the user would be displayed with the message "Sorry no search results found".
 
 <img src="media/us-17.png">
 

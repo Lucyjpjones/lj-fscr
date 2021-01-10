@@ -317,7 +317,7 @@ header {
     opacity: 0.7;
 }
 
-.nav-pills li a.active img, .nav-pills li:hover {
+.nav-pills li a.active img, .nav-pills li a img:hover {
     opacity: 1;
 }
 

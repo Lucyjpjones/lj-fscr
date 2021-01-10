@@ -10,6 +10,8 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 
 </div>
 
+Disclaimer: 
+
 ---
 
 ## <u>Table of contents</u>

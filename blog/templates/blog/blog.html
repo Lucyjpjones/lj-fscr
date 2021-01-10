@@ -10,7 +10,7 @@
 {% endblock %} {% block content %}
 
 <!--Page title-->
-<div class="mx-auto w-md-85">
+<div class="container-fluid">
   <div class="row">
     <div class="col text-center">
       <h2 class="title-font py-4">Blog</h2>
@@ -50,9 +50,12 @@
   <!--Blog cards-->
   <div class="row mt-sm-3">
     <div class="col-12 offset-1">
-      <div class="row mt-1 mb-4"></div>
+      <div class="row mt-1 mb-3"></div>
       <div class="row">
         {% if posts %}
+        <div class="col-12">
+            <p class="mb-3 text-muted small text-center">{{ posts.count }} blogs found</p>
+        </div>
         {% for post in posts %}
         <div class="col-12 col-md-6">
           <div class="card bg-trans h-100 border-0">

@@ -237,6 +237,12 @@ To ensure my site was working correctly I carried out some manual function testi
 
 - I checked the contact form was working correctly by filling out the form and clicking submit. I received a browser 'SUCCESS' response, the form cleared and I recieved an email, so I knew the functionality was working.
 
+**Meet the Coaches**
+
+<u>Tab functionality</u>
+
+- I checked that the opacity class was working correctly but clicking on a profile image and ensuring the active one was clear and the other one had an opaque effect.
+
 **Products**
 
 <u>View product functionality</u>

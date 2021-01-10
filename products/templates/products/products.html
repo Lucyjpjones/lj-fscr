@@ -52,9 +52,12 @@
   <!--Product cards-->
   <div class="row mt-sm-3">
     <div class="col-12 offset-1">
-      <div class="row mt-1 mb-4"></div>
+      <div class="row mt-1 mb-3"></div>
       <div class="row">
       {% if products %}
+        <div class="col-12">
+            <p class="mb-3 text-muted small text-center">{{ products.count }} products found</p>
+        </div>
         {% for product in products %}
         <div class="col-6 col-md-4 col-lg-3">
           <div class="card bg-trans h-100 border-0">

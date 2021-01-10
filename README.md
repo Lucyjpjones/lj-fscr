@@ -314,6 +314,7 @@ I will continue to update my website to meet my clients expectations. I have fur
 - Add a count onto the bag icon so userso it is easily visible to the user how many items are in their bag.
 - Search functionality to work across site
 - Add video blogs to blog (already included in filter)
+- Ability for user to enter postcode and autofill whole address
 
 ---
 

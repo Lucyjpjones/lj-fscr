@@ -104,11 +104,11 @@
                         <p class="text-muted mb-3">Personal Details</p>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
+                        {{ order_form.phone_number | as_crispy_field }}
                     </fieldset>
                     <!--Delivery Information-->
                     <fieldset class="rounded grey-banner py-3 px-4 mb-4">
                         <p class="text-muted mb-3">Delivery Information</p>
-                        {{ order_form.phone_number | as_crispy_field }}
                         {{ order_form.street_address1 | as_crispy_field }}
                         {{ order_form.street_address2 | as_crispy_field }}
                         {{ order_form.town_or_city | as_crispy_field }}

@@ -136,8 +136,8 @@ The **Category model** within the programmes app, is used to group programmes in
 
 The **UserProfile** model within the profiles app is used to store users profile information and is connected to various apps for other benefits;
 - Checkout app - to store users checkout information, as well as order history.
-- Blog app - allows users to leave a comment with their username automatically displayed.
-- Forum appp - allows users to leave a comment with their username automatically displayed.
+- Blog app - to store name of user who created the blog and allows users to leave a comment with their username automatically displayed.
+- Forum appp - to store name of user who created thread allows users to leave a comment with their username automatically displayed.
 
 The **Post model** within the blog app, is used to store posts added by the admin user.
 The **Comments model** within the blog app, is used to store comments added by the user who is logged in.
@@ -146,7 +146,8 @@ The **Thread model** within the forum app, is used to store threads added by the
 The **Comment model** within the forum app, is used to store comments made by the user logged in.
 
 The **Order model** within the checkout app, is used to store orders.
-The **OrderLineItem model** within the checkout app, is used to store information about individual orders.
+The **OrderLineItem model** within the checkout app, is used to store information about individual products on the order.
+The **ProgOrderLineItem model** within the checkout app, is used to store information about individual programmes on the order.
 
 ### **<u>User Stories</u>**
 

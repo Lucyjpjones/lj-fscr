@@ -54,6 +54,7 @@
     <div class="col-12 offset-1">
       <div class="row mt-1 mb-4"></div>
       <div class="row">
+        {% if programmes %}
         {% for programme in programmes %}
         <div class="col-12 p-0">
           <div class="card bg-trans h-100 border-0 mb-4 px-3">
@@ -89,6 +90,11 @@
           </div>
         </div>
         {% endfor %}
+        {% else %}
+        <div class="mx-auto">
+            <p class="p-font mb-5">Sorry no search results found</p>
+        </div>
+        {% endif %}
       </div>
     </div>
   </div>

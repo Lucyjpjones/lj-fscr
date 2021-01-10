@@ -52,6 +52,7 @@
     <div class="col-12 offset-1">
       <div class="row mt-1 mb-4"></div>
       <div class="row">
+        {% if posts %}
         {% for post in posts %}
         <div class="col-12 col-md-6">
           <div class="card bg-trans h-100 border-0">
@@ -80,7 +81,13 @@
         <div class="col-12 d-md-none mb-5"></div>
         {% endif %} {% if forloop.counter|divisibleby:2 %}
         <div class="col-12 d-none d-md-block mb-5"></div>
-        {% endif %} {% endfor %}
+        {% endif %} 
+        {% endfor %}
+        {% else %}
+        <div class="mx-auto">
+            <p class="p-font mb-5">Sorry no search results found</p>
+        </div>
+        {% endif %}
       </div>
     </div>
   </div>

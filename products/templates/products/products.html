@@ -54,6 +54,7 @@
     <div class="col-12 offset-1">
       <div class="row mt-1 mb-4"></div>
       <div class="row">
+      {% if products %}
         {% for product in products %}
         <div class="col-6 col-md-4 col-lg-3">
           <div class="card bg-trans h-100 border-0">
@@ -94,6 +95,11 @@
         {% endif %} {% if forloop.counter|divisibleby:4 %}
         <div class="col-12 d-none d-lg-block mb-5"></div>
         {% endif %} {% endfor %}
+        {% else %}
+        <div class="mx-auto">
+            <p class="p-font mb-5">Sorry no search results found</p>
+        </div>
+        {% endif %}
       </div>
     </div>
   </div>

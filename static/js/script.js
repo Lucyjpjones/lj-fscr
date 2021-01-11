@@ -1,19 +1,15 @@
 $(document).ready(function () { 
 
 
-
-    /* If sidebar active
-    if ( $("#sidebar").hasClass('active') ) {
-        $(document).on("click", function(event) {
+    /* If sidebar active 
+    $(document).on("click", function(event) {
             if (!$(event.target).closest("#sidebar").length) {
                 $("#sidebar").toggleClass("active");
                 $(".overlay").toggleClass("enabled");
                 $("#navbar-bars").toggleClass("d-none");
                 $("#navbar-close").toggleClass("d-none");
-            }
-        });
-    }
-    */
+        }
+    });*/
 
     /* Sidebar Toggle */
     $("#sidebarCollapse").on("click", function () {
@@ -23,6 +19,7 @@ $(document).ready(function () {
         $("#navbar-bars").toggleClass("d-none");
         $("#navbar-close").toggleClass("d-none");
     });
+
 
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;

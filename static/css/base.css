@@ -3,45 +3,47 @@
 /* -------------------- General  */
 
 html {
-  height: 100%;
+   height: 100%;
 }
 
 body {
-  height: 100%;
-  color: #0e131f;
-  font-family: "Lato", sans-serif;
-  background-color: #bdc1c750;
+   height: 100%;
+   color: #0e131f;
+   font-family: "Lato", sans-serif;
+   background-color: #bdc1c750;
 }
 
 footer {
-  position: relative;
-  background-color: #ff0035;
-  text-align: center;
-  width: 100%;
-  height: 40px;
+   position: relative;
+   background-color: #ff0035;
+   text-align: center;
+   width: 100%;
+   height: 40px;
 }
 
 footer h6 {
-  font-size: 12px;
-  padding: 10px;
-  margin: 0px;
+   font-size: 12px;
+   padding: 10px;
+   margin: 0px;
 }
 
 p,
 .row,
 .col-12 {
-  margin: 0px;
+   margin: 0px;
 }
 
 .header-container {
-  padding-top: 98.53px;
+   padding-top: 98.53px;
 }
 
 .bg-trans {
-  background-color: transparent !important;
+   background-color: transparent !important;
 }
 
+
 /* ----------- Typography */
+
 
 /* Icons */
 
@@ -49,823 +51,898 @@ p,
 .grey-icon:active,
 .grey-icon:focus,
 .grey-icon:hover {
-  color: #bdc1c7;
+   color: #bdc1c7;
 }
+
 .red-icon,
 .red-icon:active,
 .red-icon:focus,
 .red-icon:hover {
-  color: #ff0035;
+   color: #ff0035;
 }
+
 .navy-icon,
 .navy-icon:active,
 .navy-icon:focus,
 .navy-icon:hover {
-  color: #38405f;
+   color: #38405f;
 }
 
-.grey-icon:hover, .red-icon:hover {
-    text-decoration: none;
-  filter: opacity(0.5);
+.grey-icon:hover,
+.red-icon:hover {
+   text-decoration: none;
+   filter: opacity(0.5);
 }
 
-.flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before {
-    margin-left: 0px !important;
+.flaticon-shopping-bag:before,
+.flaticon-menu:before,
+.flaticon-search:before,
+.flaticon-user:before {
+   margin-left: 0px !important;
 }
 
-.fas.fa-quote-left, .fas.fa-paper-plane, .fas.fa-check-square, .red-profile-icon, .far.fa-trash-alt {
-    color: #ff0035 !important;
+.fas.fa-quote-left,
+.fas.fa-paper-plane,
+.fas.fa-check-square,
+.red-profile-icon,
+.far.fa-trash-alt {
+   color: #ff0035 !important;
 }
 
-.far.fa-trash-alt, .fas.fa-edit {
-    color: #ff0035;
+.far.fa-trash-alt,
+.fas.fa-edit {
+   color: #ff0035;
 }
+
 
 /* Fonts */
 
 .title-font {
-  font-size: 28px;
+   font-size: 28px;
 }
 
 .subtitle-font {
-    font-size: 20px;
-    color: #6c757d!important;
+   font-size: 20px;
+   color: #6c757d!important;
 }
 
 .p-font {
-    font-size: 14px;
+   font-size: 14px;
 }
 
 .white-text {
-    color: #f8f8f8;
+   color: #f8f8f8;
 }
+
 
 /* Buttons */
 
 .navy-btn {
-    background-color: #38405F;
-    border: solid 2px #38405F;
-    color: #f8f8f8;
+   background-color: #38405F;
+   border: solid 2px #38405F;
+   color: #f8f8f8;
 }
 
 .navy-border-btn {
-    background-color: transparent;
-    border: solid 2px #38405F;
-    color: #38405F;
+   background-color: transparent;
+   border: solid 2px #38405F;
+   color: #38405F;
 }
 
 .red-btn {
-    background-color: #FF0035;
-    border: solid 2px #FF0035;
-    color: #f8f8f8;
-    font-size: 14px;
+   background-color: #FF0035;
+   border: solid 2px #FF0035;
+   color: #f8f8f8;
+   font-size: 14px;
 }
 
 .red-border-btn {
-    background-color: transparent;
-    border: solid 2px #FF0035;
-    color: #38405F;
+   background-color: transparent;
+   border: solid 2px #FF0035;
+   color: #38405F;
 }
 
 .purple-btn {
-    background-color: #59546C;
-    border: solid 2px #59546C;
-    color: #f8f8f8;
+   background-color: #59546C;
+   border: solid 2px #59546C;
+   color: #f8f8f8;
 }
 
 .filter-btn {
-    border: solid 2px #38405f;
-    font-size: 14px;
-    width: 100%;
+   border: solid 2px #38405f;
+   font-size: 14px;
+   width: 100%;
 }
 
-.update-link, .remove-item {
-    cursor: pointer;
+.update-link,
+.remove-item {
+   cursor: pointer;
 }
 
 .btn:hover {
-    color: #0E131F;
+   color: #0E131F;
 }
+
 
 /* ---------- Main Header */
 
 .red-banner {
-  background-color: #ff0035;
-  font-size: 14px;
-  font-weight: 600;
-  color: #f8f8f8;
-  text-align: center;
-  text-transform: uppercase;
+   background-color: #ff0035;
+   font-size: 14px;
+   font-weight: 600;
+   color: #f8f8f8;
+   text-align: center;
+   text-transform: uppercase;
 }
 
 header {
-  background-color: #38405f;
+   background-color: #38405f;
 }
 
 .main-logo-link img {
-  width: 120px;
-  padding: 5px 0px;
+   width: 120px;
+   padding: 5px 0px;
 }
 
 .nav-link {
-  padding: 0.5rem 0.5rem;
+   padding: 0.5rem 0.5rem;
 }
+
 
 /* Search */
+
 .search-input {
-  width: 60vw !important;
-  border: none !important;
-  background-color: #f8f8f8;
-  font-size: 14px;
-}
-.search-card {
-  background-color: #ff0035;
-}
-.search-form {
-  background-color: #f8f8f8;
+   width: 60vw !important;
+   border: none !important;
+   background-color: #f8f8f8;
+   font-size: 14px;
 }
 
+.search-card {
+   background-color: #ff0035;
+}
+
+.search-form {
+   background-color: #f8f8f8;
+}
+
+
 /* Sidenav */
+
 .wrapper {
-  display: flex;
-  min-height: calc(100vh - 40px);
+   display: flex;
+   min-height: calc(100vh - 40px);
 }
 
 .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 999;
+   display: none;
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.7);
+   z-index: 999;
 }
 
 .overlay.enabled {
-  display: initial;
+   display: initial;
 }
 
 #sidebar.active {
-  margin-left: -70%;
+   margin-left: -70%;
 }
 
 #sidebar {
-  min-width: 70%;
-  max-width: 250px;
-  background: #bdc1c7;
-  color: #38405f;
-  transition: all 0.3s;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* top layer */
-  z-index: 1000;
-  margin-top: 98.53px;
+   min-width: 70%;
+   max-width: 250px;
+   background: #bdc1c7;
+   color: #38405f;
+   transition: all 0.3s;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   /* top layer */
+   z-index: 1000;
+   margin-top: 98.53px;
 }
 
 #sidebar a {
-  color: #38405f;
-  font-size: 16px;
+   color: #38405f;
+   font-size: 16px;
 }
+
 
 /* -------------------- Home app  */
 
+
 /* ----------- Index */
 
+
 /* Callout image */
+
 .callout-img {
-  height: calc(100vh - 175.53px);
-  filter: grayscale(0.4);
-  width: 100vw;
-  object-fit: cover;
-  object-position: bottom;
+   height: calc(100vh - 175.53px);
+   filter: grayscale(0.4);
+   width: 100vw;
+   object-fit: cover;
+   object-position: bottom;
 }
+
 
 /* Red callout banner */
+
 .callout-btn {
-  background-color: #38405f;
-  color: #f8f8f8;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 5px;
-  padding: 2px 8px;
+   background-color: #38405f;
+   color: #f8f8f8;
+   font-weight: bold;
+   text-align: center;
+   text-transform: uppercase;
+   margin: 5px;
+   padding: 2px 8px;
 }
+
 
 /* Programme and Products card links */
-.index-prog-img, .index-prod-img { /*prog-img*/
-    height: 300px;
-    object-fit: cover;
-    filter: grayscale(0.4);
-}
-.index-prog-btn, .index-prod-btn {
-    position: absolute;
-    top: 50%;
-    text-align: center;
-}
-.index-prog-btn a, .index-prod-btn a {
-    background-color: #59546C;
-    color: #f8f8f8;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
+
+.index-prog-img,
+.index-prod-img {
+   /*prog-img*/
+   height: 300px;
+   object-fit: cover;
+   filter: grayscale(0.4);
 }
 
+.index-prog-btn,
+.index-prod-btn {
+   position: absolute;
+   top: 50%;
+   text-align: center;
+}
+
+.index-prog-btn a,
+.index-prod-btn a {
+   background-color: #59546C;
+   color: #f8f8f8;
+   font-size: 20px;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+
+
 /* Testimonial carousel */
+
 .testimonials {
-  background-color: #bdc1c770;
-  height: 200px;
+   background-color: #bdc1c770;
+   height: 200px;
 }
+
 .carousel-testimonials {
-  height: 400px;
+   height: 400px;
 }
+
 
 /* Latest blogs */
 
 .index-blog-card {
-    height: 280px;
+   height: 280px;
 }
 
-.index-blog-img { 
-    height: 40%;
-    object-fit: cover;
+.index-blog-img {
+   height: 40%;
+   object-fit: cover;
 }
+
 
 /* Contact Form */
+
 .contact-container {
-  background-color: #38405f;
+   background-color: #38405f;
 }
 
 .form-inner {
-    background-color: #f8f8f8;
+   background-color: #f8f8f8;
 }
+
 
 /* -----------Meet the Coaches*/
 
+
 /* Profile images*/
+
 .profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: solid 2px #59546C;
-    object-fit: cover;
-    object-position: 50% 20%;
-}
-.nav-pills li a img {
-    opacity: 0.7;
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   border: solid 2px #59546C;
+   object-fit: cover;
+   object-position: 50% 20%;
 }
 
-.nav-pills li a.active img, .nav-pills li a img:hover {
-    opacity: 1;
+.nav-pills li a img {
+   opacity: 0.7;
+}
+
+.nav-pills li a.active img,
+.nav-pills li a img:hover {
+   opacity: 1;
 }
 
 .nav-pills {
-    margin: auto;
+   margin: auto;
 }
 
 .tab-pane {
-    border: solid 1px #bdc1c7;
-    background-color: #f8f8f8;
+   border: solid 1px #bdc1c7;
+   background-color: #f8f8f8;
 }
+
 
 /* -------------------- Products app  */
 
+
 /* ---------- Products */
 
-.prod-img-card { /*prod-img-top*/
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.prod-img-card {
+   /*prod-img-top*/
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
 }
+
 
 /* ---------- Product Detail */
+
 .prod-detail-img {
-    height: 350px;
-    object-fit: cover;
-    width: 100%;
+   height: 350px;
+   object-fit: cover;
+   width: 100%;
 }
 
+
 /* -------------------- Programmes app  */
+
 
 /* ---------- Programmes */
 
 .prog-img-card {
-    width: 100%;
-    object-fit: cover;
-    height: 100px;
+   width: 100%;
+   object-fit: cover;
+   height: 100px;
 }
 
+
 /* ---------- Programmes Detail */
+
 .prog-detail-img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
+   width: 100%;
+   height: 120px;
+   object-fit: cover;
 }
+
 
 /* -------------------- Bag app  */
 
 .grey-banner {
-    background-color: #f8f8f8;
+   background-color: #f8f8f8;
 }
 
 .bg-light {
-    background-color: #f8f8f8;
+   background-color: #f8f8f8;
 }
 
 .prog-img-bag {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
+   width: 100%;
+   height: 100px;
+   object-fit: cover;
 }
 
 .prod-img-bag {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
 }
 
 input {
-    border-radius: 0 !important;
+   border-radius: 0 !important;
 }
 
-.input-group-prepend, .input-group-append {
-    border: solid 1px #BDC1C7;
+.input-group-prepend,
+.input-group-append {
+   border: solid 1px #BDC1C7;
 }
 
 .form-control-sm {
-    height: auto;
-    flex: none !important;
-    width: 40px !important;
+   height: auto;
+   flex: none !important;
+   width: 40px !important;
 }
+
 
 /* -------------------- Checkout app  */
 
 .prod-img-checkout {
-    height: 50px;
-    object-fit: cover;
+   height: 50px;
+   object-fit: cover;
 }
+
 .prod-img-toast {
-    height: 50px;
-    object-fit: cover;
+   height: 50px;
+   object-fit: cover;
 }
 
 .prog-img-checkout {
-    height: 30px;
-    object-fit: cover;
+   height: 30px;
+   object-fit: cover;
 }
+
 .prog-img-toast {
-    height: 30px;
-    object-fit: cover;
+   height: 30px;
+   object-fit: cover;
 }
+
+
 /* -------------------- Blog app  */
 
 .blog-img-card {
-    width: 100%;
-    object-fit: cover;
-    height: 200px;
+   width: 100%;
+   object-fit: cover;
+   height: 200px;
 }
 
 .blog-detail-img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
+   width: 100%;
+   height: 120px;
+   object-fit: cover;
 }
 
 .comments {
-    background-color: #bdc1c750;
+   background-color: #bdc1c750;
 }
+
 
 /* -------------------- Forum app  */
 
 .table {
-    border: solid 1px #BDC1C7;
+   border: solid 1px #BDC1C7;
 }
 
 .table-header {
-    background-color: #BDC1C750;
-    border: solid 1px #BDC1C7;
+   background-color: #BDC1C750;
+   border: solid 1px #BDC1C7;
 }
 
 .post-link {
-    color: #38405F;
-    font-size: 18px;
-    font-weight: 700;
+   color: #38405F;
+   font-size: 18px;
+   font-weight: 700;
 }
+
 
 /* -------------------- bootstrap toasts */
 
 .message-container {
-    position: fixed;
-    top: 72px;
-    right: 15px;
-    z-index: 99999999999;
+   position: fixed;
+   top: 72px;
+   right: 15px;
+   z-index: 99999999999;
 }
 
 .custom-toast {
-    overflow: visible;
+   overflow: visible;
 }
 
 .toast-capper {
-    height: 2px;
+   height: 2px;
 }
+
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+
 .arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
+   width: 0;
+   height: 0;
+   border-left: 4px solid transparent;
+   border-right: 4px solid transparent;
+   border-bottom: 10px solid black;
+   position: absolute;
+   top: -10px;
+   right: 36px;
 }
 
+
 /* Convenience classes - colors copied from Bootstrap */
+
 .arrow-primary {
-    border-bottom-color: #007bff !important;
+   border-bottom-color: #007bff !important;
 }
 
 .arrow-secondary {
-    border-bottom-color: #6c757d !important;
+   border-bottom-color: #6c757d !important;
 }
 
 .arrow-success {
-    border-bottom-color: #28a745 !important;
+   border-bottom-color: #28a745 !important;
 }
 
 .arrow-danger {
-    border-bottom-color: #dc3545 !important;
+   border-bottom-color: #dc3545 !important;
 }
 
 .arrow-warning {
-    border-bottom-color: #ffc107 !important;
+   border-bottom-color: #ffc107 !important;
 }
 
 .arrow-info {
-    border-bottom-color: #17a2b8 !important;
+   border-bottom-color: #17a2b8 !important;
 }
 
 .arrow-light {
-    border-bottom-color: #f8f9fa !important;
+   border-bottom-color: #f8f9fa !important;
 }
 
 .arrow-dark {
-    border-bottom-color: #343a40 !important;
+   border-bottom-color: #343a40 !important;
 }
 
 .bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
+   height: 100px;
+   overflow-x: hidden;
+   overflow-y: auto;
 }
 
+
 /* Product Form */
+
 .btn-file {
-    position: relative;
-    overflow: hidden;
+   position: relative;
+   overflow: hidden;
 }
 
 .btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
+   position: absolute;
+   top: 0;
+   right: 0;
+   min-width: 100%;
+   min-height: 100%;
+   opacity: 0;
+   cursor: pointer;
 }
 
 .custom-checkbox .custom-control-label::before {
-    border-radius: 0;
-    border-color: #dc3545;
+   border-radius: 0;
+   border-color: #dc3545;
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    border-radius: 0;
+   background-color: #dc3545;
+   border-color: #dc3545;
+   border-radius: 0;
 }
+
 
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+   margin-top: 1.5rem;
+   /* mt-4 */
+   color: #6c757d;
+   /* text-secondary */
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
-    border-radius: 0;
+   border-color: #000;
+   border-radius: 0;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
-    display: none;
+   display: none;
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: #aab7c4;
+   color: #aab7c4;
 }
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0;
-
-    /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+   /* btn */
+   display: inline-block;
+   font-weight: 400;
+   color: #fff;
+   text-align: center;
+   vertical-align: middle;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   padding: .375rem .75rem;
+   font-size: 1rem;
+   line-height: 1.5;
+   border-radius: 0;
+   /* standard bootstrap btn transitions */
+   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 input[name='q']::placeholder {
-    color: #aab7c4;
+   color: #aab7c4;
 }
+
 
 /* Facebook */
+
 .fb-bg {
-  background: #3B5998;
+   background: #3B5998;
 }
+
 
 /* Google */
+
 .go-bg {
-  background: #FF0035;
+   background: #FF0035;
 }
+
 
 /* Twitter */
+
 .tw-bg {
-  background: #55ACEE;
+   background: #55ACEE;
 }
 
-.fb-bg a, .go-bg a, .tw-bg a {
-    color: #f8f8f8;
+.fb-bg a,
+.go-bg a,
+.tw-bg a {
+   color: #f8f8f8;
 }
 
-.fb-bg a:hover, .go-bg a:hover, .tw-bg a:hover {
-    text-decoration: none;
-    color: #0E131F;
+.fb-bg a:hover,
+.go-bg a:hover,
+.tw-bg a:hover {
+   text-decoration: none;
+   color: #0E131F;
 }
+
 
 /* -------------------- Media queries */
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
 @media only screen and (min-width: 600px) {
-
-    /* -------------------- Header  */
-    .header-container {
-        padding-top: 107.11px;
-    }
-    #sidebar {
-        margin-top: 107.11px;
-    }
-    .main-logo-link img {
-        width: 140px;
-    }
-    .flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before, .fa-arrow-alt-circle-up:before, #menu-close {
-        font-size: 24px;
-    }
-
-    /* -------------------- Home app  */
-    .callout-img {
-        height: calc(100vh - 187.11px);
-    }
-    .index-blog-img { 
-        height: 60%;
-    }
-    .index-blog-card {
-        height: 300px;
-    }
-    .form-inner {
-        margin: 30px 60px;
-    }
-    .profile-img {
-        width: 180px;
-        height: 180px;
-    }
-
-    /* -------------------- Products app  */
-    .prod-img-card {
-        height: 300px;
-    }
-
-    /* -------------------- Programmes app  */
-    .prog-img-card {
-        height: 200px;
-    }
-    .prog-detail-img {
-        height: 200px;
-        object-fit: cover;
-    }
-
-    /* -------------------- Blog app  */
-    .blog-detail-img {
-        height: 230px;
-    }
-
-    /* -------------------- Admin  */
-    .admin-container { /*keep*/
-        width: 80%;
-    }
-
+   /* -------------------- Header  */
+   .header-container {
+      padding-top: 107.11px;
+   }
+   #sidebar {
+      margin-top: 107.11px;
+   }
+   .main-logo-link img {
+      width: 140px;
+   }
+   .flaticon-shopping-bag:before,
+   .flaticon-menu:before,
+   .flaticon-search:before,
+   .flaticon-user:before,
+   .fa-arrow-alt-circle-up:before,
+   #menu-close {
+      font-size: 24px;
+   }
+   /* -------------------- Home app  */
+   .callout-img {
+      height: calc(100vh - 187.11px);
+   }
+   .index-blog-img {
+      height: 60%;
+   }
+   .index-blog-card {
+      height: 300px;
+   }
+   .form-inner {
+      margin: 30px 60px;
+   }
+   .profile-img {
+      width: 180px;
+      height: 180px;
+   }
+   /* -------------------- Products app  */
+   .prod-img-card {
+      height: 300px;
+   }
+   /* -------------------- Programmes app  */
+   .prog-img-card {
+      height: 200px;
+   }
+   .prog-detail-img {
+      height: 200px;
+      object-fit: cover;
+   }
+   /* -------------------- Blog app  */
+   .blog-detail-img {
+      height: 230px;
+   }
+   /* -------------------- Admin  */
+   .admin-container {
+      /*keep*/
+      width: 80%;
+   }
 }
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
-
-     /* -------------------- General  */
-
-     .w-md-50 {
-        width: 50% !important;
-    }
-    .w-md-75 {
-        width: 75% !important;
-    }
-    .vw-md-75 {
-        width: 75vw !important;
-    }
-    .w-md-85 {
-        width: 85%;
-    }
-    .container-fluid {
-        width: 90%;
-    }
-    .title-font {
-        font-size: 32px;
-    }
-    .subtitle-font {
-        font-size: 24px;
-    }
-    .p-font, .red-header {
-        font-size: 15px;
-    }
-
-    /* -------------------- Header  */
-
-    .header-container {
-        padding-top: 110.11px;
-    }
-    #sidebar {
-        margin-top: 110.11px;
-    }
-
-    #sidebar a {
-        font-size: 18px;
-    }
-
-    /* -------------------- Home app  */
-    .callout-img {
-        height: calc(100vh - 184.11px);
-    }
-    .red-banner {
-        font-size: 16px;
-    }
-    .profile-img {
-        width: 220px;
-        height: 220px;
-    }
-    /* -------------------- Products app */
-
-    .prod-detail-img {
-        height: 450px;
-    }
-    .sort-container {
-        width: 70%;
-        max-width: 550px;
-    }
-
-    /* -------------------- Programmes app */
-    .programme-card {
-        height: 200px;
-    }
-
-    /* -------------------- Checkout app */
-    .prod-img-checkout {
-        height: 80px;
-    }
-
-    .prog-img-checkout {
-        height: 60px;
-        object-fit: cover;
-    }
-
-    /* -------------------- Blog app  */
-    .blog-img-card {
-         height: 250px;
-    }
-    .form-inner, .blog-inner {
-        max-width: 80%;
-    }
-    .index-blog-img { 
-        height: 70%;
-    }
-    .index-blog-card {
-        height: 360px;
-    }
-    .blog-detail-img {
-        height: 230px;
-    }
-
-    /* -------------------- Allauth */
-
-    .signup, .login {
-        max-width: 50%;
-    }
-
+   /* -------------------- General  */
+   .w-md-50 {
+      width: 50% !important;
+   }
+   .w-md-75 {
+      width: 75% !important;
+   }
+   .vw-md-75 {
+      width: 75vw !important;
+   }
+   .w-md-85 {
+      width: 85%;
+   }
+   .container-fluid {
+      width: 90%;
+   }
+   .title-font {
+      font-size: 32px;
+   }
+   .subtitle-font {
+      font-size: 24px;
+   }
+   .p-font,
+   .red-header {
+      font-size: 15px;
+   }
+   /* -------------------- Header  */
+   .header-container {
+      padding-top: 110.11px;
+   }
+   #sidebar {
+      margin-top: 110.11px;
+   }
+   #sidebar a {
+      font-size: 18px;
+   }
+   /* -------------------- Home app  */
+   .callout-img {
+      height: calc(100vh - 184.11px);
+   }
+   .red-banner {
+      font-size: 16px;
+   }
+   .profile-img {
+      width: 220px;
+      height: 220px;
+   }
+   /* -------------------- Products app */
+   .prod-detail-img {
+      height: 450px;
+   }
+   .sort-container {
+      width: 70%;
+      max-width: 550px;
+   }
+   /* -------------------- Programmes app */
+   .programme-card {
+      height: 200px;
+   }
+   /* -------------------- Checkout app */
+   .prod-img-checkout {
+      height: 80px;
+   }
+   .prog-img-checkout {
+      height: 60px;
+      object-fit: cover;
+   }
+   /* -------------------- Blog app  */
+   .blog-img-card {
+      height: 250px;
+   }
+   .form-inner,
+   .blog-inner {
+      max-width: 80%;
+   }
+   .index-blog-img {
+      height: 70%;
+   }
+   .index-blog-card {
+      height: 360px;
+   }
+   .blog-detail-img {
+      height: 230px;
+   }
+   /* -------------------- Allauth */
+   .signup,
+   .login {
+      max-width: 50%;
+   }
 }
 
+
 /* Large devices (laptops/desktops, 992px and up) */
-   @media only screen and (min-width: 992px) {
 
-    /* -------------------- General */
-    .w-lg-30 {
-        width: 30% !important;
-    }
-    .w-lg-40 {
-        width: 40% !important;
-    }
-    .w-lg-75 {
-        width: 75% !important;
-    }
-    .title-font {
-        font-size: 36px;
-    }
-    .subtitle-font {
-        font-size: 28px;
-    }
-    .p-font, .red-header {
-        font-size: 16px;
-    }
-    .admin-container {
-        width: 60%;
-    }
-
-    /* -------------------- Header */
-    .header-container {
-        padding-top: 118.7px;
-    }
-    #sidebar {
-        margin-top: 118.7px;
-    }
-    #sidebar a {
-        font-size: 20px;
-    }
-    .main-logo-link img {
-        width: 160px;
-    }
-    .flaticon-shopping-bag:before, .flaticon-menu:before, .flaticon-search:before, .flaticon-user:before, fa-arrow-alt-circle-up:before, #menu-close {
-        font-size: 26px;
-    }
-
-    /* -------------------- Home app */
-    .callout-img {
-        height: calc(100vh - 192.7px);
-    }
-    .index-prog-img, .index-prod-img {
-        height: 350px;
-    }
-    .profile-img {
-        width: 240px;
-        height: 240px;
-    }
-
-    /* -------------------- Blog app */
-    .blog-img-top {
-        height: 270px;
-    }
-    .form-inner {
-        max-width: 60%;
-    }
-    .index-blog-card {
-        height: 390px;
-    }
-
-    /* -------------------- Programmes app */
-    .container-fluid {
-        width: 90%;
-    }
-
-    /* -------------------- Profile app */
-    .profile-container {
-        width: 90%;
-    }
-
-    /* -------------------- Allauth */
-    .signup, .login {
-        max-width: 40%;
-    }
-
+@media only screen and (min-width: 992px) {
+   /* -------------------- General */
+   .w-lg-30 {
+      width: 30% !important;
+   }
+   .w-lg-40 {
+      width: 40% !important;
+   }
+   .w-lg-75 {
+      width: 75% !important;
+   }
+   .title-font {
+      font-size: 36px;
+   }
+   .subtitle-font {
+      font-size: 28px;
+   }
+   .p-font,
+   .red-header {
+      font-size: 16px;
+   }
+   .admin-container {
+      width: 60%;
+   }
+   /* -------------------- Header */
+   .header-container {
+      padding-top: 118.7px;
+   }
+   #sidebar {
+      margin-top: 118.7px;
+   }
+   #sidebar a {
+      font-size: 20px;
+   }
+   .main-logo-link img {
+      width: 160px;
+   }
+   .flaticon-shopping-bag:before,
+   .flaticon-menu:before,
+   .flaticon-search:before,
+   .flaticon-user:before,
+   fa-arrow-alt-circle-up:before,
+   #menu-close {
+      font-size: 26px;
+   }
+   /* -------------------- Home app */
+   .callout-img {
+      height: calc(100vh - 192.7px);
+   }
+   .index-prog-img,
+   .index-prod-img {
+      height: 350px;
+   }
+   .profile-img {
+      width: 240px;
+      height: 240px;
+   }
+   /* -------------------- Blog app */
+   .blog-img-top {
+      height: 270px;
+   }
+   .form-inner {
+      max-width: 60%;
+   }
+   .index-blog-card {
+      height: 390px;
+   }
+   /* -------------------- Programmes app */
+   .container-fluid {
+      width: 90%;
+   }
+   /* -------------------- Profile app */
+   .profile-container {
+      width: 90%;
+   }
+   /* -------------------- Allauth */
+   .signup,
+   .login {
+      max-width: 40%;
+   }
 }

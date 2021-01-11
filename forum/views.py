@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import CommentForm, ThreadForm
@@ -81,7 +81,7 @@ def add_thread(request):
             messages.success(request, 'Successfully added thread!')
             return redirect('forum')
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add thread. Please ensure the form is valid.')
 
     template = 'forum/add_thread.html'
     context = {
@@ -89,6 +89,32 @@ def add_thread(request):
     }
 
     return render(request, template, context)
+
+@login_required
+def edit_thread(request, thread_id):
+    """ Edit a thread in the forum """
+
+    thread = get_object_or_404(Thread, pk=thread_id)
+    if request.method == 'POST':
+        form = ThreadForm(request.POST, request.FILES, instance=thread)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated thread!')
+            return redirect(reverse('forum'))
+        else:
+            messages.error(request, 'Failed to update thread. Please ensure the form is valid.')
+    else:
+        form = ThreadForm(instance=thread)
+        messages.info(request, f'You are editing {thread.topic}')
+
+    template = 'forum/edit_thread.html'
+    context = {
+        'form': form,
+        'thread': thread,
+    }
+
+    return render(request, template, context)
+
 
 @login_required
 def delete_own_reply(request, reply_id):

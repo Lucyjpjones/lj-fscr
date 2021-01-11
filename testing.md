@@ -57,6 +57,10 @@ I have included a contact form on the home page which is also easily navigated t
 
 <img src="media/us-7.png">
 
+**9. See reviews and ratings on products and programmes**
+
+I have added 
+
 **8. Browse associated blogs, articles and recent new stories**
 
 I created a blog app that can only be viewed by site members. When a user is not logged in and they click on the blog they will be directed to the login/register page. If a user is a member and logged in they will be directed to the blog page where they can view blogs posted by the admin user. Members also have the ability to comment and delete their own comments on blog posts creating further user interaction.
@@ -157,15 +161,11 @@ The user has the ability to adjust the quantity of products and programmes in th
 
 <img src="media/us-22.png">
 
-**23. Easily enter my payment information**
+**23. Easily enter my payment information and feel my personal and payment information is safe and secure**
 
 The checkout page features a payment form allowing the user to easily enter their card details for a quick checkout.
 
 <img src="media/us-23.png">
-
-**24. Feel my personal and payment information is safe and secure**
-
-<img src="media/us-24.png">
 
 **25. View an order confirmation after checkout**
 
@@ -328,7 +328,44 @@ To check I was only able to delete my own replies, I logged in and checked the t
 
 ### **Automated testing**
 
-I also decided to use Django's testing framework to create some automated tests for my prpject.
+I also decided to use Django's testing framework to create some automated tests for my project.
+
+#### **Unit Testing**
+
+I added a tests.py file to each of my apps containing my written unit tests.
+
+To run all the tests I used the following command;
+
+`$ python3 manage.py test`
+
+To run tests in a specific app I used the following command;
+
+`python3 manage.py test <app name>`
+
+The results from each test were displayed in the terminal, letting me know if the tests were successful or had failed.
+
+#### **Coverage**
+
+I used **Coverage** to identify the percentage of code the tests had covered and to determine which areas to focus on. 
+To set up and use Coverage, I used the following commands;
+
+* To Install:
+
+    `$ pip3 install coverage`
+
+* To run all the tests written in a certain app and generate a report (second command is to view this report in the terminal).
+
+    `$ coverage run --source=<'app name'> manage.py test`
+
+    ` $ coverage report`
+
+* I used the following command to create an interactive HTML report to see more specifically what I was missing. This created a 'htmlcov' folder containing a index.html file.
+
+    `$ command html`
+
+* To open the file in my browser and see an interactive version of the report I used the below command;
+    
+    `$ python3 - m http.server`
 
 
 ### **Validator checks**

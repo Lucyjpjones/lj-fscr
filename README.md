@@ -8,9 +8,18 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 
 [View Site](https://lj-fscr.herokuapp.com/)
 
+```
+For testing the following credentials can be used:
+
+Card payments:
+
+Card number: 4242 4242 4242 4242
+Zip & CCV must be filled out with any integers
+```
+
 </div>
 
-Disclaimer: 
+**Disclaimer:** This project is for educational purposes only, images taken from other sources will be replaced if the site goes commercial.
 
 ---
 

@@ -1,217 +1,205 @@
 {% extends "base.html" %} 
 {% load static %}
-
 {% block page_header %}
 <div class="header-container">
-  <div class="row">
-    <div class="col"></div>
-  </div>
+   <div class="row">
+      <div class="col"></div>
+   </div>
 </div>
 {% endblock %} 
-
 {% block content %}
 <div class="mx-auto">
-
-    <!--Callout image-->
-    <div class="row text-center">
-        <img
-            class="col callout-img p-0"
-            src="{{ MEDIA_URL }}home-callout.JPG"
-            alt="Callout image"
-        />
-    </div>
-
-    <!-- Callout banner carousel -->
-    <div class="row">
-        <div
-            id="carouselBannerControls"
-            class="col-12 carousel slide red-banner py-2 px-0"
-            data-ride="carousel"
-        >
-            {% if request.user.is_authenticated %}
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <p>Your first step to recovery</p>
-                    <a href="{% url 'programmes' %}" class="callout-btn btn rounded-0">Shop programmes</a>
-                </div>
-                <div class="carousel-item">
-                    <p>Free shipping on all orders over £{{ free_delivery_threshold }}</p>
-                    <a href="{% url 'products' %}" class="callout-btn btn rounded-0">Shop Now</a>
-                </div>
+   <!--Callout image-->
+   <div class="row text-center">
+      <img
+         class="col callout-img p-0"
+         src="{{ MEDIA_URL }}home-callout.JPG"
+         alt="Callout image"
+         />
+   </div>
+   <!-- Callout banner carousel -->
+   <div class="row">
+      <div
+         id="carouselBannerControls"
+         class="col-12 carousel slide red-banner py-2 px-0"
+         data-ride="carousel"
+         >
+         {% if request.user.is_authenticated %}
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <p>Your first step to recovery</p>
+               <a href="{% url 'programmes' %}" class="callout-btn btn rounded-0">Shop programmes</a>
             </div>
-            {% else %}
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <p>Make your first step to recovery</p>
-                    <a href="{% url 'account_signup' %}" class="callout-btn btn rounded-0">Join Now</a>
-                </div>
-                <div class="carousel-item">
-                    <p>Sign up and get 10% off your first order</p>
-                    <a href="{% url 'account_signup' %}" class="callout-btn btn rounded-0">Join Now</a>
-                </div>
-                <div class="carousel-item">
-                    <p>Free shipping on all orders over £{{ free_delivery_threshold }}</p>
-                    <a href="{% url 'products' %}" class="callout-btn btn rounded-0">Shop Now</a>
-                </div>
+            <div class="carousel-item">
+               <p>Free shipping on all orders over £{{ free_delivery_threshold }}</p>
+               <a href="{% url 'products' %}" class="callout-btn btn rounded-0">Shop Now</a>
             </div>
-            {% endif %}
-        </div>
-    </div>
-
-    <div class="mx-auto w-md-85 w-lg-75">
-
-        <!-- Programme and Products card links -->
-        <div class="row mt-4 mt-lg-5">
-            <div class="col-12 col-md-6 mb-4 mb-lg-0">
-                <div class="wow bounceInUp card border-0">
-                    <img
-                        class="index-prog-img col p-0"
-                        src="{{ MEDIA_URL }}home-proglink.JPG"
-                        alt="Callout image"
-                    />
-                    <div class="index-prog-btn w-100">
-                        <a href="{% url 'programmes' %}" class="btn rounded-0 p-sm-2">View Programmes</a>
-                    </div>
-                </div>
+         </div>
+         {% else %}
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <p>Make your first step to recovery</p>
+               <a href="{% url 'account_signup' %}" class="callout-btn btn rounded-0">Join Now</a>
             </div>
-            <div class="col-12 col-md-6 mb-lg-3">
-                <div class="card border-0">
-                    <img
-                            class="index-prod-img col p-0"
-                            src="{{ MEDIA_URL }}FSCR-hoodie-grey.png"
-                            alt="Callout image"
-                    />
-                    <div class="index-prod-btn w-100">
-                        <a href="{% url 'products' %}" class="btn rounded-0">View Products</a>
-                    </div>
-                </div>
+            <div class="carousel-item">
+               <p>Sign up and get 10% off your first order</p>
+               <a href="{% url 'account_signup' %}" class="callout-btn btn rounded-0">Join Now</a>
             </div>
-        </div>
-
-        <!-- Testimonials carousel -->
-        <div class="row my-4 my-md-5">
-            <div class="col-12">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner row w-75 m-auto">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-12 col-md-6 py-1 px-2">
-                                    <i class="fas fa-quote-left fa-xs mb-2"></i>
-                                    <p>Excellent program with detailed and effective workouts!</p>
-                                    <p class="text-muted pt-1 small">Adam	Payne</p>
-                                </div>
-                                <div class="col-12 col-md-6 py-1 px-2">
-                                    <i class="fas fa-quote-left fa-xs mb-2"></i>
-                                    <p>The programme was really simple and clear to understand. </p>
-                                    <p class="text-muted pt-1 small">James	Simpson</p>
-                                </div>
-                            </div>
+            <div class="carousel-item">
+               <p>Free shipping on all orders over £{{ free_delivery_threshold }}</p>
+               <a href="{% url 'products' %}" class="callout-btn btn rounded-0">Shop Now</a>
+            </div>
+         </div>
+         {% endif %}
+      </div>
+   </div>
+   <div class="mx-auto w-md-85 w-lg-75">
+      <!-- Programme and Products card links -->
+      <div class="row mt-4 mt-lg-5">
+         <div class="wow bounceInUp col-12 col-md-6 mb-4 mb-lg-0">
+            <div class="card border-0">
+               <img
+                  class="index-prog-img col p-0"
+                  src="{{ MEDIA_URL }}home-proglink.JPG"
+                  alt="Callout image"
+                  />
+               <div class="index-prog-btn w-100">
+                  <a href="{% url 'programmes' %}" class="btn rounded-0 p-sm-2">View Programmes</a>
+               </div>
+            </div>
+         </div>
+         <div class="col-12 col-md-6 mb-lg-3">
+            <div class="card border-0">
+               <img
+                  class="index-prod-img col p-0"
+                  src="{{ MEDIA_URL }}FSCR-hoodie-grey.png"
+                  alt="Callout image"
+                  />
+               <div class="index-prod-btn w-100">
+                  <a href="{% url 'products' %}" class="btn rounded-0">View Products</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Testimonials carousel -->
+      <div class="row my-4 my-md-5">
+         <div class="col-12">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner row w-75 m-auto">
+                  <div class="carousel-item active">
+                     <div class="row">
+                        <div class="col-12 col-md-6 py-1 px-2">
+                           <i class="fas fa-quote-left fa-xs mb-2"></i>
+                           <p>Excellent program with detailed and effective workouts!</p>
+                           <p class="text-muted pt-1 small">Adam	Payne</p>
                         </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-12 col-md-6 py-1 px-2">
-                                    <i class="fas fa-quote-left fa-xs mb-2"></i>
-                                    <p>Lorem ipsum dolor sit sit amet, consectetur adipiscing elit!</p>
-                                    <p class="text-muted pt-1 small">Sam	Ince</p>
-                                </div>
-                                <div class="col-12 col-md-6 py-1 px-2">
-                                    <i class="fas fa-quote-left fa-xs mb-2"></i>
-                                    <p>Lorem ipsum dolor sit sit amet, consectetur adipiscing elit!</p>
-                                    <p class="text-muted pt-1 small">Justin	Greene</p>
-                                </div>
-                            </div>
+                        <div class="col-12 col-md-6 py-1 px-2">
+                           <i class="fas fa-quote-left fa-xs mb-2"></i>
+                           <p>The programme was really simple and clear to understand. </p>
+                           <p class="text-muted pt-1 small">James	Simpson</p>
                         </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-12 col-md-6 py-1 px-2">
-                                    <i class="fas fa-quote-left fa-xs mb-2"></i>
-                                    <p>Lorem ipsum dolor sit sit amet, consectetur adipiscing elit!</p>
-                                    <p class="text-muted pt-1 small">Mike Eglon</p>
-                                </div>
-                                <div class="col-12 col-md-6 py-1 px-2">
-                                    <i class="fas fa-quote-left fa-xs mb-2"></i>
-                                    <p>Lorem ipsum dolor sit sit amet, consectetur adipiscing elit!</p>
-                                    <p class="text-muted pt-1 small">Mike Eglon</p>
-                                </div>
-                            </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-12 col-md-6 py-1 px-2">
+                           <i class="fas fa-quote-left fa-xs mb-2"></i>
+                           <p>Lorem ipsum dolor sit sit amet, consectetur adipiscing elit!</p>
+                           <p class="text-muted pt-1 small">Sam	Ince</p>
                         </div>
-                    </div>
-                </div>
+                        <div class="col-12 col-md-6 py-1 px-2">
+                           <i class="fas fa-quote-left fa-xs mb-2"></i>
+                           <p>Lorem ipsum dolor sit sit amet, consectetur adipiscing elit!</p>
+                           <p class="text-muted pt-1 small">Justin	Greene</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-12 col-md-6 py-1 px-2">
+                           <i class="fas fa-quote-left fa-xs mb-2"></i>
+                           <p>Lorem ipsum dolor sit sit amet, consectetur adipiscing elit!</p>
+                           <p class="text-muted pt-1 small">Mike Eglon</p>
+                        </div>
+                        <div class="col-12 col-md-6 py-1 px-2">
+                           <i class="fas fa-quote-left fa-xs mb-2"></i>
+                           <p>Lorem ipsum dolor sit sit amet, consectetur adipiscing elit!</p>
+                           <p class="text-muted pt-1 small">Mike Eglon</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-
-        <!-- Latest Blogs -->
-        <h2 class="title-font px-3 pb-2 mt-lg-5">View our latest Blogs</h2>
-        <div class="row mb-4 mb-md-5">
-            {% for post in posts %}
-            <div class="col-6">
-                <div class="card index-blog-card rounded-0">
-                    {% if post.image %}
-                    <img
-                        class="index-blog-img img-fluid rounded-0"
-                        src="{{ post.image.url }}"
-                        alt="{{ post.title }}"
-                    />
-                    {% else %}
-                    <img
-                        class="card-img-top img-fluid rounded-0"
-                        src="{{ MEDIA_URL }}noimage.png"
-                        alt="{{ post.title }}"
-                    />
-                    {% endif %}
-                    <div class="card-body py-3">
-                        <h5 class="mb-2 p-font">{{ post.title }}</h5>
-                        <a class="btn purple-btn px-2 py-1 p-font rounded-0" href="{% url 'post_detail' post.slug %}">Read more</a>
-                    </div>
-                </div>
+         </div>
+      </div>
+      <!-- Latest Blogs -->
+      <h2 class="title-font px-3 pb-2 mt-lg-5">View our latest Blogs</h2>
+      <div class="row mb-4 mb-md-5">
+         {% for post in posts %}
+         <div class="col-6">
+            <div class="card index-blog-card rounded-0">
+               {% if post.image %}
+               <img
+                  class="index-blog-img img-fluid rounded-0"
+                  src="{{ post.image.url }}"
+                  alt="{{ post.title }}"
+                  />
+               {% else %}
+               <img
+                  class="card-img-top img-fluid rounded-0"
+                  src="{{ MEDIA_URL }}noimage.png"
+                  alt="{{ post.title }}"
+                  />
+               {% endif %}
+               <div class="card-body py-3">
+                  <h5 class="mb-2 p-font">{{ post.title }}</h5>
+                  <a class="btn purple-btn px-2 py-1 p-font rounded-0" href="{% url 'post_detail' post.slug %}">Read more</a>
+               </div>
             </div>
-            {% endfor %}
-        </div>
-        
-    </div>        
-
-        <!--Contact form-->
-        <div id="contact" class="row contact-container p-0">
-            <div class="col border form-inner p-3 m-3 mx-md-auto my-md-5">
-                <h2 class="title-font">Get in touch</h2>
-                <p class="subtitle-font p-font mb-3">If you have a question, comment or enquiry for FSCR, please fill out the form below</p>
-                <form onsubmit="return sendMail(this);" method="POST">
-                    <div class="row">
-                        <div class="col p-0 pr-1">
-                            <label class="small mb-0 pl-1" for="fname">First Name</label>
-                            <input type="text" class="form-control rounded-0" id="fname" name="fname" />
-                        </div>
-                        <div class="col p-0 pl-1 mb-3">
-                            <label class="small mb-0 pl-1" for="lname">Last Name</label>
-                            <input type="text" class="form-control rounded-0"   id="lname" name="lname" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="small mb-0 pl-1" for="email">Email Address</label>
-                        <input type="email" class="form-control rounded-0" id="email" name="email">
-                    </div>
-                    <div class="form-group">
-                        <label class="small mb-0 pl-1" for="topic">I want to</label>
-                        <select class="form-control rounded-0" id="topic" name="topic">
-                        <option class="active disabled">Select option</option>
-                        <option>Strength and conditioning question</option>
-                        <option>Physiotherapy or rehab question</option>
-                        <option>Request more information about our programmes</option>
-                        <option>Something else</option>
-                        </select>
-                    </div>
-                        <div class="form-group">
-                        <label class="small mb-0 pl-1" for="message">What is your message?</label>
-                        <textarea class="form-control rounded-0" id="message" name="message" rows="3"></textarea>
-                    </div>
-                    <div class="text-center rounded-0">
-                        <input class="btn navy-btn rounded-0 w-100 bold" type="submit" value="Submit"
-                    >
-                    </div>
-                </form>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+   <!--Contact form-->
+   <div id="contact" class="row contact-container p-0">
+      <div class="col border form-inner p-3 m-3 mx-md-auto my-md-5">
+         <h2 class="title-font">Get in touch</h2>
+         <p class="subtitle-font p-font mb-3">If you have a question, comment or enquiry for FSCR, please fill out the form below</p>
+         <form onsubmit="return sendMail(this);" method="POST">
+            <div class="row">
+               <div class="col p-0 pr-1">
+                  <label class="small mb-0 pl-1" for="fname">First Name</label>
+                  <input type="text" class="form-control rounded-0" id="fname" name="fname" />
+               </div>
+               <div class="col p-0 pl-1 mb-3">
+                  <label class="small mb-0 pl-1" for="lname">Last Name</label>
+                  <input type="text" class="form-control rounded-0"   id="lname" name="lname" />
+               </div>
             </div>
-        </div>
-
+            <div class="form-group">
+               <label class="small mb-0 pl-1" for="email">Email Address</label>
+               <input type="email" class="form-control rounded-0" id="email" name="email">
+            </div>
+            <div class="form-group">
+               <label class="small mb-0 pl-1" for="topic">I want to</label>
+               <select class="form-control rounded-0" id="topic" name="topic">
+                  <option class="active disabled">Select option</option>
+                  <option>Strength and conditioning question</option>
+                  <option>Physiotherapy or rehab question</option>
+                  <option>Request more information about our programmes</option>
+                  <option>Something else</option>
+               </select>
+            </div>
+            <div class="form-group">
+               <label class="small mb-0 pl-1" for="message">What is your message?</label>
+               <textarea class="form-control rounded-0" id="message" name="message" rows="3"></textarea>
+            </div>
+            <div class="text-center rounded-0">
+               <input class="btn navy-btn rounded-0 w-100 bold" type="submit" value="Submit"
+                  >
+            </div>
+         </form>
+      </div>
+   </div>
 </div>
-
 {% endblock %}

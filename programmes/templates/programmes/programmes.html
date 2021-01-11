@@ -1,106 +1,97 @@
 {% extends "base.html" %} 
 {% load static %}
-
 {% block page_header %}
 <div class="header-container">
-  <div class="row">
-    <div class="col"></div>
-  </div>
+   <div class="row">
+      <div class="col"></div>
+   </div>
 </div>
 {% endblock %} {% block content %}
-
 <!--Page title-->
 <div class="container-fluid">
-  <div class="row">
-    <div class="col text-center title-container">
-      <h2 class="title-font py-4">Programmes</h2>
-    </div>
-  </div>
-
-  <!--Sort and Filter-->
-  <div class="row px-3 px-sm-0 mx-auto sort-container">
-    <div class="col-6 dropdown show text-center">
-        <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sort
-        </a>
-
-        <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuSort">
+   <div class="row">
+      <div class="col text-center title-container">
+         <h2 class="title-font py-4">Programmes</h2>
+      </div>
+   </div>
+   <!--Sort and Filter-->
+   <div class="row px-3 px-sm-0 mx-auto sort-container">
+      <div class="col-6 dropdown show text-center">
+         <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Sort
+         </a>
+         <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuSort">
             <a class="dropdown-item" href="{% url 'programmes' %}?sort=sku&direction=desc">Newest arrivals</a>
             <a class="dropdown-item" href="{% url 'programmes' %}?sort=rating&direction=desc">Highest Rated</a>
             <a class="dropdown-item" href="{% url 'programmes' %}?sort=price&direction=asc">Price: Low to High</a>
             <a class="dropdown-item" href="{% url 'programmes' %}?sort=price&direction=desc">Price: High to Low</a>
-        </div>
-    </div>
-    
-    <div class="col-6 dropdown show text-center">
-        <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Filter
-        </a>
-
-        <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuFilter">
+         </div>
+      </div>
+      <div class="col-6 dropdown show text-center">
+         <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Filter
+         </a>
+         <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuFilter">
             <a class="dropdown-item float-right small text-muted" href="{% url 'programmes' %}">
-                <span><i class="fas fa-times pr-1"></i> Clear all</span>
+            <span><i class="fas fa-times pr-1"></i> Clear all</span>
             </a>
             <a class="dropdown-item" href="{% url 'programmes' %}?category=rehab">Rehab</a>
             <a class="dropdown-item" href="{% url 'programmes' %}?category=performance">Performance</a>
             <a class="dropdown-item" href="{% url 'programmes' %}?category=custom">Custom</a>
-        </div>
-    </div>
-</div>
-
-
-<!--Programme cards-->
-  <div class="row mt-sm-3">
-    <div class="col-12 offset-1">
-      <div class="row mt-1 mb-3"></div>
-      <div class="row">
-        {% if programmes %}
-        <div class="col-12">
-            <p class="mb-3 text-muted small text-center">{{ programmes.count }} programmes found</p>
-        </div>
-        {% for programme in programmes %}
-        <div class="col-12 p-0">
-          <div class="card bg-trans h-100 border-0 mb-4 px-3">
-            {% if programme.image %}
-            <a href="{% url 'programme_detail' programme.id %}">
-              <img
-                class="prog-img-card rounded-0"
-                src="{{ programme.image.url }}"
-                alt="{{ programme.name }}"
-              />
-            </a>
-            {% else %}
-            <a href="{% url 'programme_detail' programme.id %}">
-              <img
-                class="prog-img-card img-fluid"
-                src="{{ MEDIA_URL }}noimage.png"
-                alt="{{ programme.name }}"
-              />
-            </a>
-            {% endif %}
-            <div class="card-body pb-0 pt-2 pl-1 p-font">
-              <p class="mb-0">{{ programme.name }}</p>
-              <p class="mb-0">{{ programme.colour }}</p>
-              <p class="mb-0">£{{ programme.price }}</p>
-              <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ programme.rating }}</small></p>
-              {% if request.user.is_superuser %}
-                <small>
-                    <a class="btn red-border-btn px-2 py-1 small rounded-0" href="{% url 'edit_programme' programme.id %}">Edit</a>
-                    <a class="btn red-btn px-2 py-1 small rounded-0" href="{% url 'delete_programme' programme.id %}">Delete</a>
-                </small>
-            {% endif %}
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-        {% else %}
-        <div class="mx-auto">
-            <p class="p-font mb-5">Sorry no search results found</p>
-        </div>
-        {% endif %}
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
+   <!--Programme cards-->
+   <div class="row mt-sm-3">
+      <div class="col-12 offset-1">
+         <div class="row mt-1 mb-3"></div>
+         <div class="row">
+            {% if programmes %}
+            <div class="col-12">
+               <p class="mb-3 text-muted small text-center">{{ programmes.count }} programmes found</p>
+            </div>
+            {% for programme in programmes %}
+            <div class="col-12 p-0">
+               <div class="card bg-trans h-100 border-0 mb-4 px-3">
+                  {% if programme.image %}
+                  <a href="{% url 'programme_detail' programme.id %}">
+                  <img
+                     class="prog-img-card rounded-0"
+                     src="{{ programme.image.url }}"
+                     alt="{{ programme.name }}"
+                     />
+                  </a>
+                  {% else %}
+                  <a href="{% url 'programme_detail' programme.id %}">
+                  <img
+                     class="prog-img-card img-fluid"
+                     src="{{ MEDIA_URL }}noimage.png"
+                     alt="{{ programme.name }}"
+                     />
+                  </a>
+                  {% endif %}
+                  <div class="card-body pb-0 pt-2 pl-1 p-font">
+                     <p class="mb-0">{{ programme.name }}</p>
+                     <p class="mb-0">{{ programme.colour }}</p>
+                     <p class="mb-0">£{{ programme.price }}</p>
+                     <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ programme.rating }}</small></p>
+                     {% if request.user.is_superuser %}
+                     <small>
+                     <a class="btn red-border-btn px-2 py-1 small rounded-0" href="{% url 'edit_programme' programme.id %}">Edit</a>
+                     <a class="btn red-btn px-2 py-1 small rounded-0" href="{% url 'delete_programme' programme.id %}">Delete</a>
+                     </small>
+                     {% endif %}
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="mx-auto">
+               <p class="p-font mb-5">Sorry no search results found</p>
+            </div>
+            {% endif %}
+         </div>
+      </div>
+   </div>
 </div>
-  
 {% endblock %}

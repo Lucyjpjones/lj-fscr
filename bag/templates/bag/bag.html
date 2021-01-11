@@ -1,141 +1,135 @@
 {% extends "base.html" %} 
 {% load static %}
 {% load bag_tools %}
-
-
 {% block page_header %}
 <div class="header-container">
-  <div class="row">
-    <div class="col"></div>
-  </div>
+   <div class="row">
+      <div class="col"></div>
+   </div>
 </div>
 {% endblock %} {% block content %}
-
 <!--Page title-->
 <div class="mx-auto w-md-75">
-  <div class="row">
-    <div class="col text-center">
-      <div class="title-font pt-5 pb-3"><i class="flaticon-shopping-bag"></i></div>
-    </div>
-  </div>
-
-  <!--Shopping bag-->
-  <div class="row">
-            <div class="col p-0">
-                {% if bag_items %}
-                    <div class="d-block">
-                    <div class="row mb-4 grey-banner">
-                    <div class="col px-0">
-                        <div class="row mt-1">
-                            <div class="col">
-                                {% include "bag/bag-total.html" %}
-                            </div>
-                        </div>
-                        <div class="row pb-2">
-                            <div class="col{% if s %}-12 mt-2{% endif %}">
-                                {% include "bag/checkout-buttons.html" %}
-                            </div>
-                        </div>
-                        <div class="mb-3 ml-3">
-                            <a href="{% url 'products' %}" class="btn rounded-0 navy-btn mr-1 p-font">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Shop Products</span>
-                            </a>
-                            <a href="{% url 'programmes' %}" class="btn rounded-0 navy-btn mr-1 p-font">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Shop Programmes</span>
-                            </a>
-                        </div>
-                        </div>
-                        </div>
-                        {% for item in bag_items %}
-                            {% if item.type == 'product' %}
-                                <div class="row bg-light py-3 mb-4">
-                                    <div class="col-12 col-sm-4 mb-2">
-                                        {% include "bag/product-image.html" %}
-                                    </div>
-                                    <div class="col-12 col-sm-8 mb-2">
-                                        {% include "bag/product-info.html" %}
-                                        {% include "bag/quantity-form.html" %}
-                                    </div>
-                                </div>
-                            {% elif item.type == 'programme' %}
-                                <div class="row bg-light py-3 mb-4">
-                                    <div class="col-12 col-sm-4 mb-2">
-                                        {% include "bag/product-image.html" %}
-                                    </div>
-                                    <div class="col-12 col-sm-8 mb-2">
-                                        {% include "bag/product-info.html" %}
-                                        {% include "bag/quantity-form.html" %}
-                                    </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                        <div class="btt-button">
-                            <a class="btt-link d-flex h-100 mb-3">
-                                <i class="fas fa-arrow-alt-circle-up mx-auto my-auto mb-2 navy"></i>
-                            </a>	
-                        </div>
-                    </div>
-                {% else %}
-                    <div class="text-center">
-                        <p class="lead mb-5">Your bag is empty.</p>
-                        <div class="col-12">
-                            <a href="{% url 'programmes' %}" class="btn navy-btn rounded-0 p-font mx-3 mb-2">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Explore Programmes</span>
-                            </a>
-                        </div>
-                        <div class="col-12">
-                            <a href="{% url 'products' %}" class="btn navy-btn rounded-0 p-font mx-3">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Shop Products</span>
-                            </a>
-                        </div>
-                    </div>
-                {% endif %}
+   <div class="row">
+      <div class="col text-center">
+         <div class="title-font pt-5 pb-3"><i class="flaticon-shopping-bag"></i></div>
+      </div>
+   </div>
+   <!--Shopping bag-->
+   <div class="row">
+      <div class="col p-0">
+         {% if bag_items %}
+         <div class="d-block">
+            <div class="row mb-4 grey-banner">
+               <div class="col px-0">
+                  <div class="row mt-1">
+                     <div class="col">
+                        {% include "bag/bag-total.html" %}
+                     </div>
+                  </div>
+                  <div class="row pb-2">
+                     <div class="col{% if s %}-12 mt-2{% endif %}">
+                        {% include "bag/checkout-buttons.html" %}
+                     </div>
+                  </div>
+                  <div class="mb-3 ml-3">
+                     <a href="{% url 'products' %}" class="btn rounded-0 navy-btn mr-1 p-font">
+                     <span class="icon">
+                     <i class="fas fa-chevron-left"></i>
+                     </span>
+                     <span class="text-uppercase">Shop Products</span>
+                     </a>
+                     <a href="{% url 'programmes' %}" class="btn rounded-0 navy-btn mr-1 p-font">
+                     <span class="icon">
+                     <i class="fas fa-chevron-left"></i>
+                     </span>
+                     <span class="text-uppercase">Shop Programmes</span>
+                     </a>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
+            {% for item in bag_items %}
+            {% if item.type == 'product' %}
+            <div class="row bg-light py-3 mb-4">
+               <div class="col-12 col-sm-4 mb-2">
+                  {% include "bag/product-image.html" %}
+               </div>
+               <div class="col-12 col-sm-8 mb-2">
+                  {% include "bag/product-info.html" %}
+                  {% include "bag/quantity-form.html" %}
+               </div>
+            </div>
+            {% elif item.type == 'programme' %}
+            <div class="row bg-light py-3 mb-4">
+               <div class="col-12 col-sm-4 mb-2">
+                  {% include "bag/product-image.html" %}
+               </div>
+               <div class="col-12 col-sm-8 mb-2">
+                  {% include "bag/product-info.html" %}
+                  {% include "bag/quantity-form.html" %}
+               </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            <div class="btt-button">
+               <a class="btt-link d-flex h-100 mb-3">
+               <i class="fas fa-arrow-alt-circle-up mx-auto my-auto mb-2 navy"></i>
+               </a>	
+            </div>
+         </div>
+         {% else %}
+         <div class="text-center">
+            <p class="lead mb-5">Your bag is empty.</p>
+            <div class="col-12">
+               <a href="{% url 'programmes' %}" class="btn navy-btn rounded-0 p-font mx-3 mb-2">
+               <span class="icon">
+               <i class="fas fa-chevron-left"></i>
+               </span>
+               <span class="text-uppercase">Explore Programmes</span>
+               </a>
+            </div>
+            <div class="col-12">
+               <a href="{% url 'products' %}" class="btn navy-btn rounded-0 p-font mx-3">
+               <span class="icon">
+               <i class="fas fa-chevron-left"></i>
+               </span>
+               <span class="text-uppercase">Shop Products</span>
+               </a>
+            </div>
+         </div>
+         {% endif %}
+      </div>
+   </div>
+</div>
 {% endblock %}
-
 {% block postloadjs %}
 {{ block.super }}
 <script>
-    $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
-    })
+   $('.btt-link').click(function(e) {
+       window.scrollTo(0,0)
+   })
 </script>
 {% include 'products/includes/quantity_input_script.html' %}
-
 <script>
-    // Update quantity on click
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    })
-
-    // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
-        var catId = $(this).data('product_type');
-        var url = `/bag/remove/${itemId}/${catId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
-
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
+   // Update quantity on click
+   $('.update-link').click(function(e) {
+       var form = $(this).prev('.update-form');
+       form.submit();
+   })
+   
+   // Remove item and reload on click
+   $('.remove-item').click(function(e) {
+       var csrfToken = "{{ csrf_token }}";
+       var itemId = $(this).attr('id').split('remove_')[1];
+       var size = $(this).data('product_size');
+       var catId = $(this).data('product_type');
+       var url = `/bag/remove/${itemId}/${catId}/`;
+       var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+   
+       $.post(url, data)
+        .done(function() {
+            location.reload();
+        });
+   })
 </script>
 {% endblock %}

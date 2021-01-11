@@ -1,111 +1,104 @@
 {% extends "base.html" %} 
 {% load static %}
-
 {% block page_header %}
 <div class="header-container">
-  <div class="row">
-    <div class="col"></div>
-  </div>
+   <div class="row">
+      <div class="col"></div>
+   </div>
 </div>
 {% endblock %} {% block content %}
-
 <!--Page title-->
 <div class="container-fluid">
-  <div class="row">
-    <div class="col text-center">
-      <h2 class="title-font py-4">Products</h2>
-    </div>
-  </div>
-
-  <!--Sort and Filter-->
-  <div class="row px-3 px-sm-0 mx-auto sort-container">
-    <div class="col-6 dropdown show text-center">
-        <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sort
-        </a>
-
-        <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuSort">
+   <div class="row">
+      <div class="col text-center">
+         <h2 class="title-font py-4">Products</h2>
+      </div>
+   </div>
+   <!--Sort and Filter-->
+   <div class="row px-3 px-sm-0 mx-auto sort-container">
+      <div class="col-6 dropdown show text-center">
+         <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Sort
+         </a>
+         <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuSort">
             <a class="dropdown-item" href="{% url 'products' %}?sort=sku&direction=desc">Newest arrivals</a>
             <a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">Highest Rated</a>
             <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price: Low to High</a>
             <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price: High to Low</a>
-        </div>
-    </div>
-    
-    <div class="col-6 dropdown show text-center">
-        <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Filter
-        </a>
-
-        <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuFilter">
+         </div>
+      </div>
+      <div class="col-6 dropdown show text-center">
+         <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Filter
+         </a>
+         <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuFilter">
             <a class="dropdown-item float-right small text-muted" href="{% url 'products' %}">
-                <span><i class="fas fa-times pr-1"></i> Clear all</span>
+            <span><i class="fas fa-times pr-1"></i> Clear all</span>
             </a>
             <a class="dropdown-item" href="{% url 'products' %}?category=new_arrivals">New Arrivals</a>
             <a class="dropdown-item" href="{% url 'products' %}?category=accessories">Accessories</a>
             <a class="dropdown-item" href="{% url 'products' %}?category=clothing">Clothing</a>
             <a class="dropdown-item" href="{% url 'products' %}?category=sale">Sale</a>
-        </div>
-    </div>
-</div>
-
-  <!--Product cards-->
-  <div class="row mt-sm-3">
-    <div class="col-12 offset-1">
-      <div class="row mt-1 mb-3"></div>
-      <div class="row">
-      {% if products %}
-        <div class="col-12">
-            <p class="mb-3 text-muted small text-center">{{ products.count }} products found</p>
-        </div>
-        {% for product in products %}
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card bg-trans h-100 border-0">
-            {% if product.image %}
-            <a href="{% url 'product_detail' product.id %}">
-              <img
-                class="prod-img-card rounded-0"
-                src="{{ product.image.url }}"
-                alt="{{ product.name }}"
-              />
-            </a>
-            {% else %}
-            <a href="{% url 'product_detail' product.id %}">
-              <img
-                class="prod-img-card rounded-0"
-                src="{{ MEDIA_URL }}noimage.png"
-                alt="{{ product.name }}"
-              />
-            </a>
-            {% endif %}
-            <div class="p-font pb-0 pt-2 pl-1">
-              <p class="mb-0">{{ product.name }}</p>
-              <p class="mb-0">{{ product.colour }}</p>
-              <p class="mb-0">£{{ product.price }}</p>
-              <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ product.rating }}</small></p>
-            </div>
-            {% if request.user.is_superuser %}
-            <small class="pl-1 mt-2">
-                <a class="btn red-border-btn px-2 py-1 p-font rounded-0" href="{% url 'edit_product' product.id %}">Edit</a>
-                <a class="btn red-btn px-2 py-1 p-font rounded-0" href="{% url 'delete_product' product.id %}">Delete</a>
-            </small>
-            {% endif %}
-          </div>
-        </div>
-        {% if forloop.counter|divisibleby:2 %}
-        <div class="col-12 d-md-none mb-5"></div>
-        {% endif %} {% if forloop.counter|divisibleby:3 %}
-        <div class="col-12 d-none d-md-block d-lg-none mb-5"></div>
-        {% endif %} {% if forloop.counter|divisibleby:4 %}
-        <div class="col-12 d-none d-lg-block mb-5"></div>
-        {% endif %} {% endfor %}
-        {% else %}
-        <div class="mx-auto">
-            <p class="p-font mb-5">Sorry no search results found</p>
-        </div>
-        {% endif %}
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
+   <!--Product cards-->
+   <div class="row mt-sm-3">
+      <div class="col-12 offset-1">
+         <div class="row mt-1 mb-3"></div>
+         <div class="row">
+            {% if products %}
+            <div class="col-12">
+               <p class="mb-3 text-muted small text-center">{{ products.count }} products found</p>
+            </div>
+            {% for product in products %}
+            <div class="col-6 col-md-4 col-lg-3">
+               <div class="card bg-trans h-100 border-0">
+                  {% if product.image %}
+                  <a href="{% url 'product_detail' product.id %}">
+                  <img
+                     class="prod-img-card rounded-0"
+                     src="{{ product.image.url }}"
+                     alt="{{ product.name }}"
+                     />
+                  </a>
+                  {% else %}
+                  <a href="{% url 'product_detail' product.id %}">
+                  <img
+                     class="prod-img-card rounded-0"
+                     src="{{ MEDIA_URL }}noimage.png"
+                     alt="{{ product.name }}"
+                     />
+                  </a>
+                  {% endif %}
+                  <div class="p-font pb-0 pt-2 pl-1">
+                     <p class="mb-0">{{ product.name }}</p>
+                     <p class="mb-0">{{ product.colour }}</p>
+                     <p class="mb-0">£{{ product.price }}</p>
+                     <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ product.rating }}</small></p>
+                  </div>
+                  {% if request.user.is_superuser %}
+                  <small class="pl-1 mt-2">
+                  <a class="btn red-border-btn px-2 py-1 p-font rounded-0" href="{% url 'edit_product' product.id %}">Edit</a>
+                  <a class="btn red-btn px-2 py-1 p-font rounded-0" href="{% url 'delete_product' product.id %}">Delete</a>
+                  </small>
+                  {% endif %}
+               </div>
+            </div>
+            {% if forloop.counter|divisibleby:2 %}
+            <div class="col-12 d-md-none mb-5"></div>
+            {% endif %} {% if forloop.counter|divisibleby:3 %}
+            <div class="col-12 d-none d-md-block d-lg-none mb-5"></div>
+            {% endif %} {% if forloop.counter|divisibleby:4 %}
+            <div class="col-12 d-none d-lg-block mb-5"></div>
+            {% endif %} {% endfor %}
+            {% else %}
+            <div class="mx-auto">
+               <p class="p-font mb-5">Sorry no search results found</p>
+            </div>
+            {% endif %}
+         </div>
+      </div>
+   </div>
 </div>
 {% endblock %}

@@ -1,19 +1,14 @@
 {% extends "account/base.html" %}
-
 {% load i18n %}
-
 {% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
-
 {% block inner_content %}
-    <i class="pt-5 mb-2 fas fa-paper-plane fa-lg"></i>
-    <h2 class="title-font mb-3 mt-2">
-        {% trans "Verification email sent!" %}
-    </h2>
-
-    <div class="row">
-    <div class="col grey-banner">
-        <p class="my-2 p-2">{% blocktrans %}Follow the link in the message we just sent you to verify your email address.{% endblocktrans %}</p>
-    </div>
+<i class="pt-5 mb-2 fas fa-paper-plane fa-lg"></i>
+<h2 class="title-font mb-3 mt-2">
+   {% trans "Verification email sent!" %}
+</h2>
+<div class="row">
+   <div class="col grey-banner">
+      <p class="my-2 p-2">{% blocktrans %}Follow the link in the message we just sent you to verify your email address.{% endblocktrans %}</p>
+   </div>
 </div>
-
 {% endblock %}

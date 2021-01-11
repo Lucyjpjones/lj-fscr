@@ -1,95 +1,87 @@
 {% extends "base.html" %} 
 {% load static %}
-
 {% block page_header %}
 <div class="header-container">
-  <div class="row">
-    <div class="col"></div>
-  </div>
+   <div class="row">
+      <div class="col"></div>
+   </div>
 </div>
 {% endblock %} {% block content %}
-
 <div class="mx-3 mx-md-auto w-md-75">
-
-    <!--Back button-->
-    <div class="row">
-        <div class="col-12 p-0">
-            <a href="{% url 'forum' %}" class="navy-btn btn rounded-0 mt-3 mr-1 mb-3 p-font">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Message Board</span>
+   <!--Back button-->
+   <div class="row">
+      <div class="col-12 p-0">
+         <a href="{% url 'forum' %}" class="navy-btn btn rounded-0 mt-3 mr-1 mb-3 p-font">
+         <span class="icon">
+         <i class="fas fa-chevron-left"></i>
+         </span>
+         <span class="text-uppercase">Message Board</span>
+         </a>
+      </div>
+   </div>
+   <!--Post details-->
+   <div class="row grey-banner border">
+      <div class="col-12 py-2">
+         <div class="mb-2">
+            {% if user.is_authenticated and user == thread.author %}
+            <a href="{% url 'edit_thread' thread.id %}">
+            <span class="float-right">
+            <i class="fas fa-edit"></i>
+            </span>
             </a>
-        </div>
-    </div>
-
-    <!--Post details-->
-    <div class="row grey-banner border">
-        <div class="col-12 py-2">
-            <div class="mb-2">
-                {% if user.is_authenticated and user == thread.author %}
-                <a href="{% url 'edit_thread' thread.id %}">
-                    <span class="float-right">
-                        <i class="fas fa-edit"></i>
-                    </span>
-                </a>
-                {% endif %}
-                <p class="mb-0"><strong>{{ thread.topic }}</strong></p>
-                <p class=" text-muted p-font">{{ thread.author }} | {{ thread.created_on }}</p>
-            </div>
-        </div>
-        <!-- Post body -->
-        <div class="row grey-banner">
-            <div class="col-12 pb-3 p-font">
-                    <p class="p-font">{{ thread.description }}</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Comment field and reply button -->
-    {% load crispy_forms_tags %}
-    <form class="row d-grey-banner border programme-container pb-2" method="post">
-        <div class="col-10 pt-2">
-        {{ reply_form | crispy }}
-        {% csrf_token %}
-        </div>
-        <div class="col-2 py-2">
-            <button type="submit" class="btn purple-btn p-font rounded-0 float-right py-1 px-2">Reply</button>
-        </div>
-        <p class="col-12 float-left text-muted small ml-1">Signed in as <strong class="text-dark">{{ user.username }}</strong></p>
-    </form>
-
-    <!--Post comments-->
-    <div class="row programme-container">
-        <!--Comment count-->
-        <div class="col py-2">
-            <p class="small text-muted">{{ replies.count }} replies</p>
-        </div>
-    </div>
-        <!-- comments -->
-    <div class="row programme-container">
-        <div class="col p-0 mb-4 mt-3 ">
-            {% for reply in replies %}
-            <div class="comments border p-3 mb-2 p-font">
+            {% endif %}
+            <p class="mb-0"><strong>{{ thread.topic }}</strong></p>
+            <p class=" text-muted p-font">{{ thread.author }} | {{ thread.created_on }}</p>
+         </div>
+      </div>
+      <!-- Post body -->
+      <div class="row grey-banner">
+         <div class="col-12 pb-3 p-font">
+            <p class="p-font">{{ thread.description }}</p>
+         </div>
+      </div>
+   </div>
+   <!-- Comment field and reply button -->
+   {% load crispy_forms_tags %}
+   <form class="row d-grey-banner border programme-container pb-2" method="post">
+      <div class="col-10 pt-2">
+         {{ reply_form | crispy }}
+         {% csrf_token %}
+      </div>
+      <div class="col-2 py-2">
+         <button type="submit" class="btn purple-btn p-font rounded-0 float-right py-1 px-2">Reply</button>
+      </div>
+      <p class="col-12 float-left text-muted small ml-1">Signed in as <strong class="text-dark">{{ user.username }}</strong></p>
+   </form>
+   <!--Post comments-->
+   <div class="row programme-container">
+      <!--Comment count-->
+      <div class="col py-2">
+         <p class="small text-muted">{{ replies.count }} replies</p>
+      </div>
+   </div>
+   <!-- comments -->
+   <div class="row programme-container">
+      <div class="col p-0 mb-4 mt-3 ">
+         {% for reply in replies %}
+         <div class="comments border p-3 mb-2 p-font">
             <p class="font-weight-bold">
-                {{ reply.user }}
-                <span class="text-muted font-weight-normal pl-1">
-                {{ reply.created_on }}
-                </span>
-                {% if user.is_authenticated and user == reply.user %}
-                <a href="{% url 'delete_own_reply' reply.id %}">
-                    <span class="float-right">
-                        <i class="far fa-trash-alt"></i>
-                    </span>
-                </a>
-                {% endif %}
+               {{ reply.user }}
+               <span class="text-muted font-weight-normal pl-1">
+               {{ reply.created_on }}
+               </span>
+               {% if user.is_authenticated and user == reply.user %}
+               <a href="{% url 'delete_own_reply' reply.id %}">
+               <span class="float-right">
+               <i class="far fa-trash-alt"></i>
+               </span>
+               </a>
+               {% endif %}
             </p>
             {{ reply.body | linebreaksbr }}
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-
+         </div>
+         {% endfor %}
+      </div>
+   </div>
 </div>
-
 {% endblock %}

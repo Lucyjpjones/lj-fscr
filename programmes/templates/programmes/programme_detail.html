@@ -1,156 +1,148 @@
 {% extends "base.html" %} {% load static %} {% block page_header %}
 <div class="header-container">
-  <div class="row">
-    <div class="col"></div>
-  </div>
+   <div class="row">
+      <div class="col"></div>
+   </div>
 </div>
 {% endblock %} 
 {% block content %}
-
 <div class="mx-auto w-md-75">
-    <!--Product image-->
-    <div class="row">
-        <div class="col-12">
-        <div class="mt-3 mb-3">
+   <!--Product image-->
+   <div class="row">
+      <div class="col-12">
+         <div class="mt-3 mb-3">
             {% if programme.image %}
             <a href="{{ programme.image.url }}" target="_blank">
             <img
-                class="prog-detail-img"
-                src="{{ programme.image.url }}"
-                alt="{{ programme.name }}"
-            />
+               class="prog-detail-img"
+               src="{{ programme.image.url }}"
+               alt="{{ programme.name }}"
+               />
             </a>
             {% else %}
             <a href="">
             <img
-                class="prog-detail-img"
-                src="{{ MEDIA_URL }}noimage.png"
-                alt="{{ programme.name }}"
-            />
+               class="prog-detail-img"
+               src="{{ MEDIA_URL }}noimage.png"
+               alt="{{ programme.name }}"
+               />
             </a>
             {% endif %}
-        </div>
-        </div>
-    </div>
-
-    <!--Programme details-->
-    <div class="row">
-        <div class="col-12">
-            <div class="mb-3">
-                <p class="mb-0">{{ programme.name }}</p>
-                <p class="lead mb-1 text-left font-weight-bold">£{{ programme.price }}</p>
-                <p class="mb-1 text-muted"><small><i class="far fa-star mr-1"></i>{{ programme.rating }}</small></p>
-                {% if request.user.is_superuser %}
-                    <small>
-                        <a class="btn red-border-btn px-2 py-1 small rounded-0" href="{% url 'edit_programme' programme.id %}">Edit</a>
-                        <a class="btn red-btn px-2 py-1 small rounded-0" href="{% url 'delete_programme' programme.id %}">Delete</a>
-                    </small>
-                {% endif %}
-                <p class="mt-3 p-font">{{ programme.description|linebreaksbr }}</p>
+         </div>
+      </div>
+   </div>
+   <!--Programme details-->
+   <div class="row">
+      <div class="col-12">
+         <div class="mb-3">
+            <p class="mb-0">{{ programme.name }}</p>
+            <p class="lead mb-1 text-left font-weight-bold">£{{ programme.price }}</p>
+            <p class="mb-1 text-muted"><small><i class="far fa-star mr-1"></i>{{ programme.rating }}</small></p>
+            {% if request.user.is_superuser %}
+            <small>
+            <a class="btn red-border-btn px-2 py-1 small rounded-0" href="{% url 'edit_programme' programme.id %}">Edit</a>
+            <a class="btn red-btn px-2 py-1 small rounded-0" href="{% url 'delete_programme' programme.id %}">Delete</a>
+            </small>
+            {% endif %}
+            <p class="mt-3 p-font">{{ programme.description|linebreaksbr }}</p>
+         </div>
+      </div>
+   </div>
+   <!--What's included?-->
+   <div class="row grey-banner py-3 mb-3">
+      <div class="col-12">
+         <div class="product-details-container">
+            <p class="font-weight-bold mb-2">What's covered?</p>
+            <p class="mt-3 p-font">{{ programme.bullets|linebreaksbr }}</p>
+         </div>
+      </div>
+   </div>
+   <!--Testimonials -->
+   <div class="row">
+      <div class="col-12">
+         <div class="product-details-container">
+            <p class="font-weight-bold mb-4">What our athletes say... </p>
+         </div>
+         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner w-50 m-auto">
+               <div class="carousel-item programme-item active">
+                  <div class="col py-1 px-2">
+                     <i class="fas fa-quote-left fa-xs mb-2"></i>
+                     <p class="p-font">'Easy to follow and informative'</p>
+                     <p class="text-muted pt-1 small">Jason Davidson</p>
+                  </div>
+               </div>
+               <div class="carousel-item programme-item">
+                  <div class="col py-1 px-2">
+                     <i class="fas fa-quote-left fa-xs mb-2"></i>
+                     <p class="p-font">Very good value for money!</p>
+                     <p class="text-muted pt-1 small">Phil Miller</p>
+                  </div>
+               </div>
+               <div class="carousel-item programme-item">
+                  <div class="col py-1 px-2">
+                     <i class="fas fa-quote-left fa-xs mb-2"></i>
+                     <p class="p-font">'Great Programme!'</p>
+                     <p class="text-muted pt-1 small">Lucy Jones</p>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-
-    <!--What's included?-->
-    <div class="row grey-banner py-3 mb-3">
-        <div class="col-12">
-            <div class="product-details-container">
-                <p class="font-weight-bold mb-2">What's covered?</p>
-                <p class="mt-3 p-font">{{ programme.bullets|linebreaksbr }}</p>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+         </div>
+      </div>
+   </div>
+   <!--Quantity Selector-->
+   <form class="form" action="{% url 'add_to_bag' programme.id 'programme' %}" method="POST">
+      {% csrf_token %}
+      <div class="row">
+         <div class="col-12">
+            <p class="mt-3 mb-2"><strong class="p-font">Quantity:</strong></p>
+            <div class="form-group w-50 mb-3">
+               <div class="input-group">
+                  <div class="input-group-prepend">
+                     <button class="decrement-qty btn btn-sm rounded-0" 
+                        data-item_id="{{ programme.id }}" id="decrement-qty_{{ programme.id }}">
+                     <span class="icon">
+                     <i class="fas fa-minus"></i>
+                     </span>
+                     </button>
+                  </div>
+                  <input class="form-control qty_input form-control-sm text-center" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ programme.id }}" 
+                     id="id_qty_{{ programme.id }}">
+                  <div class="input-group-append">
+                     <button class="increment-qty btn btn-sm rounded-0"
+                        data-item_id="{{ programme.id }}" id="increment-qty_{{ programme.id }}">
+                     <span class="icon">
+                     <i class="fas fa-plus"></i>
+                     </span>
+                     </button>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-
-    <!--Testimonials -->
-    <div class="row">
-        <div class="col-12">
-            <div class="product-details-container">
-                <p class="font-weight-bold mb-4">What our athletes say... </p>
-            </div>
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner w-50 m-auto">
-                    <div class="carousel-item programme-item active">
-                        <div class="col py-1 px-2">
-                            <i class="fas fa-quote-left fa-xs mb-2"></i>
-                            <p class="p-font">'Easy to follow and informative'</p>
-                            <p class="text-muted pt-1 small">Jason Davidson</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item programme-item">
-                        <div class="col py-1 px-2">
-                            <i class="fas fa-quote-left fa-xs mb-2"></i>
-                            <p class="p-font">Very good value for money!</p>
-                            <p class="text-muted pt-1 small">Phil Miller</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item programme-item">
-                        <div class="col py-1 px-2">
-                            <i class="fas fa-quote-left fa-xs mb-2"></i>
-                            <p class="p-font">'Great Programme!'</p>
-                            <p class="text-muted pt-1 small">Lucy Jones</p>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!--Quantity Selector-->
-    <form class="form" action="{% url 'add_to_bag' programme.id 'programme' %}" method="POST">
-        {% csrf_token %}
-        <div class="row">
-            <div class="col-12">
-                <p class="mt-3 mb-2"><strong class="p-font">Quantity:</strong></p>
-                    <div class="form-group w-50 mb-3">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <button class="decrement-qty btn btn-sm rounded-0" 
-                                    data-item_id="{{ programme.id }}" id="decrement-qty_{{ programme.id }}">
-                                    <span class="icon">
-                                        <i class="fas fa-minus"></i>
-                                    </span>
-                                </button>
-                            </div>
-                            <input class="form-control qty_input form-control-sm text-center" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ programme.id }}" 
-                                id="id_qty_{{ programme.id }}">
-                            <div class="input-group-append">
-                                <button class="increment-qty btn btn-sm rounded-0"
-                                    data-item_id="{{ programme.id }}" id="increment-qty_{{ programme.id }}">
-                                    <span class="icon">
-                                        <i class="fas fa-plus"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <!--Buttons-->
-            <div class="col pl-0 ml-3 mb-3">
-                    <a href="{% url 'programmes' %}" class="navy-border-btn btn rounded-0 mt-1 mr-1 p-font">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
-                    <input type="submit" class="navy-btn btn rounded-0 text-uppercase mt-1 p-font" value="Add to Bag">
-            </div>
-            <input type="hidden" name="redirect_url" 
-                    value="{{ request.path }}">
-        </div>
-    </form>
-
+         </div>
+         <!--Buttons-->
+         <div class="col pl-0 ml-3 mb-3">
+            <a href="{% url 'programmes' %}" class="navy-border-btn btn rounded-0 mt-1 mr-1 p-font">
+            <span class="icon">
+            <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="text-uppercase">Keep Shopping</span>
+            </a>
+            <input type="submit" class="navy-btn btn rounded-0 text-uppercase mt-1 p-font" value="Add to Bag">
+         </div>
+         <input type="hidden" name="redirect_url" 
+            value="{{ request.path }}">
+      </div>
+   </form>
 </div>
-
 {% endblock %}
-
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}

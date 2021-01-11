@@ -1,68 +1,64 @@
 {% extends "base.html" %} 
 {% load static %}
-
 {% block page_header %}
 <div class="header-container">
-  <div class="row">
-    <div class="col"></div>
-  </div>
+   <div class="row">
+      <div class="col"></div>
+   </div>
 </div>
 {% endblock %} {% block content %}
-
 <!--Page title-->
 <div class="w-100 mx-auto w-md-75">
-  <div class="row">
-    <div class="col text-center">
-      <h2 class="title-font py-4">Message Board</h2>
-    </div>
-  </div>
-
-  <!--Add Thread-->
-    <div class="row">
-        <div class="col-12 mb-2">
-            <a class="purple-btn btn rounded-0 mt-3 mr-1 p-font py-1 px-3" href="{% url 'add_thread' %}">Add Thread</a>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-12 p-0">
-            <div class="grey-banner mx-3">
-                <div class="rounded-0">
-                    <table class="table table-sm table-borderless">
-                        <thead class="table-header">
-                            <tr class="d-flex p-1 pl-2">
-                                <th class="col-8 col-md-6">Topic<p class="p-0 text-muted small">({{ threads.count }} active threads)</p></th>
-                                <th class="col-md-2 d-none d-md-block text-center">Replies</th>
-                                <th class="col-4 text-center">Posted</th>
-                            </tr>
-                        </thead>
-
-                        {% for thread in threads %}
-                            <tr class="d-flex p-1 pl-2 border-bottom">
-                                <td class="col-8 col-md-6">
-                                    <a href= 
-                                        "{% url 'thread_detail' thread.slug %}">
-                                        <p class="post-link mb-1">
-                                            {{ thread.topic }}
-                                        </p>
-                                    </a>
-                                    <p class="my-0 d-block d-md-none text-muted small"><i class="far fa-comment-dots"></i> {{ thread.replies.count }} replies</p>
-                                </td>
-                                <td class="col-md-2 d-none d-md-block text-center">
-                                    <p class="my-0">{{ thread.replies.count }}</p>
-                                </td>
-                                <td class="col-4 text-center">
-                                    <p class="my-0 p-font">{{ thread.author }}</p>
-                                    <p class="my-0 text-muted small">{{ thread.created_on }}</p>
-                                </td>
-                            </tr>
-                            {%endfor%}
-                    </table>
-                </div>
-             </div>
-        </div>
-    </div>
-
+   <div class="row">
+      <div class="col text-center">
+         <h2 class="title-font py-4">Message Board</h2>
+      </div>
+   </div>
+   <!--Add Thread-->
+   <div class="row">
+      <div class="col-12 mb-2">
+         <a class="purple-btn btn rounded-0 mt-3 mr-1 p-font py-1 px-3" href="{% url 'add_thread' %}">Add Thread</a>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-12 p-0">
+         <div class="grey-banner mx-3">
+            <div class="rounded-0">
+               <table class="table table-sm table-borderless">
+                  <thead class="table-header">
+                     <tr class="d-flex p-1 pl-2">
+                        <th class="col-8 col-md-6">
+                           Topic
+                           <p class="p-0 text-muted small">({{ threads.count }} active threads)</p>
+                        </th>
+                        <th class="col-md-2 d-none d-md-block text-center">Replies</th>
+                        <th class="col-4 text-center">Posted</th>
+                     </tr>
+                  </thead>
+                  {% for thread in threads %}
+                  <tr class="d-flex p-1 pl-2 border-bottom">
+                     <td class="col-8 col-md-6">
+                        <a href= 
+                           "{% url 'thread_detail' thread.slug %}">
+                           <p class="post-link mb-1">
+                              {{ thread.topic }}
+                           </p>
+                        </a>
+                        <p class="my-0 d-block d-md-none text-muted small"><i class="far fa-comment-dots"></i> {{ thread.replies.count }} replies</p>
+                     </td>
+                     <td class="col-md-2 d-none d-md-block text-center">
+                        <p class="my-0">{{ thread.replies.count }}</p>
+                     </td>
+                     <td class="col-4 text-center">
+                        <p class="my-0 p-font">{{ thread.author }}</p>
+                        <p class="my-0 text-muted small">{{ thread.created_on }}</p>
+                     </td>
+                  </tr>
+                  {%endfor%}
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
 </div>
-
 {% endblock %}

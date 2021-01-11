@@ -1,36 +1,33 @@
 {% extends "base.html" %} 
 {% load static %}
-
 {% block page_header %}
 <div class="header-container">
-  <div class="row">
-    <div class="col"></div>
-  </div>
+   <div class="row">
+      <div class="col"></div>
+   </div>
 </div>
 {% endblock %} {% block content %}
-
 <!--Page title-->
 <div class="mx-auto admin-container">
-    <div class="row">
-        <div class="col text-center">
-            <h2 class="title-font pt-5">Message Board</h2>
-            <h5 class="subtitle-font pb-3">Edit Thread</h5>
-        </div>
-    </div>
-
-    <div class="row">
-            <div class="col">
-                <form method="POST" action="{% url 'edit_thread' thread.id %}" class="form mb-3" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {% for field in form %}
-                            {{ field | as_crispy_field }}
-                    {% endfor %}
-                    <div class="text-right">
-                        <a class="navy-border-btn btn rounded-0 text-uppercase mr-1 p-font" href="{% url 'forum' %}">Cancel</a>
-                        <button class="navy-btn btn rounded-0 text-uppercase p-font" type="submit">Post</button>
-                    </div>
-                </form>
-            </div>            
-        </div>
+   <div class="row">
+      <div class="col text-center">
+         <h2 class="title-font pt-5">Message Board</h2>
+         <h5 class="subtitle-font pb-3">Edit Thread</h5>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col">
+         <form method="POST" action="{% url 'edit_thread' thread.id %}" class="form mb-3" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+            {{ field | as_crispy_field }}
+            {% endfor %}
+            <div class="text-right">
+               <a class="navy-border-btn btn rounded-0 text-uppercase mr-1 p-font" href="{% url 'forum' %}">Cancel</a>
+               <button class="navy-btn btn rounded-0 text-uppercase p-font" type="submit">Post</button>
+            </div>
+         </form>
+      </div>
+   </div>
 </div>
 {% endblock %}

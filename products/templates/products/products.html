@@ -82,6 +82,7 @@
               <p class="mb-0">{{ product.name }}</p>
               <p class="mb-0">{{ product.colour }}</p>
               <p class="mb-0">£{{ product.price }}</p>
+              <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ product.rating }}</small></p>
             </div>
             {% if request.user.is_superuser %}
             <small class="pl-1 mt-2">

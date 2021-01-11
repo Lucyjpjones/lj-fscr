@@ -77,7 +77,7 @@ p,
     color: #ff0035 !important;
 }
 
-.far.fa-trash-alt {
+.far.fa-trash-alt, .fas.fa-edit {
     color: #ff0035;
 }
 

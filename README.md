@@ -8,13 +8,12 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 
 [View Site](https://lj-fscr.herokuapp.com/)
 
-```
 For testing the following credentials can be used:
 
-Card payments:
-
+**Card payments**
+```
 Card number: 4242 4242 4242 4242
-Zip & CCV must be filled out with any integers
+Zip & CCV: any integer values are valid
 ```
 
 </div>
@@ -94,12 +93,12 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 
 > **Grey:** paragraph Calmness and neutrality, focus, and precision.
 
-> **Purple:** Overcoming physical challenges and limitations and setting farther, more difficult goals.
+> **Purple:** Overcoming physical challenges and limitations and setting farther more difficult goals.
 
 <br>
   <img src="media/palette.png">
 
-- The #f8f8f8 shade of very light grey has been used for as a background colour throughout the site with #fafafa shade of white used for forms.
+- The #f8f8f8 shade of very light grey has been used as a background colour throughout the site with the #fafafa shade of white used for forms.
 
 
 **Typography**
@@ -117,13 +116,13 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 
 **Logo Design**
 
-When it comes to creating a business, the logo is the central visual element in helping customers find, recognise and remember a brand. Taking this into consideration, I decided to spend some time creating a logo for FSCR which would represent the brand well.
+When it comes to creating a business, the logo is the central visual element in helping customers find, recognise, and remember a brand. Taking this into consideration, I decided to spend some time creating a logo for FSCR which would represent the brand well.
 
-I set up a meeting with my client and presented them with a moodboard of different designs and gathered their feedback.
+I set up a meeting with my client and presented them with a mood board of different designs and gathered their feedback.
 
 <img src="media/logo-designs.png">
 
-My final design with client approval below;
+My final design with client approval is displayed below;
 
 <img src="media/final-logo-design.png">
 
@@ -135,24 +134,26 @@ I created a personalised favicon for the site to add branding, and to make it ea
 
 ### **<u>Data Schema</u>**
 
+To help visualize my database, I created a diagram using [dbdiagram](https://dbdiagram.io/) which illustrates the relationships between my models.
+
 <img src="media/schema.png">
 
-The **Product model** within the products app, is used to store information about individual products.
-The **Category model** within the products app, is used to group products into specific categories.
+The **Product model** within the product's app, is used to store information about individual products.
+The **Category model** within the product's app, is used to group products into specific categories.
 
-The **Programme model** within the programmes app, is used to store information about individual programmes.
-The **Category model** within the programmes app, is used to group programmes into specific categories.
+The **Programme model** within the programme's app, is used to store information about individual programmes.
+The **Category model** within the programme's app, is used to group programmes into specific categories.
 
-The **UserProfile** model within the profiles app is used to store users profile information and is connected to various apps for other benefits;
-- Checkout app - to store users checkout information, as well as order history.
-- Blog app - to store name of user who created the blog and allows users to leave a comment with their username automatically displayed.
-- Forum appp - to store name of user who created thread allows users to leave a comment with their username automatically displayed.
+The **UserProfile** model within the profiles app is used to store user's profile information and is connected to various apps for other benefits;
+- Checkout app - to store user's checkout information, as well as order history.
+- Blog app - to store the name of the user who created the blog and those who have left a comment.
+- Forum app - to store the name of the user who created the thread and those who have replied.
 
 The **Post model** within the blog app, is used to store posts added by the admin user.
 The **Comments model** within the blog app, is used to store comments added by the user who is logged in.
 
 The **Thread model** within the forum app, is used to store threads added by the user.
-The **Comment model** within the forum app, is used to store comments made by the user logged in.
+The **Comment model** within the forum app, is used to store replies made by the user logged in.
 
 The **Order model** within the checkout app, is used to store orders.
 The **OrderLineItem model** within the checkout app, is used to store information about individual products on the order.
@@ -162,18 +163,18 @@ The **ProgOrderLineItem model** within the checkout app, is used to store inform
 
 <img src="media/flowchart.png">
 
-* Boxes higlighted are only accessible when a user is registered and logged in.
+> **NB:** Boxes highlighted are only accessible when a user is registered and logged in.
 
 <u>**User profiles**</u>
 
-**User profile: Site Visitor**
-As a site Visitor, I want to be able to easily navigate around the site and gain a clear insight into its purpose. I would like to be able to browse the services and products on offer with the option to purchase. I would also like the ability of contacting the site owner if I require any further information and the option to register as a member for more resources.
+**Site Visitor**
+As a site visitor, I want to be able to easily navigate around the site and gain a clear insight into its purpose. I would like to be able to browse the services and products on offer with the option to purchase. I would also like the ability to contact the site owner if I require any further information and the option to register as a member for more resources.
 
-**User profile: Site Member**
-As a site member, I want to be part of a community where I can interact with other members around key topics to share each others knowledge, experience and progress. I would like to have my own user profile to store my personal details and order history, and the ability to easily log in and out of the site.
+**Site Member**
+As a site member, I want to be part of a community where I can interact with other members around key topics to share each other's knowledge, experience, and progress. I would like to have my own user profile to store my personal details and order history, and the ability to easily log in and out of the site.
 
-**User profile: Site Owner**
-As the site owner, I want to be able to continually monitor and update the site to manage my user's expectations. I would like the ability to easily add, edit and delete products and programmes to ensure my site is always up to date and relevant, and add blogs for our site members. I want to provide a customer review option, to gain feedback for improvements and to develop a sense of transparency to gain consumer loyalty and trust.
+**Site Owner**
+As the site owner, I want to be able to continually monitor and update the site to manage my user's expectations. I would like the ability to easily add, edit and delete products and programmes to ensure my site is always up to date and relevant, and add blogs for our site members. I want to provide a customer review option, to gain feedback for improvements, and to develop a sense of transparency to gain consumer loyalty and trust.
 
 <u>**User stories**</u>
 
@@ -184,12 +185,12 @@ As the site owner, I want to be able to continually monitor and update the site 
 | 2                              | Site Visitor | View a list of products                                             | Select a product to view more details                                                                |
 | 3                              | Site Visitor | View a list of programmes                                           | Select a programme to view more details                                                              |
 | 4                              | Site Visitor | View a specific category of products                                | Quickly find products I’m interested in without having to search through all the products            |
-| 5                              | Site Visitor | View individual product details                                     | Identify the description, price, available sizes, product image and rating                           |
-| 6                              | Site Visitor | View individual programme details                                   | Identify the description, price, duration, rating and reviews                                        |
+| 5                              | Site Visitor | View individual product details                                     | Identify the description, price, available sizes, product image, and rating                           |
+| 6                              | Site Visitor | View individual programme details                                   | Identify the description, price, duration, rating, and reviews                                        |
 | 7                              | Site Visitor | Easily access contact details                                       | Send a message regarding any queries I have                                                          |
 | 8                              | Site Visitor | See reviews and ratings on products and programmes                  | Be reassured that the product/programme is good                                                      |
-| 9                              | Site Member  | Browse associated blogs, articles and recent new stories            | Learn more about football rehabilitation and keep up to date with news                               |
-| 10                             | Site Member  | Forum                                                               | Be part of a community and speak to other coaches/athletes                                           |
+| 9                              | Site Member  | Browse associated blogs, articles, and recent new stories            | Learn more about football rehabilitation and keep up to date with news                               |
+| 10                             | Site Member  | Access a member forum                                                               | Be part of a community and speak to other coaches/athletes                                           |
 | Registration and user accounts |              |                                                                     |                                                                                                      |
 | 11                             | Site Visitor | Easily register for an account                                      | Have a personal account and be able to view my profile                                               |
 | 12                             | Site Visitor | Receive an email confirmation after registering                     | Verify that my account registration was successful                                                   |
@@ -197,29 +198,23 @@ As the site owner, I want to be able to continually monitor and update the site 
 | 14                             | Site Member  | Easily update my personal details                                   | Change my details if needed                                                                          |
 | 15                             | Site Member  | Easily recover my password in case I forget it                      | Recover access to my account                                                                         |
 | 16                             | Site Member  | Have a personalised user profile                                    | View my personal order confirmations, order history and save my payment details for future purchases |
-| 17                             | Site Member  | Enable my details to be prefilled                                   | Save time entering my details when making  future purchases                                          |
+| 17                             | Site Member  | Enable my details to be prefilled                                   | Save time entering my details when making future purchases                                          |
 | Sorting and Searching          |              |                                                                     |                                                                                                      |
-| 18                             | Site Visitor | Sort and filter the list of available products                      | Easily find the product I’m looking for                                                              |
-| 19                             | Site Visitor | Sort and filter the list of available programmes                    | Easily find the programme I’m looking for                                                            |
-| 20                             | Site Visitor | Search the site by keywords                                         | Easily find what I am looking for                                                                    |
-| 21                             | Site Visitor | Easily see what I’ve searched for and the number of results         | Quickly decide whether the product or programme I want is available                                  |
-| 22                             |              |                                                                     |                                                                                                      |
+| 18                             | Site Visitor | Sort and filter the list of available products and programmes                    | Easily find the product/programme I’m looking for                                                              |
+| 19                             | Site Visitor | Search the site by keywords                                         | Easily find what I am looking for                                                                    |
+| 20                             | Site Visitor | Easily see what I’ve searched for and the number of results         | Quickly decide whether the product or programme I want is available                                  |                                                                                |
 | Purchasing and checkout        |              |                                                                     |                                                                                                      |
-| 23                             | Site Visitor | Easily select the size and quantity of a product when purchasing it | Ensure I don’t accidentally select the wrong product quantity or size                                |
-| 24                             | Site Visitor | View items in my bag to be purchased                                | Identify the total cost of my purchase and all items I will receive                                  |
-| 25                             | Site Visitor | Adjust the quantity of individual items in my bag                   | Easily make changes to my purchase before checkout                                                   |
-| 26                             | Site Visitor | Easily enter my payment information                                 | Check out quickly with no hassles                                                                    |
-| 27                             | Site Visitor | Feel my personal and payment information is safer and secure        | Confidently provide the needed information to make a purchase                                        |
-| 28                             | Site Visitor | View an order confirmation after checkout                           | Verify that I haven’t made any mistakes                                                              |
-| 29                             | Site Visitor | Receive an email confirmation after checking out                    | Keep the confirmation of what I’ve purchased for my records                                          |
+| 21                             | Site Visitor | Easily select the size and quantity of a product when purchasing it | Ensure I don’t accidentally select the wrong product quantity or size                                |
+| 22                             | Site Visitor | View items in my bag to be purchased                                | Identify the total cost of my purchase and all items I will receive                                  |
+| 23                             | Site Visitor | Adjust the quantity of individual items in my bag                   | Easily make changes to my purchase before checkout                                                   |
+| 24                             | Site Visitor | Easily enter my payment information and feel my personal and payment information is safe and secure                                  | Check out quickly with no hassles and confidently provide the needed information to make a purchase                   
+| 25                             | Site Visitor | View an order confirmation after checkout                           | Verify that I haven’t made any mistakes                                                              |
+| 26                             | Site Visitor | Receive an email confirmation after checking out                    | Keep the confirmation of what I’ve purchased for my records                                          |
 | Admin and Store Management     |              |                                                                     |                                                                                                      |
-| 30                             | Site Owner   | Add a product                                                       | Add new product lines to my products purchasing page                                                 |
-| 31                             | Site Owner   | Add a programme                                                     | Add new programmes to my programme purchasing page                                                   |
-| 32                             | Site Owner   | Edit/Update a product                                               | Change product prices, descriptions, images and other product criteria                               |
-| 33                             | Site Owner   | Edit/Update a programme                                             | Change programme prices, descriptions and other programme criteria                                   |
-| 34                             | Site Owner   | Delete a product                                                    | Remove items that are no longer available for sale                                                   |
-| 35                             | Site Owner   | Delete a programme                                                  | Remove programmes that are discontinued                                                              |
-| 36                             | Site Owner   | Add a blog                                                          | Add new blogs to share with site members                                                             |
+| 27                             | Site Owner   | Add a product/programme                                                       | Add new product/programme lines to my products/programmes purchasing page                                                                                  |
+| 28                             | Site Owner   | Edit/Update a product/programme                                               | Change product/programme prices, descriptions, images, and other details                              |
+| 29                             | Site Owner   | Delete a product/programme                                                    | Remove items that are no longer available for sale                                                   |
+| 30                             | Site Owner   | Add a blog                                                          | Add new blogs to share with site members                                                             |
 
 ### **<u>Wireframes</u>**
 
@@ -241,16 +236,19 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 
 #### Wireframes vs. Site
 
-The live site has a few changes vs. what was displayed in the wireframes, which I have highlighted below;
+The deployed site has some differences vs. the wireframes I initially created, these are highlighted below;
 
-- social logins added
-- menu icon positioning
-- homepage amendments
-    - caousel moved down- wasnt visually pleasing to have two carousels on top of one another
-    - Decided to include blogs on homepage
-    - contact form added to homepage
-- Decided not to use red buttons- could cause user confusion
-- Add videos to blog
+|   | Change                                        | Reason                                                                                                             |
+|---|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| 1 | Social login option added to login page       | I thought this feature would be a nice addition to improve user experience by allowing them to log in more quickly |
+| 2 | Menu icon positioning                         | The menu is displayed on the left instead of the right, this was only changed for my own personal visual reasons   |
+| 3 | Testimonial carousel repositioned on homepage | It wasn't visually pleasing to have two carousels on top of one another                                            |
+| 4 | Latest blogs added to homepage                 | Client wanted this to be a focus on the homepage                                                                   |
+| 5 | Contact form added to homepage                | This wasn't included on my wireframes but I added this to the bottom of my homepage which is a common positioning  |
+| 6 | Removed red buttons                           | I decided not to use red buttons to avoid the possibility of user confusion                                        |
+| 7 | Add to bag button on programmes page | I decided not to have the add the bag option on this page and to keep it in line with the structure of the product page |
+| 8 | Sample fitness plan removed from programme detail | Client didn't want to provide an example template so this was removed |
+| 9 | View bag and checkout options available on 'add to bag' success toast | I decided to add both options so the user has the option to view their bag or just go straight to the checkout |
     
 ---
 
@@ -787,6 +785,7 @@ When you clone a repository, the repository is copied on to your local machine.
   - [Help with removing labels from crispy forms](https://stackoverflow.com/questions/11472495/remove-labels-in-a-django-crispy-forms).
   - [Help with reducing the inbox size in crispy forms](https://stackoverflow.com/questions/38684753/django-reducing-the-size-of-input-box-in-crispy-forms).
   - [Using slugify for detailed urls](https://stackoverflow.com/questions/45847278/django-use-slugify-for-detail-url).
+  - [Comparing logged in user IF statement](https://stackoverflow.com/questions/43879330/djangounable-to-compare-the-logged-in-user-with-the-author-of-the-post)
 
 
 #### Media

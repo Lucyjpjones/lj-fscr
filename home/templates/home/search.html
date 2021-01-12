@@ -21,8 +21,9 @@
          <div class="row">
             {% if results_list %}
             <div class="col-12">
-               <p class="mb-3 text-muted small text-center">{{ results_list.count }} products found</p>
+               <p class="mb-4 text-muted text-center">Showing search results for "{{ search_term }}"</p>
             </div>
+
             {% for product in results_list %}
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
@@ -51,13 +52,66 @@
                   </div>
                </div>
             </div>
-            {% if forloop.counter|divisibleby:2 %}
-            <div class="col-12 d-md-none mb-5"></div>
-            {% endif %} {% if forloop.counter|divisibleby:3 %}
-            <div class="col-12 d-none d-md-block d-lg-none mb-5"></div>
-            {% endif %} {% if forloop.counter|divisibleby:4 %}
-            <div class="col-12 d-none d-lg-block mb-5"></div>
-            {% endif %} {% endfor %}
+            {% endfor %}
+            
+            {% for programme in results_list %}
+            <div class="col-6 col-md-4 col-lg-3">
+               <div class="card bg-trans h-100 border-0">
+                  {% if programme.image %}
+                  <a href="{% url 'programme_detail' programme.id %}">
+                  <img
+                     class="prod-img-card rounded-0"
+                     src="{{ programme.image.url }}"
+                     alt="{{ programme.name }}"
+                     />
+                  </a>
+                  {% else %}
+                  <a href="{% url 'programme_detail' programme.id %}">
+                  <img
+                     class="prod-img-card rounded-0"
+                     src="{{ MEDIA_URL }}noimage.png"
+                     alt="{{ programme.name }}"
+                     />
+                  </a>
+                  {% endif %}
+                  <div class="p-font pb-0 pt-2 pl-1">
+                     <p class="mb-0">{{ programme.name }}</p>
+                     <p class="mb-0">{{ programme.colour }}</p>
+                     <p class="mb-0">£{{ programme.price }}</p>
+                     <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ programme.rating }}</small></p>
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
+            {% for post in results_list %}
+            <div class="col-6 col-md-4 col-lg-3">
+               <div class="card bg-trans h-100 border-0">
+                  {% if post.image %}
+                  <a href="{% url 'post_detail' post.id %}">
+                  <img
+                     class="prod-img-card rounded-0"
+                     src="{{ post.image.url }}"
+                     alt="{{ post.name }}"
+                     />
+                  </a>
+                  {% else %}
+                  <a href="{% url 'post_detail' post.id %}">
+                  <img
+                     class="prod-img-card rounded-0"
+                     src="{{ MEDIA_URL }}noimage.png"
+                     alt="{{ post.name }}"
+                     />
+                  </a>
+                  {% endif %}
+                  <div class="p-font pb-0 pt-2 pl-1">
+                     <p class="mb-0">{{ post.name }}</p>
+                     <p class="mb-0">{{ post.colour }}</p>
+                     <p class="mb-0">£{{ post.price }}</p>
+                     <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ post.rating }}</small></p>
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
             {% else %}
             <div class="mx-auto">
                <p class="p-font mb-5">Sorry no search results found</p>

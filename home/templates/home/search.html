@@ -1,0 +1,70 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block page_header %}
+<div class="header-container">
+   <div class="row">
+      <div class="col"></div>
+   </div>
+</div>
+{% endblock %} {% block content %}
+<!--Page title-->
+<div class="container-fluid">
+   <div class="row">
+      <div class="col text-center">
+      </div>
+   </div>
+   
+   <!--Search results-->
+   <div class="row mt-sm-3">
+      <div class="col-12 offset-1">
+         <div class="row mt-1 mb-3"></div>
+         <div class="row">
+            {% if results_list %}
+            <div class="col-12">
+               <p class="mb-3 text-muted small text-center">{{ results_list.count }} products found</p>
+            </div>
+            {% for product in results_list %}
+            <div class="col-6 col-md-4 col-lg-3">
+               <div class="card bg-trans h-100 border-0">
+                  {% if product.image %}
+                  <a href="{% url 'product_detail' product.id %}">
+                  <img
+                     class="prod-img-card rounded-0"
+                     src="{{ product.image.url }}"
+                     alt="{{ product.name }}"
+                     />
+                  </a>
+                  {% else %}
+                  <a href="{% url 'product_detail' product.id %}">
+                  <img
+                     class="prod-img-card rounded-0"
+                     src="{{ MEDIA_URL }}noimage.png"
+                     alt="{{ product.name }}"
+                     />
+                  </a>
+                  {% endif %}
+                  <div class="p-font pb-0 pt-2 pl-1">
+                     <p class="mb-0">{{ product.name }}</p>
+                     <p class="mb-0">{{ product.colour }}</p>
+                     <p class="mb-0">£{{ product.price }}</p>
+                     <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ product.rating }}</small></p>
+                  </div>
+               </div>
+            </div>
+            {% if forloop.counter|divisibleby:2 %}
+            <div class="col-12 d-md-none mb-5"></div>
+            {% endif %} {% if forloop.counter|divisibleby:3 %}
+            <div class="col-12 d-none d-md-block d-lg-none mb-5"></div>
+            {% endif %} {% if forloop.counter|divisibleby:4 %}
+            <div class="col-12 d-none d-lg-block mb-5"></div>
+            {% endif %} {% endfor %}
+            {% else %}
+            <div class="mx-auto">
+               <p class="p-font mb-5">Sorry no search results found</p>
+            </div>
+            {% endif %}
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

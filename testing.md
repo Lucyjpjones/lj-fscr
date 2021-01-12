@@ -43,31 +43,35 @@ I added a filter option to both the products and programmes page giving users th
 
 Each individual product page displays the products description, price, available sizes, product image and rating. There is also the ability to add to bag or redirect back to the products page.
 
-<img src="media/us-5.png">
+<img src="media/us-4.png">
 
 **6. View individual programme details**
 
 Each individual programme page displays the programmes description, price, available sizes, programme image and rating. There is also the ability to add to bag or redirect back to the programmes page.
 
-<img src="media/us-6.png">
+<img src="media/us-5.png">
 
 **7. Easily access contact details**
 
 I have included a contact form on the home page which is also easily navigated to via the main nav menu. This has been set up using EmailJS with my own custom template to assist with organisation of user enquiries.
 
+<img src="media/us-6.png">
+
+**8. See reviews and ratings on products and programmes**
+
+Testimonials are visible on the homepage and also on the programmes detail page. Users are also able to see the rating for each individual product/programme under each item on the main page and details page.
+
+As this is a startup which hasn't yet started business the reviews and ratings are only mockups.
+
 <img src="media/us-7.png">
 
-**9. See reviews and ratings on products and programmes**
-
-I have added 
-
-**8. Browse associated blogs, articles and recent new stories**
+**9. Browse associated blogs, articles and recent new stories**
 
 I created a blog app that can only be viewed by site members. When a user is not logged in and they click on the blog they will be directed to the login/register page. If a user is a member and logged in they will be directed to the blog page where they can view blogs posted by the admin user. Members also have the ability to comment and delete their own comments on blog posts creating further user interaction.
 
 <img src="media/us-8.png">
 
-**9. Access a member forum**
+**10. Access a member forum**
 
 I created a forum app that can only be accessed by site members. When a user is not logged in and they click on the forum they will be directed to the login/register page. If a user is a member and logged in they will be directed to the forum page where they will have the option to view threads by other users and add their own. They also have the capability of replying to any thread which displays both their logged in username and date/time posted.
 

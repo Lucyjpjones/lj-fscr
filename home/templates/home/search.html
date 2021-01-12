@@ -25,6 +25,9 @@
             </div>
 
             {% for product in results_list %}
+            {% for programme in results_list %}
+            {% for post in results_list %}
+            {% if product %}
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
                   {% if product.image %}
@@ -52,9 +55,7 @@
                   </div>
                </div>
             </div>
-            {% endfor %}
-            
-            {% for programme in results_list %}
+            {% elif programme %}
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
                   {% if programme.image %}
@@ -82,8 +83,7 @@
                   </div>
                </div>
             </div>
-            {% endfor %}
-            {% for post in results_list %}
+            {% elif post %}
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
                   {% if post.image %}
@@ -111,6 +111,9 @@
                   </div>
                </div>
             </div>
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
             {% endfor %}
             {% else %}
             <div class="mx-auto">

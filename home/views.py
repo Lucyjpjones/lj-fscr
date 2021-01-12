@@ -40,6 +40,9 @@ def search_results(request):
         results_list = list(chain(products, programmes, posts))
 
     context = {
+        'prducts': products,
+        'programmes': programmes,
+        'posts': posts,
         'search_term': query,
         'results_list': results_list,
     }

@@ -8,15 +8,15 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 
 [View Site](https://lj-fscr.herokuapp.com/)
 
+</div>
+
 For testing the following credentials can be used:
 
 **Card payments**
-```
-Card number: 4242 4242 4242 4242
-Zip & CCV: any integer values are valid
-```
 
-</div>
+- Card number: 4242 4242 4242 4242
+
+- Zip & CCV: any integer values are valid
 
 **Disclaimer:** This project is for educational purposes only, images taken from other sources will be replaced if the site goes commercial.
 
@@ -234,9 +234,9 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 - [Forum](wireframes/wf-forum.pdf)
 - [Forum View](wireframes/wf-forum-view.pdf)
 
-#### Wireframes vs. Site
+#### Wireframes vs. Deployed site
 
-The deployed site has some differences vs. the wireframes I initially created, these are highlighted below;
+The deployed site has some differences vs. the wireframes I initially created, the main discrepancies are highlighted below;
 
 |   | Change                                        | Reason                                                                                                             |
 |---|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
@@ -255,6 +255,8 @@ The deployed site has some differences vs. the wireframes I initially created, t
 ## &rarr; **Features**
 
 ### **Features used**
+
+<ins>**Structure and Navigation**</ins>
 
 - **Responsive on all device sizes**
   - Mobile-first design, responsive on all devices through using the Bootstrap grid system and CSS media queries.

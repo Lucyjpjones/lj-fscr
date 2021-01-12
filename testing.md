@@ -15,7 +15,7 @@
 
 ### **Testing user stories**
 
-<u>Viewing and Navigation</u>
+#### <u>Viewing and Navigation</u>
 
 **1. Discover FSCR’s purpose and goals**
 
@@ -77,7 +77,7 @@ I created a forum app that can only be accessed by site members. When a user is 
 
 <img src="media/us-9.png">
 
-<u>Registration and user accounts</u>
+#### <u>Registration and user accounts</u>
 
 **10. Easily register for an account**
 
@@ -123,7 +123,7 @@ If the user has filled in their profile information, these details will be prefi
 
 <img src="media/us-16.png">
 
-<u>Sorting and Searching</u>
+#### <u>Sorting and Searching</u>
 
 **17. Sort and filter the list of available products and programmes**
 
@@ -144,7 +144,7 @@ A search bar features in the main site header. Users can search by keywords on t
 The products, programmes and blog page all feature a results count to show the user how many items are available to them. (View user story 17 for screenshots)
 
 
-<u>Purchasing and checkout</u>
+#### <u>Purchasing and checkout</u>
 
 **20. Easily select the size and quantity of a product/programme when purchasing it**
 
@@ -183,7 +183,7 @@ Once the user has made a purchase they are sent an email with a summary of their
 
 <img src="media/us-26.png">
 
-<u>Admin and Store Management</u>
+#### <u>Admin and Store Management</u>
 
 **27. Add a product/programme**
 

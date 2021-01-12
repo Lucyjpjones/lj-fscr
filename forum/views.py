@@ -71,13 +71,15 @@ def thread_detail(request, slug):
 @login_required
 def add_thread(request):
     """ Add a post to the forum """
-
     form = ThreadForm()
+    thread = None
 
     if request.method == 'POST':
         form = ThreadForm(request.POST)
         if form.is_valid():
-            thread = form.save()
+            thread = form.save(commit=False)
+            thread.author = request.user
+            thread.save()
             messages.success(request, 'Successfully added thread!')
             return redirect('forum')
         else:
@@ -86,6 +88,7 @@ def add_thread(request):
     template = 'forum/add_thread.html'
     context = {
         'form': form,
+        'thread': thread
     }
 
     return render(request, template, context)

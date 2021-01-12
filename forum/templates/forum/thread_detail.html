@@ -23,7 +23,7 @@
    <div class="row grey-banner border">
       <div class="col-12 py-2">
          <div class="mb-2">
-            {% if user.is_authenticated and user == thread.author %}
+             {% if user.is_authenticated and user == thread.author %}
             <a href="{% url 'edit_thread' thread.id %}">
             <span class="float-right">
             <i class="fas fa-edit"></i>

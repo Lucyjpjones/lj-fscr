@@ -110,7 +110,7 @@
                <ul class="list-inline list-unstyled text-center my-0 float-right">
                   <!-- Search bar visible (L and XL devices)-->
                   <li class="list-inline-item px-0">
-                     <form class="d-none d-lg-inline-block" method="GET" action="#" style="width: 400px;">
+                     <form class="d-none d-lg-inline-block" method="GET" action="{% url 'search_results' %}" style="width: 400px;">
                         <div class="input-group rounded-0">
                            <input
                               class="form-control border border-black rounded-0 p-font"
@@ -207,7 +207,7 @@
                <form
                   class="row form-inline m-auto search-form"
                   method="GET"
-                  action="#"
+                  action="{% url 'search_results' %}"
                   >
                   <div class="col-2 col-md-1">
                      <button class="btn icon navy-icon" type="submit">

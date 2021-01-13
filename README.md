@@ -11,9 +11,9 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 </div>
 
 ``` 
-> For testing the following credentials can be used:
+For testing the following credentials can be used:
 
-<b>Card payments</b>
+Card payments
 
 - Card number: 4242 4242 4242 4242
 
@@ -261,55 +261,97 @@ The deployed site has some differences vs. the wireframes I initially created, t
 <ins>**Structure and Navigation**</ins>
 
 - **Responsive on all device sizes**
-  - Mobile-first design, responsive on all devices through using the Bootstrap grid system and CSS media queries.
+  - Mobile-first design, `responsive` on all devices through using the Bootstrap grid system and CSS media queries.
 
 - **A user-friendly interface with easy navigation throughout the site**
   - Attractive, minimalistic design with visuals and information presented clearly and concisely.
 
   - Easily readable fonts and simple navigation throughout the site.
-    - Fixed navigation bar visible on every page including a menu dropdown, recognisable icons and brand logo to link back to the homepage.
+    - `Fixed navigation bar` visible on every page including a menu `dropdown`, easily `recognisable icons` and `brand logo` to link back to the homepage.
+    - `Search bar` accessible from every page allowing the user to easily search the site by keywords. 
+    - Clear interactive `buttons` used for a effortless user journey throughout the site.
+    - `Toasts` used throughout the site to display alert messages to the user to assist on their journey.
+    - An aesthetically pleasing custom `404 page` if the user is directed to a non-existent page. 
 
-  - An aesthetically pleasing 404 page if the user is directed to a non-existent page. 
+<ins>**Home**</ins>
 
-- **Buttons**
-    - Clear interactive buttons used for a effortless user journey.
+- **Home**
+    - A `carousel` has been used for the callout banner and to display athlete testimonials.
+    - `Card listings` have been used to display links to programmes/products page, and to display latest blogs.
+    - A contact `form` has been added using EmailJS to allow the user to easily get in contact with the site owner.
 
-- **Forms**
-  - Forms used for contact form, login and register, adding/editing products,programmes, adding forum threads, user comments, and checkout details.
+- **Meet the Coaches**
+    - Navigation `pills` have been used to allow the user to switch between each individuals by an image click.
 
-  - Crispy forms used for elegant formatting.
+<ins>**Products**</ins>
 
-- **Tabs**
-  - Interactive tab used on 'meet the coaches' page used to switch between individuals details.
+- **Products**
+    - `sort and filter` functionality to allow users to easily find products they are looking for.
+    - `Card listings` have been used to display product image, name, colour price and rating.
+- **Product Detail**
+    - `crispy forms` used for elegant formatting.
+    
+- **Product Admin**
+    - `Forms` have been used to allow the admin user to add and edit products manually on the site.
 
-- **Card Listings**
-  - Used to display products, programmes, and blogs.
 
-  - Image included contributing to the visual look.
+<ins>**Programmes**</ins>
 
-- **Carousel**
-  - Used for testimonials and products displayed on the homepage.
+- **Programmes**
+    - `sort and filter` functionality to allow users to easily find programmes they are looking for.
+    - `Card listings` have been used to display programme image, name, price and rating.
+- **Programme Detail**
+    - `crispy forms` used for elegant formatting.
+    - A `carousel` has been used to display programme customer reviews.
+- **Programme Admin**
+    - `Forms` have been used to allow the admin user to add and edit programmes manually on the site.
 
-- **Search bar**
-  - Allows the user to search the site by keywords.
+<ins>**Bag**</ins>
 
-- **Sort**
-  - Allows the user to sort.
+- **Bag**
+  - A fully functioning shopping bag allowing users to add both products and programmes they wish to buy 
 
-- **Filter**
-  - Allows the user to filter.
+<ins>**Checkout**</ins>
 
-- **Toasts**
-  - Used for success and error responses to add to the user journey.
+- **Checkout:**
+    The checkout page displays all the items the user has in their bag ready to purchase and personal, delivery and payment fields to fill out.
+    - `crispy forms` used for elegant formatting.
+    - `Forms` used to display personal, delivery and payment fields.
+    - `Stripe payments` used to manage site card transactions.
 
-- **Shopping Bag**
-  - A fully functioning shopping bag allowing users to add both products and programmes they wish to buy.
+- **Checkout Success**
+    - The checkout success page provides reassurance for the user that there purchase has gone through and displays all their order details. 
 
-- **Payment Transactions**
-  - Stripe payments used to manage site card transactions.
+<ins>**Blog**</ins>
 
-- **Forum**
-  - An interactive message board allowing users to add their own threads and comment on others.
+- **Blog**
+    - `sort and filter` functionality to allow users to easily find posts they are looking for.
+    - `Card listings` have been used to display post image, title, author and date.
+- **Post Detail**
+    - `Forms` used for posting user comments.
+    - `crispy forms` used for elegant formatting.
+
+<ins>**Forum**</ins>
+
+- **Forum:**
+    An interactive message board allowing users to add their own threads and comment on others.
+    - A `table` has been used to display all the threads posted in the forum. Details include thread topic, number of replies, author and the date created.
+
+- **Thread Detail**
+    - `Forms` used for posting user replies.
+    - `crispy forms` used for elegant formatting.
+
+- **Adding and Editing Thread**
+    - `Forms` have been used to allow the user to add and edit their own threads in the forum.
+
+
+<ins>**Profiles**</ins>
+
+- **Profile**
+    - `crispy forms` used for elegant formatting.
+    - `Forms` used to display users personal details.
+    - A `table` has been used to display the users order history displaying order number, order date and order total. There is also a button 'view order details' which links to the checkout success page showing the specific order details.
+
 
 
 ### **To do list**

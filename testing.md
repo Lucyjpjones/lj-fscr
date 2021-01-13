@@ -141,7 +141,7 @@ A search bar features in the main site header. Users can search by keywords on t
 
 **19. Easily see what I’ve searched for and the number of results**
 
-The products, programmes and blog page all feature a results count to show the user how many items are available to them. (View user story 17 for screenshots)
+The products, programmes and blog page all feature a results count to show the user how many items are available to them. (View user story 17 and 18 for screenshots)
 
 
 #### <u>Purchasing and checkout</u>

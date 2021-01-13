@@ -10,13 +10,15 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 
 </div>
 
-For testing the following credentials can be used:
+``` 
+> For testing the following credentials can be used:
 
-**Card payments**
+<b>Card payments</b>
 
 - Card number: 4242 4242 4242 4242
 
 - Zip & CCV: any integer values are valid
+```
 
 **Disclaimer:** This project is for educational purposes only, images taken from other sources will be replaced if the site goes commercial.
 

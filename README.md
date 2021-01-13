@@ -321,6 +321,7 @@ The deployed site has some differences vs. the wireframes I initially created, t
 
 - **Checkout Success**
     - The checkout success page provides reassurance for the user that there purchase has gone through and displays all their order details. 
+    - Order confirmation sent to the user's personal email after they complete checkout.
 
 <ins>**Blog**</ins>
 
@@ -352,7 +353,10 @@ The deployed site has some differences vs. the wireframes I initially created, t
     - `Forms` used to display users personal details.
     - A `table` has been used to display the users order history displaying order number, order date and order total. There is also a button 'view order details' which links to the checkout success page showing the specific order details.
 
+<ins>**Authorisation**</ins>
 
+All authorisation pages including register, login and logout have been implemented through django allauth account. CSS styling has been applied to ensure pages match the sites overall design spec.
+- `Social login` has been implemented through django allauth soicalaccount giving the user the option to login through google, facebook or twitter.
 
 ### **To do list**
 

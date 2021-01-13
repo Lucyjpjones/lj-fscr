@@ -39,9 +39,12 @@ def search_results(request):
 
         results_list = list(chain(products, programmes, posts))
 
+        count = len(results_list)
+
     context = {
         'search_term': query,
         'results_list': results_list,
+        'count': count
     }
 
     return render(request, 'home/search.html', context)

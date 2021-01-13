@@ -21,7 +21,7 @@
          <div class="row">
             {% if results_list %}
             <div class="col-12">
-               <p class="mb-4 text-muted text-center">Showing search results for "{{ search_term }}"</p>
+               <p class="mb-4 text-muted text-center">Showing <strong>{{ count }}</strong> search results for "<strong>{{ search_term }}</strong>"</p>
             </div>
 
             {% for product in results_list %}
@@ -113,7 +113,7 @@
             {% endfor %}
             {% else %}
             <div class="mx-auto">
-               <p class="p-font mb-5">Sorry no search results found</p>
+               <p class="mb-4 text-muted text-center">Sorry no search results found for <strong>"{{ search_term }}"</strong>, please try another search.</p>
             </div>
             {% endif %}
          </div>

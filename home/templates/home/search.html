@@ -84,7 +84,7 @@
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
                   {% if result.image %}
-                  <a href="{% url 'post_detail' result.id %}">
+                  <a href="{% url 'post_detail' result.slug %}">
                   <img
                      class="prod-img-card rounded-0"
                      src="{{ result.image.url }}"

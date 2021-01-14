@@ -23,13 +23,13 @@
             <div class="col-12">
                <p class="mb-4 text-muted text-center">Showing <strong>{{ count }}</strong> search results for "<strong>{{ search_term }}</strong>"</p>
             </div>
-
-            {% for product in results_list %}
-            {% if product %}
+            {% for result in results_list %}
+            {% if products %}
+            {% for product in products %}
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
                   {% if product.image %}
-                  <a href="{% url 'product_detail' product.id %}">
+                  <a href="#">
                   <img
                      class="prod-img-card rounded-0"
                      src="{{ product.image.url }}"
@@ -37,7 +37,7 @@
                      />
                   </a>
                   {% else %}
-                  <a href="{% url 'product_detail' product.id %}">
+                  <a href="#">
                   <img
                      class="prod-img-card rounded-0"
                      src="{{ MEDIA_URL }}noimage.png"
@@ -53,11 +53,13 @@
                   </div>
                </div>
             </div>
-            {% elif programme %}
+            {% endfor %}
+            {% elif programmes %}
+            {% for programme in programmes %}
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
                   {% if programme.image %}
-                  <a href="{% url 'programme_detail' programme.id %}">
+                  <a href="#">
                   <img
                      class="prod-img-card rounded-0"
                      src="{{ programme.image.url }}"
@@ -65,7 +67,7 @@
                      />
                   </a>
                   {% else %}
-                  <a href="{% url 'programme_detail' programme.id %}">
+                  <a href="#">
                   <img
                      class="prod-img-card rounded-0"
                      src="{{ MEDIA_URL }}noimage.png"
@@ -81,34 +83,36 @@
                   </div>
                </div>
             </div>
-            {% elif post %}
+            {% endfor %}
+            {% elif posts %}
+            {% for post in posts %}
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
                   {% if post.image %}
-                  <a href="{% url 'post_detail' post.id %}">
+                  <a href="#">
                   <img
                      class="prod-img-card rounded-0"
                      src="{{ post.image.url }}"
-                     alt="{{ post.name }}"
+                     alt="{{ post.title }}"
                      />
                   </a>
                   {% else %}
-                  <a href="{% url 'post_detail' post.id %}">
+                  <a href="#">
                   <img
                      class="prod-img-card rounded-0"
                      src="{{ MEDIA_URL }}noimage.png"
-                     alt="{{ post.name }}"
+                     alt="{{ post.title }}"
                      />
                   </a>
                   {% endif %}
                   <div class="p-font pb-0 pt-2 pl-1">
-                     <p class="mb-0">{{ post.name }}</p>
-                     <p class="mb-0">{{ post.colour }}</p>
-                     <p class="mb-0">£{{ post.price }}</p>
-                     <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ post.rating }}</small></p>
+                     <p class="mb-0">{{ post.title }}</p>
+                     <p class="mb-0">{{ post.author }}</p>
+                     <p class="mb-0">{{ post.created_on }}</p>
                   </div>
                </div>
             </div>
+            {% endfor %}
             {% endif %}
             {% endfor %}
             {% else %}

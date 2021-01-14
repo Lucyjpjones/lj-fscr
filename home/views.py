@@ -42,6 +42,9 @@ def search_results(request):
         count = len(results_list)
 
     context = {
+        'posts': posts,
+        'programmes': programmes,
+        'products': products,
         'search_term': query,
         'results_list': results_list,
         'count': count

@@ -24,7 +24,7 @@
                <p class="mb-4 text-muted text-center">Showing <strong>{{ count }}</strong> search results for "<strong>{{ search_term }}</strong>"</p>
             </div>
             {% for result in results_list %}
-            {% if products %}
+            {% if result.colour %}
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
                   {% if result.image %}
@@ -52,7 +52,7 @@
                   </div>
                </div>
             </div>
-            {% elif programmes %}
+            {% elif result.bullets %}
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
                   {% if result.image %}
@@ -80,29 +80,30 @@
                   </div>
                </div>
             </div>
-            {% elif posts %}
+            {% elif result.post_type %}
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
                   {% if result.image %}
-                  {% if result.image %}
+                  <a href="{% url 'post_detail' result.slug %}">
                   <img
-                     class="blog-img-card rounded-0"
+                     class="prod-img-card rounded-0"
                      src="{{ result.image.url }}"
-                     alt="{{ result.title }}"
+                     alt="{{ result.name }}"
                      />
+                  </a>
                   {% else %}
+                  <a href="{% url 'post_detail' result.slug %}">
                   <img
-                     class="blog-img-card rounded-0"
+                     class="prod-img-card rounded-0"
                      src="{{ MEDIA_URL }}noimage.png"
-                     alt="{{ result.title }}"
+                     alt="{{ result.name }}"
                      />
+                  </a>
                   {% endif %}
-                  {% endif %}
-                  <div class="p-font pb-0 pt-2 pl-1">
-                     <p class="mb-0">{{ result.title }}</p>
-                     <p class="mb-0">{{ result.author }}</p>
-                     <p class="mb-2">{{ result.created_on }}</p>
-                     <a class="btn purple-btn px-2 py-1 p-font rounded-0" href="{% url 'post_detail' result.slug %}">Read more</a>
+                  <div class="pb-0 pt-2 pl-1">
+                     <p class="mb-0 p-font">{{ result.title }}</p>
+                     <p class="mb-0 text-muted">{{ result.author }}</p>
+                     <p class="mb-0 text-muted">{{ result.created_on }}</p>
                   </div>
                </div>
             </div>

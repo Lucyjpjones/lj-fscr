@@ -102,7 +102,7 @@
                      <p class="mb-0">{{ result.title }}</p>
                      <p class="mb-0">{{ result.author }}</p>
                      <p class="mb-2">{{ result.created_on }}</p>
-                     <a class="btn purple-btn px-2 py-1 p-font rounded-0" href="{% url 'post_detail' result.id %}">Read more</a>
+                     <a class="btn purple-btn px-2 py-1 p-font rounded-0" href="{% url 'post_detail' result.slug %}">Read more</a>
                   </div>
                </div>
             </div>

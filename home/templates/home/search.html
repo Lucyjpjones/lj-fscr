@@ -84,26 +84,25 @@
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
                   {% if result.image %}
-                  <a href="{% url 'post_detail' result.slug %}">
+                  {% if result.image %}
                   <img
-                     class="prod-img-card rounded-0"
+                     class="blog-img-card rounded-0"
                      src="{{ result.image.url }}"
                      alt="{{ result.title }}"
                      />
-                  </a>
                   {% else %}
-                  <a href="{% url 'post_detail' result.id %}">
                   <img
-                     class="prod-img-card rounded-0"
+                     class="blog-img-card rounded-0"
                      src="{{ MEDIA_URL }}noimage.png"
                      alt="{{ result.title }}"
                      />
-                  </a>
+                  {% endif %}
                   {% endif %}
                   <div class="p-font pb-0 pt-2 pl-1">
                      <p class="mb-0">{{ result.title }}</p>
                      <p class="mb-0">{{ result.author }}</p>
-                     <p class="mb-0">{{ result.created_on }}</p>
+                     <p class="mb-2">{{ result.created_on }}</p>
+                     <a class="btn purple-btn px-2 py-1 p-font rounded-0" href="{% url 'post_detail' result.id %}">Read more</a>
                   </div>
                </div>
             </div>

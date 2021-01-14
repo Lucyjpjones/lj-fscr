@@ -25,19 +25,18 @@
             </div>
             {% for result in results_list %}
             {% if products %}
-            {% for product in products %}
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
-                  {% if product.image %}
-                  <a href="#">
+                  {% if result.image %}
+                  <a href="{% url 'product_detail' result.id %}">
                   <img
                      class="prod-img-card rounded-0"
-                     src="{{ product.image.url }}"
-                     alt="{{ product.name }}"
+                     src="{{ result.image.url }}"
+                     alt="{{ result.name }}"
                      />
                   </a>
                   {% else %}
-                  <a href="#">
+                  <a href="{% url 'product_detail' result.id %}">
                   <img
                      class="prod-img-card rounded-0"
                      src="{{ MEDIA_URL }}noimage.png"
@@ -46,73 +45,68 @@
                   </a>
                   {% endif %}
                   <div class="p-font pb-0 pt-2 pl-1">
-                     <p class="mb-0">{{ product.name }}</p>
-                     <p class="mb-0">{{ product.colour }}</p>
-                     <p class="mb-0">£{{ product.price }}</p>
-                     <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ product.rating }}</small></p>
+                     <p class="mb-0">{{ result.name }}</p>
+                     <p class="mb-0">{{ result.colour }}</p>
+                     <p class="mb-0">£{{ result.price }}</p>
+                     <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ result.rating }}</small></p>
                   </div>
                </div>
             </div>
-            {% endfor %}
             {% elif programmes %}
-            {% for programme in programmes %}
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
-                  {% if programme.image %}
-                  <a href="#">
+                  {% if result.image %}
+                  <a href="{% url 'programme_detail' result.id %}">
                   <img
                      class="prod-img-card rounded-0"
-                     src="{{ programme.image.url }}"
-                     alt="{{ programme.name }}"
+                     src="{{ result.image.url }}"
+                     alt="{{ result.name }}"
                      />
                   </a>
                   {% else %}
-                  <a href="#">
+                  <a href="{% url 'programme_detail' result.id %}">
                   <img
                      class="prod-img-card rounded-0"
                      src="{{ MEDIA_URL }}noimage.png"
-                     alt="{{ programme.name }}"
+                     alt="{{ result.name }}"
                      />
                   </a>
                   {% endif %}
                   <div class="p-font pb-0 pt-2 pl-1">
-                     <p class="mb-0">{{ programme.name }}</p>
-                     <p class="mb-0">{{ programme.colour }}</p>
-                     <p class="mb-0">£{{ programme.price }}</p>
-                     <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ programme.rating }}</small></p>
+                     <p class="mb-0">{{ result.name }}</p>
+                     <p class="mb-0">{{ result.colour }}</p>
+                     <p class="mb-0">£{{ result.price }}</p>
+                     <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ result.rating }}</small></p>
                   </div>
                </div>
             </div>
-            {% endfor %}
             {% elif posts %}
-            {% for post in posts %}
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">
-                  {% if post.image %}
-                  <a href="#">
+                  {% if result.image %}
+                  <a href="{% url 'post_detail' result.id %}">
                   <img
                      class="prod-img-card rounded-0"
-                     src="{{ post.image.url }}"
-                     alt="{{ post.title }}"
+                     src="{{ result.image.url }}"
+                     alt="{{ result.title }}"
                      />
                   </a>
                   {% else %}
-                  <a href="#">
+                  <a href="{% url 'post_detail' result.id %}">
                   <img
                      class="prod-img-card rounded-0"
                      src="{{ MEDIA_URL }}noimage.png"
-                     alt="{{ post.title }}"
+                     alt="{{ result.title }}"
                      />
                   </a>
                   {% endif %}
                   <div class="p-font pb-0 pt-2 pl-1">
-                     <p class="mb-0">{{ post.title }}</p>
-                     <p class="mb-0">{{ post.author }}</p>
-                     <p class="mb-0">{{ post.created_on }}</p>
+                     <p class="mb-0">{{ result.title }}</p>
+                     <p class="mb-0">{{ result.author }}</p>
+                     <p class="mb-0">{{ result.created_on }}</p>
                   </div>
                </div>
             </div>
-            {% endfor %}
             {% endif %}
             {% endfor %}
             {% else %}

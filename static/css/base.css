@@ -776,7 +776,10 @@ input[name='q']::placeholder {
       width: 75vw !important;
    }
    .w-md-85 {
-      width: 85%;
+      width: 85% !important;
+   }
+   .w-md-100 {
+      width: 100% !important;
    }
    .container-fluid {
       width: 90%;

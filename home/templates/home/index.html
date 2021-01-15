@@ -137,23 +137,23 @@
       <div class="row mb-4 mb-md-5">
          {% for post in posts %}
          <div class="col-6">
-            <div class="card blog-detail-img rounded-0 h-100">
+            <div class="card rounded-0 h-100">
                {% if post.image %}
                <img
-                  class="index-blog-img img-fluid rounded-0"
+                  class="blog-index-img-card img-fluid rounded-0"
                   src="{{ post.image.url }}"
                   alt="{{ post.title }}"
                   />
                {% else %}
                <img
-                  class="card-img-top img-fluid rounded-0"
+                  class="blog-index-img-card img-fluid rounded-0"
                   src="{{ MEDIA_URL }}noimage.png"
                   alt="{{ post.title }}"
                   />
                {% endif %}
-               <div class="card-body p-3">
-                  <h5 class="mb-2 p-font d-block d-md-none">{{ post.title|truncatechars:50 }}</h5>
-                  <h5 class="mb-2 p-font d-none d-md-block">{{ post.title }}</h5>
+               <div class="card-body p-3 px-sm-4">
+                  <h5 class="mb-2 p-font d-block d-sm-none">{{ post.title|truncatechars:50 }}</h5>
+                  <h5 class="mb-2 p-font d-none d-sm-block">{{ post.title }}</h5>
                   <a class="btn purple-btn px-2 py-1 p-font rounded-0" href="{% url 'post_detail' post.slug %}">Read more</a>
                </div>
             </div>

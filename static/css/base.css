@@ -322,6 +322,14 @@ header {
    height: 400px;
 }
 
+/* Latest blogs */
+
+.blog-index-img-card {
+   width: 100%;
+   object-fit: cover;
+   height: 120px;
+}
+
 /* Contact Form */
 
 .contact-container {
@@ -364,6 +372,7 @@ header {
    border: solid 1px #bdc1c7;
    background-color: #f8f8f8;
 }
+
 
 
 /* -------------------- Products app  */
@@ -738,6 +747,10 @@ input[name='q']::placeholder {
       object-fit: cover;
    }
    /* -------------------- Blog app  */
+   .blog-index-img-card {
+    height: 180px;
+    }
+
    .blog-detail-img {
       height: 230px;
    }
@@ -820,6 +833,9 @@ input[name='q']::placeholder {
       object-fit: cover;
    }
    /* -------------------- Blog app  */
+   .blog-index-img-card {
+    height:220px;
+    }
    .blog-img-card {
       height: 250px;
    }
@@ -898,6 +914,9 @@ input[name='q']::placeholder {
       height: 240px;
    }
    /* -------------------- Blog app */
+   .blog-index-img-card {
+    height:240px;
+    }
    .blog-img-top {
       height: 270px;
    }

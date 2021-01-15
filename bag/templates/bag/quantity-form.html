@@ -1,4 +1,4 @@
-{% if item.type == 'product' %}
+{% if item.colour %}
 <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id 'product' %}">
    {% csrf_token %}
    <div class="form-group mb-0">
@@ -29,7 +29,7 @@
       </div>
    </div>
 </form>
-{% elif item.type == 'programme' %}
+{% elif item.bullets %}
 <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id 'programme' %}">
    {% csrf_token %}
    <div class="form-group mb-0">

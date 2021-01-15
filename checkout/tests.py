@@ -1,11 +1,13 @@
 from django.test import TestCase
 from checkout.forms import OrderForm
+from checkout.models import Order, OrderLineItem, ProgOrderLineItem
 
 
 class TestOrderForm(TestCase):
 
-    # Checking required fields
+    # forms
 
+    # Checking required fields
     def test_item_full_name_is_required(self):
         form = OrderForm({'full_name': ''})
         self.assertFalse(form.is_valid())
@@ -52,26 +54,8 @@ class TestOrderForm(TestCase):
         self.assertEqual(form.errors['street_address1'][0],
                          'This field is required.')
 
-    # Checking not required fields
-
-    # Test checkout form for valid data
-    # def test_order_form_is_valid(self):
-    #     form = OrderForm({
-    #         'full_name': 'Lucy Jones',
-    #         'email': 'lucy@example.com',
-    #         'phone_number': '123456789',
-    #         'postcode': 'SW12 9PH',
-    #         'town_or_city': 'Furzedown',
-    #         'street_address1': 'Street Address 1',
-    #         'street_address2': 'Street Address 2',
-    #         'county': 'London',
-    #         'country': 'United Kingdom',
-    #     })
-
-        # self.assertTrue(form.is_valid())
-
-    # def test_order_form_no_data(self):
-    #     form = OrderForm(data={})
-
-    #     self.assertFalse(form.is_valid())
-    #     self.assertEquals(len(form.errors), 7)
+    # Checking the correct fields are displayed in the form
+    def test_fields_are_explicit_in_form_metaclass(self):
+        form = OrderForm()
+        self.assertEqual(form.Meta.fields, ['full_name', 'email', 'phone_number', 'street_address1', 'street_address2', 'town_or_city', 'postcode', 'country', 'county'])
+    

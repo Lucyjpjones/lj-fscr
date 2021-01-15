@@ -37,7 +37,10 @@ class TestBlogViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'blog/post_detail.html')
 
-    def test_add_comment(self):
+    # def test_can_add_comment(self):
+    #     self.client.login(username='david', password='userpassword')
+    #     response = self.client.post('post_detail', {'body': 'test comment'})
+    #     self.assertRedirects(response, 'blog/blog.html')
 
 
-    # def test_toggle_references(self):
+    # # def test_toggle_references(self)

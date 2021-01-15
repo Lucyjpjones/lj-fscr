@@ -49,7 +49,7 @@
                </div>
             </div>
             {% for item in bag_items %}
-            {% if item.type == 'product' %}
+            {% if item.product %}
             <div class="row bg-light py-3 mb-4">
                <div class="col-12 col-sm-4 mb-2">
                   {% include "bag/product-image.html" %}
@@ -59,7 +59,7 @@
                   {% include "bag/quantity-form.html" %}
                </div>
             </div>
-            {% elif item.type == 'programme' %}
+            {% elif item.programme %}
             <div class="row bg-light py-3 mb-4">
                <div class="col-12 col-sm-4 mb-2">
                   {% include "bag/product-image.html" %}

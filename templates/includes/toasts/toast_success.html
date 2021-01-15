@@ -17,7 +17,7 @@
       <p class="logo-font bg-white text-black py-1">Your Bag ({{ product_count }})</p>
       <div class="bag-notification-wrapper">
          {% for item in bag_items %}
-         {% if item.type == 'product' %}
+         {% if item.product %}
          <div class="row pb-2">
             <div class="col-3 my-1">
                {% if item.product.image %}
@@ -32,7 +32,7 @@
                <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
             </div>
          </div>
-         {% elif item.type == 'programme' %}
+         {% elif item.programme %}
          <div class="row pb-2">
             <div class="col-3 my-1">
                {% if item.programme.image %}

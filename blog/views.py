@@ -34,15 +34,6 @@ def all_posts(request):
             categories = request.GET['post_type'].split(',')
             posts = posts.filter(post_type__in=categories)
 
-        if 'q' in request.GET:
-            query = request.GET['q']
-            if not query:
-                messages.error(request,
-                               "You didn't enter any search criteria!")
-                return redirect(reverse('blog'))
-
-            queries = Q(title__icontains=query)
-            posts = posts.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
 

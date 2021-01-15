@@ -818,6 +818,9 @@ When you clone a repository, the repository is copied on to your local machine.
 
 #### Content
 
+- Materials supplied by [Code Institute](https://docs.djangoproject.com/en/3.1/) 
+- [Django documentation](https://docs.djangoproject.com/en/3.1/)
+
 - Code used to help create blog and forum app [here](https://djangocentral.com/building-a-blog-application-with-django/)
 
 - Code used to help create sidenav [here](https://bootstrapious.com/p/bootstrap-sidebar)
@@ -836,6 +839,7 @@ When you clone a repository, the repository is copied on to your local machine.
   - [Help with reducing the inbox size in crispy forms](https://stackoverflow.com/questions/38684753/django-reducing-the-size-of-input-box-in-crispy-forms).
   - [Using slugify for detailed urls](https://stackoverflow.com/questions/45847278/django-use-slugify-for-detail-url).
   - [Comparing logged in user IF statement](https://stackoverflow.com/questions/43879330/djangounable-to-compare-the-logged-in-user-with-the-author-of-the-post)
+  - [To combine my querysets for search bar functionality](https://stackoverflow.com/questions/431628/how-to-combine-two-or-more-querysets-in-a-django-view)
 
 
 #### Media

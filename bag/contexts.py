@@ -22,7 +22,6 @@ def bag_contents(request):
                     'item_id': item_id,
                     'quantity': item_data,
                     'product': product,
-                    'type': 'product'
                 })
             else:
                 product = get_object_or_404(Product, pk=item_id)
@@ -34,7 +33,6 @@ def bag_contents(request):
                         'quantity': quantity,
                         'product': product,
                         'size': size,
-                        'type': 'product'
                     })
 
     if bool(bag['programme']):
@@ -47,7 +45,6 @@ def bag_contents(request):
                     'item_id': item_id,
                     'quantity': item_data,
                     'programme': programme,
-                    'type': 'programme'
                 })
             else:
                 programme = get_object_or_404(Programme, pk=item_id)
@@ -60,7 +57,6 @@ def bag_contents(request):
                         'quantity': quantity,
                         'programme': programme,
                         'size': size,
-                        'type': 'programme'
                     })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:

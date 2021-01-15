@@ -322,14 +322,6 @@ header {
    height: 400px;
 }
 
-
-/* Latest blogs */
-
-.index-blog-img {
-   height: 100px;
-   object-fit: cover;
-}
-
 /* Contact Form */
 
 .contact-container {
@@ -726,9 +718,6 @@ input[name='q']::placeholder {
    .callout-img {
       height: calc(100vh - 187.11px);
    }
-   .index-blog-img {
-      height: 200%;
-   }
    .form-inner {
       margin: 30px 60px;
    }
@@ -837,9 +826,6 @@ input[name='q']::placeholder {
    .form-inner,
    .blog-inner {
       max-width: 80%;
-   }
-   .index-blog-img {
-      height: 250px;
    }
    .blog-detail-img {
       height: 230px;

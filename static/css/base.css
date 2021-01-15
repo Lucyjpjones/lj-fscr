@@ -322,19 +322,6 @@ header {
    height: 400px;
 }
 
-
-/* Latest blogs */
-
-.index-blog-card {
-   height: 280px;
-}
-
-.index-blog-img {
-   height: 40%;
-   object-fit: cover;
-}
-
-
 /* Contact Form */
 
 .contact-container {
@@ -731,12 +718,6 @@ input[name='q']::placeholder {
    .callout-img {
       height: calc(100vh - 187.11px);
    }
-   .index-blog-img {
-      height: 60%;
-   }
-   .index-blog-card {
-      height: 300px;
-   }
    .form-inner {
       margin: 30px 60px;
    }
@@ -846,12 +827,6 @@ input[name='q']::placeholder {
    .blog-inner {
       max-width: 80%;
    }
-   .index-blog-img {
-      height: 70%;
-   }
-   .index-blog-card {
-      height: 360px;
-   }
    .blog-detail-img {
       height: 230px;
    }
@@ -928,9 +903,6 @@ input[name='q']::placeholder {
    }
    .form-inner {
       max-width: 60%;
-   }
-   .index-blog-card {
-      height: 390px;
    }
    /* -------------------- Programmes app */
    .container-fluid {

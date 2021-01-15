@@ -47,7 +47,7 @@
       <div class="col-12 py-2">
          <div class="mb-2">
             <p class="mb-0"><strong>{{ post.title }}</strong></p>
-            <p class=" text-muted p-font">{{ post.author }} | {{ post.created_on }}</p>
+            <p class=" text-muted p-font">{{ post.author }} | {{ post.created_on|date:"M d, Y" }}</p>
          </div>
       </div>
    </div>

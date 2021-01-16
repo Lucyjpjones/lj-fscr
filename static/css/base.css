@@ -313,13 +313,8 @@ header {
 
 /* Testimonial carousel */
 
-.testimonials {
-   background-color: #bdc1c770;
-   height: 200px;
-}
-
 .carousel-testimonials {
-   height: 400px;
+    height: 445px;
 }
 
 /* Latest blogs */
@@ -811,6 +806,9 @@ input[name='q']::placeholder {
    .red-banner {
       font-size: 16px;
    }
+   .carousel-testimonials {
+    height: 205px;
+}
    .profile-img {
       width: 220px;
       height: 220px;

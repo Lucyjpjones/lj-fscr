@@ -325,16 +325,15 @@ header {
    height: 120px;
 }
 
-/* Contact Form */
+/* Contact form */
 
 .contact-container {
-   background-color: #38405f;
+    background-color: #38405f;
 }
 
 .form-inner {
-   background-color: #f8f8f8;
+    background-color: #f8f8f8;
 }
-
 
 /* -----------Meet the Coaches*/
 
@@ -368,11 +367,7 @@ header {
    background-color: #f8f8f8;
 }
 
-
-
 /* -------------------- Products app  */
-
-
 /* ---------- Products */
 
 .prod-img-card {
@@ -381,7 +376,6 @@ header {
    height: 200px;
    object-fit: cover;
 }
-
 
 /* ---------- Product Detail */
 
@@ -393,8 +387,6 @@ header {
 
 
 /* -------------------- Programmes app  */
-
-
 /* ---------- Programmes */
 
 .prog-img-card {
@@ -403,7 +395,6 @@ header {
    height: 100px;
 }
 
-
 /* ---------- Programmes Detail */
 
 .prog-detail-img {
@@ -411,7 +402,9 @@ header {
    height: 120px;
    object-fit: cover;
 }
-
+.carousel-reviews {
+    height: 260px;
+}
 
 /* -------------------- Bag app  */
 
@@ -808,7 +801,8 @@ input[name='q']::placeholder {
    }
    .carousel-testimonials {
     height: 205px;
-}
+    }
+
    .profile-img {
       width: 220px;
       height: 220px;
@@ -825,6 +819,9 @@ input[name='q']::placeholder {
    .programme-card {
       height: 200px;
    }
+   .carousel-reviews {
+        height: 100px;
+    }
    /* -------------------- Checkout app */
    .prod-img-checkout {
       height: 80px;

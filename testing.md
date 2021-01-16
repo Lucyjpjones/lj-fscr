@@ -15,7 +15,7 @@
 
 ### **Testing user stories**
 
-#### <u>Viewing and Navigation</u>
+#### <ins>Viewing and Navigation</ins>
 
 **1. Discover FSCR’s purpose and goals**
 
@@ -25,19 +25,20 @@ I created an 'about' and 'meet the coaches' page so any site visitor can learn a
 
 **2. View a list of products**
 
-I created a 'products' page including a list of all products, displaying product image, name and price, with the option to select an individual card for more details.
+I created a 'products' page including a list of all products, displaying product image, name, price, and rating, with the option to select an individual card for more details.
 
 <img src="media/us-2.png">
 
 **3. View a list of programmes**
 
-I created a 'programmes' page including a list of all programmes, displaying product image, name and price, with the option to select an individual card for more details.
+I created a 'programmes' page including a list of all programmes, displaying product image, name,price, and rating, with the option to select an individual card for more details.
 
 <img src="media/us-3.png">
 
 **4. View a specific category of products or programmes**
 
-I added a filter option to both the products and programmes page giving users the ability to quickly find what they are searching for. (More specific details on this in user story 17).
+I added a filter option to both the products and programmes page giving users the ability to quickly find what they are searching for. 
+`(More specific details on this in user story 17)`
 
 **5. View individual product details**
 
@@ -53,21 +54,21 @@ Each individual programme page displays the programmes description, price, avail
 
 **7. Easily access contact details**
 
-I have included a contact form on the home page which is also easily navigated to via the main nav menu. This has been set up using EmailJS with my own custom template to assist with organisation of user enquiries.
+I have included a contact form on the home page which is also easily navigated to via the main nav menu. This has been set up using EmailJS with my own customised email template to assist with organisation of user enquiries.
 
 <img src="media/us-6.png">
 
 **8. See reviews and ratings on products and programmes**
 
-Testimonials are visible on the homepage and also on the programmes detail page. Users are also able to see the rating for each individual product/programme under each item on the main page and details page.
+Testimonials are visible on the homepage and reviews are available on the programmes detail page. Users are also able to see the rating for each individual product/programme under each item on the products/programmes page and additionally on the product/programme details page.
 
-As this is a startup which hasn't yet started business the reviews and ratings are only mockups.
+> **NB:** As this is a startup which hasn't yet started business the testimonials, reviews and ratings are currently only mockups.
 
 <img src="media/us-7.png">
 
 **9. Browse associated blogs, articles and recent new stories**
 
-I created a blog app that can only be viewed by site members. When a user is not logged in and they click on the blog they will be directed to the login/register page. If a user is a member and logged in they will be directed to the blog page where they can view blogs posted by the admin user. Members also have the ability to comment and delete their own comments on blog posts creating further user interaction.
+I created a blog app that can only be viewed by site members. The page is available through the nav menu and there is also the option for the user to direct to the latest blogs via the homepage. When a user is not logged in and they click on the blog they will be directed to the login/register page. If a user is a member and logged in they will be directed to the blog page where they can view blogs posted by the admin user. Members also have the ability to add and delete their own comments on blog posts creating further user interaction.
 
 <img src="media/us-8.png">
 
@@ -77,7 +78,7 @@ I created a forum app that can only be accessed by site members. When a user is 
 
 <img src="media/us-9.png">
 
-#### <u>Registration and user accounts</u>
+#### <ins>Registration and user accounts</ins>
 
 **10. Easily register for an account**
 
@@ -123,7 +124,7 @@ If the user has filled in their profile information, these details will be prefi
 
 <img src="media/us-16.png">
 
-#### <u>Sorting and Searching</u>
+#### <ins>Sorting and Searching</ins>
 
 **17. Sort and filter the list of available products and programmes**
 
@@ -144,7 +145,7 @@ A search bar features in the main site header. Users can search by keywords on t
 The products, programmes and blog page all feature a results count to show the user how many items are available to them. (View user story 17 and 18 for screenshots)
 
 
-#### <u>Purchasing and checkout</u>
+#### <ins>Purchasing and checkout</ins>
 
 **20. Easily select the size and quantity of a product/programme when purchasing it**
 
@@ -183,7 +184,7 @@ Once the user has made a purchase they are sent an email with a summary of their
 
 <img src="media/us-26.png">
 
-#### <u>Admin and Store Management</u>
+#### <ins>>Admin and Store Management</ins>
 
 **27. Add a product/programme**
 
@@ -211,84 +212,101 @@ When logged into the admin, the admin user can add a new blog to the site. I did
 
 To ensure my site was working correctly I carried out some manual function testing;
 
-**Navigation**
-  - I checked the site dropdown menu was working correctly by starting on the home-page and navigating around the site from and to every screen the user would be faced with.
-  - I checked the logo homepage navigation was working by clicking on the brand image from every page.
-  - **404 Error page**: I decided to create a custom 404.html page for my user so if they are directed to a non-existent domain, they are presented with an appealing page and an easy navigation button back to the homepage.
+#### General
+
+- I hovered over my `button elements` to ensure the font styling changed as expected.
+
+- I hovered over the `icon elements` to ensure the opacity filter was working as expected.
+
+- I hovered over my button and link elements to check the `cursor pointer` was showing as expected.
+
+- I created a custom `404 page` for my user so if they are directed to a non-existent domain, they are presented with an appealing page and an easy navigation button back to the homepage.
 
     <img src="media/404-page.png">
 
-**Authorisation**
+#### Navigation bar
+    
+  - I tested the links on the site `dropdown menu` by clicking on each one and checking I was directed to the right page template.
+  - I clicked on the `brand logo` from every page to confirm it correctly navigated back to the homepage.
+  - I individually tested every icon on the navbar to check they were working as expected;
+    - `Search icon:`
+        - I checked that the search bar was showing the correct format based on the device size by testing on both mobile and larger devices. 
+        - I entered keywords into the search bar and clicked enter/search icon to ensure I was correctly directed to the search page template with logical results.
 
-  - To check the login functionality was working I first clicked on the profile icon and clicked 'login' to ensure I was directed to the correct page. When presented with the modal I conducted various checks;
+    - `Profile icon:`
+        - When not logged in I made sure that the profile icon displayed the options 'register' and 'login'.
+        - When logged in I made sure that the profile icon displayed the options 'My profile' and 'logout'.
+        - When logged in as admin I made sure that I had the added options of 'product management' and 'programme management' available to me.
+        - All links displayed on the profile dropdown menu were clicked to ensure they lead to the correct page.
+    - `Bag icon:`
+        - I checked the bag icon link was working correctly by clicking on the icon and making sure I was directed to the bag template.
+        - Before adding anything to the bag I checked that the page displayed the correct html for an empty bag.
+        - I added products/programmes to the bag and then directed to the bag page to check the template displayed the items I had added.
+
+#### Sort and Filter
+
+- To check the `sort functionality` was working I selected each option from the dropdown to make sure the items were displayed in the expected order. The was tested on the products, programmes and blog page.
+- To check the `filter functionality` was working I selected each option to make sure only items that matched the chosen critera were displayed. The was tested on the products, programmes and blog page.
+
+#### Authorisation
+
+  - To check the `login functionality` was working I first clicked on the profile icon and clicked 'login' to ensure I was directed to the correct page. When presented with the login template I conducted various checks;
     - I filled out the login form with an already registered username and password then clicked 'Login'.
     - I filled out the login form with a new username and password then clicked 'Login'.
+    - I tested the social account logins by clicking on each specific link to confirm I was directed to the correct external platform for authorisation.
 
-- To check the Register functionality was working I first clicked on the profile icon and clicked 'register' to ensure I was directed to the correct page.
+- To check the `Register functionality` was working I first clicked on the profile icon and clicked 'Register' to ensure I was directed to the correct page. When presented with the register template I conducted various checks;
   - I filled out the registration form with a new username and password then clicked 'Register'.
   - I filled out the login form with an already registered username and password then clicked 'Register'.
 
-<u>Site user/member</u>
-  - Once I was logged in, the options available under the profile icon changed to 'my profile' and 'log out'. I was also able to access the blog and forum page.
+#### Home
+- I tested the `callout carousel` by making sure it automatically cycled through a series of callout messages. I also tested the links featured to ensure I was directed to the expected page.
+- I clicked on the `product and programme card links` to ensure I was directed the correct pages.
+- I clicked on the `latest blog` 'read more' buttons to ensure I was directed to the correct post detail template.
+- I tested the `testimonial carousel` by making sure it automatically cycled through a series of testimonials.
+- I checked the `contact form` was working correctly by filling out the form and clicking submit. As expected I received a browser 'SUCCESS' response, the form cleared and I recieved an email, so I knew the functionality was working.
+- On the Meet the Coaches page, I checked the opacity filter was working correctly by clicking on the `profile image tabs` and ensuring the opaque effect was only adopted on the inactive tab.
 
-<u>Site Owner</u>
-- Once I was logged in, the options available under the profile icon changed to 'my profile', log out', 'product management' and 'programme management'. I was also able to access the blog and forum page.
+#### Products
 
-**Form validation**
+- I clicked on each product card to make sure I was directed to the product detail page displaying the correct information.
+- I tested the `quantity selector` was working correctly by clicking the increment and decrement, and checking the values updated as expected.
+- I tested the `size selector` was working correctly by selecting a value from the dropdown and checking the field updated correctly.
+- I checked that products were adding to the bag correctly by clicking 'add to bag', and navigating to the bag to check it match what i'd added.
 
-**Home**
+<ins>Admin</ins>
 
-<u>Contact form JS functionality</u>
+- I logged in as admin user to check that the product management option was displayed in the profile menu, and it was. I then filled out the form and submitted and checked that the product was added to the products page.
 
-- I checked the contact form was working correctly by filling out the form and clicking submit. I received a browser 'SUCCESS' response, the form cleared and I recieved an email, so I knew the functionality was working.
+- When logged in as admin user I checked that the edit button was visible for all products on the programmes page, as well as on each individual view page. I then tested the functionality but clicking on the button and checking that i was directed to the edit page with all fields pre-filled with current information. I then made an amendment and clicked 'save changes' and checke that the information had been updated.
 
-**Meet the Coaches**
+- I checked the delete function buttons were all visible when logged in as admin and that when clicked the product was removed from the site.
 
-<u>Tab functionality</u>
+#### Programmes
 
-- I checked that the opacity class was working correctly but clicking on a profile image and ensuring the active one was clear and the other one had an opaque effect.
+- I clicked on each programme card to make sure I was directed to the programme detail page displaying the correct information.
+- I tested the `quantity selector` was working correctly by clicking the increment and decrement, and checking the values updated as expected.
+- I checked that programmes were adding to the bag correctly by clicking 'add to bag', and navigating to the bag to check it match what i'd added.
 
-**Products**
+<ins>Admin</ins>
 
-<u>View product functionality</u>
+- I logged in as admin user to check that the programme management option was displayed in the profile menu, and it was. I then filled out the form and submitted and checked that the programme was added to the programmes page.
 
-- I clicked on each product card to make sure it displayed the correct information to me when navigated to the view product HTML template, and it did.
+- When logged in as admin user I checked that the edit button was visible for all programmes on the programmes page, as well as on each individual view page. I then tested the functionality but clicking on the button and checking that i was directed to the edit page with all fields pre-filled with current information. I then made an amendment and clicked 'save changes' and checke that the information had been updated.
 
-<u>Add product functionality</u>
-
-I logged in as admin user to check that the product management option was displayed in the profile menu, and it was. I then filled out the form and submitted and checked that the product was added to the products page.
-
-<u>Edit product functionality</u>
-
-When logged in as admin user I checked that the edit button was visible for all products on the programmes page, as well as on each individual view page. I then tested the functionality but clicking on the button and checking that i was directed to the edit page with all fields pre-filled with current information. I then made an amendment and clicked 'save changes' and checke that the information had been updated.
-
-<u>Delete product functionality</u>
-
-I checked the delete function buttons were all visible when logged in as admin and that when clicked the product was removed from the site.
-
-**Programmes**
-
-<u>View prgramme functionality</u>
-
-- I clicked on each programme card to make sure it displayed the correct information to me when navigated to the view programme HTML template, and it did.
-
-<u>Add programme functionality</u>
-
-I logged in as admin user to check that the programme management option was displayed in the profile menu, and it was. I then filled out the form and submitted and checked that the programme was added to the programmes page.
-
-<u>Edit programme functionality</u>
-
-When logged in as admin user I checked that the edit button was visible for all programmes on the programmes page, as well as on each individual view page. I then tested the functionality but clicking on the button and checking that i was directed to the edit page with all fields pre-filled with current information. I then made an amendment and clicked 'save changes' and checke that the information had been updated.
-
-<u>Delete programme functionality</u>
-
-I checked the delete function buttons were all visible when logged in as admin and that when clicked the programme was removed from the site.
+- I checked the delete function buttons were all visible when logged in as admin and that when clicked the programme was removed from the site.
 
 **Bag**
 
+<u>View bag functionality</u>
+
+- I clicked on the bag icon to check I was corrected to the bag page displaying the correct html for an empty bag. I then added items to my bag and reclicked on the icon to check that my products were now visible in the bag template.
+
+- 
+
 <u>Add to bag functionality</u>
 
-I checked that my add to bag function was working by selecting a range of products and programmes and adding them to the bag to check there was no errors. Whilst creating this function I did experience difficulty adding from using id's to target products from different apps. I rectified this by adding in category to the url so I could differentiate products from programmes.
+- I checked that my add to bag function was working by selecting a range of products and programmes and adding them to the bag to check there was no errors. Whilst creating this function I did experience difficulty adding from using id's to target products from different apps. I rectified this by adding in category to the url so I could differentiate products from programmes.
 
 <u>View bag functionality</u>
 
@@ -304,6 +322,8 @@ I checked that my add to bag function was working by selecting a range of produc
 
 To check that the post detail view was working correctly I navigated to the blog page and clicked on each blog 'read me' link to check I was naviagted to the correct post detail page, and I was.
 
+<u>References collapse element</u>
+
 <u>Commenting on blog</u>
 
 When logged in as a member/admin I clicked onto a variety of forums and entered a comment into the text field and clicked 'post'. I could see that the comment had been added below with the correct logged in username and date/time so I knew the functionality was working correctly.
@@ -314,6 +334,10 @@ To check I was only able to delete my own comments, I logged in and checked the 
 
 **Forum**
 
+<u>View forum functionality</u>
+
+- To check that a user can only view the forum if they are a site member, i clicked on the forum link in the main menu. I was redirected to the register page which was correct. I then logged in and clicked on the same forum link. I was directed to the forum page with all threads visible.
+
 <u>View thread functionality</u>
 
 To check that the thread detail view was working correctly I navigated to the forum page and clicked on each thread title link to check I was naviagted to the correct thread detail page, and I was.
@@ -321,6 +345,8 @@ To check that the thread detail view was working correctly I navigated to the fo
 <u>Adding Thread</u>
 
 I checked that the functionality for adding a thread to the forum was working by logging in as a member/admin and clicking 'add thread' on the forums page. I was directed to a form to fill and when clicking 'post' I could see that my thread had been added to the forum page so I knew it was working correctly.
+
+<u>Editing Thread</u>
 
 <u>Replying to thread</u>
 
@@ -350,7 +376,8 @@ The results from each test were displayed in the terminal, letting me know if th
 
 #### **Coverage**
 
-I used **Coverage** to identify the percentage of code the tests had covered and to determine which areas to focus on. 
+I used **Coverage** to identify the percentage of code the tests had covered and to determine which areas to focus on. Due to time constraints my aim was to reach a minimum of 50% coverage on all my apps. However I will continue to add tests to get as close to 100% as I can. 
+
 To set up and use Coverage, I used the following commands;
 
 * To Install:
@@ -401,9 +428,11 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 - Site created as a mobile-first design.
 
+- Responsive layout achieved through utilising the Boostrap grid system and applying my own media queries.
+
 - Viewport tag included in the head of HTML files to tell the browser how to respond to different resolutions, particularly mobile ones.
 
-- Media queries used in the CSS file to target larger devices.
+- .
 
 ### **Additional Testing**
 

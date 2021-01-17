@@ -10,21 +10,20 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 
 </div>
 
-``` 
-For testing the following credentials can be used:
+For <ins>testing</ins> the following credentials can be used:
 
-Card payments
+<ins>**Card payments**</ins>
 
-- Card number: 4242 4242 4242 4242
+- **Card number:** 4242 4242 4242 4242
 
-- Zip & CCV: any integer values are valid
-```
+- **Zip & CCV:** any integer values are valid
+
 
 **Disclaimer:** This project is for educational purposes only, images taken from other sources will be replaced if the site goes commercial.
 
 ---
 
-## <u>Table of contents</u>
+## <ins>Table of contents</ins>
 
 **<details><summary> User Experience (UX)</summary>**
   - [Purpose](#purpose)
@@ -251,6 +250,7 @@ The deployed site has some differences vs. the wireframes I initially created, t
 | 7 | Add to bag button on programmes page | I decided not to have the add the bag option on this page and to keep it in line with the structure of the product page |
 | 8 | Sample fitness plan removed from programme detail | Client didn't want to provide an example template so this was removed |
 | 9 | View bag and checkout options available on 'add to bag' success toast | I decided to add both options so the user has the option to view their bag or just go straight to the checkout |
+| 10 | Social media links on footer | I decided not to include the social media links on the footer yet as the business does not yet run on any social platforms so I saw this as low priority for the site |
     
 ---
 

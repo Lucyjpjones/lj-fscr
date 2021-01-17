@@ -232,7 +232,6 @@ To ensure my site was working correctly I carried out some manual function testi
     - `Search icon:`
         - I checked that the search bar was showing the correct format based on the device size by testing on both mobile and larger devices. 
         - I entered keywords into the search bar and clicked enter/search icon to ensure I was correctly directed to the search page template with logical results.
-
     - `Profile icon:`
         - When not logged in I made sure that the profile icon displayed the options 'register' and 'login'.
         - When logged in I made sure that the profile icon displayed the options 'My profile' and 'logout'.
@@ -296,65 +295,54 @@ To ensure my site was working correctly I carried out some manual function testi
 
 - I checked the delete function buttons were all visible when logged in as admin and that when clicked the programme was removed from the site.
 
-**Bag**
+#### Bag
 
-<u>View bag functionality</u>
+- I tested the 'add to bag' functionality by adding a range of products and programmes to the bag and checking all details were listed in the bag template as expected. 
+    - To ensure the type of item added to the bag was correct I had to add category to my bag session to differentiate the products from programmes.
 
-- I clicked on the bag icon to check I was corrected to the bag page displaying the correct html for an empty bag. I then added items to my bag and reclicked on the icon to check that my products were now visible in the bag template.
+- I clicked on the 'shop products' button to confirm I was navigated to the products page as expected.
 
-- 
+- I clicked on the 'shop programmes' button to confirm I was navigated to the programmes page as expected.
 
-<u>Add to bag functionality</u>
+- I clicked on the 'checkout' button to confirm I was navigated to the checkout page as expected.
 
-- I checked that my add to bag function was working by selecting a range of products and programmes and adding them to the bag to check there was no errors. Whilst creating this function I did experience difficulty adding from using id's to target products from different apps. I rectified this by adding in category to the url so I could differentiate products from programmes.
+- I tested I was able to `update the quanity` by clicking the increment and decrement, and clicking update. I also entered numeric values into the field to check this also worked. 
 
-<u>View bag functionality</u>
+- I tested I was able to `delete the product` by clicking 'remove' and confirming the product was no longer displayed in the bag. I also checked I was able to delete the product by entering 0 into the quantity field, and clicking update.
 
-**Checkout**
+
+#### Checkout
 
 <u>Completing stripe payment</u>
 
 <u>Pre-filled checkout details</u>
 
-**Blog**
+#### Blog
 
-<u>View blog functionality</u>
+- I clicked on the 'read me' button link for each blog to make sure I was directed to the post detail page, displaying the correct information.
 
-To check that the post detail view was working correctly I navigated to the blog page and clicked on each blog 'read me' link to check I was naviagted to the correct post detail page, and I was.
+- I clicked the `references collapse button` to test that the text became visible as expected. I then clicked it again to make sure the text became hidden.
 
-<u>References collapse element</u>
+- I entered a comment into the text field and clicked 'post' to check that my post was added successfully. I checked that the datetime field displayed correctly and logged in as various users to check the username appeared as expected.
 
-<u>Commenting on blog</u>
-
-When logged in as a member/admin I clicked onto a variety of forums and entered a comment into the text field and clicked 'post'. I could see that the comment had been added below with the correct logged in username and date/time so I knew the functionality was working correctly.
-
-<u>Deleting own comment from blog</u>
-
-To check I was only able to delete my own comments, I logged in and checked the trash icon was only visible on the specific comments I had posted, which it was. I then checked the delete functionality was working correctly. After clicking on the icon, the comment was deleted and I received a success toast, as was expected.
+- To check I was only able to delete my own comments, I logged in as various users and made sure the trash icon was only visible on own comments. I then tested the delete functionality by clicking on the icon and making sure the comment was deleted as expected.
 
 **Forum**
 
-<u>View forum functionality</u>
+- I clicked on the 'topic' for each thread within the forum to make sure I was directed to the thread detail page, displaying the correct information.
 
-- To check that a user can only view the forum if they are a site member, i clicked on the forum link in the main menu. I was redirected to the register page which was correct. I then logged in and clicked on the same forum link. I was directed to the forum page with all threads visible.
+- I entered a reply into the text field and clicked 'reply' to check that my post was added successfully. I checked that the datetime field displayed correctly and logged in as various users to check the username appeared as expected.
 
-<u>View thread functionality</u>
+- To check I was only able to delete my own replies, I logged in as various users and made sure the trash icon was only visible on own replies. I then tested the delete functionality by clicking on the icon and making sure the comment was deleted as expected.
 
-To check that the thread detail view was working correctly I navigated to the forum page and clicked on each thread title link to check I was naviagted to the correct thread detail page, and I was.
+- I checked the `'add a thread'` functionality was working by clicking 'add thread' on the forums page and making sure I was directed to the 'add thread template'. After filling in the details and clicking 'post' I could see that my thread had been added to the forum page so I knew it was working correctly. I also checked that my username and date was displayed correctly below the thread.
 
-<u>Adding Thread</u>
+- To check I was only able to edit my own thread posts, I logged in as various users, navigated to the thread detail page, and made sure the edit icon was only visible as expected. I then tested the edit functionality by clicking on the icon and making sure I was redirected to the edit thread page with fields already prefilled with current information. I then amended the content and clicked 'edit' and checked the information had been updated on the thread.
 
-I checked that the functionality for adding a thread to the forum was working by logging in as a member/admin and clicking 'add thread' on the forums page. I was directed to a form to fill and when clicking 'post' I could see that my thread had been added to the forum page so I knew it was working correctly.
+#### Profile
 
-<u>Editing Thread</u>
 
-<u>Replying to thread</u>
 
-When logged in as a member/admin I clicked onto a variety of forums and entered a reply into the text field and clicked 'post'. I could see that the reply had been added below with the correct logged in username and date/time so I knew the functionality was working correctly.
-
-<u>Deleting own reply from thread</u>
-
-To check I was only able to delete my own replies, I logged in and checked the trash icon was only visible on the specific replies I had posted, which it was. I then checked the delete functionality was working correctly. After clicking on the icon, the reply was deleted and I received a success toast, as was expected.
 
 ### **Automated testing**
 
@@ -432,13 +420,10 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 - Viewport tag included in the head of HTML files to tell the browser how to respond to different resolutions, particularly mobile ones.
 
-- .
-
 ### **Additional Testing**
 
 ### **Bugs**
 
 |     | Bug                                                                           | Action                                                            |
 |-----|-------------------------------------------------------------------------------|-------------------------------------------------------------------|
-| [] | Search icon showing border on ios                     |  need to solve |
-| [] | Homepage postioning not filling screen as including search bar in vh                     |  need to solve |
+| [] | Homepage vh including address bar on mobile so cropping bottom of element                   |  need to solve |

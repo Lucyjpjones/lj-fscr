@@ -70,10 +70,8 @@ def thread_detail(request, slug):
 
 @login_required
 def add_thread(request):
-    """ Add a post to the forum """
-    form = ThreadForm()
-    thread = None
 
+    """ Add a post to forum """
     if request.method == 'POST':
         form = ThreadForm(request.POST)
         if form.is_valid():
@@ -81,11 +79,14 @@ def add_thread(request):
             thread.author = request.user
             thread.save()
             messages.success(request, 'Successfully added thread!')
-            return redirect('forum')
+            return redirect(reverse('thread_detail', args=[thread.slug]))
         else:
             messages.error(request, 'Failed to add thread. Please ensure the form is valid.')
 
+    form = ThreadForm()
+    thread = None
     template = 'forum/add_thread.html'
+
     context = {
         'form': form,
         'thread': thread
@@ -93,17 +94,18 @@ def add_thread(request):
 
     return render(request, template, context)
 
+
 @login_required
-def edit_thread(request, thread_id):
+def edit_thread(request, slug):
     """ Edit a thread in the forum """
 
-    thread = get_object_or_404(Thread, pk=thread_id)
+    thread = get_object_or_404(Thread, slug=slug)
     if request.method == 'POST':
-        form = ThreadForm(request.POST, request.FILES, instance=thread)
+        form = ThreadForm(request.POST, instance=thread)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated thread!')
-            return redirect(reverse('forum'))
+            return redirect(reverse('thread_detail', args=[thread.slug]))
         else:
             messages.error(request, 'Failed to update thread. Please ensure the form is valid.')
     else:

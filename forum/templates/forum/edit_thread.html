@@ -17,7 +17,7 @@
    </div>
    <div class="row">
       <div class="col">
-         <form method="POST" action="{% url 'edit_thread' thread.id %}" class="form mb-3" enctype="multipart/form-data">
+         <form method="POST" action="{% url 'edit_thread' thread.slug %}" class="form mb-3" enctype="multipart/form-data">
             {% csrf_token %}
             {% for field in form %}
             {{ field | as_crispy_field }}

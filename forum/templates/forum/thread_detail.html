@@ -24,7 +24,7 @@
       <div class="col-12 py-2">
          <div class="mb-2">
              {% if user.is_authenticated and user == thread.author %}
-            <a href="{% url 'edit_thread' thread.id %}">
+            <a href="{% url 'edit_thread' thread.slug %}">
             <span class="float-right">
             <i class="fas fa-edit"></i>
             </span>

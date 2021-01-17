@@ -87,6 +87,7 @@
                      <a
                         class="grey-icon nav-link"
                         role="button"
+                        aria-label="search icon"
                         id="sidebarCollapse"
                         >
                         <div id="navbar-bars">
@@ -139,6 +140,7 @@
                            data-toggle="collapse"
                            href="#collapseSearch"
                            role="button"
+                           aria-label="search icon"
                            aria-expanded="false"
                            aria-controls="collapseSearch"
                            >
@@ -153,6 +155,7 @@
                         href="#"
                         id="user-options"
                         data-toggle="dropdown"
+                        aria-label="profile icon"
                         aria-haspopup="true"
                         aria-expanded="false"
                         >
@@ -190,6 +193,7 @@
                      <a
                         class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link px-1 px-md-2"
                         href="{% url 'view_bag' %}"
+                        aria-label="bag icon"
                         >
                         <div class="text-center">
                            <div class="grey-icon">

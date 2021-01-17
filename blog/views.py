@@ -77,9 +77,10 @@ def post_detail(request, slug):
 
 
 @login_required
-def delete_own_comment(request, comment_id):
+def delete_own_comment(request, comment_id, slug):
     """ Delete own comment from the blog """
+    post = get_object_or_404(Post, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
     comment.delete()
     messages.success(request, 'Comment deleted!')
-    return redirect('blog')
+    return redirect(reverse('post_detail', args=[post.slug]))

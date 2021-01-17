@@ -102,7 +102,7 @@
                   {{ comment.created_on }}
                   </span>
                   {% if user.is_authenticated and user == comment.user %}
-                  <a href="{% url 'delete_own_comment' comment.id %}">
+                  <a href="{% url 'delete_own_comment' post.slug comment.id %}">
                   <span class="float-right">
                   <i class="far fa-trash-alt"></i>
                   </span>

@@ -85,7 +85,7 @@
                <span class="icon">
                <i class="fas fa-chevron-left"></i>
                </span>
-               <span class="text-uppercase">Explore Programmes</span>
+               <span class="text-uppercase">Shop Programmes</span>
                </a>
             </div>
             <div class="col-12">
@@ -120,9 +120,9 @@
    // Remove item and reload on click
    $('.remove-item').click(function(e) {
        var csrfToken = "{{ csrf_token }}";
-       var itemId = $(this).attr('id').split('remove_')[1];
+       var itemId = $(this).attr('id').split('_')[1];
+       var catId = $(this).attr('id').split('_')[2];
        var size = $(this).data('product_size');
-       var catId = $(this).data('product_type');
        var url = `/bag/remove/${itemId}/${catId}/`;
        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
    

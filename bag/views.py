@@ -61,8 +61,6 @@ def add_to_bag(request, item_id, category):
 def adjust_bag(request, item_id, category):
     """Adjust the quantity of the specified product to the specified amount"""
 
-    product = get_object_or_404(Product, pk=item_id)
-    programme = get_object_or_404(Programme, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     size = None
     if 'product_size' in request.POST:
@@ -71,6 +69,7 @@ def adjust_bag(request, item_id, category):
                                       'programme': {}})
 
     if category == 'product':
+        product = get_object_or_404(Product, pk=item_id)
         if size:
             if quantity > 0:
                 bag[category][item_id]['items_by_size'][size] = quantity
@@ -89,6 +88,7 @@ def adjust_bag(request, item_id, category):
                 messages.success(request, f'Removed {product.name} from your bag')
 
     elif category == 'programme':
+        programme = get_object_or_404(Programme, pk=item_id)
         if quantity > 0:
             bag[category][item_id] = quantity
             messages.success(request, f'Updated {programme.name} quantity to {bag[category][item_id]}')
@@ -104,8 +104,6 @@ def adjust_bag(request, item_id, category):
 def remove_from_bag(request, item_id, category):
     """Remove the specified product from bag"""
 
-    product = get_object_or_404(Product, pk=item_id)
-    programme = get_object_or_404(Programme, pk=item_id)
     size = None
     if 'product_size' in request.POST:
         size = request.POST['product_size']
@@ -114,6 +112,7 @@ def remove_from_bag(request, item_id, category):
 
     try:
         if category == 'product':
+            product = get_object_or_404(Product, pk=item_id)
             if size:
                 del bag[category][item_id]['items_by_size'][size]
                 if not bag[category][item_id]['items_by_size']:
@@ -124,6 +123,7 @@ def remove_from_bag(request, item_id, category):
                 messages.success(request, f'Removed {product.name} from your bag')
 
         elif category == 'programme':
+            programme = get_object_or_404(Programme, pk=item_id)
             del bag[category][item_id]
             messages.success(request, (f'Removed {programme.name} from your bag'))
 

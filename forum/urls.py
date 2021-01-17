@@ -7,5 +7,5 @@ urlpatterns = [
     path('<slug:slug>/', views.thread_detail, name='thread_detail'),
     path('add', views.add_thread, name='add_thread'),
     path('edit/<slug:slug>/', views.edit_thread, name='edit_thread'),
-    path('delete/<slug:slug>/', views.delete_own_reply, name='delete_own_reply')
+    path('delete/<slug:slug>/<int:reply_id>/', views.delete_own_reply, name='delete_own_reply')
 ]

@@ -13,7 +13,7 @@ STATUS = (
 
 class Thread(models.Model):
     topic = models.CharField(max_length=200, unique=True, null=True)
-    slug = models.SlugField(max_length=200, unique=True, null=True)
+    slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                null=True)
     description = models.TextField(null=True)

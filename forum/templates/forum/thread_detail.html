@@ -71,7 +71,7 @@
                {{ reply.created_on }}
                </span>
                {% if user.is_authenticated and user == reply.user %}
-               <a href="{% url 'delete_own_reply' reply.id %}">
+               <a href="{% url 'delete_own_reply' thread.slug reply.id %}">
                <span class="float-right">
                <i class="far fa-trash-alt"></i>
                </span>

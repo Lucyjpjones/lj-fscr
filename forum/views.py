@@ -122,9 +122,10 @@ def edit_thread(request, slug):
 
 
 @login_required
-def delete_own_reply(request, reply_id):
+def delete_own_reply(request, reply_id, slug):
     """ Delete own comment from the blog """
+    thread = get_object_or_404(Thread, slug=slug)
     reply = get_object_or_404(Reply, pk=reply_id)
     reply.delete()
     messages.success(request, 'Reply deleted!')
-    return redirect('forum')
+    return redirect(reverse('thread_detail', args=[thread.slug]))

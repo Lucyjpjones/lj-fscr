@@ -156,30 +156,30 @@
             <div class="row">
                <div class="col p-0 pr-1">
                   <label class="small mb-0 pl-1" for="fname">First Name</label>
-                  <input type="text" class="form-control rounded-0" id="fname" name="fname" />
+                  <input type="text" class="form-control rounded-0" id="fname" name="fname" required/>
                </div>
                <div class="col p-0 pl-1 mb-3">
                   <label class="small mb-0 pl-1" for="lname">Last Name</label>
-                  <input type="text" class="form-control rounded-0"   id="lname" name="lname" />
+                  <input type="text" class="form-control rounded-0"   id="lname" name="lname" required/>
                </div>
             </div>
             <div class="form-group">
                <label class="small mb-0 pl-1" for="email">Email Address</label>
-               <input type="email" class="form-control rounded-0" id="email" name="email">
+               <input type="email" class="form-control rounded-0" id="email" name="email" required>
             </div>
             <div class="form-group">
                <label class="small mb-0 pl-1" for="topic">I want to</label>
-               <select class="form-control rounded-0" id="topic" name="topic">
-                  <option class="active disabled">Select option</option>
-                  <option>Strength and conditioning question</option>
-                  <option>Physiotherapy or rehab question</option>
-                  <option>More info about our programmes</option>
-                  <option>Something else</option>
+               <select class="form-control rounded-0" id="topic" name="topic" required>
+                  <option class="active disabled" value="">Select option</option>
+                  <option value="Strength and conditioning question">Strength and conditioning question</option>
+                  <option value="Physiotherapy or rehab question">Physiotherapy or rehab question</option>
+                  <option value="More info about our programmes">More info about our programmes</option>
+                  <option value="Something else">Something else</option>
                </select>
             </div>
             <div class="form-group">
                <label class="small mb-0 pl-1" for="message">What is your message?</label>
-               <textarea class="form-control rounded-0" id="message" name="message" rows="3"></textarea>
+               <textarea class="form-control rounded-0" id="message" name="message" rows="3" required></textarea>
             </div>
             <div class="text-center rounded-0">
                <input class="btn navy-btn rounded-0 w-100 bold" type="submit" value="Submit"

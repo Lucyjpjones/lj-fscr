@@ -464,11 +464,21 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 - [**HTML Validator**](https://validator.w3.org/)
 
+    No error or warning messages were received.
+
+    - To get the most accurate read of my HTML for validation, I ran my app and extracted my code from the 'View page source'.
+
 
 - [**CSS Validator**](https://jigsaw.w3.org/css-validator/)
 
+    No error or warning messages were received.
+
 
 - [**JS hint**](https://jshint.com/)
+
+    **script.js**
+
+    Warnings received;
 
 
 - **Developer tools**
@@ -481,7 +491,7 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to run a series of audits to improve the quality of web pages. Overall performance and errors are highlighted below.
 
-
+<img src="media/lighthouse-review.png">
 
 <ins>Performance</ins>
 
@@ -506,7 +516,6 @@ I didn't take any actions here as the error was for displaying 'read more' which
 `Heading elements are not in a sequentially-descending order`
 
 
-
 ### **Responsive Design**
 
 - Site created as a mobile-first design.
@@ -516,6 +525,17 @@ I didn't take any actions here as the error was for displaying 'read more' which
 - Viewport tag included in the head of HTML files to tell the browser how to respond to different resolutions, particularly mobile ones.
 
 ### **Additional Testing**
+
+- The Website was tested on Google Chrome, Safari browsers, Firefox, and Edge.
+
+- The website was viewed on a variety of devices including HP Laptop, Macbook pro, Ipad, IPhones (Version SE, 6, 7, 8, 11, 12, 12 max pro), Huawei P20 pro.
+
+- Friends and family members were asked to review the site to point out any bugs, user experience issues, and/or suggestions.
+
+    Feedback action:
+    - To pay using apple pay- this is included in my future development plans.
+    - More search queries so I can search forums- this is included in my future development plans.
+- Project posted on Slack, asking for feedback from fellow students.
 
 ### **Bugs**
 

@@ -23,6 +23,7 @@ def search_results(request):
 
     # search bar queries
     query = None
+    results_list = ()
 
     if 'q' in request.GET:
         query = request.GET['q']
@@ -40,9 +41,6 @@ def search_results(request):
         results_list = list(chain(products, programmes, posts))
 
     context = {
-        'posts': posts,
-        'programmes': programmes,
-        'products': products,
         'search_term': query,
         'results_list': results_list,
     }

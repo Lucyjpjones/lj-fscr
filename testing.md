@@ -25,30 +25,31 @@ I created an 'about' and 'meet the coaches' page so any site visitor can learn a
 
 **2. View a list of products**
 
-I created a 'products' page including a list of all products, displaying product image, name, price, and rating, with the option to select an individual card for more details.
+I created a 'products' page including a list of all products, displaying product image, name, colour, price, and rating, with the option to select an individual card for more details.
 
 <img src="media/us-2.png">
 
 **3. View a list of programmes**
 
-I created a 'programmes' page including a list of all programmes, displaying product image, name,price, and rating, with the option to select an individual card for more details.
+I created a 'programmes' page including a list of all programmes, displaying programme image, name, price, and rating, with the option to select an individual card for more details.
 
 <img src="media/us-3.png">
 
 **4. View a specific category of products or programmes**
 
 I added a filter option to both the products and programmes page giving users the ability to quickly find what they are searching for. 
+
 `(More specific details on this in user story 17)`
 
 **5. View individual product details**
 
-Each individual product page displays the products description, price, available sizes, product image and rating. There is also the ability to add to bag or redirect back to the products page.
+Each individual product page displays the products image, name, colour, price, rating, description and available sizes. There is also a quantity selector, the ability to add a product to bag or redirect back to the products page.
 
 <img src="media/us-4.png">
 
 **6. View individual programme details**
 
-Each individual programme page displays the programmes description, price, available sizes, programme image and rating. There is also the ability to add to bag or redirect back to the programmes page.
+Each individual programme page displays the programme image, name, price, rating, description, what's included and reviews. There is also a quantity selector, the ability to add a programme to bag or redirect back to the programmes page.
 
 <img src="media/us-5.png">
 
@@ -74,7 +75,7 @@ I created a blog app that can only be viewed by site members. The page is availa
 
 **10. Access a member forum**
 
-I created a forum app that can only be accessed by site members. When a user is not logged in and they click on the forum they will be directed to the login/register page. If a user is a member and logged in they will be directed to the forum page where they will have the option to view threads by other users and add their own. They also have the capability of replying to any thread which displays both their logged in username and date/time posted.
+I created a forum app that can only be accessed by site members. When a user is not logged in and they click on the forum they will be directed to the login/register page. If a user is a member and logged in they will be directed to the forum page where they will have the option to view threads by other users and add/edit their own. They also have the capability of replying to any thread which displays both their logged in username and date/time posted.
 
 <img src="media/us-9.png">
 
@@ -108,7 +109,7 @@ Each registered user has their own profile page where they can store their perso
 
 **14. Easily recover my password in case I forget it**
 
-If a user forgets their password they have the option to click the 'forgot password' link. This will direct them to another page which will inform the user that an email has been sent to them to recover their password.
+If a user forgets their password they have the option to click the 'forgot password' link. This will direct them to another page which will inform the user that an email has been sent to them to recover their password. The email contains a link which redirects the user to the change password page where they can enter a new password for their account. After submitting a new password the user is redirected to the login in page and can log in using their new password.
 
 <img src="media/us-14.png">
 
@@ -128,7 +129,8 @@ If the user has filled in their profile information, these details will be prefi
 
 **17. Sort and filter the list of available products and programmes**
 
-I have added a sort and filter option to the products and programmes page to allow a user to easily find what they are looking for. I also decided to add this function to the blog page as I think it will be useful to the user as more blogs get posted over time.
+I have added a sort and filter option to the products and programmes page to allow a user to easily find what they are looking for. There is a 'clear all' option at the top of the filter dropdown which allows a user to remove the filter and display all items. 
+- I also decided to add this function to the blog page as I think it will be useful to the user as more blogs get posted over time. 
 
 The pages also feature a count functionality showing the user how many items are being displayed on the page. For example if the user filtered the products page by accessories they would see all the accessories and the number of products found. If no products are found the user would be displayed with the message "Sorry no search results found".
 
@@ -136,7 +138,8 @@ The pages also feature a count functionality showing the user how many items are
 
 **18. Search the site by keywords**
 
-A search bar features in the main site header. Users can search by keywords on the product and programme page to filter by specific items.
+A search bar features in the main site header and allows users to search by keywords to find specific items. On larger screens the search bar is visible and on smaller devices the search bar is collapsed from the search icon.
+    - Currently the filtered queries include product name, product description, programme name, programme description, and blog post title.
 
 <img src="media/us-18.png">
 
@@ -184,29 +187,31 @@ Once the user has made a purchase they are sent an email with a summary of their
 
 <img src="media/us-26.png">
 
-#### <ins>>Admin and Store Management</ins>
+#### <ins>Admin and Store Management</ins>
 
 **27. Add a product/programme**
 
-When logged in as the admin user, the user has the option of 'product management' and 'programme management' when clicking on the profile icon on the main site header. After clicking the link they are directed to a page displayed with a form to enter all the information needed to add a new product/programme.
+When logged in as the admin user, the user has the option of 'product management' and 'programme management' when clicking on the profile icon on the main site header. After clicking the link they are directed to a page displayed with a form to enter all the information needed to add a new product/programme. Once the user has finished adding the product/programme deatils they can click 'add product'/'add programme' and will be redirected to the product/programme detail page for the new item.
+
 
 <img src="media/us-27.png">
 
 **28. Edit/Update a product/programme**
 
-When logged in as admin user, the user has an edit button displayed under each product/programme card on the products/programmes page, as well as on each product/programme detail page. After clicking 'edit' from either view the user is directed to the edit product/programme page which is a pre-filled out form allowing the fields to be ammended manually from the site. Once the user has finished with their edits they can click 'update information' and the new product/programme information will be saved, and they will be redirected back to the products/programmes page.
+When logged in as admin user, the user has an edit button displayed under each product/programme card on the products/programmes page, as well as on each product/programme detail page. After clicking 'edit' from either view the user is directed to the edit product/programme page which is a pre-filled out form allowing the fields to be ammended manually from the site. Once the user has finished with their edits they can click 'update information' and the new product/programme information will be saved, and they will be redirected back to the product/programme detail page.
 
 <img src="media/us-28.png">
 
 **29. Delete a product/programme**
 
-When logged in as admin user, the user has a delete button displayed next to the edit button. After clicking 'delete' from either view, the product/programme is permanently deleted from the site and will no longer show on the products/programmes page.
+When logged in as admin user, the user has a delete button displayed next to the edit button. After clicking 'delete' from either view, the product/programme is permanently deleted from the site and will no longer show on the products/programmes page or in the admin.
 
 (See user story above displaying the delete button)
 
 **30. Add a blog**
 
-When logged into the admin, the admin user can add a new blog to the site. I didn't think it was nessessary to add a manual function for adding a blog as these will be posted less frequently and have little chance of needing modifications after being posted.
+When logged into the admin, the admin user can add a new blog to the site. 
+- I didn't think it was necessary to add a manual function for adding a blog as these will be posted less frequently and have little chance of needing modifications after being posted.
 
 ### **Manual function testing**
 
@@ -282,7 +287,7 @@ To ensure my site was working correctly I carried out some manual function testi
 #### Home
 - [x] The callout carousel automatically cycles through a series of callout messages with expected interval time
 - [x] The messages on the callout carousel are displayed appropriately dependent on whether a user is logged in or not
-- [x]The links featured on the callout carousel direct the user to the expected page
+- [x] The links featured on the callout carousel direct the user to the expected page
 - [x] The product and programme card links direct the user to the expected page.
 - [x] The 'read me' link on the latest blogs direct the user to the correct post detail page
 - [x] The testimonial carousel automatically cycles through a series of testimonials with expected interval time

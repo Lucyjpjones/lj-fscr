@@ -535,6 +535,8 @@ I didn't take any actions here as the error was for displaying 'read more' which
     Feedback action:
     - To pay using apple pay- this is included in my future development plans.
     - More search queries so I can search forums- this is included in my future development plans.
+    - Add a count onto the bag icon so users can easy see how many items are in their bag- this is included in my future development plans.
+    - bility for user to autofill address by entering postcode- this is included in my future development plans. 
 - Project posted on Slack, asking for feedback from fellow students.
 
 ### **Bugs**

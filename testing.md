@@ -43,13 +43,13 @@ I added a filter option to both the products and programmes page giving users th
 
 **5. View individual product details**
 
-Each individual product page displays the products image, name, colour, price, rating, description and available sizes. There is also a quantity selector, the ability to add a product to bag or redirect back to the products page.
+Each product detail page displays the product's image, name, colour, price, rating, description, and available sizes. There is also a quantity selector, the ability to add a product to bag or redirect back to the products page.
 
 <img src="media/us-4.png">
 
 **6. View individual programme details**
 
-Each individual programme page displays the programme image, name, price, rating, description, what's included and reviews. There is also a quantity selector, the ability to add a programme to bag or redirect back to the programmes page.
+Each programme detail page displays the programme's image, name, price, rating, description, what's included, and reviews. There is also a quantity selector, the ability to add a programme to bag or redirect back to the programmes page.
 
 <img src="media/us-5.png">
 
@@ -63,11 +63,11 @@ I have included a contact form on the home page which is also easily navigated t
 
 Testimonials are visible on the homepage and reviews are available on the programmes detail page. Users are also able to see the rating for each individual product/programme under each item on the products/programmes page and additionally on the product/programme details page.
 
-> **NB:** As this is a startup which hasn't yet started business the testimonials, reviews and ratings are currently only mockups.
+> **NB:** As this is a startup that hasn't yet started the business the testimonials, reviews, and ratings are currently only mockups.
 
 <img src="media/us-7.png">
 
-**9. Browse associated blogs, articles and recent new stories**
+**9. Browse associated blogs, articles, and recent new stories**
 
 I created a blog app that can only be viewed by site members. The page is available through the nav menu and there is also the option for the user to direct to the latest blogs via the homepage. When a user is not logged in and they click on the blog they will be directed to the login/register page. If a user is a member and logged in they will be directed to the blog page where they can view blogs posted by the admin user. Members also have the ability to add and delete their own comments on blog posts creating further user interaction.
 
@@ -75,7 +75,7 @@ I created a blog app that can only be viewed by site members. The page is availa
 
 **10. Access a member forum**
 
-I created a forum app that can only be accessed by site members. When a user is not logged in and they click on the forum they will be directed to the login/register page. If a user is a member and logged in they will be directed to the forum page where they will have the option to view threads by other users and add/edit their own. They also have the capability of replying to any thread which displays both their logged in username and date/time posted.
+I created a forum app that can only be accessed by site members. When a user is not logged in and they click on the forum they will be directed to the login/register page. If a user is a member and logged in they will be directed to the forum page where they will have the option to view threads by other users and add/edit their own. They also have the capability of replying to any thread, with the logged in username and date/time automatically saved.
 
 <img src="media/us-9.png">
 
@@ -83,7 +83,7 @@ I created a forum app that can only be accessed by site members. When a user is 
 
 **10. Easily register for an account**
 
-A fully functioning register page where a user is able to enter their details to create an account. The user can access this page by clicking on the recognisable user icon and selecting 'register'.
+A fully functioning register page where a user can enter their details to create an account. The user can access this page by clicking on the recognisable user icon and selecting 'register'.
 
 <img src="media/us-10.png">
 
@@ -95,27 +95,27 @@ After registering the user is directed to a registration success page where they
 
 **12. Easily login or logout**
 
-When a user is registered they have the ability to easily log into their account. The user can click on the profile icon, then select log in and enter their details to sign into their account. Once logged in the user will be able to log out via the profile icon.
+When a user is registered they have the ability to easily log into their account. The user can click on the profile icon, then select login and enter their details to sign into their account. Once logged in the user will be able to log out via the profile icon.
 
-I also decided to add social logins to allow my user to log in more quickly. The user can choose their preferred platform (Facebook, Google or Twitter) and follow the authorisation for the specified site. (Facebook screenshots included below).
+I also decided to add social logins to allow my user to login more quickly. The user can choose their preferred platform (Facebook, Google, or Twitter) and follow the authorisation for the specified site. (Facebook screenshots included below).
 
 <img src="media/us-12.png">
 
 **13. Easily update my personal details**
 
-Each registered user has their own profile page where they can store their personal details including name, email and delivery details. This information can be easily updated by filling in any field and then clicking 'update details'.
+Each registered user has their own profile page where they can store their personal details including name, email, and delivery details. This information can be easily updated by filling in any field and then clicking 'update details'.
 
 <img src="media/us-13.png">
 
 **14. Easily recover my password in case I forget it**
 
-If a user forgets their password they have the option to click the 'forgot password' link. This will direct them to another page which will inform the user that an email has been sent to them to recover their password. The email contains a link which redirects the user to the change password page where they can enter a new password for their account. After submitting a new password the user is redirected to the login in page and can log in using their new password.
+If a user forgets their password they have the option to click the 'forgot password' link. This will direct them to another page which will inform the user that an email has been sent to them to recover their password. The email contains a link that redirects the user to the change password page where they can enter a new password for their account. After submitting a new password the user is redirected to the login in page and can login using their new password.
 
 <img src="media/us-14.png">
 
 **15. Have a personalised user profile**
 
-The profile page is specific to each user with a personalised username greeting,the option to save their own entered details and a log of their order history.
+The profile page is specific to each user with a personalised username greeting, the option to save their own entered details, and a log of their order history.
 
 <img src="media/us-15.png">
 
@@ -132,14 +132,14 @@ If the user has filled in their profile information, these details will be prefi
 I have added a sort and filter option to the products and programmes page to allow a user to easily find what they are looking for. There is a 'clear all' option at the top of the filter dropdown which allows a user to remove the filter and display all items. 
 - I also decided to add this function to the blog page as I think it will be useful to the user as more blogs get posted over time. 
 
-The pages also feature a count functionality showing the user how many items are being displayed on the page. For example if the user filtered the products page by accessories they would see all the accessories and the number of products found. If no products are found the user would be displayed with the message "Sorry no search results found".
+The pages also feature a count functionality showing the user how many items are being displayed on the page. For example, if the user filtered the products page by accessories they would see all the accessories and the number of products found. If no products are found the user would be displayed with the message "Sorry no search results found".
 
 <img src="media/us-17.png">
 
 **18. Search the site by keywords**
 
-A search bar features in the main site header and allows users to search by keywords to find specific items. On larger screens the search bar is visible and on smaller devices the search bar is collapsed from the search icon.
-    - Currently the filtered queries include product name, product description, programme name, programme description, and blog post title.
+A search bar features in the main site header and allows users to search by keywords to find specific items. On larger screens the search bar is visible and on smaller devices, the search bar is collapsed from the search icon.
+    - Currently, the filtered queries include product name, product description, programme name, programme description, and blog post title.
 
 <img src="media/us-18.png">
 
@@ -177,7 +177,7 @@ The checkout page features a payment form allowing the user to easily enter thei
 
 **25. View an order confirmation after checkout**
 
-Once the user has made a purchase they are directed to a checkout success page where they can see a summary of their order so they are able to check that they haven't made any mistakes.
+Once the user has made a purchase they are directed to a checkout success page where they can see a summary of their order so they can check that they haven't made any mistakes.
 
 <img src="media/us-25.png">
 
@@ -191,14 +191,14 @@ Once the user has made a purchase they are sent an email with a summary of their
 
 **27. Add a product/programme**
 
-When logged in as the admin user, the user has the option of 'product management' and 'programme management' when clicking on the profile icon on the main site header. After clicking the link they are directed to a page displayed with a form to enter all the information needed to add a new product/programme. Once the user has finished adding the product/programme deatils they can click 'add product'/'add programme' and will be redirected to the product/programme detail page for the new item.
+When logged in as the admin user, the user has the option of 'product management' and 'programme management' when clicking on the profile icon on the main site header. After clicking the link they are directed to a page displayed with a form to enter all the information needed to add a new product/programme. Once the user has finished adding the product/programme details they can click 'add product'/'add programme' and will be redirected to the product/programme detail page for the new item.
 
 
 <img src="media/us-27.png">
 
 **28. Edit/Update a product/programme**
 
-When logged in as admin user, the user has an edit button displayed under each product/programme card on the products/programmes page, as well as on each product/programme detail page. After clicking 'edit' from either view the user is directed to the edit product/programme page which is a pre-filled out form allowing the fields to be ammended manually from the site. Once the user has finished with their edits they can click 'update information' and the new product/programme information will be saved, and they will be redirected back to the product/programme detail page.
+When logged in as admin user, the user has an edit button displayed under each product/programme card on the products/programmes page, as well as on each product/programme detail page. After clicking 'edit' from either view the user is directed to the edit product/programme page which is a pre-filled out form allowing the fields to be amended manually from the site. Once the user has finished with their edits they can click 'update information' and the new product/programme information will be saved, and they will be redirected back to the product/programme detail page.
 
 <img src="media/us-28.png">
 
@@ -257,30 +257,30 @@ To ensure my site was working correctly I carried out some manual function testi
 #### Sort and Filter
 
 - [x] The sort functionality returns items in the order expected. 
-    - This was tested on the products, programmes and blog page
+    - This was tested on the products, programmes, and blog page
 - [x] The filter functionality returns only items matching the chosen critera
-    - This was tested on the products, programmes and blog page
+    - This was tested on the products, programmes, and blog page
 - [x] If user selects 'clear all' the filter is removed and all items are displayed
-    - This was tested on the products, programmes and blog page
+    - This was tested on the products, programmes, and blog page
 
 #### Authorisation
 
 - [x] On the register page, if the user clicks 'sign in' they are redirected to the login page
-- [x] If the user completes the register form with non-existant user details their registration is successful
+- [x] If the user completes the registration form with non-existent user details their registration is successful
 - [x] After successful registration the user is navigated to the 'verification email sent' page and an email is sent to the user with link to confirm
 - [x] After user clicks link in email they are redirected to 'verify your email' page 
 - [x] After user clicking 'confirm' on verify your email' page they receive a success message and are redirected to the login page
-- [x] If the user completes the register form with an already registered username and password they receive an error message
+- [x] If the user completes the registration form with an already registered username and password they receive an error message
 - [x] On the login page, if the user clicks 'sign up' they are redirected to the register page
 - [x] If the user completes the login form with an already registered username and password they are logged in successfully
-- [x] If the user completes the login form with non-existant user details they recieve an error message
+- [x] If the user completes the login form with non-existent user details they receive an error message
 - [x] If the user selects a social login option they are directed to the correct external platform for authorisation
-- [x] If the user clicks 'forgot password' they are directed to the forgotton password page as expected
+- [x] If the user clicks 'forgot password' they are directed to the forgotten password page as expected
 - [x] If the user enters their email and clicks 'reset my password' they are directed to the password reset page as expected
-- [x] If the user enters their email and clicks 'reset my password' they recieve an email with a link to reset their password
+- [x] If the user enters their email and clicks 'reset my password' they receive an email with a link to reset their password
 - [x] After user clicks the link in their email they are redirected to the 'change password' page
-- [x] After submitting a new password the user is presented with a success message 'Your password is now changed' and they are able to login with their new password
-- [x] If the user clicks 'remember me' they are directed to the forgotton password page as expected
+- [x] After submitting a new password the user is presented with a success message 'Your password is now changed' and they can login with their new password
+- [x] If the user clicks 'remember me' they are directed to the forgotten password page as expected
 - [x] If a user is logged in, the logout option is visible in the profile icon menu
 - [x] If a user clicks 'logout' they are directed to the logout page where they can confirm action
 
@@ -292,7 +292,7 @@ To ensure my site was working correctly I carried out some manual function testi
 - [x] The 'read me' link on the latest blogs direct the user to the correct post detail page
 - [x] The testimonial carousel automatically cycles through a series of testimonials with expected interval time
 - [x] The testimonial carousel pauses on hover and pointer is present
-- [x] If user information entered in contact form is valid, the form submission is successful and an email is sent to the expected gmail account
+- [x] If user information entered in contact form is valid, the form submission is successful and an email is sent to the expected Gmail account
 - [x] After submission the input fields are cleared
 - [x] When input is missing in a required field there is an error response
 - [x] When input format is incorrect the field validation errors are present
@@ -300,7 +300,7 @@ To ensure my site was working correctly I carried out some manual function testi
 
 #### Meet the coaches
 
-- [x] The opaque css on is working as expected on profile image tabs
+- [x] The opaque CSS is working as expected on profile image tabs
 
 #### Products
 
@@ -317,12 +317,12 @@ When logged in as Admin user...
 - [x] After successfully adding a new product I am redirected to the product detail page with the correct information
 - [x] When input is missing in a required field there is an error response
 - [x] When input format is incorrect the field validation errors are present
-- [x] If not image is added to the form submission, the expected 'noimage' is present 
+- [x] If not image is added to the form submission, the expected 'no image' png file is present 
 - [x] The edit button is visible on the products page and each product detail page
 - [x] Clicking the edit button directs the user to the edit product page with fields prefilled with current information
 - [x] After submitting the edit form user is redirected to the product detail page with updated the information
 - [x] The delete button is visible on the products page and each product detail page
-- [x] After clicking the 'delete' button the product is removed from the site and no longer visible in django admin
+- [x] After clicking the 'delete' button the product is removed from the site and no longer visible in Django admin
 
 #### Programmes
 
@@ -340,12 +340,12 @@ When logged in as Admin user...
 - [x] After successfully adding a new programme I am redirected to the programme detail page with the correct information
 - [x] When input is missing in a required field there is an error response
 - [x] When input format is incorrect the field validation errors are present
-- [x] If not image is added to the form submission, the expected 'noimage' is present 
+- [x] If not image is added to the form submission, the expected 'no image' png file is present 
 - [x] The edit button is visible on the programmes page and each programme detail page
 - [x] Clicking the edit button directs the user to the edit programme page with fields prefilled with current information
 - [x] After submitting the edit form user is redirected to the programme detail page with the updated information
 - [x] The delete button is visible on the programmes page and each programme detail page
-- [x] After clicking the 'delete' button the programme is removed from the site and no longer visible in django admin
+- [x] After clicking the 'delete' button the programme is removed from the site and no longer visible in Django admin
 
 #### Bag
 
@@ -359,13 +359,13 @@ When logged in as Admin user...
 - [x] I am not able to enter a non numeric value into the fields
 - [x] I can remove the item from the bag by clicking 'remove'
 - [x] I can remove the item from the bag by entering 0 into the quantity field and clicking 'update'
-- [x] If amendments are made in the bag sub total is updated accordingly
+- [x] If amendments are made in the bag subtotal is updated accordingly
 
 #### Checkout
 
 - [x] The order summary contains the correct details of the items listed in the bag
 - [x] If a site visitor the user input fields are all empty 
-- [x] If a site member and details have been previosuly saved in 'my profile' the checkout fields are already prefilled
+- [x] If a site member and details have been previously saved in 'my profile' the checkout fields are already prefilled
 - [x] When input is missing in a required field there is an error response
 - [x] When input format is incorrect the field validation errors are present
 - [x] If user enters details and checks 'Save this delivery information to my profile', the information is saved to their profile after submission
@@ -382,7 +382,7 @@ When logged in as Admin user...
 - [x] The 'read me' link for each blog directs the user to the post detail page, displaying the correct information
 - [x] The user is able to toggle references making text visible or hidden
 - [x] If user enters a comment and clicks submit their comment is added successfully
-- [x] The posted comment is displayed with the correct datetime and logged in username
+- [x] The posted comment is displayed with the correct DateTime and logged in username
 - [x] After submitting a comment the input field is cleared
 - [x] The trash icon is only visible on comments the logged in user has posted 
 - [x] After clicking the trash icon the comment is removed from the page as expected
@@ -391,7 +391,7 @@ When logged in as Admin user...
 
 - [x] Clicking on a 'topic' link directs the user to the thread detail page, displaying the correct information
 - [x] If user enters a reply and clicks submit their reply is added successfully
-- [x] The posted reply is displayed with the correct datetime and logged in username
+- [x] The posted reply is displayed with the correct DateTime and logged in username
 - [x] After submitting a reply the input field is cleared
 - [x] The trash icon is only visible on replies the logged in user has posted 
 - [x] After clicking the trash icon the reply is removed from the page as expected
@@ -405,7 +405,7 @@ When logged in as Admin user...
 #### Profile
 
 - [x] The welcome message is personalised with the correct username for the logged in user
-- [x] The users order history visible
+- [x] The user's order history is listed with previous purchases
 - [x] After clicking 'View order details' the user is directed to the checkout success page showing all details of their order
 - [x] On the checkout success page, clicking 'back to profile' navigates the user back to their profile
 - [x] If user enters details and clicks 'update information' their details are saved to their profile
@@ -433,7 +433,7 @@ The results from each test were displayed in the terminal, letting me know if th
 
 #### **Coverage**
 
-I used **Coverage** to identify the percentage of code the tests had covered and to determine which areas to focus on. Due to time constraints my aim was to reach a minimum of 50% coverage on all my apps. However I will continue to add tests to get as close to 100% as I can. 
+I used **Coverage** to identify the percentage of code the tests had covered and to determine which areas to focus on. Due to time constraints, I aimed to reach a minimum of 50% coverage on all my apps. However, I will continue to add tests to get as close to 100% as I can. 
 
 To set up and use Coverage, I used the following commands;
 
@@ -509,7 +509,7 @@ As images are uploaded through the image URL form input I am not able to take an
 
 `Links do not have descriptive text`
 
-I didn't take any actions here as the error was for displaying 'read more' which I believe is a convential text link for users. This is also very similar to the suggested generic link text 'learn more'.
+I didn't take any actions here as the error was for displaying 'read more' which I believe is a conventional text link for users. This is also very similar to the suggested generic link text 'learn more'.
 
 <ins></ins>
 
@@ -520,7 +520,7 @@ I didn't take any actions here as the error was for displaying 'read more' which
 
 - Site created as a mobile-first design.
 
-- Responsive layout achieved through utilising the Boostrap grid system and applying my own media queries.
+- Responsive layout achieved through utilising the Bootstrap grid system and applying my own media queries.
 
 - Viewport tag included in the head of HTML files to tell the browser how to respond to different resolutions, particularly mobile ones.
 
@@ -535,8 +535,8 @@ I didn't take any actions here as the error was for displaying 'read more' which
     Feedback action:
     - To pay using apple pay- this is included in my future development plans.
     - More search queries so I can search forums- this is included in my future development plans.
-    - Add a count onto the bag icon so users can easy see how many items are in their bag- this is included in my future development plans.
-    - bility for user to autofill address by entering postcode- this is included in my future development plans. 
+    - Add a count onto the bag icon so users can easily see how many items are in their bag- this is included in my future development plans.
+    - Ability for user to autofill address by entering postcode- this is included in my future development plans. 
 - Project posted on Slack, asking for feedback from fellow students.
 
 ### **Bugs**

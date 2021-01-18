@@ -155,7 +155,8 @@ p,
 }
 
 .update-link,
-.remove-item {
+.remove-item,
+.carousel {
    cursor: pointer;
 }
 

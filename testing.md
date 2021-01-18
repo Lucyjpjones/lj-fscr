@@ -214,10 +214,10 @@ To ensure my site was working correctly I carried out some manual function testi
 
 #### General
 
-- [x] Font styling changes as expected when hovering over my `button elements`
-- [x] Opacity filter works as expected when hovering over `icon elements`
-- [x] `cursor pointer` is present when hovering button and link elements 
-- [x] User is directed to a custom `404 page` if directed to a non-existent domain
+- [x] Font styling changes as expected when hovering over my button elements
+- [x] Opacity filter works as expected when hovering over icon elements
+- [x] cursor pointer is present when hovering button and link elements 
+- [x] User is directed to a custom 404 page if directed to a non-existent domain
 
     <img src="media/404-page.png">
 
@@ -237,13 +237,13 @@ To ensure my site was working correctly I carried out some manual function testi
 - [x] If the user clicks the 'contact' link they are directed to the contact form on the homepage
 - [x] If the user is not logged in, the 'blog' link on main dropdown menu directs the user to the register page
 - [x] The 'Join now' link is only visible on the main menu when a user is not logged in
-- [x] Clicking the `brand logo` from any page on the site navigates the user back to the homepage
-- [x] `Search bar` showing the correct format based on device size
-- [x] After entering keywords and hitting enter or the `search icon`, user is directed to the search page template with appropriate results
+- [x] Clicking the brand logo from any page on the site navigates the user back to the homepage
+- [x] Search bar showing the correct format based on device size
+- [x] After entering keywords and hitting enter or the search icon, user is directed to the search page template with appropriate results
 - [x] If user enters a keyword with no results the correct message is displayed
-- [x] When not logged, under the `profile icon` user has the options of 'register' and 'login'
-- [x] When logged in, under the `profile icon` user has the options of 'My profile' and 'logout'
-- [x] When logged in as admin, under the `profile icon` user has the added options of 'product management' and 'programme management'
+- [x] When not logged, under the profile icon user has the options of 'register' and 'login'
+- [x] When logged in, under the profile icon user has the options of 'My profile' and 'logout'
+- [x] When logged in as admin, under the profile icon user has the added options of 'product management' and 'programme management'
 - [x] All links displayed on the profile dropdown menu direct the user to the expected page
 - [x] When the bag icon is clicked user is directed to the bag template
 - [x] Before adding to bag, user is directed to the correct empty bag template
@@ -251,9 +251,9 @@ To ensure my site was working correctly I carried out some manual function testi
 
 #### Sort and Filter
 
-- [x] The `sort functionality` returns items in the order expected. 
+- [x] The sort functionality returns items in the order expected. 
     - This was tested on the products, programmes and blog page
-- [x] The `filter functionality` returns only items matching the chosen critera
+- [x] The filter functionality returns only items matching the chosen critera
     - This was tested on the products, programmes and blog page
 - [x] If user selects 'clear all' the filter is removed and all items are displayed
     - This was tested on the products, programmes and blog page
@@ -280,14 +280,14 @@ To ensure my site was working correctly I carried out some manual function testi
 - [x] If a user clicks 'logout' they are directed to the logout page where they can confirm action
 
 #### Home
-- [x] The `callout carousel` automatically cycles through a series of callout messages with expected interval time
+- [x] The callout carousel automatically cycles through a series of callout messages with expected interval time
 - [x] The messages on the callout carousel are displayed appropriately dependent on whether a user is logged in or not
 - [x]The links featured on the callout carousel direct the user to the expected page
-- [x] The `product and programme card` links direct the user to the expected page.
-- [x] The 'read me' link on the `latest blogs` direct the user to the correct post detail page
-- [x] The `testimonial carousel` automatically cycles through a series of testimonials with expected interval time
-- [x] The `testimonial carousel` pauses on hover and pointer is present
-- [x] If user information entered in `contact form` is valid, the form submission is successful and an email is sent to the expected gmail account
+- [x] The product and programme card links direct the user to the expected page.
+- [x] The 'read me' link on the latest blogs direct the user to the correct post detail page
+- [x] The testimonial carousel automatically cycles through a series of testimonials with expected interval time
+- [x] The testimonial carousel pauses on hover and pointer is present
+- [x] If user information entered in contact form is valid, the form submission is successful and an email is sent to the expected gmail account
 - [x] After submission the input fields are cleared
 - [x] When input is missing in a required field there is an error response
 - [x] When input format is incorrect the field validation errors are present
@@ -295,13 +295,13 @@ To ensure my site was working correctly I carried out some manual function testi
 
 #### Meet the coaches
 
-- [x] The opaque css on is working as expected on `profile image tabs`
+- [x] The opaque css on is working as expected on profile image tabs
 
 #### Products
 
 - [x] Each product card directs the user to the product detail page displaying the correct information
-- [x] Clicking the increment and decrement on the `quantity selector` changes the value as expected
-- [x] Selecting a value from the `size selector` dropdown updates the field correctly
+- [x] Clicking the increment and decrement on the quantity selector changes the value as expected
+- [x] Selecting a value from the size selector dropdown updates the field correctly
 - [x] Product is added to the bag successfully after clicking 'add to bag'
 - [x] If product is already in bag, quantity is incremented and product is not duplicated
 
@@ -322,11 +322,11 @@ When logged in as Admin user...
 #### Programmes
 
 - [x] Each programme card directs the user to the programme detail page displaying the correct information
-- [x] Clicking the increment and decrement on the `quantity selector` changes the value as expected
+- [x] Clicking the increment and decrement on the quantity selector changes the value as expected
 - [x] Programme is added to the bag successfully after clicking 'add to bag'
 - [x] If programme is already in bag, quantity is incremented and programme is not duplicated
-- [x] The `review carousel` automatically cycles through a series of callout messages with expected interval time
-- [x] The `review carousel` controls allow the user to scroll back and forth
+- [x] The review carousel automatically cycles through a series of callout messages with expected interval time
+- [x] The review carousel controls allow the user to scroll back and forth
 
 <ins>Admin</ins>
 
@@ -375,7 +375,7 @@ When logged in as Admin user...
 #### Blog
 
 - [x] The 'read me' link for each blog directs the user to the post detail page, displaying the correct information
-- [x] The user is able to toggle `references` making text visible or hidden
+- [x] The user is able to toggle references making text visible or hidden
 - [x] If user enters a comment and clicks submit their comment is added successfully
 - [x] The posted comment is displayed with the correct datetime and logged in username
 - [x] After submitting a comment the input field is cleared

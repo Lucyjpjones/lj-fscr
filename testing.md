@@ -244,6 +244,12 @@ To ensure my site was working correctly I carried out some manual function testi
 
 #### Authorisation
 
+- [x] On the register page, if the user clicks 'sign in' they are redirected to the login page
+- [x] If the user completes the register form with non-existant user details their registration is successful
+- [x] After successful registration the user is navigated to the 'verification email sent' page and an email is sent to the user with link to confirm
+- [x] After user clicks link in email they are redirected to 'verify your email' page 
+- [x] After user clicking 'confirm' on verify your email' page they receive a success message and are redirected to the login page
+- [x] If the user completes the register form with an already registered username and password they receive an error message
 - [x] On the login page, if the user clicks 'sign up' they are redirected to the register page
 - [x] If the user completes the login form with an already registered username and password they are logged in successfully
 - [x] If the user completes the login form with non-existant user details they recieve an error message
@@ -251,10 +257,9 @@ To ensure my site was working correctly I carried out some manual function testi
 - [x] If the user clicks 'forgot password' they are directed to the forgotton password page as expected
 - [x] If the user enters their email and clicks 'reset my password' they are directed to the password reset page as expected
 - [x] If the user enters their email and clicks 'reset my password' they recieve an email with a link to reset their password
+- [x] After user clicks the link in their email they are redirected to the 'change password' page
+- [x] After submitting a new password the user is presented with a success message 'Your password is now changed' and they are able to login with their new password
 - [x] If the user clicks 'remember me' they are directed to the forgotton password page as expected
-- [x] On the register page, if the user clicks 'sign in' they are redirected to the login page
-- [x] If the user completes the register form with non-existant user details their registration is successful
-- [x] If the user completes the register form with an already registered username and password they receive an error message
 
 #### Home
 - [x] The `callout carousel` automatically cycles through a series of callout messages with expected interval time

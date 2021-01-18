@@ -27,6 +27,12 @@ footer h6 {
    margin: 0px;
 }
 
+.social-links {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
+
 p,
 .row,
 .col-12 {

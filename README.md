@@ -10,16 +10,18 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 
 </div>
 
-For <ins>testing</ins> the following credentials can be used:
+For <ins>**testing**</ins> the following credentials can be used:
 
-<ins>**Card payments**</ins>
+**Card payments**
 
-- **Card number:** 4242 4242 4242 4242
+- Card number: 4242 4242 4242 4242
 
-- **Zip & CCV:** any integer values are valid
+- Zip & CCV: any integer values are valid
 
 
-**Disclaimer:** This project is for educational purposes only, images taken from other sources will be replaced if the site goes commercial.
+**<ins>Disclaimer</ins> : This project is for educational purposes only**
+- Images taken from other sources will be replaced if the site goes commercial.
+- Ratings and reviews are only mockups and will be removed or replaced if the site goes commercial.
 
 ---
 
@@ -67,7 +69,7 @@ For <ins>testing</ins> the following credentials can be used:
 
 # &rarr; **User Experience (UX)**
 
-### **<u>Purpose</u>**
+### **<ins>Purpose</ins>**
 
 **FSCR** (Football Strength Conditioning Rehab) focuses on providing structured and detailed fitness programmes for football-related injuries. This is a full-stack site that has been created around business logic and used to control a centrally-owned dataset.
 
@@ -76,7 +78,7 @@ This application was built for a client who is currently looking to utilise thei
 By completing this project I will have shown greater experience in HTML, CSS, and Javascript, and demonstrated my understanding of Python+Django. I will have also shown my competency in using a relational database, setting up an authentication mechanism, and providing payment transactions using stripe payments. 
 
 
-### **<u>Design</u>**
+### **<ins>Design</ins>**
 
 **Structure**
 
@@ -133,7 +135,7 @@ I created a personalised favicon for the site to add branding, and to make it ea
 
 <img src="media/fscr-favicon.png">
 
-### **<u>Data Schema</u>**
+### **<ins>Data Schema</ins>**
 
 To help visualize my database, I created a diagram using [dbdiagram](https://dbdiagram.io/) which illustrates the relationships between my models.
 
@@ -160,13 +162,13 @@ The **Order model** within the checkout app, is used to store orders.
 The **OrderLineItem model** within the checkout app, is used to store information about individual products on the order.
 The **ProgOrderLineItem model** within the checkout app, is used to store information about individual programmes on the order.
 
-### **<u>User Stories</u>**
+### **<ins>User Stories</ins>**
 
 <img src="media/flowchart.png">
 
 > **NB:** Boxes highlighted are only accessible when a user is registered and logged in.
 
-<u>**User profiles**</u>
+<ins>**User profiles**</ins>
 
 **Site Visitor**
 As a site visitor, I want to be able to easily navigate around the site and gain a clear insight into its purpose. I would like to be able to browse the services and products on offer with the option to purchase. I would also like the ability to contact the site owner if I require any further information and the option to register as a member for more resources.
@@ -177,7 +179,7 @@ As a site member, I want to be part of a community where I can interact with oth
 **Site Owner**
 As the site owner, I want to be able to continually monitor and update the site to manage my user's expectations. I would like the ability to easily add, edit and delete products and programmes to ensure my site is always up to date and relevant, and add blogs for our site members. I want to provide a customer review option, to gain feedback for improvements, and to develop a sense of transparency to gain consumer loyalty and trust.
 
-<u>**User stories**</u>
+<ins>**User stories**</ins>
 
 |                   | As a / an    | I want to be able to….                                              | So that I can…                                                                                       |
 |--------------------------------|--------------|---------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
@@ -217,7 +219,7 @@ As the site owner, I want to be able to continually monitor and update the site 
 | 29                             | Site Owner   | Delete a product/programme                                                    | Remove items that are no longer available for sale                                                   |
 | 30                             | Site Owner   | Add a blog                                                          | Add new blogs to share with site members                                                             |
 
-### **<u>Wireframes</u>**
+### **<ins>Wireframes</ins>**
 
 As part of the design process, I created wireframes using [Balsamiq](https://balsamiq.com/?gclid=Cj0KCQjw28T8BRDbARIsAEOMBczzBYzsoMjbTtqNXQaE1EgOWA2u_Qux7sLl2IUHe-p0lDC-294BfVgaAr-oEALw_wcB). Creating these mock-ups helped me plan the basic structure and arrangement of the features for my site.
 
@@ -362,17 +364,17 @@ All authorisation pages including register, login and logout have been implement
 
 #### Status
 
-> Project is: <u>ongoing</u>
+> Project is: <ins>ongoing</ins>
 
 I will continue to update my website to meet my clients expectations. I have further development plans which I have listed below.
 
 **Future Development plans**
 - Add more payment options for my users, including apple pay to improve user experience with quicker checkout.
 - 'Add a review' option for members to give their opinion on products and programmes they have purchased. As this is a startup there is currently no physical customer orders this was a lower priority task.
-- Add a count onto the bag icon so userso it is easily visible to the user how many items are in their bag.
-- Search functionality to work across site
-- Add video blogs to blog (already included in filter)
-- Ability for user to enter postcode and autofill whole address
+- Add a count onto the bag icon so users so it is easily visible to the user how many items are in their bag.
+- More queries added to search functionality for a more effective search
+- Add video blogs to blog (already included in filter but currently no video posts from client)
+- Ability for user to autofill address by entering postcode
 
 ---
 

@@ -214,135 +214,162 @@ To ensure my site was working correctly I carried out some manual function testi
 
 #### General
 
-- [x] I hovered over my `button elements` to ensure the font styling changed as expected.
-
-- I hovered over the `icon elements` to ensure the opacity filter was working as expected.
-
-- I hovered over my button and link elements to check the `cursor pointer` was showing as expected.
-
-- I created a custom `404 page` for my user so if they are directed to a non-existent domain, they are presented with an appealing page and an easy navigation button back to the homepage.
+- [x] Font styling changes as expected when hovering over my `button elements`
+- [x] Opacity filter works as expected when hovering over `icon elements`
+- [x] `cursor pointer` is present when hovering button and link elements 
+- [x] User is directed to a custom `404 page` if directed to a non-existent domain
 
     <img src="media/404-page.png">
 
 #### Navigation bar
     
-  - I tested the links on the site `dropdown menu` by clicking on each one and checking I was directed to the right page template.
-  - I clicked on the `brand logo` from every page to confirm it correctly navigated back to the homepage.
-  - I individually tested every icon on the navbar to check they were working as expected;
-    - `Search icon:`
-        - I checked that the search bar was showing the correct format based on the device size by testing on both mobile and larger devices. 
-        - I entered keywords into the search bar and clicked enter/search icon to ensure I was correctly directed to the search page template with logical results.
-    - `Profile icon:`
-        - When not logged in I made sure that the profile icon displayed the options 'register' and 'login'.
-        - When logged in I made sure that the profile icon displayed the options 'My profile' and 'logout'.
-        - When logged in as admin I made sure that I had the added options of 'product management' and 'programme management' available to me.
-        - All links displayed on the profile dropdown menu were clicked to ensure they lead to the correct page.
-    - `Bag icon:`
-        - I checked the bag icon link was working correctly by clicking on the icon and making sure I was directed to the bag template.
-        - Before adding anything to the bag I checked that the page displayed the correct html for an empty bag.
-        - I added products/programmes to the bag and then directed to the bag page to check the template displayed the items I had added.
+- [x] All links on main `dropdown menu` direct the user to the expected page
+- [x] Clicking the `brand logo` from any page on the site navigates the user back to the homepage
+- [x] `Search bar` showing the correct format based on device size
+- [x] After entering keywords and hitting enter or the `search icon`, user is directed to the search page template with logical results
+- [x] When not logged, under the `profile icon` user has the options of 'register' and 'login'
+- [x] When logged in, under the `profile icon` user has the options of 'My profile' and 'logout'
+- [x] When logged in as admin, under the `profile icon` user has the added options of 'product management' and 'programme management'
+- [x] All links displayed on the profile dropdown menu direct the user to the expected page
+- [x] When the bag icon is clicked user is directed to the bag template
+- [x] Before adding to bag, user is directed to the correct empty bag template
+- [x] After adding to bag, user is directed to the bag template displaying the items they have added
 
 #### Sort and Filter
 
-- To check the `sort functionality` was working I selected each option from the dropdown to make sure the items were displayed in the expected order. The was tested on the products, programmes and blog page.
-- To check the `filter functionality` was working I selected each option to make sure only items that matched the chosen critera were displayed. The was tested on the products, programmes and blog page.
+- [x] The `sort functionality` returns items in the order expected. 
+    - This was tested on the products, programmes and blog page
+- [x] The `filter functionality` returns only items matching the chosen critera
+    - This was tested on the products, programmes and blog page
 
 #### Authorisation
 
-  - To check the `login functionality` was working I first clicked on the profile icon and clicked 'login' to ensure I was directed to the correct page. When presented with the login template I conducted various checks;
-    - I filled out the login form with an already registered username and password then clicked 'Login'.
-    - I filled out the login form with a new username and password then clicked 'Login'.
-    - I tested the social account logins by clicking on each specific link to confirm I was directed to the correct external platform for authorisation.
-
-- To check the `Register functionality` was working I first clicked on the profile icon and clicked 'Register' to ensure I was directed to the correct page. When presented with the register template I conducted various checks;
-  - I filled out the registration form with a new username and password then clicked 'Register'.
-  - I filled out the login form with an already registered username and password then clicked 'Register'.
+- [x] On the login page, if the user clicks 'sign up' they are redirected to the register page
+- [x] If the user completes the login form with an already registered username and password they are logged in successfully
+- [x] If the user completes the login form with non-existant user details they recieve an error message
+- [x] If the user selects a social login option they are directed to the correct external platform for authorisation
+- [x] If the user clicks 'forgot password' they are directed to the forgotton password page as expected
+- [x] If the user enters their email and clicks 'reset my password' they are directed to the password reset page as expected
+- [x] If the user enters their email and clicks 'reset my password' they recieve an email with a link to reset their password
+- [x] If the user clicks 'remember me' they are directed to the forgotton password page as expected
+- [x] On the register page, if the user clicks 'sign in' they are redirected to the login page
+- [x] If the user completes the register form with non-existant user details their registration is successful
+- [x] If the user completes the register form with an already registered username and password they receive an error message
 
 #### Home
-- I tested the `callout carousel` by making sure it automatically cycled through a series of callout messages. I also tested the links featured to ensure I was directed to the expected page.
-- I clicked on the `product and programme card links` to ensure I was directed the correct pages.
-- I clicked on the `latest blog` 'read more' buttons to ensure I was directed to the correct post detail template.
-- I tested the `testimonial carousel` by making sure it automatically cycled through a series of testimonials.
-- I checked the `contact form` was working correctly by filling out the form and clicking submit. As expected I received a browser 'SUCCESS' response, the form cleared and I recieved an email, so I knew the functionality was working.
-- On the Meet the Coaches page, I checked the opacity filter was working correctly by clicking on the `profile image tabs` and ensuring the opaque effect was only adopted on the inactive tab.
+- [x] The `callout carousel` automatically cycles through a series of callout messages with expected interval time
+- [x]The links featured on the callout carousel direct the user to the expected page
+- [x] The `product and programme card` links direct the user to the expected page.
+- [x] The 'read me' link on the `latest blogs` direct the user to the correct post detail page
+- [x] The `testimonial carousel` automatically cycles through a series of testimonials with expected interval time
+- [x] The `testimonial carousel` pauses on hover and pointer is present
+- [x] If user information entered in `contact form` is valid, the form submission is successful and an email is sent to the expected gmail account
+- [x] When field input is missing the required field errors are present
+- [x] When input format is incorrect the field validation errors are present
+- [x] On the Meet the Coaches page, I checked the opacity filter was working 
+
+#### Meet the coaches
+
+- [x] The opaque css on is working as expected on `profile image tabs`
 
 #### Products
 
-- I clicked on each product card to make sure I was directed to the product detail page displaying the correct information.
-- I tested the `quantity selector` was working correctly by clicking the increment and decrement, and checking the values updated as expected.
-- I tested the `size selector` was working correctly by selecting a value from the dropdown and checking the field updated correctly.
-- I checked that products were adding to the bag correctly by clicking 'add to bag', and navigating to the bag to check it match what i'd added.
+- [x] Each product card directs the user to the product detail page displaying the correct information
+- [x] Clicking the increment and decrement on the `quantity selector` changes the value as expected
+- [x] Selecting a value from the `size selector` dropdown updates the field correctly
+- [x] Product is added to the bag successfully after clicking 'add to bag'
 
 <ins>Admin</ins>
 
-- I logged in as admin user to check that the product management option was displayed in the profile menu, and it was. I then filled out the form and submitted and checked that the product was added to the products page. I also filled out the form with invalid content to check I recieved an error message
-
-- When logged in as admin user I checked that the edit button was visible for all products on the programmes page, as well as on each individual view page. I then tested the functionality but clicking on the button and checking that I was directed to the edit page with all fields pre-filled with current information. I then made an amendment and clicked 'save changes' and checke that the information had been updated.
-
-- I checked the delete function buttons were all visible when logged in as admin and that when clicked the product was removed from the site.
+When logged in as Admin user...
+- [x] The product management option is available in the profile menu
+- [x] After successfully adding a new product I am redirected to the product detail page with the correct information
+- [x] When field input is missing the required field errors are present
+- [x] When input format is incorrect the field validation errors are present
+- [x] The edit button is visible on the products page and each product detail page
+- [x] Clicking the edit button directs the user to the edit product page with fields prefilled with current information
+- [x] After submitting the edit form user is redirected to the product detail page with updated the information
+- [x] The delete button is visible on the products page and each product detail page
+- [x] After clicking the 'delete' button the product is removed from the site and no longer visible in django admin
 
 #### Programmes
 
-- I clicked on each programme card to make sure I was directed to the programme detail page displaying the correct information.
-- I tested the `quantity selector` was working correctly by clicking the increment and decrement, and checking the values updated as expected.
-- I checked that programmes were adding to the bag correctly by clicking 'add to bag', and navigating to the bag to check it match what i'd added.
+- [x] Each programme card directs the user to the programme detail page displaying the correct information
+- [x] Clicking the increment and decrement on the `quantity selector` changes the value as expected
+- [x] Programme is added to the bag successfully after clicking 'add to bag'
 
 <ins>Admin</ins>
 
-- I logged in as admin user to check that the programme management option was displayed in the profile menu, and it was. I then filled out the form and submitted and checked that the programme was added to the programmes page. I also filled out the form with invalid content to check I recieved an error message
-
-- When logged in as admin user I checked that the edit button was visible for all programmes on the programmes page, as well as on each individual view page. I then tested the functionality but clicking on the button and checking that i was directed to the edit page with all fields pre-filled with current information. I then made an amendment and clicked 'save changes' and checke that the information had been updated.
-
-- I checked the delete function buttons were all visible when logged in as admin and that when clicked the programme was removed from the site.
+When logged in as Admin user...
+- [x] The programme management option is available in the profile menu
+- [x] After successfully adding a new programme I am redirected to the programme detail page with the correct information
+- [x] When field input is missing the required field errors are present
+- [x] When input format is incorrect the field validation errors are present
+- [x] The edit button is visible on the programmes page and each programme detail page
+- [x] Clicking the edit button directs the user to the edit programme page with fields prefilled with current information
+- [x] After submitting the edit form user is redirected to the programme detail page with the updated information
+- [x] The delete button is visible on the programmes page and each programme detail page
+- [x] After clicking the 'delete' button the programme is removed from the site and no longer visible in django admin
 
 #### Bag
 
-- I tested the 'add to bag' functionality by adding a range of products and programmes to the bag and checking all details were listed in the bag template as expected. 
+- [x] After adding to bag all details are listed in the bag template as expected. 
     - To ensure the type of item added to the bag was correct I had to add category to my bag session to differentiate the products from programmes.
-
-- I clicked on the 'shop products' button to confirm I was navigated to the products page as expected.
-
-- I clicked on the 'shop programmes' button to confirm I was navigated to the programmes page as expected.
-
-- I clicked on the 'checkout' button to confirm I was navigated to the checkout page as expected.
-
-- I tested I was able to `update the quanity` by clicking the increment and decrement, and clicking update. I also entered numeric values into the field to check this also worked. 
-
-- I tested I was able to `delete the product` by clicking 'remove' and confirming the product was no longer displayed in the bag. I also checked I was able to delete the product by entering 0 into the quantity field, and clicking update.
-
+- [x] Clicking 'shop products' navigates the user back to the products page
+- [x] Clicking 'shop programmes' navigates the user back to the programmes page
+- [x] Clicking 'secure checkout' navigates the user to the checkout page as expected
+- [x] By using the increment and decrement buttons, and clicking 'update' I am able to amend the quantity of an item in the bag
+- [x] I am able to enter a numeric value into the field to update the quantity
+- [x] I am not able to enter a non numeric value into the fields
+- [x] I can remove the item from the bag by clicking 'remove'
+- [x] I can remove the item from the bag by entering 0 into the quantity field and clicking 'update'
 
 #### Checkout
 
-<u>Completing stripe payment</u>
-
-<u>Pre-filled checkout details</u>
+- [x] The order summary contains the correct details of the items listed in the bag
+- [x] If a site visitor the user input fields are all empty 
+- [x] If a site member and details are saved in 'my profile' the checkout fields are already prefilled
+- [x] When field input is missing the required field errors are present
+- [x] When input format is incorrect the field validation errors are present
+- [x] If user enters details and checks 'Save this delivery information to my profile', the information is saved to their profile after submission
+- [x] After entering details and clicking 'checkout' the loading page is present
+- [x] The user is redirected to the checkout success page after completing order
+- [x] The checkout success page contains all the correct personal details for the user and items purchased
+- [x] After successful checkout the user recieves an email with their order details
 
 #### Blog
 
-- I clicked on the 'read me' button link for each blog to make sure I was directed to the post detail page, displaying the correct information.
+- [x] The 'read me' link for each blog directs the user to the post detail page, displaying the correct information
+- [x] The `references collapse button` allows the user to toggle between making text visible or hidden
+- [x] If user enters a comment and clicks submit their comment is added successfully
+- [x] The posted comment is displayed with the correct datetime and logged in username
+- [x] The trash icon is only visible on comments the logged in user has posted 
+- [x] After clicking the trash icon the comment is removed from the page as expected
 
-- I clicked the `references collapse button` to test that the text became visible as expected. I then clicked it again to make sure the text became hidden.
+#### Forum
 
-- I entered a comment into the text field and clicked 'post' to check that my post was added successfully. I checked that the datetime field displayed correctly and logged in as various users to check the username appeared as expected.
-
-- To check I was only able to delete my own comments, I logged in as various users and made sure the trash icon was only visible on own comments. I then tested the delete functionality by clicking on the icon and making sure the comment was deleted as expected.
-
-**Forum**
-
-- I clicked on the 'topic' for each thread within the forum to make sure I was directed to the thread detail page, displaying the correct information.
-
-- I entered a reply into the text field and clicked 'reply' to check that my post was added successfully. I checked that the datetime field displayed correctly and logged in as various users to check the username appeared as expected.
-
-- To check I was only able to delete my own replies, I logged in as various users and made sure the trash icon was only visible on own replies. I then tested the delete functionality by clicking on the icon and making sure the comment was deleted as expected.
-
-- I checked the `'add a thread'` functionality was working by clicking 'add thread' on the forums page and making sure I was directed to the 'add thread template'. After filling in the details and clicking 'post' I could see that my thread had been added to the forum page so I knew it was working correctly. I also checked that my username and date was displayed correctly below the thread.
-
-- To check I was only able to edit my own thread posts, I logged in as various users, navigated to the thread detail page, and made sure the edit icon was only visible as expected. I then tested the edit functionality by clicking on the icon and making sure I was redirected to the edit thread page with fields already prefilled with current information. I then amended the content and clicked 'edit' and checked the information had been updated on the thread.
+- [x] Clicking on a 'topic' link directs the user to the thread detail page, displaying the correct information
+- [x] If user enters a reply and clicks submit their reply is added successfully
+- [x] The posted reply is displayed with the correct datetime and logged in username
+- [x] The trash icon is only visible on replies the logged in user has posted 
+- [x] After clicking the trash icon the reply is removed from the page as expected
+- [x] The 'add thread' button directs the user to the add thread page as expected
+- [x] After successfully adding a new thread I am redirected to the thread detail page with the correct information
+- [x] When field input is missing the required field errors are present
+- [x] The edit button is only visible on threads the logged in user has posted
+- [x] Clicking the edit button directs the user to the edit thread page with fields prefilled with current information
+- [x] After submitting the edit form user is redirected to the thread detail page with updated the information
 
 #### Profile
 
-
-
+- [x] The welcome message is personalised with the correct username for the logged in user
+- [x] The users order history visible
+- [x] After clicking 'View order details' the user is directed to the checkout success page showing all details of their order
+- [x] On the checkout success page, clicking 'back to profile' navigates the user back to their profile
+- [x] If user enters details and clicks 'update information' their details are saved to their profile
+- [x] If user edits their details and clicks 'update information' their details are updated on their profile
+- [x] No fields on user profile are required allowing user to only fill in desired fields
+- [x] If user updates their information in their profile this is reflected on the checkout page
 
 ### **Automated testing**
 

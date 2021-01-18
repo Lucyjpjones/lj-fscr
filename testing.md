@@ -222,11 +222,25 @@ To ensure my site was working correctly I carried out some manual function testi
     <img src="media/404-page.png">
 
 #### Navigation bar
-    
-- [x] All links on main `dropdown menu` direct the user to the expected page
+
+- [x] The user can toggle the menu by clicking on the menu/close icon
+- [x] The user can close the menu when open by clicking outside the menu area
+- [x] The 'about' link on main dropdown menu directs the user to the about page
+- [x] The 'meet the coaches' link on main dropdown menu directs the user to the meet the coaches page
+- [x] The 'products' link on main dropdown menu directs the user to the products page displaying all products
+- [x] The 'programmes' link on main dropdown menu directs the user to the programmes page displaying all programmes
+- [x] If the user is not logged in, the 'blog' link on main dropdown menu directs the user to the register page
+- [x] If the user is logged in, the 'blog' link on main dropdown menu directs the user to the blog page
+- [x] If the user is not logged in, the 'forum' link on main dropdown menu directs the user to the register page
+- [x] If the user is logged in, the 'forum' link on main dropdown menu directs the user to the forum page
+- [x] If the user is not logged in, the 'blog' link on main dropdown menu directs the user to the register page
+- [x] If the user clicks the 'contact' link they are directed to the contact form on the homepage
+- [x] If the user is not logged in, the 'blog' link on main dropdown menu directs the user to the register page
+- [x] The 'Join now' link is only visible on the main menu when a user is not logged in
 - [x] Clicking the `brand logo` from any page on the site navigates the user back to the homepage
 - [x] `Search bar` showing the correct format based on device size
-- [x] After entering keywords and hitting enter or the `search icon`, user is directed to the search page template with logical results
+- [x] After entering keywords and hitting enter or the `search icon`, user is directed to the search page template with appropriate results
+- [x] If user enters a keyword with no results the correct message is displayed
 - [x] When not logged, under the `profile icon` user has the options of 'register' and 'login'
 - [x] When logged in, under the `profile icon` user has the options of 'My profile' and 'logout'
 - [x] When logged in as admin, under the `profile icon` user has the added options of 'product management' and 'programme management'
@@ -240,6 +254,8 @@ To ensure my site was working correctly I carried out some manual function testi
 - [x] The `sort functionality` returns items in the order expected. 
     - This was tested on the products, programmes and blog page
 - [x] The `filter functionality` returns only items matching the chosen critera
+    - This was tested on the products, programmes and blog page
+- [x] If user selects 'clear all' the filter is removed and all items are displayed
     - This was tested on the products, programmes and blog page
 
 #### Authorisation
@@ -260,16 +276,20 @@ To ensure my site was working correctly I carried out some manual function testi
 - [x] After user clicks the link in their email they are redirected to the 'change password' page
 - [x] After submitting a new password the user is presented with a success message 'Your password is now changed' and they are able to login with their new password
 - [x] If the user clicks 'remember me' they are directed to the forgotton password page as expected
+- [x] If a user is logged in, the logout option is visible in the profile icon menu
+- [x] If a user clicks 'logout' they are directed to the logout page where they can confirm action
 
 #### Home
 - [x] The `callout carousel` automatically cycles through a series of callout messages with expected interval time
+- [x] The messages on the callout carousel are displayed appropriately dependent on whether a user is logged in or not
 - [x]The links featured on the callout carousel direct the user to the expected page
 - [x] The `product and programme card` links direct the user to the expected page.
 - [x] The 'read me' link on the `latest blogs` direct the user to the correct post detail page
 - [x] The `testimonial carousel` automatically cycles through a series of testimonials with expected interval time
 - [x] The `testimonial carousel` pauses on hover and pointer is present
 - [x] If user information entered in `contact form` is valid, the form submission is successful and an email is sent to the expected gmail account
-- [x] When field input is missing the required field errors are present
+- [x] After submission the input fields are cleared
+- [x] When input is missing in a required field there is an error response
 - [x] When input format is incorrect the field validation errors are present
 - [x] On the Meet the Coaches page, I checked the opacity filter was working 
 
@@ -283,14 +303,16 @@ To ensure my site was working correctly I carried out some manual function testi
 - [x] Clicking the increment and decrement on the `quantity selector` changes the value as expected
 - [x] Selecting a value from the `size selector` dropdown updates the field correctly
 - [x] Product is added to the bag successfully after clicking 'add to bag'
+- [x] If product is already in bag, quantity is incremented and product is not duplicated
 
 <ins>Admin</ins>
 
 When logged in as Admin user...
 - [x] The product management option is available in the profile menu
 - [x] After successfully adding a new product I am redirected to the product detail page with the correct information
-- [x] When field input is missing the required field errors are present
+- [x] When input is missing in a required field there is an error response
 - [x] When input format is incorrect the field validation errors are present
+- [x] If not image is added to the form submission, the expected 'noimage' is present 
 - [x] The edit button is visible on the products page and each product detail page
 - [x] Clicking the edit button directs the user to the edit product page with fields prefilled with current information
 - [x] After submitting the edit form user is redirected to the product detail page with updated the information
@@ -302,14 +324,18 @@ When logged in as Admin user...
 - [x] Each programme card directs the user to the programme detail page displaying the correct information
 - [x] Clicking the increment and decrement on the `quantity selector` changes the value as expected
 - [x] Programme is added to the bag successfully after clicking 'add to bag'
+- [x] If programme is already in bag, quantity is incremented and programme is not duplicated
+- [x] The `review carousel` automatically cycles through a series of callout messages with expected interval time
+- [x] The `review carousel` controls allow the user to scroll back and forth
 
 <ins>Admin</ins>
 
 When logged in as Admin user...
 - [x] The programme management option is available in the profile menu
 - [x] After successfully adding a new programme I am redirected to the programme detail page with the correct information
-- [x] When field input is missing the required field errors are present
+- [x] When input is missing in a required field there is an error response
 - [x] When input format is incorrect the field validation errors are present
+- [x] If not image is added to the form submission, the expected 'noimage' is present 
 - [x] The edit button is visible on the programmes page and each programme detail page
 - [x] Clicking the edit button directs the user to the edit programme page with fields prefilled with current information
 - [x] After submitting the edit form user is redirected to the programme detail page with the updated information
@@ -328,26 +354,31 @@ When logged in as Admin user...
 - [x] I am not able to enter a non numeric value into the fields
 - [x] I can remove the item from the bag by clicking 'remove'
 - [x] I can remove the item from the bag by entering 0 into the quantity field and clicking 'update'
+- [x] If amendments are made in the bag sub total is updated accordingly
 
 #### Checkout
 
 - [x] The order summary contains the correct details of the items listed in the bag
 - [x] If a site visitor the user input fields are all empty 
-- [x] If a site member and details are saved in 'my profile' the checkout fields are already prefilled
-- [x] When field input is missing the required field errors are present
+- [x] If a site member and details have been previosuly saved in 'my profile' the checkout fields are already prefilled
+- [x] When input is missing in a required field there is an error response
 - [x] When input format is incorrect the field validation errors are present
 - [x] If user enters details and checks 'Save this delivery information to my profile', the information is saved to their profile after submission
+- [x] If user enters details and doesn't check 'Save this delivery information to my profile', the information is not saved to their profile after submission
 - [x] After entering details and clicking 'checkout' the loading page is present
 - [x] The user is redirected to the checkout success page after completing order
 - [x] The checkout success page contains all the correct personal details for the user and items purchased
 - [x] After successful checkout the user recieves an email with their order details
+- [x] The delivery amount is showing as 10% of subtotal cost
+- [x] If the order is over $40 the delivery amount is 0
 
 #### Blog
 
 - [x] The 'read me' link for each blog directs the user to the post detail page, displaying the correct information
-- [x] The `references collapse button` allows the user to toggle between making text visible or hidden
+- [x] The user is able to toggle `references` making text visible or hidden
 - [x] If user enters a comment and clicks submit their comment is added successfully
 - [x] The posted comment is displayed with the correct datetime and logged in username
+- [x] After submitting a comment the input field is cleared
 - [x] The trash icon is only visible on comments the logged in user has posted 
 - [x] After clicking the trash icon the comment is removed from the page as expected
 
@@ -356,11 +387,12 @@ When logged in as Admin user...
 - [x] Clicking on a 'topic' link directs the user to the thread detail page, displaying the correct information
 - [x] If user enters a reply and clicks submit their reply is added successfully
 - [x] The posted reply is displayed with the correct datetime and logged in username
+- [x] After submitting a reply the input field is cleared
 - [x] The trash icon is only visible on replies the logged in user has posted 
 - [x] After clicking the trash icon the reply is removed from the page as expected
 - [x] The 'add thread' button directs the user to the add thread page as expected
 - [x] After successfully adding a new thread I am redirected to the thread detail page with the correct information
-- [x] When field input is missing the required field errors are present
+- [x] When input is missing in a required field there is an error response
 - [x] The edit button is only visible on threads the logged in user has posted
 - [x] Clicking the edit button directs the user to the edit thread page with fields prefilled with current information
 - [x] After submitting the edit form user is redirected to the thread detail page with updated the information

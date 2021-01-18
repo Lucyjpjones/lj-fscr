@@ -214,7 +214,7 @@ To ensure my site was working correctly I carried out some manual function testi
 
 #### General
 
-- I hovered over my `button elements` to ensure the font styling changed as expected.
+- [x] I hovered over my `button elements` to ensure the font styling changed as expected.
 
 - I hovered over the `icon elements` to ensure the opacity filter was working as expected.
 
@@ -275,9 +275,9 @@ To ensure my site was working correctly I carried out some manual function testi
 
 <ins>Admin</ins>
 
-- I logged in as admin user to check that the product management option was displayed in the profile menu, and it was. I then filled out the form and submitted and checked that the product was added to the products page.
+- I logged in as admin user to check that the product management option was displayed in the profile menu, and it was. I then filled out the form and submitted and checked that the product was added to the products page. I also filled out the form with invalid content to check I recieved an error message
 
-- When logged in as admin user I checked that the edit button was visible for all products on the programmes page, as well as on each individual view page. I then tested the functionality but clicking on the button and checking that i was directed to the edit page with all fields pre-filled with current information. I then made an amendment and clicked 'save changes' and checke that the information had been updated.
+- When logged in as admin user I checked that the edit button was visible for all products on the programmes page, as well as on each individual view page. I then tested the functionality but clicking on the button and checking that I was directed to the edit page with all fields pre-filled with current information. I then made an amendment and clicked 'save changes' and checke that the information had been updated.
 
 - I checked the delete function buttons were all visible when logged in as admin and that when clicked the product was removed from the site.
 
@@ -289,7 +289,7 @@ To ensure my site was working correctly I carried out some manual function testi
 
 <ins>Admin</ins>
 
-- I logged in as admin user to check that the programme management option was displayed in the profile menu, and it was. I then filled out the form and submitted and checked that the programme was added to the programmes page.
+- I logged in as admin user to check that the programme management option was displayed in the profile menu, and it was. I then filled out the form and submitted and checked that the programme was added to the programmes page. I also filled out the form with invalid content to check I recieved an error message
 
 - When logged in as admin user I checked that the edit button was visible for all programmes on the programmes page, as well as on each individual view page. I then tested the functionality but clicking on the button and checking that i was directed to the edit page with all fields pre-filled with current information. I then made an amendment and clicked 'save changes' and checke that the information had been updated.
 
@@ -411,6 +411,32 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 ### **Audits**
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to run a series of audits to improve the quality of web pages. Overall performance and errors are highlighted below.
+
+
+
+<ins>Performance</ins>
+
+The low-performance review was mainly driven by the following metrics:
+
+`Serve images in next-gen formats`;
+
+I tried converting my images to JPEG 2000 as suggested, however, the images were not loading due to their limitations of only working on certain browsers. Therefore I kept my images in a PNG and JPG format.
+
+`Properly size images`;
+
+As images are uploaded through the image URL form input I am not able to take any action on adjusting image sizes.
+
+<ins>SEO</ins>
+
+`Links do not have descriptive text`
+
+I didn't take any actions here as the error was for displaying 'read more' which I believe is a convential text link for users. This is also very similar to the suggested generic link text 'learn more'.
+
+<ins></ins>
+
+`Heading elements are not in a sequentially-descending order`
+
+
 
 ### **Responsive Design**
 

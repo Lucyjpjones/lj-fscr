@@ -133,7 +133,6 @@ p,
    background-color: #FF0035;
    border: solid 2px #FF0035;
    color: #f8f8f8;
-   font-size: 14px;
 }
 
 .red-border-btn {
@@ -150,7 +149,6 @@ p,
 
 .filter-btn {
    border: solid 2px #38405f;
-   font-size: 14px;
    width: 100%;
 }
 

@@ -17,7 +17,7 @@
    <!--Sort and Filter-->
    <div class="row px-3 px-sm-0 mx-auto sort-container">
       <div class="col-6 dropdown show text-center">
-         <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <a class="btn filter-btn p-font dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Sort
          </a>
          <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuSort">
@@ -72,7 +72,6 @@
                   {% endif %}
                   <div class="card-body pb-0 pt-2 pl-1 p-font">
                      <p class="mb-0">{{ programme.name }}</p>
-                     <p class="mb-0">{{ programme.colour }}</p>
                      <p class="mb-0">£{{ programme.price }}</p>
                      <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ programme.rating }}</small></p>
                      {% if request.user.is_superuser %}

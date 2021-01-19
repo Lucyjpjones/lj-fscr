@@ -57,7 +57,7 @@
                   {% if product.image %}
                   <a href="{% url 'product_detail' product.id %}">
                   <img
-                     class="prod-img-card rounded-0"
+                     class="prod-img-card rounded-0 lazy"
                      src="{{ product.image.url }}"
                      alt="{{ product.name }}"
                      />
@@ -65,7 +65,7 @@
                   {% else %}
                   <a href="{% url 'product_detail' product.id %}">
                   <img
-                     class="prod-img-card rounded-0"
+                     class="prod-img-card rounded-0 lazy"
                      src="{{ MEDIA_URL }}FSCR-noimage.png"
                      alt="{{ product.name }}"
                      />

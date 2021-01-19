@@ -14,7 +14,7 @@
             {% if product.image %}
             <a href="{{ product.image.url }}" target="_blank">
             <img
-               class="prod-detail-img"
+               class="prod-detail-img lazy"
                src="{{ product.image.url }}"
                alt="{{ product.name }}"
                />
@@ -22,7 +22,7 @@
             {% else %}
             <a href="">
             <img
-               class="prod-detail-img"
+               class="prod-detail-img lazy"
                src="{{ MEDIA_URL }}FSCR-noimage.png"
                alt="{{ product.name }}"
                />

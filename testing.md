@@ -513,11 +513,17 @@ I tried converting my images to JPEG 2000 as suggested, however, the images were
 
 As images are uploaded through the image URL form input I am not able to take any action on adjusting image sizes.
 
+<ins>Accessibility</ins>
+
+`Background and foreground colors do not have a sufficient contrast ratio`
+
+I didn't take any actions as none of my users experienced difficulty reading the text in question. 
+
 <ins>SEO</ins>
 
 `Links do not have descriptive text`
 
-I didn't take any actions here as the error was for displaying 'read more' which I believe is a conventional text link for users. This is also very similar to the suggested generic link text 'learn more'.
+I didn't take any actions as the error was for displaying 'read more' which I believe is a conventional text link for users. This is also very similar to the suggested generic link text 'learn more'.
 
 ### **Responsive Design**
 

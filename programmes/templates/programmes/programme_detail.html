@@ -14,7 +14,7 @@
             {% if programme.image %}
             <a href="{{ programme.image.url }}" target="_blank">
             <img
-               class="prog-detail-img"
+               class="prog-detail-img lazy"
                src="{{ programme.image.url }}"
                alt="{{ programme.name }}"
                />
@@ -22,7 +22,7 @@
             {% else %}
             <a href="">
             <img
-               class="prog-detail-img"
+               class="prog-detail-img lazy"
                src="{{ MEDIA_URL }}FSCR-noimage.png"
                alt="{{ programme.name }}"
                />

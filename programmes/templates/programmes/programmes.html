@@ -56,7 +56,7 @@
                   {% if programme.image %}
                   <a href="{% url 'programme_detail' programme.id %}">
                   <img
-                     class="prog-img-card rounded-0"
+                     class="prog-img-card rounded-0 lazy"
                      src="{{ programme.image.url }}"
                      alt="{{ programme.name }}"
                      />
@@ -64,7 +64,7 @@
                   {% else %}
                   <a href="{% url 'programme_detail' programme.id %}">
                   <img
-                     class="prog-img-card img-fluid"
+                     class="prog-img-card img-fluid lazy"
                      src="{{ MEDIA_URL }}FSCR-noimage.png"
                      alt="{{ programme.name }}"
                      />

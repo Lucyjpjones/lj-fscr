@@ -486,7 +486,42 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
     **script.js**
 
-    Warnings received;
+   - Warnings received;
+
+        `let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).`
+        `'template literal syntax' is only available in ES6 (use 'esversion: 6').`
+
+        Warnings occurred as JShint is using ECMAScript 5.1 specification and my code uses ECMAScript 6 specific syntax. However, all code is valid.
+
+    - Undefined variable;
+
+        `$`
+
+        `emailjs`
+
+        $ (Jquery) and emailjs defined in base.html.
+
+    - Unused variable;
+
+        `sendMail`
+
+        sendMail used in index.html for emailJS
+
+    **stripe_elements.js**
+
+    - Warnings received;
+
+        `'template literal syntax' is only available in ES6 (use 'esversion: 6')`
+
+        Warnings occurred as JShint is using ECMAScript 5.1 specification and my code uses ECMAScript 6 specific syntax. However, all code is valid.
+
+    - Undefined variable;
+
+        `$`
+
+        `stripe`
+
+        $ (Jquery) and stripe defined in base.html.
 
 
 - **Developer tools**

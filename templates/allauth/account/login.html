@@ -39,25 +39,25 @@
 {% get_providers as socialaccount_providers %}
 <div id="social-links" class="row grey-banner py-3 mb-3 mb-md-4">
    <div class="col-12 pt-md-4">
-      <button class="btn fb-bg mb-3 w-75 w-md-50 w-lg-30">
+      <div class="btn fb-bg mb-3 w-75 w-md-50 w-lg-30">
       <a href="{% provider_login_url 'facebook' method='oauth2' %}">
       <span class="fa fa-facebook mr-2"></span>Login with Facebook
       </a>
-      </button>
+    </div>
    </div>
    <div class="col-12">
-      <button class="btn go-bg mb-3 w-75 w-md-50 w-lg-30">
+      <div class="btn go-bg mb-3 w-75 w-md-50 w-lg-30">
       <a href="{% provider_login_url 'google' %}">
       <span class="fa fa-google mr-2"></span>Login with Google
       </a>
-      </button>
+    </div>
    </div>
    <div class="col-12 pb-md-4">
-      <button class="btn tw-bg w-75 w-md-50 w-lg-30">
+      <div class="btn tw-bg w-75 w-md-50 w-lg-30">
       <a href="{% provider_login_url 'twitter' %}">
       <span class="fa fa-twitter mr-2"></span>Login with Twitter
       </a>
-      </button>
+    </div>
    </div>
 </div>
 {% endblock %}

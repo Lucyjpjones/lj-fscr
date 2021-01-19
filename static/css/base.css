@@ -727,7 +727,7 @@ input[name='q']::placeholder {
    }
    /* -------------------- Programmes app  */
    .prog-img-card {
-      height: 250px;
+      height: 200px;
    }
    .prog-detail-img {
       height: 200px;
@@ -813,6 +813,9 @@ input[name='q']::placeholder {
       max-width: 550px;
    }
    /* -------------------- Programmes app */
+   .prog-img-card {
+      height: 240px;
+   }
    .programme-card {
       height: 200px;
    }
@@ -919,8 +922,8 @@ input[name='q']::placeholder {
       max-width: 60%;
    }
    /* -------------------- Programmes app */
-   .container-fluid {
-      width: 90%;
+   .prog-img-card {
+      height: 280px;
    }
    /* -------------------- Profile app */
    .profile-container {

@@ -8,7 +8,7 @@
 </div>
 {% endblock %} {% block content %}
 <!--Page title-->
-<div class="w-100 mx-auto w-md-75">
+<div class="mx-auto w-md-75">
    <div class="row">
       <div class="col text-center">
          <h2 class="title-font py-4">Message Board</h2>
@@ -50,7 +50,7 @@
                         <p class="my-0">{{ thread.replies.count }}</p>
                      </td>
                      <td class="col-4 text-center">
-                        <p class="my-0 p-font">{{ thread.author }}</p>
+                        <p class="my-0 p-font">{{ thread.author|truncatechars:10 }}</p>
                         <p class="my-0 text-muted small">{{ thread.created_on }}</p>
                      </td>
                   </tr>
@@ -60,5 +60,6 @@
          </div>
       </div>
    </div>
+
 </div>
 {% endblock %}

@@ -237,6 +237,7 @@ To ensure my site was working correctly I carried out some manual function testi
 
 - [x] The user can toggle the menu by clicking on the menu/close icon
 - [x] The user can close the menu when open by clicking outside the menu area
+- [x] If the user clicks a social icon on the footer the expected page opens on a new tab
 - [x] The 'about' link on main dropdown menu directs the user to the about page
 - [x] The 'meet the coaches' link on main dropdown menu directs the user to the meet the coaches page
 - [x] The 'products' link on main dropdown menu directs the user to the products page displaying all products

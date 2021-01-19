@@ -519,11 +519,6 @@ As images are uploaded through the image URL form input I am not able to take an
 
 I didn't take any actions here as the error was for displaying 'read more' which I believe is a conventional text link for users. This is also very similar to the suggested generic link text 'learn more'.
 
-<ins></ins>
-
-`Heading elements are not in a sequentially-descending order`
-
-
 ### **Responsive Design**
 
 - Site created as a mobile-first design.

@@ -6,3 +6,5 @@ __pycache__/
 *.py[cod]
 *.sqlite3
 *.pyc
+.coverage
+htmlcov

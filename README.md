@@ -218,6 +218,7 @@ As the site owner, I want to be able to continually monitor and update the site 
 | 28                             | Site Owner   | Edit/Update a product/programme                                               | Change product/programme prices, descriptions, images, and other details                              |
 | 29                             | Site Owner   | Delete a product/programme                                                    | Remove items that are no longer available for sale                                                   |
 | 30                             | Site Owner   | Add a blog                                                          | Add new blogs to share with site members                                                             |
+| 30                             | Site Owner   | Links to FSCR social media platforms                                                          | To connect with our clients and strengthen consumer loyalty                                                             |
 
 ### **<ins>Wireframes</ins>**
 

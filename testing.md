@@ -213,6 +213,13 @@ When logged in as admin user, the user has a delete button displayed next to the
 When logged into the admin, the admin user can add a new blog to the site. 
 - I didn't think it was necessary to add a manual function for adding a blog as these will be posted less frequently and have little chance of needing modifications after being posted.
 
+**31. Links to FSCR social media platforms**
+
+Social media platform links are featured in the page footer below the copyright statement.
+- At present no social accounts exist for FSCR so all links direct the user to the exteranl sites homepage.
+
+    <img src="media/us-31.png">
+
 ### **Manual function testing**
 
 To ensure my site was working correctly I carried out some manual function testing;

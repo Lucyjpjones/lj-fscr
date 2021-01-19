@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse
 from blog.models import Post
 from products.models import Product
 from programmes.models import Programme

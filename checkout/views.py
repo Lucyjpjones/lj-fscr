@@ -116,7 +116,7 @@ def checkout(request):
                 Please double check your information.')
     else:
         bag = request.session.get('bag', {'product': {},
-                                      'programme': {}})
+                                  'programme': {}})
         if not bag:
             messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))

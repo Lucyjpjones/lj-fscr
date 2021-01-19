@@ -32,14 +32,20 @@ def add_to_bag(request, item_id, category):
                     messages.success(request, (f'Updated size {size.upper()}{product.name} quantity to {bag[category][item_id]["items_by_size"][size]}'))
                 else:
                     bag[category][item_id]['items_by_size'][size] = quantity
-                    messages.success(request, f'Added size {size.upper()}{product.name} to your bag')
+                    messages.success(request,
+                                     f'Added size {size.upper()}'
+                                     f'{product.name} to your bag')
             else:
                 bag[category][item_id] = {'items_by_size': {size: quantity}}
-                messages.success(request, f'Added size {size.upper()} {product.name} to your bag')
+                messages.success(request,
+                                 f'Added size {size.upper()}'
+                                 f'{product.name} to your bag')
         else:
             if item_id in list(bag[category].keys()):
                 bag[category][item_id] += quantity
-                messages.success(request, f'Updated {product.name} quantity to {bag[category][item_id]}')
+                messages.success(request,
+                                 f'Updated {product.name} quantity to '
+                                 f'{bag[category][item_id]}')
             else:
                 bag[category][item_id] = quantity
                 messages.success(request, f'Added {product.name} to your bag')
@@ -48,7 +54,9 @@ def add_to_bag(request, item_id, category):
         programme = get_object_or_404(Programme, pk=item_id)
         if item_id in list(bag[category].keys()):
             bag[category][item_id] += quantity
-            messages.success(request, f'Updated {programme.name} quantity to {bag[category][item_id]}')
+            messages.success(request,
+                             f'Updated {programme.name} quantity to '
+                             f'{bag[category][item_id]}')
         else:
             bag[category][item_id] = quantity
             messages.success(request, f'Added {programme.name} to your bag')
@@ -78,23 +86,33 @@ def adjust_bag(request, item_id, category):
                 del bag[category][item_id]['items_by_size'][size]
                 if not bag[category][item_id]['items_by_size']:
                     del bag[category][item_id]
-                messages.success(request, f'Removed size {size.upper()} {product.name} from your bag')
+                messages.success(request,
+                                 f'Removed size {size.upper()}'
+                                 f'{product.name} from your bag')
         else:
             if quantity > 0:
                 bag[category][item_id] = quantity
-                messages.success(request, f'Updated {product.name} quantity to {bag[category][item_id]}')
+                messages.success(request,
+                                 f'Updated {product.name} '
+                                 f'quantity to {bag[category][item_id]}')
             else:
                 del bag[category][item_id]
-                messages.success(request, f'Removed {product.name} from your bag')
+                messages.success(request,
+                                 f'Removed {product.name} '
+                                 f'from your bag')
 
     elif category == 'programme':
         programme = get_object_or_404(Programme, pk=item_id)
         if quantity > 0:
             bag[category][item_id] = quantity
-            messages.success(request, f'Updated {programme.name} quantity to {bag[category][item_id]}')
+            messages.success(request,
+                             f'Updated {programme.name} '
+                             f'quantity to {bag[category][item_id]}')
         else:
             del bag[category][item_id]
-            messages.success(request, f'Removed {programme.name} from your bag')
+            messages.success(request,
+                             f'Removed {programme.name} '
+                             f'from your bag')
 
     request.session['bag'] = bag
     print(request.session['bag'])
@@ -117,15 +135,19 @@ def remove_from_bag(request, item_id, category):
                 del bag[category][item_id]['items_by_size'][size]
                 if not bag[category][item_id]['items_by_size']:
                     del bag[category][item_id]
-                messages.success(request, f'Removed size {size.upper()} {product.name} from your bag')
+                messages.success(request,
+                                 f'Removed size {size.upper()} '
+                                 f'{product.name} from your bag')
             else:
                 del bag[category][item_id]
-                messages.success(request, f'Removed {product.name} from your bag')
+                messages.success(request,
+                                 f'Removed {product.name} from your bag')
 
         elif category == 'programme':
             programme = get_object_or_404(Programme, pk=item_id)
             del bag[category][item_id]
-            messages.success(request, (f'Removed {programme.name} from your bag'))
+            messages.success(request,
+                             f'Removed {programme.name} from your bag')
 
         request.session['bag'] = bag
         print(request.session['bag'])

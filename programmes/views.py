@@ -6,8 +6,6 @@ from django.db.models.functions import Lower
 from .models import Programme, Category
 from .forms import ProgrammeForm
 
-# Create your views here.
-
 
 def all_programmes(request):
     """ A view to show all programmes, including sorting and search queries """

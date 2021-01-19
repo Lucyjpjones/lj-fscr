@@ -33,8 +33,8 @@ class Thread(models.Model):
 
 
 class Reply(models.Model):
-    thread = models.ForeignKey(Thread, on_delete=models.CASCADE, related_name
-                               ='replies', null=True)
+    thread = models.ForeignKey(Thread, on_delete=models.CASCADE,
+                               related_name='replies', null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
     body = models.CharField(max_length=300, null=True)
     created_on = models.DateTimeField(auto_now_add=True, null=True)

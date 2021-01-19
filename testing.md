@@ -542,6 +542,14 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 - [**PEP8 online check**](http://pep8online.com/checkresult)
 
+I'm ignoring any warnings on migration files since these are automatically generated files so may ignore style rules for efficiency reasons. Also as developers we usually don't need to touch them so they don't need to be perfectly readable.
+
+`Avoid using null=True on string-based fields such CharField`
+
+I decided not to remove not to remove from my code as
+
+I was unable to fix the error 'long too long' on some lines of code as if I were to break up the code it would break up the variable.
+
 
 ### **Audits**
 

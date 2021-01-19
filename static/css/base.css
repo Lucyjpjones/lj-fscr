@@ -18,13 +18,7 @@ footer {
    background-color: #ff0035;
    text-align: center;
    width: 100%;
-   height: 40px;
-}
-
-footer h6 {
-   font-size: 12px;
-   padding: 10px;
-   margin: 0px;
+   height: 52px;
 }
 
 .social-links {
@@ -216,7 +210,7 @@ header {
 
 .wrapper {
    display: flex;
-   min-height: calc(100vh - 40px);
+   min-height: calc(100vh - 52px);
 }
 
 .overlay {

@@ -1,36 +1,28 @@
 {% extends "socialaccount/base.html" %}
-
 {% load i18n %}
-
 {% block head_title %}{% trans "Signup" %}{% endblock %}
-
 {% block inner_title %}
-    <h2 class="title-font pt-5 mb-3">{% trans "Sign Up" %}</h2>
+<h2 class="title-font pt-5 mb-3">{% trans "Sign Up" %}</h2>
 {% endblock %}
-
 {% block inner_content %}
-
 <div class="row">
-    <div class="col grey-banner">
-    {% blocktrans with provider_name=account.get_provider.name site_name=site.name %}
-        <p class="subtitle-font my-2">You are about to use your {{provider_name}} account to login to {{site_name}}</p>
-        <p class="p-font mt-1 mb-2">As a final step, please complete the following form:</p>
-    {% endblocktrans %}
-    </div>
+   <div class="col grey-banner">
+      {% blocktrans with provider_name=account.get_provider.name site_name=site.name %}
+      <p class="subtitle-font my-2">You are about to use your {{provider_name}} account to login to {{site_name}}</p>
+      <p class="p-font mt-1 mb-2">As a final step, please complete the following form:</p>
+      {% endblocktrans %}
+   </div>
 </div>
-
 <div class="row my-2">
-    <div class="col grey-banner my-md-3">
-        <form class="signup my-3 mx-4 mx-md-auto py-md-4" id="signup_form" method="post" action="{% url 'socialaccount_signup' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        {% if redirect_field_value %}
-            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-            {% endif %}
-            <button class="btn navy-btn w-75 mt-4" type="submit">{% trans "Sign Up" %} &raquo;</button>
-        </form>
-    </div>
+   <div class="col grey-banner my-md-3">
+      <form class="signup my-3 mx-4 mx-md-auto py-md-4" id="signup_form" method="post" action="{% url 'socialaccount_signup' %}">
+         {% csrf_token %}
+         {{ form.as_p }}
+         {% if redirect_field_value %}
+         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+         {% endif %}
+         <button class="btn navy-btn w-75 mt-4" type="submit">{% trans "Sign Up" %} &raquo;</button>
+      </form>
+   </div>
 </div>
-
-
 {% endblock %}

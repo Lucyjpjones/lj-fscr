@@ -8,7 +8,7 @@
 </div>
 {% endblock %} {% block content %}
 <div class="mx-3 mx-md-auto w-md-75">
-   <!--Back button-->
+   <!--Back to forum button-->
    <div class="row">
       <div class="col-12 p-0">
          <a href="{% url 'forum' %}" class="navy-btn btn rounded-0 mt-3 mr-1 mb-3 p-font">
@@ -23,7 +23,8 @@
    <div class="row grey-banner border">
       <div class="col-12 py-2">
          <div class="mb-2">
-             {% if user.is_authenticated and user == thread.author %}
+             <!--Edit post icon-->
+            {% if user.is_authenticated and user == thread.author %}
             <a href="{% url 'edit_thread' thread.slug %}">
             <span class="float-right">
             <i class="fas fa-edit"></i>
@@ -70,6 +71,7 @@
                <span class="text-muted font-weight-normal pl-1">
                {{ reply.created_on }}
                </span>
+               <!--Delete reply icon-->
                {% if user.is_authenticated and user == reply.user %}
                <a href="{% url 'delete_own_reply' thread.slug reply.id %}">
                <span class="float-right">

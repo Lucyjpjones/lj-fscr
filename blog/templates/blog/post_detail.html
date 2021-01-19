@@ -7,7 +7,7 @@
 {% endblock %} 
 {% block content %}
 <div class="mx-auto w-md-75">
-   <!--Back button-->
+   <!--Back to blog button-->
    <div class="row">
       <div class="col-12">
          <a href="{% url 'blog' %}" class= "navy-btn btn rounded-0 mt-3 mr-1 p-font">
@@ -101,6 +101,7 @@
                   <span class="text-muted small font-weight-normal">
                   {{ comment.created_on }}
                   </span>
+                  <!--Delete comment icon-->
                   {% if user.is_authenticated and user == comment.user %}
                   <a href="{% url 'delete_own_comment' post.slug comment.id %}">
                   <span class="float-right">

@@ -7,7 +7,7 @@
 {% endblock %} 
 {% block content %}
 <div class="mx-auto w-md-75">
-   <!--Product image-->
+   <!--Programme image-->
    <div class="row">
       <div class="col-12">
          <div class="mt-3 mb-3">
@@ -57,7 +57,7 @@
          </div>
       </div>
    </div>
-   <!--Testimonials -->
+   <!--Reviews -->
    <div class="row">
       <div class="col-12">
          <div class="product-details-container">
@@ -66,49 +66,49 @@
       </div>
    </div>
    <div class="row">
-       <div class="col-12 px-3">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner carousel-reviews w-75 m-auto">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-12 col-md-6 py-1 px-2 px-4">
-                                <i class="fas fa-quote-left fa-xs mb-2"></i>
-                                <p class="p-font">'Easy to follow and informative. Very good value for money!'</p>
-                                <p class="text-muted pt-1 small">Jason Davidson</p>
-                            </div>
-                            <div class="col-12 col-md-6 py-1 px-2 px-4">
-                                <i class="fas fa-quote-left fa-xs mb-2"></i>
-                                <p class="p-font">The variation of exercises provided made my rehab journey an enjoyable experience.</p>
-                                <p class="text-muted pt-1 small">Phil Miller</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-12 col-md-6 py-1 px-4">
-                                <i class="fas fa-quote-left fa-xs mb-2"></i>
-                                <p class="p-font">'Excellent program with detailed and effective workouts for strength.'</p>
-                                <p class="text-muted pt-1 small">Oscar Ford</p>
-                            </div>
-                            <div class="col-12 col-md-6 py-1 px-4">
-                                <i class="fas fa-quote-left fa-xs mb-2"></i>
-                                <p class="p-font">Very informative, would recommend to anyone recovering from injury.</p>
-                                <p class="text-muted pt-1 small">Shane Walker</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-                </a>
+      <div class="col-12 px-3">
+         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner carousel-reviews w-75 m-auto">
+               <div class="carousel-item active">
+                  <div class="row">
+                     <div class="col-12 col-md-6 py-1 px-2 px-4">
+                        <i class="fas fa-quote-left fa-xs mb-2"></i>
+                        <p class="p-font">'Easy to follow and informative. Very good value for money!'</p>
+                        <p class="text-muted pt-1 small">Jason Davidson</p>
+                     </div>
+                     <div class="col-12 col-md-6 py-1 px-2 px-4">
+                        <i class="fas fa-quote-left fa-xs mb-2"></i>
+                        <p class="p-font">The variation of exercises provided made my rehab journey an enjoyable experience.</p>
+                        <p class="text-muted pt-1 small">Phil Miller</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="row">
+                     <div class="col-12 col-md-6 py-1 px-4">
+                        <i class="fas fa-quote-left fa-xs mb-2"></i>
+                        <p class="p-font">'Excellent program with detailed and effective workouts for strength.'</p>
+                        <p class="text-muted pt-1 small">Oscar Ford</p>
+                     </div>
+                     <div class="col-12 col-md-6 py-1 px-4">
+                        <i class="fas fa-quote-left fa-xs mb-2"></i>
+                        <p class="p-font">Very informative, would recommend to anyone recovering from injury.</p>
+                        <p class="text-muted pt-1 small">Shane Walker</p>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+         </div>
+      </div>
+   </div>
    <!--Quantity Selector-->
    <form class="form" action="{% url 'add_to_bag' programme.id 'programme' %}" method="POST">
       {% csrf_token %}

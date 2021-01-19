@@ -13,7 +13,6 @@
       <div class="col text-center">
       </div>
    </div>
-   
    <!--Search results-->
    <div class="row mt-sm-3">
       <div class="col-12 offset-1">
@@ -110,6 +109,7 @@
             {% endif %}
             {% endfor %}
             {% else %}
+            <!--No search results-->
             <div class="mx-auto">
                <p class="mb-4 text-muted text-center">Sorry no search results found for <strong>"{{ search_term }}"</strong>, please try another search.</p>
             </div>

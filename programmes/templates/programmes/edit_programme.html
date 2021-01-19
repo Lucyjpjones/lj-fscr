@@ -9,12 +9,14 @@
 {% endblock %}
 {% block content %}
 <div class="mx-auto admin-container">
+   <!--Page title-->
    <div class="row">
       <div class="col text-center title-container">
          <h2 class="title-font pt-5">Programme Management</h2>
          <h5 class="subtitle-font pb-3">Edit a Programme</h5>
       </div>
    </div>
+   <!--Edit programme form-->
    <div class="row">
       <div class="col">
          <form method="POST" action="{% url 'edit_programme' programme.id %}" class="form mb-3" enctype="multipart/form-data">

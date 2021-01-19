@@ -1,13 +1,13 @@
 {% if item.product %}
-    {% if item.product.image %}
-    <img class="prod-img-bag img-fluid rounded-0 lazy" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-    {% else %}
-    <img class="prog-img-bag img-fluid rounded-0 lazy" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
-    {% endif %}
+{% if item.product.image %}
+<img class="prod-img-bag img-fluid rounded-0 lazy" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+{% else %}
+<img class="prog-img-bag img-fluid rounded-0 lazy" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+{% endif %}
 {% elif item.programme %}
-    {% if item.programme.image %}
-    <img class="prog-img-bag img-fluid rounded-0 lazy" src="{{ item.programme.image.url }}" alt="{{ item.programme.name }}">
-    {% else %}
-    <img class="prog-img-bag img-fluid rounded-0 lazy" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.programme.name }}">
-    {% endif %}
+{% if item.programme.image %}
+<img class="prog-img-bag img-fluid rounded-0 lazy" src="{{ item.programme.image.url }}" alt="{{ item.programme.name }}">
+{% else %}
+<img class="prog-img-bag img-fluid rounded-0 lazy" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.programme.name }}">
+{% endif %}
 {% endif %}

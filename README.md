@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="media/responsive-fscr.png">
+  <img src="readme/media/responsive-fscr.png">
 <hr>
 
 **FSCR (Football Strength Conditioning Rehab) focuses on providing structured and detailed fitness programmes for football related injuries.**
@@ -99,7 +99,7 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 > **Purple:** Overcoming physical challenges and limitations and setting farther more difficult goals.
 
 <br>
-  <img src="media/palette.png">
+  <img src="readme/media/palette.png">
 
 - The #f8f8f8 shade of very light grey has been used as a background colour throughout the site with the #fafafa shade of white used for forms.
 
@@ -115,7 +115,7 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 - I spent some time researching other fitness and retail sites to gain inspiration and created a mood board with a collection of elements that caught my eye.
 
 
-  <img src="media/moodboard.png">
+  <img src="readme/media/moodboard.png">
 
 **Logo Design**
 
@@ -123,23 +123,23 @@ When it comes to creating a business, the logo is the central visual element in 
 
 I set up a meeting with my client and presented them with a mood board of different designs and gathered their feedback.
 
-<img src="media/logo-designs.png">
+<img src="readme/media/logo-designs.png">
 
 My final design with client approval is displayed below;
 
-<img src="media/final-logo-design.png">
+<img src="readme/media/final-logo-design.png">
 
 **Favicon**
 
 I created a personalised favicon for the site to add branding, and to make it easier for visitors to locate the page when they have multiple tabs open. I decided to keep the design simple and conventional by using just the first initial of the logo.
 
-<img src="media/fscr-favicon.png">
+<img src="readme/media/fscr-favicon.png">
 
 ### **<ins>Data Schema</ins>**
 
 To help visualize my database, I created a diagram using [dbdiagram](https://dbdiagram.io/) which illustrates the relationships between my models.
 
-<img src="media/schema.png">
+<img src="readme/media/schema.png">
 
 The **Product model** within the product's app, is used to store information about individual products.
 The **Category model** within the product's app, is used to group products into specific categories.
@@ -164,7 +164,7 @@ The **ProgOrderLineItem model** within the checkout app, is used to store inform
 
 ### **<ins>User Stories</ins>**
 
-<img src="media/flowchart.png">
+<img src="readme/media/flowchart.png">
 
 > **NB:** Boxes highlighted are only accessible when a user is registered and logged in.
 
@@ -222,21 +222,21 @@ As the site owner, I want to be able to continually monitor and update the site 
 
 ### **<ins>Wireframes</ins>**
 
-As part of the design process, I created wireframes using [Balsamiq](https://balsamiq.com/?gclid=Cj0KCQjw28T8BRDbARIsAEOMBczzBYzsoMjbTtqNXQaE1EgOWA2u_Qux7sLl2IUHe-p0lDC-294BfVgaAr-oEALw_wcB). Creating these mock-ups helped me plan the basic structure and arrangement of the features for my site.
+As part of the design process, I created wireframes using [Balsamiq](https://balsamiq.com/). Creating these mock-ups helped me plan the basic structure and arrangement of the features for my site.
 
-- [Homepage](wireframes/wf-homepage.pdf)
-- [Meet the Coaches](wireframes/wf-meet-the-coaches.pdf)
-- [Profile](wireframes/wf-profile.pdf)
-- [Products](wireframes/wf-products.pdf)
-- [Product View](wireframes/wf-product-view.pdf)
-- [Programmes](wireframes/wf-programmes.pdf)
-- [Programme View](wireframes/wf-programme-view.pdf)
-- [Shopping bag](wireframes/wf-bag.pdf)
-- [Checkout](wireframes/wf-checkout.pdf)
-- [Blog](wireframes/wf-blog.pdf)
-- [Blog View](wireframes/wf-blog-view.pdf)
-- [Forum](wireframes/wf-forum.pdf)
-- [Forum View](wireframes/wf-forum-view.pdf)
+- [Homepage](readme/wireframes/wf-homepage.pdf)
+- [Meet the Coaches](readme/wireframes/wf-meet-the-coaches.pdf)
+- [Profile](readme/wireframes/wf-profile.pdf)
+- [Products](readme/wireframes/wf-products.pdf)
+- [Product View](readme/wireframes/wf-product-view.pdf)
+- [Programmes](readme/wireframes/wf-programmes.pdf)
+- [Programme View](readme/wireframes/wf-programme-view.pdf)
+- [Shopping bag](readme/wireframes/wf-bag.pdf)
+- [Checkout](readme/wireframes/wf-checkout.pdf)
+- [Blog](readme/wireframes/wf-blog.pdf)
+- [Blog View](readme/wireframes/wf-blog-view.pdf)
+- [Forum](readme/wireframes/wf-forum.pdf)
+- [Forum View](readme/wireframes/wf-forum-view.pdf)
 
 #### Wireframes vs. Deployed site
 

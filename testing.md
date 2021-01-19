@@ -21,19 +21,19 @@
 
 I created an 'about' and 'meet the coaches' page so any site visitor can learn about the brand and the coaches behind it. Both pages are easily accessible via the main nav menu.
 
-<img src="media/us-1.png">
+<img src="readme/media/us-1.png">
 
 **2. View a list of products**
 
 I created a 'products' page including a list of all products, displaying product image, name, colour, price, and rating, with the option to select an individual card for more details.
 
-<img src="media/us-2.png">
+<img src="readme/media/us-2.png">
 
 **3. View a list of programmes**
 
 I created a 'programmes' page including a list of all programmes, displaying programme image, name, price, and rating, with the option to select an individual card for more details.
 
-<img src="media/us-3.png">
+<img src="readme/media/us-3.png">
 
 **4. View a specific category of products or programmes**
 
@@ -45,19 +45,19 @@ I added a filter option to both the products and programmes page giving users th
 
 Each product detail page displays the product's image, name, colour, price, rating, description, and available sizes. There is also a quantity selector, the ability to add a product to bag or redirect back to the products page.
 
-<img src="media/us-4.png">
+<img src="readme/media/us-4.png">
 
 **6. View individual programme details**
 
 Each programme detail page displays the programme's image, name, price, rating, description, what's included, and reviews. There is also a quantity selector, the ability to add a programme to bag or redirect back to the programmes page.
 
-<img src="media/us-5.png">
+<img src="readme/media/us-5.png">
 
 **7. Easily access contact details**
 
 I have included a contact form on the home page which is also easily navigated to via the main nav menu. This has been set up using EmailJS with my own customised email template to assist with organisation of user enquiries.
 
-<img src="media/us-6.png">
+<img src="readme/media/us-6.png">
 
 **8. See reviews and ratings on products and programmes**
 
@@ -65,19 +65,19 @@ Testimonials are visible on the homepage and reviews are available on the progra
 
 > **NB:** As this is a startup that hasn't yet started the business the testimonials, reviews, and ratings are currently only mockups.
 
-<img src="media/us-7.png">
+<img src="readme/media/us-7.png">
 
 **9. Browse associated blogs, articles, and recent new stories**
 
 I created a blog app that can only be viewed by site members. The page is available through the nav menu and there is also the option for the user to direct to the latest blogs via the homepage. When a user is not logged in and they click on the blog they will be directed to the login/register page. If a user is a member and logged in they will be directed to the blog page where they can view blogs posted by the admin user. Members also have the ability to add and delete their own comments on blog posts creating further user interaction.
 
-<img src="media/us-8.png">
+<img src="readme/media/us-8.png">
 
 **10. Access a member forum**
 
 I created a forum app that can only be accessed by site members. When a user is not logged in and they click on the forum they will be directed to the login/register page. If a user is a member and logged in they will be directed to the forum page where they will have the option to view threads by other users and add/edit their own. They also have the capability of replying to any thread, with the logged in username and date/time automatically saved.
 
-<img src="media/us-9.png">
+<img src="readme/media/us-9.png">
 
 #### <ins>Registration and user accounts</ins>
 
@@ -85,13 +85,13 @@ I created a forum app that can only be accessed by site members. When a user is 
 
 A fully functioning register page where a user can enter their details to create an account. The user can access this page by clicking on the recognisable user icon and selecting 'register'.
 
-<img src="media/us-10.png">
+<img src="readme/media/us-10.png">
 
 **11. Receive an email confirmation after registering**
 
 After registering the user is directed to a registration success page where they are informed that they will receive an email to validate their email address and complete registration.
 
-<img src="media/us-11.png">
+<img src="readme/media/us-11.png">
 
 **12. Easily login or logout**
 
@@ -99,31 +99,31 @@ When a user is registered they have the ability to easily log into their account
 
 I also decided to add social logins to allow my user to login more quickly. The user can choose their preferred platform (Facebook, Google, or Twitter) and follow the authorisation for the specified site. (Facebook screenshots included below).
 
-<img src="media/us-12.png">
+<img src="readme/media/us-12.png">
 
 **13. Easily update my personal details**
 
 Each registered user has their own profile page where they can store their personal details including name, email, and delivery details. This information can be easily updated by filling in any field and then clicking 'update details'.
 
-<img src="media/us-13.png">
+<img src="readme/media/us-13.png">
 
 **14. Easily recover my password in case I forget it**
 
 If a user forgets their password they have the option to click the 'forgot password' link. This will direct them to another page which will inform the user that an email has been sent to them to recover their password. The email contains a link that redirects the user to the change password page where they can enter a new password for their account. After submitting a new password the user is redirected to the login in page and can login using their new password.
 
-<img src="media/us-14.png">
+<img src="readme/media/us-14.png">
 
 **15. Have a personalised user profile**
 
 The profile page is specific to each user with a personalised username greeting, the option to save their own entered details, and a log of their order history.
 
-<img src="media/us-15.png">
+<img src="readme/media/us-15.png">
 
 **16. Enable my details to be prefilled**
 
 If the user has filled in their profile information, these details will be prefilled at checkout. The user also has the option to tick the save details options on checkout which will automatically save details to their profile page.
 
-<img src="media/us-16.png">
+<img src="readme/media/us-16.png">
 
 #### <ins>Sorting and Searching</ins>
 
@@ -134,14 +134,14 @@ I have added a sort and filter option to the products and programmes page to all
 
 The pages also feature a count functionality showing the user how many items are being displayed on the page. For example, if the user filtered the products page by accessories they would see all the accessories and the number of products found. If no products are found the user would be displayed with the message "Sorry no search results found".
 
-<img src="media/us-17.png">
+<img src="readme/media/us-17.png">
 
 **18. Search the site by keywords**
 
 A search bar features in the main site header and allows users to search by keywords to find specific items. On larger screens the search bar is visible and on smaller devices, the search bar is collapsed from the search icon.
     - Currently, the filtered queries include product name, product description, programme name, programme description, and blog post title.
 
-<img src="media/us-18.png">
+<img src="readme/media/us-18.png">
 
 **19. Easily see what I’ve searched for and the number of results**
 
@@ -155,37 +155,37 @@ The products, programmes and blog page all feature a results count to show the u
 The product detail page allows a user to select a specific size, if the product is sized, and the quantity of a product.
 The programme detail page allows a user to select a quantity of a programme to add to their bag.
 
-<img src="media/us-20.png">
+<img src="readme/media/us-20.png">
 
 **21. View items in my bag to be purchased**
 
 The bag view allows the user to view all the products and programmes they have added to their bag before continuing to the checkout.
 
-<img src="media/us-21.png">
+<img src="readme/media/us-21.png">
 
 **22. Adjust the quantity of individual items in my bag**
 
 The user has the ability to adjust the quantity of products and programmes in their bag before continuing to checkout.
 
-<img src="media/us-22.png">
+<img src="readme/media/us-22.png">
 
 **23. Easily enter my payment information and feel my personal and payment information is safe and secure**
 
 The checkout page features a payment form allowing the user to easily enter their card details for a quick checkout.
 
-<img src="media/us-23.png">
+<img src="readme/media/us-23.png">
 
 **25. View an order confirmation after checkout**
 
 Once the user has made a purchase they are directed to a checkout success page where they can see a summary of their order so they can check that they haven't made any mistakes.
 
-<img src="media/us-25.png">
+<img src="readme/media/us-25.png">
 
 **26. Receive an email confirmation after checking out**
 
 Once the user has made a purchase they are sent an email with a summary of their order to keep for their own records.
 
-<img src="media/us-26.png">
+<img src="readme/media/us-26.png">
 
 #### <ins>Admin and Store Management</ins>
 
@@ -194,13 +194,13 @@ Once the user has made a purchase they are sent an email with a summary of their
 When logged in as the admin user, the user has the option of 'product management' and 'programme management' when clicking on the profile icon on the main site header. After clicking the link they are directed to a page displayed with a form to enter all the information needed to add a new product/programme. Once the user has finished adding the product/programme details they can click 'add product'/'add programme' and will be redirected to the product/programme detail page for the new item.
 
 
-<img src="media/us-27.png">
+<img src="readme/media/us-27.png">
 
 **28. Edit/Update a product/programme**
 
 When logged in as admin user, the user has an edit button displayed under each product/programme card on the products/programmes page, as well as on each product/programme detail page. After clicking 'edit' from either view the user is directed to the edit product/programme page which is a pre-filled out form allowing the fields to be amended manually from the site. Once the user has finished with their edits they can click 'update information' and the new product/programme information will be saved, and they will be redirected back to the product/programme detail page.
 
-<img src="media/us-28.png">
+<img src="readme/media/us-28.png">
 
 **29. Delete a product/programme**
 
@@ -218,7 +218,7 @@ When logged into the admin, the admin user can add a new blog to the site.
 Social media platform links are featured in the page footer below the copyright statement.
 - At present no social accounts exist for FSCR so all links direct the user to the exteranl sites homepage.
 
-    <img src="media/us-31.png">
+    <img src="readme/media/us-31.png">
 
 ### **Manual function testing**
 
@@ -231,7 +231,7 @@ To ensure my site was working correctly I carried out some manual function testi
 - [x] cursor pointer is present when hovering button and link elements 
 - [x] User is directed to a custom 404 page if directed to a non-existent domain
 
-    <img src="media/404-page.png">
+    <img src="readme/media/404-page.png">
 
 #### Navigation bar
 
@@ -499,7 +499,7 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to run a series of audits to improve the quality of web pages. Overall performance and errors are highlighted below.
 
-<img src="media/lighthouse-review.png">
+<img src="readme/media/lighthouse-review.png">
 
 <ins>Performance</ins>
 

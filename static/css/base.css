@@ -727,7 +727,7 @@ input[name='q']::placeholder {
    }
    /* -------------------- Programmes app  */
    .prog-img-card {
-      height: 200px;
+      height: 250px;
    }
    .prog-detail-img {
       height: 200px;
@@ -768,9 +768,7 @@ input[name='q']::placeholder {
    .w-md-100 {
       width: 100% !important;
    }
-   .container-fluid {
-      width: 90%;
-   }
+
    .title-font {
       font-size: 32px;
    }

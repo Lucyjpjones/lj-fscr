@@ -1,6 +1,7 @@
 from django.test import TestCase
 from checkout.forms import OrderForm
 from checkout.models import Order, OrderLineItem, ProgOrderLineItem
+from django.urls import reverse
 
 
 class TestOrderForm(TestCase):
@@ -54,8 +55,13 @@ class TestOrderForm(TestCase):
         self.assertEqual(form.errors['street_address1'][0],
                          'This field is required.')
 
-    # Checking the correct fields are displayed in the form
-    def test_fields_are_explicit_in_form_metaclass(self):
-        form = OrderForm()
-        self.assertEqual(form.Meta.fields, ['full_name', 'email', 'phone_number', 'street_address1', 'street_address2', 'town_or_city', 'postcode', 'country', 'county'])
-    
+    # # Checking the correct fields are displayed in the form
+    # def test_fields_are_explicit_in_form_metaclass(self):
+    #     form = OrderForm()
+    #     self.assertEqual(form.Meta.fields, ['full_name', 'email', 'phone_number', 'street_address1', 'street_address2', 'town_or_city', 'postcode', 'country', 'county'])
+
+
+# bag views
+# class TestCheckoutViews(TestCase):
+
+#     def test_get_checkout(self):

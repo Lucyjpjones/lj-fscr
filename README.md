@@ -371,11 +371,11 @@ I will continue to update my website to meet my clients expectations. I have fur
 
 **Future Development plans**
 - Add more payment options for my users, including apple pay to improve user experience with quicker checkout.
+- Ability for user to autofill address by entering postcode.
 - 'Add a review' option for members to give their opinion on products and programmes they have purchased. As this is a startup there is currently no physical customer orders this was a lower priority task.
-- Add a count onto the bag icon so users so it is easily visible to the user how many items are in their bag.
-- More queries added to search functionality for a more effective search
+- Add a count onto the bag icon so users can easily identify how many items are in their bag.
+- More queries added to search functionality for more effective search results.
 - Add video blogs to blog (already included in filter but currently no video posts from client)
-- Ability for user to autofill address by entering postcode
 
 ---
 

@@ -21,10 +21,8 @@ footer {
    height: 52px;
 }
 
-.social-links {
-    position: absolute;
-    bottom: 0%;
-    right: 0%;
+.social-link {
+    font-size: 1em;
 }
 
 p,

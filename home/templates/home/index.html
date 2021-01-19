@@ -12,7 +12,7 @@
    <!--Callout image-->
    <div class="row text-center">
       <img
-         class="col callout-img p-0"
+         class="col callout-img p-0 lazy"
          src="{{ MEDIA_URL }}FSCR-home-callout.JPG"
          alt="Callout image"
          />
@@ -59,7 +59,7 @@
          <div class="col-12 col-md-6 mb-4 mb-lg-0">
             <div class="card border-0">
                <img
-                  class="index-prog-img col p-0"
+                  class="index-prog-img col p-0 lazy"
                   src="{{ MEDIA_URL }}FSCR-home-proglink.JPG"
                   alt="Callout image"
                   />
@@ -71,7 +71,7 @@
          <div class="col-12 col-md-6 mb-lg-3">
             <div class="card border-0">
                <img
-                  class="index-prod-img col p-0"
+                  class="index-prod-img col p-0 lazy"
                   src="{{ MEDIA_URL }}FSCR-hoodie-grey.png"
                   alt="Callout image"
                   />
@@ -126,13 +126,13 @@
             <div class="card rounded-0 h-100">
                {% if post.image %}
                <img
-                  class="blog-index-img-card img-fluid rounded-0"
+                  class="blog-index-img-card img-fluid rounded-0 lazy"
                   src="{{ post.image.url }}"
                   alt="{{ post.title }}"
                   />
                {% else %}
                <img
-                  class="blog-index-img-card img-fluid rounded-0"
+                  class="blog-index-img-card img-fluid rounded-0 lazy"
                   src="{{ MEDIA_URL }}FSCR-noimage.png"
                   alt="{{ post.title }}"
                   />

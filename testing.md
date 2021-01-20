@@ -215,7 +215,7 @@ When logged in as admin user, the user has an edit button displayed under each p
 
 When logged in as admin user, the user has a delete button displayed next to the edit button. After clicking 'delete' from either view, the product/programme is permanently deleted from the site and will no longer show on the products/programmes page or in the admin.
 
-(See user story above displaying the delete button)
+<img src="readme/media/us-29.png">
 
 **30. Add a blog**
 

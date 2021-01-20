@@ -256,11 +256,13 @@ header {
 /* Callout image */
 
 .callout-img {
+    background: url('/media/FSCR-home-callout.JPG');
+    background-size: cover;
 	height: calc(100vh - 175.53px);
 	filter: grayscale(0.4);
 	width: 100vw;
-	object-fit: cover;
-	object-position: bottom;
+	background-position-x: center;
+	background-position-y: bottom;
 }
 
 

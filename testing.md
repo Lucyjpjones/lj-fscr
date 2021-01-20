@@ -449,6 +449,10 @@ To set up and use Coverage, I used the following commands;
 
     `$ pip3 install coverage`
 
+* Freeze .coverage to requirements file:
+
+    `$ pip3 freeze > requirements.txt`
+
 * To run all the tests written in a certain app and generate a report (second command is to view this report in the terminal).
 
     `$ coverage run --source=<'app name'> manage.py test`
@@ -544,11 +548,16 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 I'm ignoring any warnings on migration files since these are automatically generated files so may ignore style rules for efficiency reasons. Also as developers we usually don't need to touch them so they don't need to be perfectly readable.
 
-`Avoid using null=True on string-based fields such CharField`
+`DJ01 Avoid using null=True on string-based fields`
 
 I decided not to remove not to remove from my code as
 
-I was unable to fix the error 'long too long' on some lines of code as if I were to break up the code it would break up the variable.
+`E501 line too long`
+
+This error has been fixed on the majority of my code but some lines have been left to avoid breaking up variables.
+
+`F401 'checkout.signals' imported but unused`
+`F841 local variable 'e' is assigned to but never used`
 
 
 ### **Audits**

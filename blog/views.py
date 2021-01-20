@@ -12,7 +12,6 @@ def all_posts(request):
     query = None
     sort = None
     direction = None
-    count = posts.count()
     post_type = None
 
     if request.GET:

@@ -81,7 +81,8 @@ def add_thread(request):
             messages.success(request, 'Successfully added thread!')
             return redirect(reverse('thread_detail', args=[thread.slug]))
         else:
-            messages.error(request, 'Failed to add thread. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add thread. Please ensure the \
+                form is valid.')
 
     form = ThreadForm()
     thread = None
@@ -107,7 +108,8 @@ def edit_thread(request, slug):
             messages.success(request, 'Successfully updated thread!')
             return redirect(reverse('thread_detail', args=[thread.slug]))
         else:
-            messages.error(request, 'Failed to update thread. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update thread. Please ensure \
+                the form is valid.')
     else:
         form = ThreadForm(instance=thread)
         messages.info(request, f'You are editing {thread.topic}')

@@ -7,7 +7,8 @@ class Category(models.Model):
         verbose_name_plural = 'categories'
 
     name = models.CharField(max_length=254)
-    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+    friendly_name = models.CharField(max_length=254, null=True,
+                                     blank=True)
 
     def __str__(self):
         return self.name

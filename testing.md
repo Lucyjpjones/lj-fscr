@@ -73,11 +73,19 @@ I created a blog app that can only be viewed by site members. The page is availa
 
 <img src="readme/media/us-8.png">
 
+- The delete functon has a confirmation modal which gives an extra step for users to consider their action.
+
+<img src="readme/media/us-88.png">
+
 **10. Access a member forum**
 
 I created a forum app that can only be accessed by site members. When a user is not logged in and they click on the forum they will be directed to the login/register page. If a user is a member and logged in they will be directed to the forum page where they will have the option to view threads by other users and add/edit their own. They also have the capability of replying to any thread, with the logged in username and date/time automatically saved.
 
 <img src="readme/media/us-9.png">
+
+- The delete functon has a confirmation modal which gives an extra step for users to consider their action.
+
+<img src="readme/media/us-99.png">
 
 #### <ins>Registration and user accounts</ins>
 
@@ -116,6 +124,7 @@ If a user forgets their password they have the option to click the 'forgot passw
 **15. Have a personalised user profile**
 
 The profile page is specific to each user with a personalised username greeting, the option to save their own entered details, and a log of their order history.
+- I added the 'dictsortreserved' filter with key 'date' to ensure orders are listed in descending order with most recent showing first.
 
 <img src="readme/media/us-15.png">
 
@@ -414,6 +423,7 @@ When logged in as Admin user...
 
 - [x] The welcome message is personalised with the correct username for the logged in user
 - [x] The user's order history is listed with previous purchases
+- [x] The order history is listed in date descending order with most recent showing first
 - [x] After clicking 'View order details' the user is directed to the checkout success page showing all details of their order
 - [x] On the checkout success page, clicking 'back to profile' navigates the user back to their profile
 - [x] If user enters details and clicks 'update information' their details are saved to their profile

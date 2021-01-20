@@ -52,6 +52,9 @@
                            <span aria-hidden="true">&times;</span>
                            </button>
                         </div>
+                        <div class="modal-body text-muted ml-2">
+                                    Deleting the product will remove it from the site but will not be permanently deleted from the database
+                                </div>
                         <div class="modal-footer border-0">
                            <a class="btn navy-border-btn rounded-0" data-dismiss="modal">Close</a>
                            <a href="{% url 'delete_product' product.id %}" class="btn navy-btn rounded-0">Confirm</a>

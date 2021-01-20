@@ -35,7 +35,7 @@ def profile(request):
 
 
 def order_history(request, order_number):
-    order = get_object_or_404(Order.objects.order_by('-date'),
+    order = get_object_or_404(Order,
                               order_number=order_number)
 
     template = 'checkout/checkout_success.html'

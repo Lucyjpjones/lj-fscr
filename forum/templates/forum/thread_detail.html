@@ -23,7 +23,7 @@
    <div class="row grey-banner border">
       <div class="col-12 py-2">
          <div class="mb-2">
-             <!--Edit post icon-->
+            <!--Edit post icon-->
             {% if user.is_authenticated and user == thread.author %}
             <a href="{% url 'edit_thread' thread.slug %}">
             <span class="float-right">
@@ -74,27 +74,27 @@
                <!--Delete reply icon-->
                {% if user.is_authenticated and user == reply.user %}
                <!-- Button trigger modal -->
-                    <a class="btn float-right" data-toggle="modal" data-target="#staticBackdrop">
-                    <i class="far fa-trash-alt"></i>
-                    </a>
-                    <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content rounded-0">
-                        <div class="modal-header border-0">
-                            <h5 class="p-font ml-2 mt-2" id="staticBackdropLabel">Are you sure you want to delete your response?</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-footer border-0">
-                            <a class="btn navy-border-btn rounded-0" data-dismiss="modal">Close</a>
-                            <a href="{% url 'delete_own_reply' thread.slug reply.id %}" class="btn navy-btn rounded-0">Confirm</a>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-               {% endif %}
+               <a class="btn float-right" data-toggle="modal" data-target="#staticBackdrop">
+               <i class="far fa-trash-alt"></i>
+               </a>
+               <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+               <div class="modal-dialog">
+                  <div class="modal-content rounded-0">
+                     <div class="modal-header border-0">
+                        <h5 class="p-font ml-2 mt-2" id="staticBackdropLabel">Are you sure you want to delete your response?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="modal-footer border-0">
+                        <a class="btn navy-border-btn rounded-0" data-dismiss="modal">Close</a>
+                        <a href="{% url 'delete_own_reply' thread.slug reply.id %}" class="btn navy-btn rounded-0">Confirm</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            {% endif %}
             </p>
             {{ reply.body | linebreaksbr }}
          </div>

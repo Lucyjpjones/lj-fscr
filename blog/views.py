@@ -64,6 +64,8 @@ def post_detail(request, slug):
             new_comment.save()
             # Clear comment field after save
             comment_form = CommentForm()
+            # Redirect to avoid resubmission
+            return redirect(reverse('post_detail', args=[post.slug]))
     else:
         comment_form = CommentForm()
 

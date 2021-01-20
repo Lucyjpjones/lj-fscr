@@ -59,6 +59,8 @@ def thread_detail(request, slug):
             new_reply.save()
             # Clear comment field after save
             reply_form = CommentForm()
+            # Redirect to avoid resubmission
+            return redirect(reverse('thread_detail', args=[thread.slug]))
     else:
         reply_form = CommentForm()
 

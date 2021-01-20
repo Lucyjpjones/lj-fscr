@@ -618,3 +618,4 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 |     | Bug                                                                           | Action                                                            |
 |-----|-------------------------------------------------------------------------------|-------------------------------------------------------------------|
 | [] | Homepage vh including address bar on mobile so cropping bottom of element                   |  need to solve |
+| [] | Main callout image appears blurry on larger devices                   |  Before the website goes commercial the client will provide updated image material |

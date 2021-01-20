@@ -10,7 +10,7 @@ from .forms import ProgrammeForm
 def all_programmes(request):
     """ A view to show all programmes, including sorting and search queries """
 
-    programmes = Programme.objects.all()
+    programmes = Programme.objects.filter(discontinued=False)
     query = None
     categories = None
     sort = None
@@ -135,6 +135,7 @@ def delete_programme(request, programme_id):
         return redirect(reverse('home'))
 
     programme = get_object_or_404(Programme, pk=programme_id)
-    programme.delete()
+    programme.discontinued = True
+    programme.save()
     messages.success(request, 'Programme deleted!')
     return redirect(reverse('programmes'))

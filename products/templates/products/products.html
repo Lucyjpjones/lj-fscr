@@ -52,8 +52,9 @@
                <p class="mb-3 text-muted small text-center">{{ products.count }} products found</p>
             </div>
             {% for product in products %}
+            {% if not product.discontinued %}
             <div class="col-6 col-md-4 col-lg-3">
-               <div class="card bg-trans h-100 border-0">
+               <div class="card bg-trans h-100 border-0 mb-3">
                   {% if product.image %}
                   <a href="{% url 'product_detail' product.id %}">
                   <img
@@ -78,20 +79,15 @@
                      <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ product.rating }}</small></p>
                   </div>
                   {% if request.user.is_superuser %}
-                  <small class="pl-1 mt-2">
+                  <div class="pl-1 mt-2">
                   <a class="btn red-border-btn px-2 py-1 p-font rounded-0" href="{% url 'edit_product' product.id %}">Edit</a>
                   <a class="btn red-btn px-2 py-1 p-font rounded-0" href="{% url 'delete_product' product.id %}">Delete</a>
-                  </small>
+                  </div>
                   {% endif %}
                </div>
             </div>
-            {% if forloop.counter|divisibleby:2 %}
-            <div class="col-12 d-md-none mb-5"></div>
-            {% endif %} {% if forloop.counter|divisibleby:3 %}
-            <div class="col-12 d-none d-md-block d-lg-none mb-5"></div>
-            {% endif %} {% if forloop.counter|divisibleby:4 %}
-            <div class="col-12 d-none d-lg-block mb-5"></div>
-            {% endif %} {% endfor %}
+            {% endif %}
+            {% endfor %}
             {% else %}
             <div class="mx-auto">
                <p class="p-font mb-5">Sorry no search results found</p>

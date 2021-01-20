@@ -619,3 +619,4 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 |-----|-------------------------------------------------------------------------------|-------------------------------------------------------------------|
 | [] | Homepage vh including address bar on mobile so cropping bottom of element                   |  need to solve |
 | [] | Main callout image appears blurry on larger devices                   |  Before the website goes commercial the client will provide updated image material |
+| [x] | Item is removed from order history if deleted by admin                   |  This bug was fixed by following [this thread](https://app.slack.com/client/T0L30B202/CGWQJQKC5/thread/C7HS3U3AP-1597961336.047800) found on slack. I added a discontinued field to my models (with default False), updated delete view to change discontinued to true instead of physically deleting item and then referenced to this field in my templates  |

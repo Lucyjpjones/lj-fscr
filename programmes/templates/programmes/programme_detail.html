@@ -39,10 +39,10 @@
             <p class="lead mb-1 text-left font-weight-bold">£{{ programme.price }}</p>
             <p class="mb-1 text-muted"><small><i class="far fa-star mr-1"></i>{{ programme.rating }}</small></p>
             {% if request.user.is_superuser %}
-            <small>
-            <a class="btn red-border-btn px-2 py-1 small rounded-0" href="{% url 'edit_programme' programme.id %}">Edit</a>
-            <a class="btn red-btn px-2 py-1 small rounded-0" href="{% url 'delete_programme' programme.id %}">Delete</a>
-            </small>
+            <div>
+            <a class="btn red-border-btn px-2 py-1 p-font rounded-0" href="{% url 'edit_programme' programme.id %}">Edit</a>
+            <a class="btn red-btn px-2 py-1 p-font rounded-0" href="{% url 'delete_programme' programme.id %}">Delete</a>
+            </div>
             {% endif %}
             <p class="mt-3 p-font">{{ programme.description|linebreaksbr }}</p>
          </div>

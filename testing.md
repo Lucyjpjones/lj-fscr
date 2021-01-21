@@ -615,7 +615,7 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 
 ### **Additional Testing**
 
-- The Website was tested on Google Chrome, Safari browsers, Firefox, and Edge.
+- The Website was tested on Google Chrome, Safari browsers, Firefox, and Microsoft Edge.
 
 - The website was viewed on a variety of devices including HP Laptop, Macbook pro, Ipad, IPhones (Version SE, 6, 7, 8, 11, 12, 12 max pro), Huawei P20 pro.
 

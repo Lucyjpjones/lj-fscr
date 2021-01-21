@@ -6,6 +6,13 @@ from programmes.models import Programme
 
 
 def bag_contents(request):
+    """ Creates session variable 'bag', checks to see if item is
+    a product or programme, adds item and data to bag accordingly
+    Checks order total, if under free delivery threshold calculates
+    delivery cost otherwise sets delivery to 0, then calculates grand
+    total
+    [Code taken from Code Institute and modified for personal use]
+    """
 
     bag_items = []
     total = 0
@@ -46,18 +53,6 @@ def bag_contents(request):
                     'quantity': item_data,
                     'programme': programme,
                 })
-            else:
-                programme = get_object_or_404(Programme, pk=item_id)
-                for size, quantity in (item_data['items_by_size']
-                                       ['programme'].items()):
-                    total += quantity * programme.price
-                    product_count += quantity
-                    bag_items.append({
-                        'item_id': item_id,
-                        'quantity': quantity,
-                        'programme': programme,
-                        'size': size,
-                    })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)

@@ -13,7 +13,13 @@ def view_bag(request):
 
 
 def add_to_bag(request, item_id, category):
-    """ Add a quantity of the specified product to the shopping bag """
+    """ Adds a quantity of the specified item to the bag, distinguishes
+    the category of the item, then checks if the item_id already exists
+    in the bag. If item is a product it will also check for size. If
+    the item exists the quantity will be incremented, otherwise the
+    item will be added to the bag
+    [Code taken from Code Institute and modified for personal use]
+    """
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -70,7 +76,11 @@ def add_to_bag(request, item_id, category):
 
 
 def adjust_bag(request, item_id, category):
-    """Adjust the quantity of the specified product to the specified amount"""
+    """Adjusts the quantity of the specified item to the specified amount,
+    if user enters quantity over 99 the user will get an error message for
+    invalid value, if user enters 0 the item will be removed from the bag
+    [Code taken from Code Institute and modified for personal use]
+    """
 
     quantity = int(request.POST.get('quantity'))
     size = None
@@ -82,7 +92,7 @@ def adjust_bag(request, item_id, category):
     if category == 'product':
         product = get_object_or_404(Product, pk=item_id)
         if size:
-            if quantity in range(0, 99):
+            if quantity in range(1, 99):
                 bag[category][item_id]['items_by_size'][size] = quantity
                 messages.success(request, (
                     f'Updated size {size.upper()} {product.name} '
@@ -99,7 +109,7 @@ def adjust_bag(request, item_id, category):
                                  f'Removed size {size.upper()}'
                                  f'{product.name} from your bag')
         else:
-            if quantity in range(0, 99):
+            if quantity in range(1, 99):
                 bag[category][item_id] = quantity
                 messages.success(request,
                                  f'Updated {product.name} '
@@ -115,7 +125,7 @@ def adjust_bag(request, item_id, category):
 
     elif category == 'programme':
         programme = get_object_or_404(Programme, pk=item_id)
-        if quantity in range(0, 99):
+        if quantity in range(1, 99):
             bag[category][item_id] = quantity
             messages.success(request,
                              f'Updated {programme.name} '
@@ -135,7 +145,7 @@ def adjust_bag(request, item_id, category):
 
 
 def remove_from_bag(request, item_id, category):
-    """Remove the specified product from bag"""
+    """Remove the specified item from bag"""
 
     size = None
     if 'product_size' in request.POST:

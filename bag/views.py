@@ -29,7 +29,10 @@ def add_to_bag(request, item_id, category):
             if item_id in list(bag[category].keys()):
                 if size in bag[category][item_id]['items_by_size'].keys():
                     bag[category][item_id]['items_by_size'][size] += quantity
-                    messages.success(request, (f'Updated size {size.upper()}{product.name} quantity to {bag[category][item_id]["items_by_size"][size]}'))
+                    messages.success(request, (
+                        f'Updated size {size.upper()}{product.name} '
+                        'quantity to {bag[category][item_id]'
+                        '["items_by_size"][size]}'))
                 else:
                     bag[category][item_id]['items_by_size'][size] = quantity
                     messages.success(request,
@@ -81,7 +84,10 @@ def adjust_bag(request, item_id, category):
         if size:
             if quantity in range(0, 99):
                 bag[category][item_id]['items_by_size'][size] = quantity
-                messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {bag[category][item_id]["items_by_size"][size]}')
+                messages.success(request, (
+                    f'Updated size {size.upper()} {product.name} '
+                    'quantity to {bag[category][item_id]'
+                    '["items_by_size"][size]}'))
             elif quantity > 99:
                 messages.error(request, "Value must be less than or equal \
                                 to 99")

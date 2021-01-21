@@ -12,7 +12,6 @@ def all_posts(request):
     query = None
     sort = None
     direction = None
-    post_type = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -45,28 +44,28 @@ def all_posts(request):
 
 @login_required
 def post_detail(request, slug):
+    ''' A view that renders the post details and shows active comments
+    Creates comment object, assigns comment to current post, gets
+    username, saves comment to database then clears from and redirects
+    the user
+    [Code taken from 'https://djangocentral.com/creating-comments-
+    system-with-django/']
+    '''
+
     template_name = 'blog/post_detail.html'
     post = get_object_or_404(Post, slug=slug)
     comments = post.comments.filter(active=True)
     new_comment = None
 
-    # Comment posted
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
-            # Create Comment object but don't save to database yet
             new_comment = comment_form.save(commit=False)
-            # Assign the current post to the comment
             new_comment.post = post
-            # Get username
             new_comment.user = request.user
-            # Save the comment to the database
             new_comment.save()
-            # Clear comment field after save
             comment_form = CommentForm()
-            # success message
             messages.success(request, 'Successfully added comment!')
-            # Redirect to avoid resubmission
             return redirect(reverse('post_detail', args=[post.slug]))
     else:
         comment_form = CommentForm()

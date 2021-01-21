@@ -1,5 +1,3 @@
-# https://djangocentral.com/building-a-blog-application-with-django/
-
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -10,6 +8,7 @@ STATUS = (
 
 
 class Post(models.Model):
+    ''' Blog post, ordered by newest first '''
     post_type = models.CharField(default='article', max_length=50)
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -31,6 +30,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
+    ''' Comment on blog post, ordered by newest first '''
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name='comments')
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
@@ -39,7 +39,7 @@ class Comment(models.Model):
     active = models.BooleanField(default=True)
 
     class Meta:
-        ordering = ['created_on']
+        ordering = ['-created_on']
 
     def __str__(self):
-        return 'Comment {} by {}'.format(self.body, self.user.username)
+        return self.user

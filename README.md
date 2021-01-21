@@ -866,6 +866,7 @@ When you clone a repository, the repository is copied on to your local machine.
 - The help and support received from the tutors at [Code Institute](https://codeinstitute.net/).
 
 - The [Code Institute](https://codeinstitute.net/) Slack Community.
+    - Clint - for helping me to solve the issue on limiting quantity added in shopping bag
 
 - Friends & Family for continuous feedback and support.
 

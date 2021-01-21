@@ -862,17 +862,19 @@ When you clone a repository, the repository is copied on to your local machine.
 #### Media
 
 - General site content provided by client
-- Images used for callout image, about page and profile images provided by client.
+- Images used for callout image, about page and profile images provided by client
 - Blog content written by client with all references included
-- Product images were taken from [ASOS](https://www.asos.com/) and [Nike](https://www.nike.com/gb/) and edited to fit site.
+- Product images were taken from [ASOS](https://www.asos.com/) and [Nike](https://www.nike.com/gb/) and edited for personal use
 - Programme images were taken from;
-    - [Groin injury](https://www.therapeuticassociates.com/i-pulled-my-groin-heard-it-pop-do-i-need-physical-therapy/)
-    - [Tend](https://myalliedpain.com/knee-pain-and-injuries)
-    - [Quad injury](https://glebephysiotherapy.com.au/service/physiotherapy-for-front-of-thigh-quads-pain/)
-    - [Custom](https://hypnosisdenvercolorado.com/2013/09/24/hypnosis-denver-smoking-affects-performance/)
-    - [Core](http://fitness44muscle.blogspot.com/2014/09/Body-facts-the-abdominal-muscles-and-their-function.html)
-    - [Calf](https://www.shutterstock.com/video/clip-11108528-gastrocnemius---leg-muscles-anatomy-animation)
-    - [Hamstring](https://fitforfutbol.com/2018/09/brilliant-hamstring-injury-observations-from-dave-joyce/)
+    - [Groin Injury](https://www.therapeuticassociates.com/i-pulled-my-groin-heard-it-pop-do-i-need-physical-therapy/)
+    - [Tendinopathy Management ](https://myalliedpain.com/knee-pain-and-injuries)
+    - [Quadricep Injury](https://glebephysiotherapy.com.au/service/physiotherapy-for-front-of-thigh-quads-pain/)
+    - [Individual Performance](https://hypnosisdenvercolorado.com/2013/09/24/hypnosis-denver-smoking-affects-performance/)
+    - [Core Strength](http://fitness44muscle.blogspot.com/2014/09/Body-facts-the-abdominal-muscles-and-their-function.html)
+    - [Calf Injury](https://www.shutterstock.com/video/clip-11108528-gastrocnemius---leg-muscles-anatomy-animation)
+    - [Hamstring Injury](https://fitforfutbol.com/2018/09/brilliant-hamstring-injury-observations-from-dave-joyce/)
+    - [Off-feet Conditioning](https://www.newsweek.com/online-heart-health-calculator-can-help-predict-risk-dying-cardiovascular-1032247)
+
 #### Acknowledgments
 
 - My Mentor, Aaron for his continuous help and support throughout the project.

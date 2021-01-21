@@ -65,6 +65,7 @@ def programme_detail(request, programme_id):
 
     context = {
         'programme': programme,
+        'on_page': True,
     }
 
     return render(request, 'programmes/programme_detail.html', context)

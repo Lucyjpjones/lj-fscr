@@ -833,31 +833,30 @@ When you clone a repository, the repository is copied on to your local machine.
 
 #### Content
 
-- Materials supplied by [Code Institute](https://docs.djangoproject.com/en/3.1/) 
+- Materials supplied by [Code Institute](https://docs.djangoproject.com/en/3.1/) for project Boutique Ado.
+
 - [Django documentation](https://docs.djangoproject.com/en/3.1/)
 
-- Code used to help create blog and forum app [here](https://djangocentral.com/building-a-blog-application-with-django/)
+- [Code](https://djangocentral.com/building-a-blog-application-with-django/) used to help create blog and forum app
 
-- Code used to help create sidenav [here](https://bootstrapious.com/p/bootstrap-sidebar)
+- [Code](https://bootstrapious.com/p/bootstrap-sidebar) used to help create sidenav
 
-- [Social login](https://learndjango.com/tutorials/django-allauth-tutorial)
+- [Code](https://learndjango.com/tutorials/django-allauth-tutorial) used to help with implementing Social login's
 
-- Code used to help with [linking to id on a page using Django](https://stackoverflow.com/questions/31643670/link-a-div-in-another-page-in-url-with-an-anchor-tag-django)
+- [Code](https://stackoverflow.com/questions/31643670/link-a-div-in-another-page-in-url-with-an-anchor-tag-django) used to help with linking to id on a different page using Django
 
-- Site used to remove background from logo [here](https://www.remove.bg/upload)
+- [Site](https://www.remove.bg/upload) used to remove background from logo
 
-- Site used to change colour of image for logo design [here](https://pinetools.com/colorize-image)
-
+- [Site](https://pinetools.com/colorize-image) used to change colour of image for logo design
 
 - [Stack overflow](https://stackoverflow.com/):
-  - [Adding body overlay when a sidebar is open](https://stackoverflow.com/questions/43816377/add-body-overlay-when-a-sidebar-menu-opens/43816724)
-  - [Help with setting the size of the column width in bootstrap](https://stackoverflow.com/questions/25385289/how-to-set-the-size-of-a-column-in-a-bootstrap-responsive-table/25385798).
-  - [Help with removing labels from crispy forms](https://stackoverflow.com/questions/11472495/remove-labels-in-a-django-crispy-forms).
-  - [Help with reducing the inbox size in crispy forms](https://stackoverflow.com/questions/38684753/django-reducing-the-size-of-input-box-in-crispy-forms).
-  - [Using slugify for detailed urls](https://stackoverflow.com/questions/45847278/django-use-slugify-for-detail-url).
-  - [Comparing logged in user IF statement](https://stackoverflow.com/questions/43879330/djangounable-to-compare-the-logged-in-user-with-the-author-of-the-post)
-  - [To combine my querysets for search bar functionality](https://stackoverflow.com/questions/431628/how-to-combine-two-or-more-querysets-in-a-django-view)
-
+  - [Code](https://stackoverflow.com/questions/43816377/add-body-overlay-when-a-sidebar-menu-opens/43816724) help for adding body overlay when a sidebar is open
+  - [Code](https://stackoverflow.com/questions/25385289/how-to-set-the-size-of-a-column-in-a-bootstrap-responsive-table/25385798) help with setting the size of the column width in bootstrap
+  - [Code]((https://stackoverflow.com/questions/11472495/remove-labels-in-a-django-crispy-forms) help with removing labels from crispy forms
+  - [Code](https://stackoverflow.com/questions/38684753/django-reducing-the-size-of-input-box-in-crispy-forms) help with reducing the inbox size in crispy forms
+  - [Code](https://stackoverflow.com/questions/45847278/django-use-slugify-for-detail-url) help using slugify for detailed urls
+  - [Code](https://stackoverflow.com/questions/43879330/djangounable-to-compare-the-logged-in-user-with-the-author-of-the-post)help with IF statement for logged in user
+  - [Code](https://stackoverflow.com/questions/431628/how-to-combine-two-or-more-querysets-in-a-django-view) help to combine my querysets for search bar functionality
 
 #### Media
 

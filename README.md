@@ -496,18 +496,25 @@ The region chosen should be the one closest to you.
 
    - $ pip3 freeze > requirements.txt
 
-7. Go to settings.py and import dj database url;
-
-   - import dj_database_url
+7. To migrate to the postgress, go to settings.py and import `dj_database_url`;
 
    Then down in the databases setting comment out the default configuration and replace the default database with a call to dj_database_url.parse and give it the database URL from Heroku.
+
+   ![Config Vars](readme/media/database_url.png)
+
     > **Note:** You can either get the database url from your config variables in your app settings tab or from the command line by typing Heroku config.
 
 8. Apply all migrations using the following command;
 
    - $ python3 manage.py migrate
 
-    Your database should now be all set up.
+    After migrations have been applied amend your database configurations to;
+
+    ![Config Vars](readme/media/database_url2.png)
+
+     > **Note:** This will ensure that your Postgres database is used in deployment and your sqlite3 in development.
+    
+    Now your database should now be all set up.
 
 9. Create a super user to log in with using the following command;
 

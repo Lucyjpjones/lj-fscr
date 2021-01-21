@@ -323,6 +323,8 @@ To ensure my site was working correctly I carried out some manual function testi
 
 - [x] Each product card directs the user to the product detail page displaying the correct information
 - [x] Clicking the increment and decrement on the quantity selector changes the value as expected
+- [x] User can not decrement below 0 or increment above 99
+- [x] User can not type in a value out of the range 1-99
 - [x] Selecting a value from the size selector dropdown updates the field correctly
 - [x] Product is added to the bag successfully after clicking 'add to bag'
 - [x] If product is already in bag, quantity is incremented and product is not duplicated
@@ -345,6 +347,8 @@ When logged in as Admin user...
 
 - [x] Each programme card directs the user to the programme detail page displaying the correct information
 - [x] Clicking the increment and decrement on the quantity selector changes the value as expected
+- [x] User can not decrement below 0 or increment above 99
+- [x] User can not type in a value out of the range 1-99
 - [x] Programme is added to the bag successfully after clicking 'add to bag'
 - [x] If programme is already in bag, quantity is incremented and programme is not duplicated
 - [x] The review carousel automatically cycles through a series of callout messages with expected interval time
@@ -374,6 +378,7 @@ When logged in as Admin user...
 - [x] By using the increment and decrement buttons, and clicking 'update' I am able to amend the quantity of an item in the bag
 - [x] I am able to enter a numeric value into the field to update the quantity
 - [x] I am not able to enter a non numeric value into the fields
+- [x] I am not able to update quantity with value outside of range 0-99
 - [x] I can remove the item from the bag by clicking 'remove'
 - [x] I can remove the item from the bag by entering 0 into the quantity field and clicking 'update'
 - [x] If amendments are made in the bag subtotal is updated accordingly

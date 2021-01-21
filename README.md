@@ -218,7 +218,7 @@ As the site owner, I want to be able to continually monitor and update the site 
 | 28                             | Site Owner   | Edit/Update a product/programme                                               | Change product/programme prices, descriptions, images, and other details                              |
 | 29                             | Site Owner   | Delete a product/programme                                                    | Remove items that are no longer available for sale                                                   |
 | 30                             | Site Owner   | Add a blog                                                          | Add new blogs to share with site members                                                             |
-| 30                             | Site Owner   | Links to FSCR social media platforms                                                          | To connect with our clients and strengthen consumer loyalty                                                             |
+| 31                             | Site Owner   | Links to FSCR social media platforms                                                          | To connect with our clients and strengthen consumer loyalty                                                             |
 
 ### **<ins>Wireframes</ins>**
 
@@ -476,14 +476,14 @@ The project was connected to Heroku using automatic deployment from my GitPod re
 
 1. Log in (or Register) to [Heroku](https://www.heroku.com/) and from your dashboard click 'new' > 'create new app'.
 
-   ![New app btn](media/new-app.png)
+   ![New app btn](readme/media/new-app.png)
 
 2. Enter your 'App name' and choose the appropriate region, then click 'Create app'.
    > **Note:** 
  The app name must be unique, all lowercase, and '-' to be used instead of spaces.
 The region chosen should be the one closest to you.
 
-   ![Create new app](media/create-new-app.png)
+   ![Create new app](readme/media/create-new-app.png)
 
 3. Then on the 'Resources' tab, search and add on the Heroku Postgres database.
 
@@ -516,7 +516,7 @@ The region chosen should be the one closest to you.
 
 10. Go to the Settings tab on Heroku, scroll to the 'Config Vars' section, and click 'Reveal Config Vars'. 
 
-   ![Config Vars](media/config-vars.png)
+   ![Config Vars](readme/media/config-vars.png)
 
    Enter the variables (key and value) contained in your environment settings or stored in an env.py. The keys are listed below and values are inputted by the user.
 
@@ -568,19 +568,19 @@ The region chosen should be the one closest to you.
 
 1. From the Heroku deploy tab, select the Deployment method 'GitHub'.
 
-    ![Deployment method](media/deployment-method.jpg)
+    ![Deployment method](readme/media/deployment-method.jpg)
 
 2. On the 'Connect to GitHub' section make sure your GitHub profile is displayed then add your repository name and click 'Search'.
 
     > **Note:** This is the name of your repo in GitHub. It is good practice to use an identical name for your Heroku app.
 
-    ![Deploy GitHub](media/deployment-git.jpg)
+    ![Deploy GitHub](readme/media/deployment-git.jpg)
 
 3. Your repo should now be displayed below, click 'Connect' to connect to this app.
 
 4. Go to the Deploy tab on Heroku and under the Automatic deployment section, click 'Enable Automatic Deploys'. Then under Manual deploy click 'Deploy Branch'.
 
-   ![Enable Automatic Deploys](media/enable-deploys.jpg)
+   ![Enable Automatic Deploys](readme/media/enable-deploys.jpg)
 
    - Heroku will now receive the code from GitHub and start building the app using the required packages.
    - Once built you will receive the message 'Your app was successfully deployed' and you can click 'View' to launch your new app.
@@ -745,7 +745,7 @@ Follow the steps below if you are wanting to propose changes to the project or t
 
   2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
 
-     ![forking](media/fork.png)
+     ![forking](readme/media/fork.png)
 
   3. You should now have a copy of the original repository in your GitHub account.
 
@@ -758,11 +758,11 @@ When you clone a repository, the repository is copied on to your local machine.
 
 2. Under the repository name, click the "download code" option.
 
-   ![Clone](media/clone.png)
+   ![Clone](readme/media/clone.png)
 
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 
-   ![Clone-link](media/clone-link.png)
+   ![Clone-link](readme/media/clone-link.png)
 
 4. Open Git Bash
 

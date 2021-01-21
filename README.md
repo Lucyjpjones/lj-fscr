@@ -391,73 +391,75 @@ I will continue to update my website to meet my clients expectations. I have fur
 #### Frameworks, Libraries & Programs
 
 - [**Django**](https://www.djangoproject.com/)
-
   - Python Web framework used to the build site.
 
+- [**Git**](https://git-scm.com/)
+  - Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
+
+- [**GitHub**](https://github.com/)
+  - GitHub is used to store the project code after being pushed from Git.
+
+- [**Heroku**](https://github.com/)
+  - Heroku is the app platform I deployed my project to.
+
+- [**jQuery:**](https://jquery.com/)
+  - A javascript libraries used to bring simplicity.
+
+- [**Bootstrap 4.5.3**](https://getbootstrap.com/)
+  - Bootstrap was used to assist with the responsiveness and styling of the website using design templates.
+
 - [**Boto3**](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+    - Python SDK for AWS, used to directly create, update, and delete AWS resources from my Python scripts.
 
 - [**gunicorn**](https://gunicorn.org/)
    - WSGI server used to take care of everything happening between the web server and web application.
 
-- [**pillow**](https://www.djangoproject.com/)
+- [**pillow**](https://pypi.org/project/Pillow/2.2.1/)
+    - Python Imaging Library (PIL), used to add support for opening, manipulating, and saving images.
 
-- [**psycopg2**](https://www.djangoproject.com/)
+- [**psycopg2**](https://pypi.org/project/psycopg2/)
+    - PostgreSQL database adapter
 
 - [**AWS**](https://aws.amazon.com/)
-
   - A cloud-based storage service used to store static and ,media files.
 
 - [**Stripe**](https://stripe.com/gb)
-
   - Stripe was used to deal with payments.
 
-- [**Temp Mail**](https://temp-mail.org/en/)
+- [**Emailjs**](https://www.emailjs.com/)
+  - Used to send emails directly from a from to my Gmail account.
 
+- [**Temp Mail**](https://temp-mail.org/en/)
   - Temp Mail was used to provide temporary, secure, anonymous, free, disposable email addresses for testing purposes.
 
 - [**Google fonts**](https://fonts.google.com/)
-
   - Google fonts were used to import the fonts into the CSS file which is used on all pages throughout the project.
 
 - [**Font Awesome 4.7.0**](https://fontawesome.com/)
-
   - Font Awesome was used to add icons for aesthetic and UX purposes.
 
-- [**jQuery:**](https://jquery.com/)
-
-  - jQuery came with Materialize to make the components used responsive.
-  - Included at end of body tag within HTML file to ensure a smooth running of HMTL and CSS.
-
-- [**Git**](https://git-scm.com/)
-
-  - Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
-
-- [**GitHub**](https://github.com/)
-
-  - GitHub is used to store the project code after being pushed from Git.
-
-- [**Heroku**](https://github.com/)
-
-  - Heroku is the app platform I deployed my project to.
-
 - [**Flaticon**](https://www.flaticon.com/)
-
   - Provided icons throughout site.
 
 - [**Balsamiq**](https://balsamiq.com/)
-
   - Balsamiq was used to create the wireframes during the design process.
 
 - [**Grammarly**](https://www.grammarly.com/)
-
   - Grammarly was used to ensure any grammar errors are eliminated.
 
 - [**HTML Formatter**](https://www.freeformatter.com/html-formatter.html) and [**CSS Formatter**](https://www.freeformatter.com/css-beautifier.html)
+  - Used to format my HTML and CSS files with the desired indentation level for optimal readability.
 
-  - Used to format my HTML and CSS file with the desired indentation level for optimal readability.
+- [**W3 Validator**](https://validator.w3.org/#validate_by_input) and [**W3C CSS Validator**](https://jigsaw.w3.org/css-validator/#validate_by_input)
+  - Used to validate my HTML and CSS files
+
+- [**JShint**](https://jshint.com)
+    - Used to validate JS code
+
+- [**PEP8 online**](http://pep8online.com)
+    - Used to check code for PEP8 requirements.
 
 - [**Tables Generator**](https://www.tablesgenerator.com/markdown_tables)
-
   - Used to create tables in my readme file.
 
 - [**Favicon**](https://favicon.io/)

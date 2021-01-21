@@ -79,9 +79,12 @@ def adjust_bag(request, item_id, category):
     if category == 'product':
         product = get_object_or_404(Product, pk=item_id)
         if size:
-            if quantity > 0:
+            if quantity in range(0, 99):
                 bag[category][item_id]['items_by_size'][size] = quantity
                 messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {bag[category][item_id]["items_by_size"][size]}')
+            elif quantity > 99:
+                messages.error(request, "Value must be less than or equal \
+                                to 99")
             else:
                 del bag[category][item_id]['items_by_size'][size]
                 if not bag[category][item_id]['items_by_size']:
@@ -90,11 +93,14 @@ def adjust_bag(request, item_id, category):
                                  f'Removed size {size.upper()}'
                                  f'{product.name} from your bag')
         else:
-            if quantity > 0:
+            if quantity in range(0, 99):
                 bag[category][item_id] = quantity
                 messages.success(request,
                                  f'Updated {product.name} '
                                  f'quantity to {bag[category][item_id]}')
+            elif quantity > 99:
+                messages.error(request, "Value must be less than or equal \
+                                to 99")
             else:
                 del bag[category][item_id]
                 messages.success(request,
@@ -103,11 +109,14 @@ def adjust_bag(request, item_id, category):
 
     elif category == 'programme':
         programme = get_object_or_404(Programme, pk=item_id)
-        if quantity > 0:
+        if quantity in range(0, 99):
             bag[category][item_id] = quantity
             messages.success(request,
                              f'Updated {programme.name} '
                              f'quantity to {bag[category][item_id]}')
+        elif quantity > 99:
+            messages.error(request, "Value must be less than or equal \
+                                to 99")
         else:
             del bag[category][item_id]
             messages.success(request,

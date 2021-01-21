@@ -527,16 +527,20 @@ The region chosen should be the one closest to you.
 
    Enter the variables (key and value) contained in your environment settings or stored in an env.py. The keys are listed below and values are inputted by the user.
 
-        - AWS_ACCESS_KEY_ID
-        - AWS_SECRET_KEY_ID
-        - DATABASE_URL
-        - EMAIL_HOST_PASS
-        - EMAIL_HOST_USER
-        - SECRET_KEY
-        - STRIPE_PUBLIC_KEY
-        - STRIPE_SECRET_KEY
-        - STRIPE_WH_SECRET
-        - USE_AWS
+| Key               | Value               |
+|-------------------|---------------------|
+| AWS_ACCESS_KEY_ID | To be added by user |
+| AWS_SECRET_KEY_ID | To be added by user |
+| DATABASE_URL      | To be added by user |
+| EMAIL_HOST_PASS   | To be added by user |
+| EMAIL_HOST_USER   | To be added by user |
+| SECRET_KEY        | To be added by user |
+| STRIPE_PUBLIC_KEY | To be added by user |
+| STRIPE_SECRET_KEY | To be added by user |
+| STRIPE_WH_SECRET  | To be added by user |
+
+
+ If you want to include social account login's there is various ways you can set it up. I Used this [site](https://learndjango.com/tutorials/django-allauth-tutorial) to help implement them on my site.
 
 11. Install gunicorn using the following command;
 
@@ -571,6 +575,7 @@ The region chosen should be the one closest to you.
 
     - $ git push heroku master 
 
+
 **To set up Automatic deployment to Heroku**
 
 1. From the Heroku deploy tab, select the Deployment method 'GitHub'.
@@ -595,8 +600,6 @@ The region chosen should be the one closest to you.
         > **Note:** 
         In Manual deploy dropdown 'master' is selected'
 
-
-Add Secret key info!!!!!!!
 
 #### Deploy to AWS
 
@@ -806,21 +809,21 @@ When you clone a repository, the repository is copied on to your local machine.
 **Creating env.py file** 
 
 1. Add a env.py file to store environment variables:
-   - Import os 
-   - os.environ.setdefault("AWS_ACCESS_KEY_ID", "To be added by user") 
-   - os.environ.setdefault("AWS_SECRET_KEY_ID", "To be added by user") 
-   - os.environ.setdefault("DATABASE_URL", "To be added by user") 
-   - os.environ.setdefault("DISABLE_COLLECTSTATIC", "To be added by user") 
-     - So heroku wil not start collecting static files.
-   - os.environ.setdefault("EMAIL_HOST_PASS", "To be added by user")
-   - os.environ.setdefault("EMAIL_HOST_USER", "To be added by user")
-   - os.environ.setdefault("SECRET_KEY", "To be added by user")
-   - os.environ.setdefault("STRIPE_PUBLIC_KEY", "To be added by user")
-   - os.environ.setdefault("STRIPE_SECRET_KEY", "To be added by user")
-   - os.environ.setdefault("STRIPE_WH_SECRET", "To be added by user")
-   - os.environ.setdefault("USE_AWS", "To be added by user")
 
-    > **Note:** I used [RandomKeygen.com](https://randomkeygen.com/) to get my secure SECRET_KEY password. A SECRET_KEY is required when using the flash and session functions of Flask.
+    `os.environ.setdefault("Key", "Value")`
+
+
+| Key               | Value               |
+|-------------------|---------------------|
+| AWS_ACCESS_KEY_ID | To be added by user |
+| AWS_SECRET_KEY_ID | To be added by user |
+| DATABASE_URL      | To be added by user |
+| EMAIL_HOST_PASS   | To be added by user |
+| EMAIL_HOST_USER   | To be added by user |
+| SECRET_KEY        | To be added by user |
+| STRIPE_PUBLIC_KEY | To be added by user |
+| STRIPE_SECRET_KEY | To be added by user |
+| STRIPE_WH_SECRET  | To be added by user |
 
  2. Add env.py to your .gitignore file to ensure this file is never pushed to GitHub.
     > **Note:** The env.py mustn't be tracked as any GitHub user can access your confidential data.
@@ -836,6 +839,8 @@ When you clone a repository, the repository is copied on to your local machine.
 - Code used to help create blog and forum app [here](https://djangocentral.com/building-a-blog-application-with-django/)
 
 - Code used to help create sidenav [here](https://bootstrapious.com/p/bootstrap-sidebar)
+
+- [Social login](https://learndjango.com/tutorials/django-allauth-tutorial)
 
 - Code used to help with [linking to id on a page using Django](https://stackoverflow.com/questions/31643670/link-a-div-in-another-page-in-url-with-an-anchor-tag-django)
 

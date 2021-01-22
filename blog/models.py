@@ -8,7 +8,11 @@ STATUS = (
 
 
 class Post(models.Model):
-    ''' Blog post, ordered by newest first '''
+    '''
+    Blog post, ordered by newest first
+    [Code help from 'https://djangocentral.com/building-a-blog-
+    application-with-django/']
+    '''
     post_type = models.CharField(default='article', max_length=50)
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -30,7 +34,9 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    ''' Comment on blog post, ordered by newest first '''
+    '''
+    Comment on blog post, ordered by newest first
+    '''
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name='comments')
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=None)

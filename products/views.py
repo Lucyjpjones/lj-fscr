@@ -10,8 +10,8 @@ from .forms import ProductForm
 
 def all_products(request):
     """
-    A view to show all products, including sorting and filtering by
-    category name
+    A view to show all products (excluding discontinued), including
+    sorting and filtering by category name
     """
 
     products = Product.objects.filter(discontinued=False)

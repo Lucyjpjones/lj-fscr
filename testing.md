@@ -339,6 +339,8 @@ When logged in as Admin user...
 - [x] If not image is added to the form submission, the expected 'no image' png file is present 
 - [x] The edit button is visible on the products page and each product detail page
 - [x] Clicking the edit button directs the user to the edit product page with fields prefilled with current information
+- [x] After selecting an image the file name appears as expected
+- [x] Selecting 'Remove' and saving changes removes current image as expected
 - [x] After submitting the edit form user is redirected to the product detail page with updated the information
 - [x] The delete button is visible on the products page and each product detail page
 - [x] After clicking the 'delete' button the product is removed from the site and no longer visible in Django admin
@@ -364,6 +366,8 @@ When logged in as Admin user...
 - [x] If not image is added to the form submission, the expected 'no image' png file is present 
 - [x] The edit button is visible on the programmes page and each programme detail page
 - [x] Clicking the edit button directs the user to the edit programme page with fields prefilled with current information
+- [x] After selecting an image the file name appears as expected
+- [x] Selecting 'Remove' and saving changes removes current image as expected
 - [x] After submitting the edit form user is redirected to the programme detail page with the updated information
 - [x] The delete button is visible on the programmes page and each programme detail page
 - [x] After clicking the 'delete' button the programme is removed from the site and no longer visible in Django admin

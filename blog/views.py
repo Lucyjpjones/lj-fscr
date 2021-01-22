@@ -8,8 +8,11 @@ from django.db.models.functions import Lower
 
 @login_required
 def all_posts(request):
+    """
+    A view to show all blog posts, including sorting and filtering by
+    post type
+    """
     posts = Post.objects.filter(status=1).order_by('-created_on')
-    query = None
     sort = None
     direction = None
 
@@ -35,7 +38,6 @@ def all_posts(request):
 
     context = {
         'posts': posts,
-        'search_term': query,
         'current_sorting': current_sorting,
     }
 
@@ -78,7 +80,10 @@ def post_detail(request, slug):
 
 @login_required
 def delete_own_comment(request, comment_id, slug):
-    """ Delete own comment from the blog """
+    """
+    Delete own comment from the blog,
+    gets comment by post slug and comment id
+    """
     post = get_object_or_404(Post, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
     comment.delete()

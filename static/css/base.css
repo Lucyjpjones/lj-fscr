@@ -108,6 +108,9 @@ p,
 	color: #f8f8f8;
 }
 
+.text-filename {
+    color: #007bff;
+}
 
 /* Buttons */
 
@@ -387,7 +390,6 @@ header {
 	width: 100%;
 }
 
-
 /* -------------------- Programmes app  */
 
 
@@ -412,6 +414,10 @@ header {
 	height: 260px;
 }
 
+/* -------------------- Admin */
+.widget-img {
+    object-fit: cover;
+}
 
 /* -------------------- Bag app  */
 

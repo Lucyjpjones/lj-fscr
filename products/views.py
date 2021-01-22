@@ -9,10 +9,12 @@ from .forms import ProductForm
 
 
 def all_products(request):
-    """ A view to show all products, including sorting and search queries """
+    """
+    A view to show all products, including sorting and filtering by
+    category name
+    """
 
     products = Product.objects.filter(discontinued=False)
-    query = None
     categories = None
     sort = None
     direction = None
@@ -36,22 +38,10 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-        if 'q' in request.GET:
-            query = request.GET['q']
-            if not query:
-                messages.error(request,
-                               "You didn't enter any search criteria!")
-                return redirect(reverse('products'))
-
-            queries = Q(name__icontains=query) | Q(
-                                        description__icontains=query)
-            products = products.filter(queries)
-
     current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
-        'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
     }
@@ -60,7 +50,9 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details """
+    """
+    A view to show individual product details
+    """
 
     product = get_object_or_404(Product, pk=product_id)
 
@@ -74,7 +66,11 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Add a product to the store """
+    """
+    If logged in as superuser can add a new product to the store
+    Gets product form, if user input is valid, saves product and redirects
+    user to the product detail page
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -101,7 +97,11 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product in the store """
+    """
+    If logged in as superuser can edit a product in the store
+    Gets product form by product id, if user input is valid, updates
+    product form and redirects user to the product detail page
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -130,7 +130,12 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the store """
+    """
+    If logged in as superuser can delete a product in the store
+    Gets product form by product id, changes discontinued field to
+    True and saves product - Product is removed from view but is
+    still available in admin
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))

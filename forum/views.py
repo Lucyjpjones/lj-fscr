@@ -8,30 +8,15 @@ from .models import Thread, Reply
 
 @login_required
 def all_threads(request):
+    """
+    A view to show all thread posts, filtered by active and
+    ordered by date posted
+    """
     threads = Thread.objects.filter(status=1).order_by('-created_on')
     replies = Reply.objects.all
-    sort = None
-    direction = None
-
-    if request.GET:
-        if 'sort' in request.GET:
-            sortkey = request.GET['sort']
-            sort = sortkey
-            if sortkey == 'topic':
-                sortkey = 'lower_topic'
-                threads = threads.annotate(lower_topic=Lower('topic'))
-
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
-            threads = threads.order_by(sortkey)
-
-    current_sorting = f'{sort}_{direction}'
 
     context = {
         'threads': threads,
-        'current_sorting': current_sorting,
         'replies': replies
     }
 
@@ -40,28 +25,27 @@ def all_threads(request):
 
 @login_required
 def thread_detail(request, slug):
+    ''' A view that renders the thread details and shows active replies
+    Creates reply object, assigns reply to current thread, gets
+    username, saves reply to database then clears from and redirects
+    the user
+    [Code taken from 'https://djangocentral.com/creating-comments-
+    system-with-django/']
+    '''
     template_name = 'forum/thread_detail.html'
     thread = get_object_or_404(Thread, slug=slug)
     replies = thread.replies.filter(active=True)
     new_reply = None
 
-    # Comment posted
     if request.method == 'POST':
         reply_form = CommentForm(data=request.POST)
         if reply_form.is_valid():
-            # Create Comment object but don't save to database yet
             new_reply = reply_form.save(commit=False)
-            # Assign the current post to the comment
             new_reply.thread = thread
-            # Get username
             new_reply.user = request.user
-            # Save the comment to the database
             new_reply.save()
-            # Clear comment field after save
             reply_form = CommentForm()
-            # success message
             messages.success(request, 'Successfully added reply!')
-            # Redirect to avoid resubmission
             return redirect(reverse('thread_detail', args=[thread.slug]))
     else:
         reply_form = CommentForm()
@@ -74,8 +58,11 @@ def thread_detail(request, slug):
 
 @login_required
 def add_thread(request):
-
-    """ Add a post to forum """
+    """
+    If logged in can add a new thread to the forum
+    Gets thread form, if user input is valid, saves thread and redirects
+    user to the thread detail page
+    """
     if request.method == 'POST':
         form = ThreadForm(request.POST)
         if form.is_valid():
@@ -102,8 +89,11 @@ def add_thread(request):
 
 @login_required
 def edit_thread(request, slug):
-    """ Edit a thread in the forum """
-
+    """
+    If logged in can edit own thread in the forum
+    Gets thread form by thread slug, if user input is valid, updates
+    thread form and redirects user to the thread detail page
+    """
     thread = get_object_or_404(Thread, slug=slug)
     if request.method == 'POST':
         form = ThreadForm(request.POST, instance=thread)
@@ -129,7 +119,10 @@ def edit_thread(request, slug):
 
 @login_required
 def delete_own_reply(request, reply_id, slug):
-    """ Delete own comment from the blog """
+    """
+    Delete own reply from the thread,
+    gets reply by thread slug and comment id
+    """
     thread = get_object_or_404(Thread, slug=slug)
     reply = get_object_or_404(Reply, pk=reply_id)
     reply.delete()

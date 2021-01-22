@@ -76,6 +76,9 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    Line item model referencing the products
+    """
     order = models.ForeignKey(Order, null=False,
                               blank=False, on_delete=models.CASCADE,
                               related_name='lineitems')
@@ -100,6 +103,9 @@ class OrderLineItem(models.Model):
 
 
 class ProgOrderLineItem(models.Model):
+    """
+    Line item model referencing the programmes
+    """
     order = models.ForeignKey(Order, null=False,
                               blank=False, on_delete=models.CASCADE,
                               related_name='proglineitems')

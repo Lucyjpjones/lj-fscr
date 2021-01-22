@@ -139,7 +139,7 @@ I created a personalised favicon for the site to add branding, and to make it ea
 
 To help visualize my database, I created a diagram using [dbdiagram](https://dbdiagram.io/) which illustrates the relationships between my models.
 
-<img src="readme/media/schema.png">
+<img src="readme/media/data_schema.png">
 
 The **Product model** within the product's app, is used to store information about individual products.
 The **Category model** within the product's app, is used to group products into specific categories.

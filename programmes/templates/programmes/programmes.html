@@ -77,30 +77,30 @@
                      <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ programme.rating }}</small></p>
                      {% if request.user.is_superuser %}
                      <div>
-                     <a class="btn red-border-btn px-2 py-1 p-font rounded-0" href="{% url 'edit_programme' programme.id %}">Edit</a>
-                     <!-- Button trigger modal -->
-                    <a class="btn red-btn px-2 py-1 p-font rounded-0" data-toggle="modal" data-target="#progDelete{{ programme.id }}">Delete</a>
-                    <!-- Modal -->
-                    <div class="modal fade" id="progDelete{{ programme.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content rounded-0">
-                                <div class="modal-header border-0">
+                        <a class="btn red-border-btn px-2 py-1 p-font rounded-0" href="{% url 'edit_programme' programme.id %}">Edit</a>
+                        <!-- Button trigger modal -->
+                        <a class="btn red-btn px-2 py-1 p-font rounded-0" data-toggle="modal" data-target="#progDelete{{ programme.id }}">Delete</a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="progDelete{{ programme.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                           <div class="modal-dialog">
+                              <div class="modal-content rounded-0">
+                                 <div class="modal-header border-0">
                                     <h5 class="p-font ml-2 mt-2" id="staticBackdropLabel">Are you sure you want to delete {{ programme.name }}?</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     </button>
-                                </div>
-                                <div class="modal-body text-muted ml-2">
+                                 </div>
+                                 <div class="modal-body text-muted ml-2">
                                     Deleting the programme will remove it from the site but will not be permanently deleted from the database
-                                </div>
-                                <div class="modal-footer border-0">
+                                 </div>
+                                 <div class="modal-footer border-0">
                                     <a class="btn navy-border-btn rounded-0" data-dismiss="modal">Close</a>
                                     <a href="{% url 'delete_programme' programme.id %}" class="btn navy-btn rounded-0">Confirm</a>
-                                </div>
-                            </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                    </div>
-                    </div>
+                     </div>
                      {% endif %}
                   </div>
                </div>

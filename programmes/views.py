@@ -8,7 +8,10 @@ from .forms import ProgrammeForm
 
 
 def all_programmes(request):
-    """ A view to show all programmes, including sorting and search queries """
+    """
+    A view to show all programmes, including sorting and filtering by
+    category name
+    """
 
     programmes = Programme.objects.filter(discontinued=False)
     query = None
@@ -73,7 +76,11 @@ def programme_detail(request, programme_id):
 
 @login_required
 def add_programme(request):
-    """ Add a programme to the store """
+    """
+    If logged in as superuser can add a new programme to the store
+    Gets programme form, if user input is valid, saves programme and redirects
+    user to the programme detail page
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -100,7 +107,11 @@ def add_programme(request):
 
 @login_required
 def edit_programme(request, programme_id):
-    """ Edit a programme in the store """
+    """
+    If logged in as superuser can edit a programme in the store
+    Gets programme form by programme id, if user input is valid, updates
+    programme form and redirects user to the programme detail page
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -130,7 +141,12 @@ def edit_programme(request, programme_id):
 
 @login_required
 def delete_programme(request, programme_id):
-    """ Delete a programme from the store """
+    """
+    If logged in as superuser can delete a programme in the store
+    Gets programme form by programme id, changes discontinued field to
+    True and saves programme - Programme is removed from view but is
+    still available in admin
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))

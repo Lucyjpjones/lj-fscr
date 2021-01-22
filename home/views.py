@@ -8,8 +8,9 @@ from itertools import chain
 
 
 def index(request):
-    """ A view to return the index page """
-
+    """
+    A view to return the index page
+    """
     posts = Post.objects.filter(status=1).order_by('-created_on')[:2]
     context = {
         'posts': posts,
@@ -19,9 +20,13 @@ def index(request):
 
 
 def search_results(request):
-    """ A view to return the search page """
+    """
+    A view to return the search page
+    Creates empty list, if query in get request redirects user to
+    search page with filtered results, if no query submitted redirects
+    user to search view with error message
+    """
 
-    # search bar queries
     query = None
     results_list = ()
 
@@ -49,12 +54,16 @@ def search_results(request):
 
 
 def about(request):
-    """ A view to return the about page """
+    """
+    A view to return the about page
+    """
 
     return render(request, 'home/about.html')
 
 
 def meet_the_coaches(request):
-    """ A view to return the coaches page """
+    """
+    A view to return the coaches page
+    """
 
     return render(request, 'home/meet_the_coaches.html')

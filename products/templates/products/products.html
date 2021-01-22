@@ -83,11 +83,11 @@
                      <a class="btn red-border-btn px-2 py-1 p-font rounded-0" href="{% url 'edit_product' product.id %}">Edit</a>
                      <a class="btn red-btn px-2 py-1 p-font rounded-0" data-toggle="modal" data-target="#prodDelete{{ product.id }}">Delete</a>
                      <!-- Modal -->
-                     <div class="modal fade" id="prodDelete{{ product.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                     <div class="modal fade" id="prodDelete{{ product.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="{{ product.id }}" aria-hidden="true">
                         <div class="modal-dialog">
                            <div class="modal-content rounded-0">
                               <div class="modal-header border-0">
-                                 <h5 class="p-font ml-2 mt-2">Are you sure you want to delete {{ product.name }}?</h5>
+                                 <h5 class="p-font ml-2 mt-2" id="{{ product.id }}">Are you sure you want to delete {{ product.name }}?</h5>
                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                  <span aria-hidden="true">&times;</span>
                                  </button>

@@ -55,7 +55,7 @@ Each programme detail page displays the programme's image, name, price, rating, 
 
 **7. Easily access contact details**
 
-I have included a contact form on the home page which is also easily navigated to via the main nav menu. This has been set up using EmailJS with my own customised email template to assist with organisation of user enquiries.
+I have included a contact form on the home page which is also easily navigated to via the main nav menu. This has been set up using EmailJS with my own customised email template to assist with the organisation of user enquiries.
 
 <img src="readme/media/us-6.png">
 
@@ -73,7 +73,7 @@ I created a blog app that can only be viewed by site members. The page is availa
 
 <img src="readme/media/us-8.png">
 
-- The delete functon has a confirmation modal which gives an extra step for users to consider their action.
+- The delete function has a confirmation modal which gives an extra step for users to consider their action.
 
 <img src="readme/media/us-88.png">
 
@@ -83,7 +83,7 @@ I created a forum app that can only be accessed by site members. When a user is 
 
 <img src="readme/media/us-9.png">
 
-- The delete functon has a confirmation modal which gives an extra step for users to consider their action.
+- The delete function has a confirmation modal which gives an extra step for users to consider their action.
 
 <img src="readme/media/us-99.png">
 
@@ -124,7 +124,7 @@ If a user forgets their password they have the option to click the 'forgot passw
 **15. Have a personalised user profile**
 
 The profile page is specific to each user with a personalised username greeting, the option to save their own entered details, and a log of their order history.
-- I added the 'dictsortreserved' filter with key 'date' to ensure orders are listed in descending order with most recent showing first.
+- I added the 'dictsortreversed' filter with key 'date' to ensure orders are listed in descending order with most recent showing first.
 
 <img src="readme/media/us-15.png">
 
@@ -174,7 +174,7 @@ The bag view allows the user to view all the products and programmes they have a
 
 **22. Adjust the quantity of individual items in my bag**
 
-The user has the ability to adjust the quantity of products and programmes in their bag before continuing to checkout.
+The user has the ability to adjust the number of products and programmes in their bag before continuing to checkout.
 
 <img src="readme/media/us-22.png">
 
@@ -225,7 +225,7 @@ When logged into the admin, the admin user can add a new blog to the site.
 **31. Links to FSCR social media platforms**
 
 Social media platform links are featured in the page footer below the copyright statement.
-- At present no social accounts exist for FSCR so all links direct the user to the exteranl sites homepage.
+- At present no social accounts exist for FSCR so all links direct the user to the homepage of the external site.
 
     <img src="readme/media/us-31.png">
 
@@ -264,7 +264,7 @@ To ensure my site was working correctly I carried out some manual function testi
 - [x] After entering keywords and hitting enter or the search icon, user is directed to the search page template with appropriate results
 - [x] If user enters a keyword with no results the correct message is displayed
 - [x] When not logged, under the profile icon user has the options of 'register' and 'login'
-- [x] When logged in, under the profile icon user has the options of 'My profile' and 'logout'
+- [x] When logged in, under the profile icon user has the options of 'My Profile' and 'logout'
 - [x] When logged in as admin, under the profile icon user has the added options of 'product management' and 'programme management'
 - [x] All links displayed on the profile dropdown menu direct the user to the expected page
 - [x] When the bag icon is clicked user is directed to the bag template
@@ -275,7 +275,7 @@ To ensure my site was working correctly I carried out some manual function testi
 
 - [x] The sort functionality returns items in the order expected. 
     - This was tested on the products, programmes, and blog page
-- [x] The filter functionality returns only items matching the chosen critera
+- [x] The filter functionality returns only items matching the chosen criteria
     - This was tested on the products, programmes, and blog page
 - [x] If user selects 'clear all' the filter is removed and all items are displayed
     - This was tested on the products, programmes, and blog page
@@ -297,9 +297,9 @@ To ensure my site was working correctly I carried out some manual function testi
 - [x] If the user enters their email and clicks 'reset my password' they receive an email with a link to reset their password
 - [x] After user clicks the link in their email they are redirected to the 'change password' page
 - [x] After submitting a new password the user is presented with a success message 'Your password is now changed' and they can login with their new password
-- [x] If the user clicks 'remember me' they are directed to the forgotten password page as expected
+- [x] If the user clicks 'Remember me' they are directed to the forgotten password page as expected
 - [x] If a user is logged in, the logout option is visible in the profile icon menu
-- [x] If a user clicks 'logout' they are directed to the logout page where they can confirm action
+- [x] If a user clicks 'logout' they are directed to the logout page where they can confirm their action
 
 #### Home
 - [x] The callout carousel automatically cycles through a series of callout messages with expected interval time
@@ -379,9 +379,9 @@ When logged in as Admin user...
 - [x] Clicking 'shop products' navigates the user back to the products page
 - [x] Clicking 'shop programmes' navigates the user back to the programmes page
 - [x] Clicking 'secure checkout' navigates the user to the checkout page as expected
-- [x] By using the increment and decrement buttons, and clicking 'update' I am able to amend the quantity of an item in the bag
-- [x] I am able to enter a numeric value into the field to update the quantity
-- [x] I am not able to enter a non numeric value into the fields
+- [x] By using the increment and decrement buttons, and clicking 'update' I can to amend the quantity of an item in the bag
+- [x] I can enter a numeric value into the field to update the quantity
+- [x] I am not able to enter a non-numeric value into the fields
 - [x] I am not able to update quantity with value outside of range 0-99
 - [x] I can remove the item from the bag by clicking 'remove'
 - [x] I can remove the item from the bag by entering 0 into the quantity field and clicking 'update'
@@ -399,14 +399,14 @@ When logged in as Admin user...
 - [x] After entering details and clicking 'checkout' the loading page is present
 - [x] The user is redirected to the checkout success page after completing order
 - [x] The checkout success page contains all the correct personal details for the user and items purchased
-- [x] After successful checkout the user recieves an email with their order details
-- [x] The delivery amount is showing as 10% of subtotal cost
+- [x] After successful checkout the user receives an email with their order details
+- [x] The delivery amount is showing as 10% of the subtotal cost
 - [x] If the order is over $40 the delivery amount is 0
 
 #### Blog
 
 - [x] The 'read me' link for each blog directs the user to the post detail page, displaying the correct information
-- [x] The user is able to toggle references making text visible or hidden
+- [x] The user can toggle references making text visible or hidden
 - [x] If user enters a comment and clicks submit their comment is added successfully
 - [x] The posted comment is displayed with the correct DateTime and logged in username
 - [x] After submitting a comment the input field is cleared
@@ -472,7 +472,7 @@ To set up and use Coverage, I used the following commands;
 
     `$ pip3 freeze > requirements.txt`
 
-* To run all the tests written in a certain app and generate a report (second command is to view this report in the terminal).
+* To run all the tests written in a certain app and generate a report (second command is to view the report in the terminal).
 
     `$ coverage run --source=<'app name'> manage.py test`
 
@@ -565,11 +565,11 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 - [**PEP8 online check**](http://pep8online.com/checkresult)
 
-I'm ignoring any warnings on migration files since these are automatically generated files so may ignore style rules for efficiency reasons. Also as developers we usually don't need to touch them so they don't need to be perfectly readable.
+I'm ignoring any warnings on migration files since these are automatically generated files so may ignore style rules for efficiency reasons. Also as developers, we usually don't need to touch them so they don't need to be perfectly readable.
 
 `DJ01 Avoid using null=True on string-based fields`
 
-I decided not to remove not to remove from my code as
+I decided not to remove from my code as
 
 `E501 line too long`
 

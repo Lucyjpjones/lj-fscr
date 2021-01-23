@@ -767,7 +767,7 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
 
 </details>
 
-Sensitive data for your project can either be stored in your environment settings or be added to an env.py file in your workspace.
+`Sensitive data` for your project can either be stored in your environment settings or be added to an env.py file in your workspace.
 
 <details>
 <summary>More details on creating an env.py file</summary> 

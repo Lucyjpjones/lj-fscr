@@ -490,6 +490,7 @@ The project was deployed to Heroku with all static and media files stored on Ama
 <details>
 <summary>Deploying to Heroku</summary>
 <p>
+
 **Note:** Before following the below steps ensure you have already created your new repo in Github.
 
 1. Log in (or Register) to [Heroku](https://www.heroku.com/) and from your dashboard click 'new' > 'create new app'.
@@ -592,6 +593,8 @@ The region chosen should be the one closest to you.
     Then use the following command to push to Heroku;
 
     - $ git push heroku master 
+
+</p>
 </details>
 
 <details>

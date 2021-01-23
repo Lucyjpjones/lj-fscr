@@ -274,7 +274,7 @@ The deployed site has some differences vs. the wireframes I initially created, t
   - Attractive, minimalistic design with visuals and information presented clearly and concisely.
 
   - Easily readable fonts and simple navigation throughout the site.
-    - `Fixed navigation bar` visible on every page including a menu `dropdown`, easily `recognisable icons` and `brand logo` to link back to the homepage.
+    - `Fixed navigation bar` visible on every page featuring a `dropdown` menu, easily `recognisable icons` and `brand logo` to link back to the homepage.
     - `Search bar` accessible from every page allowing the user to easily search the site by keywords. 
     - Clear interactive `buttons` used for an effortless user journey throughout the site.
     - `Toasts` used throughout the site to display alert messages to the user to assist on their journey.
@@ -283,7 +283,7 @@ The deployed site has some differences vs. the wireframes I initially created, t
 <ins>**Home**</ins>
 
 - **Home**
-    - A `carousel` has been used for the callout banner and to display athlete testimonials.
+    - A `carousel` with automatic rotation has been used for the callout banner and to display athlete testimonials.
     - `Card listings` have been used to display links to programmes/products page, and to display the latest blogs.
     - A contact `form` has been added using EmailJS to allow the user to easily get in contact with the site owner.
 
@@ -297,10 +297,11 @@ The deployed site has some differences vs. the wireframes I initially created, t
     - `Card listings` have been used to display product image, name, colour price and rating.
 - **Product Detail**
     - `crispy forms` used for elegant formatting.
-    
+    - `Size selector` option for sized products to allow user to select a size.
+    - `Quantity selector` option to allow user to select a quantity.
+    - `add to bag` button to allow user to add the product to bag.
 - **Product Admin**
     - `Forms` have been used to allow the admin user to add and edit products manually on the site.
-
 
 <ins>**Programmes**</ins>
 
@@ -310,20 +311,26 @@ The deployed site has some differences vs. the wireframes I initially created, t
 - **Programme Detail**
     - `crispy forms` used for elegant formatting.
     - A `carousel` has been used to display programme customer reviews.
+    - `Quantity selector` option to allow user to select a quantity.
+    - `add to bag` button to allow user to add the product to bag.
 - **Programme Admin**
     - `Forms` have been used to allow the admin user to add and edit programmes manually on the site.
 
 <ins>**Bag**</ins>
 
 - **Bag**
-  - A fully functioning shopping bag allowing users to add both products and programmes they wish to buy 
+  - A fully functioning shopping bag allowing users to add both products and programmes they wish to buy
+  - `Quantity selector` with option to update or remove item from bag
+  - Clear `Secure Checkout` button to take user to checkout
+  - An `arrow` displayed at the bottom of the bag to easily direct the user back to the navigation options
 
 <ins>**Checkout**</ins>
 
 - **Checkout:**
-    The checkout page displays all the items the user has in their bag ready to purchase and personal, delivery and payment fields to fill out.
+    - A order summary displaying all the items the user has in their bag ready to purchase.
     - `crispy forms` used for elegant formatting.
     - `Forms` used to display personal, delivery and payment fields.
+    - Option for user to click 'Save this delivery information to my profile' to save details to their profile page.
     - `Stripe payments` used to manage site card transactions.
 
 - **Checkout Success**
@@ -335,30 +342,33 @@ The deployed site has some differences vs. the wireframes I initially created, t
 - **Blog**
     - `sort and filter` functionality to allow users to easily find posts they are looking for.
     - `Card listings` have been used to display post image, title, author and date.
+
 - **Post Detail**
     - `Forms` used for posting user comments.
     - `crispy forms` used for elegant formatting.
+    - `Collapse` toggle used to display and hide blog references.
+    - `trash icon` with delete functionality used for deleting own comments.
 
 <ins>**Forum**</ins>
 
 - **Forum:**
     An interactive message board allowing users to add their own threads and comment on others.
     - A `table` has been used to display all the threads posted in the forum. Details include thread topic, number of replies, author and the date created.
+    - `Forms` have been used to allow the logged in user to add their own thread.
 
 - **Thread Detail**
     - `Forms` used for posting user replies.
     - `crispy forms` used for elegant formatting.
-
-- **Adding and Editing Thread**
-    - `Forms` have been used to allow the user to add and edit their own threads in the forum.
-
+    - `trash icon` with delete functionality used for deleting own replies.
+    - `Edit icon` with link to prefilled `Form` to allow users to edit their own threads.
 
 <ins>**Profiles**</ins>
 
 - **Profile**
     - `crispy forms` used for elegant formatting.
     - `Forms` used to display users personal details.
-    - A `table` has been used to display the user's order history displaying order number, order date and order total. There is also a button 'view order details' which links to the checkout success page showing the specific order details.
+    - Option for user to click 'update details' to save details to profile.
+    - A `table` has been used to display the user's order history including order number, order date and order total. There is also a button 'view order details' which links to the checkout success page showing the specific order details.
 
 <ins>**Authorisation**</ins>
 
@@ -375,11 +385,11 @@ I will continue to update my website to meet my clients' expectations. I have fu
 
 **Future Development plans**
 - Add more payment options for my users, including apple pay to improve user experience with quicker checkout.
-- Ability for user to autofill address by entering a postcode.
-- 'Add a review' option for members to give their opinion on the products and programmes they have purchased. As this is a startup there is currently no physical customer orders this was a lower priority task.
+- Ability for user to autofill address at checkout by entering a postcode.
+- 'Add a review' option for members to give their opinion on the products and programmes they have purchased.
 - Add a count onto the bag icon so users can easily identify how many items are in their bag.
 - More queries added to search functionality for more effective search results.
-- Add video blogs to blog (already included in the filter but currently no video posts from the client)
+- Add video blogs to blog (already included in the filter but currently no video posts provided by client).
 
 ---
 

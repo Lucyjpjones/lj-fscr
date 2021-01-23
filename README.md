@@ -483,9 +483,14 @@ I will continue to update my website to meet my clients' expectations. I have fu
 
 #### Deploy to Heroku
 
-The project was connected to Heroku using automatic deployment from my GitPod repository, using the following steps...
+The project was deployed to Heroku with all static and media files stored on Amazon S3. I also set up automatic deployment to ensure my Heroku app was always up to date with my GitPod repository.
 
-> **Note:** Before following the below steps ensure you have already created your new repo in Github. Sensitive data can either be added to your environment settings or stored in an env.py file. (Further details on adding an env.py file below)
+**Note:** As all static and media files were stored in an AWS bucket these are not available through the GitHub repository. Please contact the site owner if you wish to use any of the images included.
+
+<details>
+<summary>Deploying to Heroku</summary>
+
+**Note:** Before following the below steps ensure you have already created your new repo in Github.
 
 1. Log in (or Register) to [Heroku](https://www.heroku.com/) and from your dashboard click 'new' > 'create new app'.
 
@@ -587,34 +592,10 @@ The region chosen should be the one closest to you.
     Then use the following command to push to Heroku;
 
     - $ git push heroku master 
+</details>
 
-
-**To set up Automatic deployment to Heroku**
-
-1. From the Heroku deploy tab, select the Deployment method 'GitHub'.
-
-    ![Deployment method](readme/media/deployment-method.jpg)
-
-2. On the 'Connect to GitHub' section make sure your GitHub profile is displayed then add your repository name and click 'Search'.
-
-    > **Note:** This is the name of your repo in GitHub. It is good practice to use an identical name for your Heroku app.
-
-    ![Deploy GitHub](readme/media/deployment-git.jpg)
-
-3. Your repo should now be displayed below, click 'Connect' to connect to this app.
-
-4. Go to the Deploy tab on Heroku and under the Automatic deployment section, click 'Enable Automatic Deploys'. Then under Manual deploy click 'Deploy Branch'.
-
-   ![Enable Automatic Deploys](readme/media/enable-deploys.jpg)
-
-   - Heroku will now receive the code from GitHub and start building the app using the required packages.
-   - Once built you will receive the message 'Your app was successfully deployed' and you can click 'View' to launch your new app.
-
-        > **Note:** 
-        In Manual deploy dropdown 'master' is selected'
-
-
-#### Deploy to AWS
+<details>
+<summary>Deploying AWS static and media files</summary>
 
 The project used Amazon Web Services s3, which is a cloud-based storage service, to store static and media files.
 
@@ -752,32 +733,88 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
         STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
         MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
+</details>
+
+<details>
+<summary>Setting up automatic deployment to Heroku</summary>
+
+1. From the Heroku deploy tab, select the Deployment method 'GitHub'.
+
+    ![Deployment method](readme/media/deployment-method.jpg)
+
+2. On the 'Connect to GitHub' section make sure your GitHub profile is displayed then add your repository name and click 'Search'.
+
+    > **Note:** This is the name of your repo in GitHub. It is good practice to use an identical name for your Heroku app.
+
+    ![Deploy GitHub](readme/media/deployment-git.jpg)
+
+3. Your repo should now be displayed below, click 'Connect' to connect to this app.
+
+4. Go to the Deploy tab on Heroku and under the Automatic deployment section, click 'Enable Automatic Deploys'. Then under Manual deploy click 'Deploy Branch'.
+
+   ![Enable Automatic Deploys](readme/media/enable-deploys.jpg)
+
+   - Heroku will now receive the code from GitHub and start building the app using the required packages.
+   - Once built you will receive the message 'Your app was successfully deployed' and you can click 'View' to launch your new app.
+
+        > **Note:** 
+        In Manual deploy dropdown 'master' is selected'
+
+</details>
+
+Sensitive data for your project can either be stored in your environment settings or be added to an env.py file in your workspace.
+
+<details>
+<summary>More details on creating an env.py file</summary> 
+
+1. Add a env.py file to store environment variables:
+
+    `os.environ.setdefault("Key", "Value")`
+
+
+| Key               | Value               |
+|-------------------|---------------------|
+| AWS_ACCESS_KEY_ID | To be added by user |
+| AWS_SECRET_KEY_ID | To be added by user |
+| DATABASE_URL      | To be added by user |
+| EMAIL_HOST_PASS   | To be added by user |
+| EMAIL_HOST_USER   | To be added by user |
+| SECRET_KEY        | To be added by user |
+| STRIPE_PUBLIC_KEY | To be added by user |
+| STRIPE_SECRET_KEY | To be added by user |
+| STRIPE_WH_SECRET  | To be added by user |
+
+ 2. Add env.py to your .gitignore file to ensure this file is never pushed to GitHub.
+    > **Note:** The env.py mustn't be tracked as any GitHub user can access your confidential data.
+
+</details>
 
 #### Accessing code
 
-Follow the steps below if you are wanting to propose changes to the project or to use the project as a starting point for your own idea.
+Forking allows you to create a copy of the original repository and propose changes to the repository owner via a pull request.
 
-> **Note:** All static and media files were stored in an AWS bucket so are not available through the GitHub repository. Please contact the site owner if you wish to use any of the images included.
+<details>
+<summary>Forking the GitHub Repository</summary>
 
-- **Forking the GitHub Repository**
+1. Log in to GitHub and locate the GitHub Repository.
+    
+    FSCR repository can be found [here](https://github.com/Lucyjpjones/lj-fscr/)
 
-  Forking allows you to create a copy of the original repository and propose changes to the repository owner via a pull request.
-
-  1. Log in to GitHub and locate the GitHub Repository.
-    - FSCR repository can be found [here](https://github.com/Lucyjpjones/lj-fscr/)
-
-  2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
+2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
 
      ![forking](readme/media/fork.png)
 
-  3. You should now have a copy of the original repository in your GitHub account.
+3. You should now have a copy of the original repository in your GitHub account.
+</details>
 
-- **Making a Local Clone**
+When you clone a repository, the repository is copied on to your local machine, allowing you to use the project as a starting point for your own idea.
 
-When you clone a repository, the repository is copied on to your local machine.
+<details>
+<summary>Making a Local Clone</summary>
 
 1. Log in to GitHub and locate the GitHub Repository.
-   - FSCR repository can be found [here](https://github.com/Lucyjpjones/lj-fscr/)
+   
+   FSCR repository can be found [here](https://github.com/Lucyjpjones/lj-fscr/)
 
 2. Under the repository name, click the "download code" option.
 
@@ -818,30 +855,6 @@ When you clone a repository, the repository is copied on to your local machine.
 8. Either store your sensitive data in your environment settings or add an env.py file to your workspace (more details below).
 
    > **Note:** Contact the site owner if you want more information on the environment variables that have been included.
-
-
-<details>
-<summary>Creating an env.py file</summary>
-
-1. Add a env.py file to store environment variables:
-
-    `os.environ.setdefault("Key", "Value")`
-
-
-| Key               | Value               |
-|-------------------|---------------------|
-| AWS_ACCESS_KEY_ID | To be added by user |
-| AWS_SECRET_KEY_ID | To be added by user |
-| DATABASE_URL      | To be added by user |
-| EMAIL_HOST_PASS   | To be added by user |
-| EMAIL_HOST_USER   | To be added by user |
-| SECRET_KEY        | To be added by user |
-| STRIPE_PUBLIC_KEY | To be added by user |
-| STRIPE_SECRET_KEY | To be added by user |
-| STRIPE_WH_SECRET  | To be added by user |
-
- 2. Add env.py to your .gitignore file to ensure this file is never pushed to GitHub.
-    > **Note:** The env.py mustn't be tracked as any GitHub user can access your confidential data.
 
 </details>
 

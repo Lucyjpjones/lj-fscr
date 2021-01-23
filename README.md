@@ -598,7 +598,7 @@ The region chosen should be the one closest to you.
 </details>
 
 <details>
-<summary>Deploying AWS static and media files</summary>
+<summary>Deploying AWS Static and Media files</summary>
 <p>
 
 The project used Amazon Web Services s3, which is a cloud-based storage service, to store static and media files.
@@ -740,7 +740,7 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
 </details>
 
 <details>
-<summary>Setting up automatic deployment to Heroku</summary>
+<summary>Setting up Automatic Deployment to Heroku</summary>
 <p>
 
 1. From the Heroku deploy tab, select the Deployment method 'GitHub'.
@@ -774,8 +774,6 @@ If you would like to add the `Social account login` feature to your site they're
 <summary>More details on creating an env.py file</summary> 
 <p>
 
-If you wish to add Django allauth `Social account logins` there are various useful online guides to help you get set up. The list of social providers can be found [here](https://django-allauth.readthedocs.io/en/latest/providers.html)
-
 1. Add a env.py file to store environment variables:
 
     `os.environ.setdefault("Key", "Value")`
@@ -798,6 +796,9 @@ If you wish to add Django allauth `Social account logins` there are various usef
 
 </p>
 </details>
+
+If you wish to add Django allauth `Social account logins` there are various useful online guides to help you get set up. The list of social providers can be found [here](https://django-allauth.readthedocs.io/en/latest/providers.html)
+
 
 #### Accessing code
 

@@ -254,10 +254,9 @@ The deployed site has some differences vs. the wireframes I initially created, t
 | 4 | Latest blogs added to homepage                 | Client wanted this to be a focus on the homepage                                                                   |
 | 5 | Contact form added to homepage                | This wasn't included on my wireframes but I added this to the bottom of my homepage which is a common positioning  |
 | 6 | Removed red buttons                           | I decided not to use red buttons to avoid the possibility of user confusion                                        |
-| 7 | Add to bag button on programmes page | I decided not to have the add the bag option on this page and to keep it in line with the structure of the product page |
+| 7 | 'Add to bag' and 'View more details' on programmes page | I decided not to have these buttons and to keep it in line with the structure of the product page by viewing on image click |
 | 8 | Sample fitness plan removed from programme detail | Client didn't want to provide an example template so this was removed |
 | 9 | View bag and checkout options available on 'add to bag' success toast | I decided to add both options so the user has the option to view their bag or just go straight to the checkout |
-| 10 | Social media links on footer | I decided not to include the social media links on the footer yet as the business does not yet run on any social platforms so I saw this as a low priority for the site |
     
 ---
 

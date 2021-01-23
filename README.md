@@ -769,9 +769,12 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
 
 `Sensitive data` for your project can either be stored in your environment settings or be added to an env.py file in your workspace.
 
+If you would like to add the `Social account login` feature to your site they're many useful online guides which will help to get you set up. The 
 <details>
 <summary>More details on creating an env.py file</summary> 
 <p>
+
+If you wish to add Django allauth `Social account logins` there are various useful online guides to help you get set up. The list of social providers can be found [here](https://django-allauth.readthedocs.io/en/latest/providers.html)
 
 1. Add a env.py file to store environment variables:
 

@@ -91,7 +91,7 @@ I created a forum app that can only be accessed by site members. When a user is 
 
 **10. Easily register for an account**
 
-A fully functioning register page where a user can enter their details to create an account. The user can access this page by clicking on the recognisable user icon and selecting 'register'.
+A fully functioning register page where a user can enter their details to create an account. The user can access this page by clicking on the recognisable user icon and selecting 'Register'.
 
 <img src="readme/media/us-10.png">
 

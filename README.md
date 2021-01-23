@@ -10,7 +10,7 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 
 </div>
 
-For <ins>**testing**</ins> the following credentials can be used:
+For <ins>**testing**</ins> the following credentials can be used for checkout:
 
 **Card payments**
 
@@ -101,14 +101,16 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 <br>
   <img src="readme/media/palette.png">
 
-- The #f8f8f8 shade of very light grey has been used as a background colour throughout the site with the #fafafa shade of white used for forms.
-
+- A lighter shade of the grey (#bdc1c750) featured in the palette above has been used as the main background colour throughout the site with a lighter shade (#f8f8f8) used for banners.
+- #fafafa has been used for forms
 
 **Typography**
 
 - The font used throughout the site is 'Lato' which belongs to the sans-serif typeface family. The font is neutral and easily readable, making it a good choice for web design.
 
 - Sans Serif as the fallback font if for any reason the font isn't being imported into the site correctly.
+
+- Icons used throughout the site have been taken from [FontAwesome](https://fontawesome.com/) and [FlatIcon](https://www.flaticon.com/).
 
 **Research**
 
@@ -131,7 +133,7 @@ My final design with client approval is displayed below;
 
 **Favicon**
 
-I created a personalised favicon for the site to add branding, and to make it easier for visitors to locate the page when they have multiple tabs open. I decided to keep the design simple and conventional by using just the first initial of the logo.
+I created a personalised favicon for the site to add branding, and to make it easier for visitors to locate the page when they have multiple tabs open. I decided to keep the design simple and conventional by using only the first initial of the logo.
 
 <img src="readme/media/fscr-favicon.png">
 
@@ -141,28 +143,30 @@ To help visualize my database, I created a diagram using [dbdiagram](https://dbd
 
 <img src="readme/media/data_schema.png">
 
-The **Product model** within the product's app, is used to store information about individual products.
-The **Category model** within the product's app, is used to group products into specific categories.
+The `Product` model within the product's app, is used to store information about individual products.
+The `Category` model within the product's app, is used to group products into specific categories.
 
-The **Programme model** within the programme's app, is used to store information about individual programmes.
-The **Category model** within the programme's app, is used to group programmes into specific categories.
+The `Programme` model within the programme's app, is used to store information about individual programmes.
+The `Category` model within the programme's app, is used to group programmes into specific categories.
 
-The **UserProfile** model within the profiles app is used to store user's profile information and is connected to various apps for other benefits;
-- Checkout app - to store user's checkout information, as well as order history.
-- Blog app - to store the name of the user who created the blog and those who have left a comment.
-- Forum app - to store the name of the user who created the thread and those who have replied.
+The `UserProfile` model within the profiles app is used to store user's profile information and is connected to various models to fill other requirements;
+- Checkout `Order` model - to store user's checkout information, as well as order history.
+- Blog `Post` and `Comment` model - to store the name of the user who created the blog and those who have left a comment.
+- Forum `Thread` and `Reply` model - to store the name of the user who created the thread and those who have replied.
 
-The **Post model** within the blog app, is used to store posts added by the admin user.
-The **Comments model** within the blog app, is used to store comments added by the user who is logged in.
+The `Post` model within the blog app, is used to store posts added by the admin user.
+The `Comment` model within the blog app, is used to store comments added by the user who is logged in.
 
-The **Thread model** within the forum app, is used to store threads added by the user.
-The **Comment model** within the forum app, is used to store replies made by the user logged in.
+The `Thread` model within the forum app, is used to store threads added by the user.
+The `Reply` model within the forum app, is used to store replies made by the user logged in.
 
-The **Order model** within the checkout app, is used to store orders.
-The **OrderLineItem model** within the checkout app, is used to store information about individual products on the order.
-The **ProgOrderLineItem model** within the checkout app, is used to store information about individual programmes on the order.
+The `Order` model within the checkout app, is used to store orders.
+The `OrderLineItem` model within the checkout app, is used to store information about individual products on the order.
+The `ProgOrderLineItem` model within the checkout app, is used to store information about individual programmes on the order.
 
 ### **<ins>User Stories</ins>**
+
+The basic page structure of my site is presented below;
 
 <img src="readme/media/flowchart.png">
 
@@ -187,7 +191,7 @@ As the site owner, I want to be able to continually monitor and update the site 
 | 1                              | Site Visitor | Discover FSCR’s purpose and goals                                   | Learn more about the brand and the coaches behind it                                                 |
 | 2                              | Site Visitor | View a list of products                                             | Select a product to view more details                                                                |
 | 3                              | Site Visitor | View a list of programmes                                           | Select a programme to view more details                                                              |
-| 4                              | Site Visitor | View a specific category of products                                | Quickly find products I’m interested in without having to search through all the products            |
+| 4                              | Site Visitor | View a specific category of products or programmes                                | Quickly find products I’m interested in without having to search through all the products            |
 | 5                              | Site Visitor | View individual product details                                     | Identify the description, price, available sizes, product image, and rating                           |
 | 6                              | Site Visitor | View individual programme details                                   | Identify the description, price, duration, rating, and reviews                                        |
 | 7                              | Site Visitor | Easily access contact details                                       | Send a message regarding any queries I have                                                          |

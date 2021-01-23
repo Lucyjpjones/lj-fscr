@@ -148,7 +148,8 @@ The pages also feature a count functionality showing the user how many items are
 **18. Search the site by keywords**
 
 A search bar features in the main site header and allows users to search by keywords to find specific items. On larger screens the search bar is visible and on smaller devices, the search bar is collapsed from the search icon.
-    - Currently, the filtered queries include product name, product description, programme name, programme description, and blog post title.
+- The filtered queries include product name, product description, programme name, programme description, and blog post title.
+- 'icontains' has been used making the search case-insensitive.
 
 <img src="readme/media/us-18.png">
 
@@ -642,3 +643,4 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 | [x] | Comment reposts on page refresh                   |  Redirect path added to views after post request  |
 | [x] | User able to type in any quantity value for item when in shopping bag                  |  Changed 'quantity > 0' to 'quantity in range(0, 99)' and added elif statement for any value over 99 to send an error message to the user   |
 | [x] | Success toast showing shopping bag when not appropriate                  |  Added a variable called on_page to the product and programme detail page and used this as a filter within my success toast template. This ensures that the bag view is only displayed on the success message when a user is on these specific pages.     |
+| [] | Inappropriate results from search query                   |  Although some results aren't always seen as appropriate I wanted to continue to use icontains over iexact as it creates a more flexible search     |

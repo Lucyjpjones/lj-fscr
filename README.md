@@ -600,6 +600,7 @@ The region chosen should be the one closest to you.
 <details>
 <summary>Deploying AWS static and media files</summary>
 
+<p>
 The project used Amazon Web Services s3, which is a cloud-based storage service, to store static and media files.
 
 1. Create an account by navigating to [aws.amazon.com](https://aws.amazon.com/) and clicking create an AWS account. Fill in your email and password, and a username for your account, and select continue.
@@ -735,12 +736,13 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
 
         STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
         MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
-
+</p>
 </details>
 
 <details>
 <summary>Setting up automatic deployment to Heroku</summary>
 
+<p>
 1. From the Heroku deploy tab, select the Deployment method 'GitHub'.
 
     ![Deployment method](readme/media/deployment-method.jpg)
@@ -790,6 +792,7 @@ Sensitive data for your project can either be stored in your environment setting
  2. Add env.py to your .gitignore file to ensure this file is never pushed to GitHub.
     > **Note:** The env.py mustn't be tracked as any GitHub user can access your confidential data.
 
+</p>
 </details>
 
 #### Accessing code
@@ -799,6 +802,7 @@ Forking allows you to create a copy of the original repository and propose chang
 <details>
 <summary>Forking the GitHub Repository</summary>
 
+<p>
 1. Log in to GitHub and locate the GitHub Repository.
     
     FSCR repository can be found [here](https://github.com/Lucyjpjones/lj-fscr/)
@@ -808,6 +812,8 @@ Forking allows you to create a copy of the original repository and propose chang
      ![forking](readme/media/fork.png)
 
 3. You should now have a copy of the original repository in your GitHub account.
+
+</p>
 </details>
 
 When you clone a repository, the repository is copied on to your local machine, allowing you to use the project as a starting point for your own idea.
@@ -815,6 +821,7 @@ When you clone a repository, the repository is copied on to your local machine, 
 <details>
 <summary>Making a Local Clone</summary>
 
+<p>
 1. Log in to GitHub and locate the GitHub Repository.
    
    FSCR repository can be found [here](https://github.com/Lucyjpjones/lj-fscr/)
@@ -859,6 +866,7 @@ When you clone a repository, the repository is copied on to your local machine, 
 
    > **Note:** Contact the site owner if you want more information on the environment variables that have been included.
 
+</p>
 </details>
 
 ---

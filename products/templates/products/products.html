@@ -49,7 +49,7 @@
          <div class="row">
             {% if products %}
             <div class="col-12">
-               <p class="mb-3 text-muted small text-center">{{ products.count }} products found</p>
+               <p class="mb-3 text-muted small text-center">{{ products.count }} product{{ products.count|pluralize }} found</p>
             </div>
             {% for product in products %}
             {% if not product.discontinued %}

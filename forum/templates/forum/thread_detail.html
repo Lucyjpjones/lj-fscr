@@ -58,7 +58,7 @@
    <div class="row programme-container">
       <!--Comment count-->
       <div class="col py-2">
-         <p class="small text-muted">{{ replies.count }} replies</p>
+         <p class="small text-muted">{{ replies.count }} repl{{ replies.count|pluralize:"y,ies" }}</p>
       </div>
    </div>
    <!-- comments -->

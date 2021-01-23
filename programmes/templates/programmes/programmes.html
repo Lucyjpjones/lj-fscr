@@ -48,7 +48,7 @@
          <div class="row">
             {% if programmes %}
             <div class="col-12">
-               <p class="mb-3 text-muted small text-center">{{ programmes.count }} programmes found</p>
+               <p class="mb-3 text-muted small text-center">{{ programmes.count }} programme{{ programmes.count|pluralize }} found</p>
             </div>
             {% for programme in programmes %}
             {% if not programme.discontinued %}

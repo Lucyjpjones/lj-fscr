@@ -45,7 +45,7 @@ def thread_detail(request, slug):
             new_reply.user = request.user
             new_reply.save()
             reply_form = CommentForm()
-            messages.success(request, 'Successfully added reply!')
+            messages.success(request, 'Successfully added response!')
             return redirect(reverse('thread_detail', args=[thread.slug]))
     else:
         reply_form = CommentForm()
@@ -126,5 +126,5 @@ def delete_own_reply(request, reply_id, slug):
     thread = get_object_or_404(Thread, slug=slug)
     reply = get_object_or_404(Reply, pk=reply_id)
     reply.delete()
-    messages.success(request, 'Reply deleted!')
+    messages.success(request, 'Response deleted!')
     return redirect(reverse('thread_detail', args=[thread.slug]))

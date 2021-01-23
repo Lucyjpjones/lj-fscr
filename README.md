@@ -599,8 +599,8 @@ The region chosen should be the one closest to you.
 
 <details>
 <summary>Deploying AWS static and media files</summary>
-
 <p>
+
 The project used Amazon Web Services s3, which is a cloud-based storage service, to store static and media files.
 
 1. Create an account by navigating to [aws.amazon.com](https://aws.amazon.com/) and clicking create an AWS account. Fill in your email and password, and a username for your account, and select continue.
@@ -741,8 +741,8 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
 
 <details>
 <summary>Setting up automatic deployment to Heroku</summary>
-
 <p>
+
 1. From the Heroku deploy tab, select the Deployment method 'GitHub'.
 
     ![Deployment method](readme/media/deployment-method.jpg)
@@ -771,6 +771,7 @@ Sensitive data for your project can either be stored in your environment setting
 
 <details>
 <summary>More details on creating an env.py file</summary> 
+<p>
 
 1. Add a env.py file to store environment variables:
 
@@ -801,8 +802,8 @@ Forking allows you to create a copy of the original repository and propose chang
 
 <details>
 <summary>Forking the GitHub Repository</summary>
-
 <p>
+
 1. Log in to GitHub and locate the GitHub Repository.
     
     FSCR repository can be found [here](https://github.com/Lucyjpjones/lj-fscr/)
@@ -820,8 +821,8 @@ When you clone a repository, the repository is copied on to your local machine, 
 
 <details>
 <summary>Making a Local Clone</summary>
-
 <p>
+
 1. Log in to GitHub and locate the GitHub Repository.
    
    FSCR repository can be found [here](https://github.com/Lucyjpjones/lj-fscr/)

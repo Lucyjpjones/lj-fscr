@@ -35,7 +35,6 @@ p,
 	background-color: transparent !important;
 }
 
-
 /* ----------- Typography */
 
 
@@ -841,7 +840,7 @@ input[name='q']::placeholder {
 		height: 60px;
 		object-fit: cover;
 	}
-	/* -------------------- Blog app  */
+    /* -------------------- Blog app  */
 	.blog-index-img-card {
 		height: 220px;
 	}

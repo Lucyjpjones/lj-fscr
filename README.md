@@ -487,6 +487,8 @@ The project was deployed to Heroku with all static and media files stored on Ama
 
 **Note:** As all static and media files were stored in an AWS bucket these are not available through the GitHub repository. Please contact the site owner if you wish to use any of the images included.
 
+If you would like to add the Django allauth `Social account login` feature to your site they're many useful online guides to help you get set up. The list of social providers can be found [here](https://django-allauth.readthedocs.io/en/latest/providers.html)
+
 <details>
 <summary>Deploying to Heroku</summary>
 <p>
@@ -769,7 +771,6 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
 
 `Sensitive data` for your project can either be stored in your environment settings or be added to an env.py file in your workspace.
 
-If you would like to add the `Social account login` feature to your site they're many useful online guides which will help to get you set up. The 
 <details>
 <summary>More details on creating an env.py file</summary> 
 <p>
@@ -796,9 +797,6 @@ If you would like to add the `Social account login` feature to your site they're
 
 </p>
 </details>
-
-If you wish to add Django allauth `Social account logins` there are various useful online guides to help you get set up. The list of social providers can be found [here](https://django-allauth.readthedocs.io/en/latest/providers.html)
-
 
 #### Accessing code
 

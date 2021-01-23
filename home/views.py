@@ -39,8 +39,8 @@ def search_results(request):
 
         products = Product.objects.filter(Q(name__icontains=query) | Q(
                                         description__icontains=query))
-        programmes = Programme.objects.filter(Q(name__icontains=query) | Q
-                                               (description__icontains=query))
+        programmes = Programme.objects.filter(Q(name__icontains=query) | Q(
+                                               description__icontains=query))
         posts = Post.objects.filter(Q(title__icontains=query))
 
         results_list = list(chain(products, programmes, posts))

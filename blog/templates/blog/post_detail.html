@@ -107,8 +107,9 @@
                   <a class="btn float-right" data-toggle="modal" data-target="#comDelete{{ comment.id }}">
                   <i class="far fa-trash-alt"></i>
                   </a>
-                </p>
-                  <!-- Modal -->
+                  {% endif %}
+               </p>
+               <!-- Modal -->
                <div class="modal fade" id="comDelete{{ comment.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="{{ comment.id }}" aria-hidden="true">
                   <div class="modal-dialog">
                      <div class="modal-content rounded-0">
@@ -125,7 +126,6 @@
                      </div>
                   </div>
                </div>
-               {% endif %}
                {{ comment.body | linebreaks }}
             </div>
             {% endfor %}

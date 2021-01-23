@@ -2,7 +2,7 @@
   <img src="readme/media/responsive-fscr.png">
 <hr>
 
-**FSCR (Football Strength Conditioning Rehab) focuses on providing structured and detailed fitness programmes for football related injuries.**
+**FSCR (Football Strength Conditioning Rehab) focuses on providing structured and detailed fitness programmes for football-related injuries.**
 
 This app was built using [GitHub](https://pages.github.com/) and deployed to [Heroku](https://www.heroku.com/).
 
@@ -253,7 +253,7 @@ The deployed site has some differences vs. the wireframes I initially created, t
 | 7 | Add to bag button on programmes page | I decided not to have the add the bag option on this page and to keep it in line with the structure of the product page |
 | 8 | Sample fitness plan removed from programme detail | Client didn't want to provide an example template so this was removed |
 | 9 | View bag and checkout options available on 'add to bag' success toast | I decided to add both options so the user has the option to view their bag or just go straight to the checkout |
-| 10 | Social media links on footer | I decided not to include the social media links on the footer yet as the business does not yet run on any social platforms so I saw this as low priority for the site |
+| 10 | Social media links on footer | I decided not to include the social media links on the footer yet as the business does not yet run on any social platforms so I saw this as a low priority for the site |
     
 ---
 
@@ -272,7 +272,7 @@ The deployed site has some differences vs. the wireframes I initially created, t
   - Easily readable fonts and simple navigation throughout the site.
     - `Fixed navigation bar` visible on every page including a menu `dropdown`, easily `recognisable icons` and `brand logo` to link back to the homepage.
     - `Search bar` accessible from every page allowing the user to easily search the site by keywords. 
-    - Clear interactive `buttons` used for a effortless user journey throughout the site.
+    - Clear interactive `buttons` used for an effortless user journey throughout the site.
     - `Toasts` used throughout the site to display alert messages to the user to assist on their journey.
     - An aesthetically pleasing custom `404 page` if the user is directed to a non-existent page. 
 
@@ -280,11 +280,11 @@ The deployed site has some differences vs. the wireframes I initially created, t
 
 - **Home**
     - A `carousel` has been used for the callout banner and to display athlete testimonials.
-    - `Card listings` have been used to display links to programmes/products page, and to display latest blogs.
+    - `Card listings` have been used to display links to programmes/products page, and to display the latest blogs.
     - A contact `form` has been added using EmailJS to allow the user to easily get in contact with the site owner.
 
 - **Meet the Coaches**
-    - Navigation `pills` have been used to allow the user to switch between each individuals by an image click.
+    - Navigation `pills` have been used to allow the user to switch between each individual by an image click.
 
 <ins>**Products**</ins>
 
@@ -323,7 +323,7 @@ The deployed site has some differences vs. the wireframes I initially created, t
     - `Stripe payments` used to manage site card transactions.
 
 - **Checkout Success**
-    - The checkout success page provides reassurance for the user that there purchase has gone through and displays all their order details. 
+    - The checkout success page provides reassurance for the user that their purchase has gone through and displays all their order details. 
     - Order confirmation sent to the user's personal email after they complete checkout.
 
 <ins>**Blog**</ins>
@@ -354,12 +354,12 @@ The deployed site has some differences vs. the wireframes I initially created, t
 - **Profile**
     - `crispy forms` used for elegant formatting.
     - `Forms` used to display users personal details.
-    - A `table` has been used to display the users order history displaying order number, order date and order total. There is also a button 'view order details' which links to the checkout success page showing the specific order details.
+    - A `table` has been used to display the user's order history displaying order number, order date and order total. There is also a button 'view order details' which links to the checkout success page showing the specific order details.
 
 <ins>**Authorisation**</ins>
 
-All authorisation pages including register, login and logout have been implemented through django allauth account. CSS styling has been applied to ensure pages match the sites overall design spec.
-- `Social login` has been implemented through django allauth soicalaccount giving the user the option to login through google, facebook or twitter.
+All authorisation pages including register, login and logout have been implemented through Django allauth account. CSS styling has been applied to ensure pages match the sites overall design spec.
+- `Social login` has been implemented through Django allauth socialaccount giving the user the option to login through Google, Facebook or Twitter.
 
 ### **To do list**
 
@@ -367,15 +367,15 @@ All authorisation pages including register, login and logout have been implement
 
 > Project is: <ins>ongoing</ins>
 
-I will continue to update my website to meet my clients expectations. I have further development plans which I have listed below.
+I will continue to update my website to meet my clients' expectations. I have further development plans which I have listed below.
 
 **Future Development plans**
 - Add more payment options for my users, including apple pay to improve user experience with quicker checkout.
-- Ability for user to autofill address by entering postcode.
-- 'Add a review' option for members to give their opinion on products and programmes they have purchased. As this is a startup there is currently no physical customer orders this was a lower priority task.
+- Ability for user to autofill address by entering a postcode.
+- 'Add a review' option for members to give their opinion on the products and programmes they have purchased. As this is a startup there is currently no physical customer orders this was a lower priority task.
 - Add a count onto the bag icon so users can easily identify how many items are in their bag.
 - More queries added to search functionality for more effective search results.
-- Add video blogs to blog (already included in filter but currently no video posts from client)
+- Add video blogs to blog (already included in the filter but currently no video posts from the client)
 
 ---
 
@@ -391,7 +391,7 @@ I will continue to update my website to meet my clients expectations. I have fur
 #### Frameworks, Libraries & Programs
 
 - [**Django**](https://www.djangoproject.com/)
-  - Python Web framework used to the build site.
+  - Python Web framework used to build the site.
 
 - [**Git**](https://git-scm.com/)
   - Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
@@ -421,7 +421,7 @@ I will continue to update my website to meet my clients expectations. I have fur
     - PostgreSQL database adapter
 
 - [**AWS**](https://aws.amazon.com/)
-  - A cloud-based storage service used to store static and ,media files.
+  - A cloud-based storage service used to store static and, media files.
 
 - [**Stripe**](https://stripe.com/gb)
   - Stripe was used to deal with payments.
@@ -472,7 +472,7 @@ I will continue to update my website to meet my clients expectations. I have fur
 
 The project was connected to Heroku using automatic deployment from my GitPod repository, using the following steps...
 
-> **Note:** Before following the below steps ensure you have already created your new repo in Github. Sensive data can either be added to your environment settings or stored in an env.py file. (Further details on adding an env.py file below)
+> **Note:** Before following the below steps ensure you have already created your new repo in Github. Sensitive data can either be added to your environment settings or stored in an env.py file. (Further details on adding an env.py file below)
 
 1. Log in (or Register) to [Heroku](https://www.heroku.com/) and from your dashboard click 'new' > 'create new app'.
 
@@ -496,13 +496,13 @@ The region chosen should be the one closest to you.
 
    - $ pip3 freeze > requirements.txt
 
-7. To migrate to the postgress, go to settings.py and import `dj_database_url`;
+7. To migrate to the postgres, go to settings.py and import `dj_database_url`;
 
    Then down in the databases setting comment out the default configuration and replace the default database with a call to dj_database_url.parse and give it the database URL from Heroku.
 
    ![Config Vars](readme/media/database_url.png)
 
-    > **Note:** You can either get the database url from your config variables in your app settings tab or from the command line by typing Heroku config.
+    > **Note:** You can either get the database URL from your config variables in your app settings tab or from the command line by typing Heroku config.
 
 8. Apply all migrations using the following command;
 
@@ -514,9 +514,9 @@ The region chosen should be the one closest to you.
 
      > **Note:** This will ensure that your Postgres database is used in deployment and your sqlite3 in development.
     
-    Now your database should now be all set up.
+    Your database should now be all set up.
 
-9. Create a super user to log in with using the following command;
+9. Create a superuser to log in with using the following command;
 
    - $ python3 manage.py createsuperuser
 
@@ -540,7 +540,7 @@ The region chosen should be the one closest to you.
 | STRIPE_WH_SECRET  | To be added by user |
 
 
- If you want to include social account login's there is various ways you can set it up. I Used this [site](https://learndjango.com/tutorials/django-allauth-tutorial) to help implement them on my site.
+ If you want to include social account login's there are various ways you can set it up. I Used this [site](https://learndjango.com/tutorials/django-allauth-tutorial) to help implement them on my site.
 
 11. Install gunicorn using the following command;
 
@@ -552,7 +552,7 @@ The region chosen should be the one closest to you.
 
     - web: gunicorn lj_fscr.wsgi:application
 
-    This tells Heroku to create a web dyno which will run gunicorn and serve the django app.
+    This tells Heroku to create a web dyno which will run gunicorn and serve the Django app.
 
     > **Note:** The **P**rocfile must be assigned a capital P.
 
@@ -562,16 +562,16 @@ The region chosen should be the one closest to you.
 
 14. Add the hostname of your Heroku app to allowed hosts in settings.py
 
-15. Now you can commit all the changes and push to github;
+15. Now you can commit all the changes and push to GitHub;
 
     - $ git add .
     - $ git commit -m <'your commit message'>
     - $ git push
 
-    If you created your app on the website you will need to initialize your heroku git remote using the following command;
+    If you created your app on the website you will need to initialize your Heroku git remote using the following command;
     - $ heroku git:remote -a lj-fscr
 
-    Then use the follwing command to push to heroku;
+    Then use the following command to push to Heroku;
 
     - $ git push heroku master 
 
@@ -603,15 +603,15 @@ The region chosen should be the one closest to you.
 
 #### Deploy to AWS
 
-The project used Amazon Web Services s3, which is a cloud-based storage service,to store static and media files.
+The project used Amazon Web Services s3, which is a cloud-based storage service, to store static and media files.
 
-1. Create account by navigating to [aws.amazon.com](https://aws.amazon.com/) and clicking create an AWS account. Fill in your email and password, and a username for your account, and select continue.
+1. Create an account by navigating to [aws.amazon.com](https://aws.amazon.com/) and clicking create an AWS account. Fill in your email and password, and a username for your account, and select continue.
 
-2. Now on the account type page, select personal and fill out the required information, click create account and continue.
+2. Now on the account type page, select personal and fill out the required information, click create an account and continue.
 
 3. Next you will be asked to enter a credit card number which will be used for billing if we go above the free usage limits. Beyond this, you'll be asked a couple more verification questions then once all required information is confirmed your account will be created.
 
-   > **Note**: For this project I didn't go anywhere near the usage limits but keep in mind that AWS is not free if you go above the free usage limits.
+   > **Note**: For this project, I didn't go anywhere near the usage limits but keep in mind that AWS is not free if you go above the free usage limits.
 
 4. Now you can navigate back to [aws.amazon.com](https://aws.amazon.com/) and sign-in to your account.
 
@@ -623,7 +623,7 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
     > **Note**: I'd recommend naming your bucket to match your Heroku app name.
 
 - Select a region
-    > **Note**: Select the region closest to you like you did when creating your heroku app.
+    > **Note**: Select the region closest to you like you did when creating your Heroku app.
 
 - Uncheck block all public access and acknowledge that the bucket will be public.
     > **Note**: Allows public access to our static files.
@@ -671,13 +671,13 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
 
 8. Create a user to access the bucket created.
 
-- Search for a new service 'Iam'
-- Now open Iam, naviagte to 'groups' and click 'Create new group'
+- Search for a new service 'IAM'
+- Now open IAM, navigate to 'groups' and click 'Create new group'
 
   > **Note:** You can call your group whatever you want but try to give it a name that makes sense to you for what it is.
 
 - Create a policy by navigating to 'policies' and click 'Create policy'
-- Go to json tap and click 'import managed policy'
+- Go JSON tab and click 'import managed policy'
   - Search for s3 and then import the s3 full access policy.
     - Replace resource value '*' with your bucket ARN from the bucket policy page;
 
@@ -688,13 +688,13 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
 
   - Click 'Review policy', give it a name and a description and click 'Create policy'
 
-9. Attach policy to the group you created.
+9. Attach the policy to the group you created.
 - Navigate to 'groups', select the group you created and on permissions tab select 'Attach policy'.
 - Search for the policy you created, select it and click 'Attach policy'.
 
-- Now to create the user, naviagte to 'users' and click 'Add user'
+- Now to create the user, navagate to 'users' and click 'Add user'
   - Add username, select programmatic access and click 'Next'
-  - Add user to group by selecting the group you created and click 'Next' then click through to the end and click 'Create user'
+  - Add user to a group by selecting the group you created and click 'Next' then click through to the end and click 'Create user'
   - Now download the CSV file which will contain this users access key and secret access key
 
     > **Note:** It's very important you download and save this CSV because once you've gone through this process we can't download them again.
@@ -716,7 +716,7 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
             AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
 
-13. Create file called custom_storages.py and add the content below;
+13. Create a file called custom_storages.py and add the content below;
 
         from django.conf import settings
         from storages.backends.s3boto3 import S3Boto3Storage
@@ -744,7 +744,7 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
 
 Follow the steps below if you are wanting to propose changes to the project or to use the project as a starting point for your own idea.
 
-> **Note:** All static and media files were stored in a AWS bucket so are not available through the github repository. Please contact site owner if you wish to use any of the images included.
+> **Note:** All static and media files were stored in an AWS bucket so are not available through the GitHub repository. Please contact the site owner if you wish to use any of the images included.
 
 - **Forking the GitHub Repository**
 
@@ -802,11 +802,13 @@ When you clone a repository, the repository is copied on to your local machine.
 
     > **Note:** The repository name and output numbers that you see on your computer, representing the total file size, etc, may differ from the example I have provided above.
 
-8. Either store your sensive data in your environment settings or add an env.py file to your workspace (more details below).
+8. Either store your sensitive data in your environment settings or add an env.py file to your workspace (more details below).
 
    > **Note:** Contact the site owner if you want more information on the environment variables that have been included.
 
-**Creating env.py file** 
+
+<details>
+<summary>Creating an env.py file</summary>
 
 1. Add a env.py file to store environment variables:
 
@@ -827,6 +829,9 @@ When you clone a repository, the repository is copied on to your local machine.
 
  2. Add env.py to your .gitignore file to ensure this file is never pushed to GitHub.
     > **Note:** The env.py mustn't be tracked as any GitHub user can access your confidential data.
+
+</details>
+
 ---
 
 ## &rarr; **Credits**
@@ -837,7 +842,7 @@ When you clone a repository, the repository is copied on to your local machine.
 
 - [Django documentation](https://docs.djangoproject.com/en/3.1/)
 
-- [Code](https://djangocentral.com/building-a-blog-application-with-django/) used to help create blog and forum app
+- [Code](https://djangocentral.com/building-a-blog-application-with-django/) used to help create a blog and forum app
 
 - [Code](https://bootstrapious.com/p/bootstrap-sidebar) used to help create sidenav
 
@@ -847,7 +852,7 @@ When you clone a repository, the repository is copied on to your local machine.
 
 - [Site](https://www.remove.bg/upload) used to remove background from logo
 
-- [Site](https://pinetools.com/colorize-image) used to change colour of image for logo design
+- [Site](https://pinetools.com/colorize-image) used to change the colour of the image for logo design
 
 - [Stack overflow](https://stackoverflow.com/):
   - [Code](https://stackoverflow.com/questions/43816377/add-body-overlay-when-a-sidebar-menu-opens/43816724) help for adding body overlay when a sidebar is open
@@ -860,9 +865,9 @@ When you clone a repository, the repository is copied on to your local machine.
 
 #### Media
 
-- General site content provided by client
-- Images used for callout image, about page and profile images provided by client
-- Blog content written by client with all references included
+- General site content provided by the client
+- Images used for callout image, about page and profile images provided by the client
+- Blog content written by the client with all references included
 - Product images were taken from [ASOS](https://www.asos.com/) and [Nike](https://www.nike.com/gb/) and edited for personal use
 - Programme images were taken from;
     - [Groin Injury](https://www.therapeuticassociates.com/i-pulled-my-groin-heard-it-pop-do-i-need-physical-therapy/)

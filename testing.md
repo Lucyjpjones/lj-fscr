@@ -1,4 +1,4 @@
-## &rarr; **Testing**
+## <ins>Testing</ins>
 
 **<details open><summary> Testing Documentation</summary>**
   - [Testing user stories](#testing-user-stories)
@@ -221,7 +221,7 @@ When logged in as admin user, the user has a delete button displayed next to the
 **30. Add a blog**
 
 When logged into the admin, the admin user can add a new blog to the site. 
-- I didn't think it was necessary to add a manual function for adding a blog as these will be posted less frequently and have little chance of needing modifications after being posted.
+- I didn't think it was necessary to add a manual function for adding a blog as these will be posted less frequently and have a smaller chance of needing modifications after being posted.
 
 **31. Links to FSCR social media platforms**
 
@@ -230,7 +230,7 @@ Social media platform links are featured in the page footer below the copyright 
 
     <img src="readme/media/us-31.png">
 
-## [&#8679;](#table-of-contents)
+## [&#8679;](#testing)
 ---
 
 ### **Manual function testing**
@@ -267,6 +267,7 @@ To ensure my site was working correctly I carried out some manual function testi
 - [x] Search bar showing the correct format based on device size
 - [x] After entering keywords and hitting enter or the search icon, user is directed to the search page template with appropriate results
 - [x] If user enters a keyword with no results the correct message is displayed
+- [x] If user submits a search with no keywords they are directed to the search page with no results and the appropriate error message
 - [x] When not logged, under the profile icon user has the options of 'register' and 'login'
 - [x] When logged in, under the profile icon user has the options of 'My Profile' and 'logout'
 - [x] When logged in as admin, under the profile icon user has the added options of 'product management' and 'programme management'
@@ -445,7 +446,7 @@ When logged in as Admin user...
 - [x] If user updates their information in their profile this is reflected on the checkout page
 
 
-## [&#8679;](#table-of-contents)
+## [&#8679;](#testing)
 ---
 
 ### **Automated testing**
@@ -470,6 +471,9 @@ The results from each test were displayed in the terminal, letting me know if th
 
 I used **Coverage** to identify the percentage of code the tests had covered and to determine which areas to focus on. Due to time constraints, I aimed to reach a minimum of 50% coverage on all my apps. However, I will continue to add tests to get as close to 100% as I can. 
 
+<details>
+<summary>Setting up Coverage</summary>
+<p>
 To set up and use Coverage, I used the following commands;
 
 * To Install:
@@ -494,7 +498,9 @@ To set up and use Coverage, I used the following commands;
     
     `$ python3 - m http.server`
 
-## [&#8679;](#table-of-contents)
+</details>
+
+## [&#8679;](#testing)
 ---
 
 ### **Validator checks**
@@ -588,7 +594,7 @@ This error has been fixed on the majority of my code but some lines have been le
 `F401 'checkout.signals' imported but unused`
 `F841 local variable 'e' is assigned to but never used`
 
-## [&#8679;](#table-of-contents)
+## [&#8679;](#testing)
 ---
 
 ### **Audits**
@@ -621,7 +627,7 @@ I didn't take any actions as none of my users experienced difficulty reading the
 
 I didn't take any actions as the error was for displaying 'read more' which I believe is a conventional text link for users. This is also very similar to the suggested generic link text 'learn more'.
 
-## [&#8679;](#table-of-contents)
+## [&#8679;](#testing)
 ---
 
 ### **Responsive Design**
@@ -632,7 +638,7 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 
 - Viewport tag included in the head of HTML files to tell the browser how to respond to different resolutions, particularly mobile ones.
 
-## [&#8679;](#table-of-contents)
+## [&#8679;](#testing)
 ---
 
 ### **Additional Testing**
@@ -643,14 +649,16 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 
 - Friends and family members were asked to review the site to point out any bugs, user experience issues, and/or suggestions.
 
+  > **NB:** All appropriate suggestions have been added to my future plans.
+
     Feedback action:
-    - To pay using apple pay- this is included in my future development plans.
-    - More search queries so I can search forums- this is included in my future development plans.
-    - Add a count onto the bag icon so users can easily see how many items are in their bag- this is included in my future development plans.
-    - Ability for user to autofill address by entering postcode- this is included in my future development plans. 
+    - Ability to pay using apple pay
+    - More search queries so I can search forum topics
+    - Add a number count onto the bag icon so I can easily see how many items are in my bag
+    - Ability to autofill address by entering postcode 
 - Project posted on Slack, asking for feedback from fellow students.
 
-## [&#8679;](#table-of-contents)
+## [&#8679;](#testing)
 ---
 
 ### **Bugs**

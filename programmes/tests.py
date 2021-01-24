@@ -49,3 +49,24 @@ class TestProgrammeViews(TestCase):
         response = self.client.get(reverse('edit_programme', args=(new_programme.id,)))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'programmes/edit_programme.html')
+
+    def test_sort_programmes_price_asc(self):
+        self.client.login(username='admin', password='adminpassword')
+        response = self.client.get('/programmes/?sort=price&direction=asc')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'programmes/programmes.html')
+
+    def test_sort_programmes_price_desc(self):
+        response = self.client.get('/programmes/?sort=price&direction=desc')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'programmes/programmes.html')
+
+    def test_sort_programmes_newest(self):
+        response = self.client.get('/programmes/?sort=sku&direction=desc')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'programmes/programmes.html')
+
+    def test_sort_programmes_highest_rated(self):
+        response = self.client.get('/programmes/?sort=rating&direction=desc')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'programmes/programmes.html')

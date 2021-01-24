@@ -46,6 +46,24 @@ class TestBlogViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'blog/post_detail.html')
 
+    def test_sort_posts_newest(self):
+        self.client.login(username='david', password='userpassword')
+        response = self.client.get('/blog/?sort=created_on&direction=desc')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'blog/blog.html')
+
+    def test_sort_posts_alph_asc(self):
+        self.client.login(username='david', password='userpassword')
+        response = self.client.get('/blog/?sort=title&direction=asc')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'blog/blog.html')
+
+    def test_sort_posts_alph_desc(self):
+        self.client.login(username='david', password='userpassword')
+        response = self.client.get('/blog/?sort=title&direction=desc')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'blog/blog.html')
+
     # def test_can_add_comment(self):
     #     self.client.login(username='david', password='userpassword')
     #     response = self.client.post('post_detail', {'body': 'test comment'})

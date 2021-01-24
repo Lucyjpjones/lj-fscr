@@ -73,13 +73,13 @@ class TestForumViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'forum/edit_thread.html')
 
-    def test_can_add_thread(self):
-        self.client.login(username='david', password='userpassword')
-        response = self.client.post('add/', data= {
-                                                'topic': 'test thread',
-                                                'description': 'test thread descr',
-                                                'slug': 'test-thread', })
-        self.assertRedirects(response, 'thread_detail/ data.slug', status_code=302,target_status_code=200)
+    # def test_can_add_thread(self):
+    #     self.client.login(username='david', password='userpassword')
+    #     response = self.client.post('add/', data= {
+    #                                             'topic': 'test thread',
+    #                                             'description': 'test thread descr',
+    #                                             'slug': 'test-thread', })
+    #     self.assertRedirects(response, 'thread_detail/ data.slug', status_code=302,target_status_code=200)
 
     def test_thread_has_slug(self):
         """Threads are given slugs correctly when saving"""

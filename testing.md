@@ -494,11 +494,11 @@ To set up and use Coverage, I used the following commands;
 
 * I used the following command to create an interactive HTML report to see more specifically what I was missing. This created a 'htmlcov' folder containing a index.html file.
 
-    `$ command html`
+    `$ coverage html`
 
 * To open the file in my browser and see an interactive version of the report I used the below command;
     
-    `$ python3 - m http.server`
+    `$ python3 -m http.server`
 
 </details>
 
@@ -675,3 +675,4 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 | [x] | Success toast showing shopping bag when not appropriate                  |  Added a variable called on_page to the product and programme detail page and used this as a filter within my success toast template. This ensures that the bag view is only displayed on the success message when a user is on these specific pages.     |
 | [] | Inappropriate results from search query                   |  Although some results aren't always seen as appropriate I wanted to continue to use icontains over iexact as it creates a more flexible search     |
 | [x] | Plural suffix returned when value is 1                   |  I added 'pluralize' tag to my count filters to ensure text was presented with correct spelling |
+| [] | If filter by category then sort items, filter is removed                   |  need to solve |

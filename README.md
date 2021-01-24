@@ -78,7 +78,6 @@ This application was built for a client who is currently looking to utilise thei
 
 By completing this project I will have shown greater experience in HTML, CSS, and Javascript, and demonstrated my understanding of Python+Django. I will have also shown my competency in using a relational database, setting up an authentication mechanism, and providing payment transactions using stripe payments. 
 
-
 ### **<ins>Design</ins>**
 
 **Structure**
@@ -140,7 +139,7 @@ I created a personalised favicon for the site to add branding, and to make it ea
 
 ### **<ins>Database</ins>**
 
-For this project I employed a [Relational Database](https://aws.amazon.com/relational-database/#:~:text=A%20relational%20database%20is%20a,be%20represented%20in%20the%20database.), to store my collection of data. I used [SQLite](https://www.sqlite.org/index.html) in development, as this is created by default, and [Heroku Postgres](https://www.heroku.com/postgres) in production. Relational databases were a suitable choice for this project as it allows multiple tables to be created, with data easily connected through the use of foreign keys. All Models included are related to at least one other Model, and implement one of the most common database relationships: many-to-one, many-to-many and one-to-one.
+For this project I employed a [Relational Database](https://aws.amazon.com/relational-database/#:~:text=A%20relational%20database%20is%20a,be%20represented%20in%20the%20database.), to store my collection of data. I used [SQLite](https://www.sqlite.org/index.html) in development, as this is created by default, and [Heroku Postgres](https://www.heroku.com/postgres) in production. Relational databases were a suitable choice for this project as it allows multiple tables to be created, with data easily connected through the use of foreign keys. All Models included are related to at least one other Model, and implement common database relationships: many-to-one, many-to-many and one-to-one.
 
 **NB:** .sqlite3 was added to .gitignore before my initial commit to ignore the development database file.
 
@@ -264,7 +263,9 @@ The deployed site has some differences vs. the wireframes I initially created, t
 | 7 | 'Add to bag' and 'View more details' on programmes page | I decided not to have these buttons and to keep it in line with the structure of the product page by viewing on image click |
 | 8 | Sample fitness plan removed from programme detail | Client didn't want to provide an example template so this was removed |
 | 9 | View bag and checkout options available on 'add to bag' success toast | I decided to add both options so the user has the option to view their bag or just go straight to the checkout |
+| |
     
+## [&#8679;](#table-of-contents)
 ---
 
 ## &rarr; **Features**
@@ -397,6 +398,7 @@ I will continue to update my website to meet my clients' expectations. I have fu
 - More queries added to search functionality for more effective search results.
 - Add video blogs to blog (already included in the filter but currently no video posts provided by client).
 
+## [&#8679;](#table-of-contents)
 ---
 
 ## &rarr; **Technologies**
@@ -484,6 +486,8 @@ I will continue to update my website to meet my clients' expectations. I have fu
 
 - [**Favicon**](https://favicon.io/)
     - Used to create a favicon, displaying my logo on a web browser next to the web address bar, the browser tab, and the bookmarks bar.
+
+## [&#8679;](#table-of-contents)
 ---
 
 ## &rarr; **Deployment**
@@ -879,6 +883,7 @@ When you clone a repository, the repository is copied on to your local machine, 
 </p>
 </details>
 
+## [&#8679;](#table-of-contents)
 ---
 
 ## &rarr; **Credits**
@@ -936,6 +941,9 @@ When you clone a repository, the repository is copied on to your local machine, 
     - Clint - for helping me to solve the issue on limiting quantity added in shopping bag
 
 - Friends & Family for continuous feedback and support.
+
+## [&#8679;](#table-of-contents)
+---
 
 ## &rarr; **Contact**
 

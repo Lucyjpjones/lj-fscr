@@ -230,6 +230,9 @@ Social media platform links are featured in the page footer below the copyright 
 
     <img src="readme/media/us-31.png">
 
+## [&#8679;](#table-of-contents)
+---
+
 ### **Manual function testing**
 
 To ensure my site was working correctly I carried out some manual function testing;
@@ -441,6 +444,10 @@ When logged in as Admin user...
 - [x] No fields on user profile are required allowing user to only fill in desired fields
 - [x] If user updates their information in their profile this is reflected on the checkout page
 
+
+## [&#8679;](#table-of-contents)
+---
+
 ### **Automated testing**
 
 I also decided to use Django's testing framework to create some automated tests for my project.
@@ -487,6 +494,8 @@ To set up and use Coverage, I used the following commands;
     
     `$ python3 - m http.server`
 
+## [&#8679;](#table-of-contents)
+---
 
 ### **Validator checks**
 
@@ -579,6 +588,8 @@ This error has been fixed on the majority of my code but some lines have been le
 `F401 'checkout.signals' imported but unused`
 `F841 local variable 'e' is assigned to but never used`
 
+## [&#8679;](#table-of-contents)
+---
 
 ### **Audits**
 
@@ -610,6 +621,9 @@ I didn't take any actions as none of my users experienced difficulty reading the
 
 I didn't take any actions as the error was for displaying 'read more' which I believe is a conventional text link for users. This is also very similar to the suggested generic link text 'learn more'.
 
+## [&#8679;](#table-of-contents)
+---
+
 ### **Responsive Design**
 
 - Site created as a mobile-first design.
@@ -617,6 +631,9 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 - Responsive layout achieved through utilising the Bootstrap grid system and applying my own media queries.
 
 - Viewport tag included in the head of HTML files to tell the browser how to respond to different resolutions, particularly mobile ones.
+
+## [&#8679;](#table-of-contents)
+---
 
 ### **Additional Testing**
 
@@ -633,6 +650,9 @@ I didn't take any actions as the error was for displaying 'read more' which I be
     - Ability for user to autofill address by entering postcode- this is included in my future development plans. 
 - Project posted on Slack, asking for feedback from fellow students.
 
+## [&#8679;](#table-of-contents)
+---
+
 ### **Bugs**
 
 |     | Bug                                                                           | Action                                                            |
@@ -644,3 +664,4 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 | [x] | User able to type in any quantity value for item when in shopping bag                  |  Changed 'quantity > 0' to 'quantity in range(0, 99)' and added elif statement for any value over 99 to send an error message to the user   |
 | [x] | Success toast showing shopping bag when not appropriate                  |  Added a variable called on_page to the product and programme detail page and used this as a filter within my success toast template. This ensures that the bag view is only displayed on the success message when a user is on these specific pages.     |
 | [] | Inappropriate results from search query                   |  Although some results aren't always seen as appropriate I wanted to continue to use icontains over iexact as it creates a more flexible search     |
+| [x] | Plural suffix returned when value is 1                   |  I added 'pluralize' tag to my count filters to ensure text was presented with correct spelling |

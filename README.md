@@ -31,6 +31,7 @@ For <ins>**testing**</ins> the following credentials can be used for checkout:
   - [Purpose](#purpose)
   - [Design](#design)
   - [User stories](#user-stories)
+  - [Database](#database)
   - [Data Schema](#data-schema)
   - [Wireframes](#wireframes)
 </details>
@@ -136,6 +137,12 @@ My final design with client approval is displayed below;
 I created a personalised favicon for the site to add branding, and to make it easier for visitors to locate the page when they have multiple tabs open. I decided to keep the design simple and conventional by using only the first initial of the logo.
 
 <img src="readme/media/fscr-favicon.png">
+
+### **<ins>Database</ins>**
+
+For this project I employed a [Relational Database](https://aws.amazon.com/relational-database/#:~:text=A%20relational%20database%20is%20a,be%20represented%20in%20the%20database.), to store my collection of data. I used [SQLite](https://www.sqlite.org/index.html) in development, as this is created by default, and [Heroku Postgres](https://www.heroku.com/postgres) in production. Relational databases were suitable choice for this project as it allows multiple tables to be created, with data easily connected through the use of foreign keys.
+
+**NB:** .sqlite3 was added to .gitignore before my initial commit to ignore the development database file.
 
 ### **<ins>Data Schema</ins>**
 

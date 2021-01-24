@@ -457,6 +457,8 @@ I also decided to use Django's testing framework to create some automated tests 
 
 I added a tests.py file to each of my apps containing my written unit tests.
 
+As my automated testing was only small for this project I kept the tests all in the same file within each app, however for larger project testing, I would create a 'tests' folder and group tests by what i'm testing e.g. test_models.py, test_views.py, test_forms.py etc.
+
 To run all the tests I used the following command;
 
 `$ python3 manage.py test`

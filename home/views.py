@@ -30,6 +30,8 @@ def search_results(request):
     query = None
     results_list = ()
     filtered_products = Product.objects.filter(discontinued=False)
+    filtered_programmes = Programme.objects.filter(discontinued=False)
+    filtered_posts = Post.objects.filter(status=1)
 
     if 'q' in request.GET:
         query = request.GET['q']
@@ -40,9 +42,9 @@ def search_results(request):
 
         products = filtered_products.filter(Q(name__icontains=query) | Q(
                                         description__icontains=query))
-        programmes = Programme.objects.filter(Q(name__icontains=query) | Q(
-                                               description__icontains=query))
-        posts = Post.objects.filter(Q(title__icontains=query))
+        programmes = filtered_programmes.objects.filter(Q(
+            name__icontains=query) | Q(description__icontains=query))
+        posts = filtered_posts.objects.filter(Q(title__icontains=query))
 
         results_list = list(chain(products, programmes, posts))
 

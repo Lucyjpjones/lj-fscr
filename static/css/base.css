@@ -808,15 +808,36 @@ input[name='q']::placeholder {
 	.profile-img {
 		width: 220px;
 		height: 220px;
+    }
+    
+    /* -------------------- Sort & Filter */
+    .sort-container {
+		width: 70%;
+		max-width: 550px;
 	}
+    #sort-selector {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color: transparent;
+    }
+
+    .sort {
+        z-index: -1;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 20%;
+    }
+
+    #sort-selector::-ms-expand {
+        display: none;
+    }
+
 	/* -------------------- Products app */
 	.prod-detail-img {
 		height: 450px;
 	}
-	.sort-container {
-		width: 70%;
-		max-width: 550px;
-	}
+
 	/* -------------------- Programmes app */
 	.prog-img-card {
 		height: 240px;

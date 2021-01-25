@@ -29,6 +29,7 @@ def search_results(request):
 
     query = None
     results_list = ()
+    filtered_products = Product.objects.filter(discontinued=False)
 
     if 'q' in request.GET:
         query = request.GET['q']
@@ -37,7 +38,7 @@ def search_results(request):
                            "You didn't enter any search criteria!")
             return redirect(reverse('search_results'))
 
-        products = Product.objects.filter(Q(name__icontains=query) | Q(
+        products = filtered_products.filter(Q(name__icontains=query) | Q(
                                         description__icontains=query))
         programmes = Programme.objects.filter(Q(name__icontains=query) | Q(
                                                description__icontains=query))

@@ -20,7 +20,7 @@
          <div class="row">
             {% if results_list %}
             <div class="col-12">
-               <p class="mb-4 text-muted text-center">Showing <strong>{{ results_list|length }}</strong> search result{{ results_list|pluralize  }} for "<strong>{{ search_term }}</strong>"</p>
+               <p class="mb-4 text-muted text-center">Showing <strong>{{ results_list|length }}</strong> search result{{ results_list|pluralize }} for "<strong>{{ search_term }}</strong>"</p>
             </div>
             {% for result in results_list %}
             {% if result.colour %}

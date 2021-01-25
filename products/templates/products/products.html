@@ -19,17 +19,18 @@
         <div class="col-6 text-center d-flex">
             <div class="d-flex w-100">
                 <select id="sort-selector" class="btn filter-btn rounded-0">
-                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort</option>
+                    <option value="none" selected disabled hidden></option>
                     <option value="sku_desc" {% if current_sorting == 'sku_desc' %}selected{% endif %}>Newest Arrivals</option>
                     <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Highest Rated</option>
                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price: Low to High</option>
                     <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price: High to Low</option>
                 </select>
+                <label class="sort" for="sort-selector">Sort <i class="fa-xs fas fa-chevron-down pl-2"></i></label>
             </div>
         </div>
         <div class="col-6 dropdown show text-center">
-            <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Filter
+            <a class="btn filter-btn rounded-0" href="#" role="button" id="dropdownMenuFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Filter <i class="fa-xs fas fa-chevron-down pl-2"></i>
             </a>
             <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuFilter">
                 <a class="dropdown-item float-right small text-muted" href="{% url 'products' %}">

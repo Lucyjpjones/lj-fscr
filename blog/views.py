@@ -23,6 +23,8 @@ def all_posts(request):
             if sortkey == 'title':
                 sortkey = 'lower_title'
                 posts = posts.annotate(lower_title=Lower('title'))
+            if sortkey == 'created':
+                sortkey = 'created_on'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']

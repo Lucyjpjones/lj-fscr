@@ -16,30 +16,31 @@
    </div>
    <!--Sort and Filter-->
    <div class="row px-3 px-sm-0 mx-auto sort-container">
-      <div class="col-6 dropdown show text-center">
-         <a class="btn filter-btn p-font dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Sort
-         </a>
-         <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuSort">
-            <a class="dropdown-item" href="{% url 'programmes' %}?sort=sku&direction=desc">Newest arrivals</a>
-            <a class="dropdown-item" href="{% url 'programmes' %}?sort=rating&direction=desc">Highest Rated</a>
-            <a class="dropdown-item" href="{% url 'programmes' %}?sort=price&direction=asc">Price: Low to High</a>
-            <a class="dropdown-item" href="{% url 'programmes' %}?sort=price&direction=desc">Price: High to Low</a>
-         </div>
-      </div>
-      <div class="col-6 dropdown show text-center">
-         <a class="btn filter-btn dropdown-toggle rounded-0" href="#" role="button" id="dropdownMenuFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Filter
-         </a>
-         <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuFilter">
-            <a class="dropdown-item float-right small text-muted" href="{% url 'programmes' %}">
-            <span><i class="fas fa-times pr-1"></i> Clear all</span>
+        <div class="col-6 text-center d-flex">
+            <div class="d-flex w-100">
+                <select id="sort-selector" class="btn filter-btn rounded-0">
+                    <option value="none" selected disabled hidden></option>
+                    <option value="sku_desc" {% if current_sorting == 'sku_desc' %}selected{% endif %}>Newest Arrivals</option>
+                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Highest Rated</option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price: Low to High</option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price: High to Low</option>
+                </select>
+                <label class="sort" for="sort-selector">Sort <i class="fa-xs fas fa-chevron-down pl-2"></i></label>
+            </div>
+        </div>
+        <div class="col-6 dropdown show text-center">
+            <a class="btn filter-btn rounded-0" href="#" role="button" id="dropdownMenuFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Filter <i class="fa-xs fas fa-chevron-down pl-2"></i>
             </a>
-            <a class="dropdown-item" href="{% url 'programmes' %}?category=rehab">Rehab</a>
-            <a class="dropdown-item" href="{% url 'programmes' %}?category=performance">Performance</a>
-            <a class="dropdown-item" href="{% url 'programmes' %}?category=custom">Custom</a>
-         </div>
-      </div>
+            <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuFilter">
+                <a class="dropdown-item float-right small text-muted" href="{% url 'programmes' %}">
+                    <span><i class="fas fa-times pr-1"></i> Clear all</span>
+                </a>
+                <a class="dropdown-item" href="{% url 'programmes' %}?category=rehab">Rehab</a>
+                <a class="dropdown-item" href="{% url 'programmes' %}?category=performance">Performance</a>
+                <a class="dropdown-item" href="{% url 'programmes' %}?category=custom">Custom</a>
+            </div>
+        </div>
    </div>
    <!--Programme cards-->
    <div class="row mt-sm-3">
@@ -116,4 +117,31 @@
       </div>
    </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+            $('#sort-selector').change(function() {
+                var selector = $(this);
+                var currentUrl = new URL(window.location);
+
+                var selectedVal = selector.val();
+                if(selectedVal != "reset"){
+                    var sort = selectedVal.split("_")[0];
+                    var direction = selectedVal.split("_")[1];
+
+                    currentUrl.searchParams.set("sort", sort);
+                    currentUrl.searchParams.set("direction", direction);
+
+                    window.location.replace(currentUrl);
+                } else {
+                    currentUrl.searchParams.delete("sort");
+                    currentUrl.searchParams.delete("direction");
+
+                    window.location.replace(currentUrl);
+                }
+            })
+        </script>
+
 {% endblock %}

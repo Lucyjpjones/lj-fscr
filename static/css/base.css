@@ -369,12 +369,15 @@ header {
 	background-color: #f8f8f8;
 }
 
+
 /* -------------------- Sort & Filter */
+
 #sort-selector {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	color: transparent;
 }
+
 .sort {
 	z-index: -1;
 	position: absolute;
@@ -382,9 +385,11 @@ header {
 	left: 0;
 	top: 20%;
 }
+
 #sort-selector::-ms-expand {
 	display: none;
 }
+
 
 /* -------------------- Products app  */
 
@@ -751,12 +756,12 @@ input[name='q']::placeholder {
 	.profile-img {
 		width: 180px;
 		height: 180px;
-    }
-    /* -------------------- Sort & Filter */
-    .sort-container {
-        width: 70%;
-        max-width: 550px;
-    }
+	}
+	/* -------------------- Sort & Filter */
+	.sort-container {
+		width: 70%;
+		max-width: 550px;
+	}
 	/* -------------------- Products app  */
 	.prod-img-card {
 		height: 300px;
@@ -837,7 +842,6 @@ input[name='q']::placeholder {
 		width: 220px;
 		height: 220px;
 	}
-
 	/* -------------------- Products app */
 	.prod-detail-img {
 		height: 450px;

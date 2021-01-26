@@ -487,6 +487,9 @@ I will continue to update my website to meet my clients' expectations. I have fu
 - [**Favicon**](https://favicon.io/)
     - Used to create a favicon, displaying my logo on a web browser next to the web address bar, the browser tab, and the bookmarks bar.
 
+- [**Techsini**](http://techsini.com/multi-mockup/index.php)
+    - Multi Device Website Mockup Generator Tool
+
 ## [&#8679;](#table-of-contents)
 ---
 
@@ -909,7 +912,7 @@ When you clone a repository, the repository is copied on to your local machine, 
 - [Stack overflow](https://stackoverflow.com/):
   - [Code](https://stackoverflow.com/questions/43816377/add-body-overlay-when-a-sidebar-menu-opens/43816724) help for adding body overlay when a sidebar is open
   - [Code](https://stackoverflow.com/questions/25385289/how-to-set-the-size-of-a-column-in-a-bootstrap-responsive-table/25385798) help with setting the size of the column width in bootstrap
-  - [Code]((https://stackoverflow.com/questions/11472495/remove-labels-in-a-django-crispy-forms) help with removing labels from crispy forms
+  - [Code](https://stackoverflow.com/questions/11472495/remove-labels-in-a-django-crispy-forms) help with removing labels from crispy forms
   - [Code](https://stackoverflow.com/questions/38684753/django-reducing-the-size-of-input-box-in-crispy-forms) help with reducing the inbox size in crispy forms
   - [Code](https://stackoverflow.com/questions/45847278/django-use-slugify-for-detail-url) help using slugify for detailed urls
   - [Code](https://stackoverflow.com/questions/43879330/djangounable-to-compare-the-logged-in-user-with-the-author-of-the-post)help with IF statement for logged in user

@@ -1,13 +1,12 @@
 from django.test import TestCase
 from checkout.forms import OrderForm
-from checkout.models import Order, OrderLineItem, ProgOrderLineItem
 from django.urls import reverse
+from products.models import Product
+from programmes.models import Programme
 
 
+# form tests
 class TestOrderForm(TestCase):
-
-    # forms
-
     # Checking required fields
     def test_item_full_name_is_required(self):
         form = OrderForm({'full_name': ''})
@@ -55,13 +54,43 @@ class TestOrderForm(TestCase):
         self.assertEqual(form.errors['street_address1'][0],
                          'This field is required.')
 
-    # # Checking the correct fields are displayed in the form
-    # def test_fields_are_explicit_in_form_metaclass(self):
-    #     form = OrderForm()
-    #     self.assertEqual(form.Meta.fields, ['full_name', 'email', 'phone_number', 'street_address1', 'street_address2', 'town_or_city', 'postcode', 'country', 'county'])
 
+# form tests
+class TestCheckoutViews(TestCase):
 
-# bag views
-# class TestCheckoutViews(TestCase):
+    def setUp(self):
+        product = Product.objects.create(name='test product', id=1,
+                                         price=5.99)
+        programme = Programme.objects.create(name='test product', id=2,
+                                             price=40.00)
 
-#     def test_get_checkout(self):
+    def test_get_checkout(self):
+        session = self.client.session
+        session['bag'] = {'product': {'1': 1}, 'programme': {'2': 1}}
+        session.save()
+        response = self.client.get(reverse('checkout'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'checkout/checkout.html')
+
+    def test_checkout_view_post(self):
+        session = self.client.session
+        session['bag'] = {'product': {'1': 1}, 'programme': {'2': 1}}
+        session.save()
+        post_data = {
+            'full_name': 'test user',
+            'email': 'test@test.com',
+            'phone_number': '123245789',
+            'street_address1': 'test street',
+            'street_address2': '',
+            'town_or_city': 'test city',
+            'county': 'test county',
+            'country': 'GB',
+            'postcode': '12345',
+            'client_secret': 'client_1_secret_1',
+        }
+
+        response = self.client.post(reverse('checkout'),
+                                    data=post_data, follow=True)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'checkout/checkout_success.html')

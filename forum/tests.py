@@ -4,7 +4,6 @@ from forum.models import Thread
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.test.client import Client
-import unittest
 from django.template.defaultfilters import slugify
 
 
@@ -56,7 +55,8 @@ class TestForumViews(TestCase):
     def test_get_thread_detail(self):
         self.client.login(username='david', password='userpassword')
         new_thread = Thread.objects.create(slug='test', author=self.user)
-        response = self.client.get(reverse('thread_detail', args=(new_thread.slug,)))
+        response = self.client.get(reverse('thread_detail', args=(
+                                           new_thread.slug,)))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'forum/thread_detail.html')
 
@@ -69,17 +69,10 @@ class TestForumViews(TestCase):
     def test_get_edit_thread(self):
         self.client.login(username='david', password='userpassword')
         new_thread = Thread.objects.create(id='1', author=self.user)
-        response = self.client.get(reverse('edit_thread', args=(new_thread.slug,)))
+        response = self.client.get(reverse('edit_thread', args=(
+                                            new_thread.slug,)))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'forum/edit_thread.html')
-
-    # def test_can_add_thread(self):
-    #     self.client.login(username='david', password='userpassword')
-    #     response = self.client.post('add/', data= {
-    #                                             'topic': 'test thread',
-    #                                             'description': 'test thread descr',
-    #                                             'slug': 'test-thread', })
-    #     self.assertRedirects(response, 'thread_detail/ data.slug', status_code=302,target_status_code=200)
 
     def test_thread_has_slug(self):
         """Threads are given slugs correctly when saving"""
@@ -87,16 +80,3 @@ class TestForumViews(TestCase):
         thread.author = self.user
         thread.save()
         self.assertEqual(thread.slug, slugify(thread.topic))
-
-
-    # def test_can_edit_thread(self):
-    #     self.client.login(username='david', password='userpassword')
-    #     thread = Thread.objects.create(topic='test thread',
-    #                                    description='test thread descr',
-    #                                    slug='test-thread')
-    #     response = self.client.get(reverse('thread_detail',
-    #                                        args=(thread.slug,)))
-    #     self.assertEqual(response.status_code, 200)
-
-
-    # def test_can_delete_thread(self):

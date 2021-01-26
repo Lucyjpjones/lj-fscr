@@ -5,14 +5,6 @@ from django.contrib.auth.models import User
 from django.test.client import Client
 
 
-# form tests
-class TestUserProfileForm(TestCase):
-
-    # Checking the correct fields are displayed in the form
-    def test_fields_are_explicit_in_form_metaclass(self):
-        form = UserProfileForm()
-
-
 # view tests
 class TestProfileViews(TestCase):
 

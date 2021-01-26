@@ -405,6 +405,7 @@ When logged in as Admin user...
 - [x] The user is redirected to the checkout success page after completing order
 - [x] The checkout success page contains all the correct personal details for the user and items purchased
 - [x] After successful checkout the user receives an email with their order details
+- [x] User is able to checkout successfully as both a site user (not logged in) and member (logged in)
 - [x] The delivery amount is showing as 10% of the subtotal cost
 - [x] If the order is over $40 the delivery amount is 0
 

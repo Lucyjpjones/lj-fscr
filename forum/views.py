@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import CommentForm, ThreadForm
-from django.db.models.functions import Lower
 from .models import Thread, Reply
 
 

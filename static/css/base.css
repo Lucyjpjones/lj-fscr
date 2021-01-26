@@ -370,10 +370,6 @@ header {
 }
 
 /* -------------------- Sort & Filter */
-.sort-container {
-	width: 70%;
-	max-width: 550px;
-}
 #sort-selector {
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -755,7 +751,12 @@ input[name='q']::placeholder {
 	.profile-img {
 		width: 180px;
 		height: 180px;
-	}
+    }
+    /* -------------------- Sort & Filter */
+    .sort-container {
+        width: 70%;
+        max-width: 550px;
+    }
 	/* -------------------- Products app  */
 	.prod-img-card {
 		height: 300px;

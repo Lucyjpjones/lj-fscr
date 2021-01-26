@@ -4,7 +4,6 @@ from products.models import Product, Category
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.test.client import Client
-import unittest
 
 
 # form tests
@@ -78,14 +77,3 @@ class TestProductViews(TestCase):
         response = self.client.get('/products/?category=new_arrivals')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
-
-    # def test_can_add_product(self):
-    #     self.client.login(username='admin', password='adminpassword')
-    #     response = self.client.post('/add', {'category': 'Category', 'sku': 'test001', 'name': 'test name', 'colour': 'test colour', 'description': 'test description', 'has_sizes': 'S', 'price': '9.99', 'rating': '5.0', 'image_url': '', 'image': 'test.png'})
-    #     self.assertRedirects(response, reverse('product_detail', {'name': 'test name'}))
-
-    # def test_can_edit_product(self):
-    #     self.client.login(username='admin', password='adminpassword')
-
-    # def test_can_delete_product(self):
-    #     self.client.login(username='admin', password='adminpassword')

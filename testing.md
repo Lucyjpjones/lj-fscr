@@ -235,7 +235,7 @@ Social media platform links are featured in the page footer below the copyright 
 
 ### **Manual function testing**
 
-To ensure my site was working correctly I carried out some manual function testing;
+To ensure my site was working correctly I carried out manual function testing on all my apps;
 
 #### General
 
@@ -507,9 +507,7 @@ To set up and use Coverage, I used the following commands;
 
 ### **Validator checks**
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project. The code was entered through direct input. JS hint was used to check for any errors with my Javascript files. 
-JS was also tested by opening the developer console window on Chrome and checking for any errors as I clicked through the site.
-I used the PEP8 online checking tool to inspect my Python code against the style conventions in PEP 8.
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project. The code was entered through direct input. 
 
 - [**HTML Validator**](https://validator.w3.org/)
 
@@ -523,73 +521,46 @@ I used the PEP8 online checking tool to inspect my Python code against the style
     No error or warning messages were received.
 
 
-- [**JS hint**](https://jshint.com/)
+[**JS hint**](https://jshint.com/) was used to check for any errors with my Javascript files. 
+JS was also tested by opening the developer console window on Chrome and checking for any errors as I clicked through the site.
 
-    **script.js**
+- Warnings received;
 
-   - Warnings received;
+    `let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).`
+    `'template literal syntax' is only available in ES6 (use 'esversion: 6').`
 
-        `let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).`
-        `'template literal syntax' is only available in ES6 (use 'esversion: 6').`
+    Warnings occurred as JShint is using ECMAScript 5.1 specification and my code uses ECMAScript 6 specific syntax. However, all code is valid.
 
-        Warnings occurred as JShint is using ECMAScript 5.1 specification and my code uses ECMAScript 6 specific syntax. However, all code is valid.
+- Undefined variable;
 
-    - Undefined variable;
+    `$`
 
-        `$`
+    `emailjs`
 
-        `emailjs`
+    `stripe`
 
-        $ (Jquery) and emailjs defined in base.html.
+    $ (Jquery), emailjs and stripe are all defined in base.html.
 
     - Unused variable;
 
-        `sendMail`
+    `sendMail`
 
-        sendMail used in index.html for emailJS
+    sendMail used in index.html for emailJS
 
-    **stripe_elements.js**
+[**PEP8 online checking tool**](http://pep8online.com/checkresult) was used to inspect my Python code against the style conventions in PEP 8.
 
-    - Warnings received;
+[**Flake8**](http://pep8online.com/checkresult) was a python code linting tool also used to help verify pep8, pyflakes and circular complexity. By using the following command I was able to check the problems across all my files without having to open each individual file.
 
-        `'template literal syntax' is only available in ES6 (use 'esversion: 6')`
+`$ python3 - m flake8`
 
-        Warnings occurred as JShint is using ECMAScript 5.1 specification and my code uses ECMAScript 6 specific syntax. However, all code is valid.
+<ins>PEP8 Issues:</ins>
+- I chose to ignore any warnings on migration files since these are automatically generated files so may ignore style rules for efficiency reasons. Also as developers, we usually don't need to touch them so they don't need to be perfectly readable.
 
-    - Undefined variable;
-
-        `$`
-
-        `stripe`
-
-        $ (Jquery) and stripe defined in base.html.
-
-    **countryfield.js**
-
-    - Warnings received;
-
-        `'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).`
-
-        Warnings occurred as JShint is using ECMAScript 5.1 specification and my code uses ECMAScript 6 specific syntax. However, all code is valid.
-
-    - Undefined variable;
-
-        `$`
-
-        $ (Jquery) is defined in base.html.
-
-- **Developer tools**
-
-
-- [**PEP8 online check**](http://pep8online.com/checkresult)
-
-    I have chosen to ignore any warnings on migration files since these are automatically generated files so may ignore style rules for efficiency reasons. Also as developers, we usually don't need to touch them so they don't need to be perfectly readable.
-
-    `DJ01 Avoid using null=True on string-based fields`
+- `DJ01 Avoid using null=True on string-based fields`
 
     As referenced on [stackoverflow](https://stackoverflow.com/questions/59836736/django-why-only-string-based-field-cant-have-null-true), Django allows the use of NULL in string-based fields but it is suggested to avoid it and use '' to represent the empty value. As in most cases both values (NULL and '') represent the same thing for string-based fields I have chosen to disregard this warning. 
 
-    `E501 line too long`
+- `E501 line too long`
 
     This error has been fixed on the majority of my code but some lines have been left to avoid breaking up variables.
 
@@ -681,4 +652,4 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 | [x] | Success toast showing shopping bag when not appropriate                  |  Added a variable called on_page to the product and programme detail page and used this as a filter within my success toast template. This ensures that the bag view is only displayed on the success message when a user is on these specific pages.     |
 | [x] | Plural suffix returned when value is 1                   |  I added 'pluralize' tag to my count filters to ensure text was presented with correct spelling |
 | [x] | If filter by category then sort items, filter is removed                   |  Changed sort from dropdown to selector with options, added my own custom styling. Styling involved replacing the custom arrow and adding my own text with absolute positioning. I also replaced the default dropdown arrow by removing the 'dropdown-toggle' class so that the arrow style matched. |
-| [] | Inappropriate results from search query                   |  Although some results aren't always seen as appropriate I wanted to continue to use icontains over iexact as it creates a more flexible search     |
+| [] | Unsuitable results from search query                   |  Although some results aren't always seen as logical I wanted to continue to use icontains over iexact as it creates a more flexible search. As the site develops I will look into other ways of creating a more robust search     |

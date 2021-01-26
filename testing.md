@@ -149,7 +149,7 @@ The pages also feature a count functionality showing the user how many items are
 
 A search bar features in the main site header and allows users to search by keywords to find specific items. On larger screens the search bar is visible and on smaller devices, the search bar is collapsed from the search icon.
 - The filtered queries include product name, product description, programme name, programme description, and blog post title.
-- 'icontains' has been used making the search case-insensitive.
+- 'icontains' has been used making the search case-insensitive. Although some results aren't always seen as logical I wanted to continue to use icontains over iexact as it creates a more flexible search. As the site develops I will look into other ways of creating a more robust search.
 
 <img src="readme/media/us-18.png">
 
@@ -652,6 +652,5 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 | [x] | Success toast showing shopping bag when not appropriate                  |  Added a variable called on_page to the product and programme detail page and used this as a filter within my success toast template. This ensures that the bag view is only displayed on the success message when a user is on these specific pages.     |
 | [x] | Plural suffix returned when value is 1                   |  I added 'pluralize' tag to my count filters to ensure text was presented with correct spelling |
 | [x] | If filter by category then sort items, filter is removed                   |  Changed sort from dropdown to selector with options, added my own custom styling. Styling involved replacing the custom arrow and adding my own text with absolute positioning. I also replaced the default dropdown arrow by removing the 'dropdown-toggle' class so that the arrow style matched. |
-| [] | Unsuitable results from search query                   |  Although some results aren't always seen as logical I wanted to continue to use icontains over iexact as it creates a more flexible search. As the site develops I will look into other ways of creating a more robust search     |
 | [x] | Unable to migrate changes, error meesage received `psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "test"`               | This happened a couple of times and was solved by resetting my migrations using this [link](https://simpleisbetterthancomplex.com/tutorial/2016/07/26/how-to-reset-migrations.html) recommended by a tutor     |
 | [x] | Unable to make migrate even after resetting migrations              | My old database was corrupted so this was solved by resetting my Heroku database as advised by a tutor. I logged into Heroku, selected app, navigated to Resources, selected Heroku PostGres, then in new window clicked Settings then Reset Database.     |

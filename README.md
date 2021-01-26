@@ -919,6 +919,7 @@ When you clone a repository, the repository is copied on to your local machine, 
 
 - General site content provided by the client
 - Images used for callout image, about page and profile images provided by the client
+    - Main callout image appears blurry on larger devices, the client will provide an alternative image before the site goes commercial
 - Blog content written by the client with all references included
 - Product images were taken from [ASOS](https://www.asos.com/) and [Nike](https://www.nike.com/gb/) and edited for personal use
 - Programme images were taken from;

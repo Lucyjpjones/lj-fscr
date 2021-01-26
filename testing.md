@@ -465,7 +465,7 @@ To run all the tests I used the following command;
 
 To run tests in a specific app I used the following command;
 
-`python3 manage.py test <app name>`
+`python3 manage.py test <app_name>.tests`
 
 The results from each test were displayed in the terminal, letting me know if the tests were successful or had failed.
 
@@ -583,18 +583,18 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 - [**PEP8 online check**](http://pep8online.com/checkresult)
 
-I'm ignoring any warnings on migration files since these are automatically generated files so may ignore style rules for efficiency reasons. Also as developers, we usually don't need to touch them so they don't need to be perfectly readable.
+    I have chosen to ignore any warnings on migration files since these are automatically generated files so may ignore style rules for efficiency reasons. Also as developers, we usually don't need to touch them so they don't need to be perfectly readable.
 
-`DJ01 Avoid using null=True on string-based fields`
+    `DJ01 Avoid using null=True on string-based fields`
 
-I decided not to remove from my code as
+    As referenced on [stackoverflow](https://stackoverflow.com/questions/59836736/django-why-only-string-based-field-cant-have-null-true), Django allows the use of NULL in string-based fields but it is suggested to avoid it and use '' to represent the empty value. As in most cases both values (NULL and '') represent the same thing for string-based fields I have chosen to disregard this warning. 
 
-`E501 line too long`
+    `E501 line too long`
 
-This error has been fixed on the majority of my code but some lines have been left to avoid breaking up variables.
+    This error has been fixed on the majority of my code but some lines have been left to avoid breaking up variables.
 
-`F401 'checkout.signals' imported but unused`
-`F841 local variable 'e' is assigned to but never used`
+    `F401 'checkout.signals' imported but unused`
+    `F841 local variable 'e' is assigned to but never used`
 
 ## [&#8679;](#testing)
 ---
@@ -604,6 +604,11 @@ This error has been fixed on the majority of my code but some lines have been le
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to run a series of audits to improve the quality of web pages. Overall performance and errors are highlighted below.
 
 <img src="readme/media/lighthouse-review.png">
+
+<p>
+<details>
+<summary>More specific details</summary>
+<p>
 
 <ins>Performance</ins>
 
@@ -628,6 +633,8 @@ I didn't take any actions as none of my users experienced difficulty reading the
 `Links do not have descriptive text`
 
 I didn't take any actions as the error was for displaying 'read more' which I believe is a conventional text link for users. This is also very similar to the suggested generic link text 'learn more'.
+
+</details>
 
 ## [&#8679;](#testing)
 ---
@@ -667,12 +674,11 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 
 |     | Bug                                                                           | Action                                                            |
 |-----|-------------------------------------------------------------------------------|-------------------------------------------------------------------|
-| [] | Homepage vh including address bar on mobile so cropping bottom of element                   |  need to solve |
-| [] | Main callout image appears blurry on larger devices                   |  Before the website goes commercial the client will provide updated image material |
+| [] | Homepage vh including address bar on mobile so cropping bottom of element                   |  As this was only an issue on IOS and |
 | [x] | Item is removed from order history if deleted by admin                   |  This bug was fixed by following [this thread](https://app.slack.com/client/T0L30B202/CGWQJQKC5/thread/C7HS3U3AP-1597961336.047800) found on slack. I added a discontinued field to my models (with default False), updated delete view to change discontinued to true instead of physically deleting item and then referenced to this field in my templates  |
 | [x] | Comment reposts on page refresh                   |  Redirect path added to views after post request  |
-| [x] | User able to type in any quantity value for item when in shopping bag                  |  Changed 'quantity > 0' to 'quantity in range(0, 99)' and added elif statement for any value over 99 to send an error message to the user   |
+| [x] | User able to type in any quantity value for item when in shopping bag                  |  Changed 'quantity > 0' to 'quantity in range(1, 99)' and added elif statement for any value over 99 to send an error message to the user   |
 | [x] | Success toast showing shopping bag when not appropriate                  |  Added a variable called on_page to the product and programme detail page and used this as a filter within my success toast template. This ensures that the bag view is only displayed on the success message when a user is on these specific pages.     |
-| [] | Inappropriate results from search query                   |  Although some results aren't always seen as appropriate I wanted to continue to use icontains over iexact as it creates a more flexible search     |
 | [x] | Plural suffix returned when value is 1                   |  I added 'pluralize' tag to my count filters to ensure text was presented with correct spelling |
 | [x] | If filter by category then sort items, filter is removed                   |  Changed sort from dropdown to selector with options, added my own custom styling. Styling involved replacing the custom arrow and adding my own text with absolute positioning. I also replaced the default dropdown arrow by removing the 'dropdown-toggle' class so that the arrow style matched. |
+| [] | Inappropriate results from search query                   |  Although some results aren't always seen as appropriate I wanted to continue to use icontains over iexact as it creates a more flexible search     |

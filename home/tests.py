@@ -20,7 +20,7 @@ class TestHomeViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'home/meet_the_coaches.html')
 
-    # def test_get_search(self):
-    #     response = self.client.get(reverse('search_results'))
-    #     self.assertEqual(response.status_code, 200)
-    #     self.assertTemplateUsed(response, 'home/search.html')
+    def test_get_search(self):
+        response = self.client.get(reverse('search_results'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'home/search.html')

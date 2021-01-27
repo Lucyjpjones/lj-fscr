@@ -254,15 +254,14 @@ The deployed site has some differences vs. the wireframes I initially created, t
 
 |   | Change                                        | Reason                                                                                                             |
 |---|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| 1 | Social login option added to login page       | I thought this feature would be a nice addition to improve user experience by allowing them to log in more quickly |
-| 2 | Menu icon positioning                         | The menu is displayed on the left instead of the right, this was only changed for my own personal visual reasons   |
-| 3 | Testimonial carousel repositioned on homepage | It wasn't visually pleasing to have two carousels on top of one another                                            |
-| 4 | Latest blogs added to homepage                 | Client wanted this to be a focus on the homepage                                                                   |
-| 5 | Contact form added to homepage                | This wasn't included on my wireframes but I added this to the bottom of my homepage which is a common positioning  |
-| 6 | Removed red buttons                           | I decided not to use red buttons to avoid the possibility of user confusion                                        |
-| 7 | 'Add to bag' and 'View more details' on programmes page | I decided not to have these buttons and to keep it in line with the structure of the product page by viewing on image click |
-| 8 | Sample fitness plan removed from programme detail | Client didn't want to provide an example template so this was removed |
-| 9 | View bag and checkout options available on 'add to bag' success toast | I decided to add both options so the user has the option to view their bag or just go straight to the checkout |
+| 1 | Menu icon positioning                         | The menu is displayed on the left instead of the right, this was only changed for my own personal visual reasons   |
+| 2 | Testimonial carousel repositioned on homepage | It wasn't visually pleasing to have two carousels on top of one another                                            |
+| 3 | Latest blogs added to homepage                 | Client wanted this to be a focus on the homepage                                                                   |
+| 4 | Contact form added to homepage                | This wasn't included on my wireframes but I added this to the bottom of my homepage which is a common positioning  |
+| 5 | Removed red buttons                           | I decided not to use red buttons to avoid the possibility of user confusion                                        |
+| 6 | 'Add to bag' and 'View more details' on programmes page | I decided not to have these buttons and to keep it in line with the structure of the product page by viewing on image click |
+| 7 | Sample fitness plan removed from programme detail | Client didn't want to provide an example template so this was removed |
+| 8 | View bag and checkout options available on 'add to bag' success toast | I decided to add both options so the user has the option to view their bag or just go straight to the checkout |
 | |
     
 ## [&#8679;](#table-of-contents)

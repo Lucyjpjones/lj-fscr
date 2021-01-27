@@ -487,25 +487,25 @@ I used **Coverage** to identify the percentage of code the tests had covered and
 <p>
 To set up and use Coverage, I used the following commands;
 
-* To Install:
+- To Install:
 
     `$ pip3 install coverage`
 
-* Freeze .coverage to requirements file:
+- Freeze .coverage to requirements file:
 
     `$ pip3 freeze > requirements.txt`
 
-* To run all the tests written in a certain app and generate a report (second command is to view the report in the terminal).
+- To run all the tests written in a certain app and generate a report (second command is to view the report in the terminal).
 
     `$ coverage run --source=<'app name'> manage.py test`
 
     ` $ coverage report`
 
-* I used the following command to create an interactive HTML report to see more specifically what I was missing. This created a 'htmlcov' folder containing a index.html file.
+- I used the following command to create an interactive HTML report to see more specifically what I was missing. This created a 'htmlcov' folder containing a index.html file.
 
     `$ coverage html`
 
-* To open the file in my browser and see an interactive version of the report I used the below command;
+- To open the file in my browser and see an interactive version of the report I used the below command;
     
     `$ python3 -m http.server`
 

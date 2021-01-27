@@ -472,7 +472,15 @@ The results from each test were displayed in the terminal, letting me know if th
 
 #### **Coverage**
 
-I used **Coverage** to identify the percentage of code the tests had covered and to determine which areas to focus on. Due to time constraints, I aimed to reach a minimum of 50% coverage on all my apps. However, I will continue to add tests to get as close to 100% as I can. 
+I used **Coverage** to identify the percentage of code the tests had covered and to determine which areas to focus on. Due to time constraints, I aimed to reach a minimum of 50% coverage for models, forms and views, across all my apps. However, I will continue to add tests to get as close to 100% as I can. 
+
+<p>
+<details>
+<summary>Coverage Summary</summary>
+
+* Add table
+<p>
+</details>
 
 <details>
 <summary>Setting up Coverage</summary>

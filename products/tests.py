@@ -11,6 +11,7 @@ class TestProductForm(TestCase):
 
     # Checking the correct fields are displayed in the form
     def test_fields_are_explicit_in_form_metaclass(self):
+        ''' test correct fields are displayed in the form '''
         form = ProductForm()
         self.assertEqual(form.Meta.fields, '__all__')
 
@@ -18,62 +19,70 @@ class TestProductForm(TestCase):
 # view tests
 class TestProductViews(TestCase):
     def setUp(self):
+        ''' create superuser, create product and category '''
         self.client = Client()
         self.user = User.objects.create_superuser('admin',
                                                   'admin@fscr.com',
                                                   'adminpassword')
 
-        new_product = Product.objects.create(name='test product', id=2)
-
-        new_category = Category.objects.create(name='test category')
+        product = Product.objects.create(name='test product')
 
     def test_get_all_products(self):
+        ''' test products view '''
         response = self.client.get(reverse('products'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
 
     def test_get_product_detail(self):
-        new_product = Product.objects.get(id=2)
+        ''' test product detail view '''
+        product = Product.objects.get(name='test product')
         response = self.client.get(reverse('product_detail',
-                                           args=(new_product.id,)))
+                                           args=(product.id,)))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/product_detail.html')
 
     def test_get_add_product(self):
+        ''' test add product view, with logged in superuser '''
         self.client.login(username='admin', password='adminpassword')
         response = self.client.get(reverse('add_product'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/add_product.html')
 
     def test_get_edit_product(self):
+        ''' test edit product view, with logged in superuser '''
         self.client.login(username='admin', password='adminpassword')
-        new_product = Product.objects.get(id=2)
+        product = Product.objects.get(name='test product')
         response = self.client.get(reverse('edit_product',
-                                           args=(new_product.id,)))
+                                           args=(product.id,)))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/edit_product.html')
 
     def test_sort_products_price_asc(self):
+        ''' test sort products by price ascending '''
         response = self.client.get('/products/?sort=price&direction=asc')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
 
     def test_sort_products_price_desc(self):
+        ''' test sort products by price descending '''
         response = self.client.get('/products/?sort=price&direction=desc')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
 
     def test_sort_products_newest(self):
+        ''' test sort products by newest first '''
         response = self.client.get('/products/?sort=sku&direction=desc')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
 
     def test_sort_products_highest_rated(self):
+        ''' test sort products by highest rated '''
         response = self.client.get('/products/?sort=rating&direction=desc')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
 
     def test_filter_by_cat(self):
+        ''' test filter products by category new arrivals '''
         response = self.client.get('/products/?category=new_arrivals')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')

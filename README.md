@@ -574,9 +574,6 @@ The region chosen should be the one closest to you.
 | STRIPE_SECRET_KEY | To be added by user |
 | STRIPE_WH_SECRET  | To be added by user |
 
-
- If you want to include social account login's there are various ways you can set it up. I Used this [site](https://learndjango.com/tutorials/django-allauth-tutorial) to help implement them on my site.
-
 11. Install gunicorn using the following command;
 
     - $ pip3 install gunicorn

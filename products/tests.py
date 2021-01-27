@@ -57,6 +57,16 @@ class TestProductViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/edit_product.html')
 
+    def test_add_product_success(self):
+        ''' test add product successfully '''
+        self.client.login(username='admin', password='adminpassword')
+        form_data = {'name': 'test product', 'colour': 'test colour',
+                     'price': 4.99}
+        response = self.client.post(reverse(
+                                'add_product'),
+                                    data=form_data)
+        self.assertEqual(response.status_code, 200)
+
     def test_sort_products_price_asc(self):
         ''' test sort products by price ascending '''
         response = self.client.get('/products/?sort=price&direction=asc')

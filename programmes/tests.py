@@ -57,6 +57,16 @@ class TestProgrammeViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'programmes/edit_programme.html')
 
+    def test_add_programme_success(self):
+        ''' test add programme successfully '''
+        self.client.login(username='admin', password='adminpassword')
+        form_data = {'name': 'test programme',
+                     'price': 40.00}
+        response = self.client.post(reverse(
+                                'add_programme'),
+                                    data=form_data)
+        self.assertEqual(response.status_code, 200)
+
     def test_sort_programmes_price_asc(self):
         ''' test sort products by price ascending '''
         self.client.login(username='admin', password='adminpassword')

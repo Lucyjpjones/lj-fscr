@@ -1,6 +1,6 @@
 from django.test import TestCase
 from products.forms import ProductForm
-from products.models import Product, Category
+from products.models import Product
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.test.client import Client
@@ -9,7 +9,6 @@ from django.test.client import Client
 # form tests
 class TestProductForm(TestCase):
 
-    # Checking the correct fields are displayed in the form
     def test_fields_are_explicit_in_form_metaclass(self):
         ''' test correct fields are displayed in the form '''
         form = ProductForm()
@@ -57,8 +56,8 @@ class TestProductViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/edit_product.html')
 
-    def test_add_product_success(self):
-        ''' test add product successfully '''
+    def test_can_add_product(self):
+        ''' test can add product successfully '''
         self.client.login(username='admin', password='adminpassword')
         form_data = {'name': 'test product', 'colour': 'test colour',
                      'price': 4.99}

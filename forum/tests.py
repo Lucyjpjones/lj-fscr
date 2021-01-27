@@ -89,8 +89,8 @@ class TestForumViews(TestCase):
         thread.save()
         self.assertEqual(thread.slug, slugify(thread.topic))
 
-    def test_add_thread_success(self):
-        ''' test add thread successfully '''
+    def test_can_add_thread(self):
+        ''' test can add thread successfully '''
         self.client.login(username='david', password='userpassword')
         form_data = {'topic': 'test topic', 'body': 'test body',
                      'author': self.user}

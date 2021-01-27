@@ -9,7 +9,6 @@ from django.test.client import Client
 # form tests
 class TestProgrammeForm(TestCase):
 
-    # Checking the correct fields are displayed in the form
     def test_fields_are_explicit_in_form_metaclass(self):
         ''' test correct fields are displayed in the form '''
         form = ProgrammeForm()
@@ -57,8 +56,8 @@ class TestProgrammeViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'programmes/edit_programme.html')
 
-    def test_add_programme_success(self):
-        ''' test add programme successfully '''
+    def test_can_add_programme(self):
+        ''' test can add programme successfully '''
         self.client.login(username='admin', password='adminpassword')
         form_data = {'name': 'test programme',
                      'price': 40.00}

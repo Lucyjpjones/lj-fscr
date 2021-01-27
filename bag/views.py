@@ -74,7 +74,6 @@ def add_to_bag(request, item_id, category):
             messages.success(request, f'Added {programme.name} to your bag')
 
     request.session['bag'] = bag
-    print(request.session['bag'])
     return redirect(redirect_url)
 
 
@@ -144,7 +143,6 @@ def adjust_bag(request, item_id, category):
                              f'from your bag')
 
     request.session['bag'] = bag
-    print(request.session['bag'])
     return redirect(reverse('view_bag'))
 
 
@@ -181,7 +179,6 @@ def remove_from_bag(request, item_id, category):
                              f'Removed {programme.name} from your bag')
 
         request.session['bag'] = bag
-        print(request.session['bag'])
         return HttpResponse(status=200)
 
     except Exception as e:

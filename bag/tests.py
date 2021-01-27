@@ -113,7 +113,7 @@ class TestBagViews(TestCase):
                                     'adjust_bag',
                                     kwargs={'item_id': programme.id,
                                             'category': 'programme'}),
-                                            data=post_data_new)
+                                    data=post_data_new)
 
         self.assertRedirects(response, '/bag/')
 

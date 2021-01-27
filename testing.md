@@ -477,11 +477,11 @@ I used **Coverage** to identify the percentage of code the tests had covered and
 <p>
 <details>
 <summary>Coverage Summary</summary>
-
-* Add table
 <p>
+<img src="readme/media/coverage.png">
 </details>
 
+<p>
 <details>
 <summary>Setting up Coverage</summary>
 <p>

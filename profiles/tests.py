@@ -1,11 +1,9 @@
 from django.test import TestCase
-from profiles.forms import UserProfileForm
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.test.client import Client
 
 
-# view tests
 class TestProfileViews(TestCase):
 
     def setUp(self):

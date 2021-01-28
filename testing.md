@@ -543,10 +543,15 @@ To set up and use Coverage, I used the following commands;
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project. The code was entered through direct input. 
 
 - [**HTML Validator**](https://validator.w3.org/)
-
-    No error or warning messages were received.
-
     - To get the most accurate read of my HTML for validation, I ran my app and extracted my code from the 'View page source'.
+
+    No error messages were received.
+
+    One error message was received:
+
+    <img src="readme/media/html-val-w1.png">
+
+    I decided that this was not an issue as the header is the loading spinner icon which is included through the class attribute.
 
 
 - [**CSS Validator**](https://jigsaw.w3.org/css-validator/)
@@ -597,8 +602,9 @@ JS was also tested by opening the developer console window on Chrome and checkin
 
     This error has been fixed on the majority of my code but some lines have been left to avoid breaking up variables.
 
-    `F401 'checkout.signals' imported but unused`
-    `F841 local variable 'e' is assigned to but never used`
+    `F841 local variable 'product' is assigned to but never used` - tests.py
+    `F401 'checkout.signals' imported but unused` apps.py
+    `F841 local variable 'e' is assigned to but never used` webhooks.py
 
 ## [&#8679;](#testing)
 ---
@@ -606,6 +612,8 @@ JS was also tested by opening the developer console window on Chrome and checkin
 ### **Audits**
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to run a series of audits to improve the quality of web pages. Overall performance and errors are highlighted below.
+
+**NB:** The [performance score](https://web.dev/performance-scoring/) can fluctuate because of changes in underlying conditions.
 
 <img src="readme/media/lighthouse-review.png">
 
@@ -616,7 +624,7 @@ JS was also tested by opening the developer console window on Chrome and checkin
 
 <ins>Performance</ins>
 
-The low-performance review was mainly driven by **First Contentful Paint (FCP)**. I implemented some of the suggested measures to try and improve my score, however there is no noticable delay in page loading time. I also checked the load time using the [Page load time](https://chrome.google.com/webstore/detail/page-load-time/fploionmjgeclbkemipmkogoaohcdbig?hl=en) chrome extension which resulted in a respectable 428ms. 
+The low-performance review was mainly driven by **First Contentful Paint (FCP)**. I implemented some of the suggested measures to try and improve my score, however there is no noticable delay in page loading time. I also checked the load time using the [Page load time](https://chrome.google.com/webstore/detail/page-load-time/fploionmjgeclbkemipmkogoaohcdbig?hl=en) chrome extension which resulted in a respectable 370ms. 
 
 Actions taken:
 

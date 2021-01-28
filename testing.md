@@ -508,6 +508,7 @@ I used **Coverage** to identify the percentage of code the tests had covered and
 <details>
 <summary>Setting up Coverage</summary>
 <p>
+
 To set up and use Coverage, I used the following commands;
 
 - To Install:
@@ -520,7 +521,7 @@ To set up and use Coverage, I used the following commands;
 
 - To run all the tests written in a certain app and generate a report (second command is to view the report in the terminal).
 
-    `$ coverage run --source=<'app name'> manage.py test`
+    `$ coverage run --source=<'app_name'> manage.py test`
 
     ` $ coverage report`
 
@@ -556,14 +557,14 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 [**JS hint**](https://jshint.com/) was used to check for any errors with my Javascript files. 
 JS was also tested by opening the developer console window on Chrome and checking for any errors as I clicked through the site.
 
-- Warnings received;
+- <ins>Warnings received;</ins>
 
     `let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).`
     `'template literal syntax' is only available in ES6 (use 'esversion: 6').`
 
     Warnings occurred as JShint is using ECMAScript 5.1 specification and my code uses ECMAScript 6 specific syntax. However, all code is valid.
 
-- Undefined variable;
+- <ins>Undefined variable;</ins>
 
     `$`
 
@@ -615,15 +616,21 @@ JS was also tested by opening the developer console window on Chrome and checkin
 
 <ins>Performance</ins>
 
-The low-performance review was mainly driven by the following metrics:
+The low-performance review was mainly driven by **First Contentful Paint (FCP)**. I implemented some of the suggested measures to try and improve my score, however there is no noticable delay in page loading time. I also checked the load time using the [Page load time](https://chrome.google.com/webstore/detail/page-load-time/fploionmjgeclbkemipmkogoaohcdbig?hl=en) chrome extension which resulted in a respectable 428ms. 
 
-`Serve images in next-gen formats`;
+Actions taken:
 
-I tried converting my images to JPEG 2000 as suggested, however, the images were not loading due to their limitations of only working on certain browsers. Therefore I kept my images in a PNG and JPG format.
+[`Ensure text remains visible during webfont load`](https://web.dev/font-display/)
+- Added 'font-display: swap' to '@font-face' on flaticon.css file
+- Added '&display=swap' parameter to the end of Google Fonts URL in base.css
 
-`Properly size images`;
+[`Eliminate render-blocking resources`](https://web.dev/render-blocking-resources/)
+- Lazy loading - added class 'lazy' to img tags
+- Added 'rel="preload" as="style"' attributes to base.css file
+- Added 'async' to JS script tags to indicate to the browser that the script file can be executed asynchronously
 
-As images are uploaded through the image URL form input I am not able to take any action on adjusting image sizes.
+[`Serve images in next-gen formats`](https://web.dev/uses-webp-images/?utm_source=lighthouse&utm_medium=lr)
+- I tried converting my images to JPEG 2000 as suggested, however, the images were not loading due to their limitations of only working on certain browsers. Therefore I have kept my image in a PNG and JPG format.
 
 <ins>Accessibility</ins>
 
@@ -680,7 +687,7 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 | [] | Homepage vh including address bar on mobile so cropping bottom of element                   |  I found a solution on [css-tricks](https://css-tricks.com/the-trick-to-viewport-units-on-mobile/) but as this updates the value of --vh, it will trigger a repaint of the page, and the user may experience a jump as a result. As this is only a layout issue on IOS and doesn't hinder UX I decided not to implement this solution. |
 | [x] | Item is removed from order history if deleted by admin                   |  This bug was fixed by following [this thread](https://app.slack.com/client/T0L30B202/CGWQJQKC5/thread/C7HS3U3AP-1597961336.047800) found on slack. I added a discontinued field to my models (with default False), updated delete view to change discontinued to true instead of physically deleting item and then referenced to this field in my templates  |
 | [x] | Comment reposts on page refresh                   |  Redirect path added to views after post request  |
-| [x] | User able to type in any quantity value for item when in shopping bag                  |  Changed 'quantity > 0' to 'quantity in range(1, 99)' and added elif statement for any value over 99 to send an error message to the user   |
+| [x] | User able to type in any quantity value for item when in shopping bag                  |  Changed 'quantity > 0' to 'quantity in range(1, 99)' and added elif statement for any value over 99 to send an error message to the user. This was acknowledged and helped to solve by a fellow student, @Clint.    |
 | [x] | Success toast showing shopping bag when not appropriate                  |  Added a variable called on_page to the product and programme detail page and used this as a filter within my success toast template. This ensures that the bag view is only displayed on the success message when a user is on these specific pages.     |
 | [x] | Plural suffix returned when value is 1                   |  I added 'pluralize' tag to my count filters to ensure text was presented with correct spelling |
 | [x] | If filter by category then sort items, filter is removed                   |  Changed sort from dropdown to selector with options, added my own custom styling. Styling involved replacing the custom arrow and adding my own text with absolute positioning. I also replaced the default dropdown arrow by removing the 'dropdown-toggle' class so that the arrow style matched. |

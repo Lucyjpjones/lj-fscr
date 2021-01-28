@@ -18,7 +18,7 @@ footer {
 	background-color: #ff0035;
 	text-align: center;
 	width: 100%;
-    height: 56px;
+	height: 56px;
 }
 
 p,
@@ -253,6 +253,7 @@ header {
 
 /* -------------------- Home app  */
 
+
 /* ----------- Index */
 
 
@@ -265,6 +266,7 @@ header {
 	object-fit: cover;
 	object-position: bottom;
 }
+
 
 /* Red callout banner */
 
@@ -364,6 +366,7 @@ header {
 	border: solid 1px #bdc1c7;
 	background-color: #f8f8f8;
 }
+
 
 /* -------------------- Sort & Filter */
 
@@ -751,11 +754,10 @@ input[name='q']::placeholder {
 	.profile-img {
 		width: 180px;
 		height: 180px;
-    }
-    .carousel-testimonials {
-        height: 300px;
-    }
-
+	}
+	.carousel-testimonials {
+		height: 300px;
+	}
 	/* -------------------- Sort & Filter */
 	.sort-container {
 		width: 70%;

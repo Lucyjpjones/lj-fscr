@@ -751,7 +751,11 @@ input[name='q']::placeholder {
 	.profile-img {
 		width: 180px;
 		height: 180px;
-	}
+    }
+    .carousel-testimonials {
+        height: 300px;
+    }
+
 	/* -------------------- Sort & Filter */
 	.sort-container {
 		width: 70%;

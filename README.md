@@ -10,14 +10,16 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 
 </div>
 
-For <ins>**testing**</ins> the following credentials can be used for checkout:
+For <ins>**testing**</ins> the following credentials can be used:
+
+**Member Login**
+- Username: fscruser
+- Email: fscr@test.com
+- Password: fscr1234
 
 **Card payments**
-
 - Card number: 4242 4242 4242 4242
-
 - Zip & CCV: any integer values are valid
-
 
 **<ins>Disclaimer</ins> : This project is for educational purposes only**
 - Images taken from other sources will be replaced if the site goes commercial.

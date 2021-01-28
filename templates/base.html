@@ -315,10 +315,15 @@
          </div>
       </footer>
       {% block postloadjs %}
+      <script src="{% static 'js/script.js' %}"></script>
       <script>
          $('.toast').toast('show');
       </script>
-      <script src="{% static 'js/script.js' %}"></script>
+      <script>
+        (function(){
+        emailjs.init("user_qZ2fQYOyvPucFHRyubh33");
+        })();
+      </script>
       {% endblock %}
    </body>
 </html>

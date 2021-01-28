@@ -21,7 +21,7 @@
          />
       <link rel="stylesheet" type="text/css" href="{% static 'css/flaticon.css' %}">
       <link rel="shortcut icon" type="image/x-icon" href="{%  static 'favicon.ico' %}">
-      <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+      <link rel="preload" as="style" type="text/css" href="{% static 'css/base.css' %}" />
       {% endblock %}  
       {% block corejs %}
       <script
@@ -41,7 +41,6 @@
          ></script>
       <!-- Stripe -->
       <script src="https://js.stripe.com/v3/"></script>
-      <script src="{% static 'js/script.js' %}"></script>
       <!-- EmailJS -->
       <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
       {% endblock %} 
@@ -319,6 +318,7 @@
              emailjs.init("user_qZ2fQYOyvPucFHRyubh33");
          })();
       </script>
+      <script src="{% static 'js/script.js' %}"></script>
       {% endblock %}
    </body>
 </html>

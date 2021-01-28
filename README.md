@@ -526,11 +526,11 @@ The region chosen should be the one closest to you.
    - $ pip3 install dj_database_url
    - $ pip3 install psycopg2
 
-6. Freeze the requirements to ensure Heroku installs all the apps requirements when deployed using the following command;
+5. Freeze the requirements to ensure Heroku installs all the apps requirements when deployed using the following command;
 
    - $ pip3 freeze > requirements.txt
 
-7. To migrate to the postgres, go to settings.py and import `dj_database_url`;
+6. To migrate to the postgres, go to settings.py and import `dj_database_url`;
 
    Then down in the databases setting comment out the default configuration and replace the default database with a call to dj_database_url.parse and give it the database URL from Heroku.
 
@@ -538,7 +538,7 @@ The region chosen should be the one closest to you.
 
     > **Note:** You can either get the database URL from your config variables in your app settings tab or from the command line by typing Heroku config.
 
-8. Apply all migrations using the following command;
+7. Apply all migrations using the following command;
 
    - $ python3 manage.py migrate
 
@@ -550,12 +550,12 @@ The region chosen should be the one closest to you.
     
     Your database should now be all set up.
 
-9. Create a superuser to log in with using the following command;
+8. Create a superuser to log in with using the following command;
 
    - $ python3 manage.py createsuperuser
 
 
-10. Go to the Settings tab on Heroku, scroll to the 'Config Vars' section, and click 'Reveal Config Vars'. 
+9. Go to the Settings tab on Heroku, scroll to the 'Config Vars' section, and click 'Reveal Config Vars'. 
 
    ![Config Vars](readme/media/config-vars.png)
 
@@ -573,13 +573,13 @@ The region chosen should be the one closest to you.
 | STRIPE_SECRET_KEY | To be added by user |
 | STRIPE_WH_SECRET  | To be added by user |
 
-11. Install gunicorn using the following command;
+10. Install gunicorn using the following command;
 
     - $ pip3 install gunicorn
 
     Then freeze into your requirements file.
 
-12. Create a Procfile and add the following line;
+11. Create a Procfile and add the following line;
 
     - web: gunicorn lj_fscr.wsgi:application
 
@@ -587,13 +587,13 @@ The region chosen should be the one closest to you.
 
     > **Note:** The **P**rocfile must be assigned a capital P.
 
-13. Last, you need to temporarily disable collectstatic to ensure that Heroku won't try to collect static files when we deploy. This is done by adding the below variable;
+12. Last, you need to temporarily disable collectstatic to ensure that Heroku won't try to collect static files when we deploy. This is done by adding the below variable;
 
     - DISABLE_COLLECTSTATIC = 1
 
-14. Add the hostname of your Heroku app to allowed hosts in settings.py
+13. Add the hostname of your Heroku app to allowed hosts in settings.py
 
-15. Now you can commit all the changes and push to GitHub;
+14. Now you can commit all the changes and push to GitHub;
 
     - $ git add .
     - $ git commit -m <'your commit message'>

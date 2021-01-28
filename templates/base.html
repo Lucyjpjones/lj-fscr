@@ -12,8 +12,6 @@
       <meta name="Description"
          content="FSCR (Football Strength Conditioning Rehab) focuses on providing structured and detailed fitness programmes for football-related injuries.">
       {% endblock %} 
-      {% block extra_meta %} 
-      {% endblock %} 
       {% block corecss %}
       <link
          rel="stylesheet"
@@ -23,10 +21,8 @@
          />
       <link rel="stylesheet" type="text/css" href="{% static 'css/flaticon.css' %}">
       <link rel="shortcut icon" type="image/x-icon" href="{%  static 'favicon.ico' %}">
-      <link rel="stylesheet preload" type="text/css" href="{% static 'css/base.css' %}" />
-      {% endblock %} 
-      {% block extra_css %} 
-      {% endblock %} 
+      <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+      {% endblock %}  
       {% block corejs %}
       <script
          src="https://kit.fontawesome.com/90afa59a97.js"
@@ -48,15 +44,8 @@
       <script src="{% static 'js/script.js' %}"></script>
       <!-- EmailJS -->
       <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-      <script>
-         (function(){
-             emailjs.init("user_qZ2fQYOyvPucFHRyubh33");
-         })();
-      </script>
       {% endblock %} 
-      {% block extra_js %} 
-      {% endblock %}
-      <title>FSCR {% block extra_title %}{% endblock %}</title>
+      <title>FSCR</title>
    </head>
    <body>
       <header class="fixed-top">
@@ -324,6 +313,11 @@
       {% block postloadjs %}
       <script>
          $('.toast').toast('show');
+      </script>
+      <script>
+         (function(){
+             emailjs.init("user_qZ2fQYOyvPucFHRyubh33");
+         })();
       </script>
       {% endblock %}
    </body>

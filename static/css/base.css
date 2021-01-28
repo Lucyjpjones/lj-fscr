@@ -743,7 +743,7 @@ input[name='q']::placeholder {
 	}
 	/* -------------------- Home app  */
 	.callout-img {
-		height: calc(100vh - 187.11px);
+		height: calc(100vh - 184.11px);
 	}
 	.form-inner {
 		margin: 30px 60px;

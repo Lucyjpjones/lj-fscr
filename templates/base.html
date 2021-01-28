@@ -315,6 +315,14 @@
          </div>
       </footer>
       {% block postloadjs %}
+      <script defer>
+         $('.toast').toast('show');
+      </script>
+      <script>
+        (function(){
+        emailjs.init("user_qZ2fQYOyvPucFHRyubh33");
+        })();
+      </script>
       <script src="{% static 'js/script.js' %}" defer></script>
       {% endblock %}
    </body>

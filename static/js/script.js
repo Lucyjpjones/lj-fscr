@@ -1,8 +1,5 @@
 $(document).ready(function () { 
 
-    /* Toast Messages */
-    $('.toast').toast('show');
-
     /* Sidebar Toggle */
     $("#sidebarCollapse").on("click", function () {
         $("#sidebar").toggleClass("active");
@@ -25,10 +22,6 @@ $(document).ready(function () {
 // Code taken from EmailJS.com with small personal amendments
 // EmailJS sendmail function with 'service ID', 'template ID', 'template parameters'
 // Template parameters linked to name attributes in form template
-
-(function(){
-    emailjs.init("user_qZ2fQYOyvPucFHRyubh33");
-})();
 
 function sendMail(contactForm) {
   emailjs

@@ -109,7 +109,7 @@ After registering the user is directed to a registration success page where they
 
 When a user is registered they have the ability to easily log into their account. The user can click on the profile icon, then select login and enter their details to sign into their account. Once logged in the user will be able to log out via the profile icon.
 
-I also decided to add social logins to allow my user to login more quickly. The user can choose their preferred platform (Facebook, Google, or Twitter) and follow the authorisation for the specified site. (Facebook screenshots included below).
+I also decided to add social logins to allow my user to log in more quickly. The user can choose their preferred platform (Facebook, Google, or Twitter) and follow the authorisation for the specified site. (Facebook screenshots included below).
 
 <img src="readme/media/us-12.png">
 
@@ -121,7 +121,7 @@ Each registered user has their own profile page where they can store their perso
 
 **14. Easily recover my password in case I forget it**
 
-If a user forgets their password they have the option to click the 'forgot password' link. This will direct them to another page which will inform the user that an email has been sent to them to recover their password. The email contains a link that redirects the user to the change password page where they can enter a new password for their account. After submitting a new password the user is redirected to the login in page and can login using their new password.
+If a user forgets their password they have the option to click the 'forgot password' link. This will direct them to another page which will inform the user that an email has been sent to them to recover their password. The email contains a link that redirects the user to the change password page where they can enter a new password for their account. After submitting a new password the user is redirected to the login in page and can log in using their new password.
 
 <img src="readme/media/us-14.png">
 
@@ -305,7 +305,7 @@ To ensure my site was working correctly I carried out manual function testing on
 - [x] If the user enters their email and clicks 'reset my password' they are directed to the password reset page as expected
 - [x] If the user enters their email and clicks 'reset my password' they receive an email with a link to reset their password
 - [x] After user clicks the link in their email they are redirected to the 'change password' page
-- [x] After submitting a new password the user is presented with a success message 'Your password is now changed' and they can login with their new password
+- [x] After submitting a new password the user is presented with a success message 'Your password is now changed' and they can log in with their new password
 - [x] If the user clicks 'Remember me' they are directed to the forgotten password page as expected
 - [x] If a user is logged in, the logout option is visible in the profile icon menu
 - [x] If a user clicks 'logout' they are directed to the logout page where they can confirm their action
@@ -409,7 +409,7 @@ When logged in as Admin user...
 - [x] The user is redirected to the checkout success page after completing order
 - [x] The checkout success page contains all the correct personal details for the user and items purchased
 - [x] After successful checkout the user receives an email with their order details
-- [x] User is able to checkout successfully as both a site user (not logged in) and member (logged in)
+- [x] User can checkout successfully as both a site user (not logged in) and member (logged in)
 - [x] The delivery amount is showing as 10% of the subtotal cost
 - [x] If the order is over $40 the delivery amount is 0
 
@@ -462,7 +462,7 @@ I also decided to use Django's testing framework to create some automated tests 
 
 I added a tests.py file to each of my apps containing my written unit tests.
 
-As my automated testing was only small for this project I kept the tests all in the same file within each app, however for larger project testing, I would create a 'tests' folder and group tests by what i'm testing e.g. test_models.py, test_views.py, test_forms.py etc.
+As my automated testing was only small for this project I kept the tests all in the same file within each app, however for larger project testing, I would create a 'tests' folder and group tests by what I'm testing e.g. test_models.py, test_views.py, test_forms.py etc.
 
 To run all the tests I used the following command;
 
@@ -505,7 +505,7 @@ To set up and use Coverage, I used the following commands;
 
     ` $ coverage report`
 
-- I used the following command to create an interactive HTML report to see more specifically what I was missing. This created a 'htmlcov' folder containing a index.html file.
+- I used the following command to create an interactive HTML report to see more specifically what I was missing. This created a 'htmlcov' folder containing an index.html file.
 
     `$ coverage html`
 
@@ -571,7 +571,7 @@ JS was also tested by opening the developer console window on Chrome and checkin
 
 - `DJ01 Avoid using null=True on string-based fields`
 
-    As referenced on [stackoverflow](https://stackoverflow.com/questions/59836736/django-why-only-string-based-field-cant-have-null-true), Django allows the use of NULL in string-based fields but it is suggested to avoid it and use '' to represent the empty value. As in most cases both values (NULL and '') represent the same thing for string-based fields I have chosen to disregard this warning. 
+    As referenced on [stackoverflow](https://stackoverflow.com/questions/59836736/django-why-only-string-based-field-cant-have-null-true), Django allows the use of NULL in string-based fields but it is suggested to avoid it and use '' to represent the empty value. As in most cases, both values (NULL and '') represent the same thing for string-based fields I have chosen to disregard this warning. 
 
 - `E501 line too long`
 
@@ -665,5 +665,5 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 | [x] | Success toast showing shopping bag when not appropriate                  |  Added a variable called on_page to the product and programme detail page and used this as a filter within my success toast template. This ensures that the bag view is only displayed on the success message when a user is on these specific pages.     |
 | [x] | Plural suffix returned when value is 1                   |  I added 'pluralize' tag to my count filters to ensure text was presented with correct spelling |
 | [x] | If filter by category then sort items, filter is removed                   |  Changed sort from dropdown to selector with options, added my own custom styling. Styling involved replacing the custom arrow and adding my own text with absolute positioning. I also replaced the default dropdown arrow by removing the 'dropdown-toggle' class so that the arrow style matched. |
-| [x] | Unable to migrate changes, error meesage received `psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "test"`               | This happened a couple of times and was solved by resetting my migrations using this [link](https://simpleisbetterthancomplex.com/tutorial/2016/07/26/how-to-reset-migrations.html) recommended by a tutor     |
-| [x] | Unable to make migrate even after resetting migrations              | My old database was corrupted so this was solved by resetting my Heroku database as advised by a tutor. I logged into Heroku, selected app, navigated to Resources, selected Heroku PostGres, then in new window clicked Settings then Reset Database.     |
+| [x] | Unable to migrate changes, error message received `psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "test"`               | This happened a couple of times and was solved by resetting my migrations using this [link](https://simpleisbetterthancomplex.com/tutorial/2016/07/26/how-to-reset-migrations.html) recommended by a tutor     |
+| [x] | Unable to make migrate even after resetting migrations              | My old database was corrupted so this was solved by resetting my Heroku database as advised by a tutor. I logged into Heroku, selected app, navigated to Resources, selected Heroku Postgres, then in new window clicked Settings then Reset Database.     |

@@ -315,15 +315,10 @@
          </div>
       </footer>
       {% block postloadjs %}
-      <script async>
+      <script>
          $('.toast').toast('show');
       </script>
-      <script async>
-        (function(){
-        emailjs.init("user_qZ2fQYOyvPucFHRyubh33");
-        })();
-      </script>
-      <script async src="{% static 'js/script.js' %}"></script>
+      <script src="{% static 'js/script.js' %}"></script>
       {% endblock %}
    </body>
 </html>

@@ -23,6 +23,10 @@
       <link rel="shortcut icon" type="image/x-icon" href="{%  static 'favicon.ico' %}">
       <link rel="stylesheet preload" as="style" type="text/css" href="{% static 'css/base.css' %}" />
       {% endblock %}  
+
+      {% block extra_css %}
+      {% endblock %}
+      
       {% block corejs %}
       <script
          async
@@ -43,8 +47,8 @@
          crossorigin="anonymous"
          ></script>
       <!-- Stripe -->
-      <script async src="https://js.stripe.com/v3/"></script>
-      {% endblock %} 
+      <script src="https://js.stripe.com/v3/"></script>
+      {% endblock %}
       <title>FSCR</title>
    </head>
    <body>
@@ -321,7 +325,7 @@
         emailjs.init("user_qZ2fQYOyvPucFHRyubh33");
         })();
       </script>
-      <script async src="{% static 'js/script.js' %}"></script>
+      <script src="{% static 'js/script.js' %}"></script>
       {% endblock %}
    </body>
 </html>

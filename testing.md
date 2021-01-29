@@ -17,7 +17,7 @@
 
 Before building my site I set up a list of user stories to help guide the development of different parts of my application. This made it easier to add features and functionality with the end-user in mind by describing the type of user what they want and why. After a user story requirement had been met I checked it off by highlighting it in green and adding a comment.
 
-[**View user stories checklist**](readme/files/user_stories_checklist.numbers)
+[**View user stories checklist**](readme/files/user_stories_checklist.pdf)
 
 #### <ins>Viewing and Navigation</ins>
 

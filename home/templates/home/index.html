@@ -155,6 +155,7 @@
          <p class="subtitle-font p-font mb-3">If you have a question, comment or enquiry for FSCR, please fill out the form below</p>
          {% if user.is_authenticated %}
          <form onsubmit="return sendMail(this);" method="POST">
+            {% csrf_token %}
             <div class="form-group">
                <label class="small mb-0 pl-1" for="fname">Full Name</label>
                   <input type="text" value="{{ user.userprofile.default_full_name }}" class="form-control rounded-0" id="fname" name="fname" required/>
@@ -184,8 +185,9 @@
          </form>
          {% else %}
          <form onsubmit="return sendMail(this);" method="POST">
+            {% csrf_token %}
             <div class="form-group">
-               <label class="small mb-0 pl-1" for="fname">Full Name</label>
+               <label class="small mb-0 pl-1" for="fname2">Full Name</label>
                   <input type="text" class="form-control rounded-0" id="fname2" name="fname2" required/>
             </div>
             <div class="form-group">

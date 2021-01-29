@@ -7,7 +7,7 @@ from programmes.models import Programme
 
 # tools test
 class TestBagTools(TestCase):
-    ''' test bag subtotal '''
+    """ test bag subtotal """
     def test_calc_subtotal(self):
         result = calc_subtotal(2, 5)
         self.assertEqual(10, result)
@@ -17,20 +17,20 @@ class TestBagTools(TestCase):
 class TestBagViews(TestCase):
 
     def setUp(self):
-        ''' create product and programme '''
+        """ create product and programme """
         product = Product.objects.create(name='test product',
                                          has_sizes=True, price=5.99)
         programme = Programme.objects.create(name='test programme',
                                              price=40.00)
 
     def test_get_bag(self):
-        ''' test bag view '''
+        """ test bag view """
         response = self.client.get(reverse('view_bag'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'bag/bag.html')
 
     def test_add_product_to_bag(self):
-        ''' test add not sized product to bag '''
+        """ test add not sized product to bag """
         product = Product.objects.get(name='test product')
         post_data = {
             'quantity': '1',
@@ -44,7 +44,7 @@ class TestBagViews(TestCase):
         self.assertRedirects(response, '/')
 
     def test_add_sized_product_to_bag(self):
-        ''' test add sized product to bag '''
+        """ test add sized product to bag """
         product = Product.objects.get(name='test product')
         post_data = {
             'product_size': 'M',
@@ -59,7 +59,7 @@ class TestBagViews(TestCase):
         self.assertRedirects(response, '/')
 
     def test_add_programme_to_bag(self):
-        ''' test add programme to bag '''
+        """ test add programme to bag """
         programme = Programme.objects.get(name='test programme')
         post_data = {
             'quantity': '1',
@@ -73,7 +73,7 @@ class TestBagViews(TestCase):
         self.assertRedirects(response, '/')
 
     def test_adjust_product_quantity_in_bag(self):
-        ''' test adjust product quantity in bag '''
+        """ test adjust product quantity in bag """
         product = Product.objects.get(name='test product')
         post_data = {
             'quantity': '1',
@@ -95,7 +95,7 @@ class TestBagViews(TestCase):
         self.assertRedirects(response, '/bag/')
 
     def test_adjust_programme_quantity_in_bag(self):
-        ''' test adjust programme quantity in bag '''
+        """ test adjust programme quantity in bag """
         programme = Programme.objects.get(name='test programme')
         post_data = {
             'quantity': '1',
@@ -118,7 +118,7 @@ class TestBagViews(TestCase):
         self.assertRedirects(response, '/bag/')
 
     def test_remove_product_from_bag(self):
-        ''' test remove product from bag '''
+        """ test remove product from bag """
         product = Product.objects.get(name='test product')
         post_data = {
             'quantity': '1',
@@ -137,7 +137,7 @@ class TestBagViews(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_remove_programme_from_bag(self):
-        ''' test remove programme from bag '''
+        """ test remove programme from bag """
         programme = Programme.objects.get(name='test programme')
         post_data = {
             'quantity': '1',

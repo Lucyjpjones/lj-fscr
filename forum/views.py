@@ -24,13 +24,14 @@ def all_threads(request):
 
 @login_required
 def thread_detail(request, slug):
-    ''' A view that renders the thread details and shows active replies
+    """
+    A view that renders the thread details and shows active replies
     Creates reply object, assigns reply to current thread, gets
     username, saves reply to database then clears from and redirects
     the user
     [Code taken from 'https://djangocentral.com/creating-comments-
     system-with-django/']
-    '''
+    """
     template_name = 'forum/thread_detail.html'
     thread = get_object_or_404(Thread, slug=slug)
     replies = thread.replies.filter(active=True)

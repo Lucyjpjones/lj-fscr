@@ -26,8 +26,7 @@ $(document).ready(function () {
 function sendMail(contactForm) {
   emailjs
     .send("lucyjpjones@gmail.com", "fscr", { 
-      fname: contactForm.fname.value,
-      lname: contactForm.lname.value,
+      from_name: contactForm.fname.value,
       from_email: contactForm.email.value,
       topic: contactForm.topic.value,
       message: contactForm.message.value,

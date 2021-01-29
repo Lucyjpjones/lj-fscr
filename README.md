@@ -294,6 +294,7 @@ The deployed site has some differences vs. the wireframes I initially created, t
     - A `carousel` with automatic rotation has been used for the callout banner and to display athlete testimonials.
     - `Card listings` have been used to display links to programmes/products page, and to display the latest blogs.
     - A contact `form` has been added using EmailJS to allow the user to easily get in contact with the site owner.
+        - If the user is logged in, fields; first name, last name and email, are pre-populated.
 
 - **Meet the Coaches**
     - Navigation `pills` have been used to allow the user to switch between each individual by an image click.

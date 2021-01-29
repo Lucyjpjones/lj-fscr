@@ -59,7 +59,7 @@ Each programme detail page displays the programme's image, name, price, rating, 
 
 **7. Easily access contact details**
 
-I have included a contact form on the home page which is easily navigated to via the main nav menu. This has been set up using EmailJS with my own customised email template to assist with the organisation of user enquiries.
+I have included a contact form on the home page which is easily navigated to via the main nav menu. This has been set up using EmailJS with my own customised email template to assist with the organisation of user enquiries. If a user is logged in, the first name, last name and email fields are pre-populated.
 
 <img src="readme/media/us-6.png">
 
@@ -325,6 +325,8 @@ To ensure my site was working correctly I carried out manual function testing on
 - [x] If the user is logged in, the 'Read me' link on the latest blogs direct the user to the correct 'Post Detail' page
 - [x] The testimonial carousel automatically cycles through a series of testimonials with expected interval time
 - [x] The testimonial carousel pauses on hover and pointer is present
+- [x] All contact form fields are empty is user is not logged in
+- [x] First name, Last name and email fields are pre-populated on contact form if user is logged in
 - [x] If user information entered in contact form is valid, the form submission is successful and an email is sent to the expected Gmail account
 - [x] After submission the input fields are cleared
 - [x] When input is missing in a required field there is an error response

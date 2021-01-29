@@ -891,7 +891,7 @@ When you clone a repository, the repository is copied on to your local machine, 
 
     > **Note:** The repository name and output numbers that you see on your computer, representing the total file size, etc, may differ from the example I have provided above.
 
-8. Either store your sensitive data in your environment settings or add an env.py file to your workspace (more details below).
+8. Either store your sensitive data in your environment settings or add an env.py file to your workspace (More details above).
 
    > **Note:** Contact the site owner if you want more information on the environment variables that have been included.
 

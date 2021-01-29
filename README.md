@@ -264,7 +264,6 @@ The deployed site has some differences vs. the wireframes I initially created, t
 | 6 | 'Add to bag' and 'View more details' on programmes page | I decided not to have these buttons and to keep it in line with the structure of the product page by viewing on image click |
 | 7 | Sample fitness plan removed from programme detail | Client didn't want to provide an example template so this was removed |
 | 8 | View bag and checkout options available on 'add to bag' success toast | I decided to add both options so the user has the option to view their bag or just go straight to the checkout |
-| |
     
 ## [&#8679;](#table-of-contents)
 ---
@@ -422,11 +421,14 @@ I will continue to update my website to meet my clients' expectations. I have fu
 - [**GitHub**](https://github.com/)
   - GitHub is used to store the project code after being pushed from Git.
 
-- [**Heroku**](https://github.com/)
+- [**Heroku**](https://www.heroku.com/)
   - Heroku is the app platform I deployed my project to.
 
+- [**Heroku Postgres**](https://www.heroku.com/postgres)
+  - Heroku’s reliable and powerful database used to store the data for my deployed Heroku App.
+
 - [**jQuery:**](https://jquery.com/)
-  - A javascript libraries used to bring simplicity.
+  - A javascript library used to simplify DOM manipulation.
 
 - [**Bootstrap 4.5.3**](https://getbootstrap.com/)
   - Bootstrap was used to assist with the responsiveness and styling of the website using design templates.

@@ -12,23 +12,11 @@ def index(request):
     """
     A view to return the index page
     """
+
     posts = Post.objects.filter(status=1).order_by('-created_on')[:2]
-
-    if request.user.is_authenticated:
-        profile = UserProfile.objects.get(user=request.user)
-        first_name = profile.default_full_name.split(" ")[0]
-        last_name = profile.default_full_name.split(" ")[1]
-    else:
-        profile = ''
-        first_name = ''
-        last_name = ''
-
 
     context = {
         'posts': posts,
-        'profile': profile,
-        'first_name': first_name,
-        'last_name': last_name,
     }
 
     return render(request, 'home/index.html', context)

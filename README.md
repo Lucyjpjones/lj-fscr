@@ -294,7 +294,7 @@ The deployed site has some differences vs. the wireframes I initially created, t
     - A `carousel` with automatic rotation has been used for the callout banner and to display athlete testimonials.
     - `Card listings` have been used to display links to programmes/products page, and to display the latest blogs.
     - A contact `form` has been added using EmailJS to allow the user to easily get in contact with the site owner.
-        - If the user is logged in, fields; first name, last name and email, are pre-populated.
+        - If the user is logged in, fields; full name and email are pre-populated.
 
 - **Meet the Coaches**
     - Navigation `pills` have been used to allow the user to switch between each individual by an image click.
@@ -504,7 +504,7 @@ I will continue to update my website to meet my clients' expectations. I have fu
 
 The project was deployed to Heroku with all static and media files stored on Amazon S3. I also set up automatic deployment to ensure my Heroku app was always up to date with my GitPod repository.
 
-> **Note:** As all static and media files were stored in an AWS bucket these are not available through the GitHub repository. Please contact the site owner if you wish to use any of the images included.
+> **Note:** As all static and media files were stored in an AWS bucket and content was created in admin, these are not available through the GitHub repository. Please contact the site owner if you wish to use any of the images or content included.
 
 This project also requires a `Gmail Account` with an app secret password, to allow emails to be sent to users. Sign up for a Gmail account [here](https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp)
 

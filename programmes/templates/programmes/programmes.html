@@ -56,6 +56,7 @@
             {% if not programme.discontinued %}
             <div class="col-12 p-0">
                <div class="card bg-trans h-100 border-0 mb-4 px-3">
+                   <!--Programme image-->
                   {% if programme.image %}
                   <a href="{% url 'programme_detail' programme.id %}">
                   <img
@@ -73,10 +74,12 @@
                      />
                   </a>
                   {% endif %}
+                  <!--Programme info-->
                   <div class="card-body pb-0 pt-2 pl-1 p-font">
                      <p class="mb-0">{{ programme.name }}</p>
                      <p class="mb-0">£{{ programme.price }}</p>
                      <p class="mb-2 text-muted"><small><i class="far fa-star mr-1"></i>{{ programme.rating }}</small></p>
+                     <!--Edit and Delete buttons (superuser)-->
                      {% if request.user.is_superuser %}
                      <div>
                         <a class="btn red-border-btn px-2 py-1 p-font rounded-0" href="{% url 'edit_programme' programme.id %}">Edit</a>
@@ -121,6 +124,7 @@
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}
+<!--JS code supplied by Code Instiitue for sort functionality-->
 <script>
    $('#sort-selector').change(function() {
        var selector = $(this);

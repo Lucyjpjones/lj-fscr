@@ -143,7 +143,7 @@ I created a personalised favicon for the site to add branding, and to make it ea
 
 For this project I employed a [Relational Database](https://aws.amazon.com/relational-database/#:~:text=A%20relational%20database%20is%20a,be%20represented%20in%20the%20database.), to store my collection of data. I used [SQLite](https://www.sqlite.org/index.html) in development, as this is created by default, and [Heroku Postgres](https://www.heroku.com/postgres) in production. Relational databases were a suitable choice for this project as it allows multiple tables to be created, with data easily connected through the use of foreign keys. All Models included are related to at least one other Model, and implement common database relationships: many-to-one, many-to-many and one-to-one.
 
-**NB:** .sqlite3, my developmemt database file, was added to .gitignore before my initial commit to stop it being pushed to GitHub.
+> **Note:** .sqlite3, my developmemt database file, was added to .gitignore before my initial commit to stop it being pushed to GitHub.
 
 ### **<ins>Data Schema</ins>**
 
@@ -178,7 +178,7 @@ The basic page structure of my site is presented below;
 
 <img src="readme/media/flowchart.png">
 
-> **NB:** Boxes highlighted are only accessible when a user is registered and logged in.
+> **Note:** Boxes highlighted are only accessible when a user is registered and logged in.
 
 <ins>**User profiles**</ins>
 
@@ -500,7 +500,7 @@ I will continue to update my website to meet my clients' expectations. I have fu
 
 The project was deployed to Heroku with all static and media files stored on Amazon S3. I also set up automatic deployment to ensure my Heroku app was always up to date with my GitPod repository.
 
-**Note:** As all static and media files were stored in an AWS bucket these are not available through the GitHub repository. Please contact the site owner if you wish to use any of the images included.
+> **Note:** As all static and media files were stored in an AWS bucket these are not available through the GitHub repository. Please contact the site owner if you wish to use any of the images included.
 
 If you would like to add the Django allauth `Social account login` feature to your site they're many useful online guides to help you get set up. The list of social providers can be found [here](https://django-allauth.readthedocs.io/en/latest/providers.html)
 
@@ -508,7 +508,7 @@ If you would like to add the Django allauth `Social account login` feature to yo
 <summary>Deploying to Heroku</summary>
 <p>
 
-**Note:** Before following the below steps ensure you have already created your new repo in Github.
+> **Note:** Before following the below steps ensure you have already created your new repo in Github.
 
 1. Log in (or Register) to [Heroku](https://www.heroku.com/) and from your dashboard click 'new' > 'create new app'.
 
@@ -525,14 +525,17 @@ The region chosen should be the one closest to you.
 
 4. To use Postgres, install dj_database_url, and psycopg2 in the project terminal using the following commands;
 
-   - $ pip3 install dj_database_url
-   - $ pip3 install psycopg2
+    `$ pip3 install dj_database_url`
+
+    `$ pip3 install psycopg2`
 
 5. Freeze the requirements to ensure Heroku installs all the apps requirements when deployed using the following command;
 
-   - $ pip3 freeze > requirements.txt
+    `$ pip3 freeze > requirements.txt`
 
-6. To migrate to the postgres, go to settings.py and import `dj_database_url`;
+6. To migrate to the postgres, go to settings.py and add the following import;
+
+    `import dj_database_url`
 
    Then down in the databases setting comment out the default configuration and replace the default database with a call to dj_database_url.parse and give it the database URL from Heroku.
 
@@ -542,7 +545,7 @@ The region chosen should be the one closest to you.
 
 7. Apply all migrations using the following command;
 
-   - $ python3 manage.py migrate
+    `$ python3 manage.py migrate`
 
     After migrations have been applied amend your database configurations to;
 
@@ -554,7 +557,7 @@ The region chosen should be the one closest to you.
 
 8. Create a superuser to log in with using the following command;
 
-   - $ python3 manage.py createsuperuser
+    `$ python3 manage.py createsuperuser`
 
 
 9. Go to the Settings tab on Heroku, scroll to the 'Config Vars' section, and click 'Reveal Config Vars'. 
@@ -577,13 +580,13 @@ The region chosen should be the one closest to you.
 
 10. Install gunicorn using the following command;
 
-    - $ pip3 install gunicorn
+    `$ pip3 install gunicorn`
 
     Then freeze into your requirements file.
 
 11. Create a Procfile and add the following line;
 
-    - web: gunicorn lj_fscr.wsgi:application
+    `web: gunicorn lj_fscr.wsgi:application`
 
     This tells Heroku to create a web dyno which will run gunicorn and serve the Django app.
 
@@ -591,22 +594,23 @@ The region chosen should be the one closest to you.
 
 12. Last, you need to temporarily disable collectstatic to ensure that Heroku won't try to collect static files when we deploy. This is done by adding the below variable;
 
-    - DISABLE_COLLECTSTATIC = 1
+    | DISABLE_COLLECTSTATIC  | 1 |
 
 13. Add the hostname of your Heroku app to allowed hosts in settings.py
 
 14. Now you can commit all the changes and push to GitHub;
 
-    - $ git add .
-    - $ git commit -m <'your commit message'>
-    - $ git push
+    `$ git add .`
+    `$ git commit -m <'your commit message'>`
+    `$ git push`
 
     If you created your app on the website you will need to initialize your Heroku git remote using the following command;
-    - $ heroku git:remote -a lj-fscr
+
+    `$ heroku git:remote -a lj-fscr`
 
     Then use the following command to push to Heroku;
 
-    - $ git push heroku master 
+    `$ git push heroku master`
 
 </p>
 </details>

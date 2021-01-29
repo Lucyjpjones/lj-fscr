@@ -67,7 +67,7 @@ I have included a contact form on the home page which is easily navigated to via
 
 Testimonials are visible on the homepage and reviews are available on the programmes detail page. Users are also able to see the rating for each individual product/programme under each item on the products/programmes page and additionally on the product/programme details page.
 
-> **NB:** As this is a startup and business hasn't yet begun, the testimonials, reviews, and ratings are currently only mockups. As mentioned in my future plans, the ability for users to add reviews will be implemented.
+> **Note:** As this is a startup and business hasn't yet begun, the testimonials, reviews, and ratings are currently only mockups. As mentioned in my future plans, the ability for users to add reviews will be implemented.
 
 <img src="readme/media/us-7.png">
 
@@ -613,7 +613,8 @@ JS was also tested by opening the developer console window on Chrome and checkin
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to run a series of audits to improve the quality of web pages. Overall performance and errors are highlighted below.
 
-**NB:** The [performance score](https://web.dev/performance-scoring/) can fluctuate because of changes in underlying conditions.
+> **Note:** The [performance score](https://web.dev/performance-scoring/) can fluctuate because of changes in underlying conditions.
+<p>
 
 <img src="readme/media/lighthouse-review.png">
 
@@ -676,7 +677,7 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 
 - Friends and family members were asked to review the site to point out any bugs, user experience issues, and/or suggestions.
 
-  > **NB:** All appropriate suggestions have been added to my future plans.
+  > **Note:** All appropriate suggestions have been added to my future plans.
 
     Feedback action:
     - Ability to pay using apple pay

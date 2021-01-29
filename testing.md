@@ -495,7 +495,7 @@ The results from each test were displayed in the terminal, letting me know if th
 
 <p>
 <details>
-<summary>More details</summary>
+<summary>More details on completed tests</summary>
 <p>
 
 |   App         |   Tests Included…                                                                                                                                  |

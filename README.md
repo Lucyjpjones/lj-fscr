@@ -931,6 +931,8 @@ When you clone a repository, the repository is copied on to your local machine, 
 
 - [Code](https://djangocentral.com/building-a-blog-application-with-django/) used to help create a blog and forum app
 
+- [Code](https://djangocentral.com/creating-comments-system-with-django/) used to help create a comments and replies for blog and forum app
+
 - [Code](https://bootstrapious.com/p/bootstrap-sidebar) used to help create sidenav
 
 - [Code](https://learndjango.com/tutorials/django-allauth-tutorial) used to help with implementing Social login's

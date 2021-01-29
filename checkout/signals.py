@@ -9,6 +9,7 @@ from .models import OrderLineItem, ProgOrderLineItem
 def update_on_save(sender, instance, created, **kwargs):
     """
     Update order total on lineitem update/create
+    [Code taken from Code Institute and modified for personal use]
     """
     instance.order.update_total()
 
@@ -18,5 +19,6 @@ def update_on_save(sender, instance, created, **kwargs):
 def update_on_delete(sender, instance, **kwargs):
     """
     Update order total on lineitem delete
+    [Code taken from Code Institute and modified for personal use]
     """
     instance.order.update_total()

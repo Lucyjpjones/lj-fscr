@@ -5,56 +5,6 @@ from products.models import Product
 from programmes.models import Programme
 
 
-# view tests
-class TestCheckoutViews(TestCase):
-
-    def setUp(self):
-        ''' create product and programme '''
-        product = Product.objects.create(name='test product',
-                                         price=5.99)
-        programme = Programme.objects.create(name='test programme',
-                                             price=40.00)
-
-    def test_get_checkout(self):
-        ''' test checkout view '''
-        product = Product.objects.get(name='test product')
-        programme = Programme.objects.get(name='test programme')
-        session = self.client.session
-        session['bag'] = {'product': {product.id: 1},
-                          'programme': {programme.id: 1}}
-        session.save()
-        response = self.client.get(reverse('checkout'))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'checkout/checkout.html')
-
-    def test_checkout_success(self):
-        ''' test checkout success '''
-        product = Product.objects.get(name='test product')
-        programme = Programme.objects.get(name='test programme')
-        session = self.client.session
-        session['bag'] = {'product': {product.id: 1},
-                          'programme': {programme.id: 1}}
-        session.save()
-        post_data = {
-            'full_name': 'test user',
-            'email': 'test@test.com',
-            'phone_number': '123245789',
-            'street_address1': 'test street',
-            'street_address2': '',
-            'town_or_city': 'test city',
-            'county': 'test county',
-            'country': 'GB',
-            'postcode': '12345',
-            'client_secret': 'client_1_secret_1',
-        }
-
-        response = self.client.post(reverse('checkout'),
-                                    data=post_data, follow=True)
-
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'checkout/checkout_success.html')
-
-
 # form tests
 class TestOrderForm(TestCase):
     ''' test full name field is required '''
@@ -109,3 +59,53 @@ class TestOrderForm(TestCase):
         self.assertIn('street_address1', form.errors.keys())
         self.assertEqual(form.errors['street_address1'][0],
                          'This field is required.')
+
+
+# view tests
+class TestCheckoutViews(TestCase):
+
+    def setUp(self):
+        ''' create product and programme '''
+        product = Product.objects.create(name='test product',
+                                         price=5.99)
+        programme = Programme.objects.create(name='test programme',
+                                             price=40.00)
+
+    def test_get_checkout(self):
+        ''' test checkout view '''
+        product = Product.objects.get(name='test product')
+        programme = Programme.objects.get(name='test programme')
+        session = self.client.session
+        session['bag'] = {'product': {product.id: 1},
+                          'programme': {programme.id: 1}}
+        session.save()
+        response = self.client.get(reverse('checkout'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'checkout/checkout.html')
+
+    def test_checkout_success(self):
+        ''' test checkout success '''
+        product = Product.objects.get(name='test product')
+        programme = Programme.objects.get(name='test programme')
+        session = self.client.session
+        session['bag'] = {'product': {product.id: 1},
+                          'programme': {programme.id: 1}}
+        session.save()
+        post_data = {
+            'full_name': 'test user',
+            'email': 'test@test.com',
+            'phone_number': '123245789',
+            'street_address1': 'test street',
+            'street_address2': '',
+            'town_or_city': 'test city',
+            'county': 'test county',
+            'country': 'GB',
+            'postcode': '12345',
+            'client_secret': 'client_1_secret_1',
+        }
+
+        response = self.client.post(reverse('checkout'),
+                                    data=post_data, follow=True)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'checkout/checkout_success.html')

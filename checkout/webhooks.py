@@ -11,7 +11,10 @@ import stripe
 @require_POST
 @csrf_exempt
 def webhook(request):
-    """Listen for webhooks from Stripe"""
+    """
+    Listen for webhooks from Stripe
+    [Code taken from Code Institute]
+    """
     # Setup
     wh_secret = settings.STRIPE_WH_SECRET
     stripe.api_key = settings.STRIPE_SECRET_KEY

@@ -18,7 +18,7 @@ class TestProductForm(TestCase):
 # view tests
 class TestProductViews(TestCase):
     def setUp(self):
-        ''' create superuser, create product and category '''
+        """ create superuser, create product and category """
         self.client = Client()
         self.user = User.objects.create_superuser('admin',
                                                   'admin@fscr.com',
@@ -27,13 +27,13 @@ class TestProductViews(TestCase):
         product = Product.objects.create(name='test product')
 
     def test_get_all_products(self):
-        ''' test products view '''
+        """ test products view """
         response = self.client.get(reverse('products'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
 
     def test_get_product_detail(self):
-        ''' test product detail view '''
+        """ test product detail view """
         product = Product.objects.get(name='test product')
         response = self.client.get(reverse('product_detail',
                                            args=(product.id,)))
@@ -41,14 +41,14 @@ class TestProductViews(TestCase):
         self.assertTemplateUsed(response, 'products/product_detail.html')
 
     def test_get_add_product(self):
-        ''' test add product view, with logged in superuser '''
+        """ test add product view, with logged in superuser """
         self.client.login(username='admin', password='adminpassword')
         response = self.client.get(reverse('add_product'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/add_product.html')
 
     def test_get_edit_product(self):
-        ''' test edit product view, with logged in superuser '''
+        """ test edit product view, with logged in superuser """
         self.client.login(username='admin', password='adminpassword')
         product = Product.objects.get(name='test product')
         response = self.client.get(reverse('edit_product',
@@ -57,7 +57,7 @@ class TestProductViews(TestCase):
         self.assertTemplateUsed(response, 'products/edit_product.html')
 
     def test_can_add_product(self):
-        ''' test can add product successfully '''
+        """ test can add product successfully """
         self.client.login(username='admin', password='adminpassword')
         form_data = {'name': 'test product', 'colour': 'test colour',
                      'price': 4.99}
@@ -67,31 +67,31 @@ class TestProductViews(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_sort_products_price_asc(self):
-        ''' test sort products by price ascending '''
+        """ test sort products by price ascending """
         response = self.client.get('/products/?sort=price&direction=asc')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
 
     def test_sort_products_price_desc(self):
-        ''' test sort products by price descending '''
+        """ test sort products by price descending """
         response = self.client.get('/products/?sort=price&direction=desc')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
 
     def test_sort_products_newest(self):
-        ''' test sort products by newest first '''
+        """ test sort products by newest first """
         response = self.client.get('/products/?sort=sku&direction=desc')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
 
     def test_sort_products_highest_rated(self):
-        ''' test sort products by highest rated '''
+        """ test sort products by highest rated """
         response = self.client.get('/products/?sort=rating&direction=desc')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
 
     def test_filter_by_cat(self):
-        ''' test filter products by category new arrivals '''
+        """ test filter products by category new arrivals """
         response = self.client.get('/products/?category=new_arrivals')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')

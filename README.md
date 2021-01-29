@@ -504,7 +504,14 @@ The project was deployed to Heroku with all static and media files stored on Ama
 
 > **Note:** As all static and media files were stored in an AWS bucket these are not available through the GitHub repository. Please contact the site owner if you wish to use any of the images included.
 
-If you would like to add the Django allauth `Social account login` feature to your site they're many useful online guides to help you get set up. The list of social providers can be found [here](https://django-allauth.readthedocs.io/en/latest/providers.html)
+This project also requires a `Gmail Account` with an app secret password, to allow emails to be sent to users. Sign up for a Gmail account [here](https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp)
+
+If you would like to add the Django allauth `Social Account Login` feature to your site they're many useful online guides to help you get set up. The list of social providers can be found [here](https://django-allauth.readthedocs.io/en/latest/providers.html)
+
+If you would like to add the `Stripe Payments` feature to your site, the Stripe documentation can be found [here](https://stripe.com/docs)
+
+> **Note:** In the following documentation, all environment variables are included, assuming that you are implementing all the sites features. If you are not using certain aspects, these variables can be excluded.
+<p>
 
 <details>
 <summary>Deploying to Heroku</summary>
@@ -572,6 +579,7 @@ The region chosen should be the one closest to you.
 |-------------------|---------------------|
 | AWS_ACCESS_KEY_ID | To be added by user |
 | AWS_SECRET_KEY_ID | To be added by user |
+| USE_AWS           |        TRUE         |
 | DATABASE_URL      | To be added by user |
 | EMAIL_HOST_PASS   | To be added by user |
 | EMAIL_HOST_USER   | To be added by user |
@@ -886,6 +894,24 @@ When you clone a repository, the repository is copied on to your local machine, 
 8. Either store your sensitive data in your environment settings or add an env.py file to your workspace (more details below).
 
    > **Note:** Contact the site owner if you want more information on the environment variables that have been included.
+
+9. Install all requirements using the following command;
+
+    `$ pip3 install -r requirements.txt`
+
+10. Apply all migrations using the following command;
+
+    `$ python3 manage.py migrate`
+    
+    Your database should now be all set up.
+
+11. Create a superuser to log in with using the following command;
+
+    `$ python3 manage.py createsuperuser`
+
+12. You can now run your project locally using the following command;
+
+    `$ python3 manage.py runserver`
 
 </p>
 </details>

@@ -493,6 +493,24 @@ To run tests in a specific app I used the following command;
 
 The results from each test were displayed in the terminal, letting me know if the tests were successful or had failed.
 
+<p>
+<details>
+<summary>More details</summary>
+<p>
+
+|   App         |   Tests Included…                                                                                                                                  |
+|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   [Bag](bag/tests.py)         |   Calculating bag subtotal, testing the bag view, add to bag functionality, and adjusting and removing items from the bag                          |
+|   [Blog](blog/tests.py)        |   Testing form fields, blog and post detail view, and sorting functionality                                                                        |
+|    [Checkout](checkout/tests.py)    |   Testing form required fields, and checkout and checkout success view                                                                             |
+|   [Forum](forum/tests.py)       |   Testing form fields, forum, thread detail, add thread and edit thread view, slugifying a thread topic, and adding a thread                       |
+|   [Home](home/tests.py)        |   Testing home, about, meet the coaches and search view                                                                                            |
+|   [Products](products/tests.py)    |   Testing form fields, products, product detail, add product and edit product view, adding a product, and sort and filter functionality            |
+|   [Profiles](profiles/tests.py)    |   Testing profile view                                                                                                                             |
+|   [Programmes](programmes/tests.py)  |   Testing form fields, programmes, programme detail, add programme and edit programme view, adding a programme, and sort and filter functionality  |
+
+</details>
+
 #### **Coverage**
 
 I used **Coverage** to identify the percentage of code the tests had covered and to determine which areas to focus on. Due to time constraints, I aimed to reach a minimum of 50% coverage for models, forms and views, across all my apps. However, I will continue to add tests to get as close to 100% as I can. 

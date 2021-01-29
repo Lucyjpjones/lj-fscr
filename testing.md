@@ -602,10 +602,6 @@ JS was also tested by opening the developer console window on Chrome and checkin
 
     This error has been fixed on the majority of my code but some lines have been left to avoid breaking up variables.
 
-    `F841 local variable 'product' is assigned to but never used` - tests.py
-    `F401 'checkout.signals' imported but unused` apps.py
-    `F841 local variable 'e' is assigned to but never used` webhooks.py
-
 ## [&#8679;](#testing)
 ---
 

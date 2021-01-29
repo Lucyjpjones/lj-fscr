@@ -246,7 +246,6 @@ As part of the design process, I created wireframes using [Balsamiq](https://bal
 - [Shopping bag](readme/wireframes/wf-bag.pdf)
 - [Checkout](readme/wireframes/wf-checkout.pdf)
 - [Blog](readme/wireframes/wf-blog.pdf)
-- [Blog View](readme/wireframes/wf-blog-view.pdf)
 - [Forum](readme/wireframes/wf-forum.pdf)
 - [Forum View](readme/wireframes/wf-forum-view.pdf)
 
@@ -264,6 +263,8 @@ The deployed site has some differences vs. the wireframes I initially created, t
 | 6 | 'Add to bag' and 'View more details' on programmes page | I decided not to have these buttons and to keep it in line with the structure of the product page by viewing on image click |
 | 7 | Sample fitness plan removed from programme detail | Client didn't want to provide an example template so this was removed |
 | 8 | View bag and checkout options available on 'add to bag' success toast | I decided to add both options so the user has the option to view their bag or just go straight to the checkout |
+| 9 | Slogan removed from logo | Changed for my own personal visual reasons |
+| 10 | No blog detail wireframe initially created | I was going to link the 'Read More' and 'Watch Now' to articles/videos from external sites but my client had already written a collection of blogs so I decided to create a blog detail page to display them internally|
     
 ## [&#8679;](#table-of-contents)
 ---

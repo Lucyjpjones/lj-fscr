@@ -59,7 +59,7 @@
          <p class="mt-3 p-font">{{ post.content|linebreaksbr }}</p>
       </div>
    </div>
-   <!--References Accordion-->
+   <!--References Toggle-->
    {% if post.references %}
    <div class="row mb-3 vw-100 vw-md-75">
       <div class="col-12">
@@ -79,7 +79,7 @@
       <div class="col-12">
          <h2 class="p-font pl-3 mb-2"><strong>{{ comments.count }} comment{{ comments.count|pluralize }}</strong></h2>
       </div>
-      <!-- comment form -->
+      <!--Comment form-->
       <div class="row vw-100">
          <div class="col-12">
             {% load crispy_forms_tags %}
@@ -93,7 +93,7 @@
             </div>
          </div>
       </div>
-      <!-- comments -->
+      <!--Comments-->
       <div class="row w-100">
          <div class="col">
             {% for comment in comments %}
@@ -103,15 +103,14 @@
                   <span class="text-muted small font-weight-normal">
                   {{ comment.created_on }}
                   </span>
-                  <!--Delete comment icon-->
+                  <!--Delete comment icon, trigger modal-->
                   {% if user.is_authenticated and user == comment.user %}
-                  <!-- Button trigger modal -->
                   <a class="btn float-right" data-toggle="modal" data-target="#comDelete{{ comment.id }}">
                   <i class="far fa-trash-alt"></i>
                   </a>
                   {% endif %}
                </p>
-               <!-- Modal -->
+               <!--Modal-->
                <div class="modal fade" id="comDelete{{ comment.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="{{ comment.id }}" aria-hidden="true">
                   <div class="modal-dialog">
                      <div class="modal-content rounded-0">

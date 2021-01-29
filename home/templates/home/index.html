@@ -157,8 +157,8 @@
          <form onsubmit="return sendMail(this);" method="POST">
             {% csrf_token %}
             <div class="form-group">
-               <label class="small mb-0 pl-1" for="fname">Full Name</label>
-                <input type="text" value="{{ user.userprofile.default_full_name }}" class="form-control rounded-0" id="fname" name="fname" required/>
+                <label class="small mb-0 pl-1" for="fname">Full Name</label>
+                <input type="text" value="{{ user.userprofile.default_full_name }}" class="form-control rounded-0" id="fname" name="fname" required>
             </div>
             <div class="form-group">
                <label class="small mb-0 pl-1" for="email">Email Address</label>

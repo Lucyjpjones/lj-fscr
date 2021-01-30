@@ -141,9 +141,9 @@ I created a personalised favicon for the site to add branding, and to make it ea
 
 ### **<ins>Database</ins>**
 
-For this project I employed a [Relational Database](https://aws.amazon.com/relational-database/#:~:text=A%20relational%20database%20is%20a,be%20represented%20in%20the%20database.), to store my collection of data. I used [SQLite](https://www.sqlite.org/index.html) in development, as this is created by default, and [Heroku Postgres](https://www.heroku.com/postgres) in production. Relational databases were a suitable choice for this project as it allows multiple tables to be created, with data easily connected through the use of foreign keys. All Models included are related to at least one other Model, and implement common database relationships: many-to-one, many-to-many and one-to-one.
+For this project I employed a [Relational Database](https://aws.amazon.com/relational-database/#:~:text=A%20relational%20database%20is%20a,be%20represented%20in%20the%20database.), to store my collection of data. I used [SQLite](https://www.sqlite.org/index.html) in development, as this is created by default, and [Heroku Postgres](https://www.heroku.com/postgres) in production. Relational databases were a suitable choice for this project as it allows multiple tables to be created, with data easily connected through the use of foreign keys. All Models included are related to at least one other Model and implement common database relationships: many-to-one, many-to-many and one-to-one.
 
-> **Note:** .sqlite3, my developmemt database file, was added to .gitignore before my initial commit to stop it being pushed to GitHub.
+> **Note:** .sqlite3, my development database file, was added to .gitignore before my initial commit to stop it being pushed to GitHub.
 
 ### **<ins>Data Schema</ins>**
 
@@ -547,7 +547,7 @@ The region chosen should be the one closest to you.
 
     `$ pip3 freeze > requirements.txt`
 
-6. To migrate to the postgres, go to settings.py and add the following import;
+6. To migrate to the Postgres, go to settings.py and add the following import;
 
     `import dj_database_url`
 
@@ -723,7 +723,7 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
 - Navigate to 'groups', select the group you created and on permissions tab select 'Attach policy'.
 - Search for the policy you created, select it and click 'Attach policy'.
 
-- Now to create the user, navagate to 'users' and click 'Add user'
+- Now to create the user, navigate to 'users' and click 'Add user'
   - Add username, select programmatic access and click 'Next'
   - Add user to a group by selecting the group you created and click 'Next' then click through to the end and click 'Create user'
   - Now download the CSV file which will contain this users access key and secret access key
@@ -934,7 +934,7 @@ When you clone a repository, the repository is copied on to your local machine, 
 
 - [Code](https://djangocentral.com/building-a-blog-application-with-django/) used to help create a blog and forum app
 
-- [Code](https://djangocentral.com/creating-comments-system-with-django/) used to help create a comments and replies for blog and forum app
+- [Code](https://djangocentral.com/creating-comments-system-with-django/) used to help create comments and replies for blog and forum app
 
 - [Code](https://bootstrapious.com/p/bootstrap-sidebar) used to help create sidenav
 

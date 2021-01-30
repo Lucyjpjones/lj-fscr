@@ -313,7 +313,7 @@ To ensure my site was working correctly I carried out manual function testing on
 - [x] After submitting a new password the user is presented with a success message 'Your password is now changed' and they can log in with their new password
 - [x] If the user clicks 'Remember me' their username and password is automatically available next time logging in
     - On an iPhone the user can login by touch recognition
-    - 'Remember me' is thought to introduce unwanted security issues and therefore may blocked on some devices
+    - 'Remember me' is thought to introduce unwanted security issues and therefore may be blocked on some devices
 - [x] If a user is logged in, the 'Logout' option is visible in the profile icon menu
 - [x] If a user clicks 'Logout' they are directed to the 'Logout' page where they can confirm their action
 
@@ -642,7 +642,7 @@ JS was also tested by opening the developer console window on Chrome and checkin
 
 <ins>Performance</ins>
 
-The low-performance review was mainly driven by **First Contentful Paint (FCP)**. I implemented some of the suggested measures to try and improve my score, however there is no noticable delay in page loading time. I also checked the load time using the [Page load time](https://chrome.google.com/webstore/detail/page-load-time/fploionmjgeclbkemipmkogoaohcdbig?hl=en) chrome extension which resulted in a respectable 370ms. 
+The low-performance review was mainly driven by **First Contentful Paint (FCP)**. I implemented some of the suggested measures to try and improve my score, however, there is no noticeable delay in page loading time. I also checked the load time using the [Page load time](https://chrome.google.com/webstore/detail/page-load-time/fploionmjgeclbkemipmkogoaohcdbig?hl=en) chrome extension which resulted in a respectable 370ms. 
 
 Actions taken:
 
@@ -653,7 +653,7 @@ Actions taken:
 [`Eliminate render-blocking resources`](https://web.dev/render-blocking-resources/)
 - Lazy loading - added class 'lazy' to img tags
 - Added 'rel="preload" as="style"' attributes to base.css file
-- Added 'async' to JS script tags to indicate to the browser that the script file can be executed asynchronously. However no improvement was made to performance so these were removed.
+- Added 'async' to JS script tags to indicate to the browser that the script file can be executed asynchronously. However, no improvement was made to performance so these were removed.
 
 [`Serve images in next-gen formats`](https://web.dev/uses-webp-images/?utm_source=lighthouse&utm_medium=lr)
 - I tried converting my images to JPEG 2000 as suggested, however, the images were not loading due to their limitations of only working on certain browsers. Therefore I have kept my image in a PNG and JPG format.

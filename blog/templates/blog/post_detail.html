@@ -105,9 +105,11 @@
                   </span>
                   <!--Delete comment icon, trigger modal-->
                   {% if user.is_authenticated and user == comment.user %}
+                  {% if request.user.is_superuser %}
                   <a class="btn float-right" data-toggle="modal" data-target="#comDelete{{ comment.id }}">
                   <i class="far fa-trash-alt"></i>
                   </a>
+                  {% endif %}
                   {% endif %}
                </p>
                <!--Modal-->

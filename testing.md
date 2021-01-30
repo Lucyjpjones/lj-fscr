@@ -704,6 +704,8 @@ I didn't take any actions as the error was for displaying 'read more' which I be
     - More search queries so I can search forum topics
     - Add a number count onto the bag icon so I can easily see how many items are in my bag
     - Ability to autofill address by entering postcode 
+    - "Can I not access the blog is I'm not registered"
+        - Added an error message response for users not logged in trying to access blog and forum.
 - Project posted on Slack, asking for feedback from fellow students.
 
 ## [&#8679;](#testing)

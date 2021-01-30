@@ -129,6 +129,7 @@ If a user forgets their password they have the option to click the 'Forgot Passw
 
 The profile page is specific to each user with a personalised username greeting, the option to save their own entered details, and a log of their order history.
 - I added the 'dictsortreversed' filter with key 'date' to ensure orders are listed in descending order with most recent showing first.
+    - There is a slight issue with using Django date filter to sort the orders as this doesn't take into account the time the purchase was made, and therefore orders made on the same day are not sorted accurately. I will continue to find an alternative solution for this however this was not a priority as it is unlikely a customer will make multiple purchases on the same day.
 
 <img src="readme/media/us-15.png">
 

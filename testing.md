@@ -653,7 +653,7 @@ Actions taken:
 [`Eliminate render-blocking resources`](https://web.dev/render-blocking-resources/)
 - Lazy loading - added class 'lazy' to img tags
 - Added 'rel="preload" as="style"' attributes to base.css file
-- Added 'async' to JS script tags to indicate to the browser that the script file can be executed asynchronously
+- Added 'async' to JS script tags to indicate to the browser that the script file can be executed asynchronously. However no improvement was made to performance so these were removed.
 
 [`Serve images in next-gen formats`](https://web.dev/uses-webp-images/?utm_source=lighthouse&utm_medium=lr)
 - I tried converting my images to JPEG 2000 as suggested, however, the images were not loading due to their limitations of only working on certain browsers. Therefore I have kept my image in a PNG and JPG format.

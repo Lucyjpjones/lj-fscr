@@ -568,19 +568,11 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 - [**HTML Validator**](https://validator.w3.org/)
     - To get the most accurate read of my HTML for validation, I ran my app and extracted my code from the 'View page source'.
 
-    No error messages were received.
-
-    One error message was received:
-
-    <img src="readme/media/html-val-w1.png">
-
-    I decided that this was not an issue as the header is the loading spinner icon which is included through the class attribute.
-
+    No error or warning messages were received.
 
 - [**CSS Validator**](https://jigsaw.w3.org/css-validator/)
 
     No error or warning messages were received.
-
 
 [**JS hint**](https://jshint.com/) was used to check for any errors with my Javascript files. 
 JS was also tested by opening the developer console window on Chrome and checking for any errors as I clicked through the site.

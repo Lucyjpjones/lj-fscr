@@ -3,8 +3,11 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import CommentForm, ThreadForm
 from .models import Thread, Reply
+from blog.decorators import login_required_message
 
 
+@login_required_message(message="Sorry you need to be a registered \
+                        user to access our forum")
 @login_required
 def all_threads(request):
     """

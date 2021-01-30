@@ -4,8 +4,11 @@ from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
 from .forms import CommentForm
 from django.db.models.functions import Lower
+from .decorators import login_required_message
 
 
+@login_required_message(message="Sorry you need to be a registered \
+                        user to access our blogs")
 @login_required
 def all_posts(request):
     """

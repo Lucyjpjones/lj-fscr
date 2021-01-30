@@ -969,15 +969,15 @@ When you clone a repository, the repository is copied on to your local machine, 
     - [Quadricep Injury](https://glebephysiotherapy.com.au/service/physiotherapy-for-front-of-thigh-quads-pain/)
     - [Individual Performance](https://hypnosisdenvercolorado.com/2013/09/24/hypnosis-denver-smoking-affects-performance/)
     - [Core Strength](http://fitness44muscle.blogspot.com/2014/09/Body-facts-the-abdominal-muscles-and-their-function.html)
-    - [Calf Injury](https://www.shutterstock.com/video/clip-11108528-gastrocnemius---leg-muscles-anatomy-animation)
+    - [Calf Injury](https://www.shutterstock.com/video/clip-10989041-achilles-tendon---leg-muscles-anatomy-animation)
     - [Hamstring Injury](https://fitforfutbol.com/2018/09/brilliant-hamstring-injury-observations-from-dave-joyce/)
     - [Off-feet Conditioning](https://www.newsweek.com/online-heart-health-calculator-can-help-predict-risk-dying-cardiovascular-1032247)
 
 - Blog images were taken from;
     - [Hammer](https://www.pinterest.co.uk/pin/8936899237246828/)
-    - [Data](https://funart.pro/12021-skorostnye-fony-37-foto.html)
+    - [Data](https://biztechmagazine.com/article/2018/12/how-data-analytics-revolutionizing-sports)
     - [Crystal ball](https://www.pinterest.co.uk/pin/534732155761303543/)
-    - [Pressure](https://meattalk.reby.media/long-reads/)
+    - [Pressure](https://jmpcoblog.com/hvac-blog/what-is-superheated-steam)
 
 #### Acknowledgments
 

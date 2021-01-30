@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect, reverse
 from blog.models import Post
 from products.models import Product
 from programmes.models import Programme
-from profiles.models import UserProfile
 from django.db.models import Q
 from django.contrib import messages
 from itertools import chain
@@ -12,7 +11,6 @@ def index(request):
     """
     A view to return the index page
     """
-
     posts = Post.objects.filter(status=1).order_by('-created_on')[:2]
 
     context = {

@@ -78,6 +78,7 @@ I created a blog app that can only be viewed by site members. The page is availa
 <img src="readme/media/us-8.png">
 
 - The delete function has a confirmation modal which gives an extra step for users to consider their action.
+- I also added the option for the site owner to delete a comment manually, allowing anything inappropriate to be removed quickly.
 
 <img src="readme/media/us-88.png">
 
@@ -88,6 +89,7 @@ I created a forum app that can only be accessed by site members. When a user is 
 <img src="readme/media/us-9.png">
 
 - The delete function has a confirmation modal which gives an extra step for users to consider their action.
+- I also added the option for the site owner to delete a reply manually, allowing anything inappropriate to be removed quickly.
 
 <img src="readme/media/us-99.png">
 

@@ -973,6 +973,12 @@ When you clone a repository, the repository is copied on to your local machine, 
     - [Hamstring Injury](https://fitforfutbol.com/2018/09/brilliant-hamstring-injury-observations-from-dave-joyce/)
     - [Off-feet Conditioning](https://www.newsweek.com/online-heart-health-calculator-can-help-predict-risk-dying-cardiovascular-1032247)
 
+- Blog images were taken from;
+    - [Hammer](https://www.pinterest.co.uk/pin/8936899237246828/)
+    - [Data](https://funart.pro/12021-skorostnye-fony-37-foto.html)
+    - [Crystal ball](https://www.pinterest.co.uk/pin/534732155761303543/)
+    - [Pressure](https://meattalk.reby.media/long-reads/)
+
 #### Acknowledgments
 
 - My Mentor, Aaron for his continuous help and support throughout the project.

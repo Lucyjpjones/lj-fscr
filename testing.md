@@ -657,6 +657,9 @@ Actions taken:
 [`Serve images in next-gen formats`](https://web.dev/uses-webp-images/?utm_source=lighthouse&utm_medium=lr)
 - I tried converting my images to JPEG 2000 as suggested, however, the images were not loading due to their limitations of only working on certain browsers. Therefore I have kept my image in a PNG and JPG format.
 
+[`Properly size images`](https://web.dev/uses-responsive-images/?utm_source=lighthouse&utm_medium=lr)
+- I used [Resize Pixal](https://www.resizepixel.com/download) to help compress images to ensure they were all under 500KB.
+
 <ins>Accessibility</ins>
 
 `Background and foreground colors do not have a sufficient contrast ratio`

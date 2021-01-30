@@ -495,6 +495,9 @@ I will continue to update my website to meet my clients' expectations. I have fu
 - [**Techsini**](http://techsini.com/multi-mockup/index.php)
     - Multi Device Website Mockup Generator Tool
 
+-[Resize Pixal](https://www.resizepixel.com/download) 
+    - To help compress image sizes
+
 ## [&#8679;](#table-of-contents)
 ---
 
@@ -961,7 +964,7 @@ When you clone a repository, the repository is copied on to your local machine, 
 - Product images were taken from [ASOS](https://www.asos.com/) and [Nike](https://www.nike.com/gb/) and edited for personal use
 - Programme images were taken from;
     - [Groin Injury](https://www.therapeuticassociates.com/i-pulled-my-groin-heard-it-pop-do-i-need-physical-therapy/)
-    - [Tendinopathy Management ](https://myalliedpain.com/knee-pain-and-injuries)
+    - [Tendinopathy Management ](https://www.medlife.com/blog/10-signs-of-knee-pain/)
     - [Quadricep Injury](https://glebephysiotherapy.com.au/service/physiotherapy-for-front-of-thigh-quads-pain/)
     - [Individual Performance](https://hypnosisdenvercolorado.com/2013/09/24/hypnosis-denver-smoking-affects-performance/)
     - [Core Strength](http://fitness44muscle.blogspot.com/2014/09/Body-facts-the-abdominal-muscles-and-their-function.html)

@@ -60,6 +60,7 @@ Each programme detail page displays the programme's image, name, price, rating, 
 **7. Easily access contact details**
 
 I have included a contact form on the home page which is easily navigated to via the main nav menu. This has been set up using EmailJS with my own customised email template to assist with the organisation of user enquiries. If a user is logged in, the full name and email field are pre-populated.
+- To alert the user if their message had sent successfully or failed, I added sweet alert Javascript pop-up boxes. The form is also reset on a message success.
 
 <img src="readme/media/us-6.png">
 

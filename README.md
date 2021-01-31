@@ -295,6 +295,7 @@ The deployed site has some differences vs. the wireframes I initially created, t
     - `Card listings` have been used to display links to programmes/products page, and to display the latest blogs.
     - A contact `form` has been added using EmailJS to allow the user to easily get in contact with the site owner.
         - If the user is logged in, fields; full name and email are pre-populated.
+        - `Sweet alert` responses for successful and failed messages.
 
 - **Meet the Coaches**
     - Navigation `pills` have been used to allow the user to switch between each individual by an image click.
@@ -497,6 +498,9 @@ I will continue to update my website to meet my clients' expectations. I have fu
 
 -[Resize Pixal](https://www.resizepixel.com/download) 
     - To help compress image sizes
+
+-[Sweet Alerts 2](https://sweetalert2.github.io/) 
+    - To create responsive, customizable javascript popup boxes.
 
 ## [&#8679;](#table-of-contents)
 ---

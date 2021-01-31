@@ -60,7 +60,7 @@ Each programme detail page displays the programme's image, name, price, rating, 
 **7. Easily access contact details**
 
 I have included a contact form on the home page which is easily navigated to via the main nav menu. This has been set up using EmailJS with my own customised email template to assist with the organisation of user enquiries. If a user is logged in, the full name and email field are pre-populated.
-- To alert the user if their message had sent successfully or failed, I added sweet alert Javascript pop-up boxes. The form is also reset on a message success.
+- User receieves an alert response after submiting form to advise if their message was sent successfully or failed. The form is also reset on a message success.
 
 <img src="readme/media/us-6.png">
 
@@ -333,6 +333,8 @@ To ensure my site was working correctly I carried out manual function testing on
 - [x] Full name and email fields are pre-populated on contact form if user is logged in
 - [x] If user information entered in contact form is valid, the form submission is successful and an email is sent to the expected Gmail account
 - [x] After submission the input fields are cleared
+- [x] If contact form submission is successful the user receives success alert
+- [x] If contact form submission is unsuccessful the user receives error alert
 - [x] When input is missing in a required field there is an error response
 - [x] When input format is incorrect the field validation errors are present
 

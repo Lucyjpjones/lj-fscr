@@ -60,7 +60,7 @@ p,
 .navy-icon:focus,
 .navy-icon:hover {
     color: #38405f;
-    text-decoration: none;
+    cursor: pointer;
 }
 
 .grey-icon:hover,
@@ -87,6 +87,10 @@ p,
 .far.fa-trash-alt,
 .fas.fa-edit {
 	color: #ff0035;
+}
+
+.btt-link:hover {
+    text-decoration: none;
 }
 
 

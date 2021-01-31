@@ -93,6 +93,9 @@ p,
     text-decoration: none;
 }
 
+:focus {
+    outline: none;
+}
 
 /* Fonts */
 

@@ -37,8 +37,8 @@ def search_results(request):
     if 'q' in request.GET:
         query = request.GET['q']
         if not query:
-            messages.error(request,
-                           "You didn't enter any search criteria!")
+            messages.warning(request,
+                             "You didn't enter any search criteria!")
             return redirect(reverse('search_results'))
 
         products = filtered_products.filter(Q(name__icontains=query) | Q(

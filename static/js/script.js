@@ -33,11 +33,28 @@ function sendMail(contactForm) {
     })
     .then(
       function (response) {
-        alert("MESSAGE SENT", response); // If message is sent successfully, alert "message sent"
+        // If message is sent successfully, alert "message sent"
+        console.log("SUCCESS", response); 
+        //sweet alerts2 //
+        Swal.fire({
+        icon: "success",
+        title: "Message sent!",
+        showConfirmButton: false,
+        timer: 2000,
+        });
         contactForm.reset();
       },
       function (error) {
-        alert("SENDING FAILED", error); // If message fails to send, alert "sending failed"
+        // If message fails to send, alert "sending failed"
+        console.log("ERROR", error); 
+        //sweet alerts2 //
+        Swal.fire({
+        icon: "error",
+        title: "Error sending message",
+        text: 'Please try again',
+        showConfirmButton: false,
+        timer: 2000,
+        });
       }
     );
   return false; // To block from loading a new page

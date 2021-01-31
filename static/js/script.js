@@ -33,7 +33,7 @@ function sendMail(contactForm) {
     })
     .then(
       function (response) {
-        // If message is sent successfully, alert "message sent"
+        // If message is sent successfully, alert "Message sent"
         console.log("SUCCESS", response); 
         //sweet alerts2 //
         Swal.fire({
@@ -45,12 +45,12 @@ function sendMail(contactForm) {
         contactForm.reset();
       },
       function (error) {
-        // If message fails to send, alert "sending failed"
+        // If message fails to send, alert "Sending message failed"
         console.log("ERROR", error); 
         //sweet alerts2 //
         Swal.fire({
         icon: "error",
-        title: "Error sending message",
+        title: "Sending message failed",
         text: 'Please try again',
         showConfirmButton: false,
         timer: 2000,

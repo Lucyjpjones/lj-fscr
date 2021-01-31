@@ -593,9 +593,11 @@ JS was also tested by opening the developer console window on Chrome and checkin
 
     `emailjs`
 
+    `Swal`
+
     `stripe`
 
-    $ (Jquery), emailjs and stripe are all defined in base.html.
+    $ (Jquery), emailjs, Swal and stripe are all defined in base.html.
 
     - Unused variable;
 

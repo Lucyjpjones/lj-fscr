@@ -22,7 +22,7 @@ def user_passes_test(test_func, message=default_message):
         @wraps(view_func)
         def _wrapped_view(request, *args, **kwargs):
             if not test_func(request.user):
-                messages.error(request, message)
+                messages.info(request, message)
             return view_func(request, *args, **kwargs)
         return _wrapped_view
     return decorator

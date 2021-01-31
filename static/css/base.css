@@ -59,7 +59,8 @@ p,
 .navy-icon:active,
 .navy-icon:focus,
 .navy-icon:hover {
-	color: #38405f;
+    color: #38405f;
+    text-decoration: none;
 }
 
 .grey-icon:hover,

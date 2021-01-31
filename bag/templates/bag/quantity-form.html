@@ -31,11 +31,12 @@
          {% endif %}
       </div>
    </div>
-</form>
 {% if item.product %}
+</form>
 <a class="update-link text-info pr-2"><small>Update</small></a>
 <a class="remove-item text-danger" id="remove_{{ item.item_id }}_product" data-product_size="{{ item.size }}"><small>Remove</small></a>
 {% elif item.programme %}
+</form>
 <a class="update-link text-info pr-2"><small>Update</small></a>
 <a class="remove-item text-danger" id="remove_{{ item.item_id }}_programme" data-product_size="{{ item.size }}"><small>Remove</small></a>
 {% endif %}

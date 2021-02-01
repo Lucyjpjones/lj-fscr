@@ -1,5 +1,6 @@
 {% extends "base.html" %} 
 {% load static %}
+{% load crispy_forms_tags %}
 {% block title %} Homepage {% endblock %}
 {% block page_header %}
 <div class="header-container">
@@ -153,67 +154,11 @@
       <div class="col border form-inner p-3 m-3 mx-md-auto my-md-5">
          <h2 class="title-font">Get in touch</h2>
          <p class="subtitle-font p-font mb-3">If you have a question, comment or enquiry for FSCR, please fill out the form below</p>
-         {% if user.is_authenticated %}
-         <form onsubmit="return sendMail(this);" method="POST">
+        <form action="{% url 'contact_us' %}" method="POST">
             {% csrf_token %}
-            <div class="form-group">
-               <label class="small mb-0 pl-1" for="fname">Full Name</label>
-               <input type="text" value="{{ user.userprofile.default_full_name }}" class="form-control rounded-0" id="fname" name="fname" required>
-            </div>
-            <div class="form-group">
-               <label class="small mb-0 pl-1" for="email">Email Address</label>
-               <input type="email" value="{{ user.userprofile.default_email }}" class="form-control rounded-0" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-               <label class="small mb-0 pl-1" for="topic">What does your query relate to?</label>
-               <select class="form-control rounded-0" id="topic" name="topic" required>
-                  <option class="active disabled" value="">Select option</option>
-                  <option value="Strength and conditioning question">Strength and conditioning question</option>
-                  <option value="Physiotherapy or rehab question">Physiotherapy or rehab question</option>
-                  <option value="More info about our programmes">More info about our programmes</option>
-                  <option value="Something else">Something else</option>
-               </select>
-            </div>
-            <div class="form-group">
-               <label class="small mb-0 pl-1" for="message">What is your message?</label>
-               <textarea class="form-control rounded-0" id="message" name="message" rows="3" required></textarea>
-            </div>
-            <div class="text-center rounded-0">
-               <input class="btn navy-btn rounded-0 w-100 bold" type="submit" value="Send Message"
-                  >
-            </div>
+            {{ form | crispy }}
+            <input class="btn navy-btn rounded-0 w-100 bold" type="submit" value="Send Message" />
          </form>
-         {% else %}
-         <form onsubmit="return sendMail(this);" method="POST">
-            {% csrf_token %}
-            <div class="form-group">
-               <label class="small mb-0 pl-1" for="fname2">Full Name</label>
-               <input type="text" class="form-control rounded-0" id="fname2" name="fname" required/>
-            </div>
-            <div class="form-group">
-               <label class="small mb-0 pl-1" for="email2">Email Address</label>
-               <input type="email" class="form-control rounded-0" id="email2" name="email" required>
-            </div>
-            <div class="form-group">
-               <label class="small mb-0 pl-1" for="topic2">What does your query relate to?</label>
-               <select class="form-control rounded-0" id="topic2" name="topic" required>
-                  <option class="active disabled" value="">Select option</option>
-                  <option value="Strength and conditioning question">Strength and conditioning question</option>
-                  <option value="Physiotherapy or rehab question">Physiotherapy or rehab question</option>
-                  <option value="More info about our programmes">More info about our programmes</option>
-                  <option value="Something else">Something else</option>
-               </select>
-            </div>
-            <div class="form-group">
-               <label class="small mb-0 pl-1" for="message2">What is your message?</label>
-               <textarea class="form-control rounded-0" id="message2" name="message" rows="3" required></textarea>
-            </div>
-            <div class="text-center rounded-0">
-               <input class="btn navy-btn rounded-0 w-100 bold" type="submit" value="Send Message"
-                  >
-            </div>
-         </form>
-         {% endif %}
       </div>
    </div>
 </div>

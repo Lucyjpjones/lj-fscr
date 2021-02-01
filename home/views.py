@@ -5,6 +5,8 @@ from programmes.models import Programme
 from django.db.models import Q
 from django.contrib import messages
 from itertools import chain
+from .forms import ContactForm
+from django.core.mail import send_mail
 
 
 def index(request):
@@ -12,9 +14,11 @@ def index(request):
     A view to return the index page
     """
     posts = Post.objects.filter(status=1).order_by('-created_on')[:2]
+    form = ContactForm()
 
     context = {
         'posts': posts,
+        'form': form,
     }
 
     return render(request, 'home/index.html', context)
@@ -71,3 +75,21 @@ def meet_the_coaches(request):
     """
 
     return render(request, 'home/meet_the_coaches.html')
+
+
+def contact_us(request):
+
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+
+            sender_name = form.cleaned_data['contact_name']
+            sender_email = form.cleaned_data['contact_email']
+
+            # Email template
+            message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
+            send_mail('New Enquiry', message, sender_email, ['lucyjpjones@gmail.com'])
+
+            messages.success(request, "Message sent!")
+
+    return redirect(reverse("home"))

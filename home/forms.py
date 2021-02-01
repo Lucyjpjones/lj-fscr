@@ -2,10 +2,10 @@ from django import forms
 
 QUERIES = (
     ('', 'Select Option'),
-    ('SC', 'Strength and conditioning question'),
-    ('PR', 'Physiotherapy or rehab question'),
-    ('PR', 'More info about our programmes'),
-    ('SE', 'Something else'),
+    ('Strength and conditioning', 'Strength and conditioning question'),
+    ('Physiotherapy or rehab', 'Physiotherapy or rehab question'),
+    ('More info about programmes', 'More info about our programmes'),
+    ('Something else', 'Something else'),
 )
 
 

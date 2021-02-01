@@ -95,10 +95,14 @@ def contact_us(request):
 
             sender_name = form.cleaned_data['contact_name']
             sender_email = form.cleaned_data['contact_email']
+            sender_query = form.cleaned_data['query']
+            sender_message = form.cleaned_data['message']
 
             # Email template
-            message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
-            send_mail('New Enquiry', message, sender_email, ['lucyjpjones@gmail.com'])
+            message = ("Name: {0}\nEmail: {1}\n\nMessage:\n{2}".format
+                       (sender_name, sender_email, sender_message))
+            send_mail(sender_query, message, sender_email,
+                      ['lucyjpjones@gmail.com'])
 
             messages.success(request, "Message sent!")
 

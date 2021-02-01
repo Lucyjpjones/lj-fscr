@@ -7,6 +7,7 @@ from django.contrib import messages
 from itertools import chain
 from .forms import ContactForm
 from django.core.mail import send_mail
+from profiles.models import UserProfile
 
 
 def index(request):
@@ -14,7 +15,16 @@ def index(request):
     A view to return the index page
     """
     posts = Post.objects.filter(status=1).order_by('-created_on')[:2]
-    form = ContactForm()
+
+    # Pre populate fields with profile information
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
+        form = ContactForm(initial={
+                    'contact_name': profile.default_full_name,
+                    'contact_email': profile.default_email,
+        })
+    else:
+        form = ContactForm()
 
     context = {
         'posts': posts,
@@ -87,7 +97,8 @@ def contact_us(request):
             sender_email = form.cleaned_data['contact_email']
 
             # Email template
-            message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
+            message = "{0} has sent you a new message:\n\n{1}".format
+            (sender_name, form.cleaned_data['message'])
             send_mail('New Enquiry', message, sender_email, ['lucyjpjones@gmail.com'])
 
             messages.success(request, "Message sent!")

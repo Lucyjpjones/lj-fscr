@@ -17,4 +17,5 @@ class ContactForm(forms.Form):
     query = forms.ChoiceField(label='What does your query relate to?',
                               choices=QUERIES)
     message = forms.CharField(label='What is your message?',
-                              widget=forms.Textarea())
+                              widget=forms.Textarea(
+                                  attrs={'style': 'height:6em'}))

@@ -469,7 +469,7 @@ header {
 	object-fit: cover;
 }
 
-input {
+input, select, textarea {
 	border-radius: 0 !important;
 }
 

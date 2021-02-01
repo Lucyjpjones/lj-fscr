@@ -59,8 +59,8 @@ Each programme detail page displays the programme's image, name, price, rating, 
 
 **7. Easily access contact details**
 
-I have included a contact form on the home page which is easily navigated to via the main nav menu. This has been set up using EmailJS with my own customised email template to assist with the organisation of user enquiries. If a user is logged in, the full name and email field are pre-populated.
-- User receieves an alert response after submiting form to advise if their message was sent successfully or failed. The form is also reset on a message success.
+I have included a contact form on the home page which is easily navigated to via the main nav menu. If a user is logged in, the full name and email field are pre-populated.
+- User receieves a toast success response to confirm that the message was sent successfully. The form is also reset on a message success.
 
 <img src="readme/media/us-6.png">
 
@@ -330,11 +330,10 @@ To ensure my site was working correctly I carried out manual function testing on
 - [x] The testimonial carousel automatically cycles through a series of testimonials with expected interval time
 - [x] The testimonial carousel pauses on hover and pointer is present
 - [x] All contact form fields are empty is user is not logged in
-- [x] Full name and email fields are pre-populated on contact form if user is logged in
+- [x] Full name and email fields are pre-populated on contact form if user is logged in and information is available in their profile
 - [x] If user information entered in contact form is valid, the form submission is successful and an email is sent to the expected Gmail account
 - [x] After submission the input fields are cleared
-- [x] If contact form submission is successful the user receives success alert
-- [x] If contact form submission is unsuccessful the user receives error alert
+- [x] If contact form submission is successful the user receives success toast
 - [x] When input is missing in a required field there is an error response
 - [x] When input format is incorrect the field validation errors are present
 
@@ -591,19 +590,9 @@ JS was also tested by opening the developer console window on Chrome and checkin
 
     `$`
 
-    `emailjs`
-
-    `Swal`
-
     `stripe`
 
-    $ (Jquery), emailjs, Swal and stripe are all defined in base.html.
-
-    - Unused variable;
-
-    `sendMail`
-
-    sendMail used in index.html for emailJS
+    $ (Jquery) and stripe are all defined in base.html.
 
 [**PEP8 online checking tool**](http://pep8online.com/checkresult) was used to inspect my Python code against the style conventions in PEP 8.
 

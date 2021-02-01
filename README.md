@@ -293,9 +293,9 @@ The deployed site has some differences vs. the wireframes I initially created, t
 - **Home**
     - A `carousel` with automatic rotation has been used for the callout banner and to display athlete testimonials.
     - `Card listings` have been used to display links to programmes/products page, and to display the latest blogs.
-    - A contact `form` has been added using EmailJS to allow the user to easily get in contact with the site owner.
+    - A contact Django `form` has been added to allow the user to easily get in contact with the site owner.
         - If the user is logged in, fields; full name and email are pre-populated.
-        - `Sweet alert` response for successful and failed messages.
+        - `Toast` success response so reassure the users message was sent successfully.
 
 - **Meet the Coaches**
     - Navigation `pills` have been used to allow the user to switch between each individual by an image click.
@@ -454,9 +454,6 @@ I will continue to update my website to meet my clients' expectations. I have fu
 - [**Stripe**](https://stripe.com/gb)
   - Stripe was used to deal with payments.
 
-- [**Emailjs**](https://www.emailjs.com/)
-  - Used to send emails directly from a from to my Gmail account.
-
 - [**Temp Mail**](https://temp-mail.org/en/)
   - Temp Mail was used to provide temporary, secure, anonymous, free, disposable email addresses for testing purposes.
 
@@ -498,9 +495,6 @@ I will continue to update my website to meet my clients' expectations. I have fu
 
 -[Resize Pixal](https://www.resizepixel.com/download) 
     - To help compress image sizes
-
--[Sweet Alerts 2](https://sweetalert2.github.io/) 
-    - A pretty replacement for Javascript's window alert
 
 ## [&#8679;](#table-of-contents)
 ---
@@ -974,7 +968,7 @@ When you clone a repository, the repository is copied on to your local machine, 
     - [Individual Performance](https://hypnosisdenvercolorado.com/2013/09/24/hypnosis-denver-smoking-affects-performance/)
     - [Core Strength](http://fitness44muscle.blogspot.com/2014/09/Body-facts-the-abdominal-muscles-and-their-function.html)
     - [Calf Injury](https://www.shutterstock.com/video/clip-10989041-achilles-tendon---leg-muscles-anatomy-animation)
-    - [Hamstring Injury](https://fitforfutbol.com/2018/09/brilliant-hamstring-injury-observations-from-dave-joyce/)
+    - [Hamstring Injury](https://midlandsphysio.ie/why-is-my-hamstring-always-so-tight/)
     - [Off-feet Conditioning](https://www.newsweek.com/online-heart-health-calculator-can-help-predict-risk-dying-cardiovascular-1032247)
 
 - Blog images were taken from;

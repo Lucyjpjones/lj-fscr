@@ -97,8 +97,7 @@ def contact_us(request):
             sender_email = form.cleaned_data['contact_email']
 
             # Email template
-            message = "{0} has sent you a new message:\n\n{1}".format
-            (sender_name, form.cleaned_data['message'])
+            message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
             send_mail('New Enquiry', message, sender_email, ['lucyjpjones@gmail.com'])
 
             messages.success(request, "Message sent!")

@@ -44,12 +44,12 @@ def add_to_bag(request, item_id, category):
                 else:
                     bag[category][item_id]['items_by_size'][size] = quantity
                     messages.success(request,
-                                     f'Added size {size.upper()}'
+                                     f'Added size {size.upper()} '
                                      f'{product.name} to your bag')
             else:
                 bag[category][item_id] = {'items_by_size': {size: quantity}}
                 messages.success(request,
-                                 f'Added size {size.upper()}'
+                                 f'Added size {size.upper()} '
                                  f'{product.name} to your bag')
         else:
             if item_id in list(bag[category].keys()):
@@ -107,7 +107,7 @@ def adjust_bag(request, item_id, category):
                 if not bag[category][item_id]['items_by_size']:
                     del bag[category][item_id]
                 messages.success(request,
-                                 f'Removed size {size.upper()}'
+                                 f'Removed size {size.upper()} '
                                  f'{product.name} from your bag')
         else:
             if quantity in range(1, 99):

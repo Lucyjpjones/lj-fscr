@@ -1,5 +1,5 @@
 """
-Code was taken from slack overview with some edits
+Code was taken from slack overview with some modifications
 (https://stackoverflow.com/questions/2723842/django-message-framework-and-login-required)
 """
 try:

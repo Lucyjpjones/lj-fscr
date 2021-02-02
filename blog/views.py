@@ -13,7 +13,7 @@ from .decorators import login_required_message
 def all_posts(request):
     """
     A view to show all blog posts, including sorting and filtering by
-    post type
+    post type, user login required to access
     """
     posts = Post.objects.filter(status=1).order_by('-created_on')
     sort = None

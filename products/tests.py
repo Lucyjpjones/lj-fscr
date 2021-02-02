@@ -18,7 +18,7 @@ class TestProductForm(TestCase):
 # view tests
 class TestProductViews(TestCase):
     def setUp(self):
-        """ create superuser, create product and category """
+        """ create superuser and product for tests """
         self.client = Client()
         self.user = User.objects.create_superuser('admin',
                                                   'admin@fscr.com',

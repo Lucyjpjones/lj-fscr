@@ -86,7 +86,7 @@
                   {% if request.user.is_superuser %}
                   <div class="pl-1 mt-2">
                      <a class="btn red-border-btn px-2 py-1 p-font rounded-0" href="{% url 'edit_product' product.id %}">Edit</a>
-                     <!-- Button trigger modal -->
+                     <!-- Delete button trigger modal -->
                      <a class="btn red-btn px-2 py-1 p-font rounded-0" data-toggle="modal" data-target="#prodDelete{{ product.id }}">Delete</a>
                      <!-- Modal -->
                      <div class="modal fade" id="prodDelete{{ product.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="{{ product.id }}" aria-hidden="true">

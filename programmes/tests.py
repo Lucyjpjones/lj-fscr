@@ -18,7 +18,7 @@ class TestProgrammeForm(TestCase):
 # view tests
 class TestProgrammeViews(TestCase):
     def setUp(self):
-        """ create superuser, create programme """
+        """ create superuser and programme for tests """
         self.client = Client()
         self.user = User.objects.create_superuser('admin',
                                                   'admin@fscr.com',
@@ -67,26 +67,26 @@ class TestProgrammeViews(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_sort_programmes_price_asc(self):
-        """ test sort products by price ascending """
+        """ test sort programmes by price ascending """
         self.client.login(username='admin', password='adminpassword')
         response = self.client.get('/programmes/?sort=price&direction=asc')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'programmes/programmes.html')
 
     def test_sort_programmes_price_desc(self):
-        """ test sort products by price descending """
+        """ test sort programmes by price descending """
         response = self.client.get('/programmes/?sort=price&direction=desc')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'programmes/programmes.html')
 
     def test_sort_programmes_newest(self):
-        """ test sort products by newest first """
+        """ test sort programmes by newest first """
         response = self.client.get('/programmes/?sort=sku&direction=desc')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'programmes/programmes.html')
 
     def test_sort_programmes_highest_rated(self):
-        """ test sort products by highest rated """
+        """ test sort programmes by highest rated """
         response = self.client.get('/programmes/?sort=rating&direction=desc')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'programmes/programmes.html')

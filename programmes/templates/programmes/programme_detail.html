@@ -42,7 +42,7 @@
             {% if request.user.is_superuser %}
             <div>
                <a class="btn red-border-btn px-2 py-1 p-font rounded-0" href="{% url 'edit_programme' programme.id %}">Edit</a>
-               <!-- Button trigger modal -->
+               <!-- Delete button trigger modal -->
                <a class="btn red-btn px-2 py-1 p-font rounded-0" data-toggle="modal" data-target="#progDelete{{ programme.id }}">Delete</a>
                <!-- Modal -->
                <div class="modal fade" id="progDelete{{ programme.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

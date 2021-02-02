@@ -67,6 +67,7 @@
             </div>
          </div>
          {% else %}
+         <!--Empty shopping bag-->
          <div class="text-center">
             <p class="lead mb-5">Your bag is empty.</p>
             <div class="col-12">
@@ -100,6 +101,7 @@
 </script>
 {% include 'products/includes/quantity_input_script.html' %}
 <script>
+   // JS taken from CI Boutique Ado and modified for personal use
    // Update quantity on click
    $('.update-link').click(function(e) {
        var form = $(this).prev('.update-form');

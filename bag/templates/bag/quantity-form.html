@@ -1,8 +1,8 @@
 {% if item.product %}
 <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id 'product' %}">
-{% elif item.programme %}
+   {% elif item.programme %}
 <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id 'programme' %}">
-{% endif %}
+   {% endif %}
    {% csrf_token %}
    <div class="form-group mb-0">
       <div class="input-group">
@@ -31,7 +31,7 @@
          {% endif %}
       </div>
    </div>
-{% if item.product %}
+   {% if item.product %}
 </form>
 <a class="update-link text-info pr-2"><small>Update</small></a>
 <a class="remove-item text-danger" id="remove_{{ item.item_id }}_product" data-product_size="{{ item.size }}"><small>Remove</small></a>

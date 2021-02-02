@@ -8,7 +8,7 @@ from programmes.models import Programme
 
 def view_bag(request):
     """
-    A view that renders the bag contents page
+    A view that renders the bag contents
     """
 
     return render(request, 'bag/bag.html')

@@ -17,7 +17,7 @@ class TestBagTools(TestCase):
 class TestBagViews(TestCase):
 
     def setUp(self):
-        """ create product and programme """
+        """ create product and programme for tests """
         product = Product.objects.create(name='test product',
                                          has_sizes=True, price=5.99)
         programme = Programme.objects.create(name='test programme',

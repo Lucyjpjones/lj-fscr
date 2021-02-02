@@ -952,7 +952,7 @@ When you clone a repository, the repository is copied on to your local machine, 
   - [Code](https://stackoverflow.com/questions/11472495/remove-labels-in-a-django-crispy-forms) help with removing labels from crispy forms
   - [Code](https://stackoverflow.com/questions/38684753/django-reducing-the-size-of-input-box-in-crispy-forms) help with reducing the inbox size in crispy forms
   - [Code](https://stackoverflow.com/questions/45847278/django-use-slugify-for-detail-url) help using slugify for detailed urls
-  - [Code](https://stackoverflow.com/questions/43879330/djangounable-to-compare-the-logged-in-user-with-the-author-of-the-post)help with IF statement for logged in user
+  - [Code](https://stackoverflow.com/questions/43879330/djangounable-to-compare-the-logged-in-user-with-the-author-of-the-post) help with IF statement for logged in user
   - [Code](https://stackoverflow.com/questions/431628/how-to-combine-two-or-more-querysets-in-a-django-view) help to combine my querysets for search bar functionality
   - [Code](https://stackoverflow.com/questions/2723842/django-message-framework-and-login-required) help to create error messages when using @login_required
   - [Code](https://stackoverflow.com/questions/31643670/link-a-div-in-another-page-in-url-with-an-anchor-tag-django) used to help with linking to id on a different page using Django

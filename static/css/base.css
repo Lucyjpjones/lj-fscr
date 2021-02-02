@@ -59,8 +59,8 @@ p,
 .navy-icon:active,
 .navy-icon:focus,
 .navy-icon:hover {
-    color: #38405f;
-    cursor: pointer;
+	color: #38405f;
+	cursor: pointer;
 }
 
 .grey-icon:hover,
@@ -90,12 +90,13 @@ p,
 }
 
 .btt-link:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 :focus {
-    outline: none;
+	outline: none;
 }
+
 
 /* Fonts */
 
@@ -469,7 +470,9 @@ header {
 	object-fit: cover;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
 	border-radius: 0 !important;
 }
 

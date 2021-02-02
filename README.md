@@ -32,9 +32,9 @@ For <ins>**testing**</ins> the following credentials can be used:
 **<details><summary> User Experience (UX)</summary>**
   - [Purpose](#purpose)
   - [Design](#design)
-  - [User stories](#user-stories)
   - [Database](#database)
   - [Data Schema](#data-schema)
+  - [User stories](#user-stories)
   - [Wireframes](#wireframes)
 </details>
 
@@ -51,7 +51,6 @@ For <ins>**testing**</ins> the following credentials can be used:
 
 **<details><summary> Deployment</summary>**
   - [Deploy to Heroku](#deploy-to-heroku)
-  - [Deploy to AWS](#deploy-to-aws)
   - [Accessing code](#accessing-code)
 </details>
 
@@ -271,7 +270,7 @@ The deployed site has some differences vs. the wireframes I initially created, t
 
 ## &rarr; **Features**
 
-### **Features used**
+### **<ins>Features used</ins>**
 
 <ins>**Structure and Navigation**</ins>
 
@@ -386,7 +385,7 @@ The deployed site has some differences vs. the wireframes I initially created, t
 All authorisation pages including register, login and logout have been implemented through Django allauth account. CSS styling has been applied to ensure pages match the sites overall design spec.
 - `Social login` has been implemented through Django allauth socialaccount giving the user the option to login through Google, Facebook or Twitter.
 
-### **To do list**
+### **<ins>To do list</ins>**
 
 #### Status
 
@@ -407,14 +406,14 @@ I will continue to update my website to meet my clients' expectations. I have fu
 
 ## &rarr; **Technologies**
 
-#### Languages
+#### <ins>Languages</ins>
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JavaScript](https://www.javascript.com/)
 - [Python](https://www.python.org/)
 
-#### Frameworks, Libraries & Programs
+#### <ins>Frameworks, Libraries & Programs</ins>
 
 - [**Django**](https://www.djangoproject.com/)
   - Python Web framework used to build the site.
@@ -502,7 +501,7 @@ I will continue to update my website to meet my clients' expectations. I have fu
 
 ## &rarr; **Deployment**
 
-#### Deploy to Heroku
+#### <ins>Deploy to Heroku</ins>
 
 The project was deployed to Heroku with all static and media files stored on Amazon S3. I also set up automatic deployment to ensure my Heroku app was always up to date with my GitPod repository.
 
@@ -828,7 +827,7 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
 </p>
 </details>
 
-#### Accessing code
+#### <ins>Accessing code</ins>
 
 Forking allows you to create a copy of the original repository and propose changes to the repository owner via a pull request.
 
@@ -925,7 +924,7 @@ When you clone a repository, the repository is copied on to your local machine, 
 
 ## &rarr; **Credits**
 
-#### Content
+#### <ins>Content</ins>
 
 - Materials supplied by [Code Institute](https://docs.djangoproject.com/en/3.1/) for project Boutique Ado.
 
@@ -957,7 +956,7 @@ When you clone a repository, the repository is copied on to your local machine, 
   - [Code](https://stackoverflow.com/questions/2723842/django-message-framework-and-login-required) help to create error messages when using @login_required
   - [Code](https://stackoverflow.com/questions/31643670/link-a-div-in-another-page-in-url-with-an-anchor-tag-django) used to help with linking to id on a different page using Django
 
-#### Media
+#### <ins>Media</ins>
 
 - General site content provided by the client
 - Images used for callout image, about page and profile images provided by the client
@@ -980,7 +979,7 @@ When you clone a repository, the repository is copied on to your local machine, 
     - [Crystal ball](https://www.pinterest.co.uk/pin/534732155761303543/)
     - [Pressure](https://jmpcoblog.com/hvac-blog/what-is-superheated-steam)
 
-#### Acknowledgments
+#### <ins>Acknowledgements</ins>
 
 - My Mentor, Aaron for his continuous help and support throughout the project.
 
@@ -996,7 +995,7 @@ When you clone a repository, the repository is copied on to your local machine, 
 
 ## &rarr; **Contact**
 
-#### Contact details
+#### <ins>Contact details</ins>
 
 Created by @lucyjpjones
 

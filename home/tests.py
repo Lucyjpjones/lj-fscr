@@ -1,5 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
+from home.forms import ContactForm
 
 
 # view tests
@@ -28,3 +29,19 @@ class TestHomeViews(TestCase):
         response = self.client.get(reverse('search_results'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'home/search.html')
+
+    def test_can_post_message(self):
+        """ test can post message successfully """
+        form_data = {
+            'contact_name': 'test user',
+            'contact_email': 'test@test.com',
+            'query': 'Something else',
+            'message': 'test message'}
+
+        form = ContactForm(form_data)
+
+        response = self.client.post(reverse('contact_us'),
+                                    form_data, follow=True)
+
+        self.assertTrue(form.is_valid())
+        self.assertRedirects(response, '/')

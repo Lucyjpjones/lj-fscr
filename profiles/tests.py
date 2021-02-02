@@ -7,7 +7,7 @@ from django.test.client import Client
 class TestProfileViews(TestCase):
 
     def setUp(self):
-        """ create user """
+        """ create user for tests """
         self.client = Client()
         self.user = User.objects.create_user('david',
                                              'dbeckham@fscr.com',

@@ -23,7 +23,8 @@ class StripeWH_Handler:
 
     def _send_confirmation_email(self, order):
         """
-        Send the user a confirmation email
+        Send the user a confirmation email, using Django send_mail
+        functionality
         """
         cust_email = order.email
         subject = render_to_string(

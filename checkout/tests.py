@@ -65,7 +65,7 @@ class TestOrderForm(TestCase):
 class TestCheckoutViews(TestCase):
 
     def setUp(self):
-        """ create product and programme """
+        """ create product and programme for tests """
         product = Product.objects.create(name='test product',
                                          price=5.99)
         programme = Programme.objects.create(name='test programme',

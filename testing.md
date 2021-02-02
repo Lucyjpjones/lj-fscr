@@ -287,13 +287,11 @@ To ensure my site was working correctly I carried out manual function testing on
 - [x] After adding to bag, user is directed to the bag template displaying the items they have added
 
 #### Sort and Filter
+> **Note:** All the below checks were tested on the products, programmes, and blog page
 
 - [x] The sort functionality returns items in the order expected. 
-    - This was tested on the products, programmes, and blog page
 - [x] The filter functionality returns only items matching the chosen criteria
-    - This was tested on the products, programmes, and blog page
 - [x] If user selects 'clear all' the filter is removed and all items are displayed
-    - This was tested on the products, programmes, and blog page
 - [x] If the user filters then sorts, the filtered items are displayed in order as expected 
     - This was a bug which has now been fixed (More details in 'Bugs' section)
 
@@ -439,45 +437,51 @@ When logged in as Admin user...
 
 - [x] The 'Read me' link for each blog directs the user to the post detail page, displaying the correct information
 - [x] The user can toggle references making text visible or hidden
-- [x] Below the comment field, the signed in user is correct
+- [x] Below the comment field, the signed in user name is showing correctly
 - [x] If user enters a comment and clicks submit their comment is added successfully
+- [x] If user submits comment successfully, they receive a success toast
 - [x] The comment count is calculated correctly
 - [x] The posted comment is displayed with the correct DateTime and logged in username
 - [x] The comments are listed in the correct order, newest first
 - [x] After submitting a comment the input field is cleared
 - [x] The trash icon is only visible on comments the logged in user has posted 
+- [x] The trash icon is visible if logged in as admin user
 - [x] After clicking the trash icon the user is presented with a modal to confirm their action
-- [x] After clicking 'Confirm' in the delete modal, the comment is deleted
+- [x] After clicking 'Confirm' in the delete modal, the comment is deleted and success toast is presented to user
 
 #### Forum
 
 - [x] Clicking on a 'topic' link directs the user to the thread detail page, displaying the correct information
 - [x] The active thread count is calculated correctly
-- [x] Below the reply field, the signed in user is correct
+- [x] Below the response field, the signed in user name is showing correctly
 - [x] If user enters a reply and clicks submit their reply is added successfully
+- [x] If user submits reply successfully, they receive a success toast
 - [x] The reply count is calculated correctly
 - [x] The posted reply is displayed with the correct DateTime and logged in username
 - [x] The replies are listed in the correct order, newest first
 - [x] After submitting a reply the input field is cleared
 - [x] The trash icon is only visible on replies the logged in user has posted 
+- [x] The trash icon is visible if logged in as admin user
 - [x] After clicking the trash icon the user is presented with a modal to confirm their action
-- [x] After clicking 'Confirm' in the delete modal, the reply is deleted
+- [x] After clicking 'Confirm' in the delete modal, the reply is deleted and success toast is presented to user
 - [x] The 'Add Thread' button directs the user to the 'Add Thread' page as expected
-- [x] After successfully adding a new thread I am redirected to the 'Thread Detail' page with the correct information
+- [x] After successfully adding a new thread I am redirected to the 'Thread Detail' page with the correct information and toast success message
 - [x] When input is missing in a required field there is an error response
 - [x] The 'Edit' button is only visible on threads the logged in user has posted
-- [x] Clicking the 'Edit' button directs the user to the 'Edit Thread' page with fields prefilled with current information
-- [x] After submitting the Edit form user is redirected to the 'Thread Detail' page with updated the information
+- [x] Clicking the 'Edit' button directs the user to the 'Edit Thread' page with fields prefilled with current Information
+- [x] An info toast message is present after clicking the 'Edit' button
+- [x] After submitting the Edit form user is redirected to the 'Thread Detail' page with updated the information and success toast
 
 #### Profile
 
 - [x] The welcome message is personalised with the correct username for the logged in user
 - [x] The user's order history is listed with previous purchases
 - [x] The order history is listed in date descending order with most recent showing first
+    - Small issue highlighted in user story 15 above
 - [x] After clicking 'View order details' the user is directed to the 'Checkout Success page' showing all details of their order
 - [x] On the 'Checkout Success' page, clicking 'Back to profile' navigates the user back to their profile
-- [x] If user enters details and clicks 'Update Information' their details are saved to their profile
-- [x] If user edits their details and clicks 'Update Information' their details are updated on their profile
+- [x] If user enters details and clicks 'Update Information' their details are saved to their profile with success toast present
+- [x] If user edits their details and clicks 'Update Information' their details are updated on their profile with success toast present
 - [x] No fields on user profile are required allowing user to only fill in desired fields
 - [x] If user updates their information in their profile this is reflected on the checkout page
 

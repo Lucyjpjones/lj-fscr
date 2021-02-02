@@ -709,6 +709,8 @@ I didn't take any actions as the error was for displaying 'read more' which I be
         - Added an info toast message for users not logged in trying to access the blog or forum.
 - Project posted on Slack, asking for feedback from fellow students.
 
+- Before submitting my project, I created a [final checklist](readme/files/final-checks.pdf) to ensure I had covered all the important aspects for each app.
+
 ## [&#8679;](#testing)
 ---
 

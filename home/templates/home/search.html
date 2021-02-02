@@ -24,6 +24,7 @@
                <p class="mb-4 text-muted text-center">Showing <strong>{{ results_list|length }}</strong> search result{{ results_list|pluralize }} for "<strong>{{ search_term }}</strong>"</p>
             </div>
             {% for result in results_list %}
+            <!--Product results-->
             {% if result.colour %}
             {% if not result.discontinued %}
             <div class="col-6 col-md-4 col-lg-3">
@@ -54,6 +55,7 @@
                </div>
             </div>
             {% endif %}
+            <!--Programme results-->
             {% elif result.bullets %}
             {% if not result.discontinued %}
             <div class="col-6 col-md-4 col-lg-3">
@@ -84,6 +86,7 @@
                </div>
             </div>
             {% endif %}
+            <!--Blog results-->
             {% elif result.post_type %}
             <div class="col-6 col-md-4 col-lg-3">
                <div class="card bg-trans h-100 border-0">

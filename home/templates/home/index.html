@@ -154,7 +154,7 @@
       <div class="col border form-inner p-3 m-3 mx-md-auto my-md-5">
          <h2 class="title-font">Get in touch</h2>
          <p class="subtitle-font p-font mb-3">If you have a question, comment or enquiry for FSCR, please fill out the form below</p>
-        <form class="p-font" action="{% url 'contact_us' %}" method="POST">
+         <form class="p-font" action="{% url 'contact_us' %}" method="POST">
             {% csrf_token %}
             {{ form | crispy }}
             <input class="btn navy-btn rounded-0 w-100 bold" type="submit" value="Send Message" />

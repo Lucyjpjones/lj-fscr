@@ -45,8 +45,6 @@
          ></script>
       <!-- Stripe -->
       <script src="https://js.stripe.com/v3/"></script>
-      <!-- Sweet alerts -->
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.1/dist/sweetalert2.all.min.js"></script>
       {% endblock %}
       <title>FSCR {% block title %}{% endblock %}</title>
    </head>
@@ -316,13 +314,6 @@
       {% block postloadjs %}
       <script>
          $('.toast').toast('show');
-      </script>
-      <!-- EmailJS -->
-      <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-      <script>
-         (function(){
-         emailjs.init("user_qZ2fQYOyvPucFHRyubh33");
-         })();
       </script>
       <script src="{% static 'js/script.js' %}"></script>
       {% endblock %}

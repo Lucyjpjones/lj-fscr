@@ -35,7 +35,7 @@ I created a 'products' page including a list of all products, displaying product
 
 **3. View a list of programmes**
 
-I created a 'programmes' page including a list of all programmes, displaying programme image, name, price, and rating, with the option to select an individual card for more details. This page is accessible via the main nav menu and through a card link on the homepage.
+I created a 'programmes' page including a list of all programmes, displaying programme image, name, price, and rating, with the option to select an individual card for more details. This page is accessible via the main nav menu, links featured on the callout carousel, and through a card link on the homepage.
 
 <img src="readme/media/us-3.png">
 
@@ -250,7 +250,7 @@ To ensure my site was working correctly I carried out manual function testing on
 
 - [x] Font styling changes as expected when hovering over my button elements
 - [x] Opacity filter works as expected when hovering over icon elements
-- [x] cursor pointer is present when hovering button and link elements 
+- [x] Cursor pointer is present when hovering button and link elements 
 - [x] User is directed to a custom 404 page if directed to a non-existent domain
 
     <img src="readme/media/404-page.png">
@@ -266,18 +266,18 @@ To ensure my site was working correctly I carried out manual function testing on
 - [x] The 'Meet the Coaches' link on main dropdown menu directs the user to the 'Meet the Coaches' page
 - [x] The 'Products' link on main dropdown menu directs the user to the 'Products' page displaying all products
 - [x] The 'Programmes' link on main dropdown menu directs the user to the 'Programmes' page displaying all programmes
-- [x] If the user is not logged in, the 'Blog' link on main dropdown menu directs the user to the 'Login' page
-- [x] If the user is logged in, the 'Blog' link on main dropdown menu directs the user to the 'Blog' page
-- [x] If the user is not logged in, the 'Forum' link on main dropdown menu directs the user to the 'Login' page
+- [x] If the user is not logged in, the 'Blog' link on main dropdown menu directs the user to the 'Login' page with info toast message
+- [x] If the user is logged in, the 'Blog' link on main dropdown menu directs the user to the 'Blog' page displaying all blog posts
+- [x] If the user is not logged in, the 'Forum' link on main dropdown menu directs the user to the 'Login' page with info toast message
 - [x] If the user is logged in, the 'Forum' link on main dropdown menu directs the user to the 'Forum' page
 - [x] If the user clicks the 'Contact' link they are directed to the contact form on the homepage
 - [x] The 'Join now' link is only visible on the main menu when a user is not logged in
 - [x] The 'Join now' link directs the user to the 'Register' page
 - [x] Clicking the brand logo from any page on the site navigates the user back to the homepage
 - [x] Search bar showing the correct format based on device size
-- [x] After entering keywords and hitting enter or the search icon, user is directed to the search page template with appropriate results
+- [x] After inputting keywords and hitting enter or the search icon, user is directed to the search page template with appropriate results
 - [x] If user enters a keyword with no results the correct message is displayed
-- [x] If user submits a search with no keywords they are directed to the search page with no results and the appropriate error message
+- [x] If user submits a search with no keywords they are directed to the search page with no results and receive a warning message
 - [x] When not logged in, under the profile icon user has the options of 'Register' and 'Login'
 - [x] When logged in, under the profile icon user has the options of 'My Profile' and 'Logout'
 - [x] When logged in as admin, under the profile icon user has the added options of 'Product Management' and 'Programme Management'
@@ -324,16 +324,17 @@ To ensure my site was working correctly I carried out manual function testing on
 - [x] The callout carousel automatically cycles through a series of callout messages with expected interval time
 - [x] The messages on the callout carousel are displayed appropriately dependent on whether a user is logged in or not
 - [x] The links featured on the callout carousel direct the user to the expected page
-- [x] The product and programme card links direct the user to the expected pages
-- [x] If the user is not logged in, the 'Read me' link on the latest blogs direct the user to the 'Login' page
-- [x] If the user is logged in, the 'Read me' link on the latest blogs direct the user to the correct 'Post Detail' page
+- [x] The product and programme card links direct the user to the expected page
+- [x] If the user is not logged in, the 'Read me' link on latest blogs directs user to the 'Login' page with info toast message
+- [x] If the user is logged in, the 'Read me' link on latest blogs directs user to the correct 'Post Detail' page
 - [x] The testimonial carousel automatically cycles through a series of testimonials with expected interval time
 - [x] The testimonial carousel pauses on hover and pointer is present
-- [x] All contact form fields are empty is user is not logged in
+- [x] All contact form fields are empty if user is not logged in
 - [x] Full name and email fields are pre-populated on contact form if user is logged in and information is available in their profile
-- [x] If user information entered in contact form is valid, the form submission is successful and an email is sent to the expected Gmail account
-- [x] After submission the input fields are cleared
+- [x] All contact form fields are empty if user is logged in but information is not available in their profile
+- [x] If user information entered in contact form is valid, and form submission is successful, an email is sent to the expected Gmail account
 - [x] If contact form submission is successful the user receives success toast
+- [x] After submission the input fields are cleared
 - [x] When input is missing in a required field there is an error response
 - [x] When input format is incorrect the field validation errors are present
 
@@ -357,18 +358,20 @@ To ensure my site was working correctly I carried out manual function testing on
 
 When logged in as Admin user...
 - [x] The 'Product Management' option is available in the Profile menu
-- [x] After successfully adding a new product I am redirected to the 'Product Detail' page with the correct information
 - [x] When input is missing in a required field there is an error response
 - [x] When input format is incorrect the field validation errors are present
+- [x] After successfully adding a new product I am redirected to the 'Product Detail' page with the correct information and success toast
 - [x] If no image is added to the form submission, the expected 'no image' png file is present 
 - [x] The 'Edit' button is visible on the 'Products' page and each 'Product Detail' page
 - [x] Clicking the 'Edit' button directs the user to the 'Edit Product' page with fields prefilled with current information
+- [x] An info toast message is present after clicking the 'Edit' button
 - [x] After selecting an image the file name appears as expected
 - [x] Selecting 'Remove' and saving changes removes current image as expected
-- [x] After submitting the Edit form user is redirected to the 'Product Detail' page with updated the information
+- [x] After submitting the Edit form user is redirected to the 'Product Detail' page with updated the information and success toast
 - [x] The 'Delete' button is visible on the 'Products' page and each 'Product Detail' page
 - [x] After clicking the 'Delete' button the product is no longer visible on the site
 - [x] After clicking the 'Delete' button the product is still available in the admin
+- [x] A success toast message is present after clicking the 'Confirm' button
 
 #### Programmes
 
@@ -385,15 +388,16 @@ When logged in as Admin user...
 
 When logged in as Admin user...
 - [x] The 'Programme Management' option is available in the Profile menu
-- [x] After successfully adding a new programme I am redirected to the 'Programme Detail' page with the correct information
 - [x] When input is missing in a required field there is an error response
 - [x] When input format is incorrect the field validation errors are present
+- [x] After successfully adding a new programme I am redirected to the 'Programme Detail' page with the correct information and success toast
 - [x] If no image is added to the form submission, the expected 'no image' png file is present 
 - [x] The 'Edit' button is visible on the 'Programmes' page and each 'Programme Detail' page
 - [x] Clicking the 'Edit' button directs the user to the 'Edit Programme' page with fields prefilled with current information
+- [x] An info toast message is present after clicking the 'Edit' button 
 - [x] After selecting an image the file name appears as expected
 - [x] Selecting 'Remove' and saving changes removes current image as expected
-- [x] After submitting the Edit form user is redirected to the 'Programme Detail' page with the updated information
+- [x] After submitting the Edit form user is redirected to the 'Programme Detail' page with the updated information and success toast
 - [x] The 'Delete' button is visible on the 'Programmes' page and each 'Programme Detail' page
 - [x] After clicking the 'Delete' button the programme is no longer visible on the site
 - [x] After clicking the 'Delete' button the programme is still available in Django admin

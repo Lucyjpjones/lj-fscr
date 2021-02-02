@@ -511,7 +511,7 @@ The results from each test were displayed in the terminal, letting me know if th
 |   [Blog](blog/tests.py)        |   Testing form fields, blog and post detail view, and sorting functionality                                                                        |
 |    [Checkout](checkout/tests.py)    |   Testing form required fields, and checkout and checkout success view                                                                             |
 |   [Forum](forum/tests.py)       |   Testing form fields, forum, thread detail, add thread and edit thread view, slugifying a thread topic, and adding a thread                       |
-|   [Home](home/tests.py)        |   Testing home, about, meet the coaches and search view                                                                                            |
+|   [Home](home/tests.py)        |   Testing home, about, meet the coaches and search view, posting message via contact form                                                                                           |
 |   [Products](products/tests.py)    |   Testing form fields, products, product detail, add product and edit product view, adding a product, and sort and filter functionality            |
 |   [Profiles](profiles/tests.py)    |   Testing profile view                                                                                                                             |
 |   [Programmes](programmes/tests.py)  |   Testing form fields, programmes, programme detail, add programme and edit programme view, adding a programme, and sort and filter functionality  |

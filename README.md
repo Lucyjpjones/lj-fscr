@@ -494,7 +494,7 @@ I will continue to update my website to meet my clients' expectations. I have fu
 - [**Techsini**](http://techsini.com/multi-mockup/index.php)
     - Multi Device Website Mockup Generator Tool
 
--[Resize Pixal](https://www.resizepixel.com/download) 
+- [Resize Pixal](https://www.resizepixel.com/download) 
     - To help compress image sizes
 
 ## [&#8679;](#table-of-contents)

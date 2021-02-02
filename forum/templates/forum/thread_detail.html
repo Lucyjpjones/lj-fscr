@@ -72,9 +72,8 @@
                <span class="text-muted font-weight-normal pl-1">
                {{ reply.created_on }}
                </span>
-               <!--Delete reply icon-->
+               <!--Delete reply icon, trigger modal-->
                {% if user.is_authenticated and user == comment.user or user.is_superuser %}
-               <!-- Button trigger modal -->
                <a class="btn float-right" data-toggle="modal" data-target="#repDelete{{ reply.id }}">
                <i class="far fa-trash-alt"></i>
                </a>

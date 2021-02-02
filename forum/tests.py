@@ -26,14 +26,6 @@ class TestCommentForm(TestCase):
         self.assertEqual(form.errors['description'][0],
                          'This field is required.')
 
-    def test_item_body_is_required(self):
-        """ test body field is required """
-        form = CommentForm({'body': ''})
-        self.assertFalse(form.is_valid())
-        self.assertIn('body', form.errors.keys())
-        self.assertEqual(form.errors['body'][0],
-                         'This field is required.')
-
     def test_fields_are_explicit_in_form_metaclass(self):
         """ test correct fields are displayed in the form """
         form = CommentForm()
@@ -44,7 +36,7 @@ class TestCommentForm(TestCase):
 class TestForumViews(TestCase):
 
     def setUp(self):
-        """ create user """
+        """ create user for tests """
         self.client = Client()
         self.user = User.objects.create_user('david',
                                              'dbeckham@fscr.com',

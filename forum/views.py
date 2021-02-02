@@ -12,7 +12,7 @@ from blog.decorators import login_required_message
 def all_threads(request):
     """
     A view to show all thread posts, filtered by active and
-    ordered by date posted
+    ordered by date posted, user login required to access
     """
     threads = Thread.objects.filter(status=1).order_by('-created_on')
     replies = Reply.objects.all

@@ -415,6 +415,9 @@ When logged in as Admin user...
 - [x] I can remove the item from the bag by clicking 'Remove'
 - [x] I can remove the item from the bag by entering 0 into the quantity field and clicking 'Update'
 - [x] If amendments are made in the bag subtotal is updated accordingly
+- [x] Toast success message is present when item is adjusted
+- [x] Toast success message is present when item is removed
+- [x] Clicking arrow at bottom of bag navigates user to top of page
 
 #### Checkout
 
@@ -429,6 +432,7 @@ When logged in as Admin user...
 - [x] The user is redirected to the checkout success page after completing order
 - [x] The checkout success page contains all the correct personal details for the user and items purchased
 - [x] After successful checkout the user receives an email with their order details
+- [x] After successful checkout the user receives toast success message
 - [x] User can checkout successfully as both a site user (not logged in) and member (logged in)
 - [x] The delivery amount is showing as 10% of the subtotal cost
 - [x] If the order is over £40 the delivery amount is 0

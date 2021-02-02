@@ -86,7 +86,7 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 
 - A simple design structure with a fixed navbar side navigation menu accessible from every page of the site. A brand logo is displayed in the top left of the screen to allow easy navigation back to the homepage.
 
-- As well as including a page title on my base.html, I have also added the meta description tag to help optimize my click-through rate from search engine result pages.
+- As well as including a meta title for each page, I have added a meta description to my base template to help optimize my click-through rate from search engine result pages.
 
 **Colour scheme**
 
@@ -158,7 +158,7 @@ The `Programme` model within the programme's app, is used to store information a
 The `Category` model within the programme's app, is used to group programmes into specific categories.
 
 The `UserProfile` model within the profiles app is used to store user's profile information and is connected to various models to fill other requirements;
-- Checkout `Order` model - to store user's checkout information, as well as order history.
+- Checkout `Order` model - to store the user's checkout information, as well as order history.
 - Blog `Post` and `Comment` model - to store the name of the user who created the blog and those who have left a comment.
 - Forum `Thread` and `Reply` model - to store the name of the user who created the thread and those who have replied.
 
@@ -294,8 +294,9 @@ The deployed site has some differences vs. the wireframes I initially created, t
     - A `carousel` with automatic rotation has been used for the callout banner and to display athlete testimonials.
     - `Card listings` have been used to display links to programmes/products page, and to display the latest blogs.
     - A contact Django `form` has been added to allow the user to easily get in contact with the site owner.
+        - `crispy forms` used for elegant formatting.
         - If the user is logged in, fields; full name and email are pre-populated.
-        - `Toast` success response so reassure the users message was sent successfully.
+        - `Toast` success response to reassure the user that their message was sent successfully.
 
 - **Meet the Coaches**
     - Navigation `pills` have been used to allow the user to switch between each individual by an image click.
@@ -931,6 +932,9 @@ When you clone a repository, the repository is copied on to your local machine, 
 - [Django documentation](https://docs.djangoproject.com/en/3.1/)
 
 - [Code](https://djangocentral.com/building-a-blog-application-with-django/) used to help create a blog and forum app
+
+- [Code](https://diagramy.com/blog/2018/05/17/django-contact-us-tutorial/) used to help create Django contact form
+    - Another useful [resource](https://simpleisbetterthancomplex.com/tutorial/2018/11/28/advanced-form-rendering-with-django-crispy-forms.html)
 
 - [Code](https://djangocentral.com/creating-comments-system-with-django/) used to help create comments and replies for blog and forum app
 

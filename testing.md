@@ -60,7 +60,7 @@ Each programme detail page displays the programme's image, name, price, rating, 
 **7. Easily access contact details**
 
 I have included a contact form on the home page which is easily navigated to via the main nav menu. If a user is logged in, the full name and email field are pre-populated.
-- User receieves a toast success response to confirm that the message was sent successfully. The form is also reset on a message success.
+- User receives a toast success response to confirm that the message was sent successfully. The form is also reset on a message success.
 
 <img src="readme/media/us-6.png">
 
@@ -74,7 +74,7 @@ Testimonials are visible on the homepage and reviews are available on the progra
 
 **9. Browse associated blogs, articles, and recent new stories**
 
-I created a blog app that can only be viewed by site members. The page is available through the nav menu and there is also the option for the user to direct to the latest blogs via the homepage. When a user is not logged in and they click on the blog they will be directed to the 'Login' page. If a user is a member and logged in they will be directed to the blog page where they can view blogs posted by the admin user. There is a toggle button to display references, and users have the ability to add and delete their own comments on blog posts.
+I created a blog app that can only be viewed by site members. The page is available through the nav menu and there is also the option for the user to direct to the latest blogs via the homepage. When a user is not logged in and they click on the blog they will be directed to the 'Login' page with an info toast response. If a user is a member and logged in they will be directed to the blog page where they can view blogs posted by the admin user. There is a toggle button to display references, and users have the ability to add and delete their own comments on blog posts.
 
 <img src="readme/media/us-8.png">
 
@@ -85,7 +85,7 @@ I created a blog app that can only be viewed by site members. The page is availa
 
 **10. Access a member forum**
 
-I created a forum app that can only be accessed by site members. When a user is not logged in and they click on the forum they will be directed to the 'Login' page. If a user is a member and logged in they will be directed to the forum page where they will have the option to view threads by other users and add/edit their own. They also have the capability of replying to any thread, with their logged in username and date/time automatically saved. There is a trash icon visible on the users own replies giving them the option to delete if they wish.
+I created a forum app that can only be accessed by site members. When a user is not logged in and they click on the forum they will be directed to the 'Login' page with an info toast response. If a user is a member and logged in they will be directed to the forum page where they will have the option to view threads by other users and add/edit their own. They also have the capability of replying to any thread, with their logged in username and date/time automatically saved. There is a trash icon visible on the users own replies giving them the option to delete if they wish.
 
 <img src="readme/media/us-9.png">
 
@@ -693,7 +693,7 @@ I didn't take any actions as the error was for displaying 'read more' which I be
     - Add a number count onto the bag icon so I can easily see how many items are in my bag
     - Ability to autofill address by entering postcode 
     - "Can I not access the blog is I'm not registered"
-        - Added an error message response for users not logged in trying to access blog and forum.
+        - Added an info toast message for users not logged in trying to access the blog or forum.
 - Project posted on Slack, asking for feedback from fellow students.
 
 ## [&#8679;](#testing)
@@ -712,4 +712,4 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 | [x] | Plural suffix returned when value is 1                   |  I added 'pluralize' tag to my count filters to ensure text was presented with correct spelling |
 | [x] | If filter by category then sort items, filter is removed                   |  Changed sort from dropdown to selector with options, added my own custom styling. Styling involved replacing the custom arrow and adding my own text with absolute positioning. I also replaced the default dropdown arrow by removing the 'dropdown-toggle' class so that the arrow style matched. |
 | [x] | Unable to migrate changes, error message received `psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "test"`               | This happened a couple of times and was solved by resetting my migrations using this [link](https://simpleisbetterthancomplex.com/tutorial/2016/07/26/how-to-reset-migrations.html) recommended by a tutor     |
-| [x] | Unable to make migrate even after resetting migrations              | My old database was corrupted so this was solved by resetting my Heroku database as advised by a tutor. I logged into Heroku, selected app, navigated to Resources, selected Heroku Postgres, then in new window clicked Settings then Reset Database.     |
+| [x] | Unable to make migrations even after resetting migrations              | My old database was corrupted so this was solved by resetting my Heroku database as advised by a tutor. I logged into Heroku, selected app, navigated to Resources, selected Heroku Postgres, then in new window clicked Settings then Reset Database.     |

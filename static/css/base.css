@@ -773,7 +773,13 @@ input[name='q']::placeholder {
 	.carousel-testimonials {
 		height: 300px;
 	}
-	/* -------------------- Sort & Filter */
+    /* -------------------- Sort & Filter */
+
+    /*for firefox*/
+    .ff-select {
+        -moz-appearance: none;
+    }
+    
 	.sort-container {
 		width: 70%;
 		max-width: 550px;

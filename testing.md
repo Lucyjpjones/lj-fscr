@@ -692,8 +692,8 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 
 ### **Additional Testing**
 
-- The Website was tested on Google Chrome, Safari browsers, Firefox, and Microsoft Edge. 
-     - Details of any issues found in bug section
+- Google Chrome was the main site used throughout testing but the application was also trialled on Safari browsers, Firefox, and Microsoft Edge. 
+     - Details of any issues found are addressed in bug section
 
     - Minor faults found in Firefox;
         - Unappealing dropdown select for firefox browser, restyling this has been added to my future plans

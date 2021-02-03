@@ -335,12 +335,9 @@ header {
 
 /* Contact form */
 
-.contact-container {
-	background-color: #38405f;
-}
-
-.form-inner {
-	background-color: #f8f8f8;
+/*for firefox*/
+.ff-select {
+    -moz-appearance: none;
 }
 
 
@@ -774,22 +771,6 @@ input[name='q']::placeholder {
 		height: 300px;
 	}
     /* -------------------- Sort & Filter */
-
-    /*for firefox*/
-    .ff-select {
-        -moz-appearance: none;
-    }
-
-    @-moz-document url-prefix() { 
-        .ff-select {
-            border: solid black;
-            border-width: 0 3px 3px 0;
-            display: inline-block;
-            padding: 3px;
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-        }
-    }
     
 	.sort-container {
 		width: 70%;

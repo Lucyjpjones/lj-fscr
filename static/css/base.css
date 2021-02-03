@@ -332,6 +332,18 @@ header {
 	height: 120px;
 }
 
+
+/* Contact form */
+
+.contact-container {
+	background-color: #38405f;
+}
+
+.form-inner {
+    background-color: #f8f8f8;
+}
+
+
 /* -----------Meet the Coaches*/
 
 

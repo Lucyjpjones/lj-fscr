@@ -20,7 +20,7 @@
       <div class="col-6 text-center d-flex">
          <div class="d-flex w-100">
             <select id="sort-selector" class="btn filter-btn rounded-0">
-               <option value="" label="" selected disabled hidden></option>
+               <option value="" label="none" selected disabled hidden></option>
                <option value="sku_desc" {% if current_sorting == 'sku_desc' %}selected{% endif %}>Newest Arrivals</option>
                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Highest Rated</option>
                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price: Low to High</option>

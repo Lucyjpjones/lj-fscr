@@ -622,7 +622,7 @@ JS was also tested by opening the developer console window on Chrome and checkin
 
 - `E501 line too long`
 
-    This error has been fixed on the majority of my code but some lines have been left to avoid breaking up variables.
+    This error has been fixed on the majority of my code but some lines in widgets and settings file have been left to avoid breaking up variables.
 
 ## [&#8679;](#testing)
 ---

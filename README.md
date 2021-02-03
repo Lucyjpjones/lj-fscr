@@ -400,6 +400,7 @@ I will continue to update my website to meet my clients' expectations. I have fu
 - Add a count onto the bag icon so users can easily identify how many items are in their bag.
 - More queries added to search functionality for more effective search results.
 - Add video blogs to blog (already included in the filter but currently no video posts provided by client).
+- Add custom arrow for dropdowns in firefox browser
 
 ## [&#8679;](#table-of-contents)
 ---

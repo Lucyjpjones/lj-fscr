@@ -692,7 +692,16 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 
 ### **Additional Testing**
 
-- The Website was tested on Google Chrome, Safari browsers, Firefox, and Microsoft Edge.
+- The Website was tested on Google Chrome, Safari browsers, Firefox, and Microsoft Edge. 
+     - Details of any issues found in bug section
+
+    - Minor faults found in Firefox;
+        - Unappealing dropdown select for firefox browser, restyling this has been added to my future plans
+        - Warning message in Firefox console;
+
+            <img src="readme/media/ff-warning.png">
+
+            I haven't yet found the specific reason for this warning, but as all the flaticon icon's are working correctly it does not present a major issue to the application. I will continue to try and find a fix for this error.
 
 - The website was viewed on a variety of devices including HP Laptop, Macbook pro, Ipad, IPhones (Version SE, 6, 7, 8, 11, 12, 12 max pro), Huawei P20 pro.
 
@@ -728,3 +737,4 @@ I didn't take any actions as the error was for displaying 'read more' which I be
 | [x] | If filter by category then sort items, filter is removed                   |  Changed sort from dropdown to selector with options, added my own custom styling. Styling involved replacing the custom arrow and adding my own text with absolute positioning. I also replaced the default dropdown arrow by removing the 'dropdown-toggle' class so that the arrow style matched. |
 | [x] | Unable to migrate changes, error message received `psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "test"`               | This happened a couple of times and was solved by resetting my migrations using this [link](https://simpleisbetterthancomplex.com/tutorial/2016/07/26/how-to-reset-migrations.html) recommended by a tutor     |
 | [x] | Unable to make migrations even after resetting migrations              | My old database was corrupted so this was solved by resetting my Heroku database as advised by a tutor. I logged into Heroku, selected app, navigated to Resources, selected Heroku Postgres, then in new window clicked Settings then Reset Database.     |
+| [x] | After adding my own styling to the sort select, dropdown options were not visible in 'Firefox' or 'Edge' browser              | After trying a few solutions I managed to keep the select value transparent and make the options visible by adding a css black color rule only targeting the option values      |

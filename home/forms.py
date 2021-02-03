@@ -15,8 +15,6 @@ class ContactForm(forms.Form):
     contact_email = forms.EmailField(label='Email Address',
                                      widget=forms.TextInput())
     query = forms.ChoiceField(label='What does your query relate to?',
-                              widget=forms.Select(
-                                attrs={'class': 'selectpicker'}),
                               choices=QUERIES)
     message = forms.CharField(label='What is your message?',
                               widget=forms.Textarea(

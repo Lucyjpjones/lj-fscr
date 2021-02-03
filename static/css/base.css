@@ -385,6 +385,10 @@ header {
     color: transparent;
 }
 
+#sort-selector option {
+    color: black;
+}
+
 .sort {
 	z-index: -1;
 	position: absolute;

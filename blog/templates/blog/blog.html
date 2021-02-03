@@ -21,7 +21,7 @@
          <div class="d-flex w-100">
             <select id="sort-selector" class="btn filter-btn rounded-0">
                <option value="" aria-label="none" selected disabled hidden></option>
-               <option value="created_desc" {% if current_sorting == 'created_desc' %}selected{% endif %}>Newest</option>
+               <option value="created_desc" aria-label="created_desc" {% if current_sorting == 'created_desc' %}selected{% endif %}>Newest</option>
                <option value="title_asc" {% if current_sorting == 'title_asc' %}selected{% endif %}>Title: A to Z</option>
                <option value="title_desc" {% if current_sorting == 'title_desc' %}selected{% endif %}>Title: Z to A</option>
             </select>

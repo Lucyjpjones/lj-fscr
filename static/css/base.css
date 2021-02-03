@@ -340,7 +340,7 @@ header {
 }
 
 .form-inner {
-    background-color: #f8f8f8;
+	background-color: #f8f8f8;
 }
 
 
@@ -381,12 +381,12 @@ header {
 
 #sort-selector {
 	-moz-appearance: none;
-    -webkit-appearance: none;
-    color: transparent;
+	-webkit-appearance: none;
+	color: transparent;
 }
 
 #sort-selector option {
-    color: black;
+	color: black;
 }
 
 .sort {
@@ -773,8 +773,7 @@ input[name='q']::placeholder {
 	.carousel-testimonials {
 		height: 300px;
 	}
-    /* -------------------- Sort & Filter */
-    
+	/* -------------------- Sort & Filter */
 	.sort-container {
 		width: 70%;
 		max-width: 550px;
